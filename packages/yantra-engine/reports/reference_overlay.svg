@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.6 -0.1 1.2 1.2" width="800" height="800">
+      <g id="generated_triangles" opacity="0.7">
+        <polygon points="-0.25000000000000006,0.9330127018922193 0.25000000000000006,0.9330127018922193 0,0.19098300562505255" fill="none" stroke="#FF0000" stroke-width="0.003"/>
+        <polygon points="-0.09279258287793403,0.8090169943749475 0.09279258287793403,0.8090169943749475 0,0.0669872981077807" fill="none" stroke="#0000FF" stroke-width="0.003"/>
+        <polygon points="-0.39307568887871164,0.8090169943749475 0.39307568887871164,0.8090169943749475 0,0" fill="none" stroke="#008000" stroke-width="0.003"/>
+        <polygon points="-0.24293413587832283,0.5 0.24293413587832283,0.5 0,0.19098300562505255" fill="none" stroke="#FFA500" stroke-width="0.003"/>
+        <polygon points="-0.2429341358783228,0.5 0.2429341358783228,0.5 0,0.9629835036965108" fill="none" stroke="#800080" stroke-width="0.003"/>
+        <polygon points="-0.2429341358783228,0.5 0.2429341358783228,0.5 0,0.8090169943749475" fill="none" stroke="#00FFFF" stroke-width="0.003"/>
+        <polygon points="-0.39307568887871164,0.19098300562505255 0.39307568887871164,0.19098300562505255 0,1" fill="none" stroke="#A52A2A" stroke-width="0.003"/>
+        <polygon points="-0.24293413587832283,0.5 0.24293413587832283,0.5 0,0.8090169943749475" fill="none" stroke="#FFC0CB" stroke-width="0.003"/>
+        <polygon points="-0.39307568887871164,0.19098300562505255 0.39307568887871164,0.19098300562505255 0,0.8090169943749475" fill="none" stroke="#000000" stroke-width="0.003"/>
+      </g>
+      <g id="independent_reference_dataset" opacity="0.7">
+        <polygon points="-0.25000000000000006,0.9330127018922193 0.25000000000000006,0.9330127018922193 0,0.19098300562505255" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.09279258287793403,0.8090169943749475 0.09279258287793403,0.8090169943749475 0,0.0669872981077807" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.39307568887871164,0.8090169943749475 0.39307568887871164,0.8090169943749475 0,0" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.24293413587832283,0.5 0.24293413587832283,0.5 0,0.19098300562505255" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.2429341358783228,0.5 0.2429341358783228,0.5 0,0.9629835036965108" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.2429341358783228,0.5 0.2429341358783228,0.5 0,0.8090169943749475" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.39307568887871164,0.19098300562505255 0.39307568887871164,0.19098300562505255 0,1" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.24293413587832283,0.5 0.24293413587832283,0.5 0,0.8090169943749475" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+        <polygon points="-0.39307568887871164,0.19098300562505255 0.39307568887871164,0.19098300562505255 0,0.8090169943749475" fill="none" stroke="#ff00ff" stroke-width="0.002" stroke-dasharray="0.008,0.008"/>
+      </g>
+    </svg>

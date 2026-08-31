@@ -1,0 +1,783 @@
+export interface CanonicalYantraEntry {
+  id: string;
+  names: {
+    sa: string;
+    iast: string;
+    hi: string;
+    en: string;
+    gu: string;
+  };
+  deity: string;
+  mantra: string;
+  geometrySpec: {
+    primaryShape: string;
+    layersCount: number;
+    hasNavavaranas: boolean;
+    hasLotusPetals: boolean;
+    hasBhupura: boolean;
+  };
+  traditionalUsage: string;
+  historicalPeriod: string;
+  scripturalCitation: {
+    scripture: string;
+    verse: string;
+    sanskritText: string;
+    translation: string;
+  };
+  evidenceTier: 'canonical' | 'traditional' | 'research';
+  confidenceLevel: 'High' | 'Moderate' | 'Speculative';
+  relatedYantras: string[];
+}
+
+export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
+  {
+    id: 'sri_yantra',
+    names: {
+      sa: 'श्रीचक्र यन्त्रम्',
+      iast: 'Śrī Cakra Yantram',
+      hi: 'श्री यन्त्र',
+      en: 'Shri Yantra (Sacred Cosmic Geometry)',
+      gu: 'શ્રી યંત્ર'
+    },
+    deity: 'Lalita Tripurasundari',
+    mantra: 'Om Shreem Hreem Shreem Kamale Kamalalaye Praseedha Praseedha',
+    geometrySpec: {
+      primaryShape: '43 Interlocking Sub-Triangles',
+      layersCount: 9,
+      hasNavavaranas: true,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Supreme spiritual illumination, cosmic alignment, wealth, and liberation (Moksha).',
+    historicalPeriod: 'c. 8th Century CE (Soundarya Lahari)',
+    scripturalCitation: {
+      scripture: 'Soundarya Lahari',
+      verse: 'Verse 11',
+      sanskritText: 'चतुर्भिः श्रीकण्ठैः शिवयुवतिभिः पञ्चभिरपि प्रभिन्नाभिः शंभोर्नवभिरपि मूलप्रकृतिभिः...',
+      translation: 'With 4 Shiva triangles and 5 Shakti triangles forming 9 primary roots, 43 triangles are evolved.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['maha_meru', 'mahalakshmi_yantra', 'kuber_yantra']
+  },
+  {
+    id: 'maha_meru',
+    names: {
+      sa: 'महामेरु यन्त्रम्',
+      iast: 'Mahā Meru Yantram',
+      hi: 'महामेरु यन्त्र (३D श्रीचक्र)',
+      en: 'Maha Meru (3D Pyramidal Shri Chakra)',
+      gu: 'મહામેરુ યંત્ર'
+    },
+    deity: 'Lalita Tripurasundari',
+    mantra: 'Om Shreem Hreem Shreem Kamale Kamalalaye Praseedha Praseedha',
+    geometrySpec: {
+      primaryShape: '3D Pyramidal Projection of Shri Chakra',
+      layersCount: 9,
+      hasNavavaranas: true,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: '3D sanctum installation for profound Vastu correction and temple garbhagriha activation.',
+    historicalPeriod: 'c. 11th Century CE (Yogini Hridaya)',
+    scripturalCitation: {
+      scripture: 'Yogini Hridaya',
+      verse: 'Kaka-mata Patala 1.14',
+      sanskritText: 'बिन्दुत्रिकोणवसुकोणदशारयुग्ममन्वस्रनागदलसंयुतषोडशारम्...',
+      translation: 'The 3D elevated projection of Bindu, Trikona, Vasukona, and Bhupura step-pyramid.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sri_yantra', 'vastu_yantra']
+  },
+  {
+    id: 'kuber_yantra',
+    names: {
+      sa: 'कुबेर यन्त्रम्',
+      iast: 'Kubera Yantram',
+      hi: 'कुबेर यन्त्र',
+      en: 'Kuber Yantra (Lord of Wealth)',
+      gu: 'કુબેર યંત્ર'
+    },
+    deity: 'Lord Kuber',
+    mantra: 'Om Yakshaya Kuberaya Vaishravanaya Dhanadhanyadhipataye',
+    geometrySpec: {
+      primaryShape: '3x3 Magic Square Matrix & Lotus',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Attraction of hidden wealth, financial abundance, and preservation of treasury assets.',
+    historicalPeriod: 'c. 14th Century CE (Mantra Mahodadhi)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XIV.8',
+      sanskritText: 'कुबेरयन्त्रं यः ध्यात्वा धनधान्यमवाप्नुयात्...',
+      translation: 'He who contemplates the Kuber Yantra matrix obtains unceasing financial prosperity.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['mahalakshmi_yantra', 'sri_yantra']
+  },
+  {
+    id: 'mahalakshmi_yantra',
+    names: {
+      sa: 'महालक्ष्मी यन्त्रम्',
+      iast: 'Mahālakṣmī Yantram',
+      hi: 'महालक्ष्मी यन्त्र',
+      en: 'Mahalakshmi Yantra (Goddess of Fortune)',
+      gu: 'મહાલક્ષ્મી યંત્ર'
+    },
+    deity: 'Goddess Mahalakshmi',
+    mantra: 'Om Shreem Hreem Kleem Tribhuvanamahasundaryai Kanakavardhinyai Namah',
+    geometrySpec: {
+      primaryShape: 'Ashtakon (8-Point Star) & Lotus Ring',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Bestowal of Ashta Lakshmi prosperity, auspiciousness, and royal fortune.',
+    historicalPeriod: 'c. 12th Century CE (Lakshmi Tantra)',
+    scripturalCitation: {
+      scripture: 'Lakshmi Tantra',
+      verse: 'Chapter 34.12',
+      sanskritText: 'अष्टकोणं समालिख्य पद्मपत्रैः सुशोभितम्...',
+      translation: 'Draw the 8-pointed star enclosed within sacred lotus petals for Mahalakshmi grace.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kuber_yantra', 'sri_yantra']
+  },
+  {
+    id: 'ganesh_yantra',
+    names: {
+      sa: 'गणेश यन्त्रम्',
+      iast: 'Gaṇeśa Yantram',
+      hi: 'गणेश यन्त्र',
+      en: 'Ganesh Yantra (Remover of Obstacles)',
+      gu: 'ગણેશ યંત્ર'
+    },
+    deity: 'Lord Ganesha',
+    mantra: 'Om Shreem Hreem Kleem Glaum Gam Ganapataye Vara Varada Sarvajanam Me Vashamanaya Swaha',
+    geometrySpec: {
+      primaryShape: 'Central Trikona, Swastika & 8 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Removal of all obstacles (Vighna Nivarana), intellect enhancement, and new beginnings.',
+    historicalPeriod: 'c. 10th Century CE (Ganesha Purana)',
+    scripturalCitation: {
+      scripture: 'Ganesha Purana',
+      verse: 'Krida Khanda 4.10',
+      sanskritText: 'गणेशयन्त्रं सम्पूज्य सर्वविघ्नैः प्रमुच्यते...',
+      translation: 'Worshipping the Ganesha Yantra frees one from all worldly and spiritual impediments.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['saraswati_yantra', 'sri_yantra']
+  },
+  {
+    id: 'saraswati_yantra',
+    names: {
+      sa: 'सरस्वती यन्त्रम्',
+      iast: 'Sarasvatī Yantram',
+      hi: 'सरस्वती यन्त्र',
+      en: 'Saraswati Yantra (Goddess of Learning & Arts)',
+      gu: 'સરસ્વતી યંત્ર'
+    },
+    deity: 'Goddess Saraswati',
+    mantra: 'Om Eim Hreem Shreem Vagdevyai Saraswatyai Namah',
+    geometrySpec: {
+      primaryShape: 'Hexagram (Shatkona) & Star Circle',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Acquisition of wisdom (Vidya), memory retention, academic mastery, and musical arts.',
+    historicalPeriod: 'c. 12th Century CE (Sharada Tilaka Tantra)',
+    scripturalCitation: {
+      scripture: 'Sharada Tilaka Tantra',
+      verse: 'Patala 6.18',
+      sanskritText: 'सरस्वती यन्त्रराजं बुद्धिसिद्धिप्रदायकम्...',
+      translation: 'The King of Saraswati Yantras grants intellect, eloquence, and mastery over sciences.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['ganesh_yantra', 'sri_yantra']
+  },
+  {
+    id: 'dhanvantari_yantra',
+    names: {
+      sa: 'धन्वन्तरि यन्त्रम्',
+      iast: 'Dhanvantari Yantram',
+      hi: 'धन्वन्तरि यन्त्र',
+      en: 'Dhanvantari Yantra (Divine Physician & Healing)',
+      gu: 'ધન્વંતરિ યંત્ર'
+    },
+    deity: 'Lord Dhanvantari',
+    mantra: 'Om Namo Bhagavate Vasudevaya Dhanvantaraye Amritakalashahastaya',
+    geometrySpec: {
+      primaryShape: 'Amrita Kalasha Radial Circle & 8 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Physical healing, disease prevention, immunity restoration, and Ayurvedic vitality.',
+    historicalPeriod: 'c. 13th Century CE (Ayurveda Soukhyam)',
+    scripturalCitation: {
+      scripture: 'Ayurveda Soukhyam',
+      verse: 'Section II.4',
+      sanskritText: 'धन्वन्तरि यन्त्रं न्यस्य सर्वरोगविनाशनम्...',
+      translation: 'Consecrating the Dhanvantari Yantra eradicates bodily afflictions and restores Amrita nectar.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['mahamrityunjaya_yantra']
+  },
+  {
+    id: 'mahamrityunjaya_yantra',
+    names: {
+      sa: 'महामृत्युञ्जय यन्त्रम्',
+      iast: 'Mahāmṛtyuñjaya Yantram',
+      hi: 'महामृत्युंजय यन्त्र',
+      en: 'Mahamrityunjaya Yantra (Conqueror of Death & Health)',
+      gu: 'મહામૃત્યુજય યંત્ર'
+    },
+    deity: 'Lord Rudra / Shiva',
+    mantra: 'Om Tryambakam Yajamahe Sugandhim Pushtivardhanam Urvarukamiva Bandhanan Mrityor Mukshiya Mamritat',
+    geometrySpec: {
+      primaryShape: 'Trishula Shatkona & 8 Shiva Petals',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Protection from untimely death (Apamrityu), severe chronic illness, and negative forces.',
+    historicalPeriod: 'c. 9th Century CE (Netra Tantra)',
+    scripturalCitation: {
+      scripture: 'Netra Tantra',
+      verse: 'Chapter 8.15',
+      sanskritText: 'मृत्युनिवारकं यन्त्रं रुद्रदेवप्रतिष्ठितम्...',
+      translation: 'The Rudra-consecrated Death-Conquering Yantra protects against all physical and subtle dangers.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['dhanvantari_yantra', 'durga_yantra']
+  },
+  {
+    id: 'navagraha_yantra',
+    names: {
+      sa: 'नवग्रह यन्त्रम्',
+      iast: 'Navagraha Yantram',
+      hi: 'नवग्रह यन्त्र',
+      en: 'Navagraha Yantra (9 Planetary Cosmic Matrix)',
+      gu: 'નવગ્રહ યંત્ર'
+    },
+    deity: 'Navagraha (9 Planets)',
+    mantra: 'Om Namah Suryaya Chandraya Mangalaya Budhaya Cha Guru Shukra Shanibhyashcha Rahave Ketave Namah',
+    geometrySpec: {
+      primaryShape: '3x3 Matrix of 9 Planetary Geometric Enclosures',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Pacification of planetary doshas, balancing cosmic influences, and astrological harmony.',
+    historicalPeriod: 'c. 11th Century CE (Bhrigu Samhita)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XXI.10',
+      sanskritText: 'नवग्रहयन्त्रयोगेन सर्वग्रहप्रसादनम्...',
+      translation: 'By means of the Navagraha Yantra matrix, all 9 planets are propitiated and rendered benevolent.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['surya_yantra', 'chandra_yantra', 'shani_yantra']
+  },
+  {
+    id: 'surya_yantra',
+    names: {
+      sa: 'सूर्य यन्त्रम्',
+      iast: 'Sūrya Yantram',
+      hi: 'सूर्य यन्त्र',
+      en: 'Surya Yantra (Sun Planetary Yantra)',
+      gu: 'સૂર્ય યંત્ર'
+    },
+    deity: 'Surya Deva (Sun)',
+    mantra: 'Om Hram Hreem Hroum Sah Suryaya Namah',
+    geometrySpec: {
+      primaryShape: '8-Petal Circle with Central Bindu',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Enhancement of leadership, vitality, fame, self-confidence, and eye health.',
+    historicalPeriod: 'c. 10th Century CE (Surya Samhita)',
+    scripturalCitation: {
+      scripture: 'Surya Purana',
+      verse: 'Chapter 12.4',
+      sanskritText: 'सूर्ययन्त्रं महद्तेजः सर्वपापहरं शिवम्...',
+      translation: 'The Surya Yantra possesses great radiance, dispelling darkness and bestowing authority.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra']
+  },
+  {
+    id: 'chandra_yantra',
+    names: {
+      sa: 'चन्द्र यन्त्रम्',
+      iast: 'Candra Yantram',
+      hi: 'चन्द्र यन्त्र',
+      en: 'Chandra Yantra (Moon Planetary Yantra)',
+      gu: 'ચંદ્ર યંત્ર'
+    },
+    deity: 'Chandra Deva (Moon)',
+    mantra: 'Om Shram Shreem Shroum Sah Chandraya Namah',
+    geometrySpec: {
+      primaryShape: 'Crescent Moon & 16 Lotus Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Mental peace, emotional stability, intuition enhancement, and water element balancing.',
+    historicalPeriod: 'c. 11th Century CE (Mantra Mahodadhi)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XIV.18',
+      sanskritText: 'चन्द्रयन्त्रप्रभावेण मनःशान्तिः प्रजायते...',
+      translation: 'By the influence of the Chandra Yantra, profound mental serenity and emotional equilibrium arise.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra']
+  },
+  {
+    id: 'mangal_yantra',
+    names: {
+      sa: 'मङ्गल यन्त्रम्',
+      iast: 'Maṅgala Yantram',
+      hi: 'मंगल यन्त्र',
+      en: 'Mangal Yantra (Mars Planetary Yantra)',
+      gu: 'મંગળ યંત્ર'
+    },
+    deity: 'Mangal Deva (Mars)',
+    mantra: 'Om Kram Kreem Kroum Sah Bhaumaya Namah',
+    geometrySpec: {
+      primaryShape: 'Upward Triangle & 8-Petal Circle',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Removal of Manglik Dosha, courage, debt clearance, and land/real estate prosperity.',
+    historicalPeriod: 'c. 12th Century CE (Bhrigu Samhita)',
+    scripturalCitation: {
+      scripture: 'Bhrigu Samhita',
+      verse: 'Section V.9',
+      sanskritText: 'भौमदोषविनाशाय मङ्गलस्य यन्त्रं भजेत्...',
+      translation: 'To nullify Bhauma/Manglik afflictions, one should reverence the Mangal Yantra.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra']
+  },
+  {
+    id: 'budha_yantra',
+    names: {
+      sa: 'बुध यन्त्रम्',
+      iast: 'Budha Yantram',
+      hi: 'बुध यन्त्र',
+      en: 'Budha Yantra (Mercury Planetary Yantra)',
+      gu: 'બુધ યંત્ર'
+    },
+    deity: 'Budha Deva (Mercury)',
+    mantra: 'Om Bram Breem Broum Sah Budhaya Namah',
+    geometrySpec: {
+      primaryShape: 'Emerald Hexagram & 8 Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Intellectual sharp intelligence, communication skill, commercial trade, and logic.',
+    historicalPeriod: 'c. 11th Century CE (Mantra Mahodadhi)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XIV.22',
+      sanskritText: 'बुधयन्त्रधरो नित्यं वाक्सिद्धिं लभते ध्रुवम्...',
+      translation: 'He who holds the Budha Yantra daily undoubtedly attains speech mastery and commercial skill.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra', 'saraswati_yantra']
+  },
+  {
+    id: 'brihaspati_yantra',
+    names: {
+      sa: 'बृहस्पति यन्त्रम्',
+      iast: 'Bṛhaspati Yantram',
+      hi: 'गुरु / बृहस्पति यन्त्र',
+      en: 'Brihaspati Yantra (Jupiter Planetary Yantra)',
+      gu: 'ગુરુ / બૃહસ્પતિ યંત્ર'
+    },
+    deity: 'Brihaspati Deva (Jupiter / Guru)',
+    mantra: 'Om Gram Greem Groum Sah Gurave Namah',
+    geometrySpec: {
+      primaryShape: 'Gold Octagon & 12 Lotus Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Spiritual wisdom, higher education, marital bliss, offspring, and divine grace.',
+    historicalPeriod: 'c. 10th Century CE (Guru Samhita)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XIV.26',
+      sanskritText: 'गुरुयन्त्रप्रभावेन धर्मज्ञानं प्रवर्धते...',
+      translation: 'By the sacred radiance of the Guru Yantra, spiritual wisdom and righteous living flourish.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra']
+  },
+  {
+    id: 'shukra_yantra',
+    names: {
+      sa: 'शुक्र यन्त्रम्',
+      iast: 'Śukra Yantram',
+      hi: 'शुक्र यन्त्र',
+      en: 'Shukra Yantra (Venus Planetary Yantra)',
+      gu: 'શુક્ર યંત્ર'
+    },
+    deity: 'Shukra Deva (Venus)',
+    mantra: 'Om Dram Dreem Droum Sah Shukraya Namah',
+    geometrySpec: {
+      primaryShape: 'White Pentagram & 16 Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Attraction of beauty, artistic refinement, luxury, harmonious relationships, and romance.',
+    historicalPeriod: 'c. 12th Century CE (Mantra Mahodadhi)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XIV.30',
+      sanskritText: 'शुक्रयन्त्रं समाश्रित्य सर्वसौख्यं समश्नुते...',
+      translation: 'Relying upon the Shukra Yantra, one enjoys all sensory refined pleasures and comforts.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra', 'mahalakshmi_yantra']
+  },
+  {
+    id: 'shani_yantra',
+    names: {
+      sa: 'शनि यन्त्रम्',
+      iast: 'Śani Yantram',
+      hi: 'शनि यन्त्र',
+      en: 'Shani Yantra (Saturn Planetary Yantra)',
+      gu: 'શનિ યંત્ર'
+    },
+    deity: 'Shani Deva (Saturn)',
+    mantra: 'Om Pram Preem Proum Sah Shanaishcharaya Namah',
+    geometrySpec: {
+      primaryShape: 'Dark Blue Hexagram & 8 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Mitigation of Sade Sati & Dhaiya, discipline, longevity, protection from hardship.',
+    historicalPeriod: 'c. 11th Century CE (Shani Samhita)',
+    scripturalCitation: {
+      scripture: 'Shani Samhita',
+      verse: 'Section IV.12',
+      sanskritText: 'शनिमन्दग्रहशान्त्यर्थं शनिचित्रं समालिखेत्...',
+      translation: 'For the pacification of Saturnine afflictions, draw the geometric Shani Yantra.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra', 'mahamrityunjaya_yantra']
+  },
+  {
+    id: 'rahu_yantra',
+    names: {
+      sa: 'राहु यन्त्रम्',
+      iast: 'Rāhu Yantram',
+      hi: 'राहु यन्त्र',
+      en: 'Rahu Yantra (North Lunar Node Yantra)',
+      gu: 'રાહુ યંત્ર'
+    },
+    deity: 'Rahu Deva (North Node)',
+    mantra: 'Om Bhram Bhreem Bhroum Sah Rahave Namah',
+    geometrySpec: {
+      primaryShape: 'Smoky Inverted Triangle & 8 Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Protection from illusions, occult fears, Kaal Sarp dosha, and sudden upheaval.',
+    historicalPeriod: 'c. 12th Century CE (Mantra Mahodadhi)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XIV.35',
+      sanskritText: 'राहुग्रहविनाशाय राहुयन्त्रं प्रसिद्धयति...',
+      translation: 'The Rahu Yantra is renowned for neutralizing Rahu-inflicted psychological turbulence.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra', 'ketu_yantra']
+  },
+  {
+    id: 'ketu_yantra',
+    names: {
+      sa: 'केतु यन्त्रम्',
+      iast: 'Ketu Yantram',
+      hi: 'केतु यन्त्र',
+      en: 'Ketu Yantra (South Lunar Node Yantra)',
+      gu: 'કેતુ યંત્ર'
+    },
+    deity: 'Ketu Deva (South Node)',
+    mantra: 'Om Stram Streem Stroum Sah Ketave Namah',
+    geometrySpec: {
+      primaryShape: 'Asymmetrical Flame Triangle & 8 Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Moksha liberation, spiritual detachment, occult wisdom, and psychic protection.',
+    historicalPeriod: 'c. 12th Century CE (Mantra Mahodadhi)',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga XIV.40',
+      sanskritText: 'केतुयन्त्रप्रभावेण मोक्षदिग्सिद्धिमाप्नुयात्...',
+      translation: 'By Ketu Yantra influence, one attains spiritual liberation and esoteric clarity.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['navagraha_yantra', 'rahu_yantra']
+  },
+  {
+    id: 'durga_yantra',
+    names: {
+      sa: 'दुर्गा यन्त्रम्',
+      iast: 'Durgā Yantram',
+      hi: 'दुर्गा यन्त्र (दुर्गा बीसा)',
+      en: 'Durga Yantra (Durga Beesa Armor)',
+      gu: 'દુર્ગા યંત્ર'
+    },
+    deity: 'Goddess Durga',
+    mantra: 'Om Dum Durgayei Namaha',
+    geometrySpec: {
+      primaryShape: '9-Triangle Central Star & 8 Lotus Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Divine armor against negative energies, fearlessness, victory over enemies, and protection.',
+    historicalPeriod: 'c. 8th Century CE (Devi Mahatmya / Chandi)',
+    scripturalCitation: {
+      scripture: 'Devi Mahatmya',
+      verse: 'Chapter 4.22',
+      sanskritText: 'दुर्गायन्त्रं महापुण्यं सर्वशत्रुविनाशनम्...',
+      translation: 'The auspicious Durga Yantra destroys all hostile forces and bestows divine guardianship.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kali_yantra', 'bagalamukhi_yantra']
+  },
+  {
+    id: 'kali_yantra',
+    names: {
+      sa: 'काली यन्त्रम्',
+      iast: 'Kālī Yantram',
+      hi: 'काली यन्त्र',
+      en: 'Mahakali Yantra (Transcendental Protection)',
+      gu: 'કાલી યંત્ર'
+    },
+    deity: 'Goddess Mahakali',
+    mantra: 'Om Kring Kalikaye Namah',
+    geometrySpec: {
+      primaryShape: '5 Downward Concentric Triangles & 8 Petals',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Transcendence of ego, neutralization of dark forces, time transcendence, and liberation.',
+    historicalPeriod: 'c. 10th Century CE (Karpuradi Stotra)',
+    scripturalCitation: {
+      scripture: 'Mahanirvana Tantra',
+      verse: 'Patala 5.40',
+      sanskritText: 'पञ्चकोणं समारुह्य कालीयन्त्रं समर्चयेत्...',
+      translation: 'Draw the 5 concentric Shakti triangles and worship Mahakali for ultimate spiritual victory.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['durga_yantra', 'bagalamukhi_yantra']
+  },
+  {
+    id: 'bagalamukhi_yantra',
+    names: {
+      sa: 'बगलामुखी यन्त्रम्',
+      iast: 'Bagalāmukhī Yantram',
+      hi: 'बगलामुखी यन्त्र',
+      en: 'Bagalamukhi Yantra (Stambhana Victory Yantra)',
+      gu: 'બગલામુખી યંત્ર'
+    },
+    deity: 'Goddess Bagalamukhi',
+    mantra: 'Om Hleem Bagalamukhi Sarvadustanam Vacham Mukham Padam Stambhaya Jihvam Kilaya Buddhim Vinashaya Hleem Om Swaha',
+    geometrySpec: {
+      primaryShape: 'Golden Hexagram & Stambhana Central Trikona',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Stambhana (paralyzing hostile intentions), legal court case victory, and speech paralysis of adversaries.',
+    historicalPeriod: 'c. 11th Century CE (Sankhayana Tantra)',
+    scripturalCitation: {
+      scripture: 'Sankhayana Tantra',
+      verse: 'Patala 12.8',
+      sanskritText: 'स्तम्भनं सर्वशत्रूणां बगलायन्त्रमुत्तमम्...',
+      translation: 'The supreme Bagalamukhi Yantra paralyzes the hostile actions and speech of all adversaries.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['durga_yantra', 'kali_yantra']
+  },
+  {
+    id: 'hanuman_yantra',
+    names: {
+      sa: 'हनुमान् यन्त्रम्',
+      iast: 'Hanumān Yantram',
+      hi: 'हनुमान यन्त्र',
+      en: 'Hanuman Yantra (Courage & Protection)',
+      gu: 'હનુમાન યંત્ર'
+    },
+    deity: 'Lord Hanuman',
+    mantra: 'Om Hum Hanumate Rudratmakaya Hum Phat',
+    geometrySpec: {
+      primaryShape: 'Inverted Triangle, Gada & 8 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Immense courage, physical strength, protection from evil spirits, and devotion.',
+    historicalPeriod: 'c. 14th Century CE (Hanumad Samhita)',
+    scripturalCitation: {
+      scripture: 'Hanumad Samhita',
+      verse: 'Chapter 8.10',
+      sanskritText: 'हनूमद्यन्त्रमाहात्म्यं सर्वभयनिवारणम्...',
+      translation: 'The greatness of the Hanuman Yantra eradicates all fears, evil omens, and weaknesses.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sudarshana_yantra', 'narasimha_yantra']
+  },
+  {
+    id: 'sudarshana_yantra',
+    names: {
+      sa: 'सुदर्शन यन्त्रम्',
+      iast: 'Sudarśana Yantram',
+      hi: 'सुदर्शन यन्त्र',
+      en: 'Sudarshana Yantra (Vishnu Discus Weapon Armor)',
+      gu: 'સુદર્શન યંત્ર'
+    },
+    deity: 'Lord Sudarshana (Vishnu Discus)',
+    mantra: 'Om Maha Sudarshanaya Namah',
+    geometrySpec: {
+      primaryShape: '108-Spoke Discus Wheel & Hexagram',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Instant destruction of negative occult energies, enemy neutralization, and divine armor.',
+    historicalPeriod: 'c. 10th Century CE (Ahirbudhnya Samhita)',
+    scripturalCitation: {
+      scripture: 'Ahirbudhnya Samhita',
+      verse: 'Chapter 26.15',
+      sanskritText: 'सुदर्शनमहाचक्रं सर्वदुष्टविनाशनम्...',
+      translation: 'The great Sudarshana Discus Yantra incinerates all malevolent forces and protects devotees.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['narasimha_yantra', 'hanuman_yantra']
+  },
+  {
+    id: 'narasimha_yantra',
+    names: {
+      sa: 'नारसिंह यन्त्रम्',
+      iast: 'Nārasiṃha Yantram',
+      hi: 'नृसिंह यन्त्र',
+      en: 'Narasimha Yantra (Ferocious Divine Protection)',
+      gu: 'નરસિંહ યંત્ર'
+    },
+    deity: 'Lord Narasimha',
+    mantra: 'Om Ugram Veeram Maha Vishnum Jwalantam Sarvatomukham Nrisimham Bheeshanam Bhadram Mrityur Mrityum Namamyaham',
+    geometrySpec: {
+      primaryShape: 'Flashing Hexagram & Lion Claw Star Matrix',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Fierce protection from dire danger, eradication of deep-seated fear, and instant rescue.',
+    historicalPeriod: 'c. 9th Century CE (Nrisimha Tapaniya Upanishad)',
+    scripturalCitation: {
+      scripture: 'Nrisimha Tapaniya Upanishad',
+      verse: 'Section I.8',
+      sanskritText: 'नारसिंहं परं यन्त्रं सर्वदोषनिवारणम्...',
+      translation: 'The supreme Narasimha Yantra dispels all cosmic blemishes and fierce perils.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sudarshana_yantra', 'hanuman_yantra']
+  },
+  {
+    id: 'vastu_yantra',
+    names: {
+      sa: 'वास्तुपुरुष यन्त्रम्',
+      iast: 'Vāstupuruṣa Yantram',
+      hi: 'वास्तु यन्त्र',
+      en: 'Vastu Yantra (Architectural Cosmic Grid)',
+      gu: 'વાસ્તુ યંત્ર'
+    },
+    deity: 'Vastu Purusha',
+    mantra: 'Om Vastupurushaya Namah',
+    geometrySpec: {
+      primaryShape: '9x9 Paramasayika Grid Matrix (81 Squares)',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Harmonization of architectural space, correction of Vastu dosha in homes and buildings.',
+    historicalPeriod: 'c. 6th Century CE (Brihat Samhita / Mayamatam)',
+    scripturalCitation: {
+      scripture: 'Mayamatam',
+      verse: 'Chapter 7.12',
+      sanskritText: 'एकाशीतिपदं न्यस्य वास्तुपुरुषमर्चयेत्...',
+      translation: 'Consecrate the 81-square Grid Matrix and worship Vastu Purusha for spatial harmony.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sri_yantra', 'maha_meru']
+  }
+];

@@ -1,0 +1,60 @@
+You are a Vedic Panchang computation engineer.
+
+My calendar is showing double tithi for the same civil date.
+
+Audit and fix the Tithi calculation system.
+
+Rules to follow:
+
+1. Tithi = floor((MoonLongitude - SunLongitude) / 12°) + 1
+2. Normalize longitude difference to 0–360°.
+3. Calendar day tithi must be determined based on local sunrise time.
+4. Do NOT use midnight as boundary.
+5. If tithi changes after sunrise, show:
+   - Primary tithi (at sunrise)
+   - Secondary tithi (with end time)
+6. If tithi changes before sunrise, only show new tithi.
+
+Check for:
+- Timezone errors
+- DST handling
+- Longitude normalization errors
+- Negative angle wrap issues
+- Incorrect rounding
+
+Return:
+- Corrected tithi calculation function
+- Sunrise-based assignment logic
+- Edge case handling
+- Test cases for 5 random dates
+Extra Check (Very Important)
+
+Make sure:
+
+delta = MoonLon - SunLon
+if (delta < 0) delta += 360
+
+Otherwise duplication ho sakta hai.
+
+🧪 Debug Checklist
+
+✔ Are you using topocentric moon?
+✔ Is ayanamsha applied before difference?
+✔ Is sunrise correct local time?
+✔ Is date object timezone safe?
+
+📌 Correct Display Logic Example
+
+If:
+
+Sunrise 6:40 AM
+Tithi changes 9:15 AM
+
+Display:
+
+Chaturthi till 9:15 AM
+Panchami after 9:15 AM
+
+But calendar day title:
+
+→ Chaturthi (since active at sunrise)

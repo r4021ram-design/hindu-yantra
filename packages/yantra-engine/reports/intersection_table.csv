@@ -1,0 +1,4 @@
+node_id,x,y,derivation_method,step_origin
+t3_L,-0.393076,0.809017,Analytical Line Intersection,Step80
+t3_R,0.393076,0.809017,Analytical Line Intersection,Step80
+t3_A,0.000000,0.000000,Analytical Line Intersection,Step80

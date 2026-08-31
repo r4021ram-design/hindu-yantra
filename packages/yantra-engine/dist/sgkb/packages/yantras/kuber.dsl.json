@@ -1,0 +1,52 @@
+{
+    "manifest": {
+        "uri": "sgos://yantra/kuber",
+        "id": "kuber_yantra_canonical",
+        "domain": "yantra",
+        "names": {
+            "sanskrit": "कुबेर यन्त्र",
+            "iast": "Kubera Yantra",
+            "hindi": "कुबेर यन्त्र",
+            "english": "Kuber Yantra",
+            "gujarati": "કુબેર યંત્ર"
+        },
+        "versions": {
+            "geometryVersion": "1.0.0",
+            "researchVersion": "1.0.0",
+            "commentaryVersion": "1.0.0",
+            "translationVersion": "1.0.0",
+            "evidenceVersion": "1.0.0"
+        },
+        "sha256Signature": "sha256_108df1f88a609d57",
+        "createdTimestamp": "2026-07-24T00:00:00Z"
+    },
+    "dsl": {
+        "id": "kuber_yantra_canonical",
+        "names": {
+            "sanskrit": "कुबेर यन्त्र",
+            "english": "Kuber Yantra"
+        },
+        "tradition": "Vedic Wealth",
+        "metadata": {
+            "category": "Wealth & Prosperity",
+            "deity": "Lord Kuber",
+            "scripturalReference": "Rig Veda Kuber Suktam"
+        },
+        "geometryRules": {
+            "symmetryGroupOrder": 4,
+            "lotusPetalRings": [{ "count": 8, "radiusRatio": 0.6 }],
+            "bhupura": { "enabled": true, "steps": 2, "gates": ["EAST"] }
+        }
+    },
+    "variants": [
+        {
+            "variantId": "kuber_grid_3x3",
+            "traditionName": "Magic Grid 3x3",
+            "description": "3x3 numerical magic square totaling 72 in all directions.",
+            "dslOverride": { "tradition": "Vedic Numerical" }
+        }
+    ],
+    "citations": [],
+    "researchNotes": ["Uses 4-fold orthogonal symmetry for directional wealth stability."],
+    "localizations": {}
+}

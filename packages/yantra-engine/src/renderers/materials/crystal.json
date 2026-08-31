@@ -1,0 +1,23 @@
+{
+  "name": "Sphatika Crystal",
+  "id": "crystal",
+  "version": "1.0.0",
+  "category": "Crystals",
+  "description": "Natural quartz crystal with high light refraction and transparency.",
+  "pbr": {
+    "albedo": "#FFFFFF",
+    "roughness": 0.05,
+    "metalness": 0.00,
+    "transmission": 0.90,
+    "ior": 1.54,
+    "clearcoat": 1.0,
+    "clearcoatRoughness": 0.05,
+    "emissive": "#000000",
+    "opacity": 0.9
+  },
+  "preview": {
+    "accentColor": "#E2E8F0"
+  },
+  "units": "SI/Metric",
+  "isCustom": false
+}

@@ -1,0 +1,663 @@
+COMPLETE PLANET + HOUSE STRENGTH ENGINE (ENTERPRISE GRADE)
+🔷 PART 1 — PLANET STRENGTH ENGINE (0–100%)
+
+We will divide total 100 into weighted layers:
+
+Layer	Weight
+Sign Dignity	20%
+House Placement	10%
+Shadbala	25%
+Aspect Influence	10%
+Functional Nature	10%
+Varga Support	15%
+Dasha Activation	5%
+Transit Influence	5%
+
+Total = 100%
+
+🔹 1️⃣ SIGN DIGNITY (20%)
+function signScore(status: string): number {
+  const map = {
+    exalted: 20,
+    mooltrikona: 18,
+    own: 16,
+    friendly: 13,
+    neutral: 10,
+    enemy: 6,
+    debilitated: 3
+  }
+  return map[status]
+}
+🔹 2️⃣ HOUSE PLACEMENT (10%)
+Placement	Score
+Trikona	10
+Kendra	8
+Upachaya	6
+Dusthana	3
+🔹 3️⃣ SHADBALA (25%)
+
+If Shadbala ratio available:
+
+const shadbalaPercent = (planetShadbala / requiredShadbala)
+const shadbalaScore = Math.min(shadbalaPercent, 1) * 25
+
+If no Shadbala:
+Estimate using:
+
+Retrograde
+
+Combust
+
+Directional strength
+
+Degree strength
+
+🔹 4️⃣ ASPECT INFLUENCE (10%)
+aspectScore =
+(+5 × beneficAspects)
+- (5 × maleficAspects)
+
+cap at ±10
+🔹 5️⃣ FUNCTIONAL NATURE (10%)
+Nature	Score
+Yogakaraka	10
+Benefic	8
+Neutral	5
+Malefic	2
+🔹 6️⃣ VARGA SUPPORT (15%)
+
+Use D9 (Navamsa) minimum:
+
+Navamsa Status	Score
+Exalted	15
+Own	12
+Friendly	10
+Neutral	7
+Enemy	4
+Debilitated	2
+
+Advanced version:
+Include D10 for career planets.
+
+🔹 7️⃣ DASHA ACTIVATION (5%)
+
+If current Mahadasha:
++5
+
+If Antardasha:
++3
+
+Else:
++0
+
+🔹 8️⃣ TRANSIT TEMPORARY MODIFIER (5%)
+
+If Saturn/Rahu transiting over natal planet:
+-5
+
+If Jupiter aspecting:
++5
+
+🔥 FINAL PLANET STRENGTH
+planetStrength =
+sign +
+house +
+shadbala +
+aspect +
+functional +
+varga +
+dasha +
+transit
+
+Clamp 0–100.
+
+🏠 PART 2 — HOUSE STRENGTH ENGINE
+
+Based on classical rule:
+
+✔ Bhav
+✔ Bhavesh
+✔ Karaka
+✔ Drishti
+
+Component	Weight
+Lord Strength	40%
+Occupants	15%
+Aspects on House	15%
+Karaka Strength	15%
+Varga Confirmation	10%
+Dasha Relevance	5%
+🔹 LORD STRENGTH
+lordScore = planetStrength × 0.4
+🔹 OCCUPANTS
+
+Each benefic:
++5
+
+Each malefic:
+-5
+
+Cap ±15
+
+🔹 KARAKA
+
+Example:
+5th → Jupiter
+7th → Venus
+
+karakaScore = karakaStrength × 0.15
+🔹 VARGA CONFIRMATION
+
+If house strong in D9/D10:
++10
+
+Else:
++0
+
+🔥 FINAL HOUSE SCORE
+houseStrength =
+(lordStrength * 0.4)
++ occupantScore
++ aspectScore
++ karakaScore
++ vargaScore
++ dashaScore
+
+Normalize 0–100.
+
+DASHBOARD UI
+
+Planet Strength → Bar Chart
+House Strength → Radar Chart
+
+Color Logic:
+Green > 70
+Yellow 40–70
+Red < 40
+
+OMPLETE SHADBALA MATHEMATICAL FORMULA ENGINE
+
+(Production-grade, Parashari compliant)
+
+Primary classical source:
+Brihat Parashara Hora Shastra
+
+🔷 SHADBALA KYA HAI?
+
+Shadbala = “6 types of planetary strength”
+
+1️⃣ Sthana Bala (Positional Strength)
+2️⃣ Dig Bala (Directional Strength)
+3️⃣ Kala Bala (Temporal Strength)
+4️⃣ Chesta Bala (Motional Strength)
+5️⃣ Naisargika Bala (Natural Strength)
+6️⃣ Drik Bala (Aspect Strength)
+
+Final output generally expressed in:
+
+Virupa
+
+Rupa
+
+Or Percentage
+
+🎯 TARGET OUTPUT
+{
+  "planet": "Saturn",
+  "totalVirupa": 1.38,
+  "requiredVirupa": 1.0,
+  "shadbalaPercent": 138
+}
+🔷 1️⃣ STHANA BALA (Max ~20 Virupa)
+
+Includes:
+
+Uchcha Bala
+
+Saptavargaja Bala
+
+Ojayugma Bala
+
+Kendradi Bala
+
+Drekkana Bala
+
+🔹 (A) UCHCHA BALA (Exaltation Strength)
+
+Formula:
+
+Uchcha Bala = (Distance from Debilitation Point / 180°) × 20
+
+If planet exactly exalted → 20
+If exactly debilitated → 0
+
+function uchchaBala(longitude: number, exaltationDegree: number): number {
+  const distance = Math.abs(longitude - exaltationDegree)
+  return (1 - (distance / 180)) * 20
+}
+🔹 (B) SAPTAVARGAJA BALA
+
+Check planet dignity in:
+
+Rashi
+
+Hora
+
+Drekkana
+
+Saptamsa
+
+Navamsa
+
+Dvadasamsa
+
+Trimsamsa
+
+Assign points per dignity:
+
+Status	Points
+Exalted	5
+Own	4
+Friendly	3
+Neutral	2
+Enemy	1
+
+Sum all.
+
+🔷 2️⃣ DIG BALA (Directional Strength)
+
+Each planet strongest in specific house:
+
+Planet	Strongest House
+Jupiter	1st
+Mercury	1st
+Moon	4th
+Venus	4th
+Saturn	7th
+Sun	10th
+Mars	10th
+
+Formula:
+
+Dig Bala = (Angular distance from weakest point / 180°) × 20
+🔷 3️⃣ KALA BALA (Time Strength)
+
+Includes:
+
+Natonnata Bala (Day/Night)
+
+Paksha Bala (Moon phase)
+
+Tribhaga Bala
+
+Varsha/Masa/Dina/Hora Bala
+
+🔹 Paksha Bala (Moon Phase Strength)
+Paksha Bala = (Moon-Sun angular difference / 180°) × 20
+
+Full Moon → 20
+New Moon → 0
+
+🔷 4️⃣ CHESTA BALA (Motional Strength)
+
+Based on retrogression.
+
+Condition	Points
+Vakri (Retrograde)	20
+Direct Fast	15
+Normal	10
+Combust	5
+🔷 5️⃣ NAISARGIKA BALA (Natural Strength)
+
+Fixed natural strengths:
+
+Planet	Virupa
+Sun	60
+Moon	51
+Venus	43
+Jupiter	34
+Mercury	26
+Mars	17
+Saturn	9
+
+Normalize to scale.
+
+🔷 6️⃣ DRIK BALA (Aspect Strength)
+
+Calculate net aspect influence:
+
+drikBala =
+(+15 × beneficAspects)
+- (15 × maleficAspects)
+
+Cap range.
+
+🔥 TOTAL SHADBALA FORMULA
+totalVirupa =
+sthāna +
+dig +
+kala +
+chesta +
+naisargika +
+drik
+🎯 REQUIRED MINIMUM (Classical Threshold)
+Planet	Required Rupa
+Sun	1.0
+Moon	1.0
+Mars	1.0
+Mercury	1.0
+Jupiter	1.0
+Venus	1.0
+Saturn	1.0
+🔢 FINAL PERCENT CALCULATION
+shadbalaPercent =
+(totalVirupa / requiredVirupa) * 100
+
+Clamp between 0–200.
+
+SAPTAVARGAJA BALA KYA HAI?
+
+Saptavargaja Bala = Planet ki dignity 7 divisional charts me.
+
+Ye 7 varga hain:
+
+1️⃣ Rashi (D1)
+2️⃣ Hora (D2)
+3️⃣ Drekkana (D3)
+4️⃣ Saptamsa (D7)
+5️⃣ Navamsa (D9)
+6️⃣ Dvadasamsa (D12)
+7️⃣ Trimsamsa (D30)
+
+Har varga me planet ki dignity evaluate hoti hai.
+
+🎯 TARGET OUTPUT
+{
+  "planet": "Jupiter",
+  "vargaScores": {
+    "D1": 4,
+    "D2": 3,
+    "D3": 2,
+    "D7": 4,
+    "D9": 5,
+    "D12": 3,
+    "D30": 2
+  },
+  "totalSaptavargajaBala": 23
+}
+🔢 STEP 1: DIGNITY SCORING SCALE
+
+Traditional dignity mapping:
+
+Status	Points
+Exalted	5
+Mooltrikona	4
+Own Sign	4
+Great Friend	3
+Friend	3
+Neutral	2
+Enemy	1
+Debilitated	0
+
+Max possible = 7 × 5 = 35
+
+🔷 STEP 2: EACH VARGA CALCULATION
+🪐 1️⃣ RASHI (D1)
+
+Already calculated from main chart.
+
+🌗 2️⃣ HORA (D2)
+
+Each sign divided into 2 parts (15° each):
+
+Odd signs:
+
+0°–15° → Sun Hora
+
+15°–30° → Moon Hora
+
+Even signs:
+
+0°–15° → Moon Hora
+
+15°–30° → Sun Hora
+
+Implementation:
+
+function getHoraSign(sign: number, degree: number): string {
+  const isOdd = sign % 2 !== 0
+  if (degree < 15) {
+    return isOdd ? "Sun" : "Moon"
+  } else {
+    return isOdd ? "Moon" : "Sun"
+  }
+}
+
+Then assign dignity based on that Hora lord.
+
+🔱 3️⃣ DREKKANA (D3)
+
+Each sign divided into 3 parts (10° each):
+
+Portion	Lord
+0–10°	Sign Lord
+10–20°	5th sign lord
+20–30°	9th sign lord
+🌱 4️⃣ SAPTAMSA (D7)
+
+30° / 7 = 4°17'8.57"
+
+Odd sign:
+Count forward from same sign.
+
+Even sign:
+Count from 7th sign.
+
+Formula:
+
+const divisionSize = 30 / 7
+const index = Math.floor(degree / divisionSize)
+💍 5️⃣ NAVAMSA (D9)
+
+30° / 9 = 3°20'
+
+Navamsa rule:
+
+Movable signs start from same sign
+
+Fixed signs start from 9th sign
+
+Dual signs start from 5th sign
+
+Implementation:
+
+const divisionSize = 30 / 9
+const navIndex = Math.floor(degree / divisionSize)
+
+Then apply starting offset logic.
+
+👨‍👩‍👧 6️⃣ DVADASAMSA (D12)
+
+30° / 12 = 2°30'
+
+Count sequentially from sign.
+
+🔥 7️⃣ TRIMSAMSA (D30)
+
+Unequal divisions.
+
+Odd signs:
+
+Degrees	Lord
+0–5	Mars
+5–10	Saturn
+10–18	Jupiter
+18–25	Mercury
+25–30	Venus
+
+Even signs reversed order.
+
+🔷 STEP 3: DIGNITY RESOLUTION ENGINE
+
+After determining varga sign:
+
+function getDignityScore(planet: string, vargaSign: string): number {
+  const dignity = getDignityStatus(planet, vargaSign)
+  const scoreMap = {
+    exalted: 5,
+    mooltrikona: 4,
+    own: 4,
+    friend: 3,
+    neutral: 2,
+    enemy: 1,
+    debilitated: 0
+  }
+  return scoreMap[dignity]
+}
+🔥 STEP 4: TOTAL SAPTAVARGAJA BALA
+function calculateSaptavargajaBala(scores: number[]): number {
+  return scores.reduce((sum, val) => sum + val, 0)
+}
+📊 INTERPRETATION SCALE
+Score (Out of 35)	Meaning
+28–35	Very Strong
+21–27	Strong
+14–20	Average
+7–13	Weak
+0–6	Very Weak 
+
+SHODASHAVARGA (16 DIVISIONAL CHART) COMPLETE ENGINE
+
+(Enterprise-grade Jyotish Core System)
+
+Primary classical reference:
+Brihat Parashara Hora Shastra
+
+🔷 SHODASHAVARGA LIST (16 Divisions)
+No	Chart	Code	Division
+1	Rashi	D1	30°
+2	Hora	D2	15°
+3	Drekkana	D3	10°
+4	Chaturthamsa	D4	7°30'
+5	Saptamsa	D7	4°17'
+6	Navamsa	D9	3°20'
+7	Dasamsa	D10	3°
+8	Dvadasamsa	D12	2°30'
+9	Shodasamsa	D16	1°52'30"
+10	Vimsamsa	D20	1°30'
+11	Chaturvimsamsa	D24	1°15'
+12	Saptavimsamsa	D27	1°6'40"
+13	Trimsamsa	D30	Unequal
+14	Khavedamsa	D40	45'
+15	Akshavedamsa	D45	40'
+16	Shastiamsa	D60	30'
+🎯 GOAL
+
+Output:
+
+{
+  "planet": "Venus",
+  "vargaStrength": {
+    "D1": 4,
+    "D9": 5,
+    "D10": 3,
+    "D60": 5
+  },
+  "totalScore": 62,
+  "percentage": 78
+}
+🔷 CORE MATHEMATICAL FRAMEWORK
+
+General rule for most vargas:
+
+const divisionSize = 30 / N
+const index = Math.floor(degree / divisionSize)
+
+Then apply starting sign offset rule.
+
+🔶 1️⃣ D4 (Chaturthamsa)
+
+30° / 4 = 7°30'
+
+Movable signs → start from same sign
+Fixed signs → start from 4th sign
+Dual signs → start from 7th sign
+
+🔶 2️⃣ D10 (Dasamsa – Career Important)
+
+30° / 10 = 3°
+
+Movable → start from same sign
+Fixed → start from 9th sign
+Dual → start from 5th sign
+
+const divisionSize = 3
+const index = Math.floor(degree / divisionSize)
+🔶 3️⃣ D16 (Shodasamsa – Vehicles/Luxury)
+
+30° / 16 = 1.875°
+
+Movable → same sign
+Fixed → 4th
+Dual → 7th
+
+🔶 4️⃣ D20 (Vimsamsa – Spiritual)
+
+30° / 20 = 1.5°
+
+Movable → start same
+Fixed → 9th
+Dual → 5th
+
+🔶 5️⃣ D24 (Chaturvimsamsa – Education)
+
+30° / 24 = 1.25°
+
+Movable → same
+Fixed → 4th
+Dual → 7th
+
+🔶 6️⃣ D27 (Saptavimsamsa – Strength)
+
+30° / 27 ≈ 1.111°
+
+Sequential counting.
+
+🔶 7️⃣ D40 & D45
+
+D40 = 30° / 40 = 0.75°
+D45 = 30° / 45 ≈ 0.666°
+
+Odd signs → start from Aries
+Even signs → start from Libra
+
+🔶 8️⃣ D60 (Shastiamsa – Most Important)
+
+30° / 60 = 0.5°
+
+Each 30 minutes of arc changes sign.
+
+Odd signs:
+Count forward.
+
+Even signs:
+Count reverse.
+
+const divisionSize = 0.5
+const index = Math.floor(degree / divisionSize)
+🔥 WEIGHTED SHODASHAVARGA SCORING MODEL
+
+Instead of simple sum, use weighted model:
+
+Chart	Weight
+D1	15%
+D9	15%
+D10	10%
+D60	15%
+D7	5%
+D4	5%
+D20	5%
+D24	5%
+Others	25% total
+
+Total = 100%

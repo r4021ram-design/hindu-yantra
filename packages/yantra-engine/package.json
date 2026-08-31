@@ -1,0 +1,54 @@
+{
+  "name": "@yantra/engine",
+  "version": "1.0.0",
+  "description": "Computational Sacred Geometry Platform for Yantras",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./sdk": {
+      "types": "./dist/sdk/index.d.ts",
+      "default": "./dist/sdk/index.js"
+    },
+    "./verification": {
+      "types": "./dist/verification/index.d.ts",
+      "default": "./dist/verification/index.js"
+    },
+    "./rendering": {
+      "types": "./dist/renderers/index.d.ts",
+      "default": "./dist/renderers/index.js"
+    },
+    "./export": {
+      "types": "./dist/export/index.d.ts",
+      "default": "./dist/export/index.js"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/yantra-library/index.d.ts",
+      "default": "./dist/plugins/yantra-library/index.js"
+    },
+    "./sgkb": {
+      "types": "./dist/sgkb/index.d.ts",
+      "default": "./dist/sgkb/index.js"
+    },
+    "./cli": {
+      "types": "./dist/cli/index.d.ts",
+      "default": "./dist/cli/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:api": "vitest run tests/api-compatibility.test.ts",
+    "analyze": "node scripts/analyze-bundle.js"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.0"
+  }
+}

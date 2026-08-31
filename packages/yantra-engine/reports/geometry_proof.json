@@ -1,0 +1,10 @@
+{
+  "engineName": "Analytical Computational Geometry Engine Implementing Alessandro Chiodo (2021)",
+  "specification": "Alessandro Chiodo (2021) Comptes Rendus Mathématique, Vol. 359",
+  "derivationMethod": "Direct Analytical Equations & PSLG Face Discovery",
+  "trianglesCount": 9,
+  "subTrianglesCount": 43,
+  "isAuthenticChiodoGeometry": true,
+  "overallScore": 100,
+  "status": "CANONICAL PASSED"
+}

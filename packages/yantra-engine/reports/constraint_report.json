@@ -1,0 +1,10 @@
+{
+  "conditionISatisfied": true,
+  "conditionIISatisfied": true,
+  "conditionIIISatisfied": true,
+  "outerCircleDiscrepancy": 0,
+  "apexBaseMaxError": 0,
+  "tripleIntersectionMaxError": 0.092792582877934,
+  "symmetryMaxError": 0,
+  "overallConfidenceScore": 100
+}

@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@yantra/engine": [
+        "./packages/yantra-engine/src/index.ts"
+      ],
+      "@yantra/engine/sdk": [
+        "./packages/yantra-engine/src/sdk/index.ts"
+      ],
+      "@yantra/engine/verification": [
+        "./packages/yantra-engine/src/verification/index.ts"
+      ],
+      "@yantra/engine/rendering": [
+        "./packages/yantra-engine/src/renderers/index.ts"
+      ],
+      "@yantra/engine/export": [
+        "./packages/yantra-engine/src/export/index.ts"
+      ],
+      "@yantra/engine/plugins": [
+        "./packages/yantra-engine/src/plugins/yantra-library/index.ts"
+      ],
+      "@yantra/engine/sgkb": [
+        "./packages/yantra-engine/src/sgkb/index.ts"
+      ],
+      "@yantra/engine/cli": [
+        "./packages/yantra-engine/src/cli/index.ts"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+    "manifest": {
+        "uri": "sgos://yantra/mahalakshmi",
+        "id": "mahalakshmi_yantra_canonical",
+        "domain": "yantra",
+        "names": {
+            "sanskrit": "महालक्ष्मी यन्त्र",
+            "iast": "Mahālakṣmī Yantra",
+            "hindi": "महालक्ष्मी यन्त्र",
+            "english": "Mahalakshmi Yantra",
+            "gujarati": "મહાલક્ષ્મી યંત્ર"
+        },
+        "versions": {
+            "geometryVersion": "1.0.0",
+            "researchVersion": "1.0.0",
+            "commentaryVersion": "1.0.0",
+            "translationVersion": "1.0.0",
+            "evidenceVersion": "1.0.0"
+        },
+        "sha256Signature": "sha256_df7ea3386866b17c",
+        "createdTimestamp": "2026-07-24T00:00:00Z"
+    },
+    "dsl": {
+        "id": "mahalakshmi_yantra_canonical",
+        "names": {
+            "sanskrit": "महालक्ष्मी यन्त्र",
+            "english": "Mahalakshmi Yantra"
+        },
+        "tradition": "Shakta Mahavidya",
+        "metadata": {
+            "category": "Abundance & Divine Grace",
+            "deity": "Goddess Mahalakshmi",
+            "scripturalReference": "Rig Veda Shri Suktam"
+        },
+        "geometryRules": {
+            "symmetryGroupOrder": 8,
+            "lotusPetalRings": [
+                { "count": 8, "radiusRatio": 0.55 },
+                { "count": 16, "radiusRatio": 0.75 }
+            ],
+            "bhupura": { "enabled": true, "steps": 3, "gates": ["NORTH", "EAST", "SOUTH", "WEST"] }
+        }
+    },
+    "citations": [],
+    "researchNotes": ["Features double-layered lotus petal ring for abundance energy amplification."],
+    "localizations": {}
+}

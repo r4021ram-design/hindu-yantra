@@ -1,0 +1,135 @@
+Scene description:
+
+A circular astronomical wheel floating in deep space with a rich dark blue and purple nebula background filled with subtle twinkling stars and soft galactic dust.
+
+Layer 1 (Background):
+Deep sky with realistic starfield, subtle parallax depth, faint Milky Way glow, spiritual cosmic ambience.
+
+Layer 2 (Outer Ring – Nakshatra Mandala):
+A glowing circular outer ring divided into 27 equal segments.
+Each segment represents a Nakshatra.
+Each Nakshatra has:
+- Unique constellation dot pattern
+- Thin golden radial separators
+- Sanskrit name written elegantly along the arc
+- Subtle sacred geometry styling
+
+Layer 3 (Zodiac Ring):
+Inside the Nakshatra ring, a 12-part zodiac ring.
+Each Rashi separated by soft golden lines.
+Minimal but elegant engraved symbols for Aries to Pisces.
+
+Layer 4 (Planetary Orbits):
+Realistic textured planets placed accurately along the zodiac:
+- Sun glowing golden aura
+- Moon soft silver glow
+- Mars reddish
+- Jupiter large with faint halo
+- Saturn with visible rings
+- Venus bright white glow
+- Mercury small and fast-looking
+- Rahu and Ketu shadowy smoky nodes
+
+Planets appear slightly luminous with soft outer glow and subtle motion blur.
+
+Center:
+A sacred glowing Om (ॐ) symbol in the center, subtle golden light radiating outward.
+
+Style:
+Ultra detailed, mystical yet astronomical, spiritual but scientifically precise, high contrast, 4K resolution, cinematic lighting, symmetrical composition, realistic textures, elegant, divine, premium UI design reference.
+
+No cartoon style.
+No flat icons.
+Highly refined and professional.
+
+Aspect ratio: 1:1
+
+VISUAL MASTER PLAN
+🧱 5-LAYER STRUCTURE
+Layer 1 → Deep cosmic background (subtle, not overpowering)
+Layer 2 → 27 Nakshatra ring (scientific precision)
+Layer 3 → 12 Rashi ring (sidereal zodiac)
+Layer 4 → Planet orbit + glow (realistic but controlled)
+Layer 5 → Center sacred geometry + Om
+
+VISUAL MASTER PLAN
+🧱 5-LAYER STRUCTURE
+Layer 1 → Deep cosmic background (subtle, not overpowering)
+Layer 2 → 27 Nakshatra ring (scientific precision)
+Layer 3 → 12 Rashi ring (sidereal zodiac)
+Layer 4 → Planet orbit + glow (realistic but controlled)
+Layer 5 → Center sacred geometry + Om
+
+OUTER RING – 27 NAKSHATRA (Scientific)
+
+This is most important.
+
+Geometry:
+const nakshatraAngle = 360 / 27  // 13.3333°
+angle = index * nakshatraAngle
+
+Each segment:
+
+Thin golden separator line
+
+Unique constellation dots
+
+Sanskrit name curved along arc
+
+Hybrid Style:
+
+Constellation pattern subtle white
+Ring lines golden
+
+Not too bright.
+
+OUTER RING – 27 NAKSHATRA (Scientific)
+
+This is most important.
+
+Geometry:
+const nakshatraAngle = 360 / 27  // 13.3333°
+angle = index * nakshatraAngle
+
+Each segment:
+
+Thin golden separator line
+
+Unique constellation dots
+
+Sanskrit name curved along arc
+
+Hybrid Style:
+
+Constellation pattern subtle white
+Ring lines golden
+
+Not too bright.
+
+PLANET DESIGN (Real but UI Friendly)
+
+Planet rendering rules:
+
+Planet	Visual Rule
+Sun	Soft golden halo
+Moon	Silver soft glow
+Mars	Small red sphere
+Jupiter	Slightly larger
+Saturn	Thin elegant ring
+Rahu/Ketu	Shadow semi-transparent
+Important:
+
+No over-glow.
+Keep UI readability. 
+
+ANIMATION LOGIC (Subtle)
+
+✔ Very slow cosmic rotation
+✔ Planets move accurately by longitude
+✔ Current Nakshatra slightly highlighted
+✔ Moon nakshatra glowing border
+
+No flashy animation.
+
+Aesthetic inspiration
+But build mathematical precision yourself.

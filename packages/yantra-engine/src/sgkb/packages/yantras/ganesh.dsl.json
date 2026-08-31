@@ -1,0 +1,44 @@
+{
+  "manifest": {
+    "uri": "sgos://yantra/ganesh",
+    "id": "ganesh_yantra_canonical",
+    "domain": "yantra",
+    "names": {
+      "sanskrit": "गणेश यन्त्र",
+      "iast": "Gaṇeśa Yantra",
+      "hindi": "गणेश यन्त्र",
+      "english": "Ganesh Yantra",
+      "gujarati": "ગણેશ યંત્ર"
+    },
+    "versions": {
+      "geometryVersion": "1.0.0",
+      "researchVersion": "1.0.0",
+      "commentaryVersion": "1.0.0",
+      "translationVersion": "1.0.0",
+      "evidenceVersion": "1.0.0"
+    },
+    "sha256Signature": "sha256_4d25fa1060ccffcb",
+    "createdTimestamp": "2026-07-24T00:00:00Z"
+  },
+  "dsl": {
+    "id": "ganesh_yantra_canonical",
+    "names": {
+      "sanskrit": "गणेश यन्त्र",
+      "english": "Ganesh Yantra"
+    },
+    "tradition": "Ganapatya",
+    "metadata": {
+      "category": "Obstacle Removal",
+      "deity": "Lord Ganesha",
+      "scripturalReference": "Ganesh Atharvashirsha"
+    },
+    "geometryRules": {
+      "symmetryGroupOrder": 8,
+      "lotusPetalRings": [{ "count": 8, "radiusRatio": 0.65 }],
+      "bhupura": { "enabled": true, "steps": 3, "gates": ["NORTH", "EAST", "SOUTH", "WEST"] }
+    }
+  },
+  "citations": [],
+  "researchNotes": ["Employs 8 lotus petals symbolizing the 8 Ashta Siddhis."],
+  "localizations": {}
+}

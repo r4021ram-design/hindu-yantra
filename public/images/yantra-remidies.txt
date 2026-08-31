@@ -1,0 +1,358 @@
+1️⃣ Yantra ka Basic Principle
+
+Gemstone → planet ko strong karta hai
+Rudraksha → balance karta hai
+Puja/Mantra → shanti karta hai
+Yantra → stabilize + align karta hai
+
+Yantra generally medium-intensity remedy hai.
+Gemstone se kam powerful, mantra se strong.
+
+🔷 2️⃣ Kab Yantra Recommend Karna Chahiye?
+
+Yantra tab suggest karein jab:
+
+✅ Case A: Planet weak but benefic
+
+Functional benefic
+
+Low strength %
+
+Afflicted
+
+Dasha active
+
+👉 Example:
+Jupiter weak + benefic → Guru Yantra
+
+✅ Case B: House suffering but lord not extremely malefic
+
+Example:
+7th house weak
+Venus neutral but weak
+→ Shukra Yantra
+
+✅ Case C: High Risk Gemstone Avoid Karna Ho
+
+Saturn weak but risky
+→ Instead of Blue Sapphire
+→ Suggest Shani Yantra
+
+❌ Kab Yantra Avoid Karein?
+
+Planet severe functional malefic
+
+Maraka + strong dusthana influence
+
+Already very strong planet
+
+🔷 3️⃣ Yantra Selection Logic (Algorithm)
+Step 1: Planet Strength %
+
+If:
+
+Planet Strength < 45%
+AND Functional Nature = Benefic or Yogakaraka
+
+→ Eligible for Yantra
+
+Step 2: Stress Score Check
+
+If:
+
+Stress Score > 40
+AND Dasha Active
+
+→ Strong Yantra Suggestion
+
+Step 3: Risk Filter
+
+If:
+
+Risk Score > 60
+
+→ Avoid gemstone
+→ Prefer Yantra + Mantra
+
+🔷 4️⃣ Yantra Mapping Table
+Planet	Yantra
+Sun	Surya Yantra
+Moon	Chandra Yantra
+Mars	Mangal Yantra
+Mercury	Budh Yantra
+Jupiter	Guru Yantra
+Venus	Shukra Yantra
+Saturn	Shani Yantra
+Rahu	Rahu Yantra
+Ketu	Ketu Yantra
+🔷 5️⃣ House-Based Yantra Logic
+
+Kabhi-kabhi direct planet nahi, house support chahiye.
+
+House	Yantra
+5th	Guru Yantra
+7th	Shukra Yantra
+9th	Guru Yantra
+10th	Surya Yantra
+11th	Kubera Yantra
+4th	Chandra Yantra
+🔷 6️⃣ Yantra Strength Scoring (0–100)
+YantraScore =
+(PlanetWeakness × 0.5)
++ (HouseDamage × 0.2)
++ (DashaPressure × 0.2)
++ (TransitPressure × 0.1)
+Interpretation
+Score	Action
+0–30	Optional
+30–60	Recommended
+60–80	Strongly Recommended
+80–100	Urgent
+🔷 7️⃣ Premium Upgrade Logic
+
+If Premium User:
+
+✔ Add installation muhurat
+✔ Add energization ritual
+✔ Add metal type
+✔ Add direction placement
+✔ Add mantra count
+
+🔷 8️⃣ Placement Logic (Important)
+
+Yantra ka placement logic bhi app me add karein:
+
+Planet	Direction
+Sun	East
+Moon	North-West
+Mars	South
+Mercury	North
+Jupiter	North-East
+Venus	South-East
+Saturn	West
+Rahu	South-West
+Ketu	North-West
+🔷 9️⃣ Final AI Decision Tree
+if planetWeak AND benefic:
+    if highRiskGemstone:
+        suggest Yantra
+    else:
+        suggest Gemstone + Yantra
+
+if functionalMalefic:
+    suggest Puja + Mantra
+    avoid Yantra strengthening
+🔷 🔥 Advanced Integration
+
+Combine:
+
+PlanetStrength
+HouseStrength
+Shadbala
+Dasha
+Transit
+
+Then:
+
+Auto-generate:
+
+Yantra Type
+
+Placement Direction
+
+Installation Day
+
+Supporting Mantra
+
+Intensity Level
+
+1️⃣ Important Principle
+
+Planet Yantra ≠ Devata Yantra
+
+Surya Yantra → Planet strengthen
+
+Shree Yantra → Lakshmi tattva (prosperity grid)
+
+Hanuman Yantra → Protection + Shani relief
+
+Ganesh Yantra → Obstacle removal
+
+Durga Yantra → Protection + negative energy removal
+
+Devata Yantra zyada protective + stabilizing hote hain.
+
+🔱 1️⃣ SHREE YANTRA LOGIC
+Domain:
+
+Wealth
+
+Business growth
+
+Prosperity
+
+11th house
+
+2nd house
+
+Venus + Jupiter
+
+Suggest When:
+(2nd house weak OR 11th house weak)
+AND
+Venus or Jupiter strength < 50%
+
+OR
+
+Repeated financial instability
+AND Dasha supports wealth planet
+Avoid When:
+
+8th lord heavily dominant
+
+Severe debt karma (strong 6th + Rahu)
+
+AI Trigger Score
+WealthStressScore > 55
+🐒 2️⃣ HANUMAN YANTRA LOGIC
+Domain:
+
+Fear
+
+Court cases
+
+Enemies
+
+Saturn problems
+
+Sade Sati
+
+Mars affliction
+
+Suggest When:
+Saturn transit over Moon
+OR
+Mars + Rahu affliction
+OR
+6th house very weak
+
+OR
+
+Shani Mahadasha active
+AND Saturn Strength < 45%
+Why?
+
+Hanuman tattva reduces:
+
+Saturn fear
+
+Evil eye
+
+Hidden enemies
+
+🐘 3️⃣ GANESH YANTRA LOGIC
+Domain:
+
+New beginnings
+
+Job change
+
+Startup
+
+Marriage proposal
+
+Exams
+
+Suggest When:
+User starting new venture
+OR
+10th house weak
+OR
+Mercury weak
+
+OR
+
+Frequent project failure pattern
+Safe for Mass Users
+
+Ganesh Yantra is low risk
+Can recommend even without heavy planetary logic.
+
+🔱 4️⃣ DURGA YANTRA LOGIC
+Domain:
+
+Negative energy
+
+Rahu/Ketu problems
+
+Mental stress
+
+Sudden events
+
+8th house weakness
+
+Suggest When:
+Rahu + Moon conjunction
+OR
+8th house very weak
+OR
+Frequent obstacles + anxiety
+
+OR
+
+Ketu Mahadasha + weak Moon
+Strong Protective Remedy
+
+Durga Yantra = Energy Shield type remedy
+
+🔥 MASTER DEVATA YANTRA DECISION TREE
+if wealth stress high:
+    suggest Shree Yantra
+
+if fear / enemy / Shani stress high:
+    suggest Hanuman Yantra
+
+if new beginning / obstruction:
+    suggest Ganesh Yantra
+
+if negative energy / Rahu affliction:
+    suggest Durga Yantra
+🔷 PRIORITY WEIGHT MODEL
+YantraScore =
+(PlanetStress × 0.4)
++ (HouseStress × 0.3)
++ (DashaWeight × 0.2)
++ (TransitWeight × 0.1)
+
+Highest score Yantra recommend karein.
+
+📊 INTENSITY LEVEL
+Score	Suggestion
+30–50	Optional
+50–70	Recommended
+70–85	Strongly Recommended
+85+	Urgent Spiritual Support
+🔷 MASS APP VERSION
+
+Free tier:
+
+Ganesh Yantra
+
+Hanuman Yantra
+
+Premium tier:
+
+Shree Yantra
+
+Durga Yantra
+
+Placement direction
+
+Energization muhurat
+
+🔷 PLACEMENT LOGIC
+Yantra	Direction
+Shree Yantra	North-East
+Hanuman Yantra	South
+Ganesh Yantra	East
+Durga Yantra	North

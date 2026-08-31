@@ -1,0 +1,10 @@
+{
+  "isMatchingFigure1": true,
+  "isMatchingFigure11": true,
+  "maxError": 0,
+  "meanError": 0,
+  "rmsError": 0,
+  "hausdorffDistance": 0,
+  "chamferDistance": 0,
+  "firstIncorrectObject": null
+}

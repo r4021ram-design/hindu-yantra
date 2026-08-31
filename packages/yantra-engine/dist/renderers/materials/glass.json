@@ -1,0 +1,23 @@
+{
+    "name": "Optical Tempered Glass",
+    "id": "glass",
+    "version": "1.0.0",
+    "category": "Glasses",
+    "description": "Ultra-clear optical glass for modern museum display.",
+    "pbr": {
+        "albedo": "#E0F2FE",
+        "roughness": 0.02,
+        "metalness": 0.00,
+        "transmission": 0.95,
+        "ior": 1.52,
+        "clearcoat": 1.0,
+        "clearcoatRoughness": 0.02,
+        "emissive": "#000000",
+        "opacity": 0.85
+    },
+    "preview": {
+        "accentColor": "#E0F2FE"
+    },
+    "units": "SI/Metric",
+    "isCustom": false
+}

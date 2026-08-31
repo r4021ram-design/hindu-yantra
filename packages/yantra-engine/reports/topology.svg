@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%" style="background: #1E1B4B; border-radius: 16px;">
+  <rect x="0" y="0" width="1000" height="1000" fill="#1E1B4B" />
+  <!-- Face 1 -->
+  <polygon id="face_pslg_tri_1" points="510.85,603.76 545.81,500 523.83,500" fill="#818CF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="526.8" y="538.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F1</text>
+  <!-- Face 2 -->
+  <polygon id="face_pslg_tri_2" points="454.19,500 489.15,603.76 476.17,500" fill="#A78BFA" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="473.2" y="538.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F2</text>
+  <!-- Face 3 -->
+  <polygon id="face_pslg_tri_3" points="545.81,500 559.89,458.2 534.12,417.68 523.83,500" fill="#C084FC" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="540.9" y="473.0" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F3</text>
+  <!-- Face 4 -->
+  <polygon id="face_pslg_tri_4" points="440.11,458.2 454.19,500 476.17,500 465.88,417.68" fill="#F472B6" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="459.1" y="473.0" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F4</text>
+  <!-- Face 5 -->
+  <polygon id="face_pslg_tri_5" points="523.83,500 534.12,417.68 500,364.03 465.88,417.68 476.17,500" fill="#F87171" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="500.0" y="443.9" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F5</text>
+  <!-- Face 6 -->
+  <polygon id="face_pslg_tri_6" points="559.89,458.2 545.81,500 586.48,500" fill="#FBBF24" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="564.1" y="490.1" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F6</text>
+  <!-- Face 7 -->
+  <polygon id="face_pslg_tri_7" points="454.19,500 440.11,458.2 413.52,500" fill="#34D399" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="435.9" y="490.1" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F7</text>
+  <!-- Face 8 -->
+  <polygon id="face_pslg_tri_8" points="500,635.97 510.85,603.76 523.83,500 476.17,500 489.15,603.76" fill="#38BDF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="500.0" y="572.7" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F8</text>
+  <!-- Face 9 -->
+  <polygon id="face_pslg_tri_9" points="545.81,500 510.85,603.76 508.11,625.65 595.61,514.35 586.48,500" fill="#818CF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="549.4" y="552.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F9</text>
+  <!-- Face 10 -->
+  <polygon id="face_pslg_tri_10" points="489.15,603.76 454.19,500 413.52,500 404.39,514.35 491.89,625.65" fill="#A78BFA" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="450.6" y="552.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F10</text>
+  <!-- Face 11 -->
+  <polygon id="face_pslg_tri_11" points="564.13,445.61 559.89,458.2 586.48,500 606.89,500" fill="#C084FC" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="579.3" y="480.0" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F11</text>
+  <!-- Face 12 -->
+  <polygon id="face_pslg_tri_12" points="440.11,458.2 435.87,445.61 393.11,500 413.52,500" fill="#F472B6" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="420.7" y="480.0" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F12</text>
+  <!-- Face 13 -->
+  <polygon id="face_pslg_tri_13" points="559.89,458.2 564.13,445.61 535.23,408.84 534.12,417.68" fill="#F87171" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="548.3" y="436.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F13</text>
+  <!-- Face 14 -->
+  <polygon id="face_pslg_tri_14" points="435.87,445.61 440.11,458.2 465.88,417.68 464.77,408.84" fill="#FBBF24" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="451.7" y="436.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F14</text>
+  <!-- Face 15 -->
+  <polygon id="face_pslg_tri_15" points="569.69,429.11 564.13,445.61 606.89,500" fill="#34D399" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="580.2" y="462.2" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F15</text>
+  <!-- Face 16 -->
+  <polygon id="face_pslg_tri_16" points="435.87,445.61 430.31,429.11 393.11,500" fill="#38BDF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="419.8" y="462.2" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F16</text>
+  <!-- Face 17 -->
+  <polygon id="face_pslg_tri_17" points="570.82,425.76 569.69,429.11 606.89,500" fill="#818CF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="582.5" y="455.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F17</text>
+  <!-- Face 18 -->
+  <polygon id="face_pslg_tri_18" points="430.31,429.11 429.18,425.76 393.11,500" fill="#A78BFA" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="417.5" y="455.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F18</text>
+  <!-- Face 19 -->
+  <polygon id="face_pslg_tri_19" points="413.52,500 393.11,500 404.39,514.35" fill="#C084FC" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="403.7" y="508.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F19</text>
+  <!-- Face 20 -->
+  <polygon id="face_pslg_tri_20" points="606.89,500 586.48,500 595.61,514.35" fill="#F472B6" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="596.3" y="508.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F20</text>
+  <!-- Face 21 -->
+  <polygon id="face_pslg_tri_21" points="508.11,625.65 506.82,635.97 540.83,635.97 598.05,518.2 595.61,514.35" fill="#F87171" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="549.9" y="590.0" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F21</text>
+  <!-- Face 22 -->
+  <polygon id="face_pslg_tri_22" points="493.18,635.97 491.89,625.65 404.39,514.35 401.95,518.2 459.17,635.97" fill="#FBBF24" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="450.1" y="590.0" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F22</text>
+  <!-- Face 23 -->
+  <polygon id="face_pslg_tri_23" points="564.13,445.61 569.69,429.11 539.81,372.16 535.23,408.84" fill="#34D399" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="552.2" y="417.9" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F23</text>
+  <!-- Face 24 -->
+  <polygon id="face_pslg_tri_24" points="430.31,429.11 435.87,445.61 464.77,408.84 460.19,372.16" fill="#38BDF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="447.8" y="417.9" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F24</text>
+  <!-- Face 25 -->
+  <polygon id="face_pslg_tri_25" points="598.05,518.2 606.89,500 595.61,514.35" fill="#818CF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="600.2" y="514.9" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F25</text>
+  <!-- Face 26 -->
+  <polygon id="face_pslg_tri_26" points="393.11,500 401.95,518.2 404.39,514.35" fill="#A78BFA" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="399.8" y="514.9" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F26</text>
+  <!-- Face 27 -->
+  <polygon id="face_pslg_tri_27" points="534.12,417.68 535.23,408.84 500,364.03" fill="#C084FC" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="523.1" y="400.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F27</text>
+  <!-- Face 28 -->
+  <polygon id="face_pslg_tri_28" points="464.77,408.84 465.88,417.68 500,364.03" fill="#F472B6" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="476.9" y="400.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F28</text>
+  <!-- Face 29 -->
+  <polygon id="face_pslg_tri_29" points="569.69,429.11 570.82,425.76 540.83,364.03 539.81,372.16" fill="#F87171" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="555.3" y="401.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F29</text>
+  <!-- Face 30 -->
+  <polygon id="face_pslg_tri_30" points="429.18,425.76 430.31,429.11 460.19,372.16 459.17,364.03" fill="#FBBF24" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="444.7" y="401.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F30</text>
+  <!-- Face 31 -->
+  <polygon id="face_pslg_tri_31" points="510.85,603.76 500,635.97 508.11,625.65" fill="#34D399" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="506.3" y="625.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F31</text>
+  <!-- Face 32 -->
+  <polygon id="face_pslg_tri_32" points="500,635.97 489.15,603.76 491.89,625.65" fill="#38BDF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="493.7" y="625.8" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F32</text>
+  <!-- Face 33 -->
+  <polygon id="face_pslg_tri_33" points="500,364.03 464.45,364.03 460.19,372.16 464.77,408.84" fill="#818CF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="472.4" y="381.3" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F33</text>
+  <!-- Face 34 -->
+  <polygon id="face_pslg_tri_34" points="535.55,364.03 500,364.03 535.23,408.84 539.81,372.16" fill="#A78BFA" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="527.6" y="381.3" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F34</text>
+  <!-- Face 35 -->
+  <polygon id="face_pslg_tri_35" points="506.82,635.97 508.11,625.65 500,635.97" fill="#C084FC" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="505.0" y="636.5" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F35</text>
+  <!-- Face 36 -->
+  <polygon id="face_pslg_tri_36" points="491.89,625.65 493.18,635.97 500,635.97" fill="#F472B6" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="495.0" y="636.5" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F36</text>
+  <!-- Face 37 -->
+  <polygon id="face_pslg_tri_37" points="570.82,425.76 591.62,364.03 540.83,364.03" fill="#F87171" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="567.8" y="388.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F37</text>
+  <!-- Face 38 -->
+  <polygon id="face_pslg_tri_38" points="408.38,364.03 429.18,425.76 459.17,364.03" fill="#FBBF24" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="432.2" y="388.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F38</text>
+  <!-- Face 39 -->
+  <polygon id="face_pslg_tri_39" points="606.89,500 598.05,518.2 672.95,635.97" fill="#34D399" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="626.0" y="555.4" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F39</text>
+  <!-- Face 40 -->
+  <polygon id="face_pslg_tri_40" points="401.95,518.2 393.11,500 327.05,635.97" fill="#38BDF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="374.0" y="555.4" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F40</text>
+  <!-- Face 41 -->
+  <polygon id="face_pslg_tri_41" points="464.45,364.03 459.17,364.03 460.19,372.16" fill="#818CF8" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="461.3" y="370.7" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F41</text>
+  <!-- Face 42 -->
+  <polygon id="face_pslg_tri_42" points="540.83,364.03 535.55,364.03 539.81,372.16" fill="#A78BFA" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="538.7" y="370.7" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F42</text>
+  <!-- Face 43 -->
+  <polygon id="face_pslg_tri_43" points="500,690.53 506.82,635.97 500,635.97 493.18,635.97" fill="#C084FC" fill-opacity="0.35" stroke="#EEF2FF" stroke-width="1" />
+  <text x="500.0" y="653.6" fill="#FFFFFF" font-size="10" font-weight="bold" font-family="Outfit, sans-serif" text-anchor="middle">F43</text>
+  <rect x="20" y="20" width="520" height="45" rx="8" fill="#312E81" stroke="#4338CA" stroke-width="1" />
+  <text x="35" y="48" fill="#EEF2FF" font-size="16" font-weight="bold" font-family="Outfit, sans-serif">MODE 4: TOPOLOGY ENGINE — TOTAL FACES: 43</text>
+</svg>

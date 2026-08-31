@@ -1,0 +1,23 @@
+{
+    "name": "Sacred Silver (Rajat)",
+    "id": "silver",
+    "version": "1.0.0",
+    "category": "Metals",
+    "description": "Pure silver with high specular mirror reflection.",
+    "pbr": {
+        "albedo": "#C0C0C0",
+        "roughness": 0.10,
+        "metalness": 0.98,
+        "transmission": 0.0,
+        "ior": 1.5,
+        "clearcoat": 0.2,
+        "clearcoatRoughness": 0.1,
+        "emissive": "#000000",
+        "opacity": 1.0
+    },
+    "preview": {
+        "accentColor": "#C0C0C0"
+    },
+    "units": "SI/Metric",
+    "isCustom": false
+}

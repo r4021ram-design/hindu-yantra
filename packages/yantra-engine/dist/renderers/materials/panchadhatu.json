@@ -1,0 +1,23 @@
+{
+    "name": "Panchadhatu (5 Sacred Metals)",
+    "id": "panchadhatu",
+    "version": "1.0.0",
+    "category": "Metals",
+    "description": "Sacred alloy of Gold, Silver, Copper, Iron, and Zinc.",
+    "pbr": {
+        "albedo": "#D4AF37",
+        "roughness": 0.30,
+        "metalness": 0.90,
+        "transmission": 0.0,
+        "ior": 1.6,
+        "clearcoat": 0.2,
+        "clearcoatRoughness": 0.3,
+        "emissive": "#000000",
+        "opacity": 1.0
+    },
+    "preview": {
+        "accentColor": "#D4AF37"
+    },
+    "units": "SI/Metric",
+    "isCustom": false
+}

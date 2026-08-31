@@ -1,0 +1,14 @@
+{
+  "totalExtractedFaces": 43,
+  "is43TrianglesDiscovered": true,
+  "avaranamBreakdown": {
+    "chaturdasharam14": 14,
+    "bahirDasharam10": 10,
+    "antarDasharam10": 10,
+    "ashtaragon8": 8,
+    "centralTrikona1": 1
+  },
+  "nodesCount": 56,
+  "edgesCount": 110,
+  "facesCount": 56
+}

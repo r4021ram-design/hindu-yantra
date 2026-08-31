@@ -1,0 +1,206 @@
+{
+  "manifest": {
+    "uri": "sgos://yantra/shri",
+    "id": "shri_yantra_canonical",
+    "domain": "yantra",
+    "names": {
+      "sanskrit": "श्री यन्त्र",
+      "iast": "Śrī Yantra",
+      "hindi": "श्री यन्त्र",
+      "english": "Shri Yantra",
+      "gujarati": "શ્રી યંત્ર"
+    },
+    "versions": {
+      "geometryVersion": "1.0.0",
+      "researchVersion": "2.1.0",
+      "commentaryVersion": "1.4.0",
+      "translationVersion": "1.0.0",
+      "evidenceVersion": "1.0.0"
+    },
+    "sha256Signature": "sha256_0019f5f753b809b4",
+    "createdTimestamp": "2026-07-24T00:00:00Z"
+  },
+  "dsl": {
+    "id": "shri_yantra_canonical",
+    "names": {
+      "sanskrit": "श्री चक्र",
+      "english": "Shri Chakra / Shri Yantra"
+    },
+    "tradition": "Srividya Sampradaya (Canonical)",
+    "metadata": {
+      "category": "Mahavidya",
+      "deity": "Lalita Tripura Sundari",
+      "bijaMantra": "ॐ श्रीं ह्रीं क्लीं ऐं सौः ॐ ह्रीं श्रीं क ए ई ल ह्रीं ह स क ह ल ह्रीं सकल ह्रीं सौः ऐं क्लीं ह्रीं श्रीं",
+      "scripturalReference": "Saundarya Lahari Verse 11, Sharada Tilaka Patala 7, Nityotsava, Bhavana Upanishad"
+    },
+    "navavaranas": [
+      {
+        "index": 1,
+        "name": {
+          "sanskrit": "त्रैलोक्यमोहन चक्र",
+          "iast": "Trailokyamohana Chakra",
+          "english": "Enclosure 1: Bhupura (Earth Citadel)"
+        },
+        "structure": "3 Concentric Lines with 4 T-Shaped Gopura Portals",
+        "yogini": "Prakata Yogini",
+        "mudra": "Sarva Sankshobhini Mudra",
+        "bijaMantra": "ॐ अमृते अमृतोद्भवे अमृतवर्षिणि अमृतमयं कलेवरं साध्यसाधकमयं कुरु कुरु स्वाहा",
+        "shaktisCount": 28,
+        "shaktis": ["10 Siddhis", "8 Matrikas", "10 Mudra Shaktis"]
+      },
+      {
+        "index": 2,
+        "name": {
+          "sanskrit": "सर्वाशापरिपूरक चक्र",
+          "iast": "Sarva-Asha-Paripuraka Chakra",
+          "english": "Enclosure 2: 16 Lotus Petals (Sodasa Dalha)"
+        },
+        "structure": "16 Double-Curved Scalloped Lotus Petals",
+        "yogini": "Gupta Yogini",
+        "mudra": "Sarva Vidravini Mudra",
+        "bijaMantra": "ऐं क ए ई ल ह्रीं",
+        "shaktisCount": 16,
+        "shaktis": ["16 Kamakarshini Nitya Kalas"]
+      },
+      {
+        "index": 3,
+        "name": {
+          "sanskrit": "सर्वसंक्षोभण चक्र",
+          "iast": "Sarva-Sankshobhana Chakra",
+          "english": "Enclosure 3: 8 Lotus Petals (Ashta Dalha)"
+        },
+        "structure": "8 Double-Curved Scalloped Lotus Petals",
+        "yogini": "Guptatara Yogini",
+        "mudra": "Sarva Akarshini Mudra",
+        "bijaMantra": "क्लीं ह स क ह ल ह्रीं",
+        "shaktisCount": 8,
+        "shaktis": ["8 Ananga Shaktis"]
+      },
+      {
+        "index": 4,
+        "name": {
+          "sanskrit": "सर्वसौभाग्यदायक चक्र",
+          "iast": "Sarva-Saubhagyadayaka Chakra",
+          "english": "Enclosure 4: 14 Outer Triangles (Chaturdashara)"
+        },
+        "structure": "14 Outer Interlocking Triangles",
+        "yogini": "Sampradaya Yogini",
+        "mudra": "Sarva Vashankari Mudra",
+        "bijaMantra": "सौः सकल ह्रीं",
+        "shaktisCount": 14,
+        "shaktis": ["14 Sarvasankshobhini Shaktis"]
+      },
+      {
+        "index": 5,
+        "name": {
+          "sanskrit": "सर्वार्थसाधक चक्र",
+          "iast": "Sarva-Arthasadhaka Chakra",
+          "english": "Enclosure 5: 10 Outer Triangles (Bahirdashara)"
+        },
+        "structure": "10 Outer Circuit Triangles",
+        "yogini": "Kulotteerna Yogini",
+        "mudra": "Sarva Unmadini Mudra",
+        "bijaMantra": "ॐ श्रीमत्त्रिपुरसुन्दर्यै नमः",
+        "shaktisCount": 10,
+        "shaktis": ["10 Sarvasiddhiprada Shaktis"]
+      },
+      {
+        "index": 6,
+        "name": {
+          "sanskrit": "सर्वरक्षाकर चक्र",
+          "iast": "Sarva-Rakshakara Chakra",
+          "english": "Enclosure 6: 10 Inner Triangles (Antardashara)"
+        },
+        "structure": "10 Inner Circuit Triangles",
+        "yogini": "Nigarbha Yogini",
+        "mudra": "Sarva Mahankusha Mudra",
+        "bijaMantra": "ह्रीं श्रीं क्लीं",
+        "shaktisCount": 10,
+        "shaktis": ["10 Sarvaraksha Shaktis"]
+      },
+      {
+        "index": 7,
+        "name": {
+          "sanskrit": "सर्वरोगहर चक्र",
+          "iast": "Sarva-Rogahara Chakra",
+          "english": "Enclosure 7: 8 Triangles (Vasukona)"
+        },
+        "structure": "8 Inner Circuit Triangles",
+        "yogini": "Rahasya Yogini",
+        "mudra": "Sarva Khechari Mudra",
+        "bijaMantra": "ऐं ह्रीं श्रीं",
+        "shaktisCount": 8,
+        "shaktis": ["8 Vashini Vagdevatas"]
+      },
+      {
+        "index": 8,
+        "name": {
+          "sanskrit": "सर्वसिद्धिप्रद चक्र",
+          "iast": "Sarva-Siddhiprada Chakra",
+          "english": "Enclosure 8: Central Triangle (Trikona)"
+        },
+        "structure": "Primary Central Downward Triangle",
+        "yogini": "Atirahasya Yogini",
+        "mudra": "Sarva Bija Mudra",
+        "bijaMantra": "क ए ई ल ह्रीं ह स क ह ल ह्रीं सकल ह्रीं",
+        "shaktisCount": 3,
+        "shaktis": ["Kameshvari", "Vajreshvari", "Bhagamalini"]
+      },
+      {
+        "index": 9,
+        "name": {
+          "sanskrit": "सर्वानन्दमय चक्र",
+          "iast": "Sarva-Anandamaya Chakra",
+          "english": "Enclosure 9: Central Bindu Point"
+        },
+        "structure": "Central Infinite Consciousness Bindu",
+        "yogini": "Parapara Rahasya Yogini",
+        "mudra": "Sarva Yoni Mudra",
+        "bijaMantra": "ॐ श्रीं ह्रीं क्लीं ऐं सौः श्रीललिताम्बिकायै नमः",
+        "shaktisCount": 1,
+        "shaktis": ["Maha Tripura Sundari"]
+      }
+    ],
+    "geometryRules": {
+      "symmetryGroupOrder": 8,
+      "shriYantraCore": {
+        "shivaTriangles": 4,
+        "shaktiTriangles": 5,
+        "concurrencyTolerance": 1e-10,
+        "circuitTrianglesCount": 43
+      },
+      "lotusPetalRings": [
+        { "count": 8, "radiusRatio": 0.55, "petalShape": "DOUBLE_CURVED_BEZIER" },
+        { "count": 16, "radiusRatio": 0.75, "petalShape": "DOUBLE_CURVED_BEZIER" }
+      ],
+      "bhupura": {
+        "enabled": true,
+        "steps": 3,
+        "gateWidthRatio": 0.25,
+        "gates": ["NORTH", "EAST", "SOUTH", "WEST"]
+      }
+    }
+  },
+  "citations": [
+    {
+      "id": "sl_v11",
+      "scripture": "Saundarya Lahari",
+      "chapterVerse": "Verse 11",
+      "sanskritText": "चतुर्भिः श्रीकण्ठैः शिवयुवतिभिः पञ्चभिरपि प्रभिन्नाभिः शम्भोनवभिरपि मूलप्रकृतिभिः। त्रयश्चत्वारिंशद्वसुदलकलास्रत्रिवलयत्रिरेखाभिः सार्धं तव चरणकोणः परिणताः॥",
+      "translationEnglish": "With four Shiva triangles and five Shakti triangles distinct from the primeval nature of Shambhu, making nine primary triangles, giving rise to forty-three triangles along with eight lotus petals, sixteen lotus petals, three circles and three Bhupura lines, your abode expands.",
+      "tradition": "Srividya",
+      "evidenceLevel": "Scripture Verified"
+    }
+  ],
+  "researchNotes": [
+    "Identified as a self-similar non-trivial 2D geometric configuration.",
+    "Contains 43 canonical circuit sub-triangles in 5 concentric enclosure groups (Chaturdashara 14, Bahirdashara 10, Antardashara 10, Vasukona 8, Trikona 1).",
+    "Requires strict line concurrency at triple intersection points to eliminate unwanted micro-triangles."
+  ],
+  "localizations": {
+    "en": {
+      "sanskrit": "श्री चक्र",
+      "english": "Shri Chakra / Shri Yantra"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Makrana White Marble",
+  "id": "marble",
+  "version": "1.0.0",
+  "category": "Stones",
+  "description": "Makrana temple marble with smooth matte finish.",
+  "pbr": {
+    "albedo": "#F5F5F0",
+    "roughness": 0.40,
+    "metalness": 0.00,
+    "transmission": 0.0,
+    "ior": 1.5,
+    "clearcoat": 0.1,
+    "clearcoatRoughness": 0.4,
+    "emissive": "#000000",
+    "opacity": 1.0
+  },
+  "preview": {
+    "accentColor": "#F5F5F0"
+  },
+  "units": "SI/Metric",
+  "isCustom": false
+}

@@ -1,0 +1,44 @@
+{
+  "manifest": {
+    "uri": "sgos://yantra/navagraha",
+    "id": "navagraha_yantra_canonical",
+    "domain": "yantra",
+    "names": {
+      "sanskrit": "नवग्रह यन्त्र",
+      "iast": "Navagraha Yantra",
+      "hindi": "नवग्रह यन्त्र",
+      "english": "Navagraha Yantra",
+      "gujarati": "નવગ્રહ યંત્ર"
+    },
+    "versions": {
+      "geometryVersion": "1.0.0",
+      "researchVersion": "1.0.0",
+      "commentaryVersion": "1.0.0",
+      "translationVersion": "1.0.0",
+      "evidenceVersion": "1.0.0"
+    },
+    "sha256Signature": "sha256_ce610738e4663df8",
+    "createdTimestamp": "2026-07-24T00:00:00Z"
+  },
+  "dsl": {
+    "id": "navagraha_yantra_canonical",
+    "names": {
+      "sanskrit": "नवग्रह यन्त्र",
+      "english": "Navagraha Yantra"
+    },
+    "tradition": "Jyotish Vedic",
+    "metadata": {
+      "category": "Planetary Balance",
+      "deity": "Navagraha Devatas",
+      "scripturalReference": "Navagraha Stotram"
+    },
+    "geometryRules": {
+      "symmetryGroupOrder": 9,
+      "lotusPetalRings": [{ "count": 9, "radiusRatio": 0.7 }],
+      "bhupura": { "enabled": true, "steps": 3, "gates": ["NORTH", "EAST", "SOUTH", "WEST"] }
+    }
+  },
+  "citations": [],
+  "researchNotes": ["Non-trivial 9-fold radial symmetry organizing planetary orbital proportions."],
+  "localizations": {}
+}

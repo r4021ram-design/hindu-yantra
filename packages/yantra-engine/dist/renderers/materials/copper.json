@@ -1,0 +1,23 @@
+{
+    "name": "Sacred Copper",
+    "id": "copper",
+    "version": "1.0.0",
+    "category": "Metals",
+    "description": "Pure unrefined sacred copper with warm metallic reflectance.",
+    "pbr": {
+        "albedo": "#B87333",
+        "roughness": 0.25,
+        "metalness": 0.95,
+        "transmission": 0.0,
+        "ior": 1.5,
+        "clearcoat": 0.1,
+        "clearcoatRoughness": 0.2,
+        "emissive": "#000000",
+        "opacity": 1.0
+    },
+    "preview": {
+        "accentColor": "#B87333"
+    },
+    "units": "SI/Metric",
+    "isCustom": false
+}

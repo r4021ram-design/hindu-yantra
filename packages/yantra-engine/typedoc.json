@@ -1,0 +1,19 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "src/index.ts",
+    "src/sdk/index.ts",
+    "src/verification/index.ts",
+    "src/renderers/index.ts",
+    "src/export/index.ts",
+    "src/cli/index.ts"
+  ],
+  "out": "docs/api-docs",
+  "name": "@yantra/engine SGOS SDK Reference",
+  "readme": "docs/SDK_REFERENCE.md",
+  "includeVersion": true,
+  "excludeInternal": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "categorizeByGroup": true
+}

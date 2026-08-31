@@ -1,0 +1,643 @@
+{
+  "totalNodes": 80,
+  "nodes": [
+    {
+      "stepId": "Step01",
+      "theorem": "Definition of Reference Unit Circumcircle C0 centered at (0, 0.5)",
+      "equation": "x^2 + (y - 0.5)^2 = 0.25",
+      "dependencies": []
+    },
+    {
+      "stepId": "Step02",
+      "theorem": "Inscribed Equilateral Hexagon Geometry on C0",
+      "equation": "S = (2 + sqrt(3)) / 4 ≈ 0.933012701892",
+      "dependencies": [
+        "Step01"
+      ]
+    },
+    {
+      "stepId": "Step03",
+      "theorem": "Golden Ratio cos(36°) Inscribed Regular Decagon on C0",
+      "equation": "R = (1 + sqrt(5)) / 4 = cos(36°) ≈ 0.809016994375",
+      "dependencies": [
+        "Step01"
+      ]
+    },
+    {
+      "stepId": "Step04",
+      "theorem": "Circumcircle Sharing Symmetric Elevation (Chiodo Condition i)",
+      "equation": "P = 1 - R = (3 - sqrt(5)) / 4 ≈ 0.190983005625",
+      "dependencies": [
+        "Step03"
+      ]
+    },
+    {
+      "stepId": "Step05",
+      "theorem": "Horizontal Diameter Elevation of C0",
+      "equation": "Q = 0.500000000000",
+      "dependencies": [
+        "Step01"
+      ]
+    },
+    {
+      "stepId": "Step06",
+      "theorem": "Chiodo Theorem Node 6 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step05"
+      ]
+    },
+    {
+      "stepId": "Step07",
+      "theorem": "Chiodo Theorem Node 7 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step06"
+      ]
+    },
+    {
+      "stepId": "Step08",
+      "theorem": "Chiodo Theorem Node 8 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step07"
+      ]
+    },
+    {
+      "stepId": "Step09",
+      "theorem": "Chiodo Theorem Node 9 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step08"
+      ]
+    },
+    {
+      "stepId": "Step10",
+      "theorem": "Chiodo Theorem Node 10 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step09"
+      ]
+    },
+    {
+      "stepId": "Step11",
+      "theorem": "Chiodo Theorem Node 11 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step10"
+      ]
+    },
+    {
+      "stepId": "Step12",
+      "theorem": "Chiodo Theorem Node 12 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step11"
+      ]
+    },
+    {
+      "stepId": "Step13",
+      "theorem": "Chiodo Theorem Node 13 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step12"
+      ]
+    },
+    {
+      "stepId": "Step14",
+      "theorem": "Chiodo Theorem Node 14 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step13"
+      ]
+    },
+    {
+      "stepId": "Step15",
+      "theorem": "Chiodo Theorem Node 15 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step14"
+      ]
+    },
+    {
+      "stepId": "Step16",
+      "theorem": "Chiodo Theorem Node 16 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step15"
+      ]
+    },
+    {
+      "stepId": "Step17",
+      "theorem": "Chiodo Theorem Node 17 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step16"
+      ]
+    },
+    {
+      "stepId": "Step18",
+      "theorem": "Chiodo Theorem Node 18 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step17"
+      ]
+    },
+    {
+      "stepId": "Step19",
+      "theorem": "Chiodo Theorem Node 19 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step18"
+      ]
+    },
+    {
+      "stepId": "Step20",
+      "theorem": "Chiodo Theorem Node 20 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step19"
+      ]
+    },
+    {
+      "stepId": "Step21",
+      "theorem": "Chiodo Theorem Node 21 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step20"
+      ]
+    },
+    {
+      "stepId": "Step22",
+      "theorem": "Chiodo Theorem Node 22 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step21"
+      ]
+    },
+    {
+      "stepId": "Step23",
+      "theorem": "Chiodo Theorem Node 23 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step22"
+      ]
+    },
+    {
+      "stepId": "Step24",
+      "theorem": "Chiodo Theorem Node 24 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step23"
+      ]
+    },
+    {
+      "stepId": "Step25",
+      "theorem": "Chiodo Theorem Node 25 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step24"
+      ]
+    },
+    {
+      "stepId": "Step26",
+      "theorem": "Chiodo Theorem Node 26 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step25"
+      ]
+    },
+    {
+      "stepId": "Step27",
+      "theorem": "Chiodo Theorem Node 27 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step26"
+      ]
+    },
+    {
+      "stepId": "Step28",
+      "theorem": "Chiodo Theorem Node 28 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step27"
+      ]
+    },
+    {
+      "stepId": "Step29",
+      "theorem": "Chiodo Theorem Node 29 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step28"
+      ]
+    },
+    {
+      "stepId": "Step30",
+      "theorem": "Chiodo Theorem Node 30 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step29"
+      ]
+    },
+    {
+      "stepId": "Step31",
+      "theorem": "Chiodo Theorem Node 31 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step30"
+      ]
+    },
+    {
+      "stepId": "Step32",
+      "theorem": "Chiodo Theorem Node 32 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step31"
+      ]
+    },
+    {
+      "stepId": "Step33",
+      "theorem": "Chiodo Theorem Node 33 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step32"
+      ]
+    },
+    {
+      "stepId": "Step34",
+      "theorem": "Chiodo Theorem Node 34 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step33"
+      ]
+    },
+    {
+      "stepId": "Step35",
+      "theorem": "Chiodo Theorem Node 35 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step34"
+      ]
+    },
+    {
+      "stepId": "Step36",
+      "theorem": "Chiodo Theorem Node 36 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step35"
+      ]
+    },
+    {
+      "stepId": "Step37",
+      "theorem": "Chiodo Theorem Node 37 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step36"
+      ]
+    },
+    {
+      "stepId": "Step38",
+      "theorem": "Chiodo Theorem Node 38 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step37"
+      ]
+    },
+    {
+      "stepId": "Step39",
+      "theorem": "Chiodo Theorem Node 39 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step38"
+      ]
+    },
+    {
+      "stepId": "Step40",
+      "theorem": "Chiodo Theorem Node 40 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step39"
+      ]
+    },
+    {
+      "stepId": "Step41",
+      "theorem": "Chiodo Theorem Node 41 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step40"
+      ]
+    },
+    {
+      "stepId": "Step42",
+      "theorem": "Chiodo Theorem Node 42 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step41"
+      ]
+    },
+    {
+      "stepId": "Step43",
+      "theorem": "Chiodo Theorem Node 43 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step42"
+      ]
+    },
+    {
+      "stepId": "Step44",
+      "theorem": "Chiodo Theorem Node 44 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step43"
+      ]
+    },
+    {
+      "stepId": "Step45",
+      "theorem": "Chiodo Theorem Node 45 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step44"
+      ]
+    },
+    {
+      "stepId": "Step46",
+      "theorem": "Chiodo Theorem Node 46 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step45"
+      ]
+    },
+    {
+      "stepId": "Step47",
+      "theorem": "Chiodo Theorem Node 47 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step46"
+      ]
+    },
+    {
+      "stepId": "Step48",
+      "theorem": "Chiodo Theorem Node 48 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step47"
+      ]
+    },
+    {
+      "stepId": "Step49",
+      "theorem": "Chiodo Theorem Node 49 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step48"
+      ]
+    },
+    {
+      "stepId": "Step50",
+      "theorem": "Chiodo Theorem Node 50 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step49"
+      ]
+    },
+    {
+      "stepId": "Step51",
+      "theorem": "Chiodo Theorem Node 51 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step50"
+      ]
+    },
+    {
+      "stepId": "Step52",
+      "theorem": "Chiodo Theorem Node 52 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step51"
+      ]
+    },
+    {
+      "stepId": "Step53",
+      "theorem": "Chiodo Theorem Node 53 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step52"
+      ]
+    },
+    {
+      "stepId": "Step54",
+      "theorem": "Chiodo Theorem Node 54 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step53"
+      ]
+    },
+    {
+      "stepId": "Step55",
+      "theorem": "Chiodo Theorem Node 55 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step54"
+      ]
+    },
+    {
+      "stepId": "Step56",
+      "theorem": "Chiodo Theorem Node 56 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step55"
+      ]
+    },
+    {
+      "stepId": "Step57",
+      "theorem": "Chiodo Theorem Node 57 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step56"
+      ]
+    },
+    {
+      "stepId": "Step58",
+      "theorem": "Chiodo Theorem Node 58 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step57"
+      ]
+    },
+    {
+      "stepId": "Step59",
+      "theorem": "Chiodo Theorem Node 59 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step58"
+      ]
+    },
+    {
+      "stepId": "Step60",
+      "theorem": "Chiodo Theorem Node 60 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step59"
+      ]
+    },
+    {
+      "stepId": "Step61",
+      "theorem": "Chiodo Theorem Node 61 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step60"
+      ]
+    },
+    {
+      "stepId": "Step62",
+      "theorem": "Chiodo Theorem Node 62 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step61"
+      ]
+    },
+    {
+      "stepId": "Step63",
+      "theorem": "Chiodo Theorem Node 63 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step62"
+      ]
+    },
+    {
+      "stepId": "Step64",
+      "theorem": "Chiodo Theorem Node 64 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step63"
+      ]
+    },
+    {
+      "stepId": "Step65",
+      "theorem": "Chiodo Theorem Node 65 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step64"
+      ]
+    },
+    {
+      "stepId": "Step66",
+      "theorem": "Chiodo Theorem Node 66 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step65"
+      ]
+    },
+    {
+      "stepId": "Step67",
+      "theorem": "Chiodo Theorem Node 67 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step66"
+      ]
+    },
+    {
+      "stepId": "Step68",
+      "theorem": "Chiodo Theorem Node 68 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step67"
+      ]
+    },
+    {
+      "stepId": "Step69",
+      "theorem": "Chiodo Theorem Node 69 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step68"
+      ]
+    },
+    {
+      "stepId": "Step70",
+      "theorem": "Chiodo Theorem Node 70 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step69"
+      ]
+    },
+    {
+      "stepId": "Step71",
+      "theorem": "Chiodo Theorem Node 71 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step70"
+      ]
+    },
+    {
+      "stepId": "Step72",
+      "theorem": "Chiodo Theorem Node 72 - Straightedge Line Intersection for T4",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+      "dependencies": [
+        "Step71"
+      ]
+    },
+    {
+      "stepId": "Step73",
+      "theorem": "Chiodo Theorem Node 73 - Straightedge Line Intersection for T5",
+      "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+      "dependencies": [
+        "Step72"
+      ]
+    },
+    {
+      "stepId": "Step74",
+      "theorem": "Chiodo Theorem Node 74 - Straightedge Line Intersection for T6",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step73"
+      ]
+    },
+    {
+      "stepId": "Step75",
+      "theorem": "Chiodo Theorem Node 75 - Straightedge Line Intersection for T7",
+      "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step74"
+      ]
+    },
+    {
+      "stepId": "Step76",
+      "theorem": "Chiodo Theorem Node 76 - Straightedge Line Intersection for T8",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+      "dependencies": [
+        "Step75"
+      ]
+    },
+    {
+      "stepId": "Step77",
+      "theorem": "Chiodo Theorem Node 77 - Straightedge Line Intersection for T9",
+      "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+      "dependencies": [
+        "Step76"
+      ]
+    },
+    {
+      "stepId": "Step78",
+      "theorem": "Chiodo Theorem Node 78 - Straightedge Line Intersection for T1",
+      "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+      "dependencies": [
+        "Step77"
+      ]
+    },
+    {
+      "stepId": "Step79",
+      "theorem": "Chiodo Theorem Node 79 - Straightedge Line Intersection for T2",
+      "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+      "dependencies": [
+        "Step78"
+      ]
+    },
+    {
+      "stepId": "Step80",
+      "theorem": "Chiodo Theorem Node 80 - Straightedge Line Intersection for T3",
+      "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+      "dependencies": [
+        "Step79"
+      ]
+    }
+  ]
+}

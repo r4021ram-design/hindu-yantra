@@ -1,0 +1,171 @@
+All of these Prashnavali are dedicated to Lord Shri Rama, Lord Hanumana, Lord Ganesha and Goddess Durga, respectively. Therefore, any devotee who, with faith and devotion, remembers these deities while asking a question, certainly receives appropriate guidance. Whenever you find yourself in a state of indecision, you can make the right choice by sincerely and faithfully seeking help from the following Prashnavali.
+
+Rama Shalaka - The Rama Shalaka Prashnavali is found in the revered scripture Shri Ramcharitmanas. Composed by Goswami Tulsidas and enriched with divine Chaupais, this sacred Prashnavali serves as a spiritual tool to aid individuals in making important decisions with clarity and faith.
+Hanuman Prashnavali - The Hanuman Prashnavali is also known as the Hanuman Trikona Prashnavali. This sacred oracle is dedicated to Lord Hanuman and is described in the astrological text known as Hanuman Jyotisha.
+Ganesha Prashnavali - This Prashnavali dedicated to Lord Ganesha consists of 64 numbers, through which the seeker receives answers to their questions. According to traditional beliefs, this Prashnavali helps devotees make decisions with the guidance of Lord Ganapati.
+Durga Prashnavali - Durga Prashnavali dedicated to Goddess Durga is highly popular among Her devotees. It is also known as the Navadurga Prashnavali. Through this Prashnavali, Goddess Durga provides divine guidance to Her devotees.
+
+In Hinduism, popular Prashnavali such as the Rama Shalaka, Hanuman Prashnavali, Ganesha Prashnavali and Durga Prashnavali are given for the convenience of Drik Panchang users. According to one's devotion, any of these Prashnavali can be used to find answers to questions or doubts lingering in the mind. Since ancient times, these Prashnavali have served as a means of guidance for mankind and remain widely practiced even today.
+
+============================================================ COMPLETE
+PRASHNAVALI DATASET
+============================================================
+
+This structured dataset includes:
+
+1. Rama Shalaka (54 Entries)
+2. Hanuman Prashnavali (27 Entries)
+3. Ganesha 64 Number Prashnavali
+4. Durga / Navadurga Prashnavali (81 Entries)
+
+  --------------------------------------------------------
+
+RAMA SHALAKA (Sample Structure - 54 Total Recommended)
+  --------------------------------------------------------
+
+Format: ID | Category | Message | Interpretation | Spiritual Advice
+
+1 | Auspicious | Shri Rama blesses this endeavor. | Your path aligns
+with righteousness. | Proceed with faith and humility. 2 | Delay | Time
+is testing your patience. | Outcome favorable but delayed. | Practice
+patience. 3 | Warning | Hidden obstacles may arise. | Be cautious before
+final decisions. | Seek wise counsel. 4 | Neutral | Reflect deeply
+before action. | Clarity is needed. | Meditate and reassess. 5 |
+Auspicious | Dharma supports your decision. | Divine protection
+surrounds you. | Act with confidence.
+
+(Extend similar pattern up to 54 entries.)
+
+  ----------------------------------------------
+
+HANUMAN PRASHNAVALI (27 Entries Recommended)
+  ----------------------------------------------
+
+1 | Auspicious | Hanuman grants strength and victory. | You will
+overcome obstacles. | Act boldly. 2 | Neutral | Control your impulse. |
+Success depends on discipline. | Maintain focus. 3 | Warning | Avoid
+confrontation. | Aggression may cause loss. | Practice calmness. 4 |
+Auspicious | Courage brings success. | Victory through effort. | Stay
+fearless. 5 | Delay | More effort is required. | Patience before
+success. | Continue perseverance.
+
+(Extend pattern up to 27 entries.)
+
+  ----------------------------------------
+
+GANESHA PRASHNAVALI (64 Number System)
+  ----------------------------------------
+
+1 | Auspicious | Obstacles are being removed. | Good time to begin. |
+Start confidently. | Score: 90 2 | Delay | Preparation required. |
+Planning incomplete. | Strengthen foundation. | Score: 60 3 | Warning |
+Reconsider your intention. | Motivation unclear. | Reflect before
+acting. | Score: 40 4 | Auspicious | New beginnings favored. |
+Prosperity indicated. | Take initiative. | Score: 85 5 | Neutral |
+Outcome depends on effort. | Neither gain nor loss fixed. | Stay
+consistent. | Score: 55
+
+(Continue structured numbering up to 64.)
+
+  --------------------------------------------------
+
+NAVADURGA PRASHNAVALI (9 Forms × 9 Entries = 81)
+  --------------------------------------------------
+
+Shailaputri 1 | Protection | Divine protection surrounds you. | Negative
+energy dissolves. | Stay grounded. 2 | Courage | Stand strong in
+adversity. | Inner strength needed. | Invoke courage.
+
+Brahmacharini 1 | Patience | Spiritual growth requires discipline. |
+Slow progress but stable. | Maintain devotion.
+
+Chandraghanta 1 | Victory | Triumph over fear. | Positive transformation
+ahead. | Be fearless.
+
+(Continue for all 9 forms, each with 9 structured responses.)
+
+============================================================
+IMPLEMENTATION NOTES
+============================================================
+
+• Use cryptographically secure random selection. • Tag entries by domain
+(career, marriage, health, finance). • Maintain 40% Auspicious, 20%
+Delay, 20% Neutral, 20% Warning balance. • Store as JSON in production
+for structured API usage. • Include spiritual disclaimer in UI.
+
+============================================================ END OF
+DATASET STRUCTURE
+============================================================
+
+INDIVIDUAL PRASHNAVALI LOGIC
+🌿 1. Rama Shalaka Prashnavali
+
+Source:
+Ramcharitmanas
+
+Structure:
+
+15x15 grid (traditional format)
+
+Random letter selection
+
+Generates a Chaupai
+
+Chaupai interpreted as answer
+Hanuman Prashnavali (Hanuman Trikona)
+
+Reference:
+Hanuman Jyotisha
+
+Structure:
+
+Triangular number selection
+
+Devotee chooses one point
+
+Returns answer category
+
+AI Enhancement:
+
+Add emotional tone detection
+
+Match answer to user problem category
+Ganesha Prashnavali (64 Number System)
+
+Structure:
+
+Numbers 1–64
+
+Each mapped to predefined divine message
+
+Tech Implementation:
+
+selectedNumber = random(1,64)
+return messageMap[selectedNumber]
+
+Optional:
+
+Add auspiciousness score (0–100)
+Durga / Navadurga Prashnavali
+
+Structure:
+
+9 forms of Durga
+
+Grid or number system
+
+Each form gives thematic guidance
+
+Enhancement:
+
+Map answer to:
+
+Protection
+
+Courage
+
+Victory
+
+Patience
+
+Spiritual growth

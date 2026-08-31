@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%" style="background: #0F172A; border-radius: 16px;">
+  <rect x="0" y="0" width="1000" height="1000" fill="#0F172A" />
+  <circle cx="500" cy="500" r="220" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8" />
+  <line x1="500" y1="200" x2="500" y2="800" stroke="#64748B" stroke-width="1" stroke-dasharray="4 4" />
+  <line x1="200" y1="309.47" x2="800" y2="309.47" stroke="#EF4444" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="810" y="313.47" fill="#EF4444" font-size="12" font-family="Outfit, monospace">y = S (0.9330)</text>
+  <line x1="200" y1="364.03" x2="800" y2="364.03" stroke="#10B981" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="810" y="368.03" fill="#10B981" font-size="12" font-family="Outfit, monospace">y = R (0.8090)</text>
+  <line x1="200" y1="635.97" x2="800" y2="635.97" stroke="#B45309" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="810" y="639.97" fill="#B45309" font-size="12" font-family="Outfit, monospace">y = P (0.1910)</text>
+  <line x1="200" y1="500" x2="800" y2="500" stroke="#06B6D4" stroke-width="1" stroke-dasharray="2 2" />
+  <text x="810" y="504" fill="#06B6D4" font-size="12" font-family="Outfit, monospace">y = Q (0.5000)</text>
+  <circle cx="586.48" cy="296.29" r="86.47665155331656" fill="none" stroke="#F59E0B" stroke-width="2" opacity="0.85" />
+  <circle cx="672.95" cy="635.97" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="678.95" y="629.97" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">U</text>
+  <circle cx="672.95" cy="364.03" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="678.95" y="358.03" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">V</text>
+  <circle cx="540.83" cy="635.97" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="546.83" y="629.97" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">W</text>
+  <circle cx="672.95" cy="1692.52" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="678.95" y="1686.52" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">X</text>
+  <circle cx="412.12" cy="99.13" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="418.12" y="93.13" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">Y</text>
+  <circle cx="500" cy="99.13" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="506" y="93.13" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">E</text>
+  <circle cx="477.74" cy="500" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="483.74" y="494" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">F</text>
+  <circle cx="523.83" cy="500" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="529.83" y="494" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">G</text>
+  <circle cx="672.95" cy="-3015.86" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="678.95" y="-3021.86" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">Pt1</text>
+  <circle cx="470.19" cy="635.97" r="4" fill="#F43F5E" stroke="#FFFFFF" stroke-width="1" />
+  <text x="476.19" y="629.97" fill="#F8FAFC" font-size="11" font-family="Outfit, sans-serif">Pt4</text>
+  <rect x="20" y="20" width="380" height="40" rx="8" fill="#1E293B" opacity="0.9" />
+  <text x="35" y="45" fill="#38BDF8" font-size="16" font-weight="bold" font-family="Outfit, sans-serif">MODE 1: CONSTRUCTION GUIDES</text>
+</svg>

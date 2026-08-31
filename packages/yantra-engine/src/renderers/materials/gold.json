@@ -1,0 +1,23 @@
+{
+  "name": "24K Temple Gold",
+  "id": "gold",
+  "version": "1.0.0",
+  "category": "Metals",
+  "description": "High-purity lustrous gold finish for divine consecration.",
+  "pbr": {
+    "albedo": "#FFD700",
+    "roughness": 0.15,
+    "metalness": 1.00,
+    "transmission": 0.0,
+    "ior": 1.5,
+    "clearcoat": 0.4,
+    "clearcoatRoughness": 0.1,
+    "emissive": "#000000",
+    "opacity": 1.0
+  },
+  "preview": {
+    "accentColor": "#FFD700"
+  },
+  "units": "SI/Metric",
+  "isCustom": false
+}

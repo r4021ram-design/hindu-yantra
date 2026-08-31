@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.6 -0.1 1.2 1.2" width="800" height="800">
+      <g id="difference_heatmap">
+        <circle cx="0" cy="0.19098300562505255" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.25000000000000006" cy="0.9330127018922193" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.25000000000000006" cy="0.9330127018922193" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="0.0669872981077807" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.09279258287793403" cy="0.8090169943749475" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.09279258287793403" cy="0.8090169943749475" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="0" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.39307568887871164" cy="0.8090169943749475" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.39307568887871164" cy="0.8090169943749475" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="0.19098300562505255" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.24293413587832283" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.24293413587832283" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="0.9629835036965108" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.2429341358783228" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.2429341358783228" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="0.8090169943749475" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.2429341358783228" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.2429341358783228" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="1" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.39307568887871164" cy="0.19098300562505255" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.39307568887871164" cy="0.19098300562505255" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="0.8090169943749475" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.24293413587832283" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.24293413587832283" cy="0.5" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0" cy="0.8090169943749475" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="-0.39307568887871164" cy="0.19098300562505255" r="0.01" fill="#00ff00" opacity="0.7"/>
+        <circle cx="0.39307568887871164" cy="0.19098300562505255" r="0.01" fill="#00ff00" opacity="0.7"/>
+      </g>
+    </svg>

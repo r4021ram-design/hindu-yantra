@@ -1,0 +1,49 @@
+// SGOS Core Public API Facade & Knowledge Exports
+export * from './public-api';
+export * from './references/chiodo-reference-dataset';
+export * from './comparison/reference-comparator';
+
+export * from './dsl/types';
+export {
+  Point2D as KernelPoint2D,
+  Polygon2D as KernelPolygon2D,
+  Vector2D,
+  Line2D,
+  Segment2D,
+  Circle2D,
+  Triangle2D,
+  AffineTransform2D
+} from './kernel';
+export * from './compiler';
+export * from './construction/chiodo-construction-engine';
+export * from './construction/construction-debugger';
+export * from './topology/topology-engine';
+export * from './constraints';
+export * from './ast';
+export * from './graph';
+export * from './solver';
+export * from './optimization';
+export * from './sdk';
+export * from './verification';
+export * from './scholarly';
+export * from './sgkb';
+export * from './plugins/yantra-library';
+export * from './package-manager';
+export * from './cli/sgos-cli';
+
+// Next.js App Interface & Legacy Compatibility Exports
+export * from './data/yantras-dsl';
+export * from './geometry/compiler';
+export * from './geometry/validator';
+export * from './renderers/svg-renderer';
+export * from './renderers/rendering-modes';
+export * from './renderers/canvas-3d-renderer';
+export * from './renderers/mesh-3d-generator';
+export * from './export/exporter';
+export * from './modules/ai-knowledge';
+export * from './modules/mantra-japa';
+export * from './modules/placement-engine';
+export * from './modules/scriptural-engine';
+export * from './modules/modern-interpretations';
+export * from './modules/physics-analogy-engine';
+export * from './modules/avarana-callout-engine';

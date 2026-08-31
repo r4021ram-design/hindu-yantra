@@ -1,0 +1,3620 @@
+[
+  {
+    "stepNumber": 1,
+    "stepId": "Step01",
+    "name": "Reference Circumcircle C0 & Origin Setup",
+    "theorem": "Definition of Reference Unit Circumcircle C0 centered at (0, 0.5)",
+    "equation": "x^2 + (y - 0.5)^2 = 0.25",
+    "newPoints": [
+      {
+        "id": "O",
+        "x": 0,
+        "y": 0,
+        "label": "O (0,0)"
+      },
+      {
+        "id": "T",
+        "x": 0,
+        "y": 1,
+        "label": "T (0,1)"
+      },
+      {
+        "id": "O0",
+        "x": 0,
+        "y": 0.5,
+        "label": "Center (0, 0.5)"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "diameter_OT",
+        "d": "M 0 0 L 0 1",
+        "stroke": "#64748B",
+        "equation": "x = 0"
+      }
+    ],
+    "newCircles": [
+      {
+        "id": "C0",
+        "cx": 0,
+        "cy": 0.5,
+        "r": 0.5
+      }
+    ],
+    "dependencyNodes": [],
+    "activeTriangles": []
+  },
+  {
+    "stepNumber": 2,
+    "stepId": "Step02",
+    "name": "Base Height S Derivation (t1 Base)",
+    "theorem": "Inscribed Equilateral Hexagon Geometry on C0",
+    "equation": "S = (2 + sqrt(3)) / 4 ≈ 0.933012701892",
+    "newPoints": [
+      {
+        "id": "S_pt",
+        "x": 0,
+        "y": 0.9330127018922193,
+        "label": "S (0, 0.9330)"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_y_S",
+        "d": "M -0.5 0.9330127018922193 L 0.5 0.9330127018922193",
+        "stroke": "#FF0000",
+        "equation": "y = 0.933013"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step01"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 3,
+    "stepId": "Step03",
+    "name": "Base Height R Derivation (t3 Base)",
+    "theorem": "Golden Ratio cos(36°) Inscribed Regular Decagon on C0",
+    "equation": "R = (1 + sqrt(5)) / 4 = cos(36°) ≈ 0.809016994375",
+    "newPoints": [
+      {
+        "id": "R_pt",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "R (0, 0.8090)"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_y_R",
+        "d": "M -0.5 0.8090169943749475 L 0.5 0.8090169943749475",
+        "stroke": "#008000",
+        "equation": "y = 0.809017"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step01"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 4,
+    "stepId": "Step04",
+    "name": "Base Height P Derivation (t7 Base)",
+    "theorem": "Circumcircle Sharing Symmetric Elevation (Chiodo Condition i)",
+    "equation": "P = 1 - R = (3 - sqrt(5)) / 4 ≈ 0.190983005625",
+    "newPoints": [
+      {
+        "id": "P_pt",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "P (0, 0.1910)"
+      },
+      {
+        "id": "U",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "U"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_y_P",
+        "d": "M -0.5 0.19098300562505255 L 0.5 0.19098300562505255",
+        "stroke": "#A52A2A",
+        "equation": "y = 0.190983"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step03"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t3",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 5,
+    "stepId": "Step05",
+    "name": "Center Mid-Elevation Q (t6 Base)",
+    "theorem": "Horizontal Diameter Elevation of C0",
+    "equation": "Q = 0.500000000000",
+    "newPoints": [
+      {
+        "id": "Q_pt",
+        "x": 0,
+        "y": 0.5,
+        "label": "Q (0, 0.5000)"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_y_Q",
+        "d": "M -0.5 0.5 L 0.5 0.5",
+        "stroke": "#00FFFF",
+        "equation": "y = 0.500000"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step01"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t3",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 6,
+    "stepId": "Step06",
+    "name": "Construction Node 6: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 6 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step05"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 7,
+    "stepId": "Step07",
+    "name": "Construction Node 7: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 7 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step06"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 8,
+    "stepId": "Step08",
+    "name": "Construction Node 8: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 8 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step07"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 9,
+    "stepId": "Step09",
+    "name": "Construction Node 9: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 9 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step08"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 10,
+    "stepId": "Step10",
+    "name": "Construction Node 10: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 10 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step09"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 11,
+    "stepId": "Step11",
+    "name": "Construction Node 11: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 11 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step10"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 12,
+    "stepId": "Step12",
+    "name": "Construction Node 12: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 12 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step11"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 13,
+    "stepId": "Step13",
+    "name": "Construction Node 13: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 13 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step12"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 14,
+    "stepId": "Step14",
+    "name": "Construction Node 14: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 14 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step13"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 15,
+    "stepId": "Step15",
+    "name": "Construction Node 15: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 15 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step14"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 16,
+    "stepId": "Step16",
+    "name": "Construction Node 16: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 16 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step15"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 17,
+    "stepId": "Step17",
+    "name": "Construction Node 17: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 17 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step16"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 18,
+    "stepId": "Step18",
+    "name": "Construction Node 18: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 18 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step17"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 19,
+    "stepId": "Step19",
+    "name": "Construction Node 19: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 19 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step18"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 20,
+    "stepId": "Step20",
+    "name": "Construction Node 20: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 20 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step19"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 21,
+    "stepId": "Step21",
+    "name": "Construction Node 21: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 21 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step20"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 22,
+    "stepId": "Step22",
+    "name": "Construction Node 22: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 22 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step21"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 23,
+    "stepId": "Step23",
+    "name": "Construction Node 23: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 23 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step22"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 24,
+    "stepId": "Step24",
+    "name": "Construction Node 24: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 24 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step23"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 25,
+    "stepId": "Step25",
+    "name": "Construction Node 25: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 25 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step24"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 26,
+    "stepId": "Step26",
+    "name": "Construction Node 26: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 26 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step25"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 27,
+    "stepId": "Step27",
+    "name": "Construction Node 27: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 27 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step26"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 28,
+    "stepId": "Step28",
+    "name": "Construction Node 28: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 28 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step27"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 29,
+    "stepId": "Step29",
+    "name": "Construction Node 29: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 29 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step28"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 30,
+    "stepId": "Step30",
+    "name": "Construction Node 30: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 30 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step29"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 31,
+    "stepId": "Step31",
+    "name": "Construction Node 31: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 31 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step30"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 32,
+    "stepId": "Step32",
+    "name": "Construction Node 32: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 32 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step31"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 33,
+    "stepId": "Step33",
+    "name": "Construction Node 33: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 33 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step32"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 34,
+    "stepId": "Step34",
+    "name": "Construction Node 34: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 34 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step33"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 35,
+    "stepId": "Step35",
+    "name": "Construction Node 35: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 35 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step34"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 36,
+    "stepId": "Step36",
+    "name": "Construction Node 36: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 36 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step35"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 37,
+    "stepId": "Step37",
+    "name": "Construction Node 37: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 37 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step36"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 38,
+    "stepId": "Step38",
+    "name": "Construction Node 38: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 38 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step37"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 39,
+    "stepId": "Step39",
+    "name": "Construction Node 39: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 39 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step38"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 40,
+    "stepId": "Step40",
+    "name": "Construction Node 40: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 40 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step39"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 41,
+    "stepId": "Step41",
+    "name": "Construction Node 41: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 41 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step40"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 42,
+    "stepId": "Step42",
+    "name": "Construction Node 42: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 42 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step41"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 43,
+    "stepId": "Step43",
+    "name": "Construction Node 43: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 43 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step42"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 44,
+    "stepId": "Step44",
+    "name": "Construction Node 44: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 44 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step43"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 45,
+    "stepId": "Step45",
+    "name": "Construction Node 45: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 45 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step44"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 46,
+    "stepId": "Step46",
+    "name": "Construction Node 46: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 46 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step45"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 47,
+    "stepId": "Step47",
+    "name": "Construction Node 47: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 47 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step46"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 48,
+    "stepId": "Step48",
+    "name": "Construction Node 48: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 48 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step47"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 49,
+    "stepId": "Step49",
+    "name": "Construction Node 49: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 49 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step48"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 50,
+    "stepId": "Step50",
+    "name": "Construction Node 50: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 50 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step49"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 51,
+    "stepId": "Step51",
+    "name": "Construction Node 51: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 51 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step50"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 52,
+    "stepId": "Step52",
+    "name": "Construction Node 52: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 52 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step51"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 53,
+    "stepId": "Step53",
+    "name": "Construction Node 53: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 53 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step52"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 54,
+    "stepId": "Step54",
+    "name": "Construction Node 54: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 54 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step53"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 55,
+    "stepId": "Step55",
+    "name": "Construction Node 55: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 55 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step54"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 56,
+    "stepId": "Step56",
+    "name": "Construction Node 56: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 56 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step55"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 57,
+    "stepId": "Step57",
+    "name": "Construction Node 57: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 57 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step56"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 58,
+    "stepId": "Step58",
+    "name": "Construction Node 58: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 58 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step57"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 59,
+    "stepId": "Step59",
+    "name": "Construction Node 59: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 59 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step58"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 60,
+    "stepId": "Step60",
+    "name": "Construction Node 60: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 60 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step59"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 61,
+    "stepId": "Step61",
+    "name": "Construction Node 61: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 61 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step60"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 62,
+    "stepId": "Step62",
+    "name": "Construction Node 62: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 62 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step61"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 63,
+    "stepId": "Step63",
+    "name": "Construction Node 63: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 63 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step62"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 64,
+    "stepId": "Step64",
+    "name": "Construction Node 64: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 64 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step63"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 65,
+    "stepId": "Step65",
+    "name": "Construction Node 65: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 65 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step64"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 66,
+    "stepId": "Step66",
+    "name": "Construction Node 66: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 66 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step65"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 67,
+    "stepId": "Step67",
+    "name": "Construction Node 67: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 67 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step66"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 68,
+    "stepId": "Step68",
+    "name": "Construction Node 68: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 68 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step67"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 69,
+    "stepId": "Step69",
+    "name": "Construction Node 69: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 69 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step68"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 70,
+    "stepId": "Step70",
+    "name": "Construction Node 70: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 70 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step69"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 71,
+    "stepId": "Step71",
+    "name": "Construction Node 71: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 71 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step70"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  },
+  {
+    "stepNumber": 72,
+    "stepId": "Step72",
+    "name": "Construction Node 72: Triangle T4 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 72 - Straightedge Line Intersection for T4",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t4_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_L"
+      },
+      {
+        "id": "t4_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t4_R"
+      },
+      {
+        "id": "t4_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t4_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t4",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.19098300562505255 Z",
+        "stroke": "#FFA500",
+        "equation": "Segment t4"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step71"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4"
+    ]
+  },
+  {
+    "stepNumber": 73,
+    "stepId": "Step73",
+    "name": "Construction Node 73: Triangle T5 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 73 - Straightedge Line Intersection for T5",
+    "equation": "Apex: (0.000000, 0.962984), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t5_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_L"
+      },
+      {
+        "id": "t5_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t5_R"
+      },
+      {
+        "id": "t5_A",
+        "x": 0,
+        "y": 0.9629835036965108,
+        "label": "t5_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t5",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.9629835036965108 Z",
+        "stroke": "#800080",
+        "equation": "Segment t5"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step72"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5"
+    ]
+  },
+  {
+    "stepNumber": 74,
+    "stepId": "Step74",
+    "name": "Construction Node 74: Triangle T6 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 74 - Straightedge Line Intersection for T6",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t6_L",
+        "x": -0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_L"
+      },
+      {
+        "id": "t6_R",
+        "x": 0.2429341358783228,
+        "y": 0.5,
+        "label": "t6_R"
+      },
+      {
+        "id": "t6_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t6_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t6",
+        "d": "M -0.2429341358783228 0.5 L 0.2429341358783228 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#00FFFF",
+        "equation": "Segment t6"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step73"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6"
+    ]
+  },
+  {
+    "stepNumber": 75,
+    "stepId": "Step75",
+    "name": "Construction Node 75: Triangle T7 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 75 - Straightedge Line Intersection for T7",
+    "equation": "Apex: (0.000000, 1.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t7_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_L"
+      },
+      {
+        "id": "t7_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t7_R"
+      },
+      {
+        "id": "t7_A",
+        "x": 0,
+        "y": 1,
+        "label": "t7_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t7",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 1 Z",
+        "stroke": "#A52A2A",
+        "equation": "Segment t7"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step74"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7"
+    ]
+  },
+  {
+    "stepNumber": 76,
+    "stepId": "Step76",
+    "name": "Construction Node 76: Triangle T8 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 76 - Straightedge Line Intersection for T8",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.485868",
+    "newPoints": [
+      {
+        "id": "t8_L",
+        "x": -0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_L"
+      },
+      {
+        "id": "t8_R",
+        "x": 0.24293413587832283,
+        "y": 0.5,
+        "label": "t8_R"
+      },
+      {
+        "id": "t8_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t8_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t8",
+        "d": "M -0.24293413587832283 0.5 L 0.24293413587832283 0.5 L 0 0.8090169943749475 Z",
+        "stroke": "#FFC0CB",
+        "equation": "Segment t8"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step75"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8"
+    ]
+  },
+  {
+    "stepNumber": 77,
+    "stepId": "Step77",
+    "name": "Construction Node 77: Triangle T9 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 77 - Straightedge Line Intersection for T9",
+    "equation": "Apex: (0.000000, 0.809017), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t9_L",
+        "x": -0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_L"
+      },
+      {
+        "id": "t9_R",
+        "x": 0.39307568887871164,
+        "y": 0.19098300562505255,
+        "label": "t9_R"
+      },
+      {
+        "id": "t9_A",
+        "x": 0,
+        "y": 0.8090169943749475,
+        "label": "t9_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t9",
+        "d": "M -0.39307568887871164 0.19098300562505255 L 0.39307568887871164 0.19098300562505255 L 0 0.8090169943749475 Z",
+        "stroke": "#000000",
+        "equation": "Segment t9"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step76"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3",
+      "t4",
+      "t5",
+      "t6",
+      "t7",
+      "t8",
+      "t9"
+    ]
+  },
+  {
+    "stepNumber": 78,
+    "stepId": "Step78",
+    "name": "Construction Node 78: Triangle T1 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 78 - Straightedge Line Intersection for T1",
+    "equation": "Apex: (0.000000, 0.190983), Base Width: 0.500000",
+    "newPoints": [
+      {
+        "id": "t1_L",
+        "x": -0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_L"
+      },
+      {
+        "id": "t1_R",
+        "x": 0.25000000000000006,
+        "y": 0.9330127018922193,
+        "label": "t1_R"
+      },
+      {
+        "id": "t1_A",
+        "x": 0,
+        "y": 0.19098300562505255,
+        "label": "t1_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t1",
+        "d": "M -0.25000000000000006 0.9330127018922193 L 0.25000000000000006 0.9330127018922193 L 0 0.19098300562505255 Z",
+        "stroke": "#FF0000",
+        "equation": "Segment t1"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step77"
+    ],
+    "activeTriangles": [
+      "t1"
+    ]
+  },
+  {
+    "stepNumber": 79,
+    "stepId": "Step79",
+    "name": "Construction Node 79: Triangle T2 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 79 - Straightedge Line Intersection for T2",
+    "equation": "Apex: (0.000000, 0.066987), Base Width: 0.185585",
+    "newPoints": [
+      {
+        "id": "t2_L",
+        "x": -0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_L"
+      },
+      {
+        "id": "t2_R",
+        "x": 0.09279258287793403,
+        "y": 0.8090169943749475,
+        "label": "t2_R"
+      },
+      {
+        "id": "t2_A",
+        "x": 0,
+        "y": 0.0669872981077807,
+        "label": "t2_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t2",
+        "d": "M -0.09279258287793403 0.8090169943749475 L 0.09279258287793403 0.8090169943749475 L 0 0.0669872981077807 Z",
+        "stroke": "#0000FF",
+        "equation": "Segment t2"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step78"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2"
+    ]
+  },
+  {
+    "stepNumber": 80,
+    "stepId": "Step80",
+    "name": "Construction Node 80: Triangle T3 Intersection Line Assembly",
+    "theorem": "Chiodo Theorem Node 80 - Straightedge Line Intersection for T3",
+    "equation": "Apex: (0.000000, 0.000000), Base Width: 0.786151",
+    "newPoints": [
+      {
+        "id": "t3_L",
+        "x": -0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_L"
+      },
+      {
+        "id": "t3_R",
+        "x": 0.39307568887871164,
+        "y": 0.8090169943749475,
+        "label": "t3_R"
+      },
+      {
+        "id": "t3_A",
+        "x": 0,
+        "y": 0,
+        "label": "t3_A"
+      }
+    ],
+    "newLines": [
+      {
+        "id": "line_t3",
+        "d": "M -0.39307568887871164 0.8090169943749475 L 0.39307568887871164 0.8090169943749475 L 0 0 Z",
+        "stroke": "#008000",
+        "equation": "Segment t3"
+      }
+    ],
+    "newCircles": [],
+    "dependencyNodes": [
+      "Step79"
+    ],
+    "activeTriangles": [
+      "t1",
+      "t2",
+      "t3"
+    ]
+  }
+]
