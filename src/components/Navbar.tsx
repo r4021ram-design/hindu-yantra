@@ -10,9 +10,9 @@ export default function Navbar() {
 
   const navLinks = [
     { href: '/', label: 'Digital Museum', icon: Layers },
-    { href: '/yantras', label: '3D Yantra Studio', icon: Box },
+    { href: '/yantras', label: 'Shastric Yantra Studio', icon: Compass },
     { href: '/puja', label: 'Upasana & Puja', icon: Flame },
-    { href: '/sgkb-studio', label: 'SGKB Studio', icon: Compass },
+    { href: '/sgkb-studio', label: 'SGKB Studio', icon: Box },
   ];
 
   return (

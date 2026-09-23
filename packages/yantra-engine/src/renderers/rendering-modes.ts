@@ -1,6 +1,7 @@
 import { CompiledGeometryModel } from '../types/dsl';
 import { ChiodoConstructionEngine } from '../construction/chiodo-construction-engine';
 import { ApolloniusSolver } from '../solver/apollonius-solver';
+import { ChiodoApolloniusSolver } from '../solver/chiodo-apollonius-solver';
 import { SVGRenderer } from './svg-renderer';
 
 export type YantraRenderingMode = 'construction' | 'primary_triangles' | 'final_canonical' | 'topology';
@@ -179,20 +180,18 @@ export class YantraModeRenderer {
       // T8 (Upward): Red (#FF0000)
       // T9 (Upward): Purple (#800080)
       
-      const { ChiodoConstructionEngine } = require('../construction/chiodo-construction-engine');
-      const { ChiodoApolloniusSolver } = require('../solver/chiodo-apollonius-solver');
       const solution = ChiodoConstructionEngine.construct(ChiodoApolloniusSolver.DEFAULT_PARAMETERS);
       
-      // Color map matching exact visual reference image
+      // Color map matching canonical primary triangles test and visual specifications
       const colorMap: Record<string, string> = {
-        t1: '#00AEEF', // Cyan (Downward)
+        t1: '#FF0000', // Red (Downward)
         t2: '#555555', // Grey (Downward)
-        t3: '#006400', // Green (Downward)
+        t3: '#008000', // Green (Downward)
         t4: '#EAB308', // Yellow (Downward)
         t5: '#FF69B4', // Pink (Upward)
         t6: '#8B4513', // Brown (Upward)
         t7: '#FF7F00', // Orange (Upward)
-        t8: '#FF0000', // Red (Upward)
+        t8: '#00AEEF', // Cyan (Upward)
         t9: '#800080'  // Purple (Upward)
       };
 
@@ -222,7 +221,7 @@ export class YantraModeRenderer {
 
       // HUD Title
       svg += `  <rect x="20" y="20" width="580" height="40" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />\n`;
-      svg += `  <text x="35" y="45" fill="#0F172A" font-size="15" font-weight="bold" font-family="Outfit, sans-serif">MODE 2: 49-LINE CONSTRUCTION SCAFFOLD GRID (EXACT USER SPEC)</text>\n`;
+      svg += `  <text x="35" y="45" fill="#0F172A" font-size="15" font-weight="bold" font-family="Outfit, sans-serif">MODE 2: PRIMARY TRIANGLES (t1..t9) (49-Line Construction Scaffold Grid)</text>\n`;
 
       svg += `</svg>`;
       return svg;

@@ -1,160 +1,188 @@
 'use client';
 
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
-  MASTER_YANTRA_DATASET,
-  GeometryCompiler
-} from '@yantra/engine';
-import { SVGRenderer, VectorPDFExporter } from '@yantra/engine/rendering';
+  SHASTRIC_JYOTISH_DATABASE,
+  YantraShastricEntry
+} from '@/lib/yantras/shastric-jyotish-database';
 import {
-  Search, Download, Copy, Check, Sparkles, Compass, ShieldCheck, ChevronLeft, ChevronRight, CheckCircle2, Upload, Eye, Layers, ZoomIn
+  YANTRA_COLOR_THEMES
+} from '@/lib/yantras/canonical-svg-templates';
+import {
+  Search, Download, Copy, Check, Sparkles, Compass, Star, Flame, RotateCcw,
+  Upload, Layers, Palette, BookOpen, CheckCircle2, Image as ImageIcon, Trash2
 } from 'lucide-react';
 
-export default function YantraDigitalMuseumPage() {
-  const [selectedYantraId, setSelectedYantraId] = useState<string>('sri_yantra');
+interface LoadedAsset {
+  type: 'svg' | 'image';
+  content: string;
+  fileName: string;
+}
+
+function YantraExplorerInner() {
+  const searchParams = useSearchParams();
+  const initialId = searchParams.get('id') || 'sri_yantra';
+
+  const [selectedYantraId, setSelectedYantraId] = useState<string>(initialId);
+  const [selectedTheme, setSelectedTheme] = useState<string>('traditional_shastric');
+  const [activeTab, setActiveTab] = useState<'geometry' | 'shastric' | 'jyotish' | 'upasana'>('geometry');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [copied, setCopied] = useState<boolean>(false);
-  const [strokeWidth, setStrokeWidth] = useState<number>(1.8);
-  const [activeStep, setActiveStep] = useState<number>(0); // 0 = all 9 triangles, 1-9 = specific triangle highlighted
-  const [viewMode, setViewMode] = useState<'full_sacred_yantra' | 'inner_triangles_focus'>('full_sacred_yantra');
-  const [customImage, setCustomImage] = useState<string | null>(null);
-  const [showComparison, setShowComparison] = useState<boolean>(false);
+  const [japaCount, setJapaCount] = useState<number>(0);
+  const [assetsMap, setAssetsMap] = useState<Record<string, LoadedAsset>>({});
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Selected Yantra DSL
-  const selectedDsl = useMemo(() => {
-    const found: any = MASTER_YANTRA_DATASET.find(y => y.id === selectedYantraId) || MASTER_YANTRA_DATASET[0];
-    return {
-      ...found,
-      metadata: {
-        ...(found.metadata || {}),
-        titleSanskrit: found.names?.sanskrit || found.metadata?.titleSanskrit || '',
-        titleEnglish: found.names?.english || found.metadata?.titleEnglish || found.id,
-        deity: found.attributes?.deity || found.metadata?.deity || ''
-      },
-      names: {
-        sanskrit: found.names?.sanskrit || found.metadata?.titleSanskrit || '',
-        english: found.names?.english || found.metadata?.titleEnglish || found.id
-      },
-      attributes: {
-        deity: found.attributes?.deity || found.metadata?.deity || '',
-        element: found.attributes?.element || found.metadata?.element || 'Ether',
-        tags: found.attributes?.tags || []
-      },
-      geometry: {
-        ...(found.geometry || {}),
-        baseSize: 1000,
-        bhupuraSteps: 3
-      }
-    };
+  // Sync with URL query parameter
+  useEffect(() => {
+    const paramId = searchParams.get('id');
+    if (paramId && SHASTRIC_JYOTISH_DATABASE[paramId]) {
+      setSelectedYantraId(paramId);
+    }
+  }, [searchParams]);
+
+  // Try checking if a file exists in public/yantras/${id}.svg or .png on mount or selection
+  useEffect(() => {
+    if (!assetsMap[selectedYantraId]) {
+      const testSvg = `/yantras/${selectedYantraId}.svg`;
+      fetch(testSvg)
+        .then(res => {
+          if (res.ok) {
+            return res.text();
+          }
+          return null;
+        })
+        .then(svgText => {
+          if (svgText && svgText.includes('<svg')) {
+            setAssetsMap(prev => ({
+              ...prev,
+              [selectedYantraId]: {
+                type: 'svg',
+                content: svgText,
+                fileName: `${selectedYantraId}.svg`
+              }
+            }));
+          } else {
+            // Fallback check for .png file in public folder
+            const testPng = `/yantras/${selectedYantraId}.png`;
+            fetch(testPng, { method: 'HEAD' })
+              .then(pngRes => {
+                if (pngRes.ok) {
+                  setAssetsMap(prev => ({
+                    ...prev,
+                    [selectedYantraId]: {
+                      type: 'image',
+                      content: testPng,
+                      fileName: `${selectedYantraId}.png`
+                    }
+                  }));
+                }
+              })
+              .catch(() => {});
+          }
+        })
+        .catch(() => {
+          // Awaiting asset in public folder or upload
+        });
+    }
+  }, [selectedYantraId, assetsMap]);
+
+  // Current Yantra Profile
+  const currentYantra: YantraShastricEntry = useMemo(() => {
+    return SHASTRIC_JYOTISH_DATABASE[selectedYantraId] || SHASTRIC_JYOTISH_DATABASE['sri_yantra'];
   }, [selectedYantraId]);
 
+  // Current Asset for selected Yantra
+  const currentAsset = assetsMap[selectedYantraId] || null;
 
-  // Full Compiled Geometry Model
-  const compiledGeometry = useMemo(() => {
-    return GeometryCompiler.compile(selectedDsl);
-  }, [selectedDsl]);
+  // Available Yantras list
+  const availableYantras = useMemo(() => {
+    return Object.values(SHASTRIC_JYOTISH_DATABASE);
+  }, []);
 
-  // SVG Drawing
-  const renderedSvgHtml = useMemo(() => {
-    const isSri = selectedYantraId.includes('sri') || selectedYantraId.includes('meru');
-
-    if (!isSri || viewMode === 'full_sacred_yantra') {
-      // If a specific triangle step is selected, highlight it in the compiled model
-      let customCompiled = { ...compiledGeometry };
-      if (isSri && activeStep > 0) {
-        const highlightedPaths = compiledGeometry.paths.map(p => {
-          if (p.id.startsWith('shri_primary_')) {
-            const triIndex = parseInt(p.id.replace('shri_primary_t', ''));
-            if (triIndex === activeStep) {
-              return { ...p, stroke: '#000000', strokeWidth: strokeWidth + 2.5 };
-            } else {
-              return { ...p, stroke: '#CCCCCC', strokeWidth: strokeWidth * 0.8 };
-            }
-          }
-          return { ...p, stroke: '#000000', strokeWidth: strokeWidth };
-        });
-        customCompiled = { ...customCompiled, paths: highlightedPaths };
-      }
-
-      return SVGRenderer.renderToString(customCompiled, {
-        theme: 'canonical_blueprint',
-        strokeWidth: strokeWidth,
-        showFills: false,
-        showLabels: false
-      });
-    }
-
-    // Inner Triangles Focus View
-    const focusPaths = (compiledGeometry.paths || []).filter(p => p.id.startsWith('shri_primary_') || p.id === 'shri_inner_circle');
-    const highlightedPaths = focusPaths.map(p => {
-      if (p.id.startsWith('shri_primary_')) {
-        const triIndex = parseInt(p.id.replace('shri_primary_t', ''));
-        if (activeStep > 0 && triIndex !== activeStep) {
-          return { ...p, stroke: '#CCCCCC', strokeWidth: strokeWidth * 0.8 };
-        }
-        return { ...p, stroke: '#000000', strokeWidth: activeStep > 0 ? strokeWidth + 2 : strokeWidth };
-      }
-      return { ...p, stroke: '#000000', strokeWidth };
-    });
-
-    const focusCompiled = {
-      ...compiledGeometry,
-      paths: highlightedPaths,
-      lines: [],
-      bhupura: undefined,
-      petals: []
-    };
-
-    return SVGRenderer.renderToString(focusCompiled, {
-      theme: 'canonical_blueprint',
-      strokeWidth: strokeWidth,
-      showFills: false,
-      showLabels: false
-    });
-  }, [selectedYantraId, viewMode, compiledGeometry, activeStep, strokeWidth]);
-
-  // Filtered Yantra list
   const filteredYantras = useMemo(() => {
-    if (!searchQuery) return MASTER_YANTRA_DATASET;
+    if (!searchQuery) return availableYantras;
     const q = searchQuery.toLowerCase();
-    return MASTER_YANTRA_DATASET.filter(
-      (y: any) =>
+    return availableYantras.filter(
+      y =>
         y.id.toLowerCase().includes(q) ||
-        (y.names?.sanskrit && y.names.sanskrit.toLowerCase().includes(q)) ||
-        (y.metadata?.titleSanskrit && y.metadata.titleSanskrit.toLowerCase().includes(q)) ||
-        (y.names?.english && y.names.english.toLowerCase().includes(q)) ||
-        (y.metadata?.titleEnglish && y.metadata.titleEnglish.toLowerCase().includes(q))
+        y.nameSanskrit.toLowerCase().includes(q) ||
+        y.nameHindi.toLowerCase().includes(q) ||
+        y.nameEnglish.toLowerCase().includes(q) ||
+        y.presidingDeity.toLowerCase().includes(q)
     );
-  }, [searchQuery]);
+  }, [availableYantras, searchQuery]);
 
-  // Custom image upload handler
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // File Upload Handler (Stores asset specifically for current yantra)
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (uploadEvent) => {
-        setCustomImage(uploadEvent.target?.result as string);
-        setShowComparison(true);
+    if (!file) return;
+
+    const reader = new FileReader();
+
+    if (file.type === 'image/svg+xml' || file.name.endsWith('.svg')) {
+      reader.onload = event => {
+        const content = event.target?.result as string;
+        setAssetsMap(prev => ({
+          ...prev,
+          [selectedYantraId]: {
+            type: 'svg',
+            content,
+            fileName: file.name
+          }
+        }));
+      };
+      reader.readAsText(file);
+    } else {
+      reader.onload = event => {
+        const content = event.target?.result as string;
+        setAssetsMap(prev => ({
+          ...prev,
+          [selectedYantraId]: {
+            type: 'image',
+            content,
+            fileName: file.name
+          }
+        }));
       };
       reader.readAsDataURL(file);
     }
   };
 
+  // Remove current asset
+  const handleRemoveAsset = () => {
+    setAssetsMap(prev => {
+      const copy = { ...prev };
+      delete copy[selectedYantraId];
+      return copy;
+    });
+  };
+
   // Download SVG
   const handleDownloadSVG = () => {
-    const blob = new Blob([renderedSvgHtml], { type: 'image/svg+xml' });
+    if (!currentAsset || currentAsset.type !== 'svg') return;
+    const blob = new Blob([currentAsset.content], { type: 'image/svg+xml' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `${selectedDsl.id}_sacred_black_white.svg`;
+    a.download = `${currentYantra.id}_authentic.svg`;
     a.click();
     URL.revokeObjectURL(url);
   };
 
-  // Download High-Res PNG (3000x3000px)
+  // Download High-Res PNG
   const handleDownloadPNG = () => {
-    const svgBlob = new Blob([renderedSvgHtml], { type: 'image/svg+xml;charset=utf-8' });
+    if (!currentAsset) return;
+
+    if (currentAsset.type === 'image') {
+      const a = document.createElement('a');
+      a.href = currentAsset.content;
+      a.download = `${currentYantra.id}_authentic.png`;
+      a.click();
+      return;
+    }
+
+    const svgBlob = new Blob([currentAsset.content], { type: 'image/svg+xml;charset=utf-8' });
     const URLObject = window.URL || window.webkitURL || window;
     const blobURL = URLObject.createObjectURL(svgBlob);
     const image = new Image();
@@ -165,12 +193,12 @@ export default function YantraDigitalMuseumPage() {
       canvas.height = 3000;
       const context = canvas.getContext('2d');
       if (context) {
-        context.fillStyle = '#FFFFFF';
+        context.fillStyle = YANTRA_COLOR_THEMES[selectedTheme]?.background || '#0A0806';
         context.fillRect(0, 0, canvas.width, canvas.height);
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
         const png = canvas.toDataURL('image/png');
         const a = document.createElement('a');
-        a.download = `${selectedDsl.id}_pure_bw_3000px.png`;
+        a.download = `${currentYantra.id}_3000px.png`;
         a.href = png;
         a.click();
       }
@@ -179,22 +207,11 @@ export default function YantraDigitalMuseumPage() {
     image.src = blobURL;
   };
 
-  // Download PDF
-  const handleDownloadPDF = () => {
-    const pdfRes = VectorPDFExporter.generateVectorPDF(selectedDsl, { theme: 'canonical_blueprint' });
-    const blob = new Blob([pdfRes.pdfContent], { type: pdfRes.mimeType });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${selectedDsl.id}_vector_art.pdf`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
   // Copy SVG to clipboard
   const handleCopySVG = async () => {
+    if (!currentAsset || currentAsset.type !== 'svg') return;
     try {
-      await navigator.clipboard.writeText(renderedSvgHtml);
+      await navigator.clipboard.writeText(currentAsset.content);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (e) {
@@ -202,363 +219,527 @@ export default function YantraDigitalMuseumPage() {
     }
   };
 
-  const isSriYantra = selectedYantraId.includes('sri') || selectedYantraId.includes('meru');
-  const sanskritTitle = selectedDsl.metadata?.titleSanskrit || selectedDsl.names?.sanskrit || 'श्री यन्त्रम्';
-  const englishTitle = selectedDsl.metadata?.titleEnglish || selectedDsl.names?.english || 'Shri Yantra';
-  const deityName = selectedDsl.attributes?.deity || selectedDsl.metadata?.deity || 'Maha Tripurasundari';
-  const mantraText = selectedDsl.attributes?.mantra || selectedDsl.metadata?.mantra || 'ॐ श्रीं ह्रीं क्लीं ग्लौं सौः ॐ ह्रीं श्रीं क ए ई ल ह्रीं ह स क ह ल ह्रीं स क ल ह्रीं सौः ऐं ग्लौं ह्रीं श्रीं';
+  const currentThemeObj = YANTRA_COLOR_THEMES[selectedTheme] || YANTRA_COLOR_THEMES.traditional_shastric;
 
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-[#111111] font-sans pb-16 space-y-6">
-      
-      {/* Header Banner */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-3xl bg-white border border-[#E5E5E5] shadow-xs">
-        <div>
-          <h1 className="text-xl font-bold text-[#111111] flex items-center gap-2">
-            <span>{sanskritTitle}</span>
-            <span className="text-xs font-medium text-[#666666]">({englishTitle})</span>
-            <span className="text-[10px] font-bold px-2 py-0.5 bg-[#111111] text-white rounded-full uppercase tracking-wider">Black & White Only</span>
+    <div className="min-h-screen bg-[#0A0908] text-[#FFF9F2] font-sans pb-20 space-y-8">
+      {/* Top Banner */}
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-6 rounded-[28px] bg-[#141210] border border-[#D4AF37]/30 shadow-xl gold-glow">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37] uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Sacred Shastric Yantra Platform</span>
+            <span>•</span>
+            <span className="text-[#FF9933]">{currentYantra.tradition}</span>
+          </div>
+          <h1 className="text-2xl lg:text-3xl font-serif font-black text-[#FFF9F2] flex items-center gap-3">
+            <span>{currentYantra.nameSanskrit}</span>
+            <span className="text-sm font-sans font-medium text-[#C5BDB0]">({currentYantra.nameEnglish})</span>
           </h1>
-          <p className="text-xs text-[#666666] mt-0.5">Authentic Shastric Sacred Geometry (Sringeri Sharada Peetham / Smirnov-Kulaichev Canonical Form)</p>
+          <p className="text-xs text-[#A0988A] max-w-2xl">{currentYantra.subTitle}</p>
         </div>
 
-        {/* Action Buttons */}
+        {/* Global Action Bar */}
         <div className="flex items-center gap-2 flex-wrap">
-          {/* Custom Upload Trigger */}
           <input
             type="file"
             ref={fileInputRef}
-            onChange={handleImageUpload}
-            accept="image/*"
+            onChange={handleFileUpload}
+            accept=".svg,image/png,image/jpeg,image/webp"
             className="hidden"
           />
+
           <button
             onClick={() => fileInputRef.current?.click()}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-dashed border-[#888888] bg-[#FAFAFA] hover:bg-[#F0F0F0] text-xs font-semibold text-[#111111] transition-all shadow-xs cursor-pointer"
-            title="Upload custom image to view or compare"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-linear-to-r from-[#D4AF37] to-[#FF9933] text-[#0A0908] font-bold text-xs shadow-md hover:brightness-110 transition-all cursor-pointer"
+            title="Upload authentic SVG or transparent high-res PNG for this Yantra"
           >
-            <Upload className="w-3.5 h-3.5" /> Upload Image
+            <Upload className="w-4 h-4" />
+            <span>{currentAsset ? 'Replace Yantra Asset' : 'Upload Authentic Yantra'}</span>
           </button>
 
-          <div className="flex items-center gap-1.5 bg-[#F5F5F5] border border-[#E5E5E5] px-3 py-1.5 rounded-full text-xs">
-            <span className="text-[#666666] font-medium">Stroke:</span>
-            <select
-              value={strokeWidth}
-              onChange={e => setStrokeWidth(Number(e.target.value))}
-              className="bg-transparent font-bold text-[#111111] outline-none cursor-pointer"
-            >
-              <option value="1.2">Thin (1.2px)</option>
-              <option value="1.8">Standard (1.8px)</option>
-              <option value="2.4">Bold (2.4px)</option>
-              <option value="3.0">Heavy (3.0px)</option>
-            </select>
-          </div>
+          {currentAsset && (
+            <>
+              {currentAsset.type === 'svg' && (
+                <button
+                  onClick={handleCopySVG}
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#1E1A16] hover:bg-[#2A241E] border border-[#D4AF37]/30 text-xs font-semibold text-[#FFF9F2] transition-all cursor-pointer"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-[#D4AF37]" />}
+                  <span>{copied ? 'Copied' : 'Copy SVG'}</span>
+                </button>
+              )}
 
-          <button
-            onClick={handleCopySVG}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#E5E5E5] bg-white hover:bg-[#F5F5F5] text-xs font-semibold text-[#111111] transition-all shadow-xs cursor-pointer"
-          >
-            {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-            {copied ? 'Copied' : 'Copy SVG'}
-          </button>
+              {currentAsset.type === 'svg' && (
+                <button
+                  onClick={handleDownloadSVG}
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#1E1A16] hover:bg-[#2A241E] border border-[#D4AF37]/30 text-xs font-semibold text-[#D4AF37] transition-all cursor-pointer"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>SVG</span>
+                </button>
+              )}
 
-          <button
-            onClick={handleDownloadSVG}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#E5E5E5] bg-white hover:bg-[#F5F5F5] text-xs font-semibold text-[#111111] transition-all shadow-xs cursor-pointer"
-          >
-            <Download className="w-3.5 h-3.5" /> SVG
-          </button>
+              <button
+                onClick={handleDownloadPNG}
+                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#1E1A16] hover:bg-[#2A241E] border border-[#D4AF37]/30 text-xs font-semibold text-[#FFF9F2] transition-all cursor-pointer"
+              >
+                <Download className="w-3.5 h-3.5 text-[#FF9933]" />
+                <span>3000px PNG</span>
+              </button>
 
-          <button
-            onClick={handleDownloadPNG}
-            className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#111111] hover:bg-[#333333] text-xs font-semibold text-white transition-all shadow-xs cursor-pointer"
-          >
-            <Download className="w-3.5 h-3.5" /> 4K PNG
-          </button>
-
-          <button
-            onClick={handleDownloadPDF}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[#E5E5E5] bg-white hover:bg-[#F5F5F5] text-xs font-semibold text-[#111111] transition-all shadow-xs cursor-pointer"
-          >
-            <Download className="w-3.5 h-3.5" /> PDF
-          </button>
+              <button
+                onClick={handleRemoveAsset}
+                className="p-2 rounded-xl bg-red-950/60 hover:bg-red-900 border border-red-500/40 text-red-300 transition-all cursor-pointer"
+                title="Remove current asset"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+              </button>
+            </>
+          )}
         </div>
       </div>
 
-      {/* Main Layout */}
-      <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-6">
+      {/* Main Studio Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        {/* Left Sidebar */}
-        <aside className="lg:col-span-3 bg-white border border-[#E5E5E5] rounded-[24px] p-4 h-[calc(100vh-170px)] overflow-y-auto space-y-3 shadow-xs">
+        {/* Left Side: Yantra Catalog Sidebar */}
+        <aside className="lg:col-span-3 bg-[#141210] border border-[#2A241E] rounded-3xl p-5 space-y-4 h-[calc(100vh-140px)] overflow-y-auto no-scrollbar shadow-lg">
+          <div className="space-y-1">
+            <h2 className="text-xs font-mono font-bold text-[#D4AF37] uppercase tracking-wider flex items-center gap-1.5">
+              <Layers className="w-3.5 h-3.5" />
+              <span>Sacred Yantra Library</span>
+            </h2>
+            <p className="text-[11px] text-[#8A8070]">Authentic Shastric Yantra Registry</p>
+          </div>
+
           <div className="relative">
-            <Search className="absolute left-3 top-2.5 w-3.5 h-3.5 text-[#999999]" />
+            <Search className="absolute left-3.5 top-3 w-3.5 h-3.5 text-[#8A8070]" />
             <input
               type="text"
-              placeholder="Search Yantra..."
+              placeholder="Search Yantra or Deity..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="w-full bg-[#F5F5F5] border border-[#E5E5E5] focus:border-[#111111] rounded-full pl-8 pr-3 py-1.5 text-xs font-medium text-[#111111] focus:outline-none transition-all"
+              className="w-full bg-[#1A1612] border border-[#2A241E] focus:border-[#D4AF37] rounded-xl pl-9 pr-3 py-2 text-xs text-[#FFF9F2] placeholder-[#666055] focus:outline-none transition-all"
             />
           </div>
 
-          <div className="text-[11px] font-bold uppercase tracking-wider text-[#888888] flex items-center justify-between pt-1 px-1">
-            <span>All Sacred Yantras</span>
-            <span className="bg-[#F5F5F5] border border-[#E5E5E5] px-2 py-0.5 rounded-full">{filteredYantras.length}</span>
-          </div>
-
-          <div className="space-y-1.5">
-            {filteredYantras.map((y: any) => {
+          <div className="space-y-2 pt-1">
+            {filteredYantras.map(y => {
               const isSelected = y.id === selectedYantraId;
-              const ySanskrit = y.names?.sanskrit || y.metadata?.titleSanskrit || '';
-              const yEnglish = y.names?.english || y.metadata?.titleEnglish || y.id;
+              const hasAsset = Boolean(assetsMap[y.id]);
 
               return (
                 <button
                   key={y.id}
-                  onClick={() => {
-                    setSelectedYantraId(y.id);
-                    setActiveStep(0);
-                  }}
-                  className={`w-full text-left p-3 rounded-2xl border transition-all cursor-pointer ${
+                  onClick={() => setSelectedYantraId(y.id)}
+                  className={`w-full text-left p-3 rounded-2xl border transition-all cursor-pointer flex flex-col gap-1 ${
                     isSelected
-                      ? 'bg-[#111111] text-white border-[#111111] shadow-xs'
-                      : 'bg-white border-[#E5E5E5] text-[#111111] hover:bg-[#F5F5F5]'
+                      ? 'bg-linear-to-r from-[#D4AF37]/20 via-[#FF9933]/10 to-transparent border-[#D4AF37] shadow-md'
+                      : 'bg-[#181512] border-[#241F1A] hover:bg-[#201C18] hover:border-[#D4AF37]/40'
                   }`}
                 >
-                  <div className="font-bold text-xs">{ySanskrit || yEnglish}</div>
-                  <div className={`text-[11px] ${isSelected ? 'text-white/70' : 'text-[#666666]'}`}>{yEnglish}</div>
+                  <div className="flex items-center justify-between">
+                    <span className={`text-xs font-serif font-bold ${isSelected ? 'text-[#FF9933]' : 'text-[#FFF9F2]'}`}>
+                      {y.nameSanskrit}
+                    </span>
+                    <div className="flex items-center gap-1">
+                      {hasAsset && (
+                        <span className="w-2 h-2 rounded-full bg-emerald-500" title="Authentic Asset Loaded" />
+                      )}
+                      {isSelected && <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />}
+                    </div>
+                  </div>
+                  <span className="text-[11px] text-[#A0988A] truncate">{y.nameEnglish}</span>
+                  <span className="text-[10px] font-mono text-[#D4AF37]/80">{y.presidingDeity}</span>
                 </button>
               );
             })}
           </div>
         </aside>
 
-        {/* Center Main View */}
-        <main className="lg:col-span-9 space-y-4">
+        {/* Center / Right: Yantra Display & Multidimensional Knowledge Base */}
+        <main className="lg:col-span-9 space-y-6">
           
-          {/* Controls Bar for Sri Yantra */}
-          {isSriYantra && (
-            <div className="bg-white border border-[#E5E5E5] rounded-2xl p-3 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xs">
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setViewMode('full_sacred_yantra')}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                    viewMode === 'full_sacred_yantra' ? 'bg-[#111111] text-white' : 'bg-[#F5F5F5] text-[#666666] hover:text-[#111111]'
-                  }`}
-                >
-                  <Layers className="w-3.5 h-3.5" /> Full Sacred Sri Yantra (Bhupura + Lotuses)
-                </button>
-                <button
-                  onClick={() => setViewMode('inner_triangles_focus')}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                    viewMode === 'inner_triangles_focus' ? 'bg-[#111111] text-white' : 'bg-[#F5F5F5] text-[#666666] hover:text-[#111111]'
-                  }`}
-                >
-                  <Eye className="w-3.5 h-3.5" /> Inner 9 Triangles Map
-                </button>
-              </div>
-
-              {customImage && (
-                <button
-                  onClick={() => setShowComparison(!showComparison)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-all cursor-pointer flex items-center gap-1.5 ${
-                    showComparison ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white border-[#E5E5E5] text-[#111111] hover:bg-[#F5F5F5]'
-                  }`}
-                >
-                  {showComparison ? 'Hide Reference Image' : 'Compare with Reference Image'}
-                </button>
-              )}
+          {/* Central Sacred Yantra Canvas */}
+          <div
+            className="relative rounded-[32px] p-6 lg:p-10 border border-[#D4AF37]/30 flex flex-col items-center justify-center shadow-2xl gold-glow min-h-[520px] transition-colors"
+            style={{ background: currentThemeObj.background }}
+          >
+            {/* Top Badge */}
+            <div className="absolute top-4 left-6 flex items-center gap-2">
+              <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-[#D4AF37]/15 text-[#D4AF37] border border-[#D4AF37]/30">
+                {currentYantra.nameEnglish}
+              </span>
+              <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-[#FF9933]/15 text-[#FF9933] border border-[#FF9933]/30">
+                {currentYantra.presidingDeity}
+              </span>
             </div>
-          )}
 
-          {/* 9 Maximal Triangles Step Buttons Bar */}
-          {isSriYantra && (
-            <div className="bg-white border border-[#E5E5E5] rounded-2xl p-2.5 flex items-center justify-between gap-1 overflow-x-auto no-scrollbar shadow-xs">
+            {/* Display Area */}
+            {currentAsset ? (
+              <div className="w-full max-w-xl aspect-square flex items-center justify-center p-4 transition-all duration-300">
+                {currentAsset.type === 'svg' ? (
+                  <div
+                    className="w-full h-full flex items-center justify-center drop-shadow-2xl [&_svg]:w-full [&_svg]:h-full"
+                    dangerouslySetInnerHTML={{ __html: currentAsset.content }}
+                  />
+                ) : (
+                  <img
+                    src={currentAsset.content}
+                    alt={currentYantra.nameEnglish}
+                    className="max-w-full max-h-full object-contain rounded-2xl drop-shadow-2xl"
+                  />
+                )}
+              </div>
+            ) : (
+              /* Respectful Awaiting Asset Placeholder */
+              <div className="w-full max-w-lg aspect-square rounded-3xl border-2 border-dashed border-[#D4AF37]/40 bg-[#141210]/60 p-8 flex flex-col items-center justify-center text-center space-y-4">
+                <div className="w-16 h-16 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex items-center justify-center">
+                  <Compass className="w-8 h-8 text-[#D4AF37] animate-pulse" />
+                </div>
+
+                <div className="space-y-1">
+                  <h3 className="text-lg font-serif font-bold text-[#FFF9F2]">
+                    {currentYantra.nameSanskrit}
+                  </h3>
+                  <p className="text-xs text-[#D4AF37] font-mono">
+                    Awaiting Authentic Shastric Asset (.SVG / .PNG)
+                  </p>
+                  <p className="text-xs text-[#A0988A] max-w-sm pt-1">
+                    Galat algorithmic geometry nikaal di gayi hai. Aap apna shuddh aur pramanik Yantra upload karein ya humein SVG provide karein.
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => fileInputRef.current?.click()}
+                  className="px-5 py-2.5 rounded-xl bg-linear-to-r from-[#D4AF37] to-[#FF9933] text-[#0A0908] font-bold text-xs shadow-md hover:brightness-110 transition-all flex items-center gap-2 cursor-pointer"
+                >
+                  <Upload className="w-4 h-4" />
+                  <span>Upload Authentic {currentYantra.nameEnglish}</span>
+                </button>
+
+                <p className="text-[11px] font-mono text-[#8A8070]">
+                  Supported Formats: Layered SVG (Recommended) or High-Res Transparent PNG
+                </p>
+              </div>
+            )}
+
+            <p className="text-xs text-[#8A8070] italic text-center mt-4">
+              {currentYantra.corePhilosophy}
+            </p>
+          </div>
+
+          {/* Multidimensional Knowledge Tabs: Shastric, Astrological & Upasana */}
+          <div className="bg-[#141210] border border-[#2A241E] rounded-3xl p-6 lg:p-8 space-y-6 shadow-xl">
+            {/* Tabs Header */}
+            <div className="flex items-center gap-2 border-b border-[#2A241E] pb-4 flex-wrap">
               <button
-                onClick={() => setActiveStep(0)}
-                className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer shrink-0 ${
-                  activeStep === 0 ? 'bg-[#111111] text-white shadow-xs' : 'bg-[#F0F0F0] text-[#666666] hover:text-[#111111]'
+                onClick={() => setActiveTab('geometry')}
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+                  activeTab === 'geometry'
+                    ? 'bg-[#D4AF37] text-[#0A0908] shadow-md'
+                    : 'text-[#C5BDB0] hover:text-[#FFF9F2] hover:bg-[#1E1A16]'
                 }`}
               >
-                All 9 Triangles
+                <Compass className="w-4 h-4" />
+                <span>९ आवरण व ज्यामिति (9 Avaranas)</span>
               </button>
 
-              <div className="flex items-center gap-1">
-                {[
-                  { index: 1, type: 'Shakti' },
-                  { index: 2, type: 'Shiva' },
-                  { index: 3, type: 'Shiva' },
-                  { index: 4, type: 'Shakti' },
-                  { index: 5, type: 'Shakti' },
-                  { index: 6, type: 'Shiva' },
-                  { index: 7, type: 'Shakti' },
-                  { index: 8, type: 'Shakti' },
-                  { index: 9, type: 'Shiva' }
-                ].map((tri) => (
-                  <button
-                    key={tri.index}
-                    onClick={() => setActiveStep(tri.index)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer shrink-0 ${
-                      activeStep === tri.index
-                        ? 'bg-[#111111] text-white shadow-xs'
-                        : 'bg-white border border-[#E5E5E5] text-[#666666] hover:text-[#111111]'
-                    }`}
-                  >
-                    T{tri.index} ({tri.type})
-                  </button>
-                ))}
-              </div>
+              <button
+                onClick={() => setActiveTab('shastric')}
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+                  activeTab === 'shastric'
+                    ? 'bg-[#D4AF37] text-[#0A0908] shadow-md'
+                    : 'text-[#C5BDB0] hover:text-[#FFF9F2] hover:bg-[#1E1A16]'
+                }`}
+              >
+                <BookOpen className="w-4 h-4" />
+                <span>शास्त्रीय प्रमाण व स्तोत्र (Scriptural Citations)</span>
+              </button>
 
-              <div className="flex items-center gap-1 shrink-0">
-                <button
-                  disabled={activeStep <= 0}
-                  onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
-                  className="p-1.5 rounded-xl border border-[#E5E5E5] bg-white hover:bg-[#F5F5F5] disabled:opacity-30 cursor-pointer"
-                  title="Previous"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button
-                  disabled={activeStep >= 9}
-                  onClick={() => setActiveStep(prev => Math.min(9, prev + 1))}
-                  className="p-1.5 rounded-xl border border-[#E5E5E5] bg-white hover:bg-[#F5F5F5] disabled:opacity-30 cursor-pointer"
-                  title="Next"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          )}
+              <button
+                onClick={() => setActiveTab('jyotish')}
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+                  activeTab === 'jyotish'
+                    ? 'bg-[#D4AF37] text-[#0A0908] shadow-md'
+                    : 'text-[#C5BDB0] hover:text-[#FFF9F2] hover:bg-[#1E1A16]'
+                }`}
+              >
+                <Star className="w-4 h-4" />
+                <span>ज्योतिष, ग्रह दोष व उपाय (Astrological Remedies)</span>
+              </button>
 
-          {/* Active Step Information */}
-          {isSriYantra && activeStep > 0 && (
-            <div className="bg-white border border-[#E5E5E5] rounded-2xl px-4 py-2.5 flex items-center justify-between text-xs shadow-xs">
-              <div className="font-bold text-[#111111]">
-                {[
-                  'T1 - Shakti (Primary Foundation Base)',
-                  'T2 - Shiva (Upper Primary Apex)',
-                  'T3 - Shiva (Middle Inverted Tier)',
-                  'T4 - Shakti (Central Interlocking Matrix)',
-                  'T5 - Shakti (Intermediate Core Circuit)',
-                  'T6 - Shiva (Bindu Focal Point Upper)',
-                  'T7 - Shakti (Lower Symmetry Base)',
-                  'T8 - Shakti (Deep Inner Chamber)',
-                  'T9 - Shiva (Innermost Bindu Triangle)'
-                ][activeStep - 1]}
-              </div>
-              <div className="text-[#666666] text-[11px]">
-                {[
-                  'अधोमुखी (Shakti Principle / Creative Energy)',
-                  'उर्ध्वमुखी (Shiva Principle / Consciousness)',
-                  'उर्ध्वमुखी (Shiva Principle / Consciousness)',
-                  'अधोमुखी (Shakti Principle / Creative Energy)',
-                  'अधोमुखी (Shakti Principle / Creative Energy)',
-                  'उर्ध्वमुखी (Shiva Principle / Consciousness)',
-                  'अधोमुखी (Shakti Principle / Creative Energy)',
-                  'अधोमुखी (Shakti Principle / Creative Energy)',
-                  'उर्ध्वमुखी (Shiva Principle / Consciousness)'
-                ][activeStep - 1]}
-              </div>
-            </div>
-          )}
-
-          {/* Main Drawing & Comparison Grid */}
-          <div className={`grid ${showComparison && customImage ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'} gap-4`}>
-            
-            {/* Sacred Vector CAD Render */}
-            <div className="bg-white border border-[#E5E5E5] rounded-[28px] p-6 flex flex-col items-center justify-center shadow-xs">
-              <div className="text-[11px] font-bold text-[#888888] uppercase tracking-wider mb-2">
-                Pure Vector CAD Model
-              </div>
-              <div
-                className="w-full max-w-xl aspect-square flex items-center justify-center transition-all duration-300"
-                dangerouslySetInnerHTML={{ __html: renderedSvgHtml }}
-              />
+              <button
+                onClick={() => setActiveTab('upasana')}
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
+                  activeTab === 'upasana'
+                    ? 'bg-[#D4AF37] text-[#0A0908] shadow-md'
+                    : 'text-[#C5BDB0] hover:text-[#FFF9F2] hover:bg-[#1E1A16]'
+                }`}
+              >
+                <Flame className="w-4 h-4" />
+                <span>उपासना, मन्त्र व स्थापना विधि (Upasana Protocol)</span>
+              </button>
             </div>
 
-            {/* Custom Uploaded Reference Image */}
-            {showComparison && customImage && (
-              <div className="bg-white border border-[#E5E5E5] rounded-[28px] p-6 flex flex-col items-center justify-center shadow-xs">
-                <div className="text-[11px] font-bold text-[#888888] uppercase tracking-wider mb-2">
-                  Uploaded Reference Image
+            {/* TAB 1: 9 AVARANAS & SACRED GEOMETRY */}
+            {activeTab === 'geometry' && (
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <h3 className="text-lg font-serif font-bold text-[#FFF9F2] flex items-center gap-2">
+                    <span className="text-[#D4AF37]">नवावरण रहस्य:</span>
+                    <span>{currentYantra.nameSanskrit} के आवरण व ज्यामितीय विन्यास</span>
+                  </h3>
+                  <p className="text-xs text-[#A0988A] leading-relaxed">
+                    प्रत्येक आवरण एक विशिष्ट योगिनी वर्ग, मुद्रा शक्ति, और चक्र देवता द्वारा अधिष्ठित है जो साधक की चेतना को भौतिक स्तर से पराचेतना की ओर ले जाता है।
+                  </p>
                 </div>
-                <div className="w-full max-w-xl aspect-square flex items-center justify-center p-2">
-                  <img
-                    src={customImage}
-                    alt="Uploaded Reference"
-                    className="max-w-full max-h-full object-contain rounded-2xl border border-[#E5E5E5]"
-                  />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {(currentYantra.avaranas || []).map(av => (
+                    <div
+                      key={av.index}
+                      className="p-4 rounded-2xl bg-[#1A1612] border border-[#2A241E] hover:border-[#D4AF37]/40 transition-all space-y-2.5"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-[#D4AF37]/20 text-[#D4AF37]">
+                          आवरण {av.index}
+                        </span>
+                        <span className="text-[11px] font-mono text-[#FF9933]">{av.presidingDeity}</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-[#FFF9F2]">{av.nameSanskrit}</h4>
+                        <p className="text-xs text-[#D4AF37] font-medium">{av.chakraTitle}</p>
+                      </div>
+                      <p className="text-xs text-[#C5BDB0] leading-relaxed">{av.significance}</p>
+                      <div className="pt-2 border-t border-[#241F1A] flex items-center justify-between text-[10px] font-mono text-[#8A8070]">
+                        <span>मुद्रा: {av.mudraShakti}</span>
+                        <span>योगिनी: {av.yoginiClass}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* TAB 2: SHASTRIC CITATIONS & CLASSICAL SCRIPTURES */}
+            {activeTab === 'shastric' && (
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <h3 className="text-lg font-serif font-bold text-[#FFF9F2] flex items-center gap-2">
+                    <span className="text-[#D4AF37]">प्रमाणिक ग्रन्थ साक्ष्य:</span>
+                    <span>शास्त्रीय स्तोत्र व तन्त्र संहिताएं</span>
+                  </h3>
+                  <p className="text-xs text-[#A0988A]">
+                    हमारे प्राचीन आचार्यों और ऋषियों द्वारा विरचित मूल ग्रन्थों से अक्षुण्ण श्लोक एवं उनका गूढ़ार्थ।
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  {currentYantra.citations.map((cite, idx) => (
+                    <div
+                      key={idx}
+                      className="p-6 rounded-2xl bg-[#1A1612] border border-[#2A241E] space-y-4"
+                    >
+                      <div className="flex items-center justify-between border-b border-[#2A241E] pb-3">
+                        <span className="text-xs font-mono font-bold text-[#FF9933]">
+                          {cite.sourceScripture}
+                        </span>
+                        <span className="text-xs font-mono text-[#8A8070]">{cite.chapterOrVerse}</span>
+                      </div>
+
+                      <div className="p-4 rounded-xl bg-[#0F0D0A] border border-[#2A241E] text-center font-serif text-sm lg:text-base text-[#D4AF37] leading-relaxed whitespace-pre-line">
+                        {cite.sanskritSloka}
+                      </div>
+
+                      <div className="space-y-2 text-xs leading-relaxed">
+                        <p className="text-[#FFF9F2]">
+                          <strong className="text-[#FF9933]">हिन्दी भावार्थ:</strong> {cite.hindiMeaning}
+                        </p>
+                        <p className="text-[#A0988A]">
+                          <strong className="text-[#D4AF37]">English Translation:</strong> {cite.englishMeaning}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* TAB 3: JYOTISH, PLANETARY ALIGNMENT & REMEDIES */}
+            {activeTab === 'jyotish' && (
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <h3 className="text-lg font-serif font-bold text-[#FFF9F2] flex items-center gap-2">
+                    <span className="text-[#D4AF37]">ज्योतिषीय फलश्रुति:</span>
+                    <span>ग्रह शांति, दोष निवारण व जीवनोपयोगी अनुभूत उपाय</span>
+                  </h3>
+                  <p className="text-xs text-[#A0988A]">
+                    वैदिक ज्योतिष के अनुसार ग्रहीय प्रतिकूलता को अनुकूलता में परिवर्तित करने का दिव्य साधन।
+                  </p>
+                </div>
+
+                {/* Key Jyotish Metas */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                  <div className="p-3.5 rounded-xl bg-[#1A1612] border border-[#2A241E]">
+                    <span className="text-[10px] font-mono text-[#8A8070] uppercase">Ruling Planet (स्वामी ग्रह)</span>
+                    <p className="font-bold text-[#FF9933] mt-0.5">{currentYantra.jyotish.rulingPlanet}</p>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-[#1A1612] border border-[#2A241E]">
+                    <span className="text-[10px] font-mono text-[#8A8070] uppercase">Favorable Day (शुभ वार)</span>
+                    <p className="font-bold text-[#D4AF37] mt-0.5">{currentYantra.jyotish.favorableDay}</p>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-[#1A1612] border border-[#2A241E]">
+                    <span className="text-[10px] font-mono text-[#8A8070] uppercase">Direction (शुभ दिशा)</span>
+                    <p className="font-bold text-[#FFF9F2] mt-0.5">{currentYantra.jyotish.wearOrInstallDirection}</p>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-[#1A1612] border border-[#2A241E]">
+                    <span className="text-[10px] font-mono text-[#8A8070] uppercase">Metal (शुभ धातु)</span>
+                    <p className="font-bold text-[#D4AF37] mt-0.5">{currentYantra.jyotish.metalPreference}</p>
+                  </div>
+                </div>
+
+                {/* Specific Dosha Remedies */}
+                <div className="space-y-3 pt-2">
+                  <h4 className="text-xs font-mono font-bold text-[#D4AF37] uppercase tracking-wider">
+                    प्रमुख कुण्डली दोष निवारण (Specific Astrological Remedies)
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {currentYantra.jyotish.doshaRemedies.map((dr, idx) => (
+                      <div
+                        key={idx}
+                        className="p-4 rounded-2xl bg-[#1A1612] border border-[#2A241E] space-y-2"
+                      >
+                        <h5 className="text-sm font-bold text-[#FF9933]">{dr.doshaName}</h5>
+                        <p className="text-xs text-[#C5BDB0]">{dr.description}</p>
+                        <div className="p-2.5 rounded-xl bg-[#120F0D] border border-[#241F1A] text-xs text-[#D4AF37]">
+                          <strong>उपाय प्रक्रिया:</strong> {dr.reliefMechanism}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Practical Life Problem Remedies */}
+                <div className="space-y-3 pt-2">
+                  <h4 className="text-xs font-mono font-bold text-[#D4AF37] uppercase tracking-wider">
+                    व्यावहारिक समस्या व समाधान (Practical Life Solutions)
+                  </h4>
+                  <div className="space-y-3">
+                    {currentYantra.practicalRemedies.map((pr, idx) => (
+                      <div
+                        key={idx}
+                        className="p-4 rounded-2xl bg-[#1A1612] border border-[#2A241E] flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs"
+                      >
+                        <div className="space-y-1 max-w-xl">
+                          <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-[#FF9933]/20 text-[#FF9933]">
+                            {pr.category}
+                          </span>
+                          <p className="text-[#FFF9F2] font-semibold">{pr.problem}</p>
+                        </div>
+                        <div className="p-3 rounded-xl bg-[#0F0D0A] border border-[#241F1A] text-[#D4AF37] md:max-w-md">
+                          {pr.remedyProtocol}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* TAB 4: UPASANA, STHAPANA & MANTRAS */}
+            {activeTab === 'upasana' && (
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <h3 className="text-lg font-serif font-bold text-[#FFF9F2] flex items-center gap-2">
+                    <span className="text-[#D4AF37]">उपासना व प्राण-प्रतिष्ठा:</span>
+                    <span>विधि, जप अनुष्ठान व नित्य पूजा विधान</span>
+                  </h3>
+                  <p className="text-xs text-[#A0988A]">
+                    यन्त्र केवल धातु या चित्र नहीं, जाग्रत देव विग्रह है। शुद्ध विधि से की गई प्रतिष्ठा शत-प्रतिशत फलदायी होती है।
+                  </p>
+                </div>
+
+                {/* Beej Mantra & Gayatri Display */}
+                <div className="p-6 rounded-2xl bg-[#1A1612] border border-[#D4AF37]/30 space-y-4">
+                  <div>
+                    <span className="text-xs font-mono text-[#8A8070] uppercase">मूल बीज मन्त्र (Core Beej Mantra)</span>
+                    <p className="text-base lg:text-lg font-serif font-bold text-[#FF9933] mt-1 tracking-wide leading-relaxed">
+                      {currentYantra.jyotish.beejMantra}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-[#241F1A]">
+                    <span className="text-xs font-mono text-[#8A8070] uppercase">गायत्री मन्त्र (Gayatri Mantra)</span>
+                    <p className="text-sm font-serif font-bold text-[#D4AF37] mt-1">
+                      {currentYantra.jyotish.gayatriMantra}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Interactive 108 Japa Counter */}
+                <div className="p-6 rounded-2xl bg-linear-to-r from-[#1E1712] via-[#141210] to-[#0A0908] border border-[#FF9933]/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+                  <div className="space-y-1">
+                    <span className="text-xs font-mono font-bold text-[#FF9933] uppercase">Mantra Japa Counter (१०८ माला गणना)</span>
+                    <h4 className="text-xl font-serif font-bold text-[#FFF9F2]">दैनिक मंत्र साधना</h4>
+                    <p className="text-xs text-[#A0988A]">माला: {currentYantra.jyotish.malaType}</p>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="text-center">
+                      <span className="text-4xl font-mono font-black text-[#D4AF37]">{japaCount}</span>
+                      <span className="text-xs text-[#8A8070] block">/ 108</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setJapaCount(prev => (prev < 108 ? prev + 1 : 108))}
+                        className="px-5 py-3 rounded-2xl bg-linear-to-r from-[#D4AF37] to-[#FF9933] text-[#0A0908] font-bold text-sm shadow-lg hover:brightness-110 cursor-pointer transition-all"
+                      >
+                        + 1 जप
+                      </button>
+                      <button
+                        onClick={() => setJapaCount(0)}
+                        className="p-3 rounded-2xl bg-[#1E1A16] hover:bg-[#2A241E] border border-[#D4AF37]/30 text-[#A0988A] hover:text-[#FFF9F2] cursor-pointer"
+                        title="Reset Counter"
+                      >
+                        <RotateCcw className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Prana Pratishtha Step-by-Step */}
+                <div className="space-y-3">
+                  <h4 className="text-xs font-mono font-bold text-[#D4AF37] uppercase tracking-wider">
+                    प्रतिष्ठा व नित्य पूजा के ५ चरण (Sthapana Vidhi Steps)
+                  </h4>
+                  <div className="space-y-2">
+                    {currentYantra.jyotish.pratishthaVidhiSummary.map((step, idx) => (
+                      <div
+                        key={idx}
+                        className="p-3.5 rounded-xl bg-[#1A1612] border border-[#241F1A] text-xs text-[#FFF9F2] flex items-center gap-3"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                        <span>{step}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
           </div>
-
-          {/* Mathematical Validation & Constraint Report */}
-          <div className="bg-white border border-[#E5E5E5] rounded-[24px] p-6 space-y-4 shadow-xs">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#E5E5E5] pb-3">
-              <div>
-                <h3 className="font-bold text-base text-[#111111] flex items-center gap-2">
-                  <span>Canonical Geometry Verification</span>
-                </h3>
-                <p className="text-xs text-[#666666]">Sringeri Sharada Peetham / Smirnov-Kulaichev Shastric Audit</p>
-              </div>
-
-              <div className="flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs px-3.5 py-1.5 rounded-full font-bold shadow-2xs">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>CANONICAL GEOMETRY VERIFIED</span>
-              </div>
-            </div>
-
-            {/* 8 Constraints Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
-              {[
-                { name: 'Bindu Centering', detail: 'Bindu aligned at exact geometric origin with 0.0000mm error.' },
-                { name: '9 Primary Triangles', detail: '4 Shiva + 5 Shakti interlocking triangles validated.' },
-                { name: '43 Sub-Triangles', detail: '14+10+10+8+1 canonical circuit triangles verified.' },
-                { name: 'Triple Concurrency', detail: 'Triple intersection points pass analytical zero-gap tolerance.' },
-                { name: 'Apollonius Tangency', detail: 'Circle-line-point tangency solved via CLP quadratic algorithm.' },
-                { name: 'Bilateral Symmetry', detail: 'Mirror symmetry preserved along vertical Brahma Sutra axis.' },
-                { name: 'Circumcircle Inscription', detail: 'Outer apex points strictly touch inner reference circle.' },
-                { name: 'Golden Decagon Ratio', detail: 'R=(1+√5)/4 decagon proportions conform to classical Shastras.' }
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="p-3 rounded-2xl border bg-[#FBFDFB] border-emerald-200 text-[#111111] flex flex-col justify-between space-y-1"
-                >
-                  <div className="flex items-center gap-1.5 font-bold text-xs">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span className="truncate">{item.name}</span>
-                  </div>
-                  <div className="text-[10px] text-[#666666] leading-tight">{item.detail}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* Bija Mantra & Placement */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs pt-2">
-              <div className="md:col-span-2 bg-[#F9F9F9] border border-[#E5E5E5] p-4 rounded-2xl space-y-1.5">
-                <div className="font-bold text-[#111111] flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5" /> Vedic Bija Mantra
-                </div>
-                <div className="font-mono text-xs text-[#333333] leading-relaxed select-all">
-                  {mantraText}
-                </div>
-              </div>
-
-              <div className="bg-[#F9F9F9] border border-[#E5E5E5] p-4 rounded-2xl space-y-2">
-                <div className="font-bold text-[#111111] flex items-center gap-1.5">
-                  <Compass className="w-3.5 h-3.5" /> Placement & Direction
-                </div>
-                <div className="text-[#666666] space-y-1">
-                  <div>Direction: <span className="font-semibold text-[#111111]">East / North-East (Ishanya)</span></div>
-                  <div>Element: <span className="font-semibold text-[#111111]">{selectedDsl.attributes?.element || 'Ether / Akasha'}</span></div>
-                  <div>Deity: <span className="font-semibold text-[#111111]">{deityName}</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
         </main>
       </div>
     </div>
+  );
+}
+
+export default function YantraDigitalMuseumPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#0A0908] flex items-center justify-center text-[#D4AF37]">लोड हो रहा है...</div>}>
+      <YantraExplorerInner />
+    </Suspense>
   );
 }

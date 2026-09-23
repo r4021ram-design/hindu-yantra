@@ -48,6 +48,13 @@ export interface ChiodoConstructionResult {
 export class ChiodoConstructionEngine {
   public static readonly ENGINE_NAME = 'Analytical Computational Geometry Engine Implementing Alessandro Chiodo (2021)';
 
+  public static readonly DEFAULT_INPUT: Required<ApolloniusCLPInput> = Object.freeze({
+    P: (3 - Math.sqrt(5)) / 4,
+    Q: 0.5,
+    R: (1 + Math.sqrt(5)) / 4,
+    S: (2 + Math.sqrt(3)) / 4
+  });
+
   /**
    * Analytical derivation of base parameters (P, Q, R, S) strictly following Chiodo (2021):
    */

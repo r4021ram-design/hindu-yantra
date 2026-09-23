@@ -51,7 +51,7 @@ export class SVGRenderer {
     const isTraditionalPoster = theme === 'traditional_poster';
 
     const colors = this.getThemeColors(theme);
-    const strokeW = isCanonicalBlueprint ? (options.strokeWidth || 1) : (options.strokeWidth || 2);
+    const strokeW = isCanonicalBlueprint ? (options.strokeWidth || 1) : (isMultiStrokeCAD ? (options.strokeWidth || 1.2) : (options.strokeWidth || 2));
     const showFills = isCanonicalBlueprint ? false : (options.showFills !== false);
     const widthAttr = options.width ? `width="${options.width}"` : 'width="100%"';
     const heightAttr = options.height ? `height="${options.height}"` : 'height="100%"';
@@ -78,8 +78,22 @@ export class SVGRenderer {
       svg += `      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.95" />\n`;
       svg += `      <stop offset="100%" stop-color="#991B1B" stop-opacity="0.95" />\n`;
       svg += `    </linearGradient>\n`;
+      svg += `    <linearGradient id="emeraldLinear" x1="0%" y1="0%" x2="100%" y2="100%">\n`;
+      svg += `      <stop offset="0%" stop-color="#10B981" />\n`;
+      svg += `      <stop offset="100%" stop-color="#047857" />\n`;
+      svg += `    </linearGradient>\n`;
+      svg += `    <linearGradient id="sapphireLinear" x1="0%" y1="0%" x2="100%" y2="100%">\n`;
+      svg += `      <stop offset="0%" stop-color="#3B82F6" />\n`;
+      svg += `      <stop offset="100%" stop-color="#1D4ED8" />\n`;
+      svg += `    </linearGradient>\n`;
     }
     svg += `  </defs>\n`;
+
+    // Traditional Poster Header
+    if (isTraditionalPoster) {
+      svg += `  <!-- Traditional Poster Sacred Header -->\n`;
+      svg += `  <text x="500" y="45" fill="#78350F" font-size="28" font-weight="bold" font-family="'Noto Sans Devanagari', Outfit, serif" text-anchor="middle">卐 श्री यन्त्रम् 卐</text>\n`;
+    }
 
     // 1. Render 43 Sub-Triangle Face Polygons with Unique IDs
     if (compiled.polygons && compiled.polygons.length > 0) {
@@ -105,10 +119,11 @@ export class SVGRenderer {
       svg += `  <path id="${p.id}" d="${p.d}" fill="none" stroke="${strokeColor}" stroke-width="${strokeWidth}" opacity="1.0" />\n`;
     }
 
-    // 4. Render Bindu Point
+    // 4. Render Bindu Point & Halo
     for (const c of compiled.circles) {
       if (c.id !== 'bindu') continue;
       svg += `  <circle id="${c.id}" cx="${c.cx}" cy="${c.cy}" r="${c.r}" fill="${colors.binduFill}" stroke="#FFD700" stroke-width="2.5" opacity="1.0" />\n`;
+      svg += `  <circle id="bindu_halo" cx="${c.cx}" cy="${c.cy}" r="${c.r * 1.8}" fill="none" stroke="#FFD700" stroke-width="1.2" opacity="0.75" />\n`;
     }
 
     // 5. Render Points, Labels & Intersection Nodes
@@ -123,8 +138,29 @@ export class SVGRenderer {
       }
     }
 
+    // 6. Render Avarana Callout Pointer Lines & Labels
+    if (showCalloutLines) {
+      const avaranaGroup = SGOSAvaranaCalloutEngine.getAvaranaGroup(activeAvarana);
+      if (avaranaGroup && avaranaGroup.callouts) {
+        svg += `  <!-- Avarana ${activeAvarana} Callout Pointer Lines & Labels -->\n`;
+        avaranaGroup.callouts.forEach(callout => {
+          const isLeft = callout.side === 'left';
+          const textX = isLeft ? -300 : 1050;
+          const targetX = isLeft ? 320 : 680;
+          const yPos = 120 + (callout.targetYPercentage / 100) * 760;
+          const upperName = callout.englishName.toUpperCase();
+
+          svg += `  <line x1="${isLeft ? textX + 260 : textX - 20}" y1="${yPos}" x2="${targetX}" y2="${yPos}" stroke="#D8A44C" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.85" />\n`;
+          svg += `  <circle cx="${targetX}" cy="${yPos}" r="3.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="0.8" />\n`;
+          svg += `  <text x="${textX}" y="${yPos - 4}" fill="${colors.text}" font-size="12" font-weight="bold" font-family="Outfit, sans-serif">${upperName}</text>\n`;
+          svg += `  <text x="${textX}" y="${yPos + 12}" fill="${colors.dimStroke}" font-size="10" font-family="Outfit, sans-serif">${callout.associatedPranaOrSiddhi} (${callout.sanskritName})</text>\n`;
+        });
+      }
+    }
+
     svg += `</svg>`;
     return svg;
+
   }
 
   private static getAvaranaIndexFromLayerId(layerId: string): number {
