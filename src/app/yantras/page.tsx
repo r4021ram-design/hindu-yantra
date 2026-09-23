@@ -41,49 +41,82 @@ function YantraExplorerInner() {
     }
   }, [searchParams]);
 
-  // Try checking if a file exists in public/yantras/${id}.svg or .png on mount or selection
+// Helper to ensure SVG has proper viewBox for responsive scaling
+function normalizeSvg(raw: string): string {
+  if (!raw.includes('<svg')) return raw;
+  if (!raw.includes('viewBox') && raw.includes('width=') && raw.includes('height=')) {
+    const widthMatch = raw.match(/width=["']?(\d+)/);
+    const heightMatch = raw.match(/height=["']?(\d+)/);
+    if (widthMatch && heightMatch) {
+      const w = widthMatch[1];
+      const h = heightMatch[1];
+      return raw.replace(/<svg\b/, `<svg viewBox="0 0 ${w} ${h}" `);
+    }
+  }
+  return raw;
+}
+
+  // Try checking if a file exists in public/yantras on mount or selection
   useEffect(() => {
     if (!assetsMap[selectedYantraId]) {
-      const testSvg = `/yantras/${selectedYantraId}.svg`;
-      fetch(testSvg)
-        .then(res => {
-          if (res.ok) {
-            return res.text();
-          }
-          return null;
-        })
-        .then(svgText => {
-          if (svgText && svgText.includes('<svg')) {
-            setAssetsMap(prev => ({
-              ...prev,
-              [selectedYantraId]: {
-                type: 'svg',
-                content: svgText,
-                fileName: `${selectedYantraId}.svg`
+      const candidates = [
+        `/yantras/${selectedYantraId}.svg`,
+        `/yantras/${selectedYantraId.replace('_', '')}.svg`,
+        selectedYantraId === 'sri_yantra' ? '/yantras/Shriyantra.svg' : null,
+        selectedYantraId === 'sri_yantra' ? '/yantras/shriyantra.svg' : null,
+        selectedYantraId === 'sri_yantra' ? '/yantras/SriYantra.svg' : null,
+      ].filter(Boolean) as string[];
+
+      const tryLoad = async () => {
+        for (const candidate of candidates) {
+          try {
+            const res = await fetch(candidate);
+            if (res.ok) {
+              const text = await res.text();
+              if (text && text.includes('<svg')) {
+                setAssetsMap(prev => ({
+                  ...prev,
+                  [selectedYantraId]: {
+                    type: 'svg',
+                    content: normalizeSvg(text),
+                    fileName: candidate.split('/').pop() || 'yantra.svg'
+                  }
+                }));
+                return;
               }
-            }));
-          } else {
-            // Fallback check for .png file in public folder
-            const testPng = `/yantras/${selectedYantraId}.png`;
-            fetch(testPng, { method: 'HEAD' })
-              .then(pngRes => {
-                if (pngRes.ok) {
-                  setAssetsMap(prev => ({
-                    ...prev,
-                    [selectedYantraId]: {
-                      type: 'image',
-                      content: testPng,
-                      fileName: `${selectedYantraId}.png`
-                    }
-                  }));
-                }
-              })
-              .catch(() => {});
+            }
+          } catch {
+            // continue next candidate
           }
-        })
-        .catch(() => {
-          // Awaiting asset in public folder or upload
-        });
+        }
+
+        // Fallback check for .png file in public folder
+        const pngCandidates = [
+          `/yantras/${selectedYantraId}.png`,
+          selectedYantraId === 'sri_yantra' ? '/yantras/Shriyantra.png' : null,
+        ].filter(Boolean) as string[];
+
+        for (const pngPath of pngCandidates) {
+          try {
+            const pngRes = await fetch(pngPath, { method: 'HEAD' });
+            if (pngRes.ok) {
+              setAssetsMap(prev => ({
+                ...prev,
+                [selectedYantraId]: {
+                  type: 'image',
+                  content: pngPath,
+                  fileName: pngPath.split('/').pop() || 'yantra.png'
+                }
+              }));
+              return;
+            }
+          } catch {
+            // continue
+          }
+        }
+      };
+
+      tryLoad();
     }
   }, [selectedYantraId, assetsMap]);
 
