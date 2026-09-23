@@ -20,27 +20,6 @@ interface LoadedAsset {
   fileName: string;
 }
 
-function YantraExplorerInner() {
-  const searchParams = useSearchParams();
-  const initialId = searchParams.get('id') || 'sri_yantra';
-
-  const [selectedYantraId, setSelectedYantraId] = useState<string>(initialId);
-  const [selectedTheme, setSelectedTheme] = useState<string>('traditional_shastric');
-  const [activeTab, setActiveTab] = useState<'geometry' | 'shastric' | 'jyotish' | 'upasana'>('geometry');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [copied, setCopied] = useState<boolean>(false);
-  const [japaCount, setJapaCount] = useState<number>(0);
-  const [assetsMap, setAssetsMap] = useState<Record<string, LoadedAsset>>({});
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  // Sync with URL query parameter
-  useEffect(() => {
-    const paramId = searchParams.get('id');
-    if (paramId && SHASTRIC_JYOTISH_DATABASE[paramId]) {
-      setSelectedYantraId(paramId);
-    }
-  }, [searchParams]);
-
 // Helper to ensure SVG has proper viewBox for responsive scaling
 function normalizeSvg(raw: string): string {
   if (!raw.includes('<svg')) return raw;
@@ -55,6 +34,62 @@ function normalizeSvg(raw: string): string {
   }
   return raw;
 }
+
+export interface HoveredAvaranaInfo {
+  index: number;
+  nameSanskrit: string;
+  nameEnglish: string;
+  chakraTitle: string;
+  presidingDeity: string;
+  yoginiClass: string;
+  mudraShakti: string;
+  geometryType: string;
+  significance: string;
+  spotTitle: string;
+  relX: number;
+  relY: number;
+  pixelX: number;
+  pixelY: number;
+  radiusFraction: number;
+}
+
+export function getAvaranaRadiusFraction(index: number): number {
+  switch (index) {
+    case 9: return 0.038;
+    case 8: return 0.085;
+    case 7: return 0.145;
+    case 6: return 0.200;
+    case 5: return 0.258;
+    case 4: return 0.315;
+    case 3: return 0.380;
+    case 2: return 0.450;
+    case 1:
+    default: return 0.488;
+  }
+}
+
+function YantraExplorerInner() {
+  const searchParams = useSearchParams();
+  const initialId = searchParams.get('id') || 'sri_yantra';
+
+  const [selectedYantraId, setSelectedYantraId] = useState<string>(initialId);
+  const [selectedTheme, setSelectedTheme] = useState<string>('traditional_shastric');
+  const [activeTab, setActiveTab] = useState<'geometry' | 'shastric' | 'jyotish' | 'upasana'>('geometry');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [copied, setCopied] = useState<boolean>(false);
+  const [japaCount, setJapaCount] = useState<number>(0);
+  const [assetsMap, setAssetsMap] = useState<Record<string, LoadedAsset>>({});
+  const [hoveredAvarana, setHoveredAvarana] = useState<HoveredAvaranaInfo | null>(null);
+  const [pinnedAvaranaIndex, setPinnedAvaranaIndex] = useState<number | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Sync with URL query parameter
+  useEffect(() => {
+    const paramId = searchParams.get('id');
+    if (paramId && SHASTRIC_JYOTISH_DATABASE[paramId]) {
+      setSelectedYantraId(paramId);
+    }
+  }, [searchParams]);
 
   // Try checking if a file exists in public/yantras on mount or selection
   useEffect(() => {
@@ -252,6 +287,117 @@ function normalizeSvg(raw: string): string {
     }
   };
 
+  // Mouse & Touch coordinate inspector over the Yantra canvas
+  const handleYantraMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const pixelX = e.clientX - rect.left;
+    const pixelY = e.clientY - rect.top;
+    const relX = Math.max(0, Math.min(1, pixelX / rect.width));
+    const relY = Math.max(0, Math.min(1, pixelY / rect.height));
+    const dx = relX - 0.5;
+    const dy = relY - 0.5;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const angleDeg = ((Math.atan2(dy, dx) * 180 / Math.PI) + 360) % 360;
+
+    if (currentYantra.avaranas && currentYantra.avaranas.length > 0) {
+      if (selectedYantraId === 'sri_yantra') {
+        let avaranaIdx = 1;
+        let spot = 'भूपुर (3 Concentric Earth Squares & 4 Portals)';
+        let radiusFrac = 0.485;
+
+        if (dist <= 0.038) {
+          avaranaIdx = 9;
+          spot = 'केन्द्रीय महाबिन्दु (Cosmic Singularity / Parama Bindu)';
+          radiusFrac = 0.038;
+        } else if (dist <= 0.088) {
+          avaranaIdx = 8;
+          spot = 'केन्द्रीय अधोमुख त्रिकोण (Central Primary Yoni Triangle)';
+          radiusFrac = 0.085;
+        } else if (dist <= 0.145) {
+          avaranaIdx = 7;
+          spot = 'अष्टार चक्र (8 Innermost Triangles - Ashtakona)';
+          radiusFrac = 0.145;
+        } else if (dist <= 0.200) {
+          avaranaIdx = 6;
+          spot = 'अन्तर्दशार चक्र (10 Inner Middle Triangles)';
+          radiusFrac = 0.200;
+        } else if (dist <= 0.258) {
+          avaranaIdx = 5;
+          spot = 'बहिर्दशार चक्र (10 Outer Middle Triangles)';
+          radiusFrac = 0.258;
+        } else if (dist <= 0.315) {
+          avaranaIdx = 4;
+          spot = 'चतुर्दशार चक्र (14 Outer Triangles)';
+          radiusFrac = 0.315;
+        } else if (dist <= 0.380) {
+          avaranaIdx = 3;
+          spot = 'अष्टदल पद्म (8-Petal Inner Lotus)';
+          radiusFrac = 0.380;
+        } else if (dist <= 0.450) {
+          avaranaIdx = 2;
+          spot = 'षोडशदल पद्म (16-Petal Outer Lotus)';
+          radiusFrac = 0.450;
+        } else {
+          avaranaIdx = 1;
+          let gate = 'भूपुर प्राकार (Earth Rampart)';
+          if (angleDeg >= 315 || angleDeg < 45) gate = 'पूर्व द्वार (Eastern Portal / ऐश्वर्य द्वार)';
+          else if (angleDeg >= 45 && angleDeg < 135) gate = 'दक्षिण द्वार (Southern Portal / यम-संयम द्वार)';
+          else if (angleDeg >= 135 && angleDeg < 225) gate = 'पश्चिम द्वार (Western Portal / वरुण-जल द्वार)';
+          else if (angleDeg >= 225 && angleDeg < 315) gate = 'उत्तर द्वार (Northern Portal / कुबेर-धन द्वार)';
+          spot = gate;
+          radiusFrac = 0.485;
+        }
+
+        const avaranaData = currentYantra.avaranas.find(a => a.index === avaranaIdx);
+        if (avaranaData) {
+          setHoveredAvarana({
+            index: avaranaIdx,
+            nameSanskrit: avaranaData.nameSanskrit,
+            nameEnglish: avaranaData.nameEnglish,
+            chakraTitle: avaranaData.chakraTitle,
+            presidingDeity: avaranaData.presidingDeity,
+            yoginiClass: avaranaData.yoginiClass,
+            mudraShakti: avaranaData.mudraShakti,
+            geometryType: avaranaData.geometryType,
+            significance: avaranaData.significance,
+            spotTitle: spot,
+            relX,
+            relY,
+            pixelX,
+            pixelY,
+            radiusFraction: radiusFrac,
+          });
+        }
+      } else {
+        const n = currentYantra.avaranas.length;
+        const clampedDist = Math.min(dist, 0.48);
+        const index = Math.max(1, Math.min(n, Math.floor((1 - (clampedDist / 0.48)) * n) + 1));
+        const av = currentYantra.avaranas.find(a => a.index === index) || currentYantra.avaranas[0];
+        setHoveredAvarana({
+          index: av.index,
+          nameSanskrit: av.nameSanskrit,
+          nameEnglish: av.nameEnglish,
+          chakraTitle: av.chakraTitle,
+          presidingDeity: av.presidingDeity,
+          yoginiClass: av.yoginiClass,
+          mudraShakti: av.mudraShakti,
+          geometryType: av.geometryType,
+          significance: av.significance,
+          spotTitle: av.chakraTitle,
+          relX,
+          relY,
+          pixelX,
+          pixelY,
+          radiusFraction: getAvaranaRadiusFraction(av.index),
+        });
+      }
+    }
+  };
+
+  const handleYantraMouseLeave = () => {
+    setHoveredAvarana(null);
+  };
+
   const currentThemeObj = YANTRA_COLOR_THEMES[selectedTheme] || YANTRA_COLOR_THEMES.traditional_shastric;
 
   return (
@@ -409,9 +555,50 @@ function normalizeSvg(raw: string): string {
               </span>
             </div>
 
-            {/* Display Area */}
+            {/* Live Interactive Shastric Inspector Banner */}
+            <div className="w-full max-w-xl mb-4 px-4 py-2.5 rounded-2xl bg-[#141210]/95 border border-[#D4AF37]/50 backdrop-blur-md flex items-center justify-between gap-3 text-xs shadow-xl transition-all">
+              <div className="flex items-center gap-2.5 truncate">
+                <span className="relative flex h-3 w-3">
+                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${hoveredAvarana ? 'bg-[#FF9933]' : 'bg-[#D4AF37]'} opacity-75`}></span>
+                  <span className={`relative inline-flex rounded-full h-3 w-3 ${hoveredAvarana ? 'bg-[#FF9933]' : 'bg-[#D4AF37]'}`}></span>
+                </span>
+                {hoveredAvarana ? (
+                  <div className="truncate flex items-center gap-2">
+                    <span className="font-bold font-serif text-[#FFD700]">
+                      [आवरण {hoveredAvarana.index}] {hoveredAvarana.nameSanskrit}
+                    </span>
+                    <span className="text-[#8A8070]">•</span>
+                    <span className="text-[#FFF9F2] font-mono text-[11px]">{hoveredAvarana.spotTitle}</span>
+                  </div>
+                ) : (
+                  <span className="text-[#C5BDB0] truncate font-serif">
+                    🕉️ कर्सर को यन्त्र के किसी भी त्रिकोण, कमल, भूपुर या बिन्दु पर ले जाएँ — वहाँ के अधिष्ठात्री देवता, योगिनी व माहात्म्य लाइव दिखेंगे!
+                  </span>
+                )}
+              </div>
+              {hoveredAvarana && (
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/40 font-bold">
+                    {hoveredAvarana.presidingDeity.split(' ')[0]}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* Display Area with Consecrated Sacred Frame */}
             {currentAsset ? (
-              <div className="w-full max-w-xl aspect-square flex items-center justify-center p-4 transition-all duration-300">
+              <div
+                className="relative w-full max-w-xl aspect-square flex items-center justify-center p-3 sm:p-5 transition-all duration-300 rounded-[28px] border-2 border-[#D4AF37]/70 shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(212,175,55,0.25)] bg-[#100D0A] overflow-hidden cursor-crosshair select-none group"
+                onMouseMove={handleYantraMouseMove}
+                onMouseLeave={handleYantraMouseLeave}
+              >
+                {/* Sacred Corner Filigree Accents */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#D4AF37] rounded-tl-lg pointer-events-none z-20" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#D4AF37] rounded-tr-lg pointer-events-none z-20" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#D4AF37] rounded-bl-lg pointer-events-none z-20" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#D4AF37] rounded-br-lg pointer-events-none z-20" />
+
+                {/* Base SVG / Image Render */}
                 {currentAsset.type === 'svg' ? (
                   <div
                     className="w-full h-full flex items-center justify-center drop-shadow-2xl [&_svg]:w-full [&_svg]:h-full"
@@ -423,6 +610,109 @@ function normalizeSvg(raw: string): string {
                     alt={currentYantra.nameEnglish}
                     className="max-w-full max-h-full object-contain rounded-2xl drop-shadow-2xl"
                   />
+                )}
+
+                {/* Interactive SVG Reticle & Dynamic Concentric Ring */}
+                {(hoveredAvarana || pinnedAvaranaIndex) && (
+                  <svg
+                    className="absolute inset-0 w-full h-full pointer-events-none z-10"
+                    viewBox="0 0 1000 1000"
+                  >
+                    {/* Concentric Glow Ring indicating active Avarana boundary */}
+                    <circle
+                      cx="500"
+                      cy="500"
+                      r={(hoveredAvarana ? hoveredAvarana.radiusFraction : getAvaranaRadiusFraction(pinnedAvaranaIndex || 1)) * 1000}
+                      fill="#D4AF37"
+                      fillOpacity="0.08"
+                      stroke="#FFD700"
+                      strokeWidth="3"
+                      strokeDasharray="8 6"
+                      className="animate-pulse drop-shadow-[0_0_12px_#FFD700]"
+                    />
+
+                    {/* Interactive Cursor Crosshair / Reticle */}
+                    {hoveredAvarana && (
+                      <g
+                        transform={`translate(${hoveredAvarana.relX * 1000}, ${hoveredAvarana.relY * 1000})`}
+                        className="transition-transform duration-75"
+                      >
+                        {/* Outer targeting circle */}
+                        <circle
+                          r="22"
+                          fill="none"
+                          stroke="#FFD700"
+                          strokeWidth="2"
+                          strokeDasharray="4 4"
+                          className="animate-spin-slow"
+                        />
+                        {/* Inner glowing pulse dot */}
+                        <circle
+                          r="5"
+                          fill="#FF9933"
+                          stroke="#FFF9F2"
+                          strokeWidth="1.5"
+                          className="drop-shadow-[0_0_8px_#FF9933]"
+                        />
+                        {/* Crosshair ticks */}
+                        <line x1="-30" y1="0" x2="-14" y2="0" stroke="#FFD700" strokeWidth="2" />
+                        <line x1="14" y1="0" x2="30" y2="0" stroke="#FFD700" strokeWidth="2" />
+                        <line x1="0" y1="-30" x2="0" y2="-14" stroke="#FFD700" strokeWidth="2" />
+                        <line x1="0" y1="14" x2="0" y2="30" stroke="#FFD700" strokeWidth="2" />
+                      </g>
+                    )}
+                  </svg>
+                )}
+
+                {/* Floating Shastric HUD Tooltip (Pins dynamically near cursor) */}
+                {hoveredAvarana && (
+                  <div
+                    className="absolute pointer-events-none z-30 transition-all duration-75 max-w-[320px] sm:max-w-sm"
+                    style={{
+                      left: hoveredAvarana.relX > 0.55 ? undefined : `${hoveredAvarana.pixelX + 16}px`,
+                      right: hoveredAvarana.relX > 0.55 ? `${(1 - hoveredAvarana.relX) * 100 + 4}%` : undefined,
+                      top: hoveredAvarana.relY > 0.65 ? undefined : `${Math.max(10, hoveredAvarana.pixelY - 20)}px`,
+                      bottom: hoveredAvarana.relY > 0.65 ? `${(1 - hoveredAvarana.relY) * 100 + 4}%` : undefined,
+                    }}
+                  >
+                    <div className="rounded-2xl bg-[#0D0B09]/95 backdrop-blur-xl border-2 border-[#D4AF37] p-3.5 sm:p-4 shadow-[0_15px_50px_rgba(0,0,0,0.9),0_0_25px_rgba(212,175,55,0.4)] space-y-2 text-left animate-in fade-in zoom-in-95 duration-100">
+                      <div className="flex items-center justify-between gap-2 border-b border-[#2A241E] pb-2">
+                        <div className="flex items-center gap-1.5">
+                          <span className="w-5 h-5 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/50 flex items-center justify-center text-[10px] font-bold text-[#FFD700]">
+                            {hoveredAvarana.index}
+                          </span>
+                          <span className="text-xs font-serif font-bold text-[#FFD700]">
+                            {hoveredAvarana.nameSanskrit}
+                          </span>
+                        </div>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#FF9933]/20 text-[#FF9933] border border-[#FF9933]/40 font-bold">
+                          आवरण {hoveredAvarana.index}
+                        </span>
+                      </div>
+
+                      <div className="space-y-1">
+                        <p className="text-[11px] font-mono text-[#D4AF37] flex items-center gap-1 font-semibold">
+                          <span>📍 स्थान:</span>
+                          <span>{hoveredAvarana.spotTitle}</span>
+                        </p>
+                        <p className="text-xs font-semibold text-[#FFF9F2] flex items-center gap-1">
+                          <span className="text-[#FF9933]">👑 अधिष्ठात्री:</span>
+                          <span>{hoveredAvarana.presidingDeity}</span>
+                        </p>
+                        <div className="flex items-center justify-between text-[10px] font-mono text-[#A0988A] pt-0.5">
+                          <span>योगिनी: <strong className="text-[#E0D8CC]">{hoveredAvarana.yoginiClass.split('(')[0]}</strong></span>
+                          <span>मुद्रा: <strong className="text-[#E0D8CC]">{hoveredAvarana.mudraShakti}</strong></span>
+                        </div>
+                      </div>
+
+                      <div className="pt-2 border-t border-[#241F1A]">
+                        <p className="text-[10px] font-mono text-[#8A8070] mb-0.5 font-bold">शास्त्रीय माहात्म्य व फल:</p>
+                        <p className="text-[11px] text-[#C5BDB0] leading-relaxed italic">
+                          "{hoveredAvarana.significance}"
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 )}
               </div>
             ) : (
@@ -530,28 +820,44 @@ function normalizeSvg(raw: string): string {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {(currentYantra.avaranas || []).map(av => (
-                    <div
-                      key={av.index}
-                      className="p-4 rounded-2xl bg-[#1A1612] border border-[#2A241E] hover:border-[#D4AF37]/40 transition-all space-y-2.5"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-[#D4AF37]/20 text-[#D4AF37]">
-                          आवरण {av.index}
-                        </span>
-                        <span className="text-[11px] font-mono text-[#FF9933]">{av.presidingDeity}</span>
+                  {(currentYantra.avaranas || []).map(av => {
+                    const isHovered = (hoveredAvarana?.index === av.index) || (pinnedAvaranaIndex === av.index);
+                    return (
+                      <div
+                        key={av.index}
+                        onMouseEnter={() => setPinnedAvaranaIndex(av.index)}
+                        onMouseLeave={() => setPinnedAvaranaIndex(null)}
+                        className={`p-4 rounded-2xl border transition-all space-y-2.5 cursor-pointer ${
+                          isHovered
+                            ? 'bg-linear-to-br from-[#D4AF37]/25 via-[#1E1A16] to-[#141210] border-[#D4AF37] ring-2 ring-[#D4AF37]/60 shadow-[0_0_25px_rgba(212,175,55,0.3)] scale-[1.02]'
+                            : 'bg-[#1A1612] border-[#2A241E] hover:border-[#D4AF37]/40'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-1.5">
+                            <span className="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-[#D4AF37]/20 text-[#D4AF37]">
+                              आवरण {av.index}
+                            </span>
+                            {isHovered && (
+                              <span className="text-[10px] font-mono text-[#FF9933] font-semibold animate-pulse">
+                                ● सक्रिय कर्सर स्थान
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-[11px] font-mono text-[#FF9933] font-bold">{av.presidingDeity}</span>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-bold text-[#FFF9F2]">{av.nameSanskrit}</h4>
+                          <p className="text-xs text-[#D4AF37] font-medium">{av.chakraTitle}</p>
+                        </div>
+                        <p className="text-xs text-[#C5BDB0] leading-relaxed">{av.significance}</p>
+                        <div className="pt-2 border-t border-[#241F1A] flex items-center justify-between text-[10px] font-mono text-[#8A8070]">
+                          <span>मुद्रा: <strong className="text-[#E0D8CC]">{av.mudraShakti}</strong></span>
+                          <span>योगिनी: <strong className="text-[#E0D8CC]">{av.yoginiClass}</strong></span>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="text-sm font-bold text-[#FFF9F2]">{av.nameSanskrit}</h4>
-                        <p className="text-xs text-[#D4AF37] font-medium">{av.chakraTitle}</p>
-                      </div>
-                      <p className="text-xs text-[#C5BDB0] leading-relaxed">{av.significance}</p>
-                      <div className="pt-2 border-t border-[#241F1A] flex items-center justify-between text-[10px] font-mono text-[#8A8070]">
-                        <span>मुद्रा: {av.mudraShakti}</span>
-                        <span>योगिनी: {av.yoginiClass}</span>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}
