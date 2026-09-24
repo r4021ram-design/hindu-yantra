@@ -546,6 +546,17 @@ function YantraExplorerInner() {
 
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
       <defs>
+        <linearGradient id="sriGoldMain" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFE066" />
+          <stop offset="35%" stop-color="#D4AF37" />
+          <stop offset="70%" stop-color="#B8860B" />
+          <stop offset="100%" stop-color="#8B6508" />
+        </linearGradient>
+        <linearGradient id="sriGoldAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#FFF2A3" />
+          <stop offset="50%" stop-color="#E5C158" />
+          <stop offset="100%" stop-color="#C59B27" />
+        </linearGradient>
         <radialGradient id="binduRadiance" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="#FFFFFF" />
           <stop offset="30%" stop-color="#FFE875" />
@@ -563,6 +574,17 @@ function YantraExplorerInner() {
     if (!data) return '';
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
       <defs>
+        <linearGradient id="sriGoldMain" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFE066" />
+          <stop offset="35%" stop-color="#D4AF37" />
+          <stop offset="70%" stop-color="#B8860B" />
+          <stop offset="100%" stop-color="#8B6508" />
+        </linearGradient>
+        <linearGradient id="sriGoldAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#FFF2A3" />
+          <stop offset="50%" stop-color="#E5C158" />
+          <stop offset="100%" stop-color="#C59B27" />
+        </linearGradient>
         <radialGradient id="binduRadiance" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="#FFFFFF" />
           <stop offset="30%" stop-color="#FFE875" />
@@ -940,21 +962,22 @@ function YantraExplorerInner() {
                                 cy="500"
                                 r={R2}
                                 fill="#FFD700"
-                                fillOpacity="0.35"
+                                fillOpacity="0.08"
                                 stroke="#FFD700"
-                                strokeWidth="3.5"
-                                className="animate-pulse drop-shadow-[0_0_18px_#FFD700]"
+                                strokeWidth="1.6"
+                                strokeDasharray="3 3"
+                                className="animate-pulse"
                               />
                             ) : (
                               <path
                                 d={`M 500 ${500 - R2} A ${R2} ${R2} 0 1 0 500 ${500 + R2} A ${R2} ${R2} 0 1 0 500 ${500 - R2} Z M 500 ${500 - R1} A ${R1} ${R1} 0 1 1 500 ${500 + R1} A ${R1} ${R1} 0 1 1 500 ${500 - R1} Z`}
                                 fillRule="evenodd"
                                 fill="#FFD700"
-                                fillOpacity="0.20"
+                                fillOpacity="0.06"
                                 stroke="#FFD700"
-                                strokeWidth="2.5"
-                                strokeDasharray="8 5"
-                                className="animate-pulse drop-shadow-[0_0_18px_rgba(255,215,0,0.6)]"
+                                strokeWidth="1.5"
+                                strokeDasharray="4 3"
+                                className="animate-pulse"
                               />
                             )}
 

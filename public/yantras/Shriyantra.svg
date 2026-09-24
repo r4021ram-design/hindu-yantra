@@ -68,14 +68,13 @@
     <path id="primary_tri_D3" d="M 351.22 320.27 L 648.78 320.27 L 500 526.65 Z" fill="rgba(245,158,11,0.09)" />
     <path id="primary_tri_D4" d="M 415.88 460.77 L 584.13 460.77 L 500 619.81 Z" fill="rgba(245,158,11,0.09)" />
     
-    <!-- Central Innermost Downward Triangle (Kamakala Mula Trikona) -->
-    <path id="primary_tri_D5_central" d="M 436.53 486.99 L 563.47 486.99 L 500 560.62 Z" fill="rgba(255,215,0,0.32)" stroke="#FFE066" stroke-width="2.6" />
+    <!-- 5th Downward Shakti Triangle (Kamakala Mula Trikona) -->
+    <path id="primary_tri_D5_central" d="M 436.53 486.99 L 563.47 486.99 L 500 560.62 Z" fill="rgba(245,158,11,0.09)" />
   </g>
 
   <!-- 8. CENTRAL BINDU (MAHABINDU SINGULARITY) -->
   <g id="avarana_9_bindu">
-    <circle cx="500" cy="500" r="20" fill="rgba(255,215,0,0.15)" stroke="#FFE066" stroke-width="1.2" stroke-dasharray="3 2" />
-    <circle cx="500" cy="500" r="12" fill="none" stroke="#FFD700" stroke-width="1.8" />
-    <circle cx="500" cy="500" r="6.5" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="1.5" />
+    <circle cx="500" cy="500" r="11" fill="none" stroke="url(#sriGoldMain)" stroke-width="1.4" opacity="0.7" />
+    <circle cx="500" cy="500" r="5.5" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="1.2" />
   </g>
 </svg>
