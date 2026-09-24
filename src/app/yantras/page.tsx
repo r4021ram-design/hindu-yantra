@@ -16,8 +16,12 @@ import {
 import {
   Search, Download, Copy, Check, Sparkles, Compass, Star, Flame, RotateCcw,
   Upload, Layers, Palette, BookOpen, CheckCircle2, Image as ImageIcon, Trash2,
-  Play, Pause, SkipBack, SkipForward, Eye, EyeOff
+  Play, Pause, SkipBack, SkipForward, Eye, EyeOff, Target
 } from 'lucide-react';
+import {
+  getConstituentCanvasCoords,
+  getAllConstituentCoords,
+} from '@/lib/yantras/sri-yantra-coordinates';
 
 interface LoadedAsset {
   type: 'svg' | 'image';
@@ -132,6 +136,7 @@ function YantraExplorerInner() {
   const [showBeejaMantras] = useState<boolean>(false);
   const [canvasAltarMode] = useState<'gold_glow' | 'transparent' | 'temple_white' | 'dark_shrine'>('gold_glow');
   const [selectedConstituentId, setSelectedConstituentId] = useState<string | number | null>(null);
+  const [hoveredConstituentId, setHoveredConstituentId] = useState<string | number | null>(null);
   const [isZoomed, setIsZoomed] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -516,6 +521,40 @@ function YantraExplorerInner() {
     const targetIdx = activeDisplayAvarana?.index ?? (selectedYantraId === 'sri_yantra' ? 9 : 1);
     return avs.find(a => a.index === targetIdx) || avs[0] || null;
   }, [currentYantra, activeDisplayAvarana, selectedYantraId]);
+
+  // Sacred geometric coordinates for all constituent shaktis of current active avarana
+  const currentAvaranaCoords = useMemo(() => {
+    if (selectedYantraId !== 'sri_yantra' || !currentAvaranaFullDetail?.constituents) return [];
+    return getAllConstituentCoords(
+      currentAvaranaFullDetail.index,
+      currentAvaranaFullDetail.constituents
+    );
+  }, [selectedYantraId, currentAvaranaFullDetail]);
+
+  // Spotlighted constituent detail for pinpoint highlight on Sri Yantra canvas
+  const activeConstituentDisplay = useMemo(() => {
+    if (selectedYantraId !== 'sri_yantra' || !currentAvaranaFullDetail?.constituents) return null;
+    const targetId = hoveredConstituentId ?? selectedConstituentId;
+    if (targetId === null) return null;
+    const idx = currentAvaranaFullDetail.constituents.findIndex(c => c.id === targetId);
+    if (idx === -1) return null;
+    const item = currentAvaranaFullDetail.constituents[idx];
+    const coord = getConstituentCanvasCoords(
+      currentAvaranaFullDetail.index,
+      item.id,
+      idx,
+      currentAvaranaFullDetail.constituents.length
+    );
+    return {
+      item,
+      index: idx,
+      total: currentAvaranaFullDetail.constituents.length,
+      avaranaIndex: currentAvaranaFullDetail.index,
+      avaranaName: currentAvaranaFullDetail.nameSanskrit,
+      coord,
+      isPinned: selectedConstituentId === item.id,
+    };
+  }, [selectedYantraId, currentAvaranaFullDetail, hoveredConstituentId, selectedConstituentId]);
 
   const activeStepsList = constructionDirection === 'srishti' ? SRISHTI_STEPS_INFO : SAMHARA_STEPS_INFO;
   const activeStepData = activeStepsList[constructionStep - 1] || activeStepsList[0];
@@ -1047,6 +1086,188 @@ function YantraExplorerInner() {
                             <line x1="0" y1="14" x2="0" y2="45" stroke="#FFD700" strokeWidth="2.5" />
                           </g>
                         )}
+
+                        {/* Interactive Constituent Power Nodes for Active Avarana */}
+                        {selectedYantraId === 'sri_yantra' && currentAvaranaCoords.map((coord, idx) => {
+                          const isActive = (hoveredConstituentId === coord.id) || (selectedConstituentId === coord.id);
+                          return (
+                            <g
+                              key={`node-${coord.id}-${idx}`}
+                              className="pointer-events-auto cursor-pointer select-none"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedConstituentId(selectedConstituentId === coord.id ? null : coord.id);
+                              }}
+                              onMouseEnter={() => setHoveredConstituentId(coord.id)}
+                              onMouseLeave={() => setHoveredConstituentId(null)}
+                            >
+                              {/* Extended Touch/Click Area */}
+                              <circle cx={coord.x} cy={coord.y} r="18" fill="transparent" />
+
+                              {/* Subtle Golden Node Dot */}
+                              <circle
+                                cx={coord.x}
+                                cy={coord.y}
+                                r={isActive ? 6 : 4}
+                                fill={isActive ? '#FFFFFF' : '#D4AF37'}
+                                stroke={isActive ? '#FFD700' : '#14110E'}
+                                strokeWidth={isActive ? 2.5 : 1.4}
+                                className={`transition-all duration-200 ${
+                                  isActive
+                                    ? 'drop-shadow-[0_0_12px_#FFD700]'
+                                    : 'opacity-70 hover:opacity-100'
+                                }`}
+                              />
+                            </g>
+                          );
+                        })}
+
+                        {/* High-Visibility Spotlight Beacon & Floating Callout Card */}
+                        {selectedYantraId === 'sri_yantra' && activeConstituentDisplay && (() => {
+                          const { coord, item, avaranaName, isPinned } = activeConstituentDisplay;
+                          const isTop = coord.y >= 450;
+                          const pointerY = isTop ? coord.cardY + 68 : coord.cardY;
+
+                          return (
+                            <g className="select-none pointer-events-auto">
+                              {/* 1. Pulsing Radiant Wave Beacons */}
+                              <circle
+                                cx={coord.x}
+                                cy={coord.y}
+                                r="28"
+                                fill="none"
+                                stroke="#FFD700"
+                                strokeWidth="2.5"
+                                className="animate-ping"
+                                opacity="0.75"
+                              />
+                              <circle
+                                cx={coord.x}
+                                cy={coord.y}
+                                r="18"
+                                fill="#FF9933"
+                                fillOpacity="0.25"
+                                stroke="#FFE066"
+                                strokeWidth="1.6"
+                              />
+
+                              {/* 2. Precision Crosshair Reticle Spikes */}
+                              <line x1={coord.x - 16} y1={coord.y} x2={coord.x - 7} y2={coord.y} stroke="#FFD700" strokeWidth="2" />
+                              <line x1={coord.x + 7} y1={coord.y} x2={coord.x + 16} y2={coord.y} stroke="#FFD700" strokeWidth="2" />
+                              <line x1={coord.x} y1={coord.y - 16} x2={coord.x} y2={coord.y - 7} stroke="#FFD700" strokeWidth="2" />
+                              <line x1={coord.x} y1={coord.y + 7} x2={coord.x} y2={coord.y + 16} stroke="#FFD700" strokeWidth="2" />
+
+                              {/* 3. Core Radiant Jewel */}
+                              <circle
+                                cx={coord.x}
+                                cy={coord.y}
+                                r="6"
+                                fill="#FFFFFF"
+                                stroke="#FF9933"
+                                strokeWidth="2.2"
+                                className="drop-shadow-[0_0_12px_#FFFFFF]"
+                              />
+
+                              {/* 4. Connecting Guideline to Floating Card */}
+                              <line
+                                x1={coord.x}
+                                y1={coord.y}
+                                x2={coord.cardX + 110}
+                                y2={pointerY}
+                                stroke="#FFD700"
+                                strokeWidth="1.5"
+                                strokeDasharray="3 3"
+                                opacity="0.85"
+                              />
+
+                              {/* 5. Floating Sacred Badge Card */}
+                              <g
+                                transform={`translate(${coord.cardX}, ${coord.cardY})`}
+                                className="drop-shadow-[0_8px_24px_rgba(0,0,0,0.95)]"
+                              >
+                                {/* Card Background */}
+                                <rect
+                                  width="220"
+                                  height="68"
+                                  rx="10"
+                                  ry="10"
+                                  fill="#0E0C09"
+                                  stroke="#FFD700"
+                                  strokeWidth="1.8"
+                                  fillOpacity="0.96"
+                                />
+
+                                {/* Header Pill */}
+                                <rect
+                                  x="5"
+                                  y="5"
+                                  width="210"
+                                  height="22"
+                                  rx="6"
+                                  fill="#221A11"
+                                />
+                                <text
+                                  x="12"
+                                  y="20"
+                                  fill="#FFD700"
+                                  fontSize="11.5"
+                                  fontFamily="serif"
+                                  fontWeight="bold"
+                                >
+                                  {item.nameSanskrit}
+                                </text>
+                                <text
+                                  x="207"
+                                  y="20"
+                                  textAnchor="end"
+                                  fill="#FFA500"
+                                  fontSize="9"
+                                  fontFamily="monospace"
+                                  fontWeight="bold"
+                                >
+                                  #{typeof item.id === 'number' ? item.id : item.id}
+                                </text>
+
+                                {/* Faculty / Nadi Role */}
+                                <text
+                                  x="12"
+                                  y="40"
+                                  fill="#FFF3DB"
+                                  fontSize="10"
+                                  fontFamily="serif"
+                                  fontWeight="bold"
+                                >
+                                  {item.facultyOrNadi}
+                                </text>
+
+                                {/* Avarana Context / Significance */}
+                                <text
+                                  x="12"
+                                  y="55"
+                                  fill="#C5BDB0"
+                                  fontSize="8.5"
+                                  fontFamily="sans-serif"
+                                >
+                                  {avaranaName} {isPinned ? '• 🔒 पिन' : '• 👆 क्लिक से पिन'}
+                                </text>
+
+                                {/* Close / Dismiss button */}
+                                {isPinned && (
+                                  <g
+                                    className="cursor-pointer"
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setSelectedConstituentId(null);
+                                    }}
+                                  >
+                                    <circle cx="203" cy="52" r="7" fill="#2E2419" stroke="#FFD700" strokeWidth="0.8" />
+                                    <text x="203" y="55" textAnchor="middle" fill="#FFD700" fontSize="8" fontWeight="bold">✕</text>
+                                  </g>
+                                )}
+                              </g>
+                            </g>
+                          );
+                        })()}
                       </svg>
                     );
                   })()}
@@ -1465,35 +1686,65 @@ function YantraExplorerInner() {
                         </span>
                       </div>
 
+                      {/* Synchronized Right-Panel-to-Canvas Guidance Bar */}
+                      <div className="flex items-center justify-between text-[10px] text-[#A0988A] bg-[#16120D] px-2.5 py-1.5 rounded-lg border border-[#D4AF37]/20">
+                        <span className="flex items-center gap-1.5 text-[#FFD700]">
+                          <Target className="w-3.5 h-3.5 text-[#FF9933] animate-pulse" />
+                          <span>कैनवास सिंक: किसी भी शक्ति पर क्लिक करें</span>
+                        </span>
+                        {selectedConstituentId && (
+                          <button
+                            onClick={() => setSelectedConstituentId(null)}
+                            className="text-[9px] font-mono text-[#D4AF37] hover:text-[#FFF] underline cursor-pointer"
+                          >
+                            पिन हटाएं ✕
+                          </button>
+                        )}
+                      </div>
+
                       {/* Interactive Scrollable Grid of All Petals / Triangles */}
                       <div className="max-h-[300px] overflow-y-auto pr-1 space-y-1.5">
                         {currentAvaranaFullDetail.constituents.map((item, idx) => {
                           const isSelected = selectedConstituentId === item.id;
+                          const isHovered = hoveredConstituentId === item.id;
                           return (
                             <div
                               key={item.id}
                               onClick={() => setSelectedConstituentId(isSelected ? null : item.id)}
-                              className={`p-2 rounded-xl border transition-all cursor-pointer text-left ${
+                              onMouseEnter={() => setHoveredConstituentId(item.id)}
+                              onMouseLeave={() => setHoveredConstituentId(null)}
+                              className={`p-2.5 rounded-xl border transition-all cursor-pointer text-left ${
                                 isSelected
-                                  ? 'bg-[#1C1610] border-[#FFD700] ring-1 ring-[#FFD700]/60 shadow-md'
+                                  ? 'bg-[#221B12] border-[#FFD700] ring-2 ring-[#FFD700]/70 shadow-lg scale-[1.01]'
+                                  : isHovered
+                                  ? 'bg-[#18140F] border-[#D4AF37]/60 shadow-md'
                                   : 'bg-[#120F0C] hover:bg-[#181410] border-[#221C16]'
                               }`}
                             >
                               <div className="flex items-center justify-between gap-1.5">
                                 <div className="flex items-center gap-2">
-                                  <span className="w-5 h-5 rounded-md bg-[#241F1A] border border-[#3A3228] text-[10px] font-mono text-[#D4AF37] flex items-center justify-center font-bold shrink-0">
+                                  <span className={`w-5 h-5 rounded-md border text-[10px] font-mono flex items-center justify-center font-bold shrink-0 ${
+                                    isSelected
+                                      ? 'bg-[#FFD700] text-[#120F0C] border-[#FFD700]'
+                                      : 'bg-[#241F1A] border-[#3A3228] text-[#D4AF37]'
+                                  }`}>
                                     {typeof item.id === 'number' ? item.id : idx + 1}
                                   </span>
-                                  <span className="text-xs font-serif font-bold text-[#FFF9F2]">
-                                    {item.nameSanskrit}
+                                  <span className="text-xs font-serif font-bold text-[#FFF9F2] flex items-center gap-1.5">
+                                    <span>{item.nameSanskrit}</span>
+                                    {isSelected && (
+                                      <span className="text-[9px] font-sans px-1.5 py-0.2 rounded-full bg-[#FFD700] text-[#120F0C] font-bold shrink-0">
+                                        कैनवास पर इंगित 🎯
+                                      </span>
+                                    )}
                                   </span>
                                 </div>
-                                <span className="text-[10px] font-mono text-[#FF9933] bg-[#FF9933]/10 px-2 py-0.5 rounded-md border border-[#FF9933]/25 truncate max-w-[150px]">
+                                <span className="text-[10px] font-mono text-[#FF9933] bg-[#FF9933]/10 px-2 py-0.5 rounded-md border border-[#FF9933]/25 truncate max-w-[140px]">
                                   {item.facultyOrNadi}
                                 </span>
                               </div>
 
-                              <p className="text-[11px] text-[#C5BDB0] pt-1 pl-7 leading-relaxed">
+                              <p className="text-[11px] text-[#C5BDB0] pt-1.5 pl-7 leading-relaxed">
                                 {item.significance}
                               </p>
                             </div>
