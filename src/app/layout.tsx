@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar';
 import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
-  title: 'Yantra Studio & Sacred Geometry Digital Museum',
-  description: 'Computational Sacred Geometry Platform, 3D Maha Meru WebGL Orbit, 25+ Canonical Yantras, Golden Ratio Audits, and Virtual Altar Upasana Studio.',
+  title: 'Yantra Darshan | Sacred Geometry & Vedic Upasana',
+  description: 'Canonical Vedic Yantra Darshan, 3D Maha Meru, Sacred Geometry Audits, and Virtual Upasana.',
 };
 
 export default function RootLayout({

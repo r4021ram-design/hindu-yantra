@@ -48,7 +48,7 @@ export default function MuseumHome() {
           </div>
 
           <h1 className="text-4xl lg:text-6xl font-cinzel font-black text-[#1E1711] leading-tight tracking-tight">
-            Digital Museum of <span className="bg-linear-to-r from-[#B38226] via-[#D9531E] to-[#805713] bg-clip-text text-transparent">Sacred Yantras</span>
+            वैदिक <span className="bg-linear-to-r from-[#B38226] via-[#D9531E] to-[#805713] bg-clip-text text-transparent">यन्त्र दर्शन</span>
           </h1>
 
           <p className="text-base lg:text-lg text-[#5C4D3C] leading-relaxed font-sans">
@@ -61,7 +61,7 @@ export default function MuseumHome() {
               className="px-6 py-3.5 rounded-2xl bg-linear-to-r from-[#B38226] via-[#D9531E] to-[#B38226] text-white font-bold text-sm shadow-md hover:brightness-105 transition-all flex items-center gap-2 hover:scale-102"
             >
               <Compass className="w-4 h-4" />
-              <span>Explore Sacred Yantra Studio</span>
+              <span>पवित्र यन्त्र दर्शन (Yantra Darshan)</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
 
