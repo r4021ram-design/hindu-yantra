@@ -1,64 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Rozha+One&family=Noto+Serif+Devanagari:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @layer base {
   :root {
-    --background: #0A0908;
-    --foreground: #FFF9F2;
-    --card: #141210;
-    --card-foreground: #FFF9F2;
-    --primary: #D4AF37;
-    --primary-foreground: #0A0908;
-    --accent: #FF9933;
-    --accent-foreground: #0A0908;
-    --border: #2A241E;
-    --gold: #D4AF37;
-    --saffron: #FF9933;
-    --crimson: #800020;
+    /* Vedic Sandalwood & Parchment Core Tokens */
+    --background: #F7F3EB;
+    --background-alt: #EFE7DA;
+    --foreground: #1E1711;
+    --foreground-muted: #5C4D3C;
+    --card: #FDFBF7;
+    --card-foreground: #1E1711;
+    --border: #DDD1BE;
+    --border-strong: #C5A059;
+
+    /* Sacred Metals & Colors */
+    --gold: #B38226;
+    --gold-light: #E2B962;
+    --gold-dark: #805713;
+    --primary: #945D18;
+    --primary-foreground: #FFFFFF;
+    
+    --sandalwood: #C9A46E;
+    --sandalwood-light: #F5EFE4;
+    --sandalwood-dark: #7D5620;
+
+    --saffron: #D9531E;
+    --saffron-light: #FDECE5;
+    --crimson: #8B1A24;
   }
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
+/* Sacred Typography Utilities */
+.font-cinzel {
+  font-family: 'Cinzel', 'Noto Serif Devanagari', Georgia, serif;
+}
+
+.font-rozha {
+  font-family: 'Rozha One', 'Noto Serif Devanagari', Georgia, serif;
+}
+
+.font-serif {
+  font-family: 'Cinzel', 'Noto Serif Devanagari', Georgia, serif;
+}
+
+/* Custom Sandalwood & Brass Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0D0B0A;
+  background: #EFE7DA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A241E;
-  border-radius: 4px;
+  background: #D4C3A3;
+  border-radius: 5px;
+  border: 2px solid #EFE7DA;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #B38226;
 }
 
-/* Glassmorphic Styles */
-.museum-glass {
-  background: rgba(20, 18, 16, 0.85);
+/* Vedic Sandalwood & Parchment Card Styles */
+.parchment-glass {
+  background: rgba(253, 251, 247, 0.92);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 4px 20px rgba(140, 90, 32, 0.06);
 }
 
-.gold-glow {
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+.parchment-card {
+  background: #FDFBF7;
+  border: 1px solid #DDD1BE;
+  box-shadow: 0 4px 18px rgba(140, 90, 32, 0.05);
 }
 
-.gold-border {
-  border-color: rgba(212, 175, 55, 0.3);
+.parchment-card:hover {
+  border-color: #B38226;
+  box-shadow: 0 8px 26px rgba(140, 90, 32, 0.12);
+}
+
+.brass-glow {
+  box-shadow: 0 0 28px rgba(179, 130, 38, 0.22);
+}
+
+.brass-border {
+  border-color: rgba(179, 130, 38, 0.45);
 }
 
 .saffron-glow {
-  box-shadow: 0 0 25px rgba(255, 153, 51, 0.2);
+  box-shadow: 0 0 28px rgba(217, 83, 30, 0.25);
+}
+
+/* Legacy utility aliases for seamless backward compatibility */
+.museum-glass {
+  background: rgba(253, 251, 247, 0.94);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 4px 20px rgba(140, 90, 32, 0.07);
+}
+
+.gold-glow {
+  box-shadow: 0 0 28px rgba(179, 130, 38, 0.22);
+}
+
+.gold-border {
+  border-color: rgba(179, 130, 38, 0.4);
 }

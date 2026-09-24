@@ -59,5 +59,17 @@ export const YANTRA_COLOR_THEMES: Record<string, ColorThemeDefinition> = {
     textColor: '#111111',
     cardBg: '#F8F8F8',
     borderStroke: '#111111'
+  },
+  vedic_sandalwood: {
+    id: 'vedic_sandalwood',
+    name: 'Vedic Sandalwood & Parchment (सात्विक चन्दन व चर्मपत्र)',
+    sanskritName: 'सात्विक चन्दन व चर्मपत्र वर्ण',
+    background: '#FAF6EE',
+    primaryColor: '#B38226',
+    accentColor: '#D9531E',
+    goldAccent: '#C9A46E',
+    textColor: '#1E1711',
+    cardBg: '#FDFBF7',
+    borderStroke: '#C5A059'
   }
 };

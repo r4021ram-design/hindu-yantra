@@ -16,26 +16,26 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 museum-glass border-b border-[#2A241E] px-4 lg:px-8 py-3.5">
+    <header className="sticky top-0 z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-[#DDD1BE] px-4 lg:px-8 py-3 shadow-[0_2px_14px_rgba(140,90,32,0.06)]">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-2xl bg-linear-to-br from-[#D4AF37] via-[#FF9933] to-[#800020] p-0.5 shadow-lg group-hover:scale-105 transition-transform">
-            <div className="w-full h-full bg-[#0A0908] rounded-[14px] flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-[#D4AF37] animate-pulse" />
+          <div className="w-10 h-10 rounded-2xl bg-linear-to-br from-[#B38226] via-[#D9531E] to-[#8B1A24] p-0.5 shadow-md group-hover:scale-105 transition-transform">
+            <div className="w-full h-full bg-[#FDFBF7] rounded-[14px] flex items-center justify-center border border-[#E8D9BF]">
+              <Sparkles className="w-5 h-5 text-[#B38226] animate-pulse" />
             </div>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-serif text-lg font-bold text-[#FFF9F2] tracking-wide">YANTRA</span>
-              <span className="text-[10px] font-mono uppercase bg-[#D4AF37]/15 text-[#D4AF37] px-2 py-0.5 rounded-full border border-[#D4AF37]/30">Studio</span>
+              <span className="font-cinzel text-lg font-black text-[#1E1711] tracking-wider">YANTRA</span>
+              <span className="text-[10px] font-mono uppercase bg-[#F4EAD8] text-[#805713] px-2 py-0.5 rounded-full border border-[#C5A059]/40 font-bold">Studio</span>
             </div>
-            <p className="text-[11px] text-[#A0988A] tracking-wider">Sacred Geometry & Vedic Upasana</p>
+            <p className="text-[11px] text-[#7D6B57] tracking-wide font-medium">Sacred Geometry & Vedic Upasana</p>
           </div>
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1.5 bg-[#141210]/90 p-1.5 rounded-2xl border border-[#2A241E]">
+        <nav className="hidden md:flex items-center gap-1.5 bg-[#F5EFE4] p-1.5 rounded-2xl border border-[#DDD1BE]">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             const Icon = link.icon;
@@ -43,13 +43,13 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-medium transition-all ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs transition-all ${
                   isActive
-                    ? 'bg-linear-to-r from-[#D4AF37]/20 to-[#FF9933]/20 text-[#D4AF37] border border-[#D4AF37]/40 shadow-sm font-semibold'
-                    : 'text-[#C5BDB0] hover:text-[#FFF9F2] hover:bg-[#1E1A16]'
+                    ? 'bg-[#FDFBF7] text-[#805713] border border-[#C5A059] shadow-sm font-bold'
+                    : 'text-[#5C4D3C] hover:text-[#1E1711] hover:bg-[#EFE7DA] font-medium'
                 }`}
               >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#D4AF37]' : 'text-[#8A8070]'}`} />
+                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#B38226]' : 'text-[#8A7965]'}`} />
                 <span>{link.label}</span>
               </Link>
             );
@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/yantras"
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-linear-to-r from-[#D4AF37] to-[#FF9933] text-[#0A0908] font-bold text-xs shadow-md hover:brightness-110 transition-all hover:scale-102"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-linear-to-r from-[#B38226] via-[#D9531E] to-[#B38226] text-white font-bold text-xs shadow-md hover:brightness-105 transition-all hover:scale-102"
           >
             <span>Launch Studio</span>
             <ChevronRight className="w-3.5 h-3.5" />
