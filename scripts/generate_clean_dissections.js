@@ -93,12 +93,10 @@ const ashtaragonSvg = `<g id="dissection_ashtaragon" stroke="#FFD700" stroke-wid
 </g>`;
 
 // 8. CENTRAL DOWNWARD TRIANGLE (MULA KAMAKALA TRIKONA)
-// Symmetrically downward pointing around bindu (500,500)
-// Apex points directly downward: (500, 500 + 44) = (500, 544)
-// Top base line: horizontal from (500 - 38, 500 - 22) to (500 + 38, 500 - 22)
+// Symmetrically downward pointing around bindu (500,500) matching D5
 const centralTrikonaSvg = `<g id="dissection_trikona" stroke="#FFD700" stroke-width="2.6" stroke-linejoin="round">
-  <polygon id="face_central_kama_kala_trikona" points="462,478 538,478 500,544" fill="rgba(255,215,0,0.35)" stroke="#FFD700" stroke-width="2.4" />
-  <circle cx="500" cy="500" r="4.5" fill="#FFE875" stroke="#FFFFFF" stroke-width="1.2" />
+  <polygon id="face_central_kama_kala_trikona" points="423.84,484.39 576.16,484.39 500,572.74" fill="rgba(255,215,0,0.38)" stroke="#FFE066" stroke-width="2.6" />
+  <circle cx="500" cy="500" r="5" fill="#FFE875" stroke="#FFFFFF" stroke-width="1.5" />
 </g>`;
 
 // 9. CENTRAL BINDU

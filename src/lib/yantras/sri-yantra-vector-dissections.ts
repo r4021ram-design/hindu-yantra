@@ -145,8 +145,8 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "Downward-Pointing Primordial Triangle",
     count: 1,
     svgElement: `<g id="dissection_trikona" stroke="#FFD700" stroke-width="2.6" stroke-linejoin="round">
-  <polygon id="face_central_kama_kala_trikona" points="462,478 538,478 500,544" fill="rgba(255,215,0,0.35)" stroke="#FFD700" stroke-width="2.4" />
-  <circle cx="500" cy="500" r="4.5" fill="#FFE875" stroke="#FFFFFF" stroke-width="1.2" />
+  <polygon id="face_central_kama_kala_trikona" points="423.84,484.39 576.16,484.39 500,572.74" fill="rgba(255,215,0,0.38)" stroke="#FFE066" stroke-width="2.6" />
+  <circle cx="500" cy="500" r="5" fill="#FFE875" stroke="#FFFFFF" stroke-width="1.5" />
 </g>`
   },
   9: {
