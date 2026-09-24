@@ -1,6 +1,6 @@
 ---
 name: yantra-canonical-architecture
-description: Comprehensive architectural blueprint, canonical geometry guidelines, SVG design system tokens, and strict 6-phase protocol for researching, creating, validating, and integrating authentic Vedic Yantras into the Hindu Yantra application.
+description: Comprehensive architectural blueprint, canonical geometry guidelines, SVG design system tokens, 18-tier sacred taxonomy, and strict 6-phase protocol for researching, creating, validating, and integrating authentic Vedic Yantras into the Hindu Yantra application.
 ---
 
 # Yantra Canonical Architecture & Integration Protocol
@@ -17,13 +17,24 @@ All application code and assets reside within `hindu-yantra-app/`:
 hindu-yantra-app/
 ├── public/
 │   └── yantras/                         # Canonical 1000x1000 SVGs & Visual Assets
-│       ├── sri_yantra.svg               # Supreme Sri Yantra (43 Triangles, 24 Petals, 3 Bhupuras)
-│       ├── kuber_yantra.svg             # Yaksharaja Kuber Yantra (3x3 Magic Square / Ashtadala)
-│       ├── mahalakshmi_yantra.svg       # Mahalakshmi Yantra (Ashtalakshmi, Shatkona, Padma)
-│       ├── ganesh_yantra.svg            # Vighnaharta Ganesh Yantra (Chatushkona, Ashtadala, Trikona)
-│       ├── mahamrityunjaya_yantra.svg   # Shiva Mahamrityunjaya Yantra (8 Petals, Shatkona, Amrita Bindu)
-│       ├── durga_yantra.svg             # Mahishasuramardini Durga Yantra (Navadurgas, 9 Triangles)
-│       └── vastu_yantra.svg             # Vastu Dosha Nivarana Yantra (Purusha Mandala, 8 Digpalas)
+│       ├── 01_SriChakra/                # Supreme Sri Yantra (43 Triangles, 24 Petals, 3 Bhupuras)
+│       ├── 02_Dashamahavidya/           # Kali, Tara, Shodashi, Bhuvaneshvari, Bhairavi, etc.
+│       ├── 03_Ganesha/                  # Ganesha, Maha Ganapati, Heramba, Vighnaraja
+│       ├── 04_Lakshmi/                  # Maha Lakshmi, Kuber, Ashta Lakshmi, Sri Sukta
+│       ├── 05_Shiva/                    # Shiva, Mahamrityunjaya, Rudra, Nataraja, Bhairava
+│       ├── 06_Devi/                     # Durga, Chandika, Gayatri, Annapurna, Saraswati
+│       ├── 07_Vishnu/                   # Vishnu, Narayana, Sudarshana, Narasimha, Rama, Krishna
+│       ├── 08_Hanuman/                  # Hanuman, Panchamukhi, Sankat Mochan
+│       ├── 09_Navagraha/                # Surya, Chandra, Mangala, Budha, Guru, Shukra, Shani, Rahu, Ketu
+│       ├── 10_Vastu/                    # Vastu Purusha, 64-Pada, 81-Pada, Dikpala
+│       ├── 11_Protection/               # Durga Bisa, Pratyangira, Shatru-Nashaka, Sarva Raksha
+│       ├── 12_Health_Ayushya/           # Arogya, Ayushya, Dhanvantari, Mrityu-Sanjivani
+│       ├── 13_Marriage_Santana/         # Santana Gopala, Vivaha, Katyayani, Saubhagya
+│       ├── 14_Vidya/                    # Saraswati, Medha, Hayagriva, Vagdevi
+│       ├── 15_Wealth_Business/          # Vyapara Vriddhi, Dhana Yantra, Kuber Magic Square
+│       ├── 16_Siddhi_Karya/             # Sarva Karya Siddhi, Sarvatobhadra
+│       ├── 17_AvatarYantras/            # Dashavatara (Matsya to Kalki)
+│       └── 18_MagicSquare/              # Planetary Magic Squares (3x3 to 9x9)
 │
 ├── src/
 │   ├── app/
@@ -45,6 +56,7 @@ hindu-yantra-app/
 │   │
 │   ├── lib/
 │   │   └── yantras/
+│   │       ├── yantra-taxonomy.ts              # 18-Tier Canonical Taxonomy and Filter Engine
 │   │       ├── shastric-jyotish-database.ts    # Single Source of Truth for Shastric Knowledge
 │   │       ├── canonical-svg-templates.ts      # Sacred Color Palettes & Bronze Themes
 │   │       ├── sri-yantra-coordinates.ts       # Coordinate Nodes for Ray-casting & Inspection
@@ -68,7 +80,53 @@ hindu-yantra-app/
 
 ---
 
-## 2. Core Shastric Principles & Aesthetic Standards
+## 2. The 18-Tier Sacred Yantra Taxonomy & Lineage Protocols
+
+### Lineage Attribution Mandate:
+**Never label any Yantra as a single "universal canonical design" without lineage context.** Different authentic lineages (Sampradayas) preserve distinct geometric configurations and mantra placements:
+- **Kadi Mata (कादि मत)** vs **Hadi Mata (हादि मत)** vs **Kahadi Mata (काहादि मत)**.
+- **Tantraraja Tantra** vs **Sharada Tilaka** vs **Mantra Mahodadhi** vs **Shri Vidyarnava Tantram**.
+- Purpose tags (Protection, Shatru-Nashaka, Karya Siddhi) must **always** be cited with the source scripture and tradition, rather than presented as unqualified factual guarantees.
+
+### The 18 Canonical Categories:
+
+1. **`01_SriChakra` (श्रीचक्रम् यन्त्रराज):**
+   - *Sri Yantra (Sri Chakra)*, *3D Maha Meru Prishta*.
+2. **`02_Dashamahavidya` (दश महाविद्या):**
+   - *Kali Yantra*, *Tara Yantra*, *Tripura Sundari / Shodashi Yantra*, *Bhuvaneshvari Yantra*, *Bhairavi Yantra*, *Chhinnamasta Yantra*, *Dhumavati Yantra*, *Bagalamukhi Yantra*, *Matangi Yantra*, *Kamala Yantra*.
+3. **`03_Ganesha` (गणेश एवं गणपति):**
+   - *Ganesha Yantra*, *Maha Ganapati Yantra*, *Ganapati Yantra*, *Heramba Ganapati*, *Vighnaraja*, *Vighnaharta*, *Siddhi Vinayaka*, *Vakratunda*, *Ekadanta*, *Ashtavinayaka*.
+4. **`04_Lakshmi` (लक्ष्मी एवं धन-समृद्धि):**
+   - *Shri Lakshmi*, *Maha Lakshmi*, *Lakshmi Kubera*, *Kubera*, *Ashta Lakshmi*, *Sri Sukta*, *Kamala*, *Dhanya Lakshmi*, *Dhana Lakshmi*, *Dhairya Lakshmi*, *Gaja Lakshmi*, *Santana Lakshmi*, *Vijaya Lakshmi*, *Vidya Lakshmi*, *Adi Lakshmi*.
+5. **`05_Shiva` (शैव एवं मृत्युञ्जय):**
+   - *Shiva Yantra*, *Mahamrityunjaya*, *Mrityunjaya*, *Maha Mrityunjaya*, *Mrityu-Sanjivani*, *Rudra*, *Sadashiva*, *Panchanana*, *Nataraja*, *Dakshinamurti*, *Ardhanarishvara*, *Bhairava*, *Kala Bhairava*, *Batuka Bhairava*, *Sharabha*.
+6. **`06_Devi` (देवी एवं शक्ति):**
+   - *Durga*, *Maha Durga*, *Chandika*, *Chandi*, *Devi*, *Jagadamba*, *Annapurna*, *Gayatri*, *Saraswati*, *Shitala*, *Kamakhya*, *Lalita*, *Tripura*, *Bhuvaneshvari*, *Rajarajeshvari*.
+7. **`07_Protection` (रक्षा एवं कवच):**
+   - *Durga Bisa*, *Raksha Yantra*, *Narasimha*, *Sudarshana Chakra*, *Hanuman*, *Panchamukhi Hanuman*, *Bhairava*, *Kala Bhairava*, *Bagalamukhi*, *Pratyangira*, *Narasimha Kavacha*, *Shatru-Nashaka*, *Sarva Raksha*.
+8. **`08_Navagraha` (नवग्रह एवं ज्योतिष):**
+   - Individual Grahas: *Surya (☉)*, *Chandra (☽)*, *Mangala (♂)*, *Budha (☿)*, *Guru/Brihaspati (♃)*, *Shukra (♀)*, *Shani (♄)*, *Rahu (☊)*, *Ketu (☋)*.
+   - Combined: *Navagraha Yantra*, *Navagraha Shanti Yantra*, *Navagraha Mandala*.
+9. **`09_Vastu` (वास्तु एवं दिक्पाल):**
+   - *Vastu Purusha Yantra*, *Vastu Dosha Nivaran*, *Vastu Shanti*, *Dikpala Yantra*, *Brahma Yantra*, *Sarvatobhadra*, *64-Pada Vastu Mandala*, *81-Pada Paramasayika Mandala*, *Griha Raksha*, *Main Door Vastu*, *Bhoomi Shuddhi*.
+10. **`10_Vishnu` (विष्णु एवं नारायण):**
+    - *Vishnu*, *Narayana*, *Sudarshana*, *Sudarshana Chakra*, *Narasimha*, *Hayagriva*, *Rama*, *Krishna*.
+11. **`11_Hanuman` (हनुमान् एवं आञ्जनेय):**
+    - *Hanuman*, *Panchamukhi Hanuman*, *Mangala Hanuman*, *Veer Hanuman*, *Anjaneya*, *Sankat Mochan*.
+12. **`12_Vidya` (विद्या एवं ज्ञान):**
+    - *Saraswati*, *Maha Saraswati*, *Vidya Yantra*, *Gayatri*, *Medha Yantra*, *Hayagriva*, *Matangi*, *Vagdevi*.
+13. **`13_Marriage_Santana` (सन्तान एवं दाम्पत्य):**
+    - *Santana Gopala*, *Santana Lakshmi*, *Vivaha Yantra*, *Katyayani*, *Gauri*, *Parvati*, *Uma-Maheshvara*, *Saubhagya*, *Dampatya*, *Santana Siddhi*.
+14. **`14_SpecialPurpose` (विशिष्ट कार्यसिद्धि):**
+    - *Sarva Siddhi*, *Sarva Karya Siddhi*, *Arogya*, *Ayushya*, *Vyapara Vriddhi*, *Udyoga*, *Jaya*, *Vijaya*, *Akarshana*, *Shanti*, *Sarvatobhadra*.
+15. **`15_AvatarYantras` (दशावतार यन्त्र):**
+    - *Matsya*, *Kurma*, *Varaha*, *Narasimha*, *Vamana*, *Parashurama*, *Rama*, *Balarama*, *Krishna*, *Kalki*.
+16. **`16_MagicSquare` (संख्यात्मक एवं जादुई वर्ग यन्त्र):**
+    - Planetary Magic Squares: *Surya (6x6 / 111 sum)*, *Chandra (9x9 / 369 sum)*, *Mangala (5x5 / 65 sum)*, *Budha (8x8 / 260 sum)*, *Guru (4x4 / 34 sum)*, *Shukra (7x7 / 175 sum)*, *Shani (3x3 / 15 sum)*, *Rahu (4x4 / 136 sum)*, *Ketu (3x3 / 39 sum)*, *Navagraha Combined Magic Square*.
+
+---
+
+## 3. Strict Dark Consecrated Stroke Design System
 
 1. **Sacred Geometry Authenticity Over Procedural AI:**
    - Never use random procedural polygons or AI-generated distorted shapes.
@@ -78,7 +136,7 @@ hindu-yantra-app/
      - **Sharada Tilaka** (*शारदा तिलक*)
      - **Mantra Mahodadhi** (*मन्त्र महोदधि*)
      - **Tantraraja Tantra** (*तन्त्रराज तन्त्र*)
-2. **Strict Dark Consecrated Stroke Design System:**
+2. **Visual Tokens:**
    - **Main Geometry Stroke:** `#1A0E05` (Deep Antique Sacred Bronze).
    - **Secondary Geometry Stroke:** `#2A1405` / `#3E1E07` (Warm Consecrated Copper).
    - **Stroke Width:** `2.6px` to `2.8px` for Bhupura, main circles, and primary polygons; `2.0px` to `2.4px` for internal sub-lines.
@@ -91,16 +149,17 @@ hindu-yantra-app/
 
 ---
 
-## 3. Strict 6-Phase Pipeline for Adding New Yantras
+## 4. Strict 6-Phase Pipeline for Adding New Yantras
 
-Whenever adding a new Yantra (e.g. Kuber, Mahalakshmi, Ganesh, Mahamrityunjaya, Durga, Vastu, Saraswati, Hanuman, Baglamukhi):
+Whenever adding a new Yantra:
 
 ### Phase 1: Scriptural Extraction & Geometric Formulation
 1. Identify primary scripture and sloka from *Shri Vidyarnava Tantram* or *Mantra Mahodadhi*.
-2. Formulate geometric hierarchy from exterior to interior:
-   - **Bhupura (भूपुर):** Number of concentric square borders (typically 3 lines) and 4 directional portals (Trikona or Chaturasra gates).
-   - **Vritta (त्रिवलय):** Number of concentric circular boundaries.
-   - **Padma (कमल दल):** Number of radial petals (e.g. 8-Ashtadala, 16-Shodashadala, 12-Dwadashadala).
+2. Classify under one of the 18 categories in `yantra-taxonomy.ts`.
+3. Formulate geometric hierarchy:
+   - **Bhupura (भूपुर):** Stepped square borders (typically 3 concentric lines) and 4 directional portals (Purva, Dakshina, Pashchima, Uttara).
+   - **Vritta (त्रिवलय):** Concentric circular boundaries.
+   - **Padma (कमल दल):** Radial petals (8-Ashtadala, 16-Shodashadala, 12-Dwadashadala).
    - **Antar Mandala (अन्तः मण्डल):** Central geometric matrix (Shatkona, Interlocking Triangles, 3x3 Magic Square, or Circular Yoni).
    - **Bindu (महाबिन्दु):** Central focal point of divine manifestation.
 
@@ -142,16 +201,18 @@ Whenever adding a new Yantra (e.g. Kuber, Mahalakshmi, Ganesh, Mahamrityunjaya, 
 3. Identify the presiding deities, Yogini class, Mudra, and Beej mantras for each layer.
 
 ### Phase 4: Database Registration in `shastric-jyotish-database.ts`
-Add the complete entry adhering strictly to `YantraShastricEntry` interface:
+Add the complete entry adhering strictly to `YantraShastricEntry` interface, referencing its taxonomy category:
 ```typescript
 [yantra_id]: {
   id: 'yantra_id',
+  taxonomyCategory: 'dashamahavidya', // Must match YANTRA_TAXONOMY_CATEGORIES key
   nameSanskrit: '...',
   nameHindi: '...',
   nameEnglish: '...',
   subTitle: '...',
   presidingDeity: '...',
   tradition: '...',
+  lineageAttribution: '...', // Explicit Sampradaya / Lineage source
   corePhilosophy: '...',
   citations: [
     {
@@ -214,39 +275,10 @@ curl.exe -s -o /dev/null -w "%{http_code}" "http://127.0.0.1:3001/yantras?id=${y
 
 ---
 
-## 4. Trigonometric Formulas for Reusable Vedic Shapes
-
-### A. Parametric Petal Generator (Lotus दल)
-For $N$ petals at radius $R_{inner}$ to $R_{outer}$:
-```typescript
-function generatePetalPath(cx: number, cy: number, rInner: number, rOuter: number, startAngle: number, endAngle: number): string {
-  const midAngle = (startAngle + endAngle) / 2;
-  const radStart = (startAngle - 90) * (Math.PI / 180);
-  const radMid = (midAngle - 90) * (Math.PI / 180);
-  const radEnd = (endAngle - 90) * (Math.PI / 180);
-
-  const x1 = cx + rInner * Math.cos(radStart);
-  const y1 = cy + rInner * Math.sin(radStart);
-  const xTip = cx + rOuter * Math.cos(radMid);
-  const yTip = cy + rOuter * Math.sin(radMid);
-  const x2 = cx + rInner * Math.cos(radEnd);
-  const y2 = cy + rInner * Math.sin(radEnd);
-
-  // Cubic Bezier curve for sacred curved lotus petal tip
-  return `M ${x1} ${y1} Q ${cx + (rOuter * 0.85) * Math.cos(radStart)} ${cy + (rOuter * 0.85) * Math.sin(radStart)}, ${xTip} ${yTip} Q ${cx + (rOuter * 0.85) * Math.cos(radEnd)} ${cy + (rOuter * 0.85) * Math.sin(radEnd)}, ${x2} ${y2}`;
-}
-```
-
-### B. Classical Shatkona (षट्कोण - Interlocking Shiva-Shakti Triangles)
-For a circumscribed circle of radius $R$:
-- **Shiva Triangle (Upward):** Vertices at $-90^\circ$, $30^\circ$, $150^\circ$.
-- **Shakti Triangle (Downward):** Vertices at $90^\circ$, $210^\circ$, $330^\circ$.
-
----
-
 ## 5. Definition of Done for Any Yantra Contribution
 
-- [ ] Scriptural reference verified in classical Tantra text.
+- [ ] Classified under one of the 18 canonical taxonomy categories in `yantra-taxonomy.ts`.
+- [ ] Lineage-specific source scripture and verse documented.
 - [ ] SVG created at `public/yantras/${id}.svg` with `viewBox="0 0 1000 1000"` and dark consecrated bronze strokes (`#1A0E05` / `#3E1E07`).
 - [ ] Full profile added to `SHASTRIC_JYOTISH_DATABASE` with Sanskrit verses and translations.
 - [ ] Avarana ray-casting radius thresholds configured.
