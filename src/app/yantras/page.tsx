@@ -60,54 +60,54 @@ export interface HoveredAvaranaInfo {
 
 export function getAvaranaRadiusFraction(index: number): number {
   switch (index) {
-    case 9: return 0.038;
-    case 8: return 0.085;
-    case 7: return 0.145;
-    case 6: return 0.200;
-    case 5: return 0.258;
-    case 4: return 0.315;
-    case 3: return 0.380;
-    case 2: return 0.450;
+    case 9: return 0.030;
+    case 8: return 0.075;
+    case 7: return 0.135;
+    case 6: return 0.185;
+    case 5: return 0.225;
+    case 4: return 0.256;
+    case 3: return 0.326;
+    case 2: return 0.395;
     case 1:
-    default: return 0.488;
+    default: return 0.485;
   }
 }
 
 export function getAvaranaRadiusRange(index: number): { rMin: number; rMax: number } {
   switch (index) {
-    case 9: return { rMin: 0, rMax: 0.038 };       // 9: Bindu (Central Point)
-    case 8: return { rMin: 0.038, rMax: 0.085 };   // 8: Kamakhya Triangle
-    case 7: return { rMin: 0.085, rMax: 0.145 };   // 7: 8 Inner Triangles (Ashtara)
-    case 6: return { rMin: 0.145, rMax: 0.200 };   // 6: 10 Inner Triangles (Antardashara)
-    case 5: return { rMin: 0.200, rMax: 0.258 };   // 5: 10 Outer Triangles (Bahirdashara)
-    case 4: return { rMin: 0.258, rMax: 0.315 };   // 4: 14 Triangles (Chaturdashara)
-    case 3: return { rMin: 0.315, rMax: 0.380 };   // 3: 8 Petals (Ashtadala)
-    case 2: return { rMin: 0.380, rMax: 0.450 };   // 2: 16 Petals (Shodashadala)
+    case 9: return { rMin: 0, rMax: 0.030 };       // 9: Bindu (Central Point)
+    case 8: return { rMin: 0.030, rMax: 0.075 };   // 8: Kamakhya Triangle
+    case 7: return { rMin: 0.075, rMax: 0.135 };   // 7: 8 Inner Triangles (Ashtara)
+    case 6: return { rMin: 0.135, rMax: 0.185 };   // 6: 10 Inner Triangles (Antardashara)
+    case 5: return { rMin: 0.185, rMax: 0.225 };   // 5: 10 Outer Triangles (Bahirdashara)
+    case 4: return { rMin: 0.225, rMax: 0.256 };   // 4: 14 Triangles (Chaturdashara)
+    case 3: return { rMin: 0.256, rMax: 0.326 };   // 3: 8 Petals (Ashtadala)
+    case 2: return { rMin: 0.326, rMax: 0.395 };   // 2: 16 Petals (Shodashadala)
     case 1:
-    default: return { rMin: 0.450, rMax: 0.495 };  // 1: Bhupura Citadel & 4 Gates
+    default: return { rMin: 0.395, rMax: 0.495 };  // 1: Bhupura Citadel & 4 Gates
   }
 }
 
 export const SRISHTI_STEPS_INFO = [
-  { step: 1, avaranaIdx: 9, name: 'महाबिन्दु', sub: 'सर्वआनन्दमय चक्र', rMin: 0.000, rMax: 0.038, desc: 'आदि पराशक्ति का अद्वैत उद्गम व महाबिन्दु' },
-  { step: 2, avaranaIdx: 8, name: 'मूल त्रिकोण', sub: 'सर्वसिद्धिप्रद चक्र', rMin: 0.035, rMax: 0.085, desc: 'कामकला (इच्छा, ज्ञान, क्रिया त्रिपुटी)' },
-  { step: 3, avaranaIdx: 7, name: 'अष्टकोण (८ त्रिकोण)', sub: 'सर्वरोगहर चक्र', rMin: 0.085, rMax: 0.145, desc: '८ वशिनी आदि रहस्य वाग्देवताएँ' },
-  { step: 4, avaranaIdx: 6, name: 'अन्तर्दशार (१० त्रिकोण)', sub: 'सर्वरक्षाकर चक्र', rMin: 0.145, rMax: 0.200, desc: '१० अंतः पावक अग्नियाँ व निगूढ़ योगिनी' },
-  { step: 5, avaranaIdx: 5, name: 'बहिर्दशार (१० त्रिकोण)', sub: 'सर्वार्थसाधक चक्र', rMin: 0.200, rMax: 0.258, desc: '१० प्राण (प्राण, अपान, व्यान...) व कुलयोगिनी' },
-  { step: 6, avaranaIdx: 4, name: 'चतुर्दशार (१४ त्रिकोण)', sub: 'सर्वसौभाग्यदायक चक्र', rMin: 0.258, rMax: 0.315, desc: '१४ प्रधान नाड़ियाँ (सुषुम्णा, इड़ा...) व सम्प्रदाय योगिनी' },
-  { step: 7, avaranaIdx: 3, name: 'अष्टदल कमल (८ पंखुड़ियाँ)', sub: 'सर्वसंक्षोभण चक्र', rMin: 0.315, rMax: 0.380, desc: '८ अनंग शक्तियाँ व गुप्ततर योगिनी' },
-  { step: 8, avaranaIdx: 2, name: 'षोडशदल कमल (१६ पंखुड़ियाँ)', sub: 'सर्वाशापरिपूरक चक्र', rMin: 0.380, rMax: 0.450, desc: '१६ कामाकर्षिणी शक्तियाँ व गुप्त योगिनी' },
-  { step: 9, avaranaIdx: 1, name: 'भूपुर (३ रेखाएँ व ४ द्वार)', sub: 'त्रैलोक्यमोहन चक्र', rMin: 0.450, rMax: 0.500, desc: '१० सिद्धियाँ + ८ मातृकाएँ + ४ द्वार (प्रकट योगिनी)' },
+  { step: 1, avaranaIdx: 9, name: 'महाबिन्दु', sub: 'सर्वआनन्दमय चक्र', rMin: 0.000, rMax: 0.030, desc: 'आदि पराशक्ति का अद्वैत उद्गम व महाबिन्दु' },
+  { step: 2, avaranaIdx: 8, name: 'मूल त्रिकोण', sub: 'सर्वसिद्धिप्रद चक्र', rMin: 0.030, rMax: 0.075, desc: 'कामकला (इच्छा, ज्ञान, क्रिया त्रिपुटी)' },
+  { step: 3, avaranaIdx: 7, name: 'अष्टकोण (८ त्रिकोण)', sub: 'सर्वरोगहर चक्र', rMin: 0.075, rMax: 0.135, desc: '८ वशिनी आदि रहस्य वाग्देवताएँ' },
+  { step: 4, avaranaIdx: 6, name: 'अन्तर्दशार (१० त्रिकोण)', sub: 'सर्वरक्षाकर चक्र', rMin: 0.135, rMax: 0.185, desc: '१० अंतः पावक अग्नियाँ व निगूढ़ योगिनी' },
+  { step: 5, avaranaIdx: 5, name: 'बहिर्दशार (१० त्रिकोण)', sub: 'सर्वार्थसाधक चक्र', rMin: 0.185, rMax: 0.225, desc: '१० प्राण (प्राण, अपान, व्यान...) व कुलयोगिनी' },
+  { step: 6, avaranaIdx: 4, name: 'चतुर्दशार (१४ त्रिकोण)', sub: 'सर्वसौभाग्यदायक चक्र', rMin: 0.225, rMax: 0.256, desc: '१४ प्रधान नाड़ियाँ (सुषुम्णा, इड़ा...) व सम्प्रदाय योगिनी' },
+  { step: 7, avaranaIdx: 3, name: 'अष्टदल कमल (८ पंखुड़ियाँ)', sub: 'सर्वसंक्षोभण चक्र', rMin: 0.256, rMax: 0.326, desc: '८ अनंग शक्तियाँ व गुप्ततर योगिनी' },
+  { step: 8, avaranaIdx: 2, name: 'षोडशदल कमल (१६ पंखुड़ियाँ)', sub: 'सर्वाशापरिपूरक चक्र', rMin: 0.326, rMax: 0.395, desc: '१६ कामाकर्षिणी शक्तियाँ व गुप्त योगिनी' },
+  { step: 9, avaranaIdx: 1, name: 'भूपुर (३ रेखाएँ व ४ द्वार)', sub: 'त्रैलोक्यमोहन चक्र', rMin: 0.395, rMax: 0.500, desc: '१० सिद्धियाँ + ८ मातृकाएँ + ४ द्वार (प्रकट योगिनी)' },
 ];
 
 export const SAMHARA_STEPS_INFO = [
-  { step: 1, avaranaIdx: 1, name: 'भूपुर (३ रेखाएँ व ४ द्वार)', sub: 'त्रैलोक्यमोहन चक्र', rMin: 0.450, rMax: 0.500, desc: '१० सिद्धियाँ + ८ मातृकाएँ + ४ द्वार (प्रकट योगिनी)' },
-  { step: 2, avaranaIdx: 2, name: 'षोडशदल कमल (१६ पंखुड़ियाँ)', sub: 'सर्वाशापरिपूरक चक्र', rMin: 0.380, rMax: 0.450, desc: '१६ कामाकर्षिणी शक्तियाँ व गुप्त योगिनी' },
-  { step: 3, avaranaIdx: 3, name: 'अष्टदल कमल (८ पंखुड़ियाँ)', sub: 'सर्वसंक्षोभण चक्र', rMin: 0.315, rMax: 0.380, desc: '८ अनंग शक्तियाँ व गुप्ततर योगिनी' },
-  { step: 4, avaranaIdx: 4, name: 'चतुर्दशार (१४ त्रिकोण)', sub: 'सर्वसौभाग्यदायक चक्र', rMin: 0.258, rMax: 0.315, desc: '१४ प्रधान नाड़ियाँ (सुषुम्णा, इड़ा...) व सम्प्रदाय योगिनी' },
-  { step: 5, avaranaIdx: 5, name: 'बहिर्दशार (१० त्रिकोण)', sub: 'सर्वार्थसाधक चक्र', rMin: 0.200, rMax: 0.258, desc: '१० प्राण (प्राण, अपान, व्यान...) व कुलयोगिनी' },
-  { step: 6, avaranaIdx: 6, name: 'अन्तर्दशार (१० त्रिकोण)', sub: 'सर्वरक्षाकर चक्र', rMin: 0.145, rMax: 0.200, desc: '१० अंतः पावक अग्नियाँ व निगूढ़ योगिनी' },
-  { step: 7, avaranaIdx: 7, name: 'अष्टकोण (८ त्रिकोण)', sub: 'सर्वरोगहर चक्र', rMin: 0.085, rMax: 0.145, desc: '८ वशिनी आदि रहस्य वाग्देवताएँ' },
+  { step: 1, avaranaIdx: 1, name: 'भूपुर (३ रेखाएँ व ४ द्वार)', sub: 'त्रैलोक्यमोहन चक्र', rMin: 0.395, rMax: 0.500, desc: '१० सिद्धियाँ + ८ मातृकाएँ + ४ द्वार (प्रकट योगिनी)' },
+  { step: 2, avaranaIdx: 2, name: 'षोडशदल कमल (१६ पंखुड़ियाँ)', sub: 'सर्वाशापरिपूरक चक्र', rMin: 0.326, rMax: 0.395, desc: '१६ कामाकर्षिणी शक्तियाँ व गुप्त योगिनी' },
+  { step: 3, avaranaIdx: 3, name: 'अष्टदल कमल (८ पंखुड़ियाँ)', sub: 'सर्वसंक्षोभण चक्र', rMin: 0.256, rMax: 0.326, desc: '८ अनंग शक्तियाँ व गुप्ततर योगिनी' },
+  { step: 4, avaranaIdx: 4, name: 'चतुर्दशार (१४ त्रिकोण)', sub: 'सर्वसौभाग्यदायक चक्र', rMin: 0.225, rMax: 0.256, desc: '१४ प्रधान नाड़ियाँ (सुषुम्णा, इड़ा...) व सम्प्रदाय योगिनी' },
+  { step: 5, avaranaIdx: 5, name: 'बहिर्दशार (१० त्रिकोण)', sub: 'सर्वार्थसाधक चक्र', rMin: 0.185, rMax: 0.225, desc: '१० प्राण (प्राण, अपान, व्यान...) व कुलयोगिनी' },
+  { step: 6, avaranaIdx: 6, name: 'अन्तर्दशार (१० त्रिकोण)', sub: 'सर्वरक्षाकर चक्र', rMin: 0.135, rMax: 0.185, desc: '१० अंतः पावक अग्नियाँ व निगूढ़ योगिनी' },
+  { step: 7, avaranaIdx: 7, name: 'अष्टकोण (८ त्रिकोण)', sub: 'सर्वरोगहर चक्र', rMin: 0.075, rMax: 0.135, desc: '८ वशिनी आदि रहस्य वाग्देवताएँ' },
   { step: 8, avaranaIdx: 8, name: 'मूल त्रिकोण', sub: 'सर्वसिद्धिप्रद चक्र', rMin: 0.035, rMax: 0.085, desc: 'कामकला (इच्छा, ज्ञान, क्रिया त्रिपुटी)' },
   { step: 9, avaranaIdx: 9, name: 'महाबिन्दु', sub: 'सर्वआनन्दमय चक्र', rMin: 0.000, rMax: 0.038, desc: 'आदि पराशक्ति का अद्वैत उद्गम व महाबिन्दु' },
 ];
@@ -373,38 +373,38 @@ function YantraExplorerInner() {
         let spot = 'भूपुर (3 Concentric Earth Squares & 4 Portals)';
         let radiusFrac = 0.485;
 
-        if (dist <= 0.038) {
+        if (dist <= 0.030) {
           avaranaIdx = 9;
           spot = 'केन्द्रीय महाबिन्दु (Cosmic Singularity / Parama Bindu)';
-          radiusFrac = 0.038;
-        } else if (dist <= 0.088) {
+          radiusFrac = 0.030;
+        } else if (dist <= 0.075) {
           avaranaIdx = 8;
           spot = 'केन्द्रीय अधोमुख त्रिकोण (Central Primary Yoni Triangle)';
-          radiusFrac = 0.085;
-        } else if (dist <= 0.145) {
+          radiusFrac = 0.075;
+        } else if (dist <= 0.135) {
           avaranaIdx = 7;
           spot = 'अष्टार चक्र (8 Innermost Triangles - Ashtakona)';
-          radiusFrac = 0.145;
-        } else if (dist <= 0.200) {
+          radiusFrac = 0.135;
+        } else if (dist <= 0.185) {
           avaranaIdx = 6;
           spot = 'अन्तर्दशार चक्र (10 Inner Middle Triangles)';
-          radiusFrac = 0.200;
-        } else if (dist <= 0.258) {
+          radiusFrac = 0.185;
+        } else if (dist <= 0.225) {
           avaranaIdx = 5;
           spot = 'बहिर्दशार चक्र (10 Outer Middle Triangles)';
-          radiusFrac = 0.258;
-        } else if (dist <= 0.315) {
+          radiusFrac = 0.225;
+        } else if (dist <= 0.256) {
           avaranaIdx = 4;
           spot = 'चतुर्दशार चक्र (14 Outer Triangles)';
-          radiusFrac = 0.315;
-        } else if (dist <= 0.380) {
+          radiusFrac = 0.256;
+        } else if (dist <= 0.326) {
           avaranaIdx = 3;
           spot = 'अष्टदल पद्म (8-Petal Inner Lotus)';
-          radiusFrac = 0.380;
-        } else if (dist <= 0.450) {
+          radiusFrac = 0.326;
+        } else if (dist <= 0.395) {
           avaranaIdx = 2;
           spot = 'षोडशदल पद्म (16-Petal Outer Lotus)';
-          radiusFrac = 0.450;
+          radiusFrac = 0.395;
         } else {
           avaranaIdx = 1;
           let gate = 'भूपुर प्राकार (Earth Rampart)';

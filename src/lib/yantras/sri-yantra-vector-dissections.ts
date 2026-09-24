@@ -32,9 +32,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "16 Sacred Lotus Petals with Outer Ring",
     count: 16,
     svgElement: `<g id="dissection_shodashadala">
-  <circle cx="500" cy="500" r="356" fill="none" stroke="#FFD700" stroke-width="1.8" stroke-dasharray="3 3" opacity="0.6" />
-  <path d="M 444.2 219.5 Q 463.09 165.63, 500 144 Q 536.91 165.63, 555.8 219.5 M 555.8 219.5 Q 593.85 176.96, 636.24 171.1 Q 662.06 205.21, 658.89 262.2 M 658.89 262.2 Q 710.33 237.46, 751.73 248.27 Q 762.54 289.67, 737.8 341.11 M 737.8 341.11 Q 794.79 337.94, 828.9 363.76 Q 823.04 406.15, 780.5 444.2 M 780.5 444.2 Q 834.37 463.09, 856 500 Q 834.37 536.91, 780.5 555.8 M 780.5 555.8 Q 823.04 593.85, 828.9 636.24 Q 794.79 662.06, 737.8 658.89 M 737.8 658.89 Q 762.54 710.33, 751.73 751.73 Q 710.33 762.54, 658.89 737.8 M 658.89 737.8 Q 662.06 794.79, 636.24 828.9 Q 593.85 823.04, 555.8 780.5 M 555.8 780.5 Q 536.91 834.37, 500 856 Q 463.09 834.37, 444.2 780.5 M 444.2 780.5 Q 406.15 823.04, 363.76 828.9 Q 337.94 794.79, 341.11 737.8 M 341.11 737.8 Q 289.67 762.54, 248.27 751.73 Q 237.46 710.33, 262.2 658.89 M 262.2 658.89 Q 205.21 662.06, 171.1 636.24 Q 176.96 593.85, 219.5 555.8 M 219.5 555.8 Q 165.63 536.91, 144 500 Q 165.63 463.09, 219.5 444.2 M 219.5 444.2 Q 176.96 406.15, 171.1 363.76 Q 205.21 337.94, 262.2 341.11 M 262.2 341.11 Q 237.46 289.67, 248.27 248.27 Q 289.67 237.46, 341.11 262.2 M 341.11 262.2 Q 337.94 205.21, 363.76 171.1 Q 406.15 176.96, 444.2 219.5 " fill="rgba(212,175,55,0.18)" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="round" />
-  <circle cx="500" cy="500" r="286" fill="none" stroke="#FFD700" stroke-width="1.8" />
+  <circle cx="500" cy="500" r="392" fill="none" stroke="#FFD700" stroke-width="1.8" stroke-dasharray="3 3" opacity="0.6" />
+  <path d="M 436.4 180.26 Q 459.01 128.74, 500 108 Q 540.99 128.74, 563.6 180.26 M 563.6 180.26 Q 604.21 141.31, 650.01 137.84 Q 679.94 172.68, 681.12 228.94 M 681.12 228.94 Q 733.54 208.49, 777.19 222.81 Q 791.51 266.46, 771.06 318.88 M 771.06 318.88 Q 827.32 320.06, 862.16 349.99 Q 858.69 395.79, 819.74 436.4 M 819.74 436.4 Q 871.26 459.01, 892 500 Q 871.26 540.99, 819.74 563.6 M 819.74 563.6 Q 858.69 604.21, 862.16 650.01 Q 827.32 679.94, 771.06 681.12 M 771.06 681.12 Q 791.51 733.54, 777.19 777.19 Q 733.54 791.51, 681.12 771.06 M 681.12 771.06 Q 679.94 827.32, 650.01 862.16 Q 604.21 858.69, 563.6 819.74 M 563.6 819.74 Q 540.99 871.26, 500 892 Q 459.01 871.26, 436.4 819.74 M 436.4 819.74 Q 395.79 858.69, 349.99 862.16 Q 320.06 827.32, 318.88 771.06 M 318.88 771.06 Q 266.46 791.51, 222.81 777.19 Q 208.49 733.54, 228.94 681.12 M 228.94 681.12 Q 172.68 679.94, 137.84 650.01 Q 141.31 604.21, 180.26 563.6 M 180.26 563.6 Q 128.74 540.99, 108 500 Q 128.74 459.01, 180.26 436.4 M 180.26 436.4 Q 141.31 395.79, 137.84 349.99 Q 172.68 320.06, 228.94 318.88 M 228.94 318.88 Q 208.49 266.46, 222.81 222.81 Q 266.46 208.49, 318.88 228.94 M 318.88 228.94 Q 320.06 172.68, 349.99 137.84 Q 395.79 141.31, 436.4 180.26 " fill="rgba(212,175,55,0.18)" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="round" />
+  <circle cx="500" cy="500" r="326" fill="none" stroke="#FFD700" stroke-width="1.8" />
 </g>`
   },
   3: {
@@ -45,9 +45,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "8 Sacred Lotus Petals with Concentric Boundaries",
     count: 8,
     svgElement: `<g id="dissection_ashtadala">
-  <circle cx="500" cy="500" r="286" fill="none" stroke="#FFD700" stroke-width="1.8" />
-  <path d="M 415.81 296.75 Q 441.64 238.92, 500 214 Q 558.36 238.92, 584.19 296.75 M 584.19 296.75 Q 643.34 274.13, 702.23 297.77 Q 725.87 356.66, 703.25 415.81 M 703.25 415.81 Q 761.08 441.64, 786 500 Q 761.08 558.36, 703.25 584.19 M 703.25 584.19 Q 725.87 643.34, 702.23 702.23 Q 643.34 725.87, 584.19 703.25 M 584.19 703.25 Q 558.36 761.08, 500 786 Q 441.64 761.08, 415.81 703.25 M 415.81 703.25 Q 356.66 725.87, 297.77 702.23 Q 274.13 643.34, 296.75 584.19 M 296.75 584.19 Q 238.92 558.36, 214 500 Q 238.92 441.64, 296.75 415.81 M 296.75 415.81 Q 274.13 356.66, 297.77 297.77 Q 356.66 274.13, 415.81 296.75 " fill="rgba(217,119,6,0.22)" stroke="#FFD700" stroke-width="2.4" stroke-linejoin="round" />
-  <circle cx="500" cy="500" r="220" fill="none" stroke="#FFD700" stroke-width="1.8" />
+  <circle cx="500" cy="500" r="320" fill="none" stroke="#FFD700" stroke-width="1.8" />
+  <path d="M 402.03 263.49 Q 434.1 205.2, 500 180 Q 565.9 205.2, 597.97 263.49 M 597.97 263.49 Q 661.86 244.95, 726.27 273.73 Q 755.05 338.14, 736.51 402.03 M 736.51 402.03 Q 794.8 434.1, 820 500 Q 794.8 565.9, 736.51 597.97 M 736.51 597.97 Q 755.05 661.86, 726.27 726.27 Q 661.86 755.05, 597.97 736.51 M 597.97 736.51 Q 565.9 794.8, 500 820 Q 434.1 794.8, 402.03 736.51 M 402.03 736.51 Q 338.14 755.05, 273.73 726.27 Q 244.95 661.86, 263.49 597.97 M 263.49 597.97 Q 205.2 565.9, 180 500 Q 205.2 434.1, 263.49 402.03 M 263.49 402.03 Q 244.95 338.14, 273.73 273.73 Q 338.14 244.95, 402.03 263.49 " fill="rgba(217,119,6,0.22)" stroke="#FFD700" stroke-width="2.4" stroke-linejoin="round" />
+  <circle cx="500" cy="500" r="256" fill="none" stroke="#FFD700" stroke-width="1.8" />
 </g>`
   },
   4: {
@@ -58,21 +58,21 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "14 Outer Perimeter Triangles",
     count: 14,
     svgElement: `<g id="dissection_chaturdasharam" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round">
-  <circle cx="500" cy="500" r="220" fill="none" stroke="#FFD700" stroke-width="1.2" opacity="0.5" stroke-dasharray="4 2" />
-  <polygon id="chaturdasharam_0" points="500,282 535.6,344.01 464.4,344.01" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_1" points="594.59,303.59 599.76,374.91 535.6,344.01" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_2" points="670.44,364.08 644.16,430.58 599.76,374.91" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_3" points="712.53,451.49 660,500 644.16,430.58" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_4" points="712.53,548.51 644.16,569.42 660,500" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_5" points="670.44,635.92 599.76,625.09 644.16,569.42" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_6" points="594.59,696.41 535.6,655.99 599.76,625.09" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_7" points="500,718 464.4,655.99 535.6,655.99" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_8" points="405.41,696.41 400.24,625.09 464.4,655.99" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_9" points="329.56,635.92 355.84,569.42 400.24,625.09" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_10" points="287.47,548.51 340,500 355.84,569.42" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_11" points="287.47,451.49 355.84,430.58 340,500" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_12" points="329.56,364.08 400.24,374.91 355.84,430.58" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="chaturdasharam_13" points="405.41,303.59 464.4,344.01 400.24,374.91" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+  <circle cx="500" cy="500" r="250" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.6" stroke-dasharray="4 2" />
+  <polygon id="chaturdasharam_0" points="500,250 541.17,319.64 458.83,319.64" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_1" points="608.47,274.76 615.35,355.36 541.17,319.64" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_2" points="695.46,344.13 666.68,419.73 615.35,355.36" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_3" points="743.73,444.37 685,500 666.68,419.73" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_4" points="743.73,555.63 666.68,580.27 685,500" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_5" points="695.46,655.87 615.35,644.64 666.68,580.27" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_6" points="608.47,725.24 541.17,680.36 615.35,644.64" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_7" points="500,750 458.83,680.36 541.17,680.36" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_8" points="391.53,725.24 384.65,644.64 458.83,680.36" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_9" points="304.54,655.87 333.32,580.27 384.65,644.64" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_10" points="256.27,555.63 315,500 333.32,580.27" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_11" points="256.27,444.37 333.32,419.73 315,500" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_12" points="304.54,344.13 384.65,355.36 333.32,419.73" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="chaturdasharam_13" points="391.53,274.76 458.83,319.64 384.65,355.36" fill="rgba(245,158,11,0.26)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
     
 </g>`
   },
@@ -84,16 +84,16 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "10 Outer Circuit Triangles",
     count: 10,
     svgElement: `<g id="dissection_bahir_dasharam" stroke="#FFD700" stroke-width="2" stroke-linejoin="round">
-  <polygon id="bahir_dasharam_0" points="500,340 535.85,389.68 464.15,389.68" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_1" points="594.05,370.56 593.85,431.82 535.85,389.68" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_2" points="652.17,450.56 616,500 593.85,431.82" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_3" points="652.17,549.44 593.85,568.18 616,500" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_4" points="594.05,629.44 535.85,610.32 593.85,568.18" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_5" points="500,660 464.15,610.32 535.85,610.32" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_6" points="405.95,629.44 406.15,568.18 464.15,610.32" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_7" points="347.83,549.44 384,500 406.15,568.18" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_8" points="347.83,450.56 406.15,431.82 384,500" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="bahir_dasharam_9" points="405.95,370.56 464.15,389.68 406.15,431.82" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+  <polygon id="bahir_dasharam_0" points="500,315 540.79,374.46 459.21,374.46" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_1" points="608.74,350.33 606.79,422.41 540.79,374.46" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_2" points="675.95,442.83 632,500 606.79,422.41" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_3" points="675.95,557.17 606.79,577.59 632,500" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_4" points="608.74,649.67 540.79,625.54 606.79,577.59" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_5" points="500,685 459.21,625.54 540.79,625.54" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_6" points="391.26,649.67 393.21,577.59 459.21,625.54" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_7" points="324.05,557.17 368,500 393.21,577.59" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_8" points="324.05,442.83 393.21,422.41 368,500" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="bahir_dasharam_9" points="391.26,350.33 459.21,374.46 393.21,422.41" fill="rgba(217,119,6,0.30)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
     
 </g>`
   },
@@ -105,16 +105,16 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "10 Inner Circuit Triangles",
     count: 10,
     svgElement: `<g id="dissection_antar_dasharam" stroke="#FFD700" stroke-width="2" stroke-linejoin="round">
-  <polygon id="antar_dasharam_0" points="535.85,389.68 545.85,436.9 500,422" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_1" points="593.85,431.82 574.18,475.9 545.85,436.9" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_2" points="616,500 574.18,524.1 574.18,475.9" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_3" points="593.85,568.18 545.85,563.1 574.18,524.1" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_4" points="535.85,610.32 500,578 545.85,563.1" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_5" points="464.15,610.32 454.15,563.1 500,578" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_6" points="406.15,568.18 425.82,524.1 454.15,563.1" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_7" points="384,500 425.82,475.9 425.82,524.1" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_8" points="406.15,431.82 454.15,436.9 425.82,475.9" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="antar_dasharam_9" points="464.15,389.68 500,422 454.15,436.9" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+  <polygon id="antar_dasharam_0" points="540.79,374.46 551.73,428.81 500,412" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_1" points="606.79,422.41 583.69,472.81 551.73,428.81" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_2" points="632,500 583.69,527.19 583.69,472.81" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_3" points="606.79,577.59 551.73,571.19 583.69,527.19" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_4" points="540.79,625.54 500,588 551.73,571.19" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_5" points="459.21,625.54 448.27,571.19 500,588" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_6" points="393.21,577.59 416.31,527.19 448.27,571.19" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_7" points="368,500 416.31,472.81 416.31,527.19" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_8" points="393.21,422.41 448.27,428.81 416.31,472.81" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="antar_dasharam_9" points="459.21,374.46 500,412 448.27,428.81" fill="rgba(245,158,11,0.32)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
     
 </g>`
   },
@@ -126,14 +126,14 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "8 Interlocking Circuit Triangles",
     count: 8,
     svgElement: `<g id="dissection_ashtaragon" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="round">
-  <polygon id="ashtaragon_0" points="500,422 516.84,459.35 483.16,459.35" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="ashtaragon_1" points="555.15,444.85 540.65,483.16 516.84,459.35" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="ashtaragon_2" points="578,500 540.65,516.84 540.65,483.16" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="ashtaragon_3" points="555.15,555.15 516.84,540.65 540.65,516.84" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="ashtaragon_4" points="500,578 483.16,540.65 516.84,540.65" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="ashtaragon_5" points="444.85,555.15 459.35,516.84 483.16,540.65" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="ashtaragon_6" points="422,500 459.35,483.16 459.35,516.84" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
-    <polygon id="ashtaragon_7" points="444.85,444.85 483.16,459.35 459.35,483.16" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+  <polygon id="ashtaragon_0" points="500,412 519.13,453.81 480.87,453.81" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="ashtaragon_1" points="562.23,437.77 546.19,480.87 519.13,453.81" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="ashtaragon_2" points="588,500 546.19,519.13 546.19,480.87" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="ashtaragon_3" points="562.23,562.23 519.13,546.19 546.19,519.13" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="ashtaragon_4" points="500,588 480.87,546.19 519.13,546.19" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="ashtaragon_5" points="437.77,562.23 453.81,519.13 480.87,546.19" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="ashtaragon_6" points="412,500 453.81,480.87 453.81,519.13" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="ashtaragon_7" points="437.77,437.77 480.87,453.81 453.81,480.87" fill="rgba(217,119,6,0.35)" stroke="#FFD700" stroke-width="1.8" stroke-linejoin="round" />
     
 </g>`
   },
@@ -145,7 +145,7 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "Downward-Pointing Primordial Triangle",
     count: 1,
     svgElement: `<g id="dissection_trikona" stroke="#FFD700" stroke-width="2.6" stroke-linejoin="round">
-  <polygon id="face_central_kama_kala_trikona" points="423.84,484.39 576.16,484.39 500,572.74" fill="rgba(255,215,0,0.38)" stroke="#FFE066" stroke-width="2.6" />
+  <polygon id="face_central_kama_kala_trikona" points="436.53,486.99 563.47,486.99 500,560.62" fill="rgba(255,215,0,0.38)" stroke="#FFE066" stroke-width="2.6" />
   <circle cx="500" cy="500" r="5" fill="#FFE875" stroke="#FFFFFF" stroke-width="1.5" />
 </g>`
   },
@@ -157,9 +157,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "Singularity / Central Radiant Point",
     count: 1,
     svgElement: `<g id="dissection_bindu">
-  <circle cx="500" cy="500" r="36" fill="rgba(255,215,0,0.12)" stroke="#FFE066" stroke-width="1.5" stroke-dasharray="4 3" />
-  <circle cx="500" cy="500" r="20" fill="none" stroke="#FFD700" stroke-width="1.8" />
-  <circle cx="500" cy="500" r="10" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="2" />
+  <circle cx="500" cy="500" r="32" fill="rgba(255,215,0,0.12)" stroke="#FFE066" stroke-width="1.5" stroke-dasharray="4 3" />
+  <circle cx="500" cy="500" r="18" fill="none" stroke="#FFD700" stroke-width="1.8" />
+  <circle cx="500" cy="500" r="8" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="2" />
 </g>`
   }
 };

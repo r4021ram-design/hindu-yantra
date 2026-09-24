@@ -27,54 +27,55 @@
 
   <!-- 2. OUTER CONCENTRIC CIRCLE RINGS -->
   <g id="transition_outer_circles" stroke="url(#sriGoldAccent)" stroke-width="1.8" fill="none">
-    <circle cx="500" cy="500" r="356" />
-    <circle cx="500" cy="500" r="348" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" />
+    <circle cx="500" cy="500" r="400" />
+    <circle cx="500" cy="500" r="392" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" />
   </g>
 
   <!-- 3. SHODASHA DALA (16 LOTUS PETALS) -->
   <g id="avarana_2_shodashadala" stroke="url(#sriGoldMain)" stroke-width="2.2" fill="rgba(212,175,55,0.08)" stroke-linejoin="round">
-    <path id="lotus_16_petals" d="M 444.2 219.5 Q 463.09 165.63, 500 144 Q 536.91 165.63, 555.8 219.5 M 555.8 219.5 Q 593.85 176.96, 636.24 171.1 Q 662.06 205.21, 658.89 262.2 M 658.89 262.2 Q 710.33 237.46, 751.73 248.27 Q 762.54 289.67, 737.8 341.11 M 737.8 341.11 Q 794.79 337.94, 828.9 363.76 Q 823.04 406.15, 780.5 444.2 M 780.5 444.2 Q 834.37 463.09, 856 500 Q 834.37 536.91, 780.5 555.8 M 780.5 555.8 Q 823.04 593.85, 828.9 636.24 Q 794.79 662.06, 737.8 658.89 M 737.8 658.89 Q 762.54 710.33, 751.73 751.73 Q 710.33 762.54, 658.89 737.8 M 658.89 737.8 Q 662.06 794.79, 636.24 828.9 Q 593.85 823.04, 555.8 780.5 M 555.8 780.5 Q 536.91 834.37, 500 856 Q 463.09 834.37, 444.2 780.5 M 444.2 780.5 Q 406.15 823.04, 363.76 828.9 Q 337.94 794.79, 341.11 737.8 M 341.11 737.8 Q 289.67 762.54, 248.27 751.73 Q 237.46 710.33, 262.2 658.89 M 262.2 658.89 Q 205.21 662.06, 171.1 636.24 Q 176.96 593.85, 219.5 555.8 M 219.5 555.8 Q 165.63 536.91, 144 500 Q 165.63 463.09, 219.5 444.2 M 219.5 444.2 Q 176.96 406.15, 171.1 363.76 Q 205.21 337.94, 262.2 341.11 M 262.2 341.11 Q 237.46 289.67, 248.27 248.27 Q 289.67 237.46, 341.11 262.2 M 341.11 262.2 Q 337.94 205.21, 363.76 171.1 Q 406.15 176.96, 444.2 219.5 " />
+    <path id="lotus_16_petals" d="M 436.4 180.26 Q 459.01 128.74, 500 108 Q 540.99 128.74, 563.6 180.26 M 563.6 180.26 Q 604.21 141.31, 650.01 137.84 Q 679.94 172.68, 681.12 228.94 M 681.12 228.94 Q 733.54 208.49, 777.19 222.81 Q 791.51 266.46, 771.06 318.88 M 771.06 318.88 Q 827.32 320.06, 862.16 349.99 Q 858.69 395.79, 819.74 436.4 M 819.74 436.4 Q 871.26 459.01, 892 500 Q 871.26 540.99, 819.74 563.6 M 819.74 563.6 Q 858.69 604.21, 862.16 650.01 Q 827.32 679.94, 771.06 681.12 M 771.06 681.12 Q 791.51 733.54, 777.19 777.19 Q 733.54 791.51, 681.12 771.06 M 681.12 771.06 Q 679.94 827.32, 650.01 862.16 Q 604.21 858.69, 563.6 819.74 M 563.6 819.74 Q 540.99 871.26, 500 892 Q 459.01 871.26, 436.4 819.74 M 436.4 819.74 Q 395.79 858.69, 349.99 862.16 Q 320.06 827.32, 318.88 771.06 M 318.88 771.06 Q 266.46 791.51, 222.81 777.19 Q 208.49 733.54, 228.94 681.12 M 228.94 681.12 Q 172.68 679.94, 137.84 650.01 Q 141.31 604.21, 180.26 563.6 M 180.26 563.6 Q 128.74 540.99, 108 500 Q 128.74 459.01, 180.26 436.4 M 180.26 436.4 Q 141.31 395.79, 137.84 349.99 Q 172.68 320.06, 228.94 318.88 M 228.94 318.88 Q 208.49 266.46, 222.81 222.81 Q 266.46 208.49, 318.88 228.94 M 318.88 228.94 Q 320.06 172.68, 349.99 137.84 Q 395.79 141.31, 436.4 180.26 " />
   </g>
 
   <!-- 4. MIDDLE CONCENTRIC CIRCLE RINGS -->
   <g id="transition_middle_circles" stroke="url(#sriGoldAccent)" stroke-width="1.8" fill="none">
-    <circle cx="500" cy="500" r="286" />
-    <circle cx="500" cy="500" r="278" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" />
+    <circle cx="500" cy="500" r="326" />
+    <circle cx="500" cy="500" r="320" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" />
   </g>
 
   <!-- 5. ASHTA DALA (8 LOTUS PETALS) -->
   <g id="avarana_3_ashtadala" stroke="url(#sriGoldMain)" stroke-width="2.2" fill="rgba(217,119,6,0.12)" stroke-linejoin="round">
-    <path id="lotus_8_petals" d="M 415.81 296.75 Q 441.64 238.92, 500 214 Q 558.36 238.92, 584.19 296.75 M 584.19 296.75 Q 643.34 274.13, 702.23 297.77 Q 725.87 356.66, 703.25 415.81 M 703.25 415.81 Q 761.08 441.64, 786 500 Q 761.08 558.36, 703.25 584.19 M 703.25 584.19 Q 725.87 643.34, 702.23 702.23 Q 643.34 725.87, 584.19 703.25 M 584.19 703.25 Q 558.36 761.08, 500 786 Q 441.64 761.08, 415.81 703.25 M 415.81 703.25 Q 356.66 725.87, 297.77 702.23 Q 274.13 643.34, 296.75 584.19 M 296.75 584.19 Q 238.92 558.36, 214 500 Q 238.92 441.64, 296.75 415.81 M 296.75 415.81 Q 274.13 356.66, 297.77 297.77 Q 356.66 274.13, 415.81 296.75 " />
+    <path id="lotus_8_petals" d="M 402.03 263.49 Q 434.1 205.2, 500 180 Q 565.9 205.2, 597.97 263.49 M 597.97 263.49 Q 661.86 244.95, 726.27 273.73 Q 755.05 338.14, 736.51 402.03 M 736.51 402.03 Q 794.8 434.1, 820 500 Q 794.8 565.9, 736.51 597.97 M 736.51 597.97 Q 755.05 661.86, 726.27 726.27 Q 661.86 755.05, 597.97 736.51 M 597.97 736.51 Q 565.9 794.8, 500 820 Q 434.1 794.8, 402.03 736.51 M 402.03 736.51 Q 338.14 755.05, 273.73 726.27 Q 244.95 661.86, 263.49 597.97 M 263.49 597.97 Q 205.2 565.9, 180 500 Q 205.2 434.1, 263.49 402.03 M 263.49 402.03 Q 244.95 338.14, 273.73 273.73 Q 338.14 244.95, 402.03 263.49 " />
   </g>
 
-  <!-- 6. INNER CONCENTRIC CIRCLE RINGS -->
+  <!-- 6. INNER CONCENTRIC CIRCLE RINGS (ENCLOSING ALL 9 TRIANGLES WITH ZERO OVERFLOW) -->
   <g id="transition_inner_circles" stroke="url(#sriGoldAccent)" stroke-width="2" fill="none">
-    <circle cx="500" cy="500" r="220" />
-    <circle cx="500" cy="500" r="214" stroke-width="1.2" stroke-dasharray="4 2" opacity="0.7" />
+    <circle cx="500" cy="500" r="256" />
+    <circle cx="500" cy="500" r="250" stroke-width="2.2" stroke="url(#sriGoldMain)" />
   </g>
 
   <!-- 7. THE SACRED 9 INTERLOCKING SHIVA-SHAKTI PRIMARY TRIANGLES (NAVAYONI) -->
+  <!-- Scaled with absolute precision so all vertices touch and stay inside r=250 -->
   <g id="navayoni_interlocking_triangles" stroke="url(#sriGoldMain)" stroke-width="2.2" stroke-linejoin="miter">
     <!-- 4 Upward Shiva Triangles (Purusha) -->
-    <path id="primary_tri_U1" d="M 208.95 572.74 L 791.05 572.74 L 500 200 Z" fill="rgba(212,175,55,0.07)" />
-    <path id="primary_tri_U2" d="M 284.79 643.77 L 715.21 643.77 L 500 284.32 Z" fill="rgba(212,175,55,0.07)" />
-    <path id="primary_tri_U3" d="M 346.15 710.11 L 653.85 710.11 L 500 419.62 Z" fill="rgba(212,175,55,0.07)" />
-    <path id="primary_tri_U4" d="M 394.85 531.98 L 605.15 531.98 L 500 359.37 Z" fill="rgba(212,175,55,0.07)" />
+    <path id="primary_tri_U1" d="M 257.46 560.62 L 742.54 560.62 L 500 250 Z" fill="rgba(212,175,55,0.08)" />
+    <path id="primary_tri_U2" d="M 320.66 619.81 L 679.34 619.81 L 500 320.27 Z" fill="rgba(212,175,55,0.08)" />
+    <path id="primary_tri_U3" d="M 371.79 675.09 L 628.21 675.09 L 500 433.02 Z" fill="rgba(212,175,55,0.08)" />
+    <path id="primary_tri_U4" d="M 412.38 526.65 L 587.63 526.65 L 500 382.81 Z" fill="rgba(212,175,55,0.08)" />
 
     <!-- 5 Downward Shakti Triangles (Prakriti) -->
-    <path id="primary_tri_D1" d="M 210.97 419.62 L 789.03 419.62 L 500 800 Z" fill="rgba(245,158,11,0.09)" />
-    <path id="primary_tri_D2" d="M 292.95 359.37 L 707.05 359.37 L 500 710.11 Z" fill="rgba(245,158,11,0.09)" />
-    <path id="primary_tri_D3" d="M 321.46 284.32 L 678.54 284.32 L 500 531.98 Z" fill="rgba(245,158,11,0.09)" />
-    <path id="primary_tri_D4" d="M 399.05 452.92 L 600.95 452.92 L 500 643.77 Z" fill="rgba(245,158,11,0.09)" />
+    <path id="primary_tri_D1" d="M 259.14 433.02 L 740.86 433.02 L 500 750 Z" fill="rgba(245,158,11,0.09)" />
+    <path id="primary_tri_D2" d="M 327.46 382.81 L 672.54 382.81 L 500 675.09 Z" fill="rgba(245,158,11,0.09)" />
+    <path id="primary_tri_D3" d="M 351.22 320.27 L 648.78 320.27 L 500 526.65 Z" fill="rgba(245,158,11,0.09)" />
+    <path id="primary_tri_D4" d="M 415.88 460.77 L 584.13 460.77 L 500 619.81 Z" fill="rgba(245,158,11,0.09)" />
     
     <!-- Central Innermost Downward Triangle (Kamakala Mula Trikona) -->
-    <path id="primary_tri_D5_central" d="M 423.84 484.39 L 576.16 484.39 L 500 572.74 Z" fill="rgba(255,215,0,0.32)" stroke="#FFE066" stroke-width="2.6" />
+    <path id="primary_tri_D5_central" d="M 436.53 486.99 L 563.47 486.99 L 500 560.62 Z" fill="rgba(255,215,0,0.32)" stroke="#FFE066" stroke-width="2.6" />
   </g>
 
   <!-- 8. CENTRAL BINDU (MAHABINDU SINGULARITY) -->
   <g id="avarana_9_bindu">
-    <circle cx="500" cy="500" r="22" fill="rgba(255,215,0,0.15)" stroke="#FFE066" stroke-width="1.2" stroke-dasharray="3 2" />
-    <circle cx="500" cy="500" r="13" fill="none" stroke="#FFD700" stroke-width="1.8" />
-    <circle cx="500" cy="500" r="7" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="1.6" />
+    <circle cx="500" cy="500" r="20" fill="rgba(255,215,0,0.15)" stroke="#FFE066" stroke-width="1.2" stroke-dasharray="3 2" />
+    <circle cx="500" cy="500" r="12" fill="none" stroke="#FFD700" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="6.5" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="1.5" />
   </g>
 </svg>
