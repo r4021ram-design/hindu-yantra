@@ -275,11 +275,68 @@ curl.exe -s -o /dev/null -w "%{http_code}" "http://127.0.0.1:3001/yantras?id=${y
 
 ---
 
-## 5. Definition of Done for Any Yantra Contribution
+## 5. Canonical Parametric Ogee Lotus Petal Algorithm (पद्म-मुकुल गणितीय सूत्र)
+
+To generate authentic, non-overlapping, hand-drawn quality Vedic lotus petals (as seen in classical Shilpa Shastra manuscripts and temple copperplates):
+
+```typescript
+function generateOgeePetals(n: number, rBase: number, rTip: number, cx = 500, cy = 500) {
+  const step = 360 / n;
+  const halfStep = step / 2;
+  const toRad = (deg: number) => deg * Math.PI / 180;
+  const petals = [];
+
+  for (let i = 0; i < n; i++) {
+    const midDeg = i * step; // North-centered (0, 45, 90...)
+    const startDeg = midDeg - halfStep;
+    const endDeg = midDeg + halfStep;
+
+    // Valley endpoints seated on the base circle
+    const v1x = cx + rBase * Math.sin(toRad(startDeg));
+    const v1y = cy - rBase * Math.cos(toRad(startDeg));
+    const v2x = cx + rBase * Math.sin(toRad(endDeg));
+    const v2y = cy - rBase * Math.cos(toRad(endDeg));
+
+    // Sharp lotus apex touching outer ring
+    const tx = cx + rTip * Math.sin(toRad(midDeg));
+    const ty = cy - rTip * Math.cos(toRad(midDeg));
+
+    // Ogee inflection control points
+    const rCp1 = rBase + (rTip - rBase) * 0.45;
+    const cp1x = cx + rCp1 * Math.sin(toRad(midDeg - halfStep * 0.92));
+    const cp1y = cy - rCp1 * Math.cos(toRad(midDeg - halfStep * 0.92));
+
+    const rCp2 = rTip - (rTip - rBase) * 0.30;
+    const cp2x = cx + rCp2 * Math.sin(toRad(midDeg - halfStep * 0.25));
+    const cp2y = cy - rCp2 * Math.cos(toRad(midDeg - halfStep * 0.25));
+
+    const cp3x = cx + rCp2 * Math.sin(toRad(midDeg + halfStep * 0.25));
+    const cp3y = cy - rCp2 * Math.cos(toRad(midDeg + halfStep * 0.25));
+
+    const cp4x = cx + rCp1 * Math.sin(toRad(midDeg + halfStep * 0.92));
+    const cp4y = cy - rCp1 * Math.cos(toRad(midDeg + halfStep * 0.92));
+
+    const pathD = `M ${v1x.toFixed(2)} ${v1y.toFixed(2)} C ${cp1x.toFixed(2)} ${cp1y.toFixed(2)}, ${cp2x.toFixed(2)} ${cp2y.toFixed(2)}, ${tx.toFixed(2)} ${ty.toFixed(2)} C ${cp3x.toFixed(2)} ${cp3y.toFixed(2)}, ${cp4x.toFixed(2)} ${cp4y.toFixed(2)}, ${v2x.toFixed(2)} ${v2y.toFixed(2)}`;
+
+    // Central sacred spine (axis line)
+    const baseSpineX = cx + rBase * Math.sin(toRad(midDeg));
+    const baseSpineY = cy - rBase * Math.cos(toRad(midDeg));
+    const spineD = `M ${baseSpineX.toFixed(2)} ${baseSpineY.toFixed(2)} L ${tx.toFixed(2)} ${ty.toFixed(2)}`;
+
+    petals.push({ i, midDeg, pathD, spineD });
+  }
+  return petals;
+}
+```
+
+---
+
+## 6. Definition of Done for Any Yantra Contribution
 
 - [ ] Classified under one of the 18 canonical taxonomy categories in `yantra-taxonomy.ts`.
 - [ ] Lineage-specific source scripture and verse documented.
 - [ ] SVG created at `public/yantras/${id}.svg` with `viewBox="0 0 1000 1000"` and dark consecrated bronze strokes (`#1A0E05` / `#3E1E07`).
+- [ ] Lotus petals conform strictly to the Ogee curvature algorithm (convex belly, concave tip sweep, central spine).
 - [ ] Full profile added to `SHASTRIC_JYOTISH_DATABASE` with Sanskrit verses and translations.
 - [ ] Avarana ray-casting radius thresholds configured.
 - [ ] `npx tsc --noEmit` passes with 0 errors.

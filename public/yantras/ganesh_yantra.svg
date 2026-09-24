@@ -3,11 +3,12 @@
     <!-- Consecrated Dark Antique Bronze Gradients -->
     <linearGradient id="ganeshBronze" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1A0E05" />
-      <stop offset="50%" stop-color="#3E1E07" />
-      <stop offset="100%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#542608" />
+      <stop offset="100%" stop-color="#1C0D04" />
     </linearGradient>
     <radialGradient id="ganeshAura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#D9531E" stop-opacity="0.14" />
+      <stop offset="0%" stop-color="#D9531E" stop-opacity="0.10" />
       <stop offset="100%" stop-color="#D9531E" stop-opacity="0" />
     </radialGradient>
   </defs>
@@ -15,7 +16,7 @@
   <!-- Ambient Saffron-Orange Aura -->
   <circle cx="500" cy="500" r="480" fill="url(#ganeshAura)" />
 
-  <!-- 1. Concentric Bhupura (Outer Sacred Earth Rampart with 4 Portals) -->
+  <!-- 1. Concentric Bhupura (Outer Sacred Earth Rampart with 4 Directional Portals) -->
   <g id="ganesh-bhupura" stroke="url(#ganeshBronze)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
     <!-- Outer Step (Line 1) -->
     <path d="
@@ -31,29 +32,52 @@
     " stroke-width="2.6" />
   </g>
 
-  <!-- 2. Concentric Circles (Trivalaya) -->
+  <!-- 2. Concentric Girdles (Trivalaya) -->
   <g id="ganesh-trivalaya" stroke="url(#ganeshBronze)" fill="none">
     <circle cx="500" cy="500" r="410" stroke-width="2.8" />
     <circle cx="500" cy="500" r="396" stroke-width="1.8" />
     <circle cx="500" cy="500" r="382" stroke-width="2.6" />
   </g>
 
-  <!-- 3. Ashtadala Padma (8-Petal Lotus of Ashta-Vinayaka & Ashta-Siddhi) -->
-  <g id="ganesh-lotus" stroke="url(#ganeshBronze)" stroke-width="2.6" fill="none">
-    <g transform="rotate(0 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
-    <g transform="rotate(45 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
-    <g transform="rotate(90 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
-    <g transform="rotate(135 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
-    <g transform="rotate(180 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
-    <g transform="rotate(225 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
-    <g transform="rotate(270 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
-    <g transform="rotate(315 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+  <!-- 3. Canonical Ashtadala Padma (Exact Ogee Lotus Petals matching Classical Sketch) -->
+  <g id="ganesh-ashtadala" stroke="url(#ganeshBronze)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Petal 0 (North / 0°) -->
+    <path d="M 400.50 259.79 C 387.11 205.92, 467.03 157.58, 500.00 118.00 C 532.97 157.58, 612.89 205.92, 599.50 259.79" stroke-width="2.8" />
+    <line x1="500.00" y1="260.00" x2="500.00" y2="118.00" stroke-width="1.8" opacity="0.75" />
+
+    <!-- Petal 1 (North-East / 45°) -->
+    <path d="M 599.50 259.79 C 628.12 212.23, 718.81 234.56, 770.11 229.89 C 765.44 281.19, 787.77 371.88, 740.21 400.50" stroke-width="2.8" />
+    <line x1="683.85" y1="316.15" x2="770.11" y2="229.89" stroke-width="1.8" opacity="0.75" />
+
+    <!-- Petal 2 (East / 90°) -->
+    <path d="M 740.21 400.50 C 794.08 387.11, 842.42 467.03, 882.00 500.00 C 842.42 532.97, 794.08 612.89, 740.21 599.50" stroke-width="2.8" />
+    <line x1="760.00" y1="500.00" x2="882.00" y2="500.00" stroke-width="1.8" opacity="0.75" />
+
+    <!-- Petal 3 (South-East / 135°) -->
+    <path d="M 740.21 599.50 C 787.77 628.12, 765.44 718.81, 770.11 770.11 C 718.81 765.44, 628.12 787.77, 599.50 740.21" stroke-width="2.8" />
+    <line x1="683.85" y1="683.85" x2="770.11" y2="770.11" stroke-width="1.8" opacity="0.75" />
+
+    <!-- Petal 4 (South / 180°) -->
+    <path d="M 599.50 740.21 C 612.89 794.08, 532.97 842.42, 500.00 882.00 C 467.03 842.42, 387.11 794.08, 400.50 740.21" stroke-width="2.8" />
+    <line x1="500.00" y1="760.00" x2="500.00" y2="882.00" stroke-width="1.8" opacity="0.75" />
+
+    <!-- Petal 5 (South-West / 225°) -->
+    <path d="M 400.50 740.21 C 371.88 787.77, 281.19 765.44, 229.89 770.11 C 234.56 718.81, 212.23 628.12, 259.79 599.50" stroke-width="2.8" />
+    <line x1="316.15" y1="683.85" x2="229.89" y2="770.11" stroke-width="1.8" opacity="0.75" />
+
+    <!-- Petal 6 (West / 270°) -->
+    <path d="M 259.79 599.50 C 205.92 612.89, 157.58 532.97, 118.00 500.00 C 157.58 467.03, 205.92 387.11, 259.79 400.50" stroke-width="2.8" />
+    <line x1="240.00" y1="500.00" x2="118.00" y2="500.00" stroke-width="1.8" opacity="0.75" />
+
+    <!-- Petal 7 (North-West / 315°) -->
+    <path d="M 259.79 400.50 C 212.23 371.88, 234.56 281.19, 229.89 229.89 C 281.19 234.56, 371.88 212.23, 400.50 259.79" stroke-width="2.8" />
+    <line x1="316.15" y1="316.15" x2="229.89" y2="229.89" stroke-width="1.8" opacity="0.75" />
   </g>
 
-  <!-- Intermediate Circle -->
+  <!-- 4. Inner Base Circle -->
   <circle cx="500" cy="500" r="260" stroke="url(#ganeshBronze)" stroke-width="2.6" fill="none" />
 
-  <!-- 4. Sacred Shatkona (Interlocking Shiva-Shakti Hexagram of Cosmic Intellect) -->
+  <!-- 5. Sacred Shatkona (Interlocking Shiva-Shakti Hexagram of Cosmic Intellect) -->
   <g id="ganesh-shatkona" stroke="url(#ganeshBronze)" stroke-width="2.8" fill="none">
     <!-- Upward Shiva Triangle -->
     <polygon points="500,265 315,585 685,585" />
@@ -61,10 +85,10 @@
     <polygon points="500,695 315,375 685,375" />
   </g>
 
-  <!-- 5. Central Inverted Triangle (Trikona of Divine Power) -->
+  <!-- 6. Central Inverted Triangle (Trikona of Divine Power) -->
   <polygon points="500,600 420,450 580,450" stroke="url(#ganeshBronze)" stroke-width="2.8" fill="none" />
 
-  <!-- 6. Sacred Beejakshara & Central Bindu -->
+  <!-- 7. Sacred Beejakshara & Central Bindu -->
   <circle cx="500" cy="500" r="14" fill="#8C2300" opacity="0.25" className="animate-pulse" />
   <circle cx="500" cy="500" r="8" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
 

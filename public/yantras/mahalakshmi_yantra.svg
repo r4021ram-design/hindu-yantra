@@ -3,11 +3,12 @@
     <!-- Consecrated Dark Antique Bronze Gradients -->
     <linearGradient id="lakshmiBronze" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1A0E05" />
-      <stop offset="50%" stop-color="#3E1E07" />
-      <stop offset="100%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#542608" />
+      <stop offset="100%" stop-color="#1C0D04" />
     </linearGradient>
     <radialGradient id="lakshmiAura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#B38226" stop-opacity="0.14" />
+      <stop offset="0%" stop-color="#B38226" stop-opacity="0.10" />
       <stop offset="100%" stop-color="#B38226" stop-opacity="0" />
     </radialGradient>
   </defs>
@@ -38,39 +39,54 @@
     <circle cx="500" cy="500" r="382" stroke-width="2.6" />
   </g>
 
-  <!-- 3. Shodashadala Padma (16-Petal Outer Lotus) -->
-  <g id="lakshmi-outer-lotus" stroke="url(#lakshmiBronze)" stroke-width="2.4" fill="none">
-    <g transform="rotate(0 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(22.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(45 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(67.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(90 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(112.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(135 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(157.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(180 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(202.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(225 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(247.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(270 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(292.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(315 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
-    <g transform="rotate(337.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+  <!-- 3. Canonical Shodashadala Padma (16 Outer Ogee Lotus Petals) -->
+  <g id="lakshmi-outer-lotus" stroke="url(#lakshmiBronze)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 441.47 205.76 C 439.47 168.58, 482.46 143.03, 500.00 118.00 C 517.54 143.03, 560.53 168.58, 558.53 205.76" stroke-width="2.4" />
+    <path d="M 558.53 205.76 C 570.91 170.65, 620.40 163.49, 646.19 147.08 C 652.81 176.91, 682.75 216.97, 666.67 250.56" stroke-width="2.4" />
+    <path d="M 666.67 250.56 C 691.55 222.85, 740.02 235.18, 770.11 229.89 C 764.82 259.98, 777.15 308.45, 749.44 333.33" stroke-width="2.4" />
+    <path d="M 749.44 333.33 C 783.03 317.25, 823.09 347.19, 852.92 353.81 C 836.51 379.60, 829.35 429.09, 794.24 441.47" stroke-width="2.4" />
+    <path d="M 794.24 441.47 C 831.42 439.47, 856.97 482.46, 882.00 500.00 C 856.97 517.54, 831.42 560.53, 794.24 558.53" stroke-width="2.4" />
+    <path d="M 794.24 558.53 C 829.35 570.91, 836.51 620.40, 852.92 646.19 C 823.09 652.81, 783.03 682.75, 749.44 666.67" stroke-width="2.4" />
+    <path d="M 749.44 666.67 C 777.15 691.55, 764.82 740.02, 770.11 770.11 C 740.02 764.82, 691.55 777.15, 666.67 749.44" stroke-width="2.4" />
+    <path d="M 666.67 749.44 C 682.75 783.03, 652.81 823.09, 646.19 852.92 C 620.40 836.51, 570.91 829.35, 558.53 794.24" stroke-width="2.4" />
+    <path d="M 558.53 794.24 C 560.53 831.42, 517.54 856.97, 500.00 882.00 C 482.46 856.97, 439.47 831.42, 441.47 794.24" stroke-width="2.4" />
+    <path d="M 441.47 794.24 C 429.09 829.35, 379.60 836.51, 353.81 852.92 C 347.19 823.09, 317.25 783.03, 333.33 749.44" stroke-width="2.4" />
+    <path d="M 333.33 749.44 C 308.45 777.15, 259.98 764.82, 229.89 770.11 C 235.18 740.02, 222.85 691.55, 250.56 666.67" stroke-width="2.4" />
+    <path d="M 250.56 666.67 C 216.97 682.75, 176.91 652.81, 147.08 646.19 C 163.49 620.40, 170.65 570.91, 205.76 558.53" stroke-width="2.4" />
+    <path d="M 205.76 558.53 C 168.58 560.53, 143.03 517.54, 118.00 500.00 C 143.03 482.46, 168.58 439.47, 205.76 441.47" stroke-width="2.4" />
+    <path d="M 205.76 441.47 C 170.65 429.09, 163.49 379.60, 147.08 353.81 C 176.91 347.19, 216.97 317.25, 250.56 333.33" stroke-width="2.4" />
+    <path d="M 250.56 333.33 C 222.85 308.45, 235.18 259.98, 229.89 229.89 C 259.98 235.18, 308.45 222.85, 333.33 250.56" stroke-width="2.4" />
+    <path d="M 333.33 250.56 C 317.25 216.97, 347.19 176.91, 353.81 147.08 C 379.60 163.49, 429.09 170.65, 441.47 205.76" stroke-width="2.4" />
   </g>
 
-  <!-- Intermediate Circle -->
+  <!-- Intermediate Ring -->
   <circle cx="500" cy="500" r="300" stroke="url(#lakshmiBronze)" stroke-width="2.6" fill="none" />
 
-  <!-- 4. Ashtadala Padma (8-Petal Inner Lotus of Ashta-Lakshmi) -->
-  <g id="lakshmi-inner-lotus" stroke="url(#lakshmiBronze)" stroke-width="2.6" fill="none">
-    <g transform="rotate(0 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
-    <g transform="rotate(45 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
-    <g transform="rotate(90 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
-    <g transform="rotate(135 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
-    <g transform="rotate(180 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
-    <g transform="rotate(225 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
-    <g transform="rotate(270 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
-    <g transform="rotate(315 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+  <!-- 4. Canonical Ashtadala Padma (8 Inner Ogee Lotus Petals of Ashta-Lakshmi) -->
+  <g id="lakshmi-inner-lotus" stroke="url(#lakshmiBronze)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 419.64 305.99 C 411.45 265.67, 473.24 228.31, 500.00 200.00 C 526.76 228.31, 588.55 265.67, 580.36 305.99" stroke-width="2.6" />
+    <line x1="500.00" y1="290.00" x2="500.00" y2="200.00" stroke-width="1.6" opacity="0.75" />
+
+    <path d="M 580.36 305.99 C 603.08 271.69, 673.19 288.97, 712.13 287.87 C 711.03 326.81, 728.31 396.92, 694.01 419.64" stroke-width="2.6" />
+    <line x1="648.49" y1="351.51" x2="712.13" y2="287.87" stroke-width="1.6" opacity="0.75" />
+
+    <path d="M 694.01 419.64 C 734.33 411.45, 771.69 473.24, 800.00 500.00 C 771.69 526.76, 734.33 588.55, 694.01 580.36" stroke-width="2.6" />
+    <line x1="710.00" y1="500.00" x2="800.00" y2="500.00" stroke-width="1.6" opacity="0.75" />
+
+    <path d="M 694.01 580.36 C 728.31 603.08, 711.03 673.19, 712.13 712.13 C 673.19 711.03, 603.08 728.31, 580.36 694.01" stroke-width="2.6" />
+    <line x1="648.49" y1="648.49" x2="712.13" y2="712.13" stroke-width="1.6" opacity="0.75" />
+
+    <path d="M 580.36 694.01 C 588.55 734.33, 526.76 771.69, 500.00 800.00 C 473.24 771.69, 411.45 734.33, 419.64 694.01" stroke-width="2.6" />
+    <line x1="500.00" y1="710.00" x2="500.00" y2="800.00" stroke-width="1.6" opacity="0.75" />
+
+    <path d="M 419.64 694.01 C 396.92 728.31, 326.81 711.03, 287.87 712.13 C 288.97 673.19, 271.69 603.08, 305.99 580.36" stroke-width="2.6" />
+    <line x1="351.51" y1="648.49" x2="287.87" y2="712.13" stroke-width="1.6" opacity="0.75" />
+
+    <path d="M 305.99 580.36 C 265.67 588.55, 228.31 526.76, 200.00 500.00 C 228.31 473.24, 265.67 411.45, 305.99 419.64" stroke-width="2.6" />
+    <line x1="290.00" y1="500.00" x2="200.00" y2="500.00" stroke-width="1.6" opacity="0.75" />
+
+    <path d="M 305.99 419.64 C 271.69 396.92, 288.97 326.81, 287.87 287.87 C 326.81 288.97, 396.92 271.69, 419.64 305.99" stroke-width="2.6" />
+    <line x1="351.51" y1="351.51" x2="287.87" y2="287.87" stroke-width="1.6" opacity="0.75" />
   </g>
 
   <!-- Ring Enclosing Shatkona -->
@@ -88,9 +104,7 @@
   <circle cx="500" cy="500" r="75" stroke="url(#lakshmiBronze)" stroke-width="2.2" fill="none" />
 
   <!-- 6. Sacred Beejakshara & Supreme Bindu -->
-  <!-- Radiance Aura -->
   <circle cx="500" cy="500" r="16" fill="#8C2300" opacity="0.2" className="animate-pulse" />
-  <!-- Central Bindu -->
   <circle cx="500" cy="500" r="8" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
 
   <!-- Shreem Beejakshara Inscription -->
