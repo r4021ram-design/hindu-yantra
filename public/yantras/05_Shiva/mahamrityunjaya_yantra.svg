@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Consecrated Dark Antique Bronze Gradients -->
+    <linearGradient id="mrityunjayaBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="50%" stop-color="#3E1E07" />
+      <stop offset="100%" stop-color="#1A0E05" />
+    </linearGradient>
+    <radialGradient id="mrityunjayaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2A4B7C" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#2A4B7C" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Neelkantha Blue-Smoke Aura -->
+  <circle cx="500" cy="500" r="480" fill="url(#mrityunjayaAura)" />
+
+  <!-- 1. Concentric Bhupura (Outer Sacred Earth Rampart with 4 Portals) -->
+  <g id="mrityunjaya-bhupura" stroke="url(#mrityunjayaBronze)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+
+  <!-- 2. Concentric Circles (Trivalaya) -->
+  <g id="mrityunjaya-trivalaya" stroke="url(#mrityunjayaBronze)" fill="none">
+    <circle cx="500" cy="500" r="410" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="396" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="382" stroke-width="2.6" />
+  </g>
+
+  <!-- 3. Ashtadala Padma (8-Petal Lotus of Ashta-Murtis of Shiva) -->
+  <g id="mrityunjaya-lotus" stroke="url(#mrityunjayaBronze)" stroke-width="2.6" fill="none">
+    <g transform="rotate(0 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+    <g transform="rotate(45 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+    <g transform="rotate(90 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+    <g transform="rotate(135 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+    <g transform="rotate(180 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+    <g transform="rotate(225 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+    <g transform="rotate(270 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+    <g transform="rotate(315 500 500)"><path d="M 460 382 C 460 315 420 280 500 220 C 580 280 540 315 540 382 Z" /></g>
+  </g>
+
+  <!-- Intermediate Circle -->
+  <circle cx="500" cy="500" r="265" stroke="url(#mrityunjayaBronze)" stroke-width="2.6" fill="none" />
+
+  <!-- 4. Sacred Shatkona (Interlocking Shiva-Shakti Hexagram of Absolute Immortality) -->
+  <g id="mrityunjaya-shatkona" stroke="url(#mrityunjayaBronze)" stroke-width="2.8" fill="none">
+    <!-- Upward Shiva Triangle -->
+    <polygon points="500,265 315,585 685,585" />
+    <!-- Downward Shakti Triangle -->
+    <polygon points="500,695 315,375 685,375" />
+  </g>
+
+  <!-- Inner Circle Enclosing Amrita Bindu -->
+  <circle cx="500" cy="500" r="95" stroke="url(#mrityunjayaBronze)" stroke-width="2.2" fill="none" />
+
+  <!-- 5. Amrita Bindu & Sacred Beejakshara -->
+  <circle cx="500" cy="500" r="16" fill="#1E3A5F" opacity="0.25" className="animate-pulse" />
+  <circle cx="500" cy="500" r="8" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
+
+  <!-- Mahamrityunjaya Sanjivani Beej Inscription -->
+  <text x="500" y="468" text-anchor="middle" fill="#0F0C08" font-size="22" font-family="'Cinzel', serif" font-weight="900">ॐ हौं जूं सः</text>
+  <text x="500" y="542" text-anchor="middle" fill="#541B08" font-size="13" font-family="'Cinzel', serif" font-weight="bold">त्र्यम्बकं यजामहे</text>
+</svg>

@@ -787,6 +787,11 @@ function YantraExplorerInner() {
                   <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-[#FDECE5] text-[#8C2300] border border-[#D9531E]/40 font-bold">
                     {currentYantra.presidingDeity}
                   </span>
+                  {currentYantra.lineageAttribution && (
+                    <span className="text-[10.5px] font-sans px-2.5 py-0.5 rounded-full bg-[#FAF3E8] text-[#542608] border border-[#C9A46E]/60 font-medium">
+                      📜 {currentYantra.lineageAttribution}
+                    </span>
+                  )}
                 </div>
 
                 {/* 2D/3D Switcher, Construction Mode, Zoom & Canvas Expand */}

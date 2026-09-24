@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Consecrated Dark Antique Bronze Gradients -->
+    <linearGradient id="kuberBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="50%" stop-color="#3E1E07" />
+      <stop offset="100%" stop-color="#1A0E05" />
+    </linearGradient>
+    <radialGradient id="kuberAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6B3508" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#6B3508" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Sacred Aura -->
+  <circle cx="500" cy="500" r="480" fill="url(#kuberAura)" />
+
+  <!-- 1. Concentric Bhupura (Outer Sacred Earth Rampart with 4 Portals) -->
+  <g id="kuber-bhupura" stroke="url(#kuberBronze)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+
+  <!-- 2. Concentric Circles (Trivalaya) -->
+  <g id="kuber-trivalaya" stroke="url(#kuberBronze)" fill="none">
+    <circle cx="500" cy="500" r="410" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="396" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="382" stroke-width="2.6" />
+  </g>
+
+  <!-- 3. Ashtadala Padma (8-Petal Sacred Lotus of Ashta-Nidhi) -->
+  <g id="kuber-lotus" stroke="url(#kuberBronze)" stroke-width="2.6" fill="none">
+    <!-- Petal 1 (North / 0 deg) -->
+    <path d="M 458 382 C 458 320 420 280 500 230 C 580 280 542 320 542 382 Z" />
+    <!-- Petal 2 (NE / 45 deg) -->
+    <path d="M 500 500 m -42 -118 C 500 500 500 500 500 500" />
+    <!-- Generate 8 symmetric petals via transform rotate -->
+    <g transform="rotate(0 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+    <g transform="rotate(45 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+    <g transform="rotate(90 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+    <g transform="rotate(135 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+    <g transform="rotate(180 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+    <g transform="rotate(225 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+    <g transform="rotate(270 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+    <g transform="rotate(315 500 500)"><path d="M 460 382 C 460 320 420 280 500 230 C 580 280 540 320 540 382 Z" /></g>
+  </g>
+
+  <!-- 4. Inner Ring Enclosing Sacred Magic Square -->
+  <g id="kuber-inner-rings" stroke="url(#kuberBronze)" fill="none">
+    <circle cx="500" cy="500" r="265" stroke-width="2.6" />
+    <circle cx="500" cy="500" r="252" stroke-width="1.8" />
+  </g>
+
+  <!-- 5. Yaksharaja Kubera 3x3 Magic Square Matrix (All rows/cols/diagonals = 57) -->
+  <g id="kuber-magic-square" stroke="url(#kuberBronze)">
+    <!-- Outer Grid Border -->
+    <rect x="335" y="335" width="330" height="330" fill="none" stroke-width="3" rx="4" />
+    <!-- Internal Horizontal Dividers -->
+    <line x1="335" y1="445" x2="665" y2="445" stroke-width="2.6" />
+    <line x1="335" y1="555" x2="665" y2="555" stroke-width="2.6" />
+    <!-- Internal Vertical Dividers -->
+    <line x1="445" y1="335" x2="445" y2="665" stroke-width="2.6" />
+    <line x1="555" y1="335" x2="555" y2="665" stroke-width="2.6" />
+
+    <!-- Sacred Sanskrit Numerals (Devanagari Inscriptions) -->
+    <!-- Row 1: 20 (२०), 9 (९), 28 (२८) -> Sum = 57 -->
+    <text x="390" y="405" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">२०</text>
+    <text x="500" y="405" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">९</text>
+    <text x="610" y="405" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">२८</text>
+
+    <!-- Row 2: 25 (२५), 19 (१९), 13 (१३) -> Sum = 57 -->
+    <text x="390" y="515" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">२५</text>
+    <text x="500" y="515" text-anchor="middle" fill="#541B08" font-size="36" font-family="'Cinzel', serif" font-weight="900">१९</text>
+    <text x="610" y="515" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">१३</text>
+
+    <!-- Row 3: 12 (१२), 29 (२९), 16 (१६) -> Sum = 57 -->
+    <text x="390" y="625" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">१२</text>
+    <text x="500" y="625" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">२९</text>
+    <text x="610" y="625" text-anchor="middle" fill="#0F0C08" font-size="34" font-family="'Cinzel', serif" font-weight="900">१६</text>
+  </g>
+
+  <!-- 6. Central Parama Bindu -->
+  <circle cx="500" cy="500" r="6" fill="#8C2300" stroke="#1A0E05" stroke-width="2" />
+</svg>

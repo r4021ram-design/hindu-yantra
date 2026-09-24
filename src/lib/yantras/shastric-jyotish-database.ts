@@ -54,6 +54,8 @@ export interface ShastricCitation {
 
 export interface YantraShastricEntry {
   id: string;
+  taxonomyCategory?: string;
+  lineageAttribution?: string;
   nameSanskrit: string;
   nameHindi: string;
   nameEnglish: string;
@@ -82,6 +84,8 @@ export interface YantraShastricEntry {
 export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
   sri_yantra: {
     id: 'sri_yantra',
+    taxonomyCategory: 'supreme_sri_chakra',
+    lineageAttribution: 'श्रीविद्या साम्बव तंत्र (कादि व हादि मत — सौन्दर्यलहरी एवं तन्त्रराज तन्त्र)',
     nameSanskrit: 'श्रीचक्र यन्त्रम् (महामेरु)',
     nameHindi: 'श्री यन्त्र (यन्त्रराज)',
     nameEnglish: 'Shri Yantra (Sri Chakra)',
@@ -387,6 +391,8 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
 
   kuber_yantra: {
     id: 'kuber_yantra',
+    taxonomyCategory: 'lakshmi',
+    lineageAttribution: 'यक्ष तन्त्र एवं मन्त्र महोदधि परम्परा',
     nameSanskrit: 'श्री कुबेर यन्त्रम् (धनपति यन्त्र)',
     nameHindi: 'कुबेर यन्त्र (यक्षराज यन्त्र)',
     nameEnglish: 'Kuber Yantra (Sacred Wealth Matrix)',
@@ -489,6 +495,8 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
 
   mahalakshmi_yantra: {
     id: 'mahalakshmi_yantra',
+    taxonomyCategory: 'lakshmi',
+    lineageAttribution: 'ऋग्वेदोक्त श्रीसूक्त एवं लक्ष्मी तंत्र आगम',
     nameSanskrit: 'श्रीमहालक्ष्मी यन्त्रम्',
     nameHindi: 'महालक्ष्मी यन्त्र',
     nameEnglish: 'Maha Lakshmi Yantra',
@@ -590,6 +598,8 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
 
   ganesh_yantra: {
     id: 'ganesh_yantra',
+    taxonomyCategory: 'ganesha',
+    lineageAttribution: 'शारदा तिलक एवं गाणपत्य आगम परम्परा',
     nameSanskrit: 'श्री गणेश यन्त्रम् (विघ्नहर्ता यन्त्र)',
     nameHindi: 'गणेश यन्त्र',
     nameEnglish: 'Ganesh Yantra',
@@ -703,6 +713,8 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
 
   mahamrityunjaya_yantra: {
     id: 'mahamrityunjaya_yantra',
+    taxonomyCategory: 'shiva',
+    lineageAttribution: 'रुद्रयामल, नेत्र तन्त्र एवं मार्कण्डेय पुराण परम्परा',
     nameSanskrit: 'महामृत्युंजय यन्त्रम् (संजीवनी यन्त्र)',
     nameHindi: 'महामृत्युंजय यन्त्र',
     nameEnglish: 'Maha Mrityunjaya Yantra',
@@ -826,6 +838,8 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
 
   vastu_yantra: {
     id: 'vastu_yantra',
+    taxonomyCategory: 'vastu',
+    lineageAttribution: 'बृहत्संहिता एवं मयमतम् वास्तुशास्त्र आगम',
     nameSanskrit: 'श्री वास्तु दोष निवारण यन्त्रम्',
     nameHindi: 'वास्तु यन्त्र',
     nameEnglish: 'Vastu Dosh Nivarana Yantra',

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Consecrated Dark Antique Bronze Gradients -->
+    <linearGradient id="lakshmiBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="50%" stop-color="#3E1E07" />
+      <stop offset="100%" stop-color="#1A0E05" />
+    </linearGradient>
+    <radialGradient id="lakshmiAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B38226" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#B38226" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Golden Aura -->
+  <circle cx="500" cy="500" r="480" fill="url(#lakshmiAura)" />
+
+  <!-- 1. Concentric Bhupura (Outer Sacred Earth Rampart with 4 Portals) -->
+  <g id="lakshmi-bhupura" stroke="url(#lakshmiBronze)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+
+  <!-- 2. Concentric Circles (Trivalaya) -->
+  <g id="lakshmi-trivalaya" stroke="url(#lakshmiBronze)" fill="none">
+    <circle cx="500" cy="500" r="410" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="396" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="382" stroke-width="2.6" />
+  </g>
+
+  <!-- 3. Shodashadala Padma (16-Petal Outer Lotus) -->
+  <g id="lakshmi-outer-lotus" stroke="url(#lakshmiBronze)" stroke-width="2.4" fill="none">
+    <g transform="rotate(0 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(22.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(45 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(67.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(90 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(112.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(135 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(157.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(180 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(202.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(225 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(247.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(270 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(292.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(315 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+    <g transform="rotate(337.5 500 500)"><path d="M 470 382 C 470 330 440 310 500 270 C 560 310 530 330 530 382 Z" /></g>
+  </g>
+
+  <!-- Intermediate Circle -->
+  <circle cx="500" cy="500" r="300" stroke="url(#lakshmiBronze)" stroke-width="2.6" fill="none" />
+
+  <!-- 4. Ashtadala Padma (8-Petal Inner Lotus of Ashta-Lakshmi) -->
+  <g id="lakshmi-inner-lotus" stroke="url(#lakshmiBronze)" stroke-width="2.6" fill="none">
+    <g transform="rotate(0 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+    <g transform="rotate(45 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+    <g transform="rotate(90 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+    <g transform="rotate(135 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+    <g transform="rotate(180 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+    <g transform="rotate(225 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+    <g transform="rotate(270 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+    <g transform="rotate(315 500 500)"><path d="M 465 300 C 465 240 430 220 500 170 C 570 220 535 240 535 300 Z" /></g>
+  </g>
+
+  <!-- Ring Enclosing Shatkona -->
+  <circle cx="500" cy="500" r="210" stroke="url(#lakshmiBronze)" stroke-width="2.6" fill="none" />
+
+  <!-- 5. Sacred Shatkona (Interlocking Shiva-Shakti Hexagram of Absolute Auspiciousness) -->
+  <g id="lakshmi-shatkona" stroke="url(#lakshmiBronze)" stroke-width="2.8" fill="none">
+    <!-- Upward Shiva Triangle -->
+    <polygon points="500,310 335,595 665,595" />
+    <!-- Downward Shakti Triangle -->
+    <polygon points="500,690 335,405 665,405" />
+  </g>
+
+  <!-- Central Inner Ring -->
+  <circle cx="500" cy="500" r="75" stroke="url(#lakshmiBronze)" stroke-width="2.2" fill="none" />
+
+  <!-- 6. Sacred Beejakshara & Supreme Bindu -->
+  <!-- Radiance Aura -->
+  <circle cx="500" cy="500" r="16" fill="#8C2300" opacity="0.2" className="animate-pulse" />
+  <!-- Central Bindu -->
+  <circle cx="500" cy="500" r="8" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
+
+  <!-- Shreem Beejakshara Inscription -->
+  <text x="500" y="475" text-anchor="middle" fill="#0F0C08" font-size="26" font-family="'Cinzel', serif" font-weight="900">श्रीं</text>
+  <text x="500" y="538" text-anchor="middle" fill="#541B08" font-size="14" font-family="'Cinzel', serif" font-weight="bold">महालक्ष्म्यै नमः</text>
+</svg>
