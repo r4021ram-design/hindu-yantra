@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sriGoldMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#8B6508" />
+    </linearGradient>
+    <linearGradient id="sriGoldAccent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A3" />
+      <stop offset="50%" stop-color="#E5C158" />
+      <stop offset="100%" stop-color="#C59B27" />
+    </linearGradient>
+    <radialGradient id="binduRadiance" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#FFE875" />
+      <stop offset="70%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </radialGradient>
+  </defs>
+
+  <!-- 1. BHUPURA (EARTH RAMPART & 4 PORTALS) -->
+  <g id="avarana_1_bhupura" stroke="url(#sriGoldMain)" stroke-width="2.4" fill="none" stroke-linejoin="round">
+    <path id="bhupura_outer_quad" d="M 60 60 L 420.8 60 L 420.8 24.8 L 579.2 24.8 L 579.2 60 L 940 60 L 940 420.8 L 975.2 420.8 L 975.2 579.2 L 940 579.2 L 940 940 L 579.2 940 L 579.2 975.2 L 420.8 975.2 L 420.8 940 L 60 940 L 60 579.2 L 24.8 579.2 L 24.8 420.8 L 60 420.8 Z M 79.8 79.8 L 440.6 79.8 L 440.6 44.6 L 559.4 44.6 L 559.4 79.8 L 920.2 79.8 L 920.2 440.6 L 955.4 440.6 L 955.4 559.4 L 920.2 559.4 L 920.2 920.2 L 559.4 920.2 L 559.4 955.4 L 440.6 955.4 L 440.6 920.2 L 79.8 920.2 L 79.8 559.4 L 44.6 559.4 L 44.6 440.6 L 79.8 440.6 Z M 99.6 99.6 L 460.4 99.6 L 460.4 64.4 L 539.6 64.4 L 539.6 99.6 L 900.4 99.6 L 900.4 460.4 L 935.6 460.4 L 935.6 539.6 L 900.4 539.6 L 900.4 900.4 L 539.6 900.4 L 539.6 935.6 L 460.4 935.6 L 460.4 900.4 L 99.6 900.4 L 99.6 539.6 L 64.4 539.6 L 64.4 460.4 L 99.6 460.4 Z" />
+  </g>
+
+  <!-- 2. OUTER CONCENTRIC CIRCLE RINGS -->
+  <g id="transition_outer_circles" stroke="url(#sriGoldAccent)" stroke-width="1.8" fill="none">
+    <circle cx="500" cy="500" r="356" />
+    <circle cx="500" cy="500" r="348" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" />
+  </g>
+
+  <!-- 3. SHODASHA DALA (16 LOTUS PETALS) -->
+  <g id="avarana_2_shodashadala" stroke="url(#sriGoldMain)" stroke-width="2.2" fill="rgba(212,175,55,0.08)" stroke-linejoin="round">
+    <path id="lotus_16_petals" d="M 444.2 219.5 Q 463.09 165.63, 500 144 Q 536.91 165.63, 555.8 219.5 M 555.8 219.5 Q 593.85 176.96, 636.24 171.1 Q 662.06 205.21, 658.89 262.2 M 658.89 262.2 Q 710.33 237.46, 751.73 248.27 Q 762.54 289.67, 737.8 341.11 M 737.8 341.11 Q 794.79 337.94, 828.9 363.76 Q 823.04 406.15, 780.5 444.2 M 780.5 444.2 Q 834.37 463.09, 856 500 Q 834.37 536.91, 780.5 555.8 M 780.5 555.8 Q 823.04 593.85, 828.9 636.24 Q 794.79 662.06, 737.8 658.89 M 737.8 658.89 Q 762.54 710.33, 751.73 751.73 Q 710.33 762.54, 658.89 737.8 M 658.89 737.8 Q 662.06 794.79, 636.24 828.9 Q 593.85 823.04, 555.8 780.5 M 555.8 780.5 Q 536.91 834.37, 500 856 Q 463.09 834.37, 444.2 780.5 M 444.2 780.5 Q 406.15 823.04, 363.76 828.9 Q 337.94 794.79, 341.11 737.8 M 341.11 737.8 Q 289.67 762.54, 248.27 751.73 Q 237.46 710.33, 262.2 658.89 M 262.2 658.89 Q 205.21 662.06, 171.1 636.24 Q 176.96 593.85, 219.5 555.8 M 219.5 555.8 Q 165.63 536.91, 144 500 Q 165.63 463.09, 219.5 444.2 M 219.5 444.2 Q 176.96 406.15, 171.1 363.76 Q 205.21 337.94, 262.2 341.11 M 262.2 341.11 Q 237.46 289.67, 248.27 248.27 Q 289.67 237.46, 341.11 262.2 M 341.11 262.2 Q 337.94 205.21, 363.76 171.1 Q 406.15 176.96, 444.2 219.5 " />
+  </g>
+
+  <!-- 4. MIDDLE CONCENTRIC CIRCLE RINGS -->
+  <g id="transition_middle_circles" stroke="url(#sriGoldAccent)" stroke-width="1.8" fill="none">
+    <circle cx="500" cy="500" r="286" />
+    <circle cx="500" cy="500" r="278" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.6" />
+  </g>
+
+  <!-- 5. ASHTA DALA (8 LOTUS PETALS) -->
+  <g id="avarana_3_ashtadala" stroke="url(#sriGoldMain)" stroke-width="2.4" fill="rgba(217,119,6,0.12)" stroke-linejoin="round">
+    <path id="lotus_8_petals" d="M 415.81 296.75 Q 441.64 238.92, 500 214 Q 558.36 238.92, 584.19 296.75 M 584.19 296.75 Q 643.34 274.13, 702.23 297.77 Q 725.87 356.66, 703.25 415.81 M 703.25 415.81 Q 761.08 441.64, 786 500 Q 761.08 558.36, 703.25 584.19 M 703.25 584.19 Q 725.87 643.34, 702.23 702.23 Q 643.34 725.87, 584.19 703.25 M 584.19 703.25 Q 558.36 761.08, 500 786 Q 441.64 761.08, 415.81 703.25 M 415.81 703.25 Q 356.66 725.87, 297.77 702.23 Q 274.13 643.34, 296.75 584.19 M 296.75 584.19 Q 238.92 558.36, 214 500 Q 238.92 441.64, 296.75 415.81 M 296.75 415.81 Q 274.13 356.66, 297.77 297.77 Q 356.66 274.13, 415.81 296.75 " />
+  </g>
+
+  <!-- 6. INNER CONCENTRIC CIRCLE RINGS -->
+  <g id="transition_inner_circles" stroke="url(#sriGoldAccent)" stroke-width="2" fill="none">
+    <circle cx="500" cy="500" r="220" />
+    <circle cx="500" cy="500" r="214" stroke-width="1.2" stroke-dasharray="4 2" opacity="0.7" />
+  </g>
+
+  <!-- 7. CHATURDASHARAM (14 OUTER TRIANGLES) -->
+  <g id="avarana_4_chaturdasharam">
+    <polygon id="face_chaturdasharam_tri_0" points="500,282 535.6,344.01 464.4,344.01" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_1" points="594.59,303.59 599.76,374.91 535.6,344.01" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_2" points="670.44,364.08 644.16,430.58 599.76,374.91" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_3" points="712.53,451.49 660,500 644.16,430.58" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_4" points="712.53,548.51 644.16,569.42 660,500" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_5" points="670.44,635.92 599.76,625.09 644.16,569.42" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_6" points="594.59,696.41 535.6,655.99 599.76,625.09" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_7" points="500,718 464.4,655.99 535.6,655.99" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_8" points="405.41,696.41 400.24,625.09 464.4,655.99" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_9" points="329.56,635.92 355.84,569.42 400.24,625.09" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_10" points="287.47,548.51 340,500 355.84,569.42" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_11" points="287.47,451.49 355.84,430.58 340,500" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_12" points="329.56,364.08 400.24,374.91 355.84,430.58" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_chaturdasharam_tri_13" points="405.41,303.59 464.4,344.01 400.24,374.91" fill="rgba(245,158,11,0.22)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+  </g>
+
+  <!-- 8. BAHIR DASHARAM (10 OUTER-MIDDLE TRIANGLES) -->
+  <g id="avarana_5_bahir_dasharam">
+    <polygon id="face_bahir_dasharam_tri_0" points="500,340 535.85,389.68 464.15,389.68" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_1" points="594.05,370.56 593.85,431.82 535.85,389.68" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_2" points="652.17,450.56 616,500 593.85,431.82" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_3" points="652.17,549.44 593.85,568.18 616,500" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_4" points="594.05,629.44 535.85,610.32 593.85,568.18" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_5" points="500,660 464.15,610.32 535.85,610.32" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_6" points="405.95,629.44 406.15,568.18 464.15,610.32" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_7" points="347.83,549.44 384,500 406.15,568.18" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_8" points="347.83,450.56 406.15,431.82 384,500" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_bahir_dasharam_tri_9" points="405.95,370.56 464.15,389.68 406.15,431.82" fill="rgba(217,119,6,0.26)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+  </g>
+
+  <!-- 9. ANTAR DASHARAM (10 INNER-MIDDLE TRIANGLES) -->
+  <g id="avarana_6_antar_dasharam">
+    <polygon id="face_antar_dasharam_tri_0" points="535.85,389.68 545.85,436.9 500,422" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_1" points="593.85,431.82 574.18,475.9 545.85,436.9" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_2" points="616,500 574.18,524.1 574.18,475.9" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_3" points="593.85,568.18 545.85,563.1 574.18,524.1" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_4" points="535.85,610.32 500,578 545.85,563.1" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_5" points="464.15,610.32 454.15,563.1 500,578" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_6" points="406.15,568.18 425.82,524.1 454.15,563.1" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_7" points="384,500 425.82,475.9 425.82,524.1" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_8" points="406.15,431.82 454.15,436.9 425.82,475.9" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_antar_dasharam_tri_9" points="464.15,389.68 500,422 454.15,436.9" fill="rgba(245,158,11,0.28)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+  </g>
+
+  <!-- 10. ASHTARAGON (8 INNERMOST TRIANGLES) -->
+  <g id="avarana_7_ashtaragon">
+    <polygon id="face_ashtaragon_tri_0" points="500,422 516.84,459.35 483.16,459.35" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_ashtaragon_tri_1" points="555.15,444.85 540.65,483.16 516.84,459.35" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_ashtaragon_tri_2" points="578,500 540.65,516.84 540.65,483.16" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_ashtaragon_tri_3" points="555.15,555.15 516.84,540.65 540.65,516.84" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_ashtaragon_tri_4" points="500,578 483.16,540.65 516.84,540.65" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_ashtaragon_tri_5" points="444.85,555.15 459.35,516.84 483.16,540.65" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_ashtaragon_tri_6" points="422,500 459.35,483.16 459.35,516.84" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+    <polygon id="face_ashtaragon_tri_7" points="444.85,444.85 483.16,459.35 459.35,483.16" fill="rgba(217,119,6,0.32)" stroke="url(#sriGoldMain)" stroke-width="1.8" stroke-linejoin="round" />
+  </g>
+
+  <!-- 11. CENTRAL TRIANGLE (MULA KAMAKALA DOWNWARD TRIANGLE) -->
+  <g id="avarana_8_central_trikona">
+    <polygon id="face_central_kama_kala_trikona" points="462,478 538,478 500,544" fill="rgba(255,215,0,0.38)" stroke="#FFE066" stroke-width="2.6" stroke-linejoin="round" />
+  </g>
+
+  <!-- 12. BINDU (CENTRAL SINGULARITY) -->
+  <g id="avarana_9_bindu">
+    <circle cx="500" cy="500" r="24" fill="rgba(255,215,0,0.15)" stroke="#FFE066" stroke-width="1.4" stroke-dasharray="3 2" />
+    <circle cx="500" cy="500" r="14" fill="none" stroke="#FFD700" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="7.5" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="1.6" />
+  </g>
+</svg>

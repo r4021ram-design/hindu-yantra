@@ -1,3 +1,12 @@
+export interface ShastricConstituent {
+  id: number | string;
+  nameSanskrit: string;
+  nameEnglish: string;
+  facultyOrNadi: string;
+  significance: string;
+  elementOrSound?: string;
+}
+
 export interface ShastricAvaranaDetail {
   index: number;
   nameSanskrit: string;
@@ -8,6 +17,8 @@ export interface ShastricAvaranaDetail {
   yoginiClass: string;
   geometryType: string;
   significance: string;
+  constituentsLabel?: string;
+  constituents?: ShastricConstituent[];
 }
 
 export interface JyotishRemedyProfile {
@@ -104,29 +115,80 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         mudraShakti: 'सर्वसंक्षोभिणी मुद्रा',
         yoginiClass: 'प्रकट योगिनी (10 Siddhis, 8 Matrikas, 10 Mudras)',
         geometryType: '3-Lined Quadrangle with 4 Cardinal Portals',
-        significance: 'भौतिक जगत की सीमाओं को पार कर अध्यात्म के अंतर्जगत में प्रवेश का द्वार। यह अणिमा, लघिमा आदि अष्ट सिद्धियों और ब्राह्मी आदि अष्ट मातृकाओं का अधिष्ठान है।'
+        significance: 'भौतिक जगत की सीमाओं को पार कर अध्यात्म के अंतर्जगत में प्रवेश का द्वार। यह अणिमा, लघिमा आदि सिद्धियों और ब्राह्मी आदि अष्ट मातृकाओं का अधिष्ठान है।',
+        constituentsLabel: 'भूपुर की १० सिद्धियाँ एवं ८ मातृकाएँ',
+        constituents: [
+          { id: '1.1', nameSanskrit: 'अणिमा सिद्धि', nameEnglish: 'Anima Siddhi', facultyOrNadi: 'अणुवत सूक्ष्मता', significance: 'चेतना को परमाणु समान सूक्ष्म कर प्रकृति के गूढ़ रहस्यों में प्रवेश करने की सामर्थ्य।' },
+          { id: '1.2', nameSanskrit: 'लघिमा सिद्धि', nameEnglish: 'Laghima Siddhi', facultyOrNadi: 'भारहीनता / हल्कापन', significance: 'शरीर व मन के समस्त विकारों व गुरुत्व को त्याग कर चेतना को पंख समान हल्का करना।' },
+          { id: '1.3', nameSanskrit: 'महिमा सिद्धि', nameEnglish: 'Mahima Siddhi', facultyOrNadi: 'विराट विस्तार', significance: 'चेतना का ब्रह्माण्डीय विस्तार, जिससे साधक समस्त सृष्टि में आत्म-तत्व का दर्शन करता है।' },
+          { id: '1.4', nameSanskrit: 'ईशित्व सिद्धि', nameEnglish: 'Ishitwa Siddhi', facultyOrNadi: 'दैवीय प्रभुता', significance: 'पंचमहाभूतों एवं प्रकृति के नियमों पर पूर्ण संतुलन व संचालन की दैवीय शक्ति।' },
+          { id: '1.5', nameSanskrit: 'वशित्व सिद्धि', nameEnglish: 'Vashitwa Siddhi', facultyOrNadi: 'सर्व-वशीकरण', significance: 'समस्त प्राणियों व परिस्थितियों को सकारात्मक रूप से धर्मानुकूल करने की शक्ति।' },
+          { id: '1.6', nameSanskrit: 'प्राकाम्य सिद्धि', nameEnglish: 'Prakamya Siddhi', facultyOrNadi: 'संकल्प सिद्धि', significance: 'मन की समस्त सात्विक इच्छाओं का तत्काल फलीभूत होना।' },
+          { id: '1.7', nameSanskrit: 'भुक्ति सिद्धि', nameEnglish: 'Bhukti Siddhi', facultyOrNadi: 'अनासक्त उपभोग', significance: 'भौतिक व आत्मिक ऐश्वर्य का बिना किसी आसक्ति या बंधन के परम उपभोग।' },
+          { id: '1.8', nameSanskrit: 'इच्छा सिद्धि', nameEnglish: 'Ichha Siddhi', facultyOrNadi: 'इच्छा सामर्थ्य', significance: 'ईश्वरीय संकल्प से एकाकार होकर शुभ व कल्याणकारी संकल्पों की पूर्णता।' },
+          { id: '1.9', nameSanskrit: 'प्राप्ति सिद्धि', nameEnglish: 'Prapti Siddhi', facultyOrNadi: 'सर्व-प्राप्ति', significance: 'सम्पूर्ण ब्रह्माण्ड में किसी भी दुर्लभ ज्ञान अथवा वस्तु को सुलभ प्राप्त करना।' },
+          { id: '1.10', nameSanskrit: 'सर्वकाम सिद्धि', nameEnglish: 'Sarvakama Siddhi', facultyOrNadi: 'मनोरथ पूर्णता', significance: 'जीवन के समस्त धर्म, अर्थ, काम और मोक्ष के लक्ष्यों की पूर्ण सिद्धि।' },
+          { id: '1.11', nameSanskrit: 'ब्राह्मी मातृका', nameEnglish: 'Brahmi Matrika', facultyOrNadi: 'सृजन शक्ति', significance: 'काम व अविद्या का शमन कर रचनात्मक ज्ञान व ब्रह्म-चेतना का विकास।' },
+          { id: '1.12', nameSanskrit: 'माहेश्वरी मातृका', nameEnglish: 'Maheshwari Matrika', facultyOrNadi: 'संहार शक्ति', significance: 'क्रोध, ईर्ष्या व तामसिक वृत्तियों का संहार कर शान्ति की स्थापना।' },
+          { id: '1.13', nameSanskrit: 'कौमारी मातृका', nameEnglish: 'Kaumari Matrika', facultyOrNadi: 'बाल्य तेज व पराक्रम', significance: 'लोभ का विनाश और जीवन में अदम्य साहस, संयम व शौर्य की जागृति।' },
+          { id: '1.14', nameSanskrit: 'वैष्णवी मातृका', nameEnglish: 'Vaishnavi Matrika', facultyOrNadi: 'पालन व संरक्षण', significance: 'मोह का नाश तथा समस्त संबंधों व साधना का दिव्य संरक्षण।' },
+          { id: '1.15', nameSanskrit: 'वाराही मातृका', nameEnglish: 'Varahi Matrika', facultyOrNadi: 'अहंकार दमन', significance: 'मद व दम्भ का समूल नाश तथा पूर्वजों व पितृ ऊर्जा का शोधन।' },
+          { id: '1.16', nameSanskrit: 'माहेन्द्री मातृका', nameEnglish: 'Mahendri Matrika', facultyOrNadi: 'राजसी ऐश्वर्य', significance: 'मात्सर्य (जलन) का निवारण तथा अखंड वैभव, नेतृत्व व स्थिरता।' },
+          { id: '1.17', nameSanskrit: 'चामुण्डा मातृका', nameEnglish: 'Chamunda Matrika', facultyOrNadi: 'असुर विनाश', significance: 'जन्म-जन्मांतर के पापकर्मों व नकारात्मक तांत्रिक बाधाओं का विध्वंस।' },
+          { id: '1.18', nameSanskrit: 'महालक्ष्मी मातृका', nameEnglish: 'Mahalakshmi Matrika', facultyOrNadi: 'मोक्ष व समृद्धि', significance: 'पापों का क्षय, अष्टलक्ष्मी की कृपा तथा अंतिम मोक्ष पद की प्राप्ति।' }
+        ]
       },
       {
         index: 2,
         nameSanskrit: 'सर्वाशापरिपूरक चक्र',
         nameEnglish: 'Sarvashaparipuraka Chakra (Fulfiller of All Desires)',
-        chakraTitle: 'षोडशदल पद्म (16-Petal Outer Lotus)',
+        chakraTitle: 'षोडशदल पद्म (16 Radial Lotus Petals)',
         presidingDeity: 'त्रिपुरेशी देवी',
         mudraShakti: 'सर्वविद्राविणी मुद्रा',
-        yoginiClass: 'गुप्त योगिनी (16 Nitya Shaktis)',
+        yoginiClass: 'गुप्त योगिनी (16 Nitya/Kala Shaktis)',
         geometryType: '16 Symmetrical Radial Petals',
-        significance: 'काम, बुद्धि, अहंकार, शब्द, स्पर्श, रूप, रस, गंध, चित्त, धैर्य, स्मृति, नाम, बीज, आत्मा, अमृत और शरीर के आकर्षण की १६ कलाओं की शुद्धि और तृप्ति।'
+        significance: 'काम, बुद्धि, अहंकार, शब्द, स्पर्श, रूप, रस, गंध, चित्त, धैर्य, स्मृति, नाम, बीज, आत्मा, अमृत और शरीर के आकर्षण की १६ कलाओं की शुद्धि और तृप्ति।',
+        constituentsLabel: 'षोडशदल की १६ पंखुड़ियाँ (16 Petal Shaktis)',
+        constituents: [
+          { id: 1, nameSanskrit: 'कामाकर्षिणी', nameEnglish: 'Kamakarshini', facultyOrNadi: 'कामना एवं संकल्प शक्ति', significance: 'साधक की समस्त इच्छाओं को निष्काम भाव में बदलकर संकल्प सिद्धि प्रदान करती है।' },
+          { id: 2, nameSanskrit: 'बुद्ध्याकर्षिणी', nameEnglish: 'Buddhyakarshini', facultyOrNadi: 'बुद्धि व प्रज्ञा तत्व', significance: 'तीक्ष्ण मेधा, निर्णय क्षमता और विवेक ज्ञान की अगाध वृद्धि करती है।' },
+          { id: 3, nameSanskrit: 'अहङ्काराकर्षिणी', nameEnglish: 'Ahankarakarshini', facultyOrNadi: 'अहंकार शोधन', significance: 'क्षुद्र अहंकार व दम्भ को नष्ट कर दिव्य आत्म-गौरव में रूपांतरित करती है।' },
+          { id: 4, nameSanskrit: 'शब्दाकर्षिणी', nameEnglish: 'Shabdakarshini', facultyOrNadi: 'नाद ब्रह्म व श्रवण', significance: 'वाक् सिद्धि, कर्ण शक्ति एवं ब्रह्माण्डीय अनहद नाद के श्रवण का सामर्थ्य देती है।' },
+          { id: 5, nameSanskrit: 'स्पर्शाकर्षिणी', nameEnglish: 'Sparshakarshini', facultyOrNadi: 'प्राणिक स्पर्श व त्वचा', significance: 'प्राण शक्ति को जागृत कर स्पर्श मात्र से आरोग्य व कल्याण की सामर्थ्य देती है।' },
+          { id: 6, nameSanskrit: 'रूपाकर्षिणी', nameEnglish: 'Rupakarshini', facultyOrNadi: 'नेत्र तेज व दिव्य रूप', significance: 'दिव्य दृष्टि, सम्मोहन, आभामंडल का विस्तार एवं भगवती के ज्योतिर्मय रूप का दर्शन।' },
+          { id: 7, nameSanskrit: 'रसाकर्षिणी', nameEnglish: 'Rasakarshini', facultyOrNadi: 'रसना व सोमरस', significance: 'जिह्वा की शुद्धि, अमृत स्वाद तथा जीवन में रस-आनंद की अखंड धारा।' },
+          { id: 8, nameSanskrit: 'गन्धाकर्षिणी', nameEnglish: 'Gandhakarshini', facultyOrNadi: 'पृथ्वी तत्व व सुगन्ध', significance: 'मूलाधार चक्र की शुद्धि एवं अंतःचेतना में दिव्य पारिजात गन्ध की अनुभूति।' },
+          { id: 9, nameSanskrit: 'चित्ताकर्षिणी', nameEnglish: 'Chittakarshini', facultyOrNadi: 'चित्त व एकाग्रता', significance: 'चित्त की चंचलता, भटकाव और विक्षेपों का शमन कर गहरी ध्यानस्थ समाधि।' },
+          { id: 10, nameSanskrit: 'धैर्याकर्षिणी', nameEnglish: 'Dheiryakarshini', facultyOrNadi: 'धैर्य व आत्म-स्थिरता', significance: 'कठिनतम संकटों में भी पर्वत समान अडिग धैर्य, संतुलन व शांति।' },
+          { id: 11, nameSanskrit: 'स्मृत्याकर्षिणी', nameEnglish: 'Smrityakarshini', facultyOrNadi: 'स्मृति व मेधा शक्ति', significance: 'वेद-शास्त्रों के ज्ञान, पूर्व संस्कारों एवं गुरु आज्ञा की अचूक स्मृति।' },
+          { id: 12, nameSanskrit: 'नामाकर्षिणी', nameEnglish: 'Namakarshini', facultyOrNadi: 'नाम जप व कीर्ति', significance: 'भगवन्नाम की अजपा साधना तथा साधक को शुभ यश, प्रतिष्ठा व अमरत्व।' },
+          { id: 13, nameSanskrit: 'बीजाकर्षिणी', nameEnglish: 'Bijakarshini', facultyOrNadi: 'मूल बीज व मंत्र सामर्थ्य', significance: 'बीज मंत्रों को चैतन्य कर इच्छित सृजन व आध्यात्मिक संकल्प की सिद्धि।' },
+          { id: 14, nameSanskrit: 'आत्माकर्षिणी', nameEnglish: 'Atmakarshini', facultyOrNadi: 'जीवात्मा आकर्षण', significance: 'जीवात्मा को माया के पाश से खींचकर सीधे परमात्मा की शरण में प्रतिष्ठित करना।' },
+          { id: 15, nameSanskrit: 'अमृताकर्षिणी', nameEnglish: 'Amritakarshini', facultyOrNadi: 'अमृत स्राव व अमरत्व', significance: 'सहस्त्रार चक्र से दिव्य अमृत का निरंतर स्राव एवं देह का कायाकल्प।' },
+          { id: 16, nameSanskrit: 'शरीराकर्षिणी', nameEnglish: 'Sharirakarshini', facultyOrNadi: 'काया शुद्धि व कांति', significance: 'शारीरिक रोगों का निवारण, ओजस्वी कांति एवं दिव्य स्वस्थ शरीर की प्राप्ति।' }
+        ]
       },
       {
         index: 3,
         nameSanskrit: 'सर्वसंक्षोभण चक्र',
         nameEnglish: 'Sarvasankshobhana Chakra (The Agitator of All)',
-        chakraTitle: 'अष्टदल पद्म (8-Petal Inner Lotus)',
+        chakraTitle: 'अष्टदल पद्म (8 Radial Sacred Petals)',
         presidingDeity: 'त्रिपुरसुन्दरी देवी',
         mudraShakti: 'सर्वाकर्षिणी मुद्रा',
         yoginiClass: 'गुप्ततर योगिनी (8 Ananga Shaktis)',
         geometryType: '8 Symmetrical Sacred Petals',
-        significance: 'अनंगकुसुमा आदि आठ शक्तियों का निवास। मन, वाणी और कर्म के सूक्ष्म विक्षेपों का शमन कर एकाग्रता और आत्मबल की जागृति।'
+        significance: 'अनंगकुसुमा आदि आठ शक्तियों का निवास। मन, वाणी और कर्म के सूक्ष्म विक्षेपों का शमन कर एकाग्रता और आत्मबल की जागृति।',
+        constituentsLabel: 'अष्टदल की ८ पंखुड़ियाँ (8 Petal Shaktis)',
+        constituents: [
+          { id: 1, nameSanskrit: 'अनङ्गकुसुमा', nameEnglish: 'Ananga Kusuma', facultyOrNadi: 'हृदय का दिव्य पुष्प', significance: 'साधक के हृदय में सूक्ष्म आध्यात्मिक प्रेम व भक्ति के कमल का प्रस्फुटन।' },
+          { id: 2, nameSanskrit: 'अनङ्गमेखला', nameEnglish: 'Ananga Mekhala', facultyOrNadi: 'प्राणिक संतुलन सूत्र', significance: 'प्राण और अपान को दिव्य मेखला (कटिसूत्र) समान अनुशासन में बांधना।' },
+          { id: 3, nameSanskrit: 'अनङ्गशासना', nameEnglish: 'Ananga Shasana', facultyOrNadi: 'इन्द्रिय शासन', significance: 'मन, बुद्धि और दसों इंद्रियों पर अखंड आत्म-नियंत्रण व संप्रभुता।' },
+          { id: 4, nameSanskrit: 'अनङ्गशरभा (रेखा)', nameEnglish: 'Ananga Rekha', facultyOrNadi: 'ऊर्ध्वमुखी चेतना', significance: 'साधक की चेतना को मूलाधार से आज्ञा चक्र तक सीधी ज्योति रेखा में उठाना।' },
+          { id: 5, nameSanskrit: 'अनङ्गबाणा', nameEnglish: 'Ananga Bana', facultyOrNadi: 'एकाग्रता का बाण', significance: 'चित्त की एकाग्रता को लक्ष्य पर अचूक बाण समान केंद्रित कर देना।' },
+          { id: 6, nameSanskrit: 'अनङ्गविह्वला', nameEnglish: 'Ananga Vihwala', facultyOrNadi: 'पराभक्ति उल्लास', significance: 'ईश्वरीय साक्षात्कार के आनन्द में चित्त का परम समर्पण व भक्ति रस।' },
+          { id: 7, nameSanskrit: 'अनङ्गकाशिनी (मदना)', nameEnglish: 'Ananga Madana', facultyOrNadi: 'आत्म-दीप्ति व सौन्दर्य', significance: 'आंतरिक चेतना का ऐसा दिव्य तेज जो साधक के चेहरे पर स्वाभाविक तेज बन खिलता है।' },
+          { id: 8, nameSanskrit: 'अनङ्गमालिनी', nameEnglish: 'Ananga Malini', facultyOrNadi: 'नाड़ी सुगन्ध माला', significance: 'समस्त नाड़ियों में शांति, आनंद और माधुर्य की अखंड माला का संचार।' }
+        ]
       },
       {
         index: 4,
@@ -137,7 +199,24 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         mudraShakti: 'सर्ववश्यकरी मुद्रा',
         yoginiClass: 'सम्प्रदाय योगिनी (14 Principal Nadis)',
         geometryType: '14 Interlocking Circuit Triangles',
-        significance: 'मानव देह की १४ प्रमुख नाड़ियों (इड़ा, पिंगला, सुषुम्णा आदि) का शोधन। जीवन में सौभाग्य, प्रतिष्ठा और दैवीय आकर्षण की प्राप्ति।'
+        significance: 'मानव देह की १४ प्रमुख नाड़ियों (इड़ा, पिंगला, सुषुम्णा आदि) का शोधन। जीवन में सौभाग्य, प्रतिष्ठा और दैवीय आकर्षण की प्राप्ति।',
+        constituentsLabel: '१४ बाह्य त्रिकोण (14 Outer Triangles & Nadis)',
+        constituents: [
+          { id: 1, nameSanskrit: 'सर्वसंक्षोभिणी', nameEnglish: 'Sarvasamkshobhini', facultyOrNadi: 'अलम्बुषा नाड़ी', significance: 'अज्ञान, जड़ता व तमस का संक्षोभ कर साधक में तीव्र ज्ञान की पिपासा जगाती है।' },
+          { id: 2, nameSanskrit: 'सर्वरञ्जिनी', nameEnglish: 'Sarvaranjini', facultyOrNadi: 'कुहू नाड़ी', significance: 'चित्त को दिव्य भगवद-रस और भक्ति से अनुरंजित व प्रफुल्लित करती है।' },
+          { id: 3, nameSanskrit: 'सर्वविद्राविणी', nameEnglish: 'Sarvavidravini', facultyOrNadi: 'विश्वोदरा नाड़ी', significance: 'मन के समस्त संशयों, भ्रमों और भयों को बर्फ समान पिघला देती है।' },
+          { id: 4, nameSanskrit: 'सर्वाह्लादिनी', nameEnglish: 'Sarvahlhadini', facultyOrNadi: 'वारणा नाड़ी', significance: 'हृदय में अखंड आध्यात्मिक उल्लास, शांति व आह्लाद की वर्षा करती है।' },
+          { id: 5, nameSanskrit: 'सर्वमोहिनी', nameEnglish: 'Sarvamohini', facultyOrNadi: 'हस्तिजिह्वा नाड़ी', significance: 'संसार के मिथ्या आकर्षणों को तोड़कर परम सत्य के प्रति सम्मोहन उत्पन्न करती है।' },
+          { id: 6, nameSanskrit: 'सर्वस्तम्भिनी', nameEnglish: 'Sarvastambhini', facultyOrNadi: 'यशोवती नाड़ी', significance: 'काम, क्रोध, मद आदि आंतरिक शत्रुओं और बाहरी विघ्नों को स्तम्भित (रोक) देती है।' },
+          { id: 7, nameSanskrit: 'सर्वजृम्भिणी', nameEnglish: 'Sarvajrimbhini', facultyOrNadi: 'पयस्विनी नाड़ी', significance: 'संकीर्ण विचारों का अंत कर विशाल ब्रह्माण्डीय विवेक का विस्तार करती है।' },
+          { id: 8, nameSanskrit: 'सर्ववशंकरी', nameEnglish: 'Sarvavashankari', facultyOrNadi: 'गांधारी नाड़ी', significance: 'प्रकृति के तत्वों, जनमानस व परिस्थितियों को साधक के अनुकूल बनाती है।' },
+          { id: 9, nameSanskrit: 'सर्वरञ्जनी', nameEnglish: 'Sarvaranjani', facultyOrNadi: 'पूषा नाड़ी', significance: 'साधक के हृदय कमल को हर परिस्थिति में सदा प्रफुल्लित व आनंदमग्न रखती है।' },
+          { id: 10, nameSanskrit: 'सर्वोन्मादिनी', nameEnglish: 'Sarvonmadini', facultyOrNadi: 'शंखिनी नाड़ी', significance: 'सांसारिक चिंताओं से मुक्त कर ब्रह्मानन्द का दिव्य उन्माद प्रदान करती है।' },
+          { id: 11, nameSanskrit: 'सर्वार्थसाधिका', nameEnglish: 'Sarvarthasadhika', facultyOrNadi: 'सरस्वती नाड़ी', significance: 'धर्म, अर्थ, काम और मोक्ष—चारों पुरुषार्थों की सुलभ सिद्धि कराती है।' },
+          { id: 12, nameSanskrit: 'सर्वसम्पत्तिपूरिणी', nameEnglish: 'Sarvasampattipurini', facultyOrNadi: 'इड़ा नाड़ी', significance: 'आध्यात्मिक शांति, ज्ञान तथा भौतिक समृद्धि व यश की परिपूर्णता करती है।' },
+          { id: 13, nameSanskrit: 'सर्वमन्त्रमयी', nameEnglish: 'Sarvamantramayi', facultyOrNadi: 'पिंगला नाड़ी', significance: 'समस्त वेदों, आगमों और महामंत्रों के बीजों को साधक के कंठ में चैतन्य करती है।' },
+          { id: 14, nameSanskrit: 'सर्वद्वन्द्वक्षयंकरी', nameEnglish: 'Sarvadvandvakshayankari', facultyOrNadi: 'सुषुम्णा नाड़ी', significance: 'सुख-दुःख, मान-अपमान, राग-द्वेष आदि द्वन्द्वों का समूल नाश कर अद्वैत में प्रतिष्ठित करती है।' }
+        ]
       },
       {
         index: 5,
@@ -148,7 +227,20 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         mudraShakti: 'सर्वोन्मादिनी मुद्रा',
         yoginiClass: 'कुलोत्तीर्ण योगिनी (10 Pranas)',
         geometryType: '10 Outer Point Triangles',
-        significance: 'दश प्राणों (प्राण, अपान, समान, व्यान, उदान, नाग, कूर्म, कृकल, देवदत्त, धनंजय) का संतुलन। समस्त पुरुषार्थ (धर्म, अर्थ, काम, मोक्ष) की सिद्धि।'
+        significance: 'दश प्राणों (प्राण, अपान, समान, व्यान, उदान, नाग, कूर्म, कृकल, देवदत्त, धनंजय) का संतुलन। समस्त पुरुषार्थ (धर्म, अर्थ, काम, मोक्ष) की सिद्धि।',
+        constituentsLabel: '१० मध्यम त्रिकोण (10 Outer Middle Triangles & Pranas)',
+        constituents: [
+          { id: 1, nameSanskrit: 'सर्वसिद्धिप्रदा', nameEnglish: 'Sarvasiddhiprada', facultyOrNadi: 'प्राण वायु', significance: 'साधक के जीवन में समस्त आत्मिक व लौकिक सिद्धियों को अनायास सिद्ध करती है।' },
+          { id: 2, nameSanskrit: 'सर्वसम्पत्प्रदा', nameEnglish: 'Sarvasampatprada', facultyOrNadi: 'अपान वायु', significance: 'आंतरिक संतोष रूपी परम धन एवं बाह्य सुख-समृद्धि की प्रचुरता देती है।' },
+          { id: 3, nameSanskrit: 'सर्वप्रियंकरी', nameEnglish: 'Sarvapriyankari', facultyOrNadi: 'समान वायु', significance: 'साधक को संपूर्ण समाज, प्रकृति और ईश्वरीय शक्तियों में सर्वप्रिय बनाती है।' },
+          { id: 4, nameSanskrit: 'सर्वमङ्गलकारिणी', nameEnglish: 'Sarvamangalakarini', facultyOrNadi: 'व्यान वायु', significance: 'जीवन के समस्त अमंगलों, वास्तुदोषों व अनिष्टों को समाप्त कर मंगलमय बनाती है।' },
+          { id: 5, nameSanskrit: 'सर्वकामप्रदा', nameEnglish: 'Sarvakamaprada', facultyOrNadi: 'उदान वायु', significance: 'साधक के सभी सात्विक संकल्पों व मनोरथों को सत्य स्वरूप में परिणत करती है।' },
+          { id: 6, nameSanskrit: 'सर्वदुःखविमोचिनी', nameEnglish: 'Sarvadukhavimochini', facultyOrNadi: 'नाग वायु', significance: 'जन्म-मरण चक्र, शारीरिक पीड़ाओं व मानसिक क्लेशों से मुक्ति दिलाती है।' },
+          { id: 7, nameSanskrit: 'सर्वमृत्युप्रशमनी', nameEnglish: 'Sarvamrityuprashamani', facultyOrNadi: 'कूर्म वायु', significance: 'अकाल मृत्यु के भय का शमन कर साधक को सुदीर्घ व तेजस्वी आयु देती है।' },
+          { id: 8, nameSanskrit: 'सर्वविघ्नविनाशिनी', nameEnglish: 'Sarvavighnavinashini', facultyOrNadi: 'कृकल वायु', significance: 'कर्म, व्यवसाय व साधना के मार्ग में आने वाले समस्त अवरोधों का नाश करती है।' },
+          { id: 9, nameSanskrit: 'सर्वाङ्गसुन्दरी', nameEnglish: 'Sarvangasundari', facultyOrNadi: 'देवदत्त वायु', significance: 'काया के प्रत्येक अंग में दिव्य लावण्य, कांति, ऊर्जा व आरोग्य भरती है।' },
+          { id: 10, nameSanskrit: 'सर्वसौभाग्यदायिनी', nameEnglish: 'Sarvasaubhagyadayini', facultyOrNadi: 'धनंजय वायु', significance: 'अखंड सौभाग्य, संतान सुख, वंश वृद्धि और कुल-प्रतिष्ठा का वरदान देती है।' }
+        ]
       },
       {
         index: 6,
@@ -159,7 +251,20 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         mudraShakti: 'सर्वमहाङ्कुशा मुद्रा',
         yoginiClass: 'निगर्भ योगिनी (10 Agnis)',
         geometryType: '10 Inner Point Triangles',
-        significance: 'जठराग्नि व प्राणिक ऊर्जा का शोधन। आधिभौतिक, आधिदैविक व आध्यात्मिक तीनों तापों तथा समस्त नकारात्मक ऊर्जाओं से अभेद्य सुरक्षा।'
+        significance: 'जठराग्नि व प्राणिक ऊर्जा का शोधन। आधिभौतिक, आधिदैविक व आध्यात्मिक तीनों तापों तथा समस्त नकारात्मक ऊर्जाओं से अभेद्य सुरक्षा।',
+        constituentsLabel: '१० आंतरिक त्रिकोण (10 Inner Middle Triangles & Agnis)',
+        constituents: [
+          { id: 1, nameSanskrit: 'सर्वज्ञा', nameEnglish: 'Sarvajna', facultyOrNadi: 'रेचक अग्नि', significance: 'भूत, भविष्य व वर्तमान का सत्य ज्ञान कराकर अज्ञान का अंधकार मिटाती है।' },
+          { id: 2, nameSanskrit: 'सर्वशक्ता', nameEnglish: 'Sarvashakta', facultyOrNadi: 'पाचक अग्नि', significance: 'असीमित ऊर्जा, पाचन सामर्थ्य व अमोघ कार्यक्षमता प्रदान करती है।' },
+          { id: 3, nameSanskrit: 'सर्वैश्वर्यप्रदा', nameEnglish: 'Sarvaishvaryaprada', facultyOrNadi: 'शोषक अग्नि', significance: 'साधक को अष्ट सिद्धियों सहित ईश्वरीय ऐश्वर्य और राजयोग प्रदान करती है।' },
+          { id: 4, nameSanskrit: 'सर्वज्ञानमयी', nameEnglish: 'Sarvajnanamayi', facultyOrNadi: 'दाहक अग्नि', significance: 'विशुद्ध वेदान्त ज्ञान, ब्रह्म-बोध एवं प्रज्ञा चक्षु को उन्मीलित करती है।' },
+          { id: 5, nameSanskrit: 'सर्वव्याधिविनाशिनी', nameEnglish: 'Sarvavyadhivinashini', facultyOrNadi: 'प्लवक अग्नि', significance: 'समस्त असाध्य रोगों, त्रिदोष विकारों और मानसिक व्यथाओं का नाश करती है।' },
+          { id: 6, nameSanskrit: 'सर्वाधारस्वरूपा', nameEnglish: 'Sarvadharasvarupa', facultyOrNadi: 'क्षामक अग्नि', significance: 'साधक के जीवन व कुंडलिनी जागरण की मूल आधारशिला बनकर पोषण करती है।' },
+          { id: 7, nameSanskrit: 'सर्वपापहरा', nameEnglish: 'Sarvapapahara', facultyOrNadi: 'उद्गारक अग्नि', significance: 'जन्म-जन्मांतर के संचित पापों, प्रारब्ध दोषों और कुसंस्कारों का दहन करती है।' },
+          { id: 8, nameSanskrit: 'सर्वानन्दमयी', nameEnglish: 'Sarvanandamayi', facultyOrNadi: 'क्षोभक अग्नि', significance: 'दुःखों का संहार कर अंतरात्मा में नित्य परमानन्द एवं शांति की अनुभूति कराती है।' },
+          { id: 9, nameSanskrit: 'सर्वरक्षास्वरूपिणी', nameEnglish: 'Sarvarakshasvarupini', facultyOrNadi: 'जृम्भक अग्नि', significance: 'समस्त दिशाओं, ग्रहों, तंत्र-मंत्र बाधाओं व बुरी नजर से अभेद्य रक्षा कवच बनती है।' },
+          { id: 10, nameSanskrit: 'सर्वेप्सितफलप्रदा', nameEnglish: 'Sarvepsitaphalaprada', facultyOrNadi: 'मोहक अग्नि', significance: 'साधक द्वारा अभीष्ट व प्रार्थना किए गए फलों को तत्काल सिद्ध करती है।' }
+        ]
       },
       {
         index: 7,
@@ -170,7 +275,18 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         mudraShakti: 'सर्वखेचरी मुद्रा',
         yoginiClass: 'रहस्य योगिनी (Vagdevatas - 8 Primordial Sounds)',
         geometryType: '8 Inner Circuit Triangles',
-        significance: 'वशिनि आदि आठ वाग्देवियों का अधिष्ठान। शारीरिक, मानसिक रोगों व वाणी दोषों का समूल नाश तथा प्रखर ज्ञान-बोध की प्राप्ति।'
+        significance: 'वशिनि आदि आठ वाग्देवियों का अधिष्ठान। शारीरिक, मानसिक रोगों व वाणी दोषों का समूल नाश तथा प्रखर ज्ञान-बोध की प्राप्ति।',
+        constituentsLabel: '८ अंतरतम त्रिकोण (8 Inner Triangles & Vagdevatas)',
+        constituents: [
+          { id: 1, nameSanskrit: 'वशिनी वाग्देवी', nameEnglish: 'Vashini Vagdevi', facultyOrNadi: "'क' वर्ग अधिष्ठात्री", significance: 'शीतोष्ण, सुख-दुःख आदि द्वन्द्वों पर विजय दिलाती है तथा वाणी में सम्मोहन भरती है।' },
+          { id: 2, nameSanskrit: 'कामेश्वरी वाग्देवी', nameEnglish: 'Kameshvari Vagdevi', facultyOrNadi: "'च' वर्ग अधिष्ठात्री", significance: 'राग-द्वेष, ईर्ष्या का शमन कर हृदय में ईश्वरीय प्रेम व सरसता जगाती है।' },
+          { id: 3, nameSanskrit: 'मोदिनी वाग्देवी', nameEnglish: 'Modini Vagdevi', facultyOrNadi: "'ट' वर्ग अधिष्ठात्री", significance: 'काम-क्रोधादि षड्रिपुओं का शमन कर साधक को नित्य प्रसन्नचित्त रखती है।' },
+          { id: 4, nameSanskrit: 'विमला वाग्देवी', nameEnglish: 'Vimala Vagdevi', facultyOrNadi: "'त' वर्ग अधिष्ठात्री", significance: 'लोभ-मोह का नाश कर चित्त को दर्पण समान पूर्ण निर्मल व पवित्र बनाती है।' },
+          { id: 5, nameSanskrit: 'अरुणा वाग्देवी', nameEnglish: 'Aruna Vagdevi', facultyOrNadi: "'प' वर्ग अधिष्ठात्री", significance: 'मद-मात्सर्य का दहन कर साधक के भीतर ज्ञान का नूतन अरुणोदय करती है।' },
+          { id: 6, nameSanskrit: 'जयिनी वाग्देवी', nameEnglish: 'Jayini Vagdevi', facultyOrNadi: "'य' वर्ग अधिष्ठात्री", significance: 'जन्म-मरण चक्र, भय और अवसाद पर विजय दिलाकर विजयिनी चेतना जगाती है।' },
+          { id: 7, nameSanskrit: 'सर्वेश्वरी वाग्देवी', nameEnglish: 'Sarveshvari Vagdevi', facultyOrNadi: "'श' वर्ग अधिष्ठात्री", significance: 'समस्त दोषों, अशुद्धियों व तामसिक विकारों से साधक को सर्वथा मुक्त करती है।' },
+          { id: 8, nameSanskrit: 'कौलिनी वाग्देवी', nameEnglish: 'Kaulini Vagdevi', facultyOrNadi: "'ह-क्ष' वर्ग अधिष्ठात्री", significance: 'अविद्या का नाश कर मूलाधार से सहस्त्रार तक कुंडलिनी शक्ति का परम ऐक्य कराती है।' }
+        ]
       },
       {
         index: 8,
@@ -181,7 +297,13 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         mudraShakti: 'सर्वबीजा मुद्रा',
         yoginiClass: 'अतिरहस्य योगिनी (Kameshvari, Vajreshvari, Bhagamalini)',
         geometryType: 'Inverted Prime Triangle (Yoni / Kamakala)',
-        significance: 'इच्छा, ज्ञान और क्रिया शक्ति का त्रिपुट। सृष्टि, स्थिति और संहार की अधिष्ठात्री शक्तियों का मिलन केन्द्र।'
+        significance: 'इच्छा, ज्ञान और क्रिया शक्ति का त्रिपुट। सृष्टि, स्थिति और संहार की अधिष्ठात्री शक्तियों का मिलन केन्द्र।',
+        constituentsLabel: 'मूल त्रिकोण के ३ कोण (3 Prime Angles & Goddesses)',
+        constituents: [
+          { id: 1, nameSanskrit: 'कामेश्वरी', nameEnglish: 'Kameshvari (South Angle)', facultyOrNadi: 'इच्छा शक्ति • सत्व गुण', significance: 'दक्षिण कोण अधिष्ठात्री। जाग्रत अवस्था, रुद्र ग्रन्थि भेदन एवं समस्त सृष्टि की मूल इच्छा शक्ति।' },
+          { id: 2, nameSanskrit: 'वज्रेश्वरी', nameEnglish: 'Vajreshvari (North Angle)', facultyOrNadi: 'ज्ञान शक्ति • रज गुण', significance: 'उत्तर कोण अधिष्ठात्री। स्वप्न अवस्था, विष्णु ग्रन्थि भेदन एवं प्रकाश स्वरूप ज्ञान शक्ति।' },
+          { id: 3, nameSanskrit: 'भगमालिनी', nameEnglish: 'Bhagamalini (West Angle)', facultyOrNadi: 'क्रिया शक्ति • तम गुण', significance: 'पश्चिम कोण अधिष्ठात्री। सुषुप्ति अवस्था, ब्रह्म ग्रन्थि भेदन एवं समस्त क्रिया व सामर्थ्य की देवी।' }
+        ]
       },
       {
         index: 9,
@@ -192,7 +314,11 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         mudraShakti: 'सर्वत्रिखण्डा मुद्रा',
         yoginiClass: 'परावररहस्य योगिनी',
         geometryType: 'Infinitesimal Singularity Point',
-        significance: 'शिव-शक्ति का अव्यक्त सामरस्य। कैवल्य, पूर्ण अहंता, और अद्वैतानन्द की पराकाष्ठा।'
+        significance: 'शिव-शक्ति का अव्यक्त सामरस्य। कैवल्य, पूर्ण अहंता, और अद्वैतानन्द की पराकाष्ठा।',
+        constituentsLabel: 'केन्द्रीय महाबिन्दु (The Absolute Singularity)',
+        constituents: [
+          { id: 1, nameSanskrit: 'ललिता महा त्रिपुरसुन्दरी', nameEnglish: 'Lalita Maha Tripurasundari', facultyOrNadi: 'तुरीयातीत सामरस्य', significance: 'शिव-शक्ति का नित्य अद्वैत, कामेश्वर-कामेश्वरी का अविभाज्य एकाकार स्वरूप, ब्रह्माण्ड का उद्गम व महाप्रलय लय-स्थान।' }
+        ]
       }
     ],
     jyotish: {
@@ -277,6 +403,52 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         englishMeaning: 'Salutations to Lord Kuber, master of the divine treasures (Nidhis). Grace me with inexhaustible wealth, prosperity, and abundance.'
       }
     ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'ऐश्वर्य भूपुर प्राकार',
+        nameEnglish: 'Bhupura Quadrangle (4 Wealth Gateways)',
+        chakraTitle: 'भूपुर एवं दिक्पाल द्वार (Outer Earth Rampart)',
+        presidingDeity: 'यक्षराज कुबेर (धनपति)',
+        mudraShakti: 'धनदा मुद्रा (Bestower of Wealth)',
+        yoginiClass: 'यक्ष-किन्नर वर्ग',
+        geometryType: '4 Cardinal Gateways with Concentric Ramparts',
+        significance: 'समस्त चारों दिशाओं से धन और भौतिक ऐश्वर्य के आगमन का प्रवेश द्वार। यह दरिद्रता और अपव्यय को रोकता है।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'अष्टनिधि कमल चक्र',
+        nameEnglish: 'Ashtanidhi Mandala (8 Divine Treasures)',
+        chakraTitle: 'अष्टदल पद्म (8 Sacred Petals of Divine Treasure)',
+        presidingDeity: 'अष्टनिधि देवता (पद्म, महापद्म, शंख, मकर, कच्छप, मुकुन्द, कुन्द, नील)',
+        mudraShakti: 'निधि मुद्रा (Treasury Seal)',
+        yoginiClass: 'गुह्यक योगिनी',
+        geometryType: '8 Symmetrical Radial Petals',
+        significance: 'कुबेर की आठ अलौकिक निधियों का जागरण, जो व्यापार, कृषि, धातु, रत्न और अचल संपत्ति की सतत वृद्धि करती हैं।'
+      },
+      {
+        index: 3,
+        nameSanskrit: '७२ योग महायन्त्र ग्रिड',
+        nameEnglish: 'Sacred 3x3 Magic Square (Constant Sum 72)',
+        chakraTitle: 'संख्यात्मक नवकोष्ठक ग्रिड (Cosmic Matrix)',
+        presidingDeity: 'नव-यक्षेश्वर (Nine Lords of Wealth)',
+        mudraShakti: 'अक्षय मुद्रा (Inexhaustible Treasury)',
+        yoginiClass: 'संख्या-मातृका वर्ग',
+        geometryType: '3x3 Numerical Magic Grid (20-27-25 / 25-24-23 / 27-21-24)',
+        significance: 'प्रत्येक पंक्ति, स्तम्भ और विकर्ण का योग ७२ बनता है, जो पृथ्वी तत्व (Mercury-Earth) के चुंबकीय संतुलन और अकूत धन-आकर्षण का रहस्य है।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'केन्द्रीय कुबेर बिन्दु',
+        nameEnglish: 'Kubera Singularity Bindu',
+        chakraTitle: 'मध्य बिन्दु एवं बीज मण्डल',
+        presidingDeity: 'वैश्रवण कुबेर (कामेश्वर सखा)',
+        mudraShakti: 'सर्वसम्पत्प्रदा मुद्रा',
+        yoginiClass: 'परमगुह्यक शक्ति',
+        geometryType: 'Central Singularity Point',
+        significance: 'शिव-सखा कुबेर का निवास स्थल। जहाँ साधक के जन्म-जन्मान्तर की दरिद्रता का नाश होकर अखण्ड ऐश्वर्य की प्रतिष्ठा होती है।'
+      }
+    ],
     jyotish: {
       rulingPlanet: 'बुध (Mercury) व गुरु (Jupiter)',
       planetSanskrit: 'बुध ग्रह (वाणिज्य व कोषाध्यक्ष कारक)',
@@ -333,6 +505,52 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         englishMeaning: 'O Agni, invoke for me Goddess Lakshmi of golden hue, adorned with gold and silver garlands, radiant like the moon, the very embodiment of prosperity.'
       }
     ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'सौभाग्य भूपुर प्राकार',
+        nameEnglish: 'Bhupura Earth Citadel of Sri',
+        chakraTitle: 'भूपुर एवं कनक द्वार (Golden Outer Enclosure)',
+        presidingDeity: 'माता महालक्ष्मी (श्रीमती)',
+        mudraShakti: 'वरद मुद्रा (Granting Auspicious Boons)',
+        yoginiClass: 'ब्राह्म्यादि अष्टमातृका',
+        geometryType: 'Concentric Citadel with 4 Auspicious Entrances',
+        significance: 'समस्त अमंगल, दरिद्रता और दुर्भाग्य को घर के बाहर रोककर अष्ट ऐश्वर्य को आकर्षित करने वाला दिव्य घेरा।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'अष्टलक्ष्मी कमल चक्र',
+        nameEnglish: 'Ashta-Lakshmi 8-Petal Lotus',
+        chakraTitle: 'अष्टदल पद्म (8 Sacred Petals of Divine Abundance)',
+        presidingDeity: 'अष्टलक्ष्मी (आदि, धान्य, धैर्य, गज, सन्तान, विजय, विद्या, धन)',
+        mudraShakti: 'अभय-कमल मुद्रा',
+        yoginiClass: 'कमल योगिनी (Lotus Shaktis)',
+        geometryType: '8 Symmetrical Radial Lotus Petals',
+        significance: 'जीवन के आठों आयामों (ज्ञान, धैर्य, संतान, विजय, अन्न, स्वास्थ्य, संपत्ति, आध्यात्मिक सिद्धि) का सामूहिक जागरण।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'वैष्णव षट्कोण चक्र',
+        nameEnglish: 'Vaishnava Hexagram (Union of Water & Fire)',
+        chakraTitle: 'षट्कोण मण्डल (Twin Intersecting Triangles)',
+        presidingDeity: 'नारायण-लक्ष्मी सामरस्य',
+        mudraShakti: 'शंख-चक्र मुद्रा',
+        yoginiClass: 'वैष्णवी शक्ति',
+        geometryType: 'Hexagram (Two Inverted Interpenetrating Equilateral Triangles)',
+        significance: 'पुरुष (विष्णु) और प्रकृति (लक्ष्मी) का अविनाशी योग। घर में स्थायी धन, व्यापारिक स्थिरता और पारिवारिक शांति की स्थापना।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'श्रीमहालक्ष्मी बिन्दु मण्डल',
+        nameEnglish: 'Prime Sri Singularity & Beej',
+        chakraTitle: 'केन्द्रीय बिन्दु एवं श्रीं बीज',
+        presidingDeity: 'कमलवासिनी महालक्ष्मी (पद्मासना)',
+        mudraShakti: 'महालक्ष्मी मुद्रा',
+        yoginiClass: 'परा शक्ति',
+        geometryType: 'Central Singularity Point',
+        significance: 'एकाक्षरी महालक्ष्मी बीज "श्रीं" का शाश्वत स्रोत। जहां साधक को सम्पूर्ण त्रैलोक्य का ऐश्वर्य और पराशांति प्राप्त होती है।'
+      }
+    ],
     jyotish: {
       rulingPlanet: 'शुक्र (Venus)',
       planetSanskrit: 'शुक्र ग्रह (सौंदर्य, भोग व ऐश्वर्य)',
@@ -386,6 +604,63 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         sanskritSloka: 'त्वं मूलाधारस्थितोऽसि नित्यम्।\nत्वं शक्तित्रयात्मकः।\nत्वां योगिनो ध्यायन्ति नित्यम्॥',
         hindiMeaning: 'हे गणेश! आप मूलाधार चक्र में नित्य स्थित हैं। आप इच्छा, ज्ञान और क्रिया—तीनों शक्तियों के स्वरूप हैं। योगी आपका नित्य ध्यान करते हैं।',
         englishMeaning: 'You perpetually reside in the Muladhara root chakra. You embody the three primal energies (will, knowledge, action). Yogis meditate upon you continuously.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'मूलाधार भूपुर प्राकार',
+        nameEnglish: 'Muladhara Earth Citadel',
+        chakraTitle: 'भूपुर एवं विघ्नहर्ता द्वार (4 Cardinal Gates)',
+        presidingDeity: 'भगवान विघ्नराज गणेश',
+        mudraShakti: 'अङ्कुश मुद्रा (Divine Restraint & Control)',
+        yoginiClass: 'मूलाधार शक्ति वर्ग',
+        geometryType: '4 Cardinal Gateways with Concentric Ramparts',
+        significance: 'समस्त बाहरी विघ्नों, बुरी दृष्टि और नकारात्मक बाधाओं का द्वार पर ही शमन। पृथ्वी तत्व की स्थिरता।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'अष्टविनायक कमल चक्र',
+        nameEnglish: 'Ashta-Vinayaka 8-Petal Lotus',
+        chakraTitle: 'अष्टदल पद्म (8 Sacred Petals of Wisdom & Intellect)',
+        presidingDeity: 'अष्टविनायक (मयूरेश्वर, सिद्धिटेक, बल्लालेश्वर, वरदविनायक, चिंतामणि, गिरिजात्मज, विघ्नेश्वर, महागणपति)',
+        mudraShakti: 'पाश मुद्रा (Attraction of Wisdom)',
+        yoginiClass: 'ब्राह्मी आदि अष्टशक्तियाँ',
+        geometryType: '8 Symmetrical Radial Lotus Petals',
+        significance: 'आठों दिशाओं से ऋद्धि-सिद्धि का जागरण तथा बुद्धि और विवेक में प्रखरता।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'गाणपत्य षट्कोण चक्र',
+        nameEnglish: 'Ganesh Hexagram (Union of Shiva-Shakti)',
+        chakraTitle: 'षट्कोण मण्डल (Intersecting Triangles)',
+        presidingDeity: 'गणपति-वल्लभा सामरस्य',
+        mudraShakti: 'दन्त मुद्रा (One-Tusk Sacred Seal)',
+        yoginiClass: 'ऋद्धि-सिद्धि शक्ति',
+        geometryType: 'Hexagram (Two Intersecting Triangles)',
+        significance: 'शिव (ऊर्ध्वमुख त्रिकोण) और शक्ति (अधोमुख त्रिकोण) का ऐक्य। समस्त संकल्पों और पुरुषार्थ की अविलंब सिद्धि।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'त्रिकोण पीठिका',
+        nameEnglish: 'Sacred Inner Triangle',
+        chakraTitle: 'अन्तर्त्रिकोण (The Seat of Desire, Knowledge, Action)',
+        presidingDeity: 'माता ऋद्धि व माता सिद्धि',
+        mudraShakti: 'मोदक मुद्रा (The Sweetness of Supreme Wisdom)',
+        yoginiClass: 'बुद्धि-मेधा शक्ति',
+        geometryType: 'Inverted Prime Triangle',
+        significance: 'इच्छा, ज्ञान और क्रिया शक्ति की त्रिवेणी। साधक के सभी संशयों का नाश।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'महागणेश बिन्दु व स्वास्तिक',
+        nameEnglish: 'Central Ganesha Singularity & Swastika',
+        chakraTitle: 'केन्द्रीय बिन्दु एवं "गं" बीज मण्डल',
+        presidingDeity: 'महागणपति (परब्रह्म स्वरूप)',
+        mudraShakti: 'अभय-वरद मुद्रा',
+        yoginiClass: 'परा संवित् शक्ति',
+        geometryType: 'Infinitesimal Central Singularity Point',
+        significance: 'अखण्ड ओंकार का मूल। जहाँ सभी कार्य निर्विघ्न संपन्न होकर शाश्वत विजय और आनंद प्रदान करते हैं।'
       }
     ],
     jyotish: {
@@ -444,6 +719,74 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         englishMeaning: 'We venerate the Three-Eyed Lord Shiva, fragrant and nourisher of all. As a ripe gourd is effortlessly liberated from its vine, may we be released from mortality, never from immortality.'
       }
     ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'अभेद्य रक्षा भूपुर',
+        nameEnglish: 'Invincible Rampart of Protection',
+        chakraTitle: 'भूपुर एवं चार शिव द्वार',
+        presidingDeity: 'भगवान मृत्युंजय शिव',
+        mudraShakti: 'अभय-मुद्रा (Fearlessness Over Mortality)',
+        yoginiClass: 'रुद्र-गण शक्ति',
+        geometryType: '4 Cardinal Gateways with Concentric Ramparts',
+        significance: 'अकाल मृत्यु, महामारी, दुर्घटना व भयानक अनिष्टों से अभेद्य सुरक्षा कवच।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'द्वात्रिंशत् दल कमल चक्र',
+        nameEnglish: '32-Petal Sanjeevani Lotus',
+        chakraTitle: 'द्वात्रिंशत् दल संजीवनी पद्म (32 Petals)',
+        presidingDeity: 'द्वात्रिंशत् अमृत कलाएँ',
+        mudraShakti: 'अमृत-वर्षिणी मुद्रा',
+        yoginiClass: 'संजीवनी योगिनी',
+        geometryType: '32 Symmetrical Radial Petals',
+        significance: 'मानव देह के ३२ प्रमुख मर्म स्थानों का शोधन। विष, व्याधि और जीर्ण रोगों का शमन।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'षोडश दल अमृत पद्म',
+        nameEnglish: '16-Petal Nectar Lotus',
+        chakraTitle: 'षोडश दल कमल (16 Lunar Nectars)',
+        presidingDeity: 'षोडश चन्द्रकला शिव',
+        mudraShakti: 'चन्द्रकला मुद्रा',
+        yoginiClass: 'अमृत-प्रभा योगिनी',
+        geometryType: '16 Symmetrical Lotus Petals',
+        significance: 'चन्द्रमा की १६ अमृतमयी कलाओं का संचार। जीवनी शक्ति (Ojas) और रोग-प्रतिरोधक क्षमता (Immunity) की अभूतपूर्व वृद्धि।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'अष्टदल महाशिव पद्म',
+        nameEnglish: 'Ashta-Murti Shiva 8-Petal Lotus',
+        chakraTitle: 'अष्टदल पद्म (8 Petals of Cosmic Shiva)',
+        presidingDeity: 'अष्टमूर्ति शिव (भव, शर्व, ईशान, पशुपति, उग्र, रुद्र, भीम, महादेव)',
+        mudraShakti: 'त्रिशूल मुद्रा',
+        yoginiClass: 'रुद्राणी शक्ति',
+        geometryType: '8 Symmetrical Radial Petals',
+        significance: 'आठों दिशाओं के स्वामियों और पंचमहाभूत+सूर्य+चन्द्र+आत्मा के दोषों का निवारण।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'कालजयी षट्कोण चक्र',
+        nameEnglish: 'Hexagram of Immortality (Time Transcended)',
+        chakraTitle: 'षट्कोण मण्डल (Intersecting Triangles of Eternity)',
+        presidingDeity: 'सदाशिव-महागौरी सामरस्य',
+        mudraShakti: 'मृग-मुद्रा',
+        yoginiClass: 'चिदग्नि शक्ति',
+        geometryType: 'Hexagram (Two Intersecting Triangles)',
+        significance: 'काल और समय के बंधनों का अतिक्रमण। मृत्यु के भय से मुक्ति और दीर्घायु की प्राप्ति।'
+      },
+      {
+        index: 6,
+        nameSanskrit: 'केन्द्रीय त्र्यम्बक बिन्दु',
+        nameEnglish: 'Central Immortal Tryambaka Singularity',
+        chakraTitle: 'केन्द्रीय बिन्दु एवं संजीवनी "हौं जूं सः" बीज',
+        presidingDeity: 'भगवान त्र्यम्बकेश्वर (अमृतलिंग)',
+        mudraShakti: 'महामृत्युंजय मुद्रा',
+        yoginiClass: 'परम कैवल्य शक्ति',
+        geometryType: 'Infinitesimal Central Singularity Point',
+        significance: 'अमृत का अक्षय महाकुंभ। जहां जीव का शिव में विलय होकर मोक्ष और पूर्ण आरोग्य प्राप्त होता है।'
+      }
+    ],
     jyotish: {
       rulingPlanet: 'शनि (Saturn), राहु व मारक भाव अधिपति',
       planetSanskrit: 'शनि-राहु शांति व आयु रक्षा',
@@ -497,6 +840,52 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
         sanskritSloka: 'नमस्ते वास्तु पुरुषाय भूशय्याभिरत प्रभो।\nमद्गृहं धनधान्यादि समृद्धं कुरु सर्वदा॥',
         hindiMeaning: 'हे भूमि पर शयन करने वाले वास्तु पुरुष! आपको नमस्कार है। आप कृपा करके मेरे घर को धन, धान्य और समस्त सुख-समृद्धि से परिपूर्ण करें।',
         englishMeaning: 'Salutations to you, O Vastu Purusha, who reclines upon the Earth. Bless our dwelling with perpetual wealth, food grains, and holistic prosperity.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'दिक्पाल भूपुर प्राकार',
+        nameEnglish: '16-Bastion Earth Rampart of Spatial Balance',
+        chakraTitle: 'षोडश कोष्ठक भूपुर (Outer Spatial Perimeter)',
+        presidingDeity: 'अष्टदिक्पाल (इन्द्र, अग्नि, यम, निर्ऋति, वरुण, वायु, कुबेर, ईशान)',
+        mudraShakti: 'वास्तु-रक्षा मुद्रा',
+        yoginiClass: 'दिक्पाल शक्ति',
+        geometryType: 'Outer 16-Segmented Rampart with 4 Directional Gates',
+        significance: 'आठों दिशाओं और उनके उप-कोणों के वास्तु दोषों का निष्प्रभावीकरण। भवन के चुंबकीय क्षेत्र का सात्विक स्थिरीकरण।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'पंचमहाभूत मण्डल',
+        nameEnglish: 'Five Cosmic Elements Harmonizer',
+        chakraTitle: 'पंचमहाभूत चक्र (Earth, Water, Fire, Air, Space)',
+        presidingDeity: 'पंचभूत अधिष्ठाता देव',
+        mudraShakti: 'पंचतत्व मुद्रा',
+        yoginiClass: 'तत्व-योगिनी',
+        geometryType: 'Concentric Elemental Rings and Triangles',
+        significance: 'ईशान में जल, आग्नेय में अग्नि, नैऋत्य में पृथ्वी, वायव्य में वायु और मध्य में आकाश तत्व का सम्यक संतुलन।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'अष्टकमल वास्तु पीठ',
+        nameEnglish: '8-Petal Vastu Mandala',
+        chakraTitle: 'अष्टदल पद्म (8 Petals of Holistic Harmony)',
+        presidingDeity: 'वास्तु शक्ति व कुलदेवता',
+        mudraShakti: 'शान्ति-पुष्टि मुद्रा',
+        yoginiClass: 'क्षेत्रपाल शक्ति',
+        geometryType: '8 Symmetrical Radial Lotus Petals',
+        significance: 'भवन के निवासियों के स्वास्थ्य, पारिवारिक सौहार्द्र, और सुख-शांति की अभिवृद्धि।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'ब्रह्मस्थान केन्द्र नाभि',
+        nameEnglish: 'Brahmasthan Nucleus of Vastu Purusha',
+        chakraTitle: 'मध्य बिन्दु एवं ब्रह्मस्थान नाभि',
+        presidingDeity: 'भगवान वास्तु पुरुष (भूमण्डल शयन)',
+        mudraShakti: 'अभय-वरद वास्तु मुद्रा',
+        yoginiClass: 'परमब्रह्म शक्ति',
+        geometryType: 'Central Singularity Point',
+        significance: 'सम्पूर्ण भवन का ऊर्जा-हृदय। यहाँ वास्तु पुरुष का साक्षात् आशीर्वाद प्रवाहित होकर दरिद्रता, गृह-क्लेश और आकस्मिक संकटों का शमन करता है।'
       }
     ],
     jyotish: {
