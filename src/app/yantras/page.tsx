@@ -16,7 +16,8 @@ import {
 import {
   Search, Download, Copy, Check, Sparkles, Compass, Star, Flame, RotateCcw,
   Upload, Layers, Palette, BookOpen, CheckCircle2, Image as ImageIcon, Trash2,
-  Play, Pause, SkipBack, SkipForward, Eye, EyeOff, Target
+  Play, Pause, SkipBack, SkipForward, Eye, EyeOff, Target,
+  ChevronLeft, ChevronRight, Maximize2, Minimize2
 } from 'lucide-react';
 import {
   getConstituentCanvasCoords,
@@ -139,6 +140,10 @@ function YantraExplorerInner() {
   const [hoveredConstituentId, setHoveredConstituentId] = useState<string | number | null>(null);
   const [isZoomed, setIsZoomed] = useState<boolean>(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Layout expansion and collapsible sidebar states
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+  const [isCanvasExpanded, setIsCanvasExpanded] = useState<boolean>(false);
 
   // Step-by-Step Construction Slider states
   const [isConstructionMode, setIsConstructionMode] = useState<boolean>(false);
@@ -638,123 +643,163 @@ function YantraExplorerInner() {
   const currentThemeObj = YANTRA_COLOR_THEMES[selectedTheme] || YANTRA_COLOR_THEMES.traditional_shastric;
 
   return (
-    <div className="min-h-screen bg-[#F7F3EB] text-[#1E1711] font-sans pb-20 space-y-8">
+    <div className="min-h-screen bg-[#F7F3EB] text-[#0F0C08] font-sans pb-20 space-y-8">
       {/* Top Banner */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-6 rounded-[28px] bg-[#FDFBF7] border border-[#DDD1BE] shadow-[0_4px_20px_rgba(140,90,32,0.06)]">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 p-6 rounded-[28px] bg-[#FDFBF7] border-2 border-[#D1C4B0] shadow-[0_4px_20px_rgba(42,20,5,0.06)]">
         <div className="space-y-1">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#805713] uppercase tracking-wider font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-[#B38226]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#5C3A0E] uppercase tracking-wider font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-[#824707]" />
             <span>Sacred Shastric Yantra Platform</span>
             <span>•</span>
-            <span className="text-[#D9531E]">{currentYantra.tradition}</span>
+            <span className="text-[#8C2300] font-bold">{currentYantra.tradition}</span>
           </div>
-          <h1 className="text-2xl lg:text-3xl font-rozha font-bold text-[#1E1711] flex items-center gap-3">
+          <h1 className="text-2xl lg:text-3xl font-rozha font-bold text-[#0F0C08] flex items-center gap-3">
             <span>{currentYantra.nameSanskrit}</span>
-            <span className="text-sm font-cinzel font-bold text-[#7D6B57]">({currentYantra.nameEnglish})</span>
+            <span className="text-sm font-cinzel font-bold text-[#3D2C1C]">({currentYantra.nameEnglish})</span>
           </h1>
-          <p className="text-xs text-[#5C4D3C] max-w-2xl font-medium">{currentYantra.subTitle}</p>
+          <p className="text-xs text-[#2E2218] max-w-2xl font-semibold">{currentYantra.subTitle}</p>
         </div>
 
-        {/* Canonical Shastric Badge */}
-        <div className="flex items-center gap-3">
-          <div className="px-4 py-2 rounded-xl bg-[#F5EFE4] border border-[#C5A059]/40 text-xs font-mono text-[#805713] font-bold flex items-center gap-2 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-            <span>शास्त्रीय प्रामाणिक स्वरूप</span>
+        {/* Action Controls & Shastric Badge */}
+        <div className="flex items-center gap-2.5 flex-wrap">
+          {/* Library Toggle Button */}
+          <button
+            onClick={() => setIsSidebarOpen(prev => !prev)}
+            className={`px-3.5 py-2 rounded-xl border text-xs font-mono font-bold flex items-center gap-2 cursor-pointer transition-all shadow-xs ${
+              isSidebarOpen
+                ? 'bg-[#824707] text-white border-[#824707]'
+                : 'bg-[#F5EFE4] hover:bg-[#EFE5D5] text-[#0F0C08] border-[#824707]/40'
+            }`}
+            title={isSidebarOpen ? "यन्त्र सूची छुपाएं (Hide Library)" : "यन्त्र सूची खोलें (Open Registry)"}
+          >
+            <Layers className="w-4 h-4 text-[#824707] shrink-0" />
+            <span>{isSidebarOpen ? '◀ यन्त्र सूची छुपाएं' : '☰ यन्त्र सूची (25+)'}</span>
+          </button>
+
+          {/* Full Canvas Altar Toggle Button */}
+          <button
+            onClick={() => setIsCanvasExpanded(prev => !prev)}
+            className={`px-3.5 py-2 rounded-xl border text-xs font-mono font-bold flex items-center gap-2 cursor-pointer transition-all shadow-xs ${
+              isCanvasExpanded
+                ? 'bg-[#8C2300] text-white border-[#8C2300]'
+                : 'bg-[#F5EFE4] hover:bg-[#EFE5D5] text-[#0F0C08] border-[#824707]/40'
+            }`}
+            title={isCanvasExpanded ? "सामान्य दृश्य (Standard Layout)" : "पूर्ण वेदी विस्तार (Full Altar Space)"}
+          >
+            {isCanvasExpanded ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4 text-[#824707]" />}
+            <span>{isCanvasExpanded ? 'सामान्य वेदी' : '⛶ पूर्ण वेदी'}</span>
+          </button>
+
+          {/* Canonical Shastric Badge */}
+          <div className="px-3.5 py-2 rounded-xl bg-[#F5EFE4] border border-[#824707]/30 text-xs font-mono text-[#0F0C08] font-bold flex items-center gap-2 shadow-xs">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse" />
+            <span>शास्त्रीय प्रामाणिक</span>
           </div>
         </div>
       </div>
 
       {/* Main Studio Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         
-        {/* Left Side: Yantra Catalog Sidebar */}
-        <aside className="lg:col-span-3 bg-[#FDFBF7] border border-[#DDD1BE] rounded-3xl p-5 space-y-4 h-[calc(100vh-140px)] overflow-y-auto no-scrollbar shadow-[0_4px_18px_rgba(140,90,32,0.05)]">
-          <div className="space-y-1">
-            <h2 className="text-xs font-mono font-bold text-[#805713] uppercase tracking-wider flex items-center gap-1.5">
-              <Layers className="w-3.5 h-3.5 text-[#B38226]" />
-              <span>Sacred Yantra Library</span>
-            </h2>
-            <p className="text-[11px] text-[#7D6B57]">Authentic Shastric Yantra Registry</p>
-          </div>
+        {/* Left Side: Yantra Catalog Sidebar (Collapsible) */}
+        {isSidebarOpen && (
+          <aside className="lg:col-span-3 bg-[#FDFBF7] border-2 border-[#D1C4B0] rounded-3xl p-5 space-y-4 h-[calc(100vh-140px)] overflow-y-auto no-scrollbar shadow-[0_4px_18px_rgba(42,20,5,0.06)] sticky top-24 z-30">
+            <div className="flex items-center justify-between pb-2 border-b border-[#D1C4B0]">
+              <div className="space-y-0.5">
+                <h2 className="text-xs font-mono font-bold text-[#0F0C08] uppercase tracking-wider flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-[#824707]" />
+                  <span>Sacred Yantra Library</span>
+                </h2>
+                <p className="text-[11px] text-[#3D2C1C] font-semibold">Authentic Shastric Registry</p>
+              </div>
+              <button
+                onClick={() => setIsSidebarOpen(false)}
+                className="p-1.5 rounded-lg bg-[#F5EFE4] hover:bg-[#EFE5D5] text-[#0F0C08] transition-all cursor-pointer"
+                title="यन्त्र सूची छुपाएं"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+            </div>
 
-          <div className="relative">
-            <Search className="absolute left-3.5 top-3 w-3.5 h-3.5 text-[#8A7965]" />
-            <input
-              type="text"
-              placeholder="Search Yantra or Deity..."
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-              className="w-full bg-[#F5EFE4] border border-[#DDD1BE] focus:border-[#B38226] rounded-xl pl-9 pr-3 py-2 text-xs text-[#1E1711] placeholder-[#8A7965] focus:outline-none transition-all"
-            />
-          </div>
+            <div className="relative">
+              <Search className="absolute left-3.5 top-3 w-3.5 h-3.5 text-[#5A4532]" />
+              <input
+                type="text"
+                placeholder="Search Yantra or Deity..."
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                className="w-full bg-[#F5EFE4] border border-[#D1C4B0] focus:border-[#824707] rounded-xl pl-9 pr-3 py-2 text-xs text-[#0F0C08] placeholder-[#5A4532] focus:outline-none transition-all font-medium"
+              />
+            </div>
 
-          <div className="space-y-2 pt-1">
-            {filteredYantras.map(y => {
-              const isSelected = y.id === selectedYantraId;
-              const hasAsset = Boolean(assetsMap[y.id]);
+            <div className="space-y-2 pt-1">
+              {filteredYantras.map(y => {
+                const isSelected = y.id === selectedYantraId;
+                const hasAsset = Boolean(assetsMap[y.id]);
 
-              return (
-                <button
-                  key={y.id}
-                  onClick={() => setSelectedYantraId(y.id)}
-                  className={`w-full text-left p-3 rounded-2xl border transition-all cursor-pointer flex flex-col gap-1 ${
-                    isSelected
-                      ? 'bg-[#F4EAD8] border-[#B38226] text-[#805713] shadow-xs'
-                      : 'bg-[#FAF7F0] border-[#E8DFC8] hover:bg-[#F2EAE0] text-[#1E1711]'
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className={`text-xs font-serif font-bold ${isSelected ? 'text-[#D9531E]' : 'text-[#1E1711]'}`}>
-                      {y.nameSanskrit}
-                    </span>
-                    <div className="flex items-center gap-1">
-                      {hasAsset && (
-                        <span className="w-2 h-2 rounded-full bg-emerald-600" title="Authentic Asset Loaded" />
-                      )}
-                      {isSelected && <CheckCircle2 className="w-3.5 h-3.5 text-[#B38226]" />}
+                return (
+                  <button
+                    key={y.id}
+                    onClick={() => setSelectedYantraId(y.id)}
+                    className={`w-full text-left p-3 rounded-2xl border transition-all cursor-pointer flex flex-col gap-1 ${
+                      isSelected
+                        ? 'bg-[#F0E4D0] border-[#824707] text-[#0F0C08] shadow-xs ring-1 ring-[#824707]/40'
+                        : 'bg-[#FAF7F0] border-[#E8DFC8] hover:bg-[#F2EAE0] text-[#0F0C08]'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className={`text-xs font-serif font-bold ${isSelected ? 'text-[#8C2300]' : 'text-[#0F0C08]'}`}>
+                        {y.nameSanskrit}
+                      </span>
+                      <div className="flex items-center gap-1">
+                        {hasAsset && (
+                          <span className="w-2 h-2 rounded-full bg-emerald-600" title="Authentic Asset Loaded" />
+                        )}
+                        {isSelected && <CheckCircle2 className="w-3.5 h-3.5 text-[#824707]" />}
+                      </div>
                     </div>
-                  </div>
-                  <span className="text-[11px] text-[#7D6B57] truncate font-medium">{y.nameEnglish}</span>
-                  <span className="text-[10px] font-mono text-[#805713]">{y.presidingDeity}</span>
-                </button>
-              );
-            })}
-          </div>
-        </aside>
+                    <span className="text-[11px] text-[#2E2218] truncate font-semibold">{y.nameEnglish}</span>
+                    <span className="text-[10px] font-mono text-[#8C2300] font-bold">{y.presidingDeity}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </aside>
+        )}
 
         {/* Center / Right: Yantra Display & Multidimensional Knowledge Base */}
-        <main className="lg:col-span-9 space-y-6">
+        <main className={`${isSidebarOpen ? 'lg:col-span-9' : 'lg:col-span-12'} space-y-6 transition-all duration-300`}>
           
-          {/* Main 2-Column Workspace: Sacred Yantra Canvas (Left 7 Cols) + Dedicated Side Shastric HUD (Right 5 Cols) */}
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+          {/* Main Workspace: Sacred Yantra Canvas + Dedicated Side Shastric HUD */}
+          <div className={`grid grid-cols-1 ${isCanvasExpanded ? 'xl:grid-cols-1' : 'xl:grid-cols-12'} gap-6 items-start`}>
             
             {/* Left Column: Sacred Yantra Canvas Stage */}
             <div
-              className="xl:col-span-7 relative rounded-[32px] p-5 sm:p-7 border-2 border-[#C5A059]/40 flex flex-col items-center justify-center shadow-xl transition-colors"
+              className={`${isCanvasExpanded ? 'w-full' : isSidebarOpen ? 'xl:col-span-7' : 'xl:col-span-8'} relative rounded-[32px] p-4 sm:p-7 border-2 border-[#824707]/30 flex flex-col items-center justify-center shadow-xl transition-all`}
               style={{ background: currentThemeObj.background }}
             >
               {/* Top Meta Bar & Altar Enhancement Toolbar */}
               <div className="w-full flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-[#F4EAD8] text-[#805713] border border-[#C5A059]/40 font-bold">
+                  <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-[#F0E4D0] text-[#0F0C08] border border-[#824707]/40 font-bold">
                     {currentYantra.nameEnglish}
                   </span>
-                  <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-[#FDECE5] text-[#D9531E] border border-[#D9531E]/30 font-bold">
+                  <span className="text-[11px] font-mono px-3 py-1 rounded-full bg-[#FDECE5] text-[#8C2300] border border-[#D9531E]/40 font-bold">
                     {currentYantra.presidingDeity}
                   </span>
                 </div>
 
-                {/* 2D/3D Switcher, Construction Mode & Zoom */}
+                {/* 2D/3D Switcher, Construction Mode, Zoom & Canvas Expand */}
                 <div className="flex items-center gap-2 flex-wrap">
                   {/* 2D vs 3D Dimension Switcher (Sri Yantra specific) */}
                   {selectedYantraId === 'sri_yantra' && (
-                    <div className="flex items-center gap-1 bg-[#F5EFE4] p-1 rounded-xl border border-[#DDD1BE] text-xs font-mono">
+                    <div className="flex items-center gap-1 bg-[#F5EFE4] p-1 rounded-xl border border-[#D1C4B0] text-xs font-mono">
                       <button
                         onClick={() => { setDisplayDimension('2d_yantra'); setIsConstructionMode(false); }}
                         className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
                           displayDimension === '2d_yantra' && !isConstructionMode
-                            ? 'bg-[#B38226] text-white shadow-xs'
-                            : 'text-[#5C4D3C] hover:text-[#1E1711]'
+                            ? 'bg-[#824707] text-white shadow-xs'
+                            : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
                         }`}
                       >
                         📐 2D यन्त्र
@@ -763,8 +808,8 @@ function YantraExplorerInner() {
                         onClick={() => { setDisplayDimension('3d_meru'); setIsConstructionMode(false); }}
                         className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
                           displayDimension === '3d_meru' && !isConstructionMode
-                            ? 'bg-[#B38226] text-white shadow-xs'
-                            : 'text-[#5C4D3C] hover:text-[#1E1711]'
+                            ? 'bg-[#824707] text-white shadow-xs'
+                            : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
                         }`}
                         title="3D महामेरु विग्रह (Solid Brass/Gold Pyramid Altar Visage)"
                       >
@@ -778,8 +823,8 @@ function YantraExplorerInner() {
                         }}
                         className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
                           isConstructionMode
-                            ? 'bg-[#D9531E] text-white shadow-xs'
-                            : 'text-[#805713] hover:bg-[#EFE7DA]'
+                            ? 'bg-[#8C2300] text-white shadow-xs'
+                            : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
                         }`}
                         title="चरणबद्ध निर्माण स्लाइडर (Step-by-Step Construction Assembly)"
                       >
@@ -792,28 +837,44 @@ function YantraExplorerInner() {
                         }}
                         className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
                           displayDimension === 'pure_dissection' && !isConstructionMode
-                            ? 'bg-[#B38226] text-white shadow-xs'
-                            : 'text-[#805713] hover:bg-[#EFE7DA]'
+                            ? 'bg-[#824707] text-white shadow-xs'
+                            : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
                         }`}
                         title="शुद्ध ज्यामितीय विच्छेदन (Pure Geometric Vector Dissection)"
                       >
-                        🔬 शुद्ध घटक विच्छेदन
+                        🔬 शुद्ध घटक
                       </button>
                     </div>
                   )}
 
                   {/* Zoom Control */}
-                  <div className="flex items-center bg-[#F5EFE4] p-1 rounded-xl border border-[#DDD1BE] text-xs font-mono">
+                  <div className="flex items-center bg-[#F5EFE4] p-1 rounded-xl border border-[#D1C4B0] text-xs font-mono">
                     <button
                       onClick={() => setIsZoomed(!isZoomed)}
                       className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer font-bold ${
                         isZoomed
-                          ? 'bg-[#D9531E] text-white shadow-xs'
-                          : 'text-[#5C4D3C] hover:text-[#1E1711]'
+                          ? 'bg-[#8C2300] text-white shadow-xs'
+                          : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
                       }`}
                       title={isZoomed ? "Reset Zoom" : "Zoom into Center Triangles & Bindu"}
                     >
                       {isZoomed ? '🔍 1x' : '🔍 +ज़ूम'}
+                    </button>
+                  </div>
+
+                  {/* Canvas Full Stage Toggle */}
+                  <div className="flex items-center bg-[#F5EFE4] p-1 rounded-xl border border-[#D1C4B0] text-xs font-mono">
+                    <button
+                      onClick={() => setIsCanvasExpanded(!isCanvasExpanded)}
+                      className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer font-bold flex items-center gap-1 ${
+                        isCanvasExpanded
+                          ? 'bg-[#8C2300] text-white shadow-xs'
+                          : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
+                      }`}
+                      title={isCanvasExpanded ? "सामान्य आकार में वापस आएं" : "यन्त्र वेदी को पूरा स्पेस दें"}
+                    >
+                      {isCanvasExpanded ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5 text-[#824707]" />}
+                      <span>{isCanvasExpanded ? 'संकुचित' : '⛶ पूर्ण वेदी'}</span>
                     </button>
                   </div>
                 </div>
@@ -822,7 +883,7 @@ function YantraExplorerInner() {
               {/* Display Area with Consecrated Sacred Frame */}
               {currentAsset ? (
                 <div
-                  className={`relative w-full max-w-lg aspect-square flex items-center justify-center p-3 sm:p-5 transition-all duration-300 rounded-[28px] border-2 border-[#C5A059] shadow-[0_15px_45px_rgba(140,90,32,0.12)] bg-[#FDFBF7] overflow-hidden cursor-crosshair select-none group ${
+                  className={`relative w-full ${isCanvasExpanded ? 'max-w-4xl min-h-[620px] lg:min-h-[820px]' : 'max-w-2xl xl:max-w-3xl min-h-[520px] sm:min-h-[620px] lg:min-h-[720px]'} aspect-square flex items-center justify-center p-3 sm:p-6 transition-all duration-300 rounded-[32px] border-2 border-[#824707]/30 shadow-[0_15px_45px_rgba(42,20,5,0.08)] bg-[#FDFBF7] overflow-hidden cursor-crosshair select-none group ${
                     canvasAltarMode === 'gold_glow'
                       ? 'shadow-[0_0_40px_rgba(179,130,38,0.2)]'
                       : canvasAltarMode === 'dark_shrine'
@@ -872,7 +933,7 @@ function YantraExplorerInner() {
                       )}
                       {/* Pure Independent Geometric Vector Dissection Element */}
                       <div
-                        className="w-full h-full flex items-center justify-center drop-shadow-2xl [&_svg]:w-full [&_svg]:h-full transition-all [&_svg]:filter [&_svg]:drop-shadow-[0_0_25px_rgba(255,215,0,0.6)]"
+                        className="w-full h-full flex items-center justify-center [&_svg]:w-full [&_svg]:h-full transition-all [&_svg]:filter [&_svg]:contrast-125 [&_svg]:drop-shadow-[0_4px_16px_rgba(42,20,5,0.14)]"
                         dangerouslySetInnerHTML={{ __html: singleDissectionSvg }}
                       />
                     </div>
@@ -887,7 +948,7 @@ function YantraExplorerInner() {
                       )}
                       {/* Pure Vector Step-by-Step Assembly without circular clipping */}
                       <div
-                        className="w-full h-full flex items-center justify-center drop-shadow-2xl [&_svg]:w-full [&_svg]:h-full transition-all [&_svg]:filter [&_svg]:drop-shadow-[0_0_25px_rgba(255,215,0,0.5)] [&_svg]:contrast-115 [&_svg]:brightness-105"
+                        className="w-full h-full flex items-center justify-center [&_svg]:w-full [&_svg]:h-full transition-all [&_svg]:filter [&_svg]:contrast-125 [&_svg]:drop-shadow-[0_4px_16px_rgba(42,20,5,0.14)]"
                         dangerouslySetInnerHTML={{ __html: constructionVectorSvg }}
                       />
                     </div>
@@ -896,7 +957,7 @@ function YantraExplorerInner() {
                       {/* Main Rendered Asset (Pure Vector with no white box, no corner mantras, no bottom text) */}
                       {currentAsset.type === 'svg' ? (
                         <div
-                          className="w-full h-full flex items-center justify-center drop-shadow-2xl [&_svg]:w-full [&_svg]:h-full transition-all [&_svg]:filter [&_svg]:drop-shadow-[0_0_25px_rgba(255,215,0,0.5)] [&_svg]:contrast-115 [&_svg]:brightness-105"
+                          className="w-full h-full flex items-center justify-center [&_svg]:w-full [&_svg]:h-full transition-all [&_svg]:filter [&_svg]:contrast-125 [&_svg]:drop-shadow-[0_4px_16px_rgba(42,20,5,0.14)]"
                           dangerouslySetInnerHTML={{ __html: currentAsset.content }}
                         />
                       ) : (
@@ -923,16 +984,16 @@ function YantraExplorerInner() {
                       >
                         {/* Sacred Inscribed Sanskrit Beejaksharas Layer */}
                         {showBeejaMantras && selectedYantraId === 'sri_yantra' && (
-                          <g className="select-none pointer-events-none drop-shadow-[0_0_5px_rgba(0,0,0,0.95)]">
+                          <g className="select-none pointer-events-none">
 
                             {/* Central Bindu Seed */}
-                            <circle cx="500" cy="500" r="14" fill="#FFD700" opacity="0.35" className="animate-pulse" />
-                            <text x="500" y="506" textAnchor="middle" fill="#FFF9F2" fontSize="15" fontFamily="serif" fontWeight="900" className="drop-shadow-[0_0_8px_#FFD700]">ह्रीं</text>
+                            <circle cx="500" cy="500" r="14" fill="#8C2300" opacity="0.25" className="animate-pulse" />
+                            <text x="500" y="506" textAnchor="middle" fill="#4D0E00" fontSize="16" fontFamily="serif" fontWeight="900">ह्रीं</text>
 
                             {/* Central Triangle (Kamakala) 3 Kootas */}
-                            <text x="500" y="475" textAnchor="middle" fill="#FFD700" fontSize="9.5" fontFamily="serif" fontWeight="bold">क ए ई ल ह्रीं</text>
-                            <text x="458" y="534" textAnchor="middle" fill="#FFD700" fontSize="8.5" fontFamily="serif" fontWeight="bold">ह स क ह ल ह्रीं</text>
-                            <text x="542" y="534" textAnchor="middle" fill="#FFD700" fontSize="8.5" fontFamily="serif" fontWeight="bold">स क ल ह्रीं</text>
+                            <text x="500" y="475" textAnchor="middle" fill="#5E1E05" fontSize="10.5" fontFamily="serif" fontWeight="bold">क ए ई ल ह्रीं</text>
+                            <text x="458" y="534" textAnchor="middle" fill="#5E1E05" fontSize="9.5" fontFamily="serif" fontWeight="bold">ह स क ह ल ह्रीं</text>
+                            <text x="542" y="534" textAnchor="middle" fill="#5E1E05" fontSize="9.5" fontFamily="serif" fontWeight="bold">स क ल ह्रीं</text>
 
                             {/* 8 Innermost Triangles (Ashtara Vagdevatas) */}
                             {[
@@ -955,11 +1016,10 @@ function YantraExplorerInner() {
                                   x={x}
                                   y={y + 4}
                                   textAnchor="middle"
-                                  fill="#FFF9F2"
-                                  fontSize="11"
+                                  fill="#3D1203"
+                                  fontSize="12"
                                   fontFamily="serif"
                                   fontWeight="bold"
-                                  className="drop-shadow-[0_0_6px_rgba(255,215,0,0.85)]"
                                 >
                                   {item.beej}
                                 </text>
@@ -979,11 +1039,10 @@ function YantraExplorerInner() {
                                   x={x}
                                   y={y + 4}
                                   textAnchor="middle"
-                                  fill="#FFD700"
-                                  fontSize="10"
+                                  fill="#3D1203"
+                                  fontSize="11"
                                   fontFamily="serif"
                                   fontWeight="bold"
-                                  opacity="0.95"
                                 >
                                   {vowel}
                                 </text>
@@ -1000,21 +1059,21 @@ function YantraExplorerInner() {
                                 cx="500"
                                 cy="500"
                                 r={R2}
-                                fill="#FFD700"
+                                fill="#824707"
                                 fillOpacity="0.08"
-                                stroke="#FFD700"
-                                strokeWidth="1.6"
-                                strokeDasharray="3 3"
+                                stroke="#824707"
+                                strokeWidth="2"
+                                strokeDasharray="4 3"
                                 className="animate-pulse"
                               />
                             ) : (
                               <path
                                 d={`M 500 ${500 - R2} A ${R2} ${R2} 0 1 0 500 ${500 + R2} A ${R2} ${R2} 0 1 0 500 ${500 - R2} Z M 500 ${500 - R1} A ${R1} ${R1} 0 1 1 500 ${500 + R1} A ${R1} ${R1} 0 1 1 500 ${500 - R1} Z`}
                                 fillRule="evenodd"
-                                fill="#FFD700"
-                                fillOpacity="0.06"
-                                stroke="#FFD700"
-                                strokeWidth="1.5"
+                                fill="#824707"
+                                fillOpacity="0.07"
+                                stroke="#824707"
+                                strokeWidth="2"
                                 strokeDasharray="4 3"
                                 className="animate-pulse"
                               />
@@ -1027,8 +1086,8 @@ function YantraExplorerInner() {
                                 cy="500"
                                 r={R1}
                                 fill="none"
-                                stroke="#FFD700"
-                                strokeWidth="1.5"
+                                stroke="#824707"
+                                strokeWidth="1.8"
                                 strokeDasharray="4 4"
                                 opacity="0.85"
                               />
@@ -1040,8 +1099,8 @@ function YantraExplorerInner() {
                               cy="500"
                               r={R2}
                               fill="none"
-                              stroke="#FFD700"
-                              strokeWidth="2"
+                              stroke="#824707"
+                              strokeWidth="2.4"
                               strokeDasharray="6 4"
                               opacity="0.9"
                             />
@@ -1514,19 +1573,19 @@ function YantraExplorerInner() {
             </div>
 
             {/* Right Column: Dedicated Live Shastric Avarana Inspector HUD Panel */}
-            <div className="xl:col-span-5 bg-[#FDFBF7] border-2 border-[#C5A059]/60 rounded-[32px] p-5 sm:p-6 shadow-xl space-y-4">
+            <div className={`${isCanvasExpanded ? 'w-full' : isSidebarOpen ? 'xl:col-span-5' : 'xl:col-span-4'} bg-[#FDFBF7] border-2 border-[#824707]/30 rounded-[32px] p-5 sm:p-6 shadow-xl space-y-4`}>
               
               {/* Header with Live Status & Pin Toggle */}
-              <div className="flex items-center justify-between border-b border-[#DDD1BE] pb-3">
+              <div className="flex items-center justify-between border-b border-[#D1C4B0] pb-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-[#F4EAD8] border border-[#C5A059]/40 flex items-center justify-center text-xs text-[#805713]">
+                  <div className="w-7 h-7 rounded-lg bg-[#F0E4D0] border border-[#824707]/40 flex items-center justify-center text-xs text-[#0F0C08] font-bold">
                     🕉️
                   </div>
                   <div>
-                    <h3 className="text-xs font-mono font-bold text-[#805713] uppercase tracking-wider">
+                    <h3 className="text-xs font-mono font-bold text-[#0F0C08] uppercase tracking-wider">
                       नवावरण शास्त्रीय विश्लेषक
                     </h3>
-                    <p className="text-[10px] text-[#7D6B57]">Live Shastric Geometry & Deity HUD</p>
+                    <p className="text-[10px] text-[#3D2C1C] font-semibold">Live Shastric Geometry & Deity HUD</p>
                   </div>
                 </div>
 
@@ -1535,19 +1594,19 @@ function YantraExplorerInner() {
                   {pinnedAvaranaIndex ? (
                     <button
                       onClick={() => setPinnedAvaranaIndex(null)}
-                      className="px-2.5 py-1 rounded-full bg-[#FDECE5] border border-[#D9531E]/40 text-[#D9531E] text-[10px] font-mono font-bold flex items-center gap-1 hover:bg-[#FCE8E0] transition-all cursor-pointer"
+                      className="px-2.5 py-1 rounded-full bg-[#FDECE5] border border-[#D9531E]/50 text-[#8C2300] text-[10px] font-mono font-bold flex items-center gap-1 hover:bg-[#FCE8E0] transition-all cursor-pointer"
                       title="Click to unlock live tracking"
                     >
                       <span>📌 आवरण {pinnedAvaranaIndex} लॉक</span>
                       <RotateCcw className="w-2.5 h-2.5" />
                     </button>
                   ) : hoveredAvarana ? (
-                    <span className="px-2.5 py-1 rounded-full bg-emerald-100 border border-emerald-400 text-emerald-700 text-[10px] font-mono font-semibold flex items-center gap-1.5">
+                    <span className="px-2.5 py-1 rounded-full bg-emerald-100 border border-emerald-500 text-emerald-800 text-[10px] font-mono font-bold flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-ping" />
                       <span>लाइव ट्रैकिंग</span>
                     </span>
                   ) : (
-                    <span className="px-2.5 py-1 rounded-full bg-[#F4EAD8] border border-[#C5A059]/40 text-[#805713] text-[10px] font-mono font-bold">
+                    <span className="px-2.5 py-1 rounded-full bg-[#F0E4D0] border border-[#824707]/40 text-[#0F0C08] text-[10px] font-mono font-bold">
                       ✨ केन्द्र बिन्दु
                     </span>
                   )}
@@ -1557,9 +1616,9 @@ function YantraExplorerInner() {
               {/* Quick Avarana Strip Selector (1 to N) */}
               {currentYantra.avaranas && currentYantra.avaranas.length > 0 && (
                 <div className="space-y-1.5">
-                  <div className="flex items-center justify-between text-[10px] font-mono text-[#7D6B57]">
+                  <div className="flex items-center justify-between text-[10px] font-mono text-[#2E2218] font-bold">
                     <span>आवरण चयन (Quick Selector):</span>
-                    <span>{currentYantra.avaranas.length} आवरण</span>
+                    <span className="text-[#8C2300]">{currentYantra.avaranas.length} आवरण</span>
                   </div>
                   <div className="grid grid-cols-3 sm:grid-cols-5 gap-1.5">
                     {currentYantra.avaranas.map(av => {
@@ -1574,12 +1633,12 @@ function YantraExplorerInner() {
                           }}
                           className={`px-2 py-1.5 rounded-xl text-[10px] font-mono font-bold transition-all cursor-pointer flex flex-col items-center justify-center ${
                             isSelected
-                              ? 'bg-linear-to-r from-[#B38226] to-[#D9531E] text-white shadow-md scale-105'
-                              : 'bg-[#FAF7F0] hover:bg-[#F2EAE0] text-[#5C4D3C] border border-[#DDD1BE]'
+                              ? 'bg-linear-to-r from-[#824707] to-[#8C2300] text-white shadow-md scale-105'
+                              : 'bg-[#FAF7F0] hover:bg-[#F2EAE0] text-[#0F0C08] border border-[#D1C4B0]'
                           }`}
                         >
-                          <span>{av.index}</span>
-                          <span className="text-[9px] truncate max-w-[50px] opacity-80">{av.nameSanskrit.slice(0, 4)}..</span>
+                          <span className="text-[11px] font-bold leading-none">{av.index}</span>
+                          <span className="text-[9px] truncate max-w-[50px] opacity-90 font-semibold">{av.nameSanskrit.slice(0, 4)}..</span>
                         </button>
                       );
                     })}
@@ -1589,114 +1648,114 @@ function YantraExplorerInner() {
 
               {/* Active Avarana Detail Card */}
               {activeDisplayAvarana && (
-                <div className="rounded-2xl bg-[#FAF7F0] border border-[#DDD1BE] p-4 space-y-3.5">
+                <div className="rounded-2xl bg-[#FAF7F0] border-2 border-[#D1C4B0] p-4 space-y-3.5 shadow-xs">
                   
                   {/* Title & Placement */}
-                  <div className="space-y-1 border-b border-[#DDD1BE] pb-3">
+                  <div className="space-y-1 border-b border-[#D1C4B0] pb-3">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#F4EAD8] text-[#805713] border border-[#C5A059]/40 font-bold">
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#F0E4D0] text-[#0F0C08] border border-[#824707]/40 font-bold">
                         आवरण {activeDisplayAvarana.index} of {(currentYantra.avaranas || []).length}
                       </span>
-                      <span className="text-[10px] font-mono text-[#D9531E] font-bold truncate">
+                      <span className="text-[10px] font-mono text-[#8C2300] font-bold truncate">
                         {activeDisplayAvarana.nameEnglish}
                       </span>
                     </div>
 
-                    <h4 className="text-base sm:text-lg font-rozha font-bold text-[#1E1711] pt-1">
+                    <h4 className="text-base sm:text-lg font-rozha font-bold text-[#0F0C08] pt-1">
                       {activeDisplayAvarana.nameSanskrit}
                     </h4>
 
-                    <p className="text-[11px] font-mono text-[#5C4D3C] flex items-center gap-1 font-medium">
-                      <span className="text-[#D9531E]">📍 स्थान:</span>
-                      <span className="font-semibold">{activeDisplayAvarana.spotTitle || activeDisplayAvarana.chakraTitle}</span>
+                    <p className="text-[11px] font-mono text-[#2E2218] flex items-center gap-1 font-semibold">
+                      <span className="text-[#8C2300]">📍 स्थान:</span>
+                      <span className="text-[#0F0C08]">{activeDisplayAvarana.spotTitle || activeDisplayAvarana.chakraTitle}</span>
                     </p>
                   </div>
 
                   {/* 2x2 Key Attributes Grid */}
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     {/* Presiding Deity */}
-                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#DDD1BE] space-y-0.5">
-                      <span className="text-[10px] font-mono text-[#7D6B57] flex items-center gap-1">
+                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#D1C4B0] space-y-0.5">
+                      <span className="text-[10px] font-mono text-[#3D2C1C] font-bold flex items-center gap-1">
                         <span>👑</span>
                         <span>अधिष्ठात्री देवी:</span>
                       </span>
-                      <p className="text-xs font-serif font-bold text-[#1E1711] truncate">
+                      <p className="text-xs font-serif font-bold text-[#0F0C08] truncate">
                         {activeDisplayAvarana.presidingDeity}
                       </p>
                     </div>
 
                     {/* Yogini Class */}
-                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#DDD1BE] space-y-0.5">
-                      <span className="text-[10px] font-mono text-[#7D6B57] flex items-center gap-1">
+                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#D1C4B0] space-y-0.5">
+                      <span className="text-[10px] font-mono text-[#3D2C1C] font-bold flex items-center gap-1">
                         <span>🧘‍♀️</span>
                         <span>योगिनी सम्प्रदाय:</span>
                       </span>
-                      <p className="text-xs font-mono font-bold text-[#805713] truncate">
+                      <p className="text-xs font-mono font-bold text-[#8C2300] truncate">
                         {activeDisplayAvarana.yoginiClass.split('(')[0]}
                       </p>
                     </div>
 
                     {/* Mudra Shakti */}
-                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#DDD1BE] space-y-0.5">
-                      <span className="text-[10px] font-mono text-[#7D6B57] flex items-center gap-1">
+                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#D1C4B0] space-y-0.5">
+                      <span className="text-[10px] font-mono text-[#3D2C1C] font-bold flex items-center gap-1">
                         <span>✋</span>
                         <span>मुद्रा शक्ति:</span>
                       </span>
-                      <p className="text-xs font-serif font-bold text-[#D9531E] truncate">
+                      <p className="text-xs font-serif font-bold text-[#8C2300] truncate">
                         {activeDisplayAvarana.mudraShakti}
                       </p>
                     </div>
 
                     {/* Sacred Geometry */}
-                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#DDD1BE] space-y-0.5">
-                      <span className="text-[10px] font-mono text-[#7D6B57] flex items-center gap-1">
+                    <div className="p-2.5 rounded-xl bg-[#FFFFFF] border border-[#D1C4B0] space-y-0.5">
+                      <span className="text-[10px] font-mono text-[#3D2C1C] font-bold flex items-center gap-1">
                         <span>📐</span>
                         <span>पवित्र ज्यामिति:</span>
                       </span>
-                      <p className="text-xs font-mono text-[#5C4D3C] truncate font-medium">
+                      <p className="text-xs font-mono text-[#0F0C08] truncate font-bold">
                         {activeDisplayAvarana.geometryType}
                       </p>
                     </div>
                   </div>
 
                   {/* Significance & Spiritual Phala */}
-                  <div className="p-3 rounded-xl bg-linear-to-br from-[#FDFBF7] to-[#F5EFE4] border border-[#C5A059]/40 space-y-1">
-                    <p className="text-[10px] font-mono text-[#805713] font-bold flex items-center gap-1">
+                  <div className="p-3 rounded-xl bg-[#F5EFE4] border border-[#824707]/30 space-y-1">
+                    <p className="text-[10px] font-mono text-[#8C2300] font-bold flex items-center gap-1">
                       <span>📜 शास्त्रीय माहात्म्य व फल:</span>
                     </p>
-                    <p className="text-xs text-[#5C4D3C] leading-relaxed italic">
+                    <p className="text-xs text-[#1C1209] leading-relaxed font-semibold italic">
                       "{activeDisplayAvarana.significance}"
                     </p>
                   </div>
 
                   {/* Detailed Constituents: All Petals & Triangles */}
                   {currentAvaranaFullDetail?.constituents && currentAvaranaFullDetail.constituents.length > 0 && (
-                    <div className="p-3.5 rounded-2xl bg-[#FAF7F0] border-2 border-[#C5A059]/40 space-y-2.5 shadow-xs">
-                      <div className="flex items-center justify-between border-b border-[#DDD1BE] pb-2">
+                    <div className="p-3.5 rounded-2xl bg-[#FAF7F0] border-2 border-[#824707]/30 space-y-2.5 shadow-xs">
+                      <div className="flex items-center justify-between border-b border-[#D1C4B0] pb-2">
                         <div className="flex items-center gap-2">
                           <span className="text-sm">🌸</span>
                           <div>
-                            <h5 className="text-xs font-serif font-bold text-[#1E1711]">
+                            <h5 className="text-xs font-serif font-bold text-[#0F0C08]">
                               {currentAvaranaFullDetail.constituentsLabel || `सकल दल एवं त्रिकोण (${currentAvaranaFullDetail.constituents.length} देवियाँ)`}
                             </h5>
-                            <p className="text-[10px] text-[#7D6B57]">प्रत्येक दल व त्रिकोण की अधिष्ठात्री शक्ति एवं फल</p>
+                            <p className="text-[10px] text-[#3D2C1C] font-semibold">प्रत्येक दल व त्रिकोण की अधिष्ठात्री शक्ति एवं फल</p>
                           </div>
                         </div>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#FDECE5] text-[#D9531E] border border-[#D9531E]/30 font-bold shrink-0">
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#FDECE5] text-[#8C2300] border border-[#D9531E]/30 font-bold shrink-0">
                           {currentAvaranaFullDetail.constituents.length} शक्तियाँ
                         </span>
                       </div>
 
                       {/* Synchronized Right-Panel-to-Canvas Guidance Bar */}
-                      <div className="flex items-center justify-between text-[10px] text-[#7D6B57] bg-[#F5EFE4] px-2.5 py-1.5 rounded-lg border border-[#DDD1BE]">
-                        <span className="flex items-center gap-1.5 text-[#805713] font-bold">
-                          <Target className="w-3.5 h-3.5 text-[#D9531E] animate-pulse" />
+                      <div className="flex items-center justify-between text-[10px] text-[#2E2218] bg-[#F5EFE4] px-2.5 py-1.5 rounded-lg border border-[#D1C4B0]">
+                        <span className="flex items-center gap-1.5 text-[#0F0C08] font-bold">
+                          <Target className="w-3.5 h-3.5 text-[#8C2300] animate-pulse" />
                           <span>कैनवास सिंक: किसी भी शक्ति पर क्लिक करें</span>
                         </span>
                         {selectedConstituentId && (
                           <button
                             onClick={() => setSelectedConstituentId(null)}
-                            className="text-[9px] font-mono text-[#D9531E] hover:text-[#805713] underline cursor-pointer font-bold"
+                            className="text-[9px] font-mono text-[#8C2300] hover:text-[#0F0C08] underline cursor-pointer font-bold"
                           >
                             पिन हटाएं ✕
                           </button>
@@ -1716,36 +1775,36 @@ function YantraExplorerInner() {
                               onMouseLeave={() => setHoveredConstituentId(null)}
                               className={`p-2.5 rounded-xl border transition-all cursor-pointer text-left ${
                                 isSelected
-                                  ? 'bg-[#F4EAD8] border-[#B38226] ring-2 ring-[#B38226]/60 shadow-md scale-[1.01]'
+                                  ? 'bg-[#F0E4D0] border-[#824707] ring-2 ring-[#824707]/60 shadow-md scale-[1.01]'
                                   : isHovered
-                                  ? 'bg-[#FAF2E6] border-[#B38226]/60 shadow-xs'
-                                  : 'bg-[#FFFFFF] hover:bg-[#F8F3EA] border-[#DDD1BE]'
+                                  ? 'bg-[#F5EFE4] border-[#824707]/60 shadow-xs'
+                                  : 'bg-[#FFFFFF] hover:bg-[#FAF7F0] border-[#D1C4B0]'
                               }`}
                             >
                               <div className="flex items-center justify-between gap-1.5">
                                 <div className="flex items-center gap-2">
                                   <span className={`w-5 h-5 rounded-md border text-[10px] font-mono flex items-center justify-center font-bold shrink-0 ${
                                     isSelected
-                                      ? 'bg-[#B38226] text-white border-[#B38226]'
-                                      : 'bg-[#F4EAD8] border-[#C5A059]/40 text-[#805713]'
+                                      ? 'bg-[#824707] text-white border-[#824707]'
+                                      : 'bg-[#F0E4D0] border-[#824707]/40 text-[#0F0C08]'
                                   }`}>
                                     {typeof item.id === 'number' ? item.id : idx + 1}
                                   </span>
-                                  <span className="text-xs font-serif font-bold text-[#1E1711] flex items-center gap-1.5">
+                                  <span className="text-xs font-serif font-bold text-[#0F0C08] flex items-center gap-1.5">
                                     <span>{item.nameSanskrit}</span>
                                     {isSelected && (
-                                      <span className="text-[9px] font-sans px-1.5 py-0.2 rounded-full bg-[#B38226] text-white font-bold shrink-0">
+                                      <span className="text-[9px] font-sans px-1.5 py-0.2 rounded-full bg-[#824707] text-white font-bold shrink-0">
                                         कैनवास पर इंगित 🎯
                                       </span>
                                     )}
                                   </span>
                                 </div>
-                                <span className="text-[10px] font-mono text-[#D9531E] bg-[#FDECE5] px-2 py-0.5 rounded-md border border-[#D9531E]/25 truncate max-w-[140px] font-bold">
+                                <span className="text-[10px] font-mono text-[#8C2300] bg-[#FDECE5] px-2 py-0.5 rounded-md border border-[#D9531E]/25 truncate max-w-[140px] font-bold">
                                   {item.facultyOrNadi}
                                 </span>
                               </div>
 
-                              <p className="text-[11px] text-[#5C4D3C] pt-1.5 pl-7 leading-relaxed font-sans">
+                              <p className="text-[11px] text-[#2E2218] pt-1.5 pl-7 leading-relaxed font-sans font-medium">
                                 {item.significance}
                               </p>
                             </div>
@@ -1756,18 +1815,18 @@ function YantraExplorerInner() {
                   )}
 
                   {/* Mantra & Interactive Japa Integration */}
-                  <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#DDD1BE] space-y-2">
+                  <div className="p-3 rounded-xl bg-[#FAF7F0] border border-[#D1C4B0] space-y-2">
                     <div className="flex items-center justify-between text-[10px] font-mono">
-                      <span className="text-[#7D6B57]">संबद्ध मन्त्र स्पन्दन:</span>
-                      <span className="text-[#805713] font-bold">{currentYantra.jyotish.malaType.split('(')[0]}</span>
+                      <span className="text-[#3D2C1C] font-semibold">संबद्ध मन्त्र स्पन्दन:</span>
+                      <span className="text-[#8C2300] font-bold">{currentYantra.jyotish.malaType.split('(')[0]}</span>
                     </div>
-                    <p className="text-xs font-serif font-bold text-[#805713] break-words">
+                    <p className="text-xs font-serif font-bold text-[#0F0C08] break-words">
                       {currentYantra.jyotish.beejMantra.slice(0, 75)}...
                     </p>
                     <div className="flex items-center justify-between pt-1">
                       <button
                         onClick={() => setJapaCount(c => c + 1)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-linear-to-r from-[#B38226] via-[#D9531E] to-[#B38226] text-white font-bold text-xs shadow-xs hover:brightness-105 transition-all cursor-pointer"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-linear-to-r from-[#824707] to-[#8C2300] text-white font-bold text-xs shadow-xs hover:brightness-105 transition-all cursor-pointer"
                       >
                         <Sparkles className="w-3.5 h-3.5" />
                         <span>+१ जाप समर्पित करें ({japaCount})</span>
@@ -1775,7 +1834,7 @@ function YantraExplorerInner() {
                       {japaCount > 0 && (
                         <button
                           onClick={() => setJapaCount(0)}
-                          className="text-[10px] font-mono text-[#7D6B57] hover:text-red-600 cursor-pointer font-bold"
+                          className="text-[10px] font-mono text-[#8C2300] hover:text-red-700 cursor-pointer font-bold"
                         >
                           रीसेट
                         </button>
@@ -1787,7 +1846,7 @@ function YantraExplorerInner() {
               )}
 
               {/* Philosophical Footnote */}
-              <p className="text-[11px] text-[#7D6B57] italic text-center pt-1">
+              <p className="text-[11px] text-[#3D2C1C] font-semibold italic text-center pt-1">
                 {currentYantra.corePhilosophy}
               </p>
             </div>
@@ -1795,15 +1854,15 @@ function YantraExplorerInner() {
           </div>
 
           {/* Multidimensional Knowledge Tabs: Shastric, Astrological & Upasana */}
-          <div className="bg-[#FDFBF7] border border-[#DDD1BE] rounded-3xl p-6 lg:p-8 space-y-6 shadow-md">
+          <div className="bg-[#FDFBF7] border-2 border-[#D1C4B0] rounded-3xl p-6 lg:p-8 space-y-6 shadow-md">
             {/* Tabs Header */}
-            <div className="flex items-center gap-2 border-b border-[#E8DFC8] pb-4 flex-wrap">
+            <div className="flex items-center gap-2 border-b border-[#D1C4B0] pb-4 flex-wrap">
               <button
                 onClick={() => setActiveTab('geometry')}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
                   activeTab === 'geometry'
-                    ? 'bg-[#B38226] text-white shadow-xs'
-                    : 'text-[#5C4D3C] hover:text-[#1E1711] hover:bg-[#F2ECE1]'
+                    ? 'bg-[#824707] text-white shadow-xs'
+                    : 'text-[#0F0C08] hover:bg-[#F2ECE1]'
                 }`}
               >
                 <Compass className="w-4 h-4" />
@@ -1814,8 +1873,8 @@ function YantraExplorerInner() {
                 onClick={() => setActiveTab('shastric')}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
                   activeTab === 'shastric'
-                    ? 'bg-[#B38226] text-white shadow-xs'
-                    : 'text-[#5C4D3C] hover:text-[#1E1711] hover:bg-[#F2ECE1]'
+                    ? 'bg-[#824707] text-white shadow-xs'
+                    : 'text-[#0F0C08] hover:bg-[#F2ECE1]'
                 }`}
               >
                 <BookOpen className="w-4 h-4" />
@@ -1826,8 +1885,8 @@ function YantraExplorerInner() {
                 onClick={() => setActiveTab('jyotish')}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
                   activeTab === 'jyotish'
-                    ? 'bg-[#B38226] text-white shadow-xs'
-                    : 'text-[#5C4D3C] hover:text-[#1E1711] hover:bg-[#F2ECE1]'
+                    ? 'bg-[#824707] text-white shadow-xs'
+                    : 'text-[#0F0C08] hover:bg-[#F2ECE1]'
                 }`}
               >
                 <Star className="w-4 h-4" />
@@ -1838,8 +1897,8 @@ function YantraExplorerInner() {
                 onClick={() => setActiveTab('upasana')}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-2 ${
                   activeTab === 'upasana'
-                    ? 'bg-[#B38226] text-white shadow-xs'
-                    : 'text-[#5C4D3C] hover:text-[#1E1711] hover:bg-[#F2ECE1]'
+                    ? 'bg-[#824707] text-white shadow-xs'
+                    : 'text-[#0F0C08] hover:bg-[#F2ECE1]'
                 }`}
               >
                 <Flame className="w-4 h-4" />
@@ -1851,11 +1910,11 @@ function YantraExplorerInner() {
             {activeTab === 'geometry' && (
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-lg font-rozha font-bold text-[#1E1711] flex items-center gap-2">
-                    <span className="text-[#805713]">नवावरण रहस्य:</span>
+                  <h3 className="text-lg font-rozha font-bold text-[#0F0C08] flex items-center gap-2">
+                    <span className="text-[#824707]">नवावरण रहस्य:</span>
                     <span>{currentYantra.nameSanskrit} के आवरण व ज्यामितीय विन्यास</span>
                   </h3>
-                  <p className="text-xs text-[#5C4D3C] leading-relaxed">
+                  <p className="text-xs text-[#2E2218] font-medium leading-relaxed">
                     प्रत्येक आवरण एक विशिष्ट योगिनी वर्ग, मुद्रा शक्ति, और चक्र देवता द्वारा अधिष्ठित है जो साधक की चेतना को भौतिक स्तर से पराचेतना की ओर ले जाता है।
                   </p>
                 </div>
@@ -1870,31 +1929,31 @@ function YantraExplorerInner() {
                         onMouseLeave={() => setPinnedAvaranaIndex(null)}
                         className={`p-4 rounded-2xl border transition-all space-y-2.5 cursor-pointer ${
                           isHovered
-                            ? 'bg-[#FAF2E6] border-[#B38226] ring-2 ring-[#B38226]/50 shadow-md scale-[1.01]'
-                            : 'bg-[#FAF7F0] border-[#E8DFC8] hover:border-[#B38226]/60 hover:bg-[#FDFBF7]'
+                            ? 'bg-[#F0E4D0] border-[#824707] ring-2 ring-[#824707]/50 shadow-md scale-[1.01]'
+                            : 'bg-[#FAF7F0] border-[#D1C4B0] hover:border-[#824707]/60 hover:bg-[#FDFBF7]'
                         }`}
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-1.5">
-                            <span className="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-[#B38226]/15 text-[#805713]">
+                            <span className="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-[#824707]/15 text-[#0F0C08]">
                               आवरण {av.index}
                             </span>
                             {isHovered && (
-                              <span className="text-[10px] font-mono text-[#D9531E] font-semibold animate-pulse">
+                              <span className="text-[10px] font-mono text-[#8C2300] font-bold animate-pulse">
                                 ● सक्रिय कर्सर स्थान
                               </span>
                             )}
                           </div>
-                          <span className="text-[11px] font-mono text-[#D9531E] font-bold">{av.presidingDeity}</span>
+                          <span className="text-[11px] font-mono text-[#8C2300] font-bold">{av.presidingDeity}</span>
                         </div>
                         <div>
-                          <h4 className="text-sm font-bold text-[#1E1711]">{av.nameSanskrit}</h4>
-                          <p className="text-xs text-[#805713] font-medium">{av.chakraTitle}</p>
+                          <h4 className="text-sm font-bold text-[#0F0C08]">{av.nameSanskrit}</h4>
+                          <p className="text-xs text-[#824707] font-semibold">{av.chakraTitle}</p>
                         </div>
-                        <p className="text-xs text-[#5C4D3C] leading-relaxed">{av.significance}</p>
-                        <div className="pt-2 border-t border-[#E8DFC8] flex items-center justify-between text-[10px] font-mono text-[#7D6B57]">
-                          <span>मुद्रा: <strong className="text-[#1E1711]">{av.mudraShakti}</strong></span>
-                          <span>योगिनी: <strong className="text-[#1E1711]">{av.yoginiClass}</strong></span>
+                        <p className="text-xs text-[#2E2218] leading-relaxed font-medium">{av.significance}</p>
+                        <div className="pt-2 border-t border-[#D1C4B0] flex items-center justify-between text-[10px] font-mono text-[#3D2C1C]">
+                          <span>मुद्रा: <strong className="text-[#0F0C08] font-bold">{av.mudraShakti}</strong></span>
+                          <span>योगिनी: <strong className="text-[#0F0C08] font-bold">{av.yoginiClass}</strong></span>
                         </div>
                       </div>
                     );
@@ -1907,11 +1966,11 @@ function YantraExplorerInner() {
             {activeTab === 'shastric' && (
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-lg font-rozha font-bold text-[#1E1711] flex items-center gap-2">
-                    <span className="text-[#805713]">प्रमाणिक ग्रन्थ साक्ष्य:</span>
+                  <h3 className="text-lg font-rozha font-bold text-[#0F0C08] flex items-center gap-2">
+                    <span className="text-[#824707]">प्रमाणिक ग्रन्थ साक्ष्य:</span>
                     <span>शास्त्रीय स्तोत्र व तन्त्र संहिताएं</span>
                   </h3>
-                  <p className="text-xs text-[#5C4D3C]">
+                  <p className="text-xs text-[#2E2218] font-medium">
                     हमारे प्राचीन आचार्यों और ऋषियों द्वारा विरचित मूल ग्रन्थों से अक्षुण्ण श्लोक एवं उनका गूढ़ार्थ।
                   </p>
                 </div>
@@ -1920,25 +1979,25 @@ function YantraExplorerInner() {
                   {currentYantra.citations.map((cite, idx) => (
                     <div
                       key={idx}
-                      className="p-6 rounded-2xl bg-[#FAF7F0] border border-[#DDD1BE] space-y-4 shadow-xs"
+                      className="p-6 rounded-2xl bg-[#FAF7F0] border-2 border-[#D1C4B0] space-y-4 shadow-xs"
                     >
-                      <div className="flex items-center justify-between border-b border-[#E8DFC8] pb-3">
-                        <span className="text-xs font-mono font-bold text-[#D9531E]">
+                      <div className="flex items-center justify-between border-b border-[#D1C4B0] pb-3">
+                        <span className="text-xs font-mono font-bold text-[#8C2300]">
                           {cite.sourceScripture}
                         </span>
-                        <span className="text-xs font-mono text-[#7D6B57]">{cite.chapterOrVerse}</span>
+                        <span className="text-xs font-mono text-[#3D2C1C] font-semibold">{cite.chapterOrVerse}</span>
                       </div>
 
-                      <div className="p-4 rounded-xl bg-[#F7F2E7] border border-[#DDD1BE] text-center font-rozha text-sm lg:text-base text-[#805713] leading-relaxed whitespace-pre-line shadow-xs">
+                      <div className="p-4 rounded-xl bg-[#F5EFE4] border border-[#824707]/30 text-center font-rozha text-sm lg:text-base text-[#1C0D03] leading-relaxed whitespace-pre-line shadow-xs font-bold">
                         {cite.sanskritSloka}
                       </div>
 
                       <div className="space-y-2 text-xs leading-relaxed">
-                        <p className="text-[#1E1711]">
-                          <strong className="text-[#D9531E]">हिन्दी भावार्थ:</strong> {cite.hindiMeaning}
+                        <p className="text-[#0F0C08] font-medium">
+                          <strong className="text-[#8C2300] font-bold">हिन्दी भावार्थ:</strong> {cite.hindiMeaning}
                         </p>
-                        <p className="text-[#5C4D3C]">
-                          <strong className="text-[#805713]">English Translation:</strong> {cite.englishMeaning}
+                        <p className="text-[#2E2218] font-medium">
+                          <strong className="text-[#824707] font-bold">English Translation:</strong> {cite.englishMeaning}
                         </p>
                       </div>
                     </div>
@@ -1951,50 +2010,50 @@ function YantraExplorerInner() {
             {activeTab === 'jyotish' && (
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-lg font-rozha font-bold text-[#1E1711] flex items-center gap-2">
-                    <span className="text-[#805713]">ज्योतिषीय फलश्रुति:</span>
+                  <h3 className="text-lg font-rozha font-bold text-[#0F0C08] flex items-center gap-2">
+                    <span className="text-[#824707]">ज्योतिषीय फलश्रुति:</span>
                     <span>ग्रह शांति, दोष निवारण व जीवनोपयोगी अनुभूत उपाय</span>
                   </h3>
-                  <p className="text-xs text-[#5C4D3C]">
+                  <p className="text-xs text-[#2E2218] font-medium">
                     वैदिक ज्योतिष के अनुसार ग्रहीय प्रतिकूलता को अनुकूलता में परिवर्तित करने का दिव्य साधन।
                   </p>
                 </div>
 
                 {/* Key Jyotish Metas */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#DDD1BE]">
-                    <span className="text-[10px] font-mono text-[#7D6B57] uppercase">Ruling Planet (स्वामी ग्रह)</span>
-                    <p className="font-bold text-[#D9531E] mt-0.5">{currentYantra.jyotish.rulingPlanet}</p>
+                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#D1C4B0]">
+                    <span className="text-[10px] font-mono text-[#3D2C1C] font-bold uppercase">Ruling Planet (स्वामी ग्रह)</span>
+                    <p className="font-bold text-[#8C2300] mt-0.5 text-sm">{currentYantra.jyotish.rulingPlanet}</p>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#DDD1BE]">
-                    <span className="text-[10px] font-mono text-[#7D6B57] uppercase">Favorable Day (शुभ वार)</span>
-                    <p className="font-bold text-[#805713] mt-0.5">{currentYantra.jyotish.favorableDay}</p>
+                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#D1C4B0]">
+                    <span className="text-[10px] font-mono text-[#3D2C1C] font-bold uppercase">Favorable Day (शुभ वार)</span>
+                    <p className="font-bold text-[#824707] mt-0.5 text-sm">{currentYantra.jyotish.favorableDay}</p>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#DDD1BE]">
-                    <span className="text-[10px] font-mono text-[#7D6B57] uppercase">Direction (शुभ दिशा)</span>
-                    <p className="font-bold text-[#1E1711] mt-0.5">{currentYantra.jyotish.wearOrInstallDirection}</p>
+                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#D1C4B0]">
+                    <span className="text-[10px] font-mono text-[#3D2C1C] font-bold uppercase">Direction (शुभ दिशा)</span>
+                    <p className="font-bold text-[#0F0C08] mt-0.5 text-sm">{currentYantra.jyotish.wearOrInstallDirection}</p>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#DDD1BE]">
-                    <span className="text-[10px] font-mono text-[#7D6B57] uppercase">Metal (शुभ धातु)</span>
-                    <p className="font-bold text-[#805713] mt-0.5">{currentYantra.jyotish.metalPreference}</p>
+                  <div className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#D1C4B0]">
+                    <span className="text-[10px] font-mono text-[#3D2C1C] font-bold uppercase">Metal (शुभ धातु)</span>
+                    <p className="font-bold text-[#824707] mt-0.5 text-sm">{currentYantra.jyotish.metalPreference}</p>
                   </div>
                 </div>
 
                 {/* Specific Dosha Remedies */}
                 <div className="space-y-3 pt-2">
-                  <h4 className="text-xs font-mono font-bold text-[#805713] uppercase tracking-wider">
+                  <h4 className="text-xs font-mono font-bold text-[#824707] uppercase tracking-wider">
                     प्रमुख कुण्डली दोष निवारण (Specific Astrological Remedies)
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {currentYantra.jyotish.doshaRemedies.map((dr, idx) => (
                       <div
                         key={idx}
-                        className="p-4 rounded-2xl bg-[#FAF7F0] border border-[#DDD1BE] space-y-2"
+                        className="p-4 rounded-2xl bg-[#FAF7F0] border border-[#D1C4B0] space-y-2 shadow-xs"
                       >
-                        <h5 className="text-sm font-bold text-[#D9531E]">{dr.doshaName}</h5>
-                        <p className="text-xs text-[#5C4D3C]">{dr.description}</p>
-                        <div className="p-2.5 rounded-xl bg-[#F7F2E7] border border-[#E8DFC8] text-xs text-[#805713]">
-                          <strong>उपाय प्रक्रिया:</strong> {dr.reliefMechanism}
+                        <h5 className="text-sm font-bold text-[#8C2300]">{dr.doshaName}</h5>
+                        <p className="text-xs text-[#2E2218] font-medium">{dr.description}</p>
+                        <div className="p-2.5 rounded-xl bg-[#F5EFE4] border border-[#824707]/30 text-xs text-[#0F0C08]">
+                          <strong className="text-[#8C2300]">उपाय प्रक्रिया:</strong> {dr.reliefMechanism}
                         </div>
                       </div>
                     ))}
@@ -2003,22 +2062,22 @@ function YantraExplorerInner() {
 
                 {/* Practical Life Problem Remedies */}
                 <div className="space-y-3 pt-2">
-                  <h4 className="text-xs font-mono font-bold text-[#805713] uppercase tracking-wider">
+                  <h4 className="text-xs font-mono font-bold text-[#824707] uppercase tracking-wider">
                     व्यावहारिक समस्या व समाधान (Practical Life Solutions)
                   </h4>
                   <div className="space-y-3">
                     {currentYantra.practicalRemedies.map((pr, idx) => (
                       <div
                         key={idx}
-                        className="p-4 rounded-2xl bg-[#FAF7F0] border border-[#DDD1BE] flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs"
+                        className="p-4 rounded-2xl bg-[#FAF7F0] border border-[#D1C4B0] flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs shadow-xs"
                       >
                         <div className="space-y-1 max-w-xl">
-                          <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-[#D9531E]/15 text-[#D9531E]">
+                          <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-[#FDECE5] text-[#8C2300] border border-[#D9531E]/30">
                             {pr.category}
                           </span>
-                          <p className="text-[#1E1711] font-semibold">{pr.problem}</p>
+                          <p className="text-[#0F0C08] font-bold text-sm">{pr.problem}</p>
                         </div>
-                        <div className="p-3 rounded-xl bg-[#F7F2E7] border border-[#E8DFC8] text-[#805713] md:max-w-md">
+                        <div className="p-3 rounded-xl bg-[#F5EFE4] border border-[#824707]/30 text-[#0F0C08] md:max-w-md font-medium">
                           {pr.remedyProtocol}
                         </div>
                       </div>
@@ -2032,56 +2091,56 @@ function YantraExplorerInner() {
             {activeTab === 'upasana' && (
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-lg font-rozha font-bold text-[#1E1711] flex items-center gap-2">
-                    <span className="text-[#805713]">उपासना व प्राण-प्रतिष्ठा:</span>
+                  <h3 className="text-lg font-rozha font-bold text-[#0F0C08] flex items-center gap-2">
+                    <span className="text-[#824707]">उपासना व प्राण-प्रतिष्ठा:</span>
                     <span>विधि, जप अनुष्ठान व नित्य पूजा विधान</span>
                   </h3>
-                  <p className="text-xs text-[#5C4D3C]">
+                  <p className="text-xs text-[#2E2218] font-medium">
                     यन्त्र केवल धातु या चित्र नहीं, जाग्रत देव विग्रह है। शुद्ध विधि से की गई प्रतिष्ठा शत-प्रतिशत फलदायी होती है।
                   </p>
                 </div>
 
                 {/* Beej Mantra & Gayatri Display */}
-                <div className="p-6 rounded-2xl bg-[#FAF7F0] border border-[#DDD1BE] space-y-4">
+                <div className="p-6 rounded-2xl bg-[#FAF7F0] border-2 border-[#D1C4B0] space-y-4 shadow-xs">
                   <div>
-                    <span className="text-xs font-mono text-[#7D6B57] uppercase">मूल बीज मन्त्र (Core Beej Mantra)</span>
-                    <p className="text-base lg:text-lg font-rozha font-bold text-[#D9531E] mt-1 tracking-wide leading-relaxed">
+                    <span className="text-xs font-mono text-[#3D2C1C] font-bold uppercase">मूल बीज मन्त्र (Core Beej Mantra)</span>
+                    <p className="text-base lg:text-lg font-rozha font-bold text-[#8C2300] mt-1 tracking-wide leading-relaxed">
                       {currentYantra.jyotish.beejMantra}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-[#E8DFC8]">
-                    <span className="text-xs font-mono text-[#7D6B57] uppercase">गायत्री मन्त्र (Gayatri Mantra)</span>
-                    <p className="text-sm font-rozha font-bold text-[#805713] mt-1">
+                  <div className="pt-3 border-t border-[#D1C4B0]">
+                    <span className="text-xs font-mono text-[#3D2C1C] font-bold uppercase">गायत्री मन्त्र (Gayatri Mantra)</span>
+                    <p className="text-sm font-rozha font-bold text-[#824707] mt-1">
                       {currentYantra.jyotish.gayatriMantra}
                     </p>
                   </div>
                 </div>
 
                 {/* Interactive 108 Japa Counter */}
-                <div className="p-6 rounded-2xl bg-linear-to-r from-[#FAF2E6] via-[#FDFBF7] to-[#F7F2E7] border border-[#DDD1BE] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
+                <div className="p-6 rounded-2xl bg-linear-to-r from-[#FAF2E6] via-[#FDFBF7] to-[#F5EFE4] border-2 border-[#D1C4B0] flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
                   <div className="space-y-1">
-                    <span className="text-xs font-mono font-bold text-[#D9531E] uppercase">Mantra Japa Counter (१०८ माला गणना)</span>
-                    <h4 className="text-xl font-rozha font-bold text-[#1E1711]">दैनिक मंत्र साधना</h4>
-                    <p className="text-xs text-[#5C4D3C]">माला: {currentYantra.jyotish.malaType}</p>
+                    <span className="text-xs font-mono font-bold text-[#8C2300] uppercase">Mantra Japa Counter (१०८ माला गणना)</span>
+                    <h4 className="text-xl font-rozha font-bold text-[#0F0C08]">दैनिक मंत्र साधना</h4>
+                    <p className="text-xs text-[#2E2218] font-semibold">माला: {currentYantra.jyotish.malaType}</p>
                   </div>
 
                   <div className="flex items-center gap-4">
                     <div className="text-center">
-                      <span className="text-4xl font-mono font-black text-[#805713]">{japaCount}</span>
-                      <span className="text-xs text-[#7D6B57] block">/ 108</span>
+                      <span className="text-4xl font-mono font-black text-[#824707]">{japaCount}</span>
+                      <span className="text-xs text-[#3D2C1C] font-bold block">/ 108</span>
                     </div>
 
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => setJapaCount(prev => (prev < 108 ? prev + 1 : 108))}
-                        className="px-5 py-3 rounded-2xl bg-linear-to-r from-[#B38226] to-[#D9531E] text-white font-bold text-sm shadow-md hover:brightness-105 cursor-pointer transition-all"
+                        className="px-5 py-3 rounded-2xl bg-linear-to-r from-[#824707] to-[#8C2300] text-white font-bold text-sm shadow-md hover:brightness-105 cursor-pointer transition-all"
                       >
                         + 1 जप
                       </button>
                       <button
                         onClick={() => setJapaCount(0)}
-                        className="p-3 rounded-2xl bg-[#FAF7F0] hover:bg-[#F2ECE1] border border-[#DDD1BE] text-[#7D6B57] hover:text-[#1E1711] cursor-pointer"
+                        className="p-3 rounded-2xl bg-[#FAF7F0] hover:bg-[#F2ECE1] border border-[#D1C4B0] text-[#0F0C08] hover:text-[#8C2300] cursor-pointer font-bold"
                         title="Reset Counter"
                       >
                         <RotateCcw className="w-4 h-4" />
@@ -2092,14 +2151,14 @@ function YantraExplorerInner() {
 
                 {/* Prana Pratishtha Step-by-Step */}
                 <div className="space-y-3">
-                  <h4 className="text-xs font-mono font-bold text-[#805713] uppercase tracking-wider">
+                  <h4 className="text-xs font-mono font-bold text-[#824707] uppercase tracking-wider">
                     प्रतिष्ठा व नित्य पूजा के ५ चरण (Sthapana Vidhi Steps)
                   </h4>
                   <div className="space-y-2">
                     {currentYantra.jyotish.pratishthaVidhiSummary.map((step, idx) => (
                       <div
                         key={idx}
-                        className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#E8DFC8] text-xs text-[#1E1711] flex items-center gap-3"
+                        className="p-3.5 rounded-xl bg-[#FAF7F0] border border-[#D1C4B0] text-xs text-[#0F0C08] flex items-center gap-3 font-medium"
                       >
                         <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                         <span>{step}</span>

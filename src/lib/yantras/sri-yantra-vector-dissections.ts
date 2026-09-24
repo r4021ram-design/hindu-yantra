@@ -30,7 +30,7 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "3 Stepped Concentric Squares with 4 Cardinal Portals",
     count: 4,
     svgElement: `<g id="dissection_bhupura">
-  <path d="${BHUPURA_PATH_D}" fill="none" stroke="#FFD700" stroke-width="2.6" stroke-linejoin="round" />
+  <path d="${BHUPURA_PATH_D}" fill="none" stroke="#2A1405" stroke-width="2.8" stroke-linejoin="round" />
 </g>`
   },
   2: {
@@ -41,9 +41,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "16 Sacred Lotus Petals with Outer Ring",
     count: 16,
     svgElement: `<g id="dissection_shodashadala">
-  <circle cx="500" cy="500" r="392" fill="none" stroke="#FFD700" stroke-width="1.8" stroke-dasharray="3 3" opacity="0.6" />
-  <path d="${SHODASHA_LOTUS_D}" fill="rgba(212,175,55,0.18)" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="round" />
-  <circle cx="500" cy="500" r="400" fill="none" stroke="#FFD700" stroke-width="1.8" />
+  <circle cx="500" cy="500" r="392" fill="none" stroke="#2A1405" stroke-width="2" stroke-dasharray="4 3" opacity="0.75" />
+  <path d="${SHODASHA_LOTUS_D}" fill="rgba(180,83,9,0.12)" stroke="#2A1405" stroke-width="2.6" stroke-linejoin="round" />
+  <circle cx="500" cy="500" r="400" fill="none" stroke="#2A1405" stroke-width="2.2" />
 </g>`
   },
   3: {
@@ -54,9 +54,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "8 Sacred Lotus Petals with Concentric Boundaries",
     count: 8,
     svgElement: `<g id="dissection_ashtadala">
-  <circle cx="500" cy="500" r="320" fill="none" stroke="#FFD700" stroke-width="1.8" stroke-dasharray="3 3" opacity="0.6" />
-  <path d="${ASHTADALA_LOTUS_D}" fill="rgba(217,119,6,0.22)" stroke="#FFD700" stroke-width="2.4" stroke-linejoin="round" />
-  <circle cx="500" cy="500" r="326" fill="none" stroke="#FFD700" stroke-width="1.8" />
+  <circle cx="500" cy="500" r="320" fill="none" stroke="#2A1405" stroke-width="2" stroke-dasharray="4 3" opacity="0.75" />
+  <path d="${ASHTADALA_LOTUS_D}" fill="rgba(217,119,6,0.14)" stroke="#2A1405" stroke-width="2.6" stroke-linejoin="round" />
+  <circle cx="500" cy="500" r="326" fill="none" stroke="#2A1405" stroke-width="2.2" />
 </g>`
   },
   4: {
@@ -66,11 +66,11 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     chakraTitle: "चतुर्दशार चक्र",
     geometryType: "14 Outer Perimeter Triangles with Enclosing Circle",
     count: 14,
-    svgElement: `<g id="dissection_chaturdasharam" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="miter">
-  <circle cx="500" cy="500" r="256" fill="none" stroke="#FFD700" stroke-width="1.8" opacity="0.7" />
-  <circle cx="500" cy="500" r="250" fill="none" stroke="#FFD700" stroke-width="2.2" />
-  <path id="tri_U1" d="M 257.46 560.62 L 742.54 560.62 L 500 250 Z" fill="rgba(212,175,55,0.16)" />
-  <path id="tri_D1" d="M 259.14 433.02 L 740.86 433.02 L 500 750 Z" fill="rgba(245,158,11,0.16)" />
+    svgElement: `<g id="dissection_chaturdasharam" stroke="#2A1405" stroke-width="2.8" stroke-linejoin="miter">
+  <circle cx="500" cy="500" r="256" fill="none" stroke="#2A1405" stroke-width="2.2" opacity="0.8" />
+  <circle cx="500" cy="500" r="250" fill="none" stroke="#2A1405" stroke-width="2.6" />
+  <path id="tri_U1" d="M 257.46 560.62 L 742.54 560.62 L 500 250 Z" fill="rgba(180,83,9,0.12)" />
+  <path id="tri_D1" d="M 259.14 433.02 L 740.86 433.02 L 500 750 Z" fill="rgba(217,119,6,0.12)" />
 </g>`
   },
   5: {
@@ -80,9 +80,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     chakraTitle: "बहिर्दशार चक्र",
     geometryType: "10 Outer Circuit Interlocking Triangles",
     count: 10,
-    svgElement: `<g id="dissection_bahir_dasharam" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="miter">
-  <path id="tri_U2" d="M 320.66 619.81 L 679.34 619.81 L 500 320.27 Z" fill="rgba(212,175,55,0.18)" />
-  <path id="tri_D2" d="M 327.46 382.81 L 672.54 382.81 L 500 675.09 Z" fill="rgba(245,158,11,0.18)" />
+    svgElement: `<g id="dissection_bahir_dasharam" stroke="#2A1405" stroke-width="2.8" stroke-linejoin="miter">
+  <path id="tri_U2" d="M 320.66 619.81 L 679.34 619.81 L 500 320.27 Z" fill="rgba(180,83,9,0.14)" />
+  <path id="tri_D2" d="M 327.46 382.81 L 672.54 382.81 L 500 675.09 Z" fill="rgba(217,119,6,0.14)" />
 </g>`
   },
   6: {
@@ -92,9 +92,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     chakraTitle: "अन्तर्दशार चक्र",
     geometryType: "10 Inner Circuit Interlocking Triangles",
     count: 10,
-    svgElement: `<g id="dissection_antar_dasharam" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="miter">
-  <path id="tri_U3" d="M 371.79 675.09 L 628.21 675.09 L 500 433.02 Z" fill="rgba(212,175,55,0.20)" />
-  <path id="tri_D3" d="M 351.22 320.27 L 648.78 320.27 L 500 526.65 Z" fill="rgba(245,158,11,0.20)" />
+    svgElement: `<g id="dissection_antar_dasharam" stroke="#2A1405" stroke-width="2.8" stroke-linejoin="miter">
+  <path id="tri_U3" d="M 371.79 675.09 L 628.21 675.09 L 500 433.02 Z" fill="rgba(180,83,9,0.14)" />
+  <path id="tri_D3" d="M 351.22 320.27 L 648.78 320.27 L 500 526.65 Z" fill="rgba(217,119,6,0.14)" />
 </g>`
   },
   7: {
@@ -104,9 +104,9 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     chakraTitle: "अष्टकोण चक्र",
     geometryType: "8 Interlocking Circuit Triangles",
     count: 8,
-    svgElement: `<g id="dissection_ashtaragon" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="miter">
-  <path id="tri_U4" d="M 412.38 526.65 L 587.63 526.65 L 500 382.81 Z" fill="rgba(212,175,55,0.22)" />
-  <path id="tri_D4" d="M 415.88 460.77 L 584.13 460.77 L 500 619.81 Z" fill="rgba(245,158,11,0.22)" />
+    svgElement: `<g id="dissection_ashtaragon" stroke="#2A1405" stroke-width="2.8" stroke-linejoin="miter">
+  <path id="tri_U4" d="M 412.38 526.65 L 587.63 526.65 L 500 382.81 Z" fill="rgba(180,83,9,0.15)" />
+  <path id="tri_D4" d="M 415.88 460.77 L 584.13 460.77 L 500 619.81 Z" fill="rgba(217,119,6,0.15)" />
 </g>`
   },
   8: {
@@ -116,8 +116,8 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     chakraTitle: "काम-कला अधोमुख त्रिकोण",
     geometryType: "Downward-Pointing Primordial Triangle",
     count: 1,
-    svgElement: `<g id="dissection_trikona" stroke="#FFD700" stroke-width="2.2" stroke-linejoin="miter">
-  <path id="tri_D5" d="M 436.53 486.99 L 563.47 486.99 L 500 560.62 Z" fill="rgba(245,158,11,0.25)" />
+    svgElement: `<g id="dissection_trikona" stroke="#2A1405" stroke-width="2.8" stroke-linejoin="miter">
+  <path id="tri_D5" d="M 436.53 486.99 L 563.47 486.99 L 500 560.62 Z" fill="rgba(217,119,6,0.18)" />
 </g>`
   },
   9: {
@@ -128,8 +128,8 @@ export const SRI_YANTRA_VECTOR_DISSECTIONS: Record<number, AvaranaDissectionData
     geometryType: "Singularity / Central Radiant Point",
     count: 1,
     svgElement: `<g id="dissection_bindu">
-  <circle cx="500" cy="500" r="11" fill="none" stroke="#FFD700" stroke-width="1.4" opacity="0.7" />
-  <circle cx="500" cy="500" r="5.5" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="1.2" />
+  <circle cx="500" cy="500" r="12" fill="none" stroke="#2A1405" stroke-width="2" opacity="0.8" />
+  <circle cx="500" cy="500" r="6.5" fill="url(#binduRadiance)" stroke="#FFFFFF" stroke-width="1.4" />
 </g>`
   }
 };

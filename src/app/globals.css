@@ -3,26 +3,26 @@
 
 @layer base {
   :root {
-    /* Vedic Sandalwood & Parchment Core Tokens */
+    /* Vedic Sandalwood & Parchment Core Tokens (High-Contrast & Deep Dark Text) */
     --background: #F7F3EB;
     --background-alt: #EFE7DA;
-    --foreground: #1E1711;
-    --foreground-muted: #5C4D3C;
+    --foreground: #0F0C08;
+    --foreground-muted: #2E2218;
     --card: #FDFBF7;
-    --card-foreground: #1E1711;
-    --border: #DDD1BE;
-    --border-strong: #C5A059;
+    --card-foreground: #0F0C08;
+    --border: #D1C4B0;
+    --border-strong: #9C7026;
 
     /* Sacred Metals & Colors */
     --gold: #B38226;
     --gold-light: #E2B962;
-    --gold-dark: #805713;
-    --primary: #945D18;
+    --gold-dark: #6E4407;
+    --primary: #824707;
     --primary-foreground: #FFFFFF;
     
-    --sandalwood: #C9A46E;
+    --sandalwood: #B88E52;
     --sandalwood-light: #F5EFE4;
-    --sandalwood-dark: #7D5620;
+    --sandalwood-dark: #5C3A0E;
 
     --saffron: #D9531E;
     --saffron-light: #FDECE5;
