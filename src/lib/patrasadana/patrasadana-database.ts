@@ -5,7 +5,8 @@
  * 
  * Incorporates complete sacred wood science (Palasha, Khadira, Varana, Shami),
  * exact measurements (Angulas, Hastas, Inches, Cm), inverted (Nyancha) vs upright (Uttana)
- * states, Vedic mantras, and tradition variants.
+ * states, underlying Yantras/Mandalas drawn beneath each vessel (पात्र-पीठ यन्त्र),
+ * Vedic mantras, and tradition variants.
  */
 
 export interface PatraDimensions {
@@ -21,6 +22,15 @@ export interface TraditionVariants {
   ashvalayanaRigveda: string;
   apastambaKrishnaYajurveda: string;
   tantricSharadaTilakam: string;
+}
+
+export interface UnderlyingYantraInfo {
+  nameHindi: string;
+  nameSanskrit: string;
+  shapeGeometryHindi: string;
+  dravyaUsedHindi: string;
+  beejaMantra: string;
+  shastricPurposeHindi: string;
 }
 
 export interface PatraEntry {
@@ -40,6 +50,7 @@ export interface PatraEntry {
   shapeGeometryEnglish: string;
   ritualPurposeHindi: string;
   ritualPurposeEnglish: string;
+  underlyingYantra: UnderlyingYantraInfo;
   traditionVariants: TraditionVariants;
   stateNyanchaHindi: string;
   stateUttanaHindi: string;
@@ -78,6 +89,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Rectangular Chaturasra flat-bottomed vessel with four corners',
     ritualPurposeHindi: 'इसमें पवित्र जल भरकर दो दर्भ-पवित्रियों द्वारा ब्रह्म-रूप में प्रतिष्ठा की जाती है। यह यज्ञ की सम्पूर्ण अवधि में उत्तर दिशा में रहकर यज्ञ-रक्षा करता है।',
     ritualPurposeEnglish: 'Filled with consecrated water representing Brahma/Varuna to protect the entire sacrificial arena from adverse forces.',
+    underlyingYantra: {
+      nameHindi: 'वारुण अष्टदल पद्म मण्डल',
+      nameSanskrit: 'वारुणं पद्ममण्डलम्',
+      shapeGeometryHindi: 'चतुरस्र भूपुर के भीतर पूर्ण वृत्त एवं अष्टदल कमल',
+      dravyaUsedHindi: 'श्वेत चन्दन एवं अक्षत चूर्ण',
+      beejaMantra: 'वं',
+      shastricPurposeHindi: 'अमृत-तत्व का आवाहन, जल-शुद्धि एवं यज्ञ की विघ्नों से रक्षा'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'उत्तर दिशा में पूर्वाग्र कुशों पर स्थापन, अक्षत व दर्भ से आच्छादन।',
       ashvalayanaRigveda: 'ब्रह्मा के सम्मुख प्रतिष्ठा, आचमन व प्रोक्षण जल का मूल स्रोत।',
@@ -120,6 +139,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Elongated vessel with a pouring spout shaped like a cow udder / peacock beak',
     ritualPurposeHindi: 'हविष्य सामग्री, समिधा, कुण्ड, वेदी और दिशाओं पर जल छिड़ककर (प्रोक्षण) उन्हें देव-योग्य पवित्र बनाना।',
     ritualPurposeEnglish: 'Used for holding consecrated water and asperging all sacrificial offerings, firewood, and boundaries.',
+    underlyingYantra: {
+      nameHindi: 'षट्कोण वारुण मण्डल',
+      nameSanskrit: 'वारुणं षट्कोणमण्डलम्',
+      shapeGeometryHindi: 'वृत्त के भीतर दो परस्पर-वेधी त्रिकोण (षट्कोण चक्र)',
+      dravyaUsedHindi: 'श्वेत चन्दन, कपूर एवं गङ्गाजल',
+      beejaMantra: 'वं',
+      shastricPurposeHindi: 'प्रोक्षण जल में आपो-दैवी एवं पवित्रीकरण शक्तियों का संचरण'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'प्रणीता के ठीक पूर्व में स्थापन, सवितृ मन्त्र से प्रोक्षण।',
       ashvalayanaRigveda: 'कुश-पवित्रक द्वारा त्रिवार प्रोक्षण जल ग्रहण।',
@@ -162,6 +189,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Spherical urn with a wide flared mouth allowing effortless ladle entry',
     ritualPurposeHindi: 'हवन हेतु गोघृत को अग्नि के उत्तर में तपाना, उल्मुक (अग्नि-शलाका) घुमाकर शोधन करना और पवित्रियों से उत्पवन करना।',
     ritualPurposeEnglish: 'Heating pure cow ghee north of the fire, purifying with a burning torch (Ulmuka) and straining with Kusha pavatris.',
+    underlyingYantra: {
+      nameHindi: 'सौम्य सूर्य-चन्द्र मण्डल',
+      nameSanskrit: 'सौम्यं सूर्यमण्डलम्',
+      shapeGeometryHindi: 'द्वादशार सूर्य चक्र एवं अष्टकोण पीठ',
+      dravyaUsedHindi: 'हरिद्रा (हल्दी), केशर एवं चन्दन',
+      beejaMantra: 'ह्रीं / सौः',
+      shastricPurposeHindi: 'घृत में सूर्य-रश्मि एवं चन्द्र-अमृत का आवाहन, स्निग्धता व पुष्टि'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'अग्नि के उत्तर भाग में अंगारों पर तपाकर दो पवित्रियों से त्रिवार उत्पवन।',
       ashvalayanaRigveda: 'सवितृ मन्त्र से घृत का उत्पवन और संस्रव प्राशन हेतु आधार।',
@@ -204,6 +239,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Traditional spherical cooking handi/pot with flared lip',
     ritualPurposeHindi: 'दूध, चावल, जौ और शर्करा युक्त चरु पकाना और देवताओं को अर्पित करने हेतु आहुति रूप में रखना।',
     ritualPurposeEnglish: 'Cooking and holding the sacred boiled grain offering (Charu/Payasam) for principal oblations.',
+    underlyingYantra: {
+      nameHindi: 'पार्थिव चतुरस्र भूपुर मण्डल',
+      nameSanskrit: 'पार्थिवं चतुरस्रमण्डलम्',
+      shapeGeometryHindi: 'चतुर्द्वार युक्त स्वर्ण चतुरस्र भूपुर एवं अष्टदल',
+      dravyaUsedHindi: 'अष्टगन्ध एवं अक्षत',
+      beejaMantra: 'लं',
+      shastricPurposeHindi: 'पृथ्वी माता के समस्त अन्न, ओषधि एवं पोषण तत्वों का हविष्य में समावेश'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'गार्हपत्य अथवा कुण्ड के अंगारों पर चरु पकाना, घृत का अभिघार।',
       ashvalayanaRigveda: 'चरु के अवदान (भाग) निकालकर स्रुवा द्वारा समर्पण।',
@@ -246,6 +289,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Long handle with an elephant-trunk shaped pouring spout and deep ghee cavity',
     ritualPurposeHindi: 'वसोर्धारा, आज्यभाग, प्रधान देवता आहुति, एवं पूर्णाहुति का सर्वप्रमुख पात्र।',
     ritualPurposeEnglish: 'Principal ladle for offering the perpetual stream of ghee (Vasordhara) and the final supreme oblation (Purnahuti).',
+    underlyingYantra: {
+      nameHindi: 'अग्नि त्रिकोण यन्त्र',
+      nameSanskrit: 'आग्नेयं त्रिकोणयन्त्रम्',
+      shapeGeometryHindi: 'ऊर्ध्वमुखी अग्नि त्रिकोण, मध्य में स्वस्तिक एवं त्रिबिन्दु',
+      dravyaUsedHindi: 'रक्त चन्दन, रोली एवं कुङ्कुम',
+      beejaMantra: 'रं',
+      shastricPurposeHindi: 'हव्यवाहन अग्नि की सप्त जिह्वाओं एवं वसोर्धारा का आधार स्थापन'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'स्रुवा से घृत भरकर स्रुक् में डालना और स्रुक् से वसोर्धारा प्रवाहित करना।',
       ashvalayanaRigveda: 'जुहू के रूप में ऋचाओं के साथ आहुति समर्पण।',
@@ -288,6 +339,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Circular hemispherical cup with a slender handle crowned with a ritual finial',
     ritualPurposeHindi: 'आज्यस्थाली से घृत लेकर कुण्ड में नित्य आहुतियां (१०८, १००८, १००००) देने का सर्वप्रधान साधन।',
     ritualPurposeEnglish: 'The indispensable spoon for taking sanctified ghee and executing thousands of continuous oblations.',
+    underlyingYantra: {
+      nameHindi: 'अग्नि-सोम मण्डल',
+      nameSanskrit: 'अग्नीषोमीयमण्डलम्',
+      shapeGeometryHindi: 'त्रिकोण एवं पूर्ण चन्द्र वृत्त का संगम',
+      dravyaUsedHindi: 'रक्त चन्दन एवं कुङ्कुम',
+      beejaMantra: 'रं',
+      shastricPurposeHindi: 'आहुति देते समय प्राण (अग्नि) और अपान (सोम) का संतुलन'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'दक्षिण हस्त में स्रुवा ग्रहण कर मन्त्र के अन्त में "स्वाहा" के साथ आहुति।',
       ashvalayanaRigveda: 'स्रुवा के अग्रभाग से मन्त्रोच्चार पूर्वक आहुति सिञ्चन।',
@@ -330,6 +389,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Sword-shaped single-edged wooden blade with pointed tip and hilt guard',
     ritualPurposeHindi: 'पञ्चभूसंस्कार में कुण्ड के तल पर ६ रेखाएं खींचना (उल्लेखन) और दर्भ का पवित्र-च्छेदन करना।',
     ritualPurposeEnglish: 'Drawing the six sacred lines (Ullekhana) in the Kunda bottom and ceremonially severing Darbha grass.',
+    underlyingYantra: {
+      nameHindi: 'वायव्य वज्र मण्डल',
+      nameSanskrit: 'वायव्यं वज्रमण्डलम्',
+      shapeGeometryHindi: 'षटार वज्र चक्र एवं अष्टदल',
+      dravyaUsedHindi: 'सिन्दूर, रक्त चन्दन एवं भस्म',
+      beejaMantra: 'यं',
+      shastricPurposeHindi: 'इन्द्र-वज्र शक्ति का आवाहन, आसुरी विघ्नों का उच्छेदन'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'प्राची ३ और उदीची ३ रेखाओं का उल्लेखन, धूलि का उद्धरण।',
       ashvalayanaRigveda: 'स्फ्य द्वारा वेदी निर्माण और परिस्तरण कुश का छेदन।',
@@ -372,6 +439,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Wooden staff with a flattened spade/paddle-shaped tip for arranging embers',
     ritualPurposeHindi: 'कुण्ड के भीतर जलते अंगारों और समिधाओं को बिना हाथ लगाए सुरक्षित रूप से व्यवस्थित करना।',
     ritualPurposeEnglish: 'Arranging glowing embers and firewood within the fire pit without physical contact.',
+    underlyingYantra: {
+      nameHindi: 'आग्नेय शिखा मण्डल',
+      nameSanskrit: 'आग्नेयपीठम्',
+      shapeGeometryHindi: 'त्रिकोणाकार अग्नि ज्वाला पीठ',
+      dravyaUsedHindi: 'रक्त चन्दन',
+      beejaMantra: 'रं',
+      shastricPurposeHindi: 'अंगार प्रदीपन एवं काष्ठ-सञ्चालन में अग्नि-तेज की रक्षा'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'अग्नि प्रदीपन के समय अंगारों को मध्य में संचित करना।',
       ashvalayanaRigveda: 'धृष्टि द्वारा अग्नि का समूहन।',
@@ -414,6 +489,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Cylindrical tight bundle of 21 sticks tied with three-ply Kusha rope',
     ritualPurposeHindi: '१ आधान, ३ परिधि, २ प्रदीपन और १५ सामिधेनी मन्त्रों के साथ अग्नि में आहुति प्रदान करना।',
     ritualPurposeEnglish: 'Constitutes fuel for kindling (1), borders (3), lighting (2), and 15 Samidheni verses.',
+    underlyingYantra: {
+      nameHindi: 'अष्टकोण स्वस्तिक पीठ',
+      nameSanskrit: 'स्वस्तिकमण्डलम्',
+      shapeGeometryHindi: 'अष्टकोण वृत्त के भीतर सुदर्शन स्वस्तिक',
+      dravyaUsedHindi: 'कुङ्कुम, हरिद्रा एवं अक्षत',
+      beejaMantra: 'ॐ',
+      shastricPurposeHindi: '२१ समिधाओं में २१ छन्दों एवं देवताओं का आधार स्थापन'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'कुश रस्सी खोलकर मन्त्रानुसार समिधाओं का कुण्ड में समर्पण।',
       ashvalayanaRigveda: 'सामिधेनी मन्त्रों के साथ एक-एक समिधा का आधान।',
@@ -456,6 +539,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Fan of altar-covering Kusha blades and tightly bound royal sacrificer sheaf',
     ritualPurposeHindi: 'कुण्ड के चारों ओर परिस्तरण (आसन) बिछाना; प्रस्तर यजमान का साक्षात् प्रतीक होता है जिसे सूक्तवाक में अर्पित किया जाता है।',
     ritualPurposeEnglish: 'Encircling the altar with sacred grass; Prastara represents the sacrificer himself.',
+    underlyingYantra: {
+      nameHindi: 'ब्रह्म पद्म मण्डल',
+      nameSanskrit: 'ब्राह्मं पद्ममण्डलम्',
+      shapeGeometryHindi: 'द्वादशदल महाकमल एवं बिन्दु',
+      dravyaUsedHindi: 'श्वेत चन्दन एवं अक्षत',
+      beejaMantra: 'हं',
+      shastricPurposeHindi: 'यजमान के आध्यात्मिक देह और देवताओं के आसन की प्रतिष्ठा'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'पूर्वाग्र और उत्तराग्र कुशों का परिस्तरण।',
       ashvalayanaRigveda: 'प्रस्तर को वेदी के मध्य में यजमान-रूप से प्रतिष्ठा।',
@@ -496,6 +587,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Three cylindrical sticks of graduated thickness forming boundaries on West, South, and North',
     ritualPurposeHindi: 'कुण्ड में अग्नि को सीमाओं में आबद्ध रखना तथा आधिभौतिक, आधिदैविक व आध्यात्मिक तापों से रक्षा करना।',
     ritualPurposeEnglish: 'Confines fire to its cosmic boundaries and shields the sacrificer from all afflictions.',
+    underlyingYantra: {
+      nameHindi: 'त्रैलोक्य रक्षा मण्डल',
+      nameSanskrit: 'त्रैलोक्यरक्षामण्डलम्',
+      shapeGeometryHindi: 'त्रि-रेखा परिधि चक्र (भूः, भुवः, स्वः सीमा)',
+      dravyaUsedHindi: 'चन्दन एवं कुङ्कुम',
+      beejaMantra: 'फट्',
+      shastricPurposeHindi: 'कुण्ड की तीनों दिशाओं में त्रिविध तापों से अभेद्य सुरक्षा कवच'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'पश्चिम में मध्यम परिधि, दक्षिण में दक्षिण परिधि, उत्तर में उत्तर परिधि।',
       ashvalayanaRigveda: 'परिधि स्थापन के पश्चात् दो अग्नि-प्रदीपन समिधाएं रखना।',
@@ -536,6 +635,14 @@ export const PATRASADANA_DATABASE: PatraEntry[] = [
     shapeGeometryEnglish: 'Small bronze receptacle for stray ghee drops alongside bamboo grain-cleaning winnow',
     ritualPurposeHindi: 'संस्रव घृत का संचय, यजमान द्वारा मार्जन-प्राशन, तथा हविष्य धान्य का पावन शोधन।',
     ritualPurposeEnglish: 'Collecting consecrated residual ghee drops for sacrificer blessings and winnowing grains.',
+    underlyingYantra: {
+      nameHindi: 'सौम्य चन्द्र मण्डल',
+      nameSanskrit: 'सौम्यं चन्द्रमण्डलम्',
+      shapeGeometryHindi: 'पूर्ण चन्द्र मण्डल एवं अर्धचन्द्र',
+      dravyaUsedHindi: 'श्वेत चन्दन एवं कपूर',
+      beejaMantra: 'सोमं',
+      shastricPurposeHindi: 'अवशिष्ट घृत में दिव्य अमृत अंश का संचय'
+    },
     traditionVariants: {
       paraskaraVajaseneyi: 'संस्रव प्राशन एवं मस्तक पर मार्जन विधान।',
       ashvalayanaRigveda: 'शूर्प द्वारा पुरोडाश धान्य का निष्पावन।',

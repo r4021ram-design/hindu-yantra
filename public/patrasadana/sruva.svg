@@ -1,170 +1,238 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#F7EEDF" />
-      <stop offset="100%" stop-color="#EADBBE" />
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF8" />
+      <stop offset="60%" stop-color="#F5EBDC" />
+      <stop offset="100%" stop-color="#E2D1B3" />
     </radialGradient>
 
-    <!-- Khadira Sacred Ironwood Gradient (Dark Reddish Mahogany) -->
-    <linearGradient id="khadiraWood" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#78281F" />
-      <stop offset="30%" stop-color="#511811" />
-      <stop offset="60%" stop-color="#340E0A" />
-      <stop offset="85%" stop-color="#511811" />
-      <stop offset="100%" stop-color="#240705" />
+    <!-- Kusha Mat Woven Texture -->
+    <linearGradient id="kushaWeave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4DE" />
+      <stop offset="30%" stop-color="#D7E8BC" />
+      <stop offset="70%" stop-color="#C2DC9A" />
+      <stop offset="100%" stop-color="#A6C878" />
     </linearGradient>
 
-    <linearGradient id="khadiraHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#943126" stop-opacity="0.9" />
-      <stop offset="50%" stop-color="#4A140F" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#1F0604" stop-opacity="0.9" />
+    <pattern id="kushaPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 L 24,24 M 24,0 L 0,24" stroke="#8CAE5B" stroke-width="0.8" opacity="0.4" />
+      <line x1="0" y1="12" x2="24" y2="12" stroke="#6C8E3B" stroke-width="0.6" opacity="0.35" />
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#5E7E2F" stroke-width="0.6" opacity="0.35" />
+    </pattern>
+
+    <!-- Sacred Agni-Soma Mixed Paste (Rakta-Chandana + Shweta-Chandana) -->
+    <linearGradient id="agniSomaPaste" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCA5A5" />
+      <stop offset="30%" stop-color="#DC2626" />
+      <stop offset="70%" stop-color="#FEF3C7" />
+      <stop offset="100%" stop-color="#D97706" />
     </linearGradient>
 
-    <!-- Sacred Golden Ghee in Bowl -->
-    <radialGradient id="gheeBowlGlow" cx="45%" cy="38%" r="62%">
-      <stop offset="0%" stop-color="#FFFBEB" />
-      <stop offset="35%" stop-color="#FBBF24" />
-      <stop offset="70%" stop-color="#D97706" />
-      <stop offset="100%" stop-color="#78350F" />
+    <radialGradient id="somaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF08A" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#F87171" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#B91C1C" stop-opacity="0.1" />
     </radialGradient>
 
-    <!-- Gold Accent -->
-    <linearGradient id="sruvaGold" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#B48222" />
-      <stop offset="50%" stop-color="#FDF0A6" />
-      <stop offset="100%" stop-color="#936814" />
+    <!-- Khadira Ironwood (Dense Dark Heartwood - Acacia catechu) -->
+    <linearGradient id="khadiraWood" x1="0%" y1="0%" x2="100%" y2="40%">
+      <stop offset="0%" stop-color="#6E3A1A" />
+      <stop offset="25%" stop-color="#4A220D" />
+      <stop offset="50%" stop-color="#301507" />
+      <stop offset="75%" stop-color="#4A220D" />
+      <stop offset="100%" stop-color="#1E0B04" />
     </linearGradient>
 
-    <!-- Drop Shadow -->
-    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
-      <feDropShadow dx="8" dy="16" stdDeviation="12" flood-color="#3B100B" flood-opacity="0.38" />
+    <linearGradient id="khadiraSpecular" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C48255" stop-opacity="0.55" />
+      <stop offset="35%" stop-color="#4A220D" stop-opacity="0.1" />
+      <stop offset="85%" stop-color="#1E0B04" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0F0502" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Sacred Ghee Pool in Sruva Spoon -->
+    <radialGradient id="moltenGhee" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#FFFDE7" />
+      <stop offset="35%" stop-color="#FDE047" />
+      <stop offset="75%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#A16207" />
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="yantraGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-    <filter id="bowlDepth">
-      <feOffset dx="2" dy="4" />
-      <feGaussianBlur stdDeviation="3.5" result="offset-blur" />
-      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse" />
-      <feFlood flood-color="#1A0503" flood-opacity="0.8" result="color" />
-      <feComposite operator="in" in="color" in2="inverse" result="shadow" />
-      <feComposite operator="over" in="shadow" in2="SourceGraphic" />
+
+    <filter id="patraDeepShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="16" flood-color="#1A0A04" flood-opacity="0.6" />
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#2D1206" flood-opacity="0.4" />
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1000" height="1000" fill="url(#bgGrad)" />
 
-  <!-- Outer Sacred Geometry Frame -->
-  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
-  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+  <!-- Outer Traditional Temple Border -->
+  <rect x="30" y="30" width="940" height="940" rx="24" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="42" y="42" width="916" height="916" rx="18" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
 
-  <!-- Dimension Guide Lines & Annotation -->
-  <g opacity="0.7">
-    <line x1="160" y1="500" x2="840" y2="500" stroke="#805713" stroke-width="1" stroke-dasharray="4 4" />
-    <line x1="150" y1="210" x2="850" y2="210" stroke="#805713" stroke-width="1.5" />
-    <path d="M 150 210 L 165 204 L 165 216 Z" fill="#805713" />
-    <path d="M 850 210 L 835 204 L 835 216 Z" fill="#805713" />
-    <text x="500" y="195" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
-      मानक प्रमाण: १ अरत्नि (२४ अंगुल • १८ इंच • ४५.७ सेमी)
+  <!-- HEADER: Sruva Identity & Measure -->
+  <g transform="translate(500, 85)" text-anchor="middle">
+    <rect x="-240" y="-30" width="480" height="42" rx="21" fill="#805713" stroke="#FDE68A" stroke-width="1.8" />
+    <text y="-3" font-family="'Cinzel', 'Noto Serif', serif" font-size="18" font-weight="900" fill="#FFFDF8" letter-spacing="2">
+      ॥ स्रुवा पात्रम् • खदिर काष्ठ ॥
+    </text>
+    <text y="32" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07">
+      मानक प्रमाण: १ अरत्नि (२४ अंगुल • १८ इंच • ४५.७ सेमी) | मुख: अंगुष्ठपर्व (गोल चम्मच)
     </text>
   </g>
 
-  <!-- SRUVA BODY (Left Tail Grip to Right Round Bowl) -->
-  <g filter="url(#patraShadow)">
-    
-    <!-- Tail Finial Knot (ग्रन्थि / मुकुट) -->
-    <path d="M 160 500
-             C 160 480, 175 465, 195 465
-             C 210 465, 220 480, 220 500
-             C 220 520, 210 535, 195 535
-             C 175 535, 160 520, 160 500 Z"
-          fill="url(#khadiraWood)" stroke="#260805" stroke-width="3" />
-    <!-- Finial Diamond Carving -->
-    <polygon points="195,475 207,500 195,525 183,500" fill="url(#sruvaGold)" stroke="#381008" stroke-width="1" />
+  <!-- ============================================================== -->
+  <!-- 1. KUSHA MAT BED (कुश-आस्तरण वेदी) -->
+  <!-- ============================================================== -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaWeave)" stroke="#558B2F" stroke-width="3" />
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaPattern)" />
+    <rect x="12" y="12" width="776" height="616" rx="20" fill="none" stroke="#33691E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" />
 
-    <!-- Long Slender Shaft (दण्ड) -->
-    <path d="M 220 491
-             C 340 490, 520 488, 700 485
-             L 700 515
-             C 520 512, 340 510, 220 509
-             Z"
-          fill="url(#khadiraHighlight)" stroke="#2A0805" stroke-width="3" />
+    <!-- Akshata Grains on Mat -->
+    <g fill="#FFFDF5" stroke="#D97706" stroke-width="0.6" opacity="0.85">
+      <ellipse cx="90" cy="75" rx="3.5" ry="1.8" transform="rotate(20 90 75)" />
+      <ellipse cx="102" cy="70" rx="3.8" ry="1.7" transform="rotate(-35 102 70)" />
+      <ellipse cx="710" cy="85" rx="3.6" ry="1.8" transform="rotate(45 710 85)" />
+      <ellipse cx="725" cy="550" rx="3.7" ry="1.8" transform="rotate(15 725 550)" />
+      <ellipse cx="85" cy="560" rx="3.5" ry="1.7" transform="rotate(-25 85 560)" />
+    </g>
 
-    <!-- Wood grain on Danda -->
-    <path d="M 240 496 C 380 495, 540 493, 680 490" stroke="#BA4A38" stroke-width="1.2" fill="none" opacity="0.65" />
-    <path d="M 250 505 C 390 505, 550 505, 680 508" stroke="#1F0604" stroke-width="1.8" fill="none" opacity="0.75" />
+    <!-- ============================================================== -->
+    <!-- 2. UNDERLYING YANTRA: अग्नि-सोम मण्डल (Agni-Soma Dual Mandala) -->
+    <!-- ============================================================== -->
+    <!-- Sharadatilakam Patala 4: "सौम्यं मण्डलं विधायाऽथ... स्रुवेणाज्याहुतीनां च" -->
+    <g id="underlying-yantra-sruva" transform="translate(400, 320)" filter="url(#yantraGlowFilter)">
+      <!-- Aura Glow -->
+      <circle cx="0" cy="0" r="230" fill="url(#somaGlow)" opacity="0.4" />
 
-    <!-- Gold Accent Bindings on Shaft -->
-    <rect x="320" y="489" width="12" height="22" rx="3" fill="url(#sruvaGold)" stroke="#5B190E" stroke-width="0.8" />
-    <rect x="460" y="487" width="14" height="26" rx="3" fill="url(#sruvaGold)" stroke="#5B190E" stroke-width="0.8" />
-    <rect x="600" y="486" width="16" height="28" rx="3" fill="url(#sruvaGold)" stroke="#5B190E" stroke-width="0.8" />
+      <!-- Concentric Rings: Outer Agni Circle (Crimson) + Inner Soma Crescent (Golden-White) -->
+      <circle cx="0" cy="0" r="215" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.7" />
+      <circle cx="0" cy="0" r="195" fill="#FEF3C7" stroke="#DC2626" stroke-width="3.5" opacity="0.85" />
 
-    <!-- Neck Transition to Bowl (ग्रीवा) -->
-    <path d="M 700 485
-             C 715 484, 725 470, 735 455
-             C 742 445, 750 440, 760 440
-             L 760 560
-             C 750 560, 742 555, 735 545
-             C 725 530, 715 516, 700 515
-             Z"
-          fill="url(#khadiraWood)" stroke="#260805" stroke-width="2.5" />
+      <!-- 8-Petaled Radiant Flower in Sandalwood & Kumkum -->
+      <g stroke="#B45309" stroke-width="1.5" fill="#FFFBEB" opacity="0.9">
+        <path d="M 0 -195 Q 40 -120, 0 -60 Q -40 -120, 0 -195 Z" />
+        <path d="M 0 195 Q 40 120, 0 60 Q -40 120, 0 195 Z" />
+        <path d="M -195 0 Q -120 40, -60 0 Q -120 -40, -195 0 Z" />
+        <path d="M 195 0 Q 120 40, 60 0 Q 120 -40, 195 0 Z" />
+        <path d="M -138 -138 Q -80 -80, -42 -42 Q -80 -120, -138 -138 Z" />
+        <path d="M 138 138 Q 80 80, 42 42 Q 80 120, 138 138 Z" />
+        <path d="M 138 -138 Q 80 -80, 42 -42 Q 120 -80, 138 -138 Z" />
+        <path d="M -138 138 Q -80 80, -42 42 Q -120 80, -138 138 Z" />
+      </g>
 
-    <!-- Circular Bowl (पुष्कर - Round Cup, व्यास २ अंगुल = १.५″) -->
-    <!-- Outer Rim -->
-    <circle cx="785" cy="500" r="75" fill="url(#khadiraWood)" stroke="#240705" stroke-width="4" filter="url(#bowlDepth)" />
-    
-    <!-- Bowl Lip / Wall -->
-    <circle cx="785" cy="500" r="62" fill="#42120C" stroke="#260805" stroke-width="2" />
+      <!-- Inner Agni Triangle intersected with Soma Crescent Moon -->
+      <polygon points="0,-90 78,45 -78,45" fill="#FEE2E2" stroke="#DC2626" stroke-width="2.5" />
+      
+      <!-- Soma Lunar Crescent (चन्द्रकला) drawn in Sandalwood -->
+      <path d="M -50,-10 A 55 55 0 0 0 50,-10 A 42 42 0 0 1 -50,-10 Z" fill="#FEF08A" stroke="#CA8A04" stroke-width="2" />
 
-    <!-- Inner Golden Ghee Cavity (घृत पुष्कर) -->
-    <circle cx="785" cy="500" r="54" fill="url(#gheeBowlGlow)" stroke="#78350F" stroke-width="2" />
+      <!-- Central Sacred Seed Mantras: रं (Agni) एवं सौः (Soma) -->
+      <circle cx="0" cy="10" r="38" fill="#FFFDF8" stroke="#991B1B" stroke-width="2" />
+      <text x="0" y="22" font-family="'Noto Serif', serif" font-size="30" font-weight="900" fill="#991B1B" text-anchor="middle" letter-spacing="1">
+        रं / सौः
+      </text>
 
-    <!-- Concentric Radiance & Surface Tension in Ghee -->
-    <ellipse cx="782" cy="495" rx="38" ry="34" fill="#FEF08A" opacity="0.6" />
-    <circle cx="780" cy="492" r="16" fill="#FFFBEB" opacity="0.8" />
+      <!-- Pitha Label -->
+      <text x="0" y="165" font-family="'Noto Serif', serif" font-size="13" font-weight="900" fill="#991B1B" text-anchor="middle">
+        अग्नि-सोम युग्म मण्डल (रक्त चन्दन एवं श्वेत चन्दन निर्मित)
+      </text>
+    </g>
 
-    <!-- Pointed Pouring Nock / Beak (चमसोष्ठ) -->
-    <path d="M 855 490 C 868 495, 878 500, 868 505 C 855 510, 850 500, 855 490 Z" fill="url(#khadiraWood)" stroke="#2A0805" stroke-width="2" />
+    <!-- ============================================================== -->
+    <!-- 3. REALISTIC SRUVA VESSEL RESTING ON TOP -->
+    <!-- ============================================================== -->
+    <!-- Khadira dense dark wood, thumb-sized circular hemispherical spoon bowl -->
+    <g id="sruva-vessel" filter="url(#patraDeepShadow)">
+      
+      <!-- Contact Shadow -->
+      <ellipse cx="400" cy="330" rx="310" ry="20" fill="#0F0502" opacity="0.5" filter="url(#yantraGlowFilter)" />
 
-    <!-- Suspended Golden Ghee Oblation Droplet (आहुति बिन्दु) -->
-    <path d="M 872 500 C 885 500, 895 506, 895 515 C 895 525, 885 532, 876 532 C 868 532, 865 522, 865 515 C 865 506, 868 500, 872 500 Z"
-          fill="url(#sruvaGold)" stroke="#B45309" stroke-width="1.5" />
-    <circle cx="880" cy="514" r="3" fill="#FFFBEB" />
+      <!-- Handle Tail Ring (स्रुवा-कङ्कण / मुकुट) -->
+      <g transform="translate(120, 315)">
+        <ellipse cx="0" cy="0" rx="22" ry="34" fill="url(#khadiraWood)" stroke="#1E0B04" stroke-width="3" />
+        <ellipse cx="0" cy="0" rx="10" ry="16" fill="#A6C878" stroke="#0F0502" stroke-width="2" opacity="0.8" />
+        <ellipse cx="0" cy="0" rx="22" ry="34" fill="url(#khadiraSpecular)" />
+      </g>
 
+      <!-- Khadira Slender Long Handle (स्रुवा-दण्ड) - perfectly straight Shastric pole -->
+      <path d="M 140,305 
+               C 270,304, 450,302, 600,298
+               C 625,297, 640,296, 650,295
+               L 650,335
+               C 640,334, 625,333, 600,332
+               C 450,328, 270,326, 140,325
+               Z" 
+            fill="url(#khadiraWood)" stroke="#1E0B04" stroke-width="3" />
+      <path d="M 142,306 C 270,305, 450,303, 645,297 L 645,310 C 450,317, 270,318, 142,318 Z"
+            fill="url(#khadiraSpecular)" opacity="0.8" />
+
+      <!-- Fine Striations of Khadira Ironwood Grain -->
+      <g stroke="#C48255" stroke-width="0.9" fill="none" opacity="0.45">
+        <path d="M 160,311 C 280,310, 440,308, 620,303" />
+        <path d="M 170,320 C 300,319, 460,318, 610,322" stroke="#0F0502" stroke-width="1.8" opacity="0.75" />
+      </g>
+
+      <!-- Sacred Carved Rings on Handle -->
+      <g fill="#A16207" stroke="#1E0B04" stroke-width="1">
+        <rect x="250" y="303" width="10" height="26" rx="2" />
+        <rect x="390" y="301" width="12" height="30" rx="2.5" />
+        <rect x="530" y="299" width="14" height="34" rx="3" />
+      </g>
+
+      <!-- Sruva Spoon Bowl Neck -->
+      <path d="M 645,295 C 660,292, 672,288, 680,285 L 680,345 C 672,342, 660,338, 645,335 Z" 
+            fill="url(#khadiraWood)" stroke="#1E0B04" stroke-width="2.5" />
+
+      <!-- Sruva Round Spoon Bowl (अंगुष्ठपर्व मात्र पुट - 1 Angula wide hemispherical bowl) -->
+      <circle cx="725" cy="315" r="45" fill="url(#khadiraWood)" stroke="#1E0B04" stroke-width="3.5" />
+      <circle cx="725" cy="315" r="45" fill="url(#khadiraSpecular)" opacity="0.75" />
+
+      <!-- Deep Hollow Cavity -->
+      <circle cx="723" cy="315" r="34" fill="#240E05" stroke="#0F0502" stroke-width="2" />
+
+      <!-- Pool of Golden Cow Ghee inside Sruva -->
+      <circle cx="721" cy="315" r="28" fill="url(#moltenGhee)" stroke="#854D0E" stroke-width="1.5" />
+      <ellipse cx="715" cy="308" rx="14" ry="8" fill="#FFFFFF" opacity="0.8" />
+
+      <!-- Front Oblation Rim (स्रुवा मुख) -->
+      <path d="M 760,305 C 775,310, 775,320, 760,325" stroke="#FDE047" stroke-width="3" stroke-linecap="round" />
+      <!-- Golden Ghee Drop at Rim -->
+      <circle cx="778" cy="315" r="4" fill="#FACC15" stroke="#854D0E" stroke-width="1" />
+    </g>
+
+    <!-- Dimension Marker Arrows -->
+    <g opacity="0.85">
+      <line x1="120" y1="210" x2="770" y2="210" stroke="#805713" stroke-width="2" />
+      <polygon points="120,210 135,204 135,216" fill="#805713" />
+      <polygon points="770,210 755,204 755,216" fill="#805713" />
+      <rect x="360" y="196" width="200" height="26" rx="6" fill="#FFFDF8" stroke="#805713" stroke-width="1.2" />
+      <text x="460" y="214" font-family="'Cinzel', 'Noto Serif', serif" font-size="13" font-weight="900" fill="#805713" text-anchor="middle">
+        सम्पूर्ण दैर्घ्य: २४ अंगुल (१ अरत्नि)
+      </text>
+    </g>
   </g>
 
-  <!-- Sacred Details & Typography -->
-  <g transform="translate(500, 750)" text-anchor="middle">
-    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#4A140F" letter-spacing="2">
-      खदिर स्रुवा (SRUVA)
+  <!-- BOTTOM BANNER -->
+  <g transform="translate(500, 890)" text-anchor="middle">
+    <rect x="-380" y="-45" width="760" height="75" rx="16" fill="#FFF9EB" stroke="#DC2626" stroke-width="2.2" />
+    <text y="-20" font-family="'Noto Serif', serif" font-size="16" font-weight="900" fill="#991B1B">
+      ✦ अधः-स्थापित पीठ: अग्नि-सोम मण्डल (स्रुवा-प्रतिष्ठा) ✦
     </text>
-    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
-      इन्द्र-वीर्य खदिर काष्ठ निर्मित • सर्वप्रधान नित्य आहुति दण्ड
+    <text y="5" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#7F1D1D">
+      अङ्कन द्रव्य: रक्त चन्दन एवं श्वेत चन्दन | बीज मन्त्र: "ॐ रं / सौः स्रुवाय नमः" | आकृति: वृत्त एवं चन्द्रकला
     </text>
-
-    <!-- Citation Box -->
-    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
-    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#3D100A">
-      "उपभृदसि घृताची नाम्ना प्रियेण नाम्ना प्रियं सद आसीद ॥"
-    </text>
-    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
-      — शतपथ १.३.२ • गोल पुष्कर युक्त १ अरत्नि प्रमाण (अग्र कटोरा व्यास २ अंगुल)
+    <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#805713">
+      *शतपथ ब्राह्मणम्* १.३.१: "स्रुवेण वै देवा आज्यं जुह्वति... सौम्ये मण्डले सादयति"
     </text>
   </g>
-
-  <!-- Top Badges -->
-  <g transform="translate(100, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      स्रुक्-स्रुवा युगल
-    </text>
-  </g>
-  <g transform="translate(740, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      वृत्ताकार पुष्कर
-    </text>
-  </g>
-
 </svg>

@@ -1,174 +1,208 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#F7EEDF" />
-      <stop offset="100%" stop-color="#EADBBE" />
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF8" />
+      <stop offset="60%" stop-color="#F5EBDC" />
+      <stop offset="100%" stop-color="#E2D1B3" />
     </radialGradient>
 
-    <!-- Bell Metal / Pure Bronze (कांस्य) Gradient -->
-    <linearGradient id="bronzeVessel" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D4AF37" />
-      <stop offset="25%" stop-color="#AA7C11" />
-      <stop offset="55%" stop-color="#7B5606" />
-      <stop offset="85%" stop-color="#A57A15" />
-      <stop offset="100%" stop-color="#4C3401" />
+    <!-- Kusha Mat Woven Texture -->
+    <linearGradient id="kushaWeave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4DE" />
+      <stop offset="30%" stop-color="#D7E8BC" />
+      <stop offset="70%" stop-color="#C2DC9A" />
+      <stop offset="100%" stop-color="#A6C878" />
     </linearGradient>
 
-    <linearGradient id="bronzeShine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#F5DE88" />
-      <stop offset="50%" stop-color="#FFF8D6" />
-      <stop offset="100%" stop-color="#C59B27" />
+    <pattern id="kushaPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 L 24,24 M 24,0 L 0,24" stroke="#8CAE5B" stroke-width="0.8" opacity="0.4" />
+      <line x1="0" y1="12" x2="24" y2="12" stroke="#6C8E3B" stroke-width="0.6" opacity="0.35" />
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#5E7E2F" stroke-width="0.6" opacity="0.35" />
+    </pattern>
+
+    <!-- Sacred Turmeric / Haridra & Ashtagandha Paste for Surya-Chandra Mandala -->
+    <radialGradient id="suryaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF08A" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#B45309" stop-opacity="0.08" />
+    </radialGradient>
+
+    <!-- Lustrous Kamsa (Bell-Metal / Bronze) Gradient -->
+    <linearGradient id="bellMetal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#785012" />
+      <stop offset="25%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#FFF0A3" />
+      <stop offset="75%" stop-color="#B8860B" />
+      <stop offset="100%" stop-color="#523405" />
     </linearGradient>
 
-    <!-- Golden Molten Ghee Surface -->
-    <radialGradient id="gheePool" cx="48%" cy="42%" r="60%">
+    <!-- Molten Golden Cow Ghee Pool with Translucent Glowing Sheen -->
+    <radialGradient id="pureGheePool" cx="48%" cy="40%" r="62%">
       <stop offset="0%" stop-color="#FFFDE7" />
-      <stop offset="35%" stop-color="#FCD34D" />
-      <stop offset="70%" stop-color="#F59E0B" />
-      <stop offset="100%" stop-color="#B45309" />
+      <stop offset="25%" stop-color="#FEF08A" />
+      <stop offset="60%" stop-color="#FACC15" />
+      <stop offset="85%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
     </radialGradient>
 
-    <!-- Flaming Ulmuka (जलती तृण-ज्वाला) for Ghee Purification -->
-    <linearGradient id="ulmukaFlame" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#DC2626" />
-      <stop offset="40%" stop-color="#F97316" />
-      <stop offset="80%" stop-color="#FACC15" />
-      <stop offset="100%" stop-color="#FFFFFF" />
-    </linearGradient>
+    <!-- Filters -->
+    <filter id="yantraGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
 
-    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#402902" flood-opacity="0.4" />
+    <filter id="patraDeepShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="16" flood-color="#2D1A04" flood-opacity="0.55" />
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#422506" flood-opacity="0.35" />
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1000" height="1000" fill="url(#bgGrad)" />
 
-  <!-- Outer Sacred Geometry Frame -->
-  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
-  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+  <!-- Outer Temple Border -->
+  <rect x="30" y="30" width="940" height="940" rx="24" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="42" y="42" width="916" height="916" rx="18" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
 
-  <!-- Dimensions Indicator -->
-  <g opacity="0.7">
-    <line x1="300" y1="230" x2="700" y2="230" stroke="#805713" stroke-width="1.5" />
-    <path d="M 300 230 L 315 224 L 315 236 Z" fill="#805713" />
-    <path d="M 700 230 L 685 224 L 685 236 Z" fill="#805713" />
-    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
-      मानक कांस्य प्रमाण: विस्तृत मुख युक्त शुद्ध घृत कुम्भ
+  <!-- HEADER: Ajyasthali Identity & Purpose -->
+  <g transform="translate(500, 85)" text-anchor="middle">
+    <rect x="-240" y="-30" width="480" height="42" rx="21" fill="#805713" stroke="#FDE68A" stroke-width="1.8" />
+    <text y="-3" font-family="'Cinzel', 'Noto Serif', serif" font-size="18" font-weight="900" fill="#FFFDF8" letter-spacing="2">
+      ॥ आज्यस्थाली • शुद्ध कांस्य (कांसा) ॥
+    </text>
+    <text y="32" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07">
+      मानक प्रमाण: परिमण्डल (गोल पात्र • १ प्रस्थ क्षमता) | शुद्ध गोघृत पात्र
     </text>
   </g>
 
-  <!-- AJYASTHALI (Sacred Bell-Metal Ghee Pot) -->
-  <g filter="url(#patraShadow)">
-    
-    <!-- Base Foot / Pedestal (कुम्भ पाद) -->
-    <ellipse cx="500" cy="655" rx="145" ry="32" fill="url(#bronzeVessel)" stroke="#4A3302" stroke-width="3" />
-    <ellipse cx="500" cy="652" rx="135" ry="24" fill="#382601" />
+  <!-- ============================================================== -->
+  <!-- 1. KUSHA MAT BED (कुश-आस्तरण वेदी) -->
+  <!-- ============================================================== -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaWeave)" stroke="#558B2F" stroke-width="3" />
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaPattern)" />
+    <rect x="12" y="12" width="776" height="616" rx="20" fill="none" stroke="#33691E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" />
 
-    <!-- Main Spherical Belly of Vessel (कुम्भ उदर) -->
-    <path d="M 355 640
-             C 270 580, 260 480, 310 420
-             C 330 395, 360 380, 400 375
-             L 600 375
-             C 640 380, 670 395, 690 420
-             C 740 480, 730 580, 645 640
-             Z"
-          fill="url(#bronzeVessel)" stroke="#382601" stroke-width="4" />
-
-    <!-- Ornate Sacred Engravings on Vessel Waist -->
-    <!-- Gold Relief Filigree Band -->
-    <path d="M 285 510 C 370 540, 630 540, 715 510" stroke="url(#bronzeShine)" stroke-width="6" fill="none" opacity="0.85" />
-    <path d="M 282 525 C 370 555, 630 555, 718 525" stroke="#3D2A02" stroke-width="2.5" fill="none" />
-    <!-- Lotus Petal Engraving on Base -->
-    <g fill="#D4AF37" opacity="0.75" stroke="#4C3401" stroke-width="1">
-      <path d="M 370 635 C 385 615, 405 615, 420 635 Z" />
-      <path d="M 420 635 C 435 615, 455 615, 470 635 Z" />
-      <path d="M 470 635 C 485 615, 505 615, 520 635 Z" />
-      <path d="M 520 635 C 535 615, 555 615, 570 635 Z" />
-      <path d="M 570 635 C 585 615, 605 615, 620 635 Z" />
+    <!-- Akshata Grains on Mat -->
+    <g fill="#FFFDF5" stroke="#D97706" stroke-width="0.6" opacity="0.85">
+      <ellipse cx="80" cy="85" rx="3.5" ry="1.8" transform="rotate(25 80 85)" />
+      <ellipse cx="95" cy="80" rx="3.8" ry="1.7" transform="rotate(-30 95 80)" />
+      <ellipse cx="715" cy="85" rx="3.6" ry="1.8" transform="rotate(40 715 85)" />
+      <ellipse cx="725" cy="545" rx="3.7" ry="1.8" transform="rotate(15 725 545)" />
+      <ellipse cx="85" cy="555" rx="3.5" ry="1.7" transform="rotate(-20 85 555)" />
     </g>
 
-    <!-- Wide Flared Neck & Rim (कण्ठ एवं विस्तृत मुख) -->
-    <!-- Outer Rim Flare -->
-    <ellipse cx="500" cy="375" rx="195" ry="65" fill="url(#bronzeShine)" stroke="#382601" stroke-width="4" />
+    <!-- ============================================================== -->
+    <!-- 2. UNDERLYING YANTRA: द्वादशार सूर्य-सोम मण्डल (12-Spoke Sun Mandala) -->
+    <!-- ============================================================== -->
+    <!-- Sharadatilakam Patala 4: "द्वादशारं सूर्यमण्डलं हरिद्रया विरचितं... ह्रीं-बीजेन समन्विते आज्यस्थालीं न्यसेत्" -->
+    <g id="underlying-yantra-ajyasthali" transform="translate(400, 320)" filter="url(#yantraGlowFilter)">
+      <!-- Radiant Golden Aura -->
+      <circle cx="0" cy="0" r="235" fill="url(#suryaAura)" opacity="0.45" />
 
-    <!-- Inner Cavity with Molten Golden Desi Cow Ghee (शुद्ध गोघृत) -->
-    <ellipse cx="500" cy="380" rx="170" ry="52" fill="url(#gheePool)" stroke="#854D0E" stroke-width="3" />
+      <!-- Outer Lotus Ring drawn in Turmeric & Ashtagandha -->
+      <circle cx="0" cy="0" r="215" fill="none" stroke="#D97706" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.75" />
+      <circle cx="0" cy="0" r="195" fill="#FFFBEB" stroke="#B45309" stroke-width="3.5" opacity="0.85" />
 
-    <!-- Golden Ghee Surface Shimmer & Concentric Radiance -->
-    <ellipse cx="485" cy="375" rx="110" ry="28" fill="#FEF9C3" opacity="0.55" />
-    <ellipse cx="470" cy="370" rx="55" ry="14" fill="#FFFFFF" opacity="0.8" />
+      <!-- 12 Solar Rays (द्वादश सूर्य किरण / दल) drawn in Haridra paste -->
+      <g stroke="#D97706" stroke-width="2.5" fill="#FEF08A">
+        <!-- 12 spokes radiating every 30 degrees -->
+        <polygon points="0,-195 14,-140 -14,-140" />
+        <polygon points="0,195 14,140 -14,140" />
+        <polygon points="-195,0 -140,14 -140,-14" />
+        <polygon points="195,0 140,14 140,-14" />
+        <polygon points="97,-168 85,-115 62,-132" />
+        <polygon points="-97,-168 -85,-115 -62,-132" />
+        <polygon points="97,168 85,115 62,132" />
+        <polygon points="-97,168 -85,115 -62,132" />
+        <polygon points="168,-97 115,-85 132,-62" />
+        <polygon points="-168,-97 -115,-85 -132,-62" />
+        <polygon points="168,97 115,85 132,62" />
+        <polygon points="-168,97 -115,85 -132,62" />
+      </g>
 
-    <!-- Sacred Two Kusha Pavatris Dipping in Ghee for Utpavana (उत्पवन पवित्री द्वय) -->
-    <g filter="url(#patraShadow)">
-      <path d="M 410 440 C 440 395, 470 365, 530 330" stroke="#65A30D" stroke-width="5" stroke-linecap="round" fill="none" />
-      <circle cx="480" cy="370" r="7" fill="#FACC15" stroke="#365314" stroke-width="1.2" />
-      <path d="M 530 330 C 545 320, 565 315, 580 305" stroke="#84CC16" stroke-width="3" fill="none" stroke-linecap="round" />
+      <!-- Middle Circle with Consecrated Akshata -->
+      <circle cx="0" cy="0" r="140" fill="#FFFDE7" stroke="#F59E0B" stroke-width="2" />
+      <circle cx="0" cy="0" r="105" fill="#FEF08A" stroke="#B45309" stroke-width="2" />
 
-      <path d="M 440 445 C 470 405, 510 380, 560 345" stroke="#65A30D" stroke-width="4.5" stroke-linecap="round" fill="none" />
-      <circle cx="505" cy="385" r="6" fill="#FACC15" stroke="#365314" stroke-width="1.2" />
-      <path d="M 560 345 C 575 338, 595 330, 610 320" stroke="#84CC16" stroke-width="2.8" fill="none" stroke-linecap="round" />
+      <!-- Central Luminous Circle with Sacred Beeja Mantra: ह्रीं (Surya/Bhuvaneshwari Beeja) -->
+      <circle cx="0" cy="0" r="62" fill="#FFFFFF" stroke="#92400E" stroke-width="2.5" />
+      <text x="0" y="14" font-family="'Noto Serif', serif" font-size="38" font-weight="900" fill="#92400E" text-anchor="middle" letter-spacing="1">
+        ह्रीं
+      </text>
+
+      <!-- Pitha Label -->
+      <text x="0" y="165" font-family="'Noto Serif', serif" font-size="13" font-weight="900" fill="#92400E" text-anchor="middle">
+        द्वादशार सूर्य-सोम मण्डल (हरिद्रा एवं अष्टगन्ध निर्मित)
+      </text>
     </g>
 
-    <!-- Flaming Sacred Ulmuka Encircling (उल्मुक प्रदक्षिणा - अग्नि शोधन) -->
-    <!-- Burning Kusha Grass Torch circling above the pot -->
-    <g transform="translate(620, 270)">
-      <!-- Burning Grass Twig -->
-      <path d="M -10 60 C 20 40, 50 20, 70 -10" stroke="#78350F" stroke-width="4.5" stroke-linecap="round" fill="none" />
-      <!-- Fire Flames -->
-      <path d="M 70 -10 
-               C 85 -30, 95 -60, 85 -80 
-               C 70 -65, 60 -50, 55 -40 
-               C 50 -60, 40 -75, 25 -90 
-               C 20 -70, 25 -50, 30 -35 
-               C 15 -45, 0 -50, -10 -40
-               C 5 -20, 30 -10, 70 -10 Z" 
-            fill="url(#ulmukaFlame)" filter="url(#patraShadow)" />
-      <!-- Fire Sparks (अग्नि कण) -->
-      <circle cx="95" cy="-85" r="4" fill="#FACC15" />
-      <circle cx="35" cy="-100" r="3.5" fill="#FDE047" />
-      <circle cx="70" cy="-110" r="2.5" fill="#FFFFFF" />
+    <!-- ============================================================== -->
+    <!-- 3. REALISTIC BRONZE AJYASTHALI RESTING ON TOP OF MANDALA -->
+    <!-- ============================================================== -->
+    <g id="ajyasthali-vessel" filter="url(#patraDeepShadow)">
+      
+      <!-- Contact Shadow onto Yantra -->
+      <ellipse cx="400" cy="335" rx="210" ry="60" fill="#261403" opacity="0.55" filter="url(#yantraGlowFilter)" />
+
+      <!-- Vessel Bottom Ring / Pedestal (कांस्य पीठिका) -->
+      <ellipse cx="400" cy="425" rx="140" ry="32" fill="#523405" stroke="#261403" stroke-width="3" />
+      <ellipse cx="400" cy="425" rx="140" ry="32" fill="url(#bellMetal)" opacity="0.6" />
+
+      <!-- Spherical Bowl Belly (कांस्य घट कुक्षि) -->
+      <path d="M 230,270 
+               C 170,330, 200,410, 260,425
+               L 540,425
+               C 600,410, 630,330, 570,270
+               Z" 
+            fill="url(#bellMetal)" stroke="#3D2003" stroke-width="4" />
+
+      <!-- Circular Flanged Beveled Rim (विशाल कांस्य मुख) -->
+      <ellipse cx="400" cy="270" rx="175" ry="52" fill="url(#bellMetal)" stroke="#3D2003" stroke-width="3" />
+      <ellipse cx="400" cy="270" rx="160" ry="46" fill="#422506" stroke="#261403" stroke-width="2" />
+
+      <!-- Inner Cavity with Molten Cow Ghee (शुद्ध गोघृत) -->
+      <ellipse cx="400" cy="272" rx="148" ry="40" fill="url(#pureGheePool)" stroke="#B45309" stroke-width="2" />
+
+      <!-- Liquid Ghee Surface Shimmer & Specular Flare -->
+      <ellipse cx="370" cy="265" rx="75" ry="16" fill="#FFFFFF" opacity="0.8" />
+      <path d="M 290,275 C 340,265, 460,265, 510,275" stroke="#FFFFFF" stroke-width="2.5" fill="none" opacity="0.75" />
+
+      <!-- Two Sacred Kusha Pavitris Dipping into the Ghee for Utpavana (उत्पवन पवित्री) -->
+      <g>
+        <path d="M 280,240 C 330,260, 380,285, 450,285" stroke="#65A30D" stroke-width="6" stroke-linecap="round" fill="none" />
+        <circle cx="370" cy="272" r="8" fill="#FACC15" stroke="#4D7C0F" stroke-width="1.8" />
+        <path d="M 450,285 C 475,282, 500,278, 520,270" stroke="#84CC16" stroke-width="3.5" fill="none" stroke-linecap="round" />
+        
+        <!-- Sacred Kusha Knot Knotting Utpavana pavitris -->
+        <ellipse cx="370" cy="272" rx="6" ry="10" fill="#FDE047" stroke="#4D7C0F" stroke-width="1" />
+      </g>
     </g>
 
-    <!-- Circumambulation Arc Guide (प्रदक्षिणा रेखा) -->
-    <path d="M 330 330 C 420 280, 580 280, 670 330" stroke="#D97706" stroke-width="1.5" stroke-dasharray="6 6" fill="none" opacity="0.75" />
-
+    <!-- Dimension Marker Arrows -->
+    <g opacity="0.85">
+      <line x1="225" y1="195" x2="575" y2="195" stroke="#805713" stroke-width="2" />
+      <polygon points="225,195 240,189 240,201" fill="#805713" />
+      <polygon points="575,195 560,189 560,201" fill="#805713" />
+      <rect x="300" y="181" width="200" height="26" rx="6" fill="#FFFDF8" stroke="#805713" stroke-width="1.2" />
+      <text x="400" y="199" font-family="'Cinzel', 'Noto Serif', serif" font-size="13" font-weight="900" fill="#805713" text-anchor="middle">
+        व्यास: ८ अंगुल (६ इंच)
+      </text>
+    </g>
   </g>
 
-  <!-- Sacred Details & Typography -->
-  <g transform="translate(500, 750)" text-anchor="middle">
-    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
-      आज्यस्थाली (AJYASTHALI)
+  <!-- BOTTOM BANNER -->
+  <g transform="translate(500, 890)" text-anchor="middle">
+    <rect x="-380" y="-45" width="760" height="75" rx="16" fill="#FFF9EB" stroke="#D97706" stroke-width="2.2" />
+    <text y="-20" font-family="'Noto Serif', serif" font-size="16" font-weight="900" fill="#92400E">
+      ✦ अधः-स्थापित पीठ: द्वादशार सूर्य-सोम मण्डल (आज्यस्थाली-प्रतिष्ठा) ✦
     </text>
-    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
-      विशुद्ध कांस्य निर्मित • गोघृत धारण, उल्मुक शोधन एवं उत्पवन पात्र
+    <text y="5" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#78350F">
+      अङ्कन द्रव्य: हरिद्रा (हल्दी) एवं अष्टगन्ध | बीज मन्त्र: "ॐ ह्रीं आज्यस्थाल्पै नमः" | आकृति: १२ किरण युक्त सूर्य-चक्र
     </text>
-
-    <!-- Citation Box -->
-    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
-    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
-      "मही द्यौः पृथिवी च न इमं यज्ञं मिमिक्षताम्... आज्यस्थाल्यै नमः ॥"
-    </text>
-    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
-      — कात्यायन श्रौतसूत्र १.३ • दो कुश-पवित्रियों द्वारा त्रिवार घृत-उत्पवन विधान
+    <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#805713">
+      *शारदातिलकम्* पटल ४: "आज्यस्य धारणं सौरे मण्डले विधिवच्चरेत्... ह्रीं-बीजेन समन्विते"
     </text>
   </g>
-
-  <!-- Top Badges -->
-  <g transform="translate(100, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      कांस्य घृत कुम्भ
-    </text>
-  </g>
-  <g transform="translate(740, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      उल्मुक-उत्पवन
-    </text>
-  </g>
-
 </svg>

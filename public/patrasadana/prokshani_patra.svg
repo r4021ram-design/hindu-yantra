@@ -1,176 +1,209 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#F7EEDF" />
-      <stop offset="100%" stop-color="#EADBBE" />
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF8" />
+      <stop offset="60%" stop-color="#F5EBDC" />
+      <stop offset="100%" stop-color="#E2D1B3" />
     </radialGradient>
 
-    <!-- Warm Bronze/Copper Alloy -->
-    <linearGradient id="bronzeAlloy" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C58548" />
-      <stop offset="35%" stop-color="#9C5A23" />
-      <stop offset="70%" stop-color="#703B0D" />
-      <stop offset="100%" stop-color="#422003" />
+    <!-- Kusha Mat Woven Texture -->
+    <linearGradient id="kushaWeave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4DE" />
+      <stop offset="30%" stop-color="#D7E8BC" />
+      <stop offset="70%" stop-color="#C2DC9A" />
+      <stop offset="100%" stop-color="#A6C878" />
     </linearGradient>
 
-    <linearGradient id="bronzeRim" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#DDA15E" />
-      <stop offset="50%" stop-color="#FFE3B3" />
-      <stop offset="100%" stop-color="#BC6C25" />
+    <pattern id="kushaPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 L 24,24 M 24,0 L 0,24" stroke="#8CAE5B" stroke-width="0.8" opacity="0.4" />
+      <line x1="0" y1="12" x2="24" y2="12" stroke="#6C8E3B" stroke-width="0.6" opacity="0.35" />
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#5E7E2F" stroke-width="0.6" opacity="0.35" />
+    </pattern>
+
+    <!-- Sacred Shatkona Varuna Paste (White Chandan & Camphor) -->
+    <radialGradient id="varunaHexAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#CCFBF1" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#5EEAD4" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#0D9488" stop-opacity="0.08" />
+    </radialGradient>
+
+    <!-- Sacred Bronze (कांस्य) Material Gradient -->
+    <linearGradient id="sacredBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="30%" stop-color="#B8860B" />
+      <stop offset="60%" stop-color="#855812" />
+      <stop offset="85%" stop-color="#603808" />
+      <stop offset="100%" stop-color="#3D2003" />
     </linearGradient>
 
-    <!-- Purifying Prokshana Water Gradient -->
-    <radialGradient id="prokshanaWater" cx="45%" cy="45%" r="65%">
+    <linearGradient id="bronzeSpecular" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#EAB308" stop-opacity="0.2" />
+      <stop offset="80%" stop-color="#3D2003" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1A0A01" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Consecrated Asperging Water -->
+    <radialGradient id="prokshaniWater" cx="45%" cy="40%" r="65%">
       <stop offset="0%" stop-color="#F0FDFA" />
-      <stop offset="40%" stop-color="#5EEAD4" />
-      <stop offset="75%" stop-color="#0D9488" />
-      <stop offset="100%" stop-color="#115E59" />
+      <stop offset="30%" stop-color="#99F6E4" />
+      <stop offset="70%" stop-color="#14B8A6" />
+      <stop offset="100%" stop-color="#0F766E" />
     </radialGradient>
 
-    <!-- Kusha Pavatri Grass -->
-    <linearGradient id="kushaSprig" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#BEF264" />
-      <stop offset="50%" stop-color="#65A30D" />
-      <stop offset="100%" stop-color="#3F6212" />
-    </linearGradient>
+    <!-- Filters -->
+    <filter id="yantraGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
 
-    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#381907" flood-opacity="0.38" />
+    <filter id="patraDeepShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="16" flood-color="#211004" flood-opacity="0.55" />
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#381D06" flood-opacity="0.35" />
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1000" height="1000" fill="url(#bgGrad)" />
 
-  <!-- Outer Sacred Geometry Frame -->
-  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
-  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+  <!-- Outer Traditional Temple Border -->
+  <rect x="30" y="30" width="940" height="940" rx="24" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="42" y="42" width="916" height="916" rx="18" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
 
-  <!-- Dimensions Indicator -->
-  <g opacity="0.7">
-    <line x1="200" y1="230" x2="800" y2="230" stroke="#805713" stroke-width="1.5" />
-    <path d="M 200 230 L 215 224 L 215 236 Z" fill="#805713" />
-    <path d="M 800 230 L 785 224 L 785 236 Z" fill="#805713" />
-    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
-      मानक गोस्तनाकार प्रमाण: ८ अंगुल लम्बाई × ४ अंगुल चौड़ाई (निर्गम शुण्डिका युक्त)
+  <!-- HEADER: Prokshani Identity & Measures -->
+  <g transform="translate(500, 85)" text-anchor="middle">
+    <rect x="-240" y="-30" width="480" height="42" rx="21" fill="#805713" stroke="#FDE68A" stroke-width="1.8" />
+    <text y="-3" font-family="'Cinzel', 'Noto Serif', serif" font-size="18" font-weight="900" fill="#FFFDF8" letter-spacing="2">
+      ॥ प्रोक्षणी पात्रम् • कांस्य / वारण काष्ठ ॥
+    </text>
+    <text y="32" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07">
+      मानक प्रमाण: ८ अंगुल दैर्घ्य • चोंचदार प्रणाल | प्रोक्षण एवं पवित्रीकरण जलभाण्ड
     </text>
   </g>
 
-  <!-- PROKSHANI PATRA BODY (Oblique Perspective with Pouring Spout to the Right) -->
-  <g filter="url(#patraShadow)">
-    
-    <!-- Outer Vessel Body with Extended Pouring Beak (गोस्तनाकार / मयूरास्य मुख) -->
-    <path d="M 240 400
-             C 220 400, 200 420, 210 450
-             L 270 610
-             C 285 645, 320 655, 360 655
-             L 630 655
-             C 670 655, 700 640, 725 615
-             L 815 480
-             C 830 460, 825 440, 805 435
-             L 760 425
-             C 730 400, 680 400, 620 400
-             Z"
-          fill="url(#bronzeAlloy)" stroke="#381907" stroke-width="4" />
+  <!-- ============================================================== -->
+  <!-- 1. KUSHA MAT BED (कुश-आस्तरण वेदी) -->
+  <!-- ============================================================== -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaWeave)" stroke="#558B2F" stroke-width="3" />
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaPattern)" />
+    <rect x="12" y="12" width="776" height="616" rx="20" fill="none" stroke="#33691E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" />
 
-    <!-- Embossed Vedic Floral Ring on Vessel Base -->
-    <path d="M 330 625 C 440 640, 560 640, 665 625" stroke="#FFE3B3" stroke-width="3" fill="none" opacity="0.6" />
-    <path d="M 285 530 C 440 550, 580 550, 745 510" stroke="#4A2508" stroke-width="2.5" fill="none" opacity="0.8" />
-
-    <!-- Top Rim Bevel (ऊपरी ढालू मुख) -->
-    <path d="M 235 400 
-             L 625 400 
-             C 685 400, 735 405, 770 428
-             L 810 445
-             C 818 452, 815 460, 800 472
-             L 720 590
-             C 700 608, 675 618, 640 618
-             L 340 618
-             C 305 618, 280 608, 265 590
-             L 215 440
-             C 210 415, 220 400, 235 400
-             Z"
-          fill="url(#bronzeRim)" stroke="#381907" stroke-width="2" />
-
-    <!-- Inner Receptacle filled with Sacred Prokshana Water -->
-    <path d="M 255 425
-             L 615 425
-             C 660 425, 705 435, 735 450
-             L 775 470
-             L 700 575
-             C 680 590, 655 595, 625 595
-             L 345 595
-             C 315 595, 295 590, 280 575
-             L 245 455
-             C 240 435, 245 425, 255 425
-             Z"
-          fill="url(#prokshanaWater)" stroke="#0F766E" stroke-width="2" />
-
-    <!-- Water Surface Reflections & Asperging Droplets -->
-    <ellipse cx="480" cy="510" rx="160" ry="45" fill="#CCFBF1" opacity="0.45" />
-    <ellipse cx="460" cy="495" rx="80" ry="20" fill="#FFFFFF" opacity="0.75" />
-
-    <!-- Two Consecrated Kusha Blades (दर्भ पवित्रक) used for Asperging -->
-    <g filter="url(#patraShadow)">
-      <!-- Blade 1 extending out of the pouring beak -->
-      <path d="M 330 540 C 450 510, 580 480, 760 435 C 795 425, 830 405, 855 380" 
-            stroke="url(#kushaSprig)" stroke-width="6.5" stroke-linecap="round" fill="none" />
-      <circle cx="560" cy="485" r="9" fill="#FACC15" stroke="#4D7C0F" stroke-width="1.5" />
-
-      <!-- Twin fine tips of Kusha dipping outward -->
-      <path d="M 855 380 C 875 365, 895 345, 905 320" stroke="url(#kushaSprig)" stroke-width="3.5" fill="none" stroke-linecap="round" />
-      <path d="M 855 380 C 878 375, 905 365, 920 350" stroke="url(#kushaSprig)" stroke-width="3" fill="none" stroke-linecap="round" />
-
-      <!-- Blade 2 resting across body -->
-      <path d="M 360 460 C 470 485, 580 515, 730 545" stroke="url(#kushaSprig)" stroke-width="5" stroke-linecap="round" fill="none" />
-      <circle cx="530" cy="502" r="8" fill="#FACC15" stroke="#4D7C0F" stroke-width="1.5" />
+    <!-- Akshata Grains on Mat -->
+    <g fill="#FFFDF5" stroke="#D97706" stroke-width="0.6" opacity="0.85">
+      <ellipse cx="80" cy="85" rx="3.5" ry="1.8" transform="rotate(25 80 85)" />
+      <ellipse cx="95" cy="80" rx="3.8" ry="1.7" transform="rotate(-30 95 80)" />
+      <ellipse cx="715" cy="85" rx="3.6" ry="1.8" transform="rotate(40 715 85)" />
+      <ellipse cx="725" cy="545" rx="3.7" ry="1.8" transform="rotate(15 725 545)" />
+      <ellipse cx="85" cy="555" rx="3.5" ry="1.7" transform="rotate(-20 85 555)" />
     </g>
 
-    <!-- Consecrated Asperging Water Drops Sprinkling from Kusha Tips (प्रोक्षण बिन्दु) -->
-    <g fill="#38BDF8" stroke="#0284C7" stroke-width="1" opacity="0.9">
-      <circle cx="915" cy="305" r="6" />
-      <circle cx="935" cy="330" r="4.5" />
-      <circle cx="945" cy="290" r="5" />
-      <circle cx="965" cy="315" r="3.5" />
-      <circle cx="930" cy="265" r="4" />
+    <!-- ============================================================== -->
+    <!-- 2. UNDERLYING YANTRA: वारुण षट्कोण मण्डल (Varuna Shatkona Yantra) -->
+    <!-- ============================================================== -->
+    <!-- Sharadatilakam Patala 4: "षट्कोणे वारुणे पीठे सादयेत् प्रोक्षणीं शुभाम्... वं-बीजेन समन्विताम्" -->
+    <g id="underlying-yantra-prokshani" transform="translate(400, 320)" filter="url(#yantraGlowFilter)">
+      <!-- Luminous Cyan Aura -->
+      <circle cx="0" cy="0" r="235" fill="url(#varunaHexAura)" opacity="0.45" />
+
+      <!-- Concentric Outer Protection Circles -->
+      <circle cx="0" cy="0" r="210" fill="none" stroke="#0D9488" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.75" />
+      <circle cx="0" cy="0" r="190" fill="#ECFDF5" stroke="#0F766E" stroke-width="3" opacity="0.85" />
+
+      <!-- Hexagram / Shatkona (षट्कोण) drawn in Sandalwood & Camphor Paste -->
+      <!-- Triangle 1 (Pointing Up) -->
+      <polygon points="0,-160 138,80 -138,80" fill="#F0FDFA" stroke="#0D9488" stroke-width="4.5" />
+      <!-- Triangle 2 (Pointing Down) -->
+      <polygon points="0,160 138,-80 -138,-80" fill="none" stroke="#0D9488" stroke-width="4.5" />
+
+      <!-- 6 Corner Water-Drop Lotus Petals -->
+      <g fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5">
+        <circle cx="0" cy="-160" r="14" />
+        <circle cx="0" cy="160" r="14" />
+        <circle cx="138" cy="80" r="14" />
+        <circle cx="-138" cy="80" r="14" />
+        <circle cx="138" cy="-80" r="14" />
+        <circle cx="-138" cy="-80" r="14" />
+      </g>
+
+      <!-- Central Sacred Bindu & Beeja Mantra वं -->
+      <circle cx="0" cy="0" r="54" fill="#FFFFFF" stroke="#0F766E" stroke-width="2.5" />
+      <text x="0" y="12" font-family="'Noto Serif', serif" font-size="36" font-weight="900" fill="#0F766E" text-anchor="middle" letter-spacing="1">
+        वं
+      </text>
+
+      <!-- Pitha Label -->
+      <text x="0" y="165" font-family="'Noto Serif', serif" font-size="13" font-weight="900" fill="#0F766E" text-anchor="middle">
+        वारुण षट्कोण यन्त्रपीठ (श्वेत चन्दन एवं कर्पूर निर्मित)
+      </text>
     </g>
 
+    <!-- ============================================================== -->
+    <!-- 3. REALISTIC BOAT-SHAPED PROKSHANI VESSEL RESTING ON TOP -->
+    <!-- ============================================================== -->
+    <g id="prokshani-vessel" filter="url(#patraDeepShadow)">
+      
+      <!-- Contact Shadow -->
+      <ellipse cx="400" cy="335" rx="280" ry="75" fill="#051C17" opacity="0.5" filter="url(#yantraGlowFilter)" />
+
+      <!-- Bronze Vessel Outer Body with Pouring Spout to Right -->
+      <path d="M 170,280 
+               L 540,280 
+               C 620,280, 680,295, 710,315
+               C 725,325, 725,335, 710,345
+               C 680,365, 620,380, 540,380
+               L 250,380
+               C 200,380, 160,350, 150,325
+               L 150,310
+               C 150,290, 160,280, 170,280
+               Z" 
+            fill="url(#sacredBronze)" stroke="#261403" stroke-width="3.5" />
+      <!-- Specular Highlight along Bronze Rim and Belly -->
+      <path d="M 175,282 L 535,282 C 610,282, 670,296, 700,314 L 690,326 C 660,310, 605,296, 535,296 L 175,296 Z"
+            fill="url(#bronzeSpecular)" opacity="0.8" />
+
+      <!-- Boat-like Oval Cavity containing Consecrated Water -->
+      <ellipse cx="380" cy="330" rx="190" ry="42" fill="url(#prokshaniWater)" stroke="#0F766E" stroke-width="2.5" />
+      <ellipse cx="370" cy="324" rx="100" ry="18" fill="#FFFFFF" opacity="0.75" />
+
+      <!-- Spout Channel with Glistening Water Surface extending into snout -->
+      <path d="M 540,320 L 705,330" stroke="#CCFBF1" stroke-width="4" stroke-linecap="round" />
+
+      <!-- Darbha Asperging Sprig (दर्भ-मञ्जरी) extending from bowl to spout for sprinkling -->
+      <path d="M 280,345 C 380,335, 520,320, 690,305 C 720,300, 745,290, 760,280" 
+            stroke="#65A30D" stroke-width="5" stroke-linecap="round" fill="none" />
+      <path d="M 690,305 C 725,298, 755,292, 780,285" stroke="#84CC16" stroke-width="3" fill="none" stroke-linecap="round" />
+      
+      <!-- Consecrated Droplets Sprinkle (प्रोक्षण जल-बिन्दु) -->
+      <circle cx="785" cy="278" r="4.5" fill="#38BDF8" stroke="#0284C7" stroke-width="1" />
+      <circle cx="802" cy="270" r="3.5" fill="#38BDF8" stroke="#0284C7" stroke-width="0.8" />
+      <circle cx="815" cy="262" r="2.8" fill="#7DD3FC" opacity="0.9" />
+    </g>
+
+    <!-- Dimension Marker Arrows -->
+    <g opacity="0.85">
+      <line x1="150" y1="215" x2="710" y2="215" stroke="#805713" stroke-width="2" />
+      <polygon points="150,215 165,209 165,221" fill="#805713" />
+      <polygon points="710,215 695,209 695,221" fill="#805713" />
+      <rect x="330" y="201" width="200" height="26" rx="6" fill="#FFFDF8" stroke="#805713" stroke-width="1.2" />
+      <text x="430" y="219" font-family="'Cinzel', 'Noto Serif', serif" font-size="13" font-weight="900" fill="#805713" text-anchor="middle">
+        दैर्घ्य: ८ अंगुल (६ इंच)
+      </text>
+    </g>
   </g>
 
-  <!-- Sacred Details & Typography -->
-  <g transform="translate(500, 750)" text-anchor="middle">
-    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
-      प्रोक्षणी पात्र (PROKSHANI PATRA)
+  <!-- BOTTOM BANNER -->
+  <g transform="translate(500, 890)" text-anchor="middle">
+    <rect x="-380" y="-45" width="760" height="75" rx="16" fill="#FFF9EB" stroke="#0D9488" stroke-width="2.2" />
+    <text y="-20" font-family="'Noto Serif', serif" font-size="16" font-weight="900" fill="#0F766E">
+      ✦ अधः-स्थापित पीठ: वारुण षट्कोण मण्डल (प्रोक्षणी-प्रतिष्ठा) ✦
     </text>
-    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
-      गोस्तनाकार निर्गम मुख युक्त • आहुति द्रव्य, समिधा एवं कुण्ड का पवित्रीकरण साधन
+    <text y="5" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#115E59">
+      अङ्कन द्रव्य: श्वेत चन्दन एवं गोपीचन्दन | बीज मन्त्र: "ॐ वं प्रोक्षणीभ्यो नमः" | आकृति: षट्कोण एवं बिन्दु
     </text>
-
-    <!-- Citation Box -->
-    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
-    <text y="85" font-family="'Noto Serif', serif" font-size="15" font-style="italic" fill="#521706">
-      "देवस्य त्वा सवितुः प्रसवेऽश्विनोर्बाहुभ्यां पूष्णो हस्ताभ्याम्... प्रोक्षामि ॥"
-    </text>
-    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
-      — पारस्कर १.१ • प्रणीता जल से शोधित पवित्र दर्भ-प्रोक्षण पात्र
+    <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#805713">
+      *शारदातिलकम्* पटल ४: "वारुणे मण्डले साध्या प्रोक्षणी पावनात्मिका"
     </text>
   </g>
-
-  <!-- Top Badges -->
-  <g transform="translate(100, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      प्रोक्षण साधन
-    </text>
-  </g>
-  <g transform="translate(740, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      गोस्तनाकार मुख
-    </text>
-  </g>
-
 </svg>

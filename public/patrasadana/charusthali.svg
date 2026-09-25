@@ -1,152 +1,212 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#F7EEDF" />
-      <stop offset="100%" stop-color="#EADBBE" />
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF8" />
+      <stop offset="60%" stop-color="#F5EBDC" />
+      <stop offset="100%" stop-color="#E2D1B3" />
     </radialGradient>
 
-    <!-- Sacred Terracotta / Pure Bronze Charu Pot -->
-    <linearGradient id="charuClay" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#BD5338" />
-      <stop offset="30%" stop-color="#933922" />
-      <stop offset="65%" stop-color="#6E2310" />
-      <stop offset="90%" stop-color="#933922" />
-      <stop offset="100%" stop-color="#481407" />
+    <!-- Kusha Mat Woven Texture -->
+    <linearGradient id="kushaWeave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4DE" />
+      <stop offset="30%" stop-color="#D7E8BC" />
+      <stop offset="70%" stop-color="#C2DC9A" />
+      <stop offset="100%" stop-color="#A6C878" />
     </linearGradient>
 
-    <linearGradient id="charuRim" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#E07A5F" />
-      <stop offset="50%" stop-color="#FFB4A2" />
-      <stop offset="100%" stop-color="#9C3A1F" />
-    </linearGradient>
+    <pattern id="kushaPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 L 24,24 M 24,0 L 0,24" stroke="#8CAE5B" stroke-width="0.8" opacity="0.4" />
+      <line x1="0" y1="12" x2="24" y2="12" stroke="#6C8E3B" stroke-width="0.6" opacity="0.35" />
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#5E7E2F" stroke-width="0.6" opacity="0.35" />
+    </pattern>
 
-    <!-- Divine Sweet Milk Payasam / Charu (दूध-चावल-घृत चरु) -->
-    <radialGradient id="charuFood" cx="48%" cy="40%" r="62%">
+    <!-- Sacred Prithvi Earth Paste (Ashtagandha & Roli) -->
+    <radialGradient id="prithviAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFEDD5" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#FB923C" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#C2410C" stop-opacity="0.08" />
+    </radialGradient>
+
+    <!-- Sacred Terracotta / Clay Vessel Material Gradient -->
+    <radialGradient id="clayPot" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#E27346" />
+      <stop offset="35%" stop-color="#B84A22" />
+      <stop offset="70%" stop-color="#802C0E" />
+      <stop offset="92%" stop-color="#541B08" />
+      <stop offset="100%" stop-color="#330D03" />
+    </radialGradient>
+
+    <!-- Cooked Charu Rice with Milk & Ghee -->
+    <radialGradient id="sacredCharu" cx="50%" cy="40%" r="60%">
       <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="40%" stop-color="#FEF3C7" />
-      <stop offset="75%" stop-color="#FDE68A" />
-      <stop offset="100%" stop-color="#F59E0B" />
+      <stop offset="40%" stop-color="#FEF9C3" />
+      <stop offset="75%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#CA8A04" />
     </radialGradient>
 
-    <!-- Golden Saffron / Kishmish / Ghee Drops -->
-    <linearGradient id="saffronGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F59E0B" />
-      <stop offset="100%" stop-color="#B45309" />
-    </linearGradient>
+    <!-- Filters -->
+    <filter id="yantraGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
 
-    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#38150A" flood-opacity="0.4" />
+    <filter id="patraDeepShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="16" flood-color="#2D1106" flood-opacity="0.55" />
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#421908" flood-opacity="0.35" />
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1000" height="1000" fill="url(#bgGrad)" />
 
-  <!-- Outer Sacred Geometry Frame -->
-  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
-  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+  <!-- Outer Temple Border -->
+  <rect x="30" y="30" width="940" height="940" rx="24" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="42" y="42" width="916" height="916" rx="18" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
 
-  <!-- Dimensions Indicator -->
-  <g opacity="0.7">
-    <line x1="280" y1="230" x2="720" y2="230" stroke="#805713" stroke-width="1.5" />
-    <path d="M 280 230 L 295 224 L 295 236 Z" fill="#805713" />
-    <path d="M 720 230 L 705 224 L 705 236 Z" fill="#805713" />
-    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
-      चरुस्थाली प्रमाण: १-२ लीटर क्षमता • पवित्र हविष्य पक्वान्न पात्र
+  <!-- HEADER: Charusthali Identity -->
+  <g transform="translate(500, 85)" text-anchor="middle">
+    <rect x="-240" y="-30" width="480" height="42" rx="21" fill="#805713" stroke="#FDE68A" stroke-width="1.8" />
+    <text y="-3" font-family="'Cinzel', 'Noto Serif', serif" font-size="18" font-weight="900" fill="#FFFDF8" letter-spacing="2">
+      ॥ चरुस्थाली • मृत्पात्र / कांस्य ॥
+    </text>
+    <text y="32" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07">
+      मानक प्रमाण: १ शराव (८ अंगुल व्यास) | पक्वान्न एवं क्षीर-ओदन हविर्भाण्ड
     </text>
   </g>
 
-  <!-- CHARUSTHALI BODY -->
-  <g filter="url(#patraShadow)">
-    
-    <!-- Base Ring -->
-    <ellipse cx="500" cy="655" rx="150" ry="32" fill="url(#charuClay)" stroke="#38150A" stroke-width="3" />
+  <!-- ============================================================== -->
+  <!-- 1. KUSHA MAT BED (कुश-आस्तरण वेदी) -->
+  <!-- ============================================================== -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaWeave)" stroke="#558B2F" stroke-width="3" />
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaPattern)" />
+    <rect x="12" y="12" width="776" height="616" rx="20" fill="none" stroke="#33691E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" />
 
-    <!-- Spherical Pot Belly (कुम्भ उदर) -->
-    <path d="M 350 640
-             C 255 570, 250 460, 310 405
-             C 335 380, 370 365, 410 360
-             L 590 360
-             C 630 365, 665 380, 690 405
-             C 750 460, 745 570, 650 640
-             Z"
-          fill="url(#charuClay)" stroke="#38150A" stroke-width="4" />
-
-    <!-- Sacred Vedic Terracotta Carvings & Grooves -->
-    <path d="M 275 490 C 370 525, 630 525, 725 490" stroke="#FFB4A2" stroke-width="4" fill="none" opacity="0.7" />
-    <path d="M 270 510 C 370 545, 630 545, 730 510" stroke="#3D1206" stroke-width="3" fill="none" opacity="0.85" />
-    
-    <!-- Lotus Petal Sculptures on Vessel Waist -->
-    <g fill="#E07A5F" opacity="0.85" stroke="#481407" stroke-width="1.2">
-      <path d="M 360 635 C 380 615, 400 615, 420 635 Z" />
-      <path d="M 420 635 C 440 615, 460 615, 480 635 Z" />
-      <path d="M 480 635 C 500 615, 520 615, 540 635 Z" />
-      <path d="M 540 635 C 560 615, 580 615, 600 635 Z" />
-      <path d="M 600 635 C 620 615, 640 615, 650 635 Z" />
+    <!-- Akshata Grains on Mat -->
+    <g fill="#FFFDF5" stroke="#D97706" stroke-width="0.6" opacity="0.85">
+      <ellipse cx="80" cy="85" rx="3.5" ry="1.8" transform="rotate(25 80 85)" />
+      <ellipse cx="95" cy="80" rx="3.8" ry="1.7" transform="rotate(-30 95 80)" />
+      <ellipse cx="715" cy="85" rx="3.6" ry="1.8" transform="rotate(40 715 85)" />
+      <ellipse cx="725" cy="545" rx="3.7" ry="1.8" transform="rotate(15 725 545)" />
+      <ellipse cx="85" cy="555" rx="3.5" ry="1.7" transform="rotate(-20 85 555)" />
     </g>
 
-    <!-- Broad Flared Mouth Rim -->
-    <ellipse cx="500" cy="360" rx="190" ry="60" fill="url(#charuRim)" stroke="#38150A" stroke-width="4" />
+    <!-- ============================================================== -->
+    <!-- 2. UNDERLYING YANTRA: पार्थिव चतुष्कोण भूपुर मण्डल (Prithvi Yantra) -->
+    <!-- ============================================================== -->
+    <!-- Sharadatilakam Patala 4: "पार्थिवं चतुरस्रं स्यात्... चतुर्द्वारोपशोभितम्... लं-बीजेन समन्विते चरुस्थालीं निधापयेत्" -->
+    <g id="underlying-yantra-charusthali" transform="translate(400, 320)" filter="url(#yantraGlowFilter)">
+      <!-- Radiant Warm Earth Glow -->
+      <circle cx="0" cy="0" r="235" fill="url(#prithviAura)" opacity="0.45" />
 
-    <!-- Inner Cavity with Divine Cooked Milk-Rice Charu (पवित्र पायस चरु) -->
-    <ellipse cx="500" cy="365" rx="165" ry="48" fill="url(#charuFood)" stroke="#D97706" stroke-width="2.5" />
+      <!-- Outer 4-Gated Earth Bhupura (चतुर्द्वार भूपुर) drawn in Ashtagandha & Roli -->
+      <path d="M -190,-190 L -60,-190 L -60,-215 L 60,-215 L 60,-190 L 190,-190 
+               L 190,-60 L 215,-60 L 215,60 L 190,60 L 190,190 
+               L 60,190 L 60,215 L -60,215 L -60,190 L -190,190 
+               L -190,60 L -215,60 L -215,-60 L -190,-60 Z" 
+            fill="#FFF7ED" stroke="#C2410C" stroke-width="4.5" opacity="0.9" />
 
-    <!-- Cooked Rice Grains & Ghee Droplets on Surface -->
-    <ellipse cx="450" cy="360" rx="8" ry="4" fill="#FFFFFF" opacity="0.9" transform="rotate(-15 450 360)" />
-    <ellipse cx="480" cy="375" rx="9" ry="4.5" fill="#FFFFFF" opacity="0.9" transform="rotate(25 480 375)" />
-    <ellipse cx="540" cy="355" rx="8" ry="4" fill="#FFFFFF" opacity="0.9" transform="rotate(10 540 355)" />
-    <ellipse cx="520" cy="385" rx="7.5" ry="3.5" fill="#FFFFFF" opacity="0.9" transform="rotate(-30 520 385)" />
+      <path d="M -165,-165 L -45,-165 L -45,-185 L 45,-185 L 45,-165 L 165,-165 
+               L 165,-45 L 185,-45 L 185,45 L 165,45 L 165,165 
+               L 45,165 L 45,185 L -45,185 L -45,165 L -165,165 
+               L -165,45 L -185,45 L -185,-45 L -165,-45 Z" 
+            fill="none" stroke="#EA580C" stroke-width="2" stroke-dasharray="6 3" />
 
-    <!-- Saffron Strands (केशर तन्तु) in Charu -->
-    <path d="M 465 355 Q 475 350, 485 358" stroke="#DC2626" stroke-width="1.8" fill="none" stroke-linecap="round" />
-    <path d="M 505 365 Q 520 370, 525 360" stroke="#DC2626" stroke-width="1.8" fill="none" stroke-linecap="round" />
-    <path d="M 430 370 Q 440 380, 450 375" stroke="#EA580C" stroke-width="1.8" fill="none" stroke-linecap="round" />
+      <!-- Inner Earth Lotus Circle -->
+      <circle cx="0" cy="0" r="110" fill="#FFEDD5" stroke="#9A3412" stroke-width="2.5" />
+      
+      <!-- 4 Golden Gate Swastikas -->
+      <g stroke="#C2410C" stroke-width="2" fill="none" opacity="0.8">
+        <circle cx="0" cy="-150" r="10" />
+        <circle cx="0" cy="150" r="10" />
+        <circle cx="-150" cy="0" r="10" />
+        <circle cx="150" cy="0" r="10" />
+      </g>
 
-    <!-- Ghee Anointment on Charu (घृताभिघार बिन्दु) -->
-    <circle cx="495" cy="362" r="14" fill="#FEF08A" stroke="#CA8A04" stroke-width="1.5" opacity="0.85" />
-    <circle cx="492" cy="360" r="5" fill="#FFFFFF" />
+      <!-- Central Sacred Circle & Prithvi Beeja Mantra लं -->
+      <circle cx="0" cy="0" r="54" fill="#FFFFFF" stroke="#9A3412" stroke-width="2.5" />
+      <text x="0" y="12" font-family="'Noto Serif', serif" font-size="38" font-weight="900" fill="#9A3412" text-anchor="middle" letter-spacing="1">
+        लं
+      </text>
 
-    <!-- Pure Vapor/Steam Rising from Fresh Charu (पवित्र हविष्य भाप) -->
-    <path d="M 440 330 C 430 300, 450 270, 440 240" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5" />
-    <path d="M 500 320 C 515 290, 495 260, 510 230" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.6" />
-    <path d="M 560 330 C 570 305, 550 275, 565 250" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.45" />
+      <!-- Pitha Label -->
+      <text x="0" y="165" font-family="'Noto Serif', serif" font-size="13" font-weight="900" fill="#9A3412" text-anchor="middle">
+        पार्थिव चतुष्कोण भूपुर मण्डल (अष्टगन्ध एवं रोली निर्मित)
+      </text>
+    </g>
 
+    <!-- ============================================================== -->
+    <!-- 3. REALISTIC CHARUSTHALI POT RESTING ON TOP -->
+    <!-- ============================================================== -->
+    <g id="charusthali-vessel" filter="url(#patraDeepShadow)">
+      
+      <!-- Contact Shadow -->
+      <ellipse cx="400" cy="335" rx="190" ry="60" fill="#240D04" opacity="0.55" filter="url(#yantraGlowFilter)" />
+
+      <!-- Pot Base Pedestal -->
+      <ellipse cx="400" cy="425" rx="120" ry="28" fill="#330D03" stroke="#1F0702" stroke-width="3" />
+
+      <!-- Round Clay Belly (मृत्तिका कुम्भ) -->
+      <path d="M 245,280 
+               C 185,340, 215,415, 275,425
+               L 525,425
+               C 585,415, 615,340, 555,280
+               Z" 
+            fill="url(#clayPot)" stroke="#2D0B02" stroke-width="4" />
+
+      <!-- Neck Collar (कण्ठ) & Flanged Rim (गल एवं ओष्ठ) -->
+      <ellipse cx="400" cy="280" rx="160" ry="46" fill="url(#clayPot)" stroke="#2D0B02" stroke-width="3" />
+      <ellipse cx="400" cy="272" rx="142" ry="38" fill="#421204" stroke="#1F0702" stroke-width="2" />
+
+      <!-- Sacred Cooked Charu Rice Heap with Molten Ghee & Saffron -->
+      <ellipse cx="400" cy="272" rx="132" ry="32" fill="url(#sacredCharu)" stroke="#D97706" stroke-width="1.5" />
+      
+      <!-- Individual Consecrated Rice Grains (पक्व अक्षत कण) Texture -->
+      <g fill="#FFFDF5" stroke="#CA8A04" stroke-width="0.7" opacity="0.9">
+        <ellipse cx="370" cy="265" rx="5" ry="2.2" transform="rotate(15 370 265)" />
+        <ellipse cx="385" cy="268" rx="5" ry="2" transform="rotate(-25 385 268)" />
+        <ellipse cx="410" cy="264" rx="5" ry="2.2" transform="rotate(35 410 264)" />
+        <ellipse cx="430" cy="270" rx="5.2" ry="2.1" transform="rotate(-15 430 270)" />
+        <ellipse cx="360" cy="276" rx="4.8" ry="2" transform="rotate(45 360 276)" />
+        <ellipse cx="395" cy="278" rx="5" ry="2.2" transform="rotate(-10 395 278)" />
+        <ellipse cx="425" cy="280" rx="5" ry="2" transform="rotate(20 425 280)" />
+        <ellipse cx="445" cy="275" rx="4.8" ry="2" transform="rotate(-30 445 275)" />
+      </g>
+
+      <!-- Sacred Rising Steam Whiffs (पवित्र हविष्य वाष्प) -->
+      <path d="M 360,250 Q 350,225 365,205 Q 380,185 365,165" stroke="#FFFFFF" stroke-width="2.5" fill="none" opacity="0.45" stroke-linecap="round" />
+      <path d="M 400,245 Q 415,220 400,195 Q 385,170 405,145" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round" />
+      <path d="M 440,250 Q 430,225 445,200 Q 460,175 445,150" stroke="#FFFFFF" stroke-width="2.5" fill="none" opacity="0.45" stroke-linecap="round" />
+
+      <!-- Red Sacred Mauli / Kalawa Thread tied around neck (रक्षासूत्र) -->
+      <path d="M 255,296 C 320,318, 480,318, 545,296" stroke="#DC2626" stroke-width="5" fill="none" stroke-linecap="round" />
+      <path d="M 255,296 C 320,318, 480,318, 545,296" stroke="#FBBF24" stroke-width="2" stroke-dasharray="8 6" fill="none" />
+    </g>
+
+    <!-- Dimension Marker Arrows -->
+    <g opacity="0.85">
+      <line x1="240" y1="195" x2="560" y2="195" stroke="#805713" stroke-width="2" />
+      <polygon points="240,195 255,189 255,201" fill="#805713" />
+      <polygon points="560,195 545,189 545,201" fill="#805713" />
+      <rect x="300" y="181" width="200" height="26" rx="6" fill="#FFFDF8" stroke="#805713" stroke-width="1.2" />
+      <text x="400" y="199" font-family="'Cinzel', 'Noto Serif', serif" font-size="13" font-weight="900" fill="#805713" text-anchor="middle">
+        व्यास: ८ अंगुल (६ इंच)
+      </text>
+    </g>
   </g>
 
-  <!-- Sacred Details & Typography -->
-  <g transform="translate(500, 750)" text-anchor="middle">
-    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
-      चरुस्थाली (CHARUSTHALI)
+  <!-- BOTTOM BANNER -->
+  <g transform="translate(500, 890)" text-anchor="middle">
+    <rect x="-380" y="-45" width="760" height="75" rx="16" fill="#FFF9EB" stroke="#C2410C" stroke-width="2.2" />
+    <text y="-20" font-family="'Noto Serif', serif" font-size="16" font-weight="900" fill="#9A3412">
+      ✦ अधः-स्थापित पीठ: पार्थिव चतुष्कोण भूपुर मण्डल (चरुस्थाली-प्रतिष्ठा) ✦
     </text>
-    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
-      कांस्य / पवित्र मृत्तिका निर्मित • दूध-चावल-यव पक्वान्न हविष्य चरुपात्र
+    <text y="5" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#7C2D12">
+      अङ्कन द्रव्य: अष्टगन्ध एवं रोली | बीज मन्त्र: "ॐ लं चरुस्थाल्पै नमः" | आकृति: चतुर्द्वार चतुरस्र भूपुर
     </text>
-
-    <!-- Citation Box -->
-    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
-    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
-      "अन्नपतेऽन्नस्य नो देह्यनमीवस्य शुष्मिणः... चरुस्थाल्यै नमः ॥"
-    </text>
-    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
-      — पारस्कर १.१ • देव-तृप्ति कारक पक्वान्न हविष्य साधन
+    <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#805713">
+      *शारदातिलकम्* पटल ४: "पार्थिवे मण्डले साध्या चरुस्थाली शुभान्विता... लं-बीजेन प्रतिपालिता"
     </text>
   </g>
-
-  <!-- Top Badges -->
-  <g transform="translate(100, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      हविष्य पक्वान्न
-    </text>
-  </g>
-  <g transform="translate(740, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      पायस स्थाली
-    </text>
-  </g>
-
 </svg>

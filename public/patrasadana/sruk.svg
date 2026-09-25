@@ -1,176 +1,305 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#F7EEDF" />
-      <stop offset="100%" stop-color="#EADBBE" />
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF8" />
+      <stop offset="60%" stop-color="#F5EBDC" />
+      <stop offset="100%" stop-color="#E2D1B3" />
     </radialGradient>
 
-    <!-- Palasha Sacred Wood Gradient -->
-    <linearGradient id="palashaWood" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C25A2A" />
-      <stop offset="25%" stop-color="#9A3816" />
-      <stop offset="50%" stop-color="#6F240A" />
-      <stop offset="75%" stop-color="#9A3816" />
-      <stop offset="100%" stop-color="#4D1604" />
+    <!-- Kusha Mat Woven Texture -->
+    <linearGradient id="kushaWeave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4DE" />
+      <stop offset="30%" stop-color="#D7E8BC" />
+      <stop offset="70%" stop-color="#C2DC9A" />
+      <stop offset="100%" stop-color="#A6C878" />
     </linearGradient>
 
-    <!-- Wood Grain Texture -->
-    <linearGradient id="woodHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#D97736" stop-opacity="0.9" />
-      <stop offset="50%" stop-color="#7A2808" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#3A1204" stop-opacity="0.9" />
+    <pattern id="kushaPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 L 24,24 M 24,0 L 0,24" stroke="#8CAE5B" stroke-width="0.8" opacity="0.4" />
+      <line x1="0" y1="12" x2="24" y2="12" stroke="#6C8E3B" stroke-width="0.6" opacity="0.35" />
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#5E7E2F" stroke-width="0.6" opacity="0.35" />
+    </pattern>
+
+    <!-- Sacred Red Kumkum / Rakta-Chandana Paste for Underlying Agni Yantra -->
+    <linearGradient id="kumkumPaste" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D" />
+      <stop offset="40%" stop-color="#DC2626" />
+      <stop offset="75%" stop-color="#B91C1C" />
+      <stop offset="100%" stop-color="#7F1D1D" />
     </linearGradient>
 
-    <!-- Sacred Ghee Pool Glow -->
-    <radialGradient id="gheeGlow" cx="45%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#FFF3B0" />
-      <stop offset="40%" stop-color="#FCD34D" />
-      <stop offset="75%" stop-color="#D97706" />
-      <stop offset="100%" stop-color="#92400E" />
+    <radialGradient id="kumkumGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F87171" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#DC2626" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#991B1B" stop-opacity="0.1" />
     </radialGradient>
 
-    <!-- Gold Inlay -->
-    <linearGradient id="sacredGold" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#D4AF37" />
-      <stop offset="50%" stop-color="#FFF2A3" />
-      <stop offset="100%" stop-color="#AA7C11" />
+    <!-- Palasha Sacred Wood (Flame of the Forest - Butea monosperma) -->
+    <linearGradient id="palashaWood" x1="0%" y1="0%" x2="100%" y2="40%">
+      <stop offset="0%" stop-color="#C85A24" />
+      <stop offset="20%" stop-color="#A73E12" />
+      <stop offset="45%" stop-color="#7B2909" />
+      <stop offset="70%" stop-color="#9E3A10" />
+      <stop offset="88%" stop-color="#5E1E05" />
+      <stop offset="100%" stop-color="#3D1303" />
     </linearGradient>
 
-    <!-- Drop Shadow -->
-    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
-      <feDropShadow dx="8" dy="18" stdDeviation="14" flood-color="#421E06" flood-opacity="0.38" />
-    </feDropShadow>
-    <filter id="innerDepth">
-      <feOffset dx="3" dy="5" />
-      <feGaussianBlur stdDeviation="4" result="offset-blur" />
-      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse" />
-      <feFlood flood-color="#2D0B02" flood-opacity="0.75" result="color" />
-      <feComposite operator="in" in="color" in2="inverse" result="shadow" />
-      <feComposite operator="over" in="shadow" in2="SourceGraphic" />
+    <linearGradient id="woodSpecular" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFA875" stop-opacity="0.6" />
+      <stop offset="35%" stop-color="#C85A24" stop-opacity="0.1" />
+      <stop offset="85%" stop-color="#3D1303" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#240A01" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Sacred Molten Cow Ghee Glow -->
+    <radialGradient id="moltenGhee" cx="42%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#FFF9C4" />
+      <stop offset="30%" stop-color="#FDE047" />
+      <stop offset="65%" stop-color="#EAB308" />
+      <stop offset="90%" stop-color="#CA8A04" />
+      <stop offset="100%" stop-color="#854D0E" />
+    </radialGradient>
+
+    <!-- Gold Accents -->
+    <linearGradient id="sacredGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="40%" stop-color="#D4AF37" />
+      <stop offset="80%" stop-color="#92400E" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+
+    <!-- Filters for Depth and Realism -->
+    <filter id="yantraGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="patraDeepShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="16" flood-color="#260C03" flood-opacity="0.55" />
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#3D1507" flood-opacity="0.35" />
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1000" height="1000" fill="url(#bgGrad)" />
 
-  <!-- Outer Sacred Geometry Frame -->
-  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
-  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+  <!-- Outer Traditional Temple Border -->
+  <rect x="30" y="30" width="940" height="940" rx="24" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="42" y="42" width="916" height="916" rx="18" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
 
-  <!-- Dimension Guide Lines & Annotation -->
-  <g opacity="0.7">
-    <!-- Center Guideline -->
-    <line x1="160" y1="500" x2="840" y2="500" stroke="#805713" stroke-width="1" stroke-dasharray="4 4" />
-    <!-- Dimension arrows -->
-    <line x1="150" y1="210" x2="850" y2="210" stroke="#805713" stroke-width="1.5" />
-    <path d="M 150 210 L 165 204 L 165 216 Z" fill="#805713" />
-    <path d="M 850 210 L 835 204 L 835 216 Z" fill="#805713" />
-    <text x="500" y="195" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
-      मानक प्रमाण: १ हस्त (२४ अंगुल • १८ इंच • ४५.७ सेमी)
+  <!-- HEADER: Vessel Identity & Scriptural Measure -->
+  <g transform="translate(500, 85)" text-anchor="middle">
+    <rect x="-240" y="-30" width="480" height="42" rx="21" fill="#805713" stroke="#FDE68A" stroke-width="1.8" />
+    <text y="-3" font-family="'Cinzel', 'Noto Serif', serif" font-size="18" font-weight="900" fill="#FFFDF8" letter-spacing="2">
+      ॥ स्रुक् पात्रम् • पलाश काष्ठ ॥
+    </text>
+    <text y="32" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07">
+      मानक प्रमाण: १ हस्त (२४ अंगुल • १८ इंच • ४५.७ सेमी) | मुख: गजोष्ठ (हस्त्याकार पुट)
     </text>
   </g>
 
-  <!-- SRUK BODY (Horizontal Layout from Left Handle to Right Elephant-Spout Bowl) -->
-  <g filter="url(#patraShadow)">
+  <!-- ============================================================== -->
+  <!-- 1. SACRED KUSHA MAT BED (कुश-आस्तरण वेदी) -->
+  <!-- ============================================================== -->
+  <g transform="translate(100, 160)">
+    <!-- Woven Mat Base with Drop Shadow -->
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaWeave)" stroke="#558B2F" stroke-width="3" />
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaPattern)" />
     
-    <!-- Danda (Long Handle) -->
-    <!-- Handle Tail Ring (पवित्र कङ्कण / मुकुट) -->
-    <ellipse cx="180" cy="500" rx="32" ry="45" fill="url(#palashaWood)" stroke="#521503" stroke-width="3" />
-    <ellipse cx="180" cy="500" rx="16" ry="24" fill="#EADBBE" stroke="#4A1303" stroke-width="2" />
+    <!-- Mat Border Trim (गोपीचन्दन एवं दर्भ ग्रन्थि) -->
+    <rect x="12" y="12" width="776" height="616" rx="20" fill="none" stroke="#33691E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" />
+    
+    <!-- Scattered Sacred Akshata (अक्षत - Consecrated Rice Grains) on Altar -->
+    <g fill="#FFFDF5" stroke="#D97706" stroke-width="0.6" opacity="0.85">
+      <ellipse cx="70" cy="80" rx="3.5" ry="1.8" transform="rotate(25 70 80)" />
+      <ellipse cx="80" cy="74" rx="3.8" ry="1.7" transform="rotate(-40 80 74)" />
+      <ellipse cx="65" cy="92" rx="3.4" ry="1.6" transform="rotate(15 65 92)" />
+      <ellipse cx="720" cy="90" rx="3.6" ry="1.8" transform="rotate(35 720 90)" />
+      <ellipse cx="735" cy="82" rx="3.8" ry="1.7" transform="rotate(-20 735 82)" />
+      <ellipse cx="710" cy="560" rx="3.7" ry="1.8" transform="rotate(60 710 560)" />
+      <ellipse cx="80" cy="550" rx="3.6" ry="1.7" transform="rotate(-30 80 550)" />
+      <ellipse cx="95" cy="565" rx="3.8" ry="1.8" transform="rotate(10 95 565)" />
+    </g>
 
-    <!-- Handle Shaft (Danda) -->
-    <path d="M 210 482 
-             C 320 480, 480 478, 620 472
-             L 620 528
-             C 480 522, 320 520, 210 518
-             Z" 
-          fill="url(#woodHighlight)" stroke="#4A1303" stroke-width="3.5" />
+    <!-- ============================================================== -->
+    <!-- 2. UNDERLYING YANTRA (पात्र के नीचे बना आग्नेय त्रिकोण यन्त्रपीठ) -->
+    <!-- ============================================================== -->
+    <!-- Sharadatilakam Patala 4: "आग्नेयं तु त्रिकोणं स्यात्... रं-बीजेन समन्वितम्" -->
+    <g id="underlying-yantra-sruk" transform="translate(400, 320)" filter="url(#yantraGlowFilter)">
+      <!-- Radiance Glow Aura behind Yantra -->
+      <circle cx="0" cy="0" r="230" fill="url(#kumkumGlow)" opacity="0.35" />
 
-    <!-- Wood grain details on shaft -->
-    <path d="M 240 488 C 360 486, 500 484, 600 480" stroke="#E28743" stroke-width="1.5" fill="none" opacity="0.6" />
-    <path d="M 250 512 C 370 514, 510 516, 600 520" stroke="#3D1002" stroke-width="2" fill="none" opacity="0.7" />
-    <path d="M 280 500 C 390 499, 490 499, 580 498" stroke="#F59E0B" stroke-width="1.2" fill="none" opacity="0.5" />
+      <!-- Outer Consecrated Circle with Lotus Border -->
+      <circle cx="0" cy="0" r="210" fill="none" stroke="#B91C1C" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.7" />
+      <circle cx="0" cy="0" r="195" fill="#FEF2F2" stroke="#DC2626" stroke-width="3" opacity="0.85" />
 
-    <!-- Gold Embossed Rings on Handle -->
-    <rect x="290" y="479" width="14" height="42" rx="4" fill="url(#sacredGold)" stroke="#684705" stroke-width="1" />
-    <rect x="420" y="477" width="16" height="46" rx="4" fill="url(#sacredGold)" stroke="#684705" stroke-width="1" />
-    <rect x="550" y="474" width="18" height="52" rx="4" fill="url(#sacredGold)" stroke="#684705" stroke-width="1" />
+      <!-- Agni Trikona (अग्नि त्रिकोण) drawn in Vermillion/Kumkum -->
+      <!-- Equilateral Triangle pointing upwards with double sacred boundary -->
+      <polygon points="0,-165 142,85 -142,85" fill="#FEE2E2" stroke="#991B1B" stroke-width="5" />
+      <polygon points="0,-140 120,70 -120,70" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-dasharray="6 3" />
 
-    <!-- Sruk Main Receptacle / Head (बिल - Bowl) -->
-    <!-- Outer Contour with Elephant Trunk Spout (हस्त्याकार शुण्डिका) -->
-    <path d="M 610 472
-             C 630 440, 680 410, 750 410
-             C 810 410, 850 445, 850 490
-             C 850 500, 845 508, 835 512
-             C 860 515, 875 525, 880 540
-             C 885 558, 865 575, 830 580
-             C 795 585, 750 570, 715 548
-             C 660 544, 625 532, 610 528
-             Z"
-          fill="url(#palashaWood)" stroke="#421203" stroke-width="4" filter="url(#innerDepth)" />
+      <!-- 3 Sacred Swastikas at the 3 Vertices of the Triangle -->
+      <g stroke="#991B1B" stroke-width="2.2" stroke-linecap="square" fill="none" opacity="0.85">
+        <!-- Top Apex Swastika -->
+        <g transform="translate(0, -115) scale(0.65)">
+          <line x1="-12" y1="0" x2="12" y2="0" />
+          <line x1="0" y1="-12" x2="0" y2="12" />
+          <line x1="12" y1="0" x2="12" y2="8" />
+          <line x1="-12" y1="0" x2="-12" y2="-8" />
+          <line x1="0" y1="12" x2="-8" y2="12" />
+          <line x1="0" y1="-12" x2="8" y2="-12" />
+        </g>
+        <!-- Bottom-Right Swastika -->
+        <g transform="translate(85, 45) scale(0.65)">
+          <line x1="-12" y1="0" x2="12" y2="0" />
+          <line x1="0" y1="-12" x2="0" y2="12" />
+          <line x1="12" y1="0" x2="12" y2="8" />
+          <line x1="-12" y1="0" x2="-12" y2="-8" />
+          <line x1="0" y1="12" x2="-8" y2="12" />
+          <line x1="0" y1="-12" x2="8" y2="-12" />
+        </g>
+        <!-- Bottom-Left Swastika -->
+        <g transform="translate(-85, 45) scale(0.65)">
+          <line x1="-12" y1="0" x2="12" y2="0" />
+          <line x1="0" y1="-12" x2="0" y2="12" />
+          <line x1="12" y1="0" x2="12" y2="8" />
+          <line x1="-12" y1="0" x2="-12" y2="-8" />
+          <line x1="0" y1="12" x2="-8" y2="12" />
+          <line x1="0" y1="-12" x2="8" y2="-12" />
+        </g>
+      </g>
 
-    <!-- Inner Cavity for Ghee (पुष्कर / खात) -->
-    <path d="M 645 470
-             C 670 445, 720 435, 770 435
-             C 815 435, 832 460, 830 488
-             C 815 498, 770 515, 720 522
-             C 670 522, 650 495, 645 470
-             Z"
-          fill="url(#gheeGlow)" stroke="#78350F" stroke-width="2.5" />
+      <!-- Three Fire Flame Tongues radiating outward (अग्नि-शिखा) -->
+      <path d="M 0,-165 Q 12,-185 0,-200 Q -12,-185 0,-165 Z" fill="#DC2626" />
+      <path d="M 142,85 Q 165,95 175,115 Q 150,110 142,85 Z" fill="#DC2626" />
+      <path d="M -142,85 Q -165,95 -175,115 Q -150,110 -142,85 Z" fill="#DC2626" />
 
-    <!-- Elephant Trunk Spout Channel (शुण्डिका निर्गम मार्ग) -->
-    <path d="M 765 478
-             C 800 482, 835 500, 845 525
-             C 850 538, 840 548, 820 550
-             C 795 552, 765 535, 750 518
-             Z"
-          fill="#D97706" stroke="#451A03" stroke-width="1.5" opacity="0.9" />
+      <!-- Sacred Akshata consecrated in the Yantra -->
+      <circle cx="-50" cy="15" r="3" fill="#FFFDF5" stroke="#991B1B" stroke-width="0.8" />
+      <circle cx="50" cy="15" r="3" fill="#FFFDF5" stroke="#991B1B" stroke-width="0.8" />
+      <circle cx="0" cy="-60" r="3" fill="#FFFDF5" stroke="#991B1B" stroke-width="0.8" />
 
-    <!-- Flowing Golden Ghee Stream from Spout (वसोर्धारा बिन्दु) -->
-    <circle cx="855" cy="545" r="7" fill="#FDE047" stroke="#B45309" stroke-width="1" />
-    <path d="M 855 552 C 865 575, 870 595, 868 620 C 866 630, 860 635, 856 635 C 852 635, 848 625, 850 610 C 852 590, 852 565, 855 552 Z" 
-          fill="url(#sacredGold)" opacity="0.85" />
-    <circle cx="862" cy="650" r="5" fill="#FDE047" />
-    <circle cx="864" cy="670" r="3.5" fill="#FDE047" />
+      <!-- Sacred Agni Beeja Mantra (रं) in Vermillion Calligraphy -->
+      <g transform="translate(0, 15)">
+        <circle cx="0" cy="-10" r="36" fill="#FEE2E2" stroke="#991B1B" stroke-width="1.8" />
+        <text x="0" y="4" font-family="'Noto Serif', serif" font-size="36" font-weight="900" fill="#991B1B" text-anchor="middle" letter-spacing="1">
+          रं
+        </text>
+        <text x="0" y="38" font-family="'Cinzel', 'Noto Serif', serif" font-size="11" font-weight="bold" fill="#7F1D1D" text-anchor="middle" letter-spacing="1">
+          ॥ वह्नि-बीजम् ॥
+        </text>
+      </g>
 
+      <!-- Label of the Underlying Yantra right on the pitha -->
+      <text x="0" y="165" font-family="'Noto Serif', serif" font-size="13" font-weight="900" fill="#991B1B" text-anchor="middle" letter-spacing="0.5">
+        आग्नेय त्रिकोण यन्त्रपीठ (रक्त कुङ्कुम/चन्दन निर्मित)
+      </text>
+    </g>
+
+    <!-- ============================================================== -->
+    <!-- 3. REALISTIC SRUK VESSEL RESTING ON TOP OF THE YANTRA -->
+    <!-- ============================================================== -->
+    <!-- 1 Hasta = 24 Angulas (~45.7 cm) long ladle with Gajoshtha snout -->
+    <g id="sruk-vessel" filter="url(#patraDeepShadow)">
+      
+      <!-- Contact Shadow onto Yantra Surface -->
+      <ellipse cx="400" cy="330" rx="310" ry="24" fill="#1C0902" opacity="0.45" filter="url(#yantraGlowFilter)" />
+
+      <!-- Handle End Crown / Ring (पवित्र कङ्कण / मुकुट दण्ड-मूल) -->
+      <g transform="translate(120, 315)">
+        <ellipse cx="0" cy="0" rx="26" ry="38" fill="url(#palashaWood)" stroke="#3D1303" stroke-width="3" />
+        <ellipse cx="0" cy="0" rx="12" ry="18" fill="#A6C878" stroke="#240A01" stroke-width="2" opacity="0.8" />
+        <ellipse cx="0" cy="0" rx="26" ry="38" fill="url(#woodSpecular)" />
+      </g>
+
+      <!-- Long Wooden Handle Shaft (स्रुक्-दण्ड) with organic carved taper -->
+      <path d="M 142,300 
+               C 260,298, 430,295, 540,288
+               C 565,286, 580,284, 595,282
+               L 595,348
+               C 580,346, 565,344, 540,342
+               C 430,335, 260,332, 142,330
+               Z" 
+            fill="url(#palashaWood)" stroke="#3D1303" stroke-width="3" />
+      <!-- Top Specular Highlight on Curved Handle -->
+      <path d="M 145,302 C 260,300, 430,297, 590,285 L 590,305 C 430,314, 260,316, 145,316 Z"
+            fill="url(#woodSpecular)" opacity="0.75" />
+
+      <!-- Natural Wood Grain Striations & Carved Chisel Marks -->
+      <g fill="none" stroke="#FF9666" stroke-width="1.2" opacity="0.55">
+        <path d="M 160,307 C 280,305, 420,302, 570,292" />
+        <path d="M 170,323 C 290,322, 430,321, 560,326" stroke="#260C03" stroke-width="2" opacity="0.75" />
+        <path d="M 220,314 C 340,312, 460,311, 540,311" stroke="#FDE68A" stroke-width="0.9" opacity="0.45" />
+      </g>
+
+      <!-- Sacred Gold Embossed Bands (दण्ड-वलय / कङ्कण) -->
+      <g fill="url(#sacredGold)" stroke="#522A04" stroke-width="1.2">
+        <rect x="230" y="296" width="12" height="36" rx="3" />
+        <rect x="360" y="293" width="14" height="40" rx="3" />
+        <rect x="490" y="289" width="15" height="46" rx="3.5" />
+      </g>
+
+      <!-- Sruk Bowl Collar (स्रुक्-कण्ठ) -->
+      <path d="M 590,282 C 610,278, 625,274, 635,270 L 635,360 C 625,356, 610,352, 590,348 Z" 
+            fill="url(#palashaWood)" stroke="#3D1303" stroke-width="2.5" />
+
+      <!-- Deep Oblation Bowl (स्रुक्-पुष्कर / हविर्भाण्ड) - 4 Angulas wide & deep -->
+      <ellipse cx="680" cy="315" rx="65" ry="60" fill="url(#palashaWood)" stroke="#3D1303" stroke-width="3.5" />
+      <ellipse cx="680" cy="315" rx="65" ry="60" fill="url(#woodSpecular)" opacity="0.8" />
+
+      <!-- Hollow Cavity carved into the wood -->
+      <ellipse cx="678" cy="315" rx="52" ry="46" fill="#4A1604" stroke="#240A01" stroke-width="2" />
+
+      <!-- Molten Golden Ghee Pool inside the Bowl -->
+      <ellipse cx="676" cy="316" rx="44" ry="38" fill="url(#moltenGhee)" stroke="#A16207" stroke-width="1.5" />
+      <!-- Ghee Liquid Specular Reflection Ring -->
+      <ellipse cx="666" cy="306" rx="20" ry="12" fill="#FFFFFF" opacity="0.75" />
+      <path d="M 648,315 Q 675,302 705,315" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.6" />
+
+      <!-- Elephant-Trunk Pouring Spout (गजोष्ठ / हस्त्याकार प्रणाल) pointing East -->
+      <path d="M 725,295 
+               C 755,290, 785,292, 805,305
+               C 815,312, 815,318, 805,325
+               C 785,338, 755,340, 725,335
+               Z" 
+            fill="url(#palashaWood)" stroke="#3D1303" stroke-width="3" />
+      <!-- Spout Channel Grooves where oblation pours smoothly -->
+      <path d="M 728,312 L 802,315" stroke="#FDE047" stroke-width="3" stroke-linecap="round" />
+      <ellipse cx="803" cy="315" rx="4" ry="6" fill="#FDE047" stroke="#854D0E" stroke-width="1" />
+
+      <!-- Sacred Ghee Droplets (घृत-बिन्दु / संस्रव) at the tip of the spout -->
+      <circle cx="818" cy="316" r="4.5" fill="#FACC15" stroke="#854D0E" stroke-width="1" opacity="0.9" />
+      <circle cx="828" cy="320" r="3" fill="#FDE047" stroke="#A16207" stroke-width="0.8" opacity="0.8" />
+    </g>
+
+    <!-- Dimension Marker Arrows -->
+    <g opacity="0.85">
+      <line x1="120" y1="210" x2="805" y2="210" stroke="#805713" stroke-width="2" />
+      <polygon points="120,210 135,204 135,216" fill="#805713" />
+      <polygon points="805,210 790,204 790,216" fill="#805713" />
+      <rect x="360" y="196" width="200" height="26" rx="6" fill="#FFFDF8" stroke="#805713" stroke-width="1.2" />
+      <text x="460" y="214" font-family="'Cinzel', 'Noto Serif', serif" font-size="13" font-weight="900" fill="#805713" text-anchor="middle">
+        सम्पूर्ण दैर्घ्य: २४ अंगुल (१ हस्त)
+      </text>
+    </g>
   </g>
 
-  <!-- Sacred Vedic Inscriptions and Details -->
-  <!-- Deity / Tree Attribution -->
-  <g transform="translate(500, 750)" text-anchor="middle">
-    <!-- Title -->
-    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
-      पलाश स्रुक् (SRUK)
+  <!-- ============================================================== -->
+  <!-- 4. BOTTOM DEDICATED SACRED YANTRA BANNER -->
+  <!-- ============================================================== -->
+  <g transform="translate(500, 890)" text-anchor="middle">
+    <!-- Pitha Specification Badge -->
+    <rect x="-380" y="-45" width="760" height="75" rx="16" fill="#FFF9EB" stroke="#DC2626" stroke-width="2.2" />
+    
+    <text y="-20" font-family="'Noto Serif', serif" font-size="16" font-weight="900" fill="#991B1B">
+      ✦ अधः-स्थापित पीठ: आग्नेय त्रिकोण यन्त्र (वह्नि-मण्डल) ✦
     </text>
-    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
-      ब्रह्मवृक्ष पलाश काष्ठ निर्मित • वसोर्धारा एवं पूर्णाहुति महापात्र
+    <text y="5" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#7F1D1D">
+      अङ्कन द्रव्य: रक्त कुङ्कुम एवं रक्त चन्दन | बीज मन्त्र: "ॐ रं अग्नये नमः" | आकृति: ऊर्ध्व त्रिकोण एवं स्वस्तिक
     </text>
-
-    <!-- Shastric Citation -->
-    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
-    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
-      "जुहूरसि घृताची नाम्ना प्रियेण नाम्ना प्रियं सद आसीद ॥"
-    </text>
-    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
-      — शतपथ ब्राह्मणम् १.३.२ • हस्तिमुख शुण्डिका युक्त १ हस्त प्रमाण
+    <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#805713">
+      *शारदातिलकम्* पटल ४: "पात्राणां धारणात्मने लिखेत्पीठे... वह्निजे रं-बीजेन जुहूप्रभृतीनि सादयेत्"
     </text>
   </g>
-
-  <!-- Cardinal Coordinates & Orientation Tag -->
-  <g transform="translate(100, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      उदीची (उत्तर वेदी)
-    </text>
-  </g>
-  <g transform="translate(740, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      प्राची-मुख (पूर्व)
-    </text>
-  </g>
-
 </svg>

@@ -1,164 +1,197 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#F7EEDF" />
-      <stop offset="100%" stop-color="#EADBBE" />
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF8" />
+      <stop offset="60%" stop-color="#F5EBDC" />
+      <stop offset="100%" stop-color="#E2D1B3" />
     </radialGradient>
 
-    <!-- Thick Madhyama Wood Gradient -->
-    <linearGradient id="madhyamaWood" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#A04000" />
-      <stop offset="40%" stop-color="#78281F" />
-      <stop offset="80%" stop-color="#4D130D" />
-      <stop offset="100%" stop-color="#240705" />
+    <!-- Kusha Mat Woven Texture -->
+    <linearGradient id="kushaWeave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4DE" />
+      <stop offset="30%" stop-color="#D7E8BC" />
+      <stop offset="70%" stop-color="#C2DC9A" />
+      <stop offset="100%" stop-color="#A6C878" />
     </linearGradient>
 
-    <!-- Dakshina Wood Gradient -->
-    <linearGradient id="dakshinaWood" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#B9770E" />
-      <stop offset="40%" stop-color="#935116" />
-      <stop offset="80%" stop-color="#5B2C05" />
-      <stop offset="100%" stop-color="#2D1402" />
+    <pattern id="kushaPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 L 24,24 M 24,0 L 0,24" stroke="#8CAE5B" stroke-width="0.8" opacity="0.4" />
+      <line x1="0" y1="12" x2="24" y2="12" stroke="#6C8E3B" stroke-width="0.6" opacity="0.35" />
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#5E7E2F" stroke-width="0.6" opacity="0.35" />
+    </pattern>
+
+    <!-- Sacred Tri-Rekha Rakta-Chandana & Bhasma Aura -->
+    <radialGradient id="rakshaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEE2E2" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#F87171" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#991B1B" stop-opacity="0.08" />
+    </radialGradient>
+
+    <!-- Fresh Green Palasha Bark (सत्वक् / सच्छल्ल पलाश काष्ठ) -->
+    <linearGradient id="greenPalashaBark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#84CC16" />
+      <stop offset="25%" stop-color="#4D7C0F" />
+      <stop offset="50%" stop-color="#3F6212" />
+      <stop offset="75%" stop-color="#2D4609" />
+      <stop offset="100%" stop-color="#1A2E05" />
     </linearGradient>
 
-    <!-- Uttara Wood Gradient -->
-    <linearGradient id="uttaraWood" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#D4AC0D" />
-      <stop offset="40%" stop-color="#9A7D0A" />
-      <stop offset="80%" stop-color="#584504" />
-      <stop offset="100%" stop-color="#281F02" />
+    <linearGradient id="woodCutEnd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="60%" stop-color="#CA8A04" />
+      <stop offset="100%" stop-color="#854D0E" />
     </linearGradient>
 
-    <!-- Gold Accent Bindings -->
-    <linearGradient id="goldKnot" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#D4AF37" />
-      <stop offset="50%" stop-color="#FFF2A3" />
-      <stop offset="100%" stop-color="#936814" />
-    </linearGradient>
+    <!-- Filters -->
+    <filter id="yantraGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
 
-    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#3B100B" flood-opacity="0.38" />
+    <filter id="patraDeepShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="16" flood-color="#141C04" flood-opacity="0.6" />
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#263308" flood-opacity="0.4" />
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1000" height="1000" fill="url(#bgGrad)" />
 
-  <!-- Outer Sacred Geometry Frame -->
-  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
-  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+  <!-- Outer Temple Border -->
+  <rect x="30" y="30" width="940" height="940" rx="24" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="42" y="42" width="916" height="916" rx="18" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
 
-  <!-- Dimensions Indicator -->
-  <g opacity="0.7">
-    <line x1="160" y1="230" x2="840" y2="230" stroke="#805713" stroke-width="1.5" />
-    <path d="M 160 230 L 175 224 L 175 236 Z" fill="#805713" />
-    <path d="M 840 230 L 825 224 L 825 236 Z" fill="#805713" />
-    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
-      मानक प्रमाण: १ बाहु (२४ अंगुल • १८ इंच • ४५.७ सेमी) प्रति परिधि
+  <!-- HEADER: Paridhi Identity -->
+  <g transform="translate(500, 85)" text-anchor="middle">
+    <rect x="-240" y="-30" width="480" height="42" rx="21" fill="#805713" stroke="#FDE68A" stroke-width="1.8" />
+    <text y="-3" font-family="'Cinzel', 'Noto Serif', serif" font-size="18" font-weight="900" fill="#FFFDF8" letter-spacing="2">
+      ॥ परिधि त्रयम् • हरित सत्वक् पलाश ॥
+    </text>
+    <text y="32" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07">
+      मध्यमा (१ बाहु), दक्षिणा एवं उत्तरा (१-१ प्रादेश) | छाल-सहित हरी शाखाएं • कुण्ड सुरक्षा-सीमा
     </text>
   </g>
 
-  <!-- THREE PARIDHIS (परिधि त्रय) -->
-  <g filter="url(#patraShadow)">
-    
-    <!-- 1. MADHYAMA PARIDHI (मध्यम परिधि - पश्चिमाभिमुख • सर्वाधिक स्थूल/मोटी) -->
-    <g transform="translate(0, 310)">
-      <rect x="180" y="0" width="640" height="52" rx="14" fill="url(#madhyamaWood)" stroke="#240705" stroke-width="3" />
-      <ellipse cx="180" cy="26" rx="14" ry="26" fill="#D98880" stroke="#4D130D" stroke-width="2" />
-      <ellipse cx="820" cy="26" rx="14" ry="26" fill="#D98880" stroke="#4D130D" stroke-width="2" />
-      <!-- Bark Texture lines -->
-      <line x1="220" y1="16" x2="780" y2="16" stroke="#EDBB99" stroke-width="1.5" opacity="0.6" />
-      <line x1="230" y1="36" x2="770" y2="36" stroke="#1F0604" stroke-width="2.5" opacity="0.75" />
-      <!-- Gold Ritual Knot Label -->
-      <rect x="250" y="8" width="16" height="36" rx="4" fill="url(#goldKnot)" />
-      <rect x="730" y="8" width="16" height="36" rx="4" fill="url(#goldKnot)" />
-      <!-- Label -->
-      <text x="500" y="32" font-family="'Noto Serif', serif" font-size="16" font-weight="bold" fill="#FFF" text-anchor="middle">
-        १. मध्यम परिधि (पश्चिम भाग • स्थूलतम काष्ठ)
+  <!-- ============================================================== -->
+  <!-- 1. KUSHA MAT BED (कुश-आस्तरण वेदी) -->
+  <!-- ============================================================== -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaWeave)" stroke="#558B2F" stroke-width="3" />
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaPattern)" />
+    <rect x="12" y="12" width="776" height="616" rx="20" fill="none" stroke="#33691E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" />
+
+    <!-- Akshata Grains on Mat -->
+    <g fill="#FFFDF5" stroke="#D97706" stroke-width="0.6" opacity="0.85">
+      <ellipse cx="80" cy="85" rx="3.5" ry="1.8" transform="rotate(25 80 85)" />
+      <ellipse cx="95" cy="80" rx="3.8" ry="1.7" transform="rotate(-30 95 80)" />
+      <ellipse cx="715" cy="85" rx="3.6" ry="1.8" transform="rotate(40 715 85)" />
+      <ellipse cx="725" cy="545" rx="3.7" ry="1.8" transform="rotate(15 725 545)" />
+      <ellipse cx="85" cy="555" rx="3.5" ry="1.7" transform="rotate(-20 85 555)" />
+    </g>
+
+    <!-- ============================================================== -->
+    <!-- 2. UNDERLYING YANTRA: त्रैलोक्य रक्षा त्रिरिखा मण्डल (Tri-Rekha Raksha) -->
+    <!-- ============================================================== -->
+    <!-- Sharadatilakam Patala 4: "त्रैलोक्यरक्षा मण्डले त्रिरिखाङ्किते... फट्-बीजेन परिधीन् सादयेत्" -->
+    <g id="underlying-yantra-paridhi" transform="translate(400, 320)" filter="url(#yantraGlowFilter)">
+      <!-- Luminous Crimson Aura -->
+      <circle cx="0" cy="0" r="235" fill="url(#rakshaAura)" opacity="0.45" />
+
+      <!-- Three Concentric Protective Rectangular Boundaries (त्रिरिखा) in Rakta-Chandana & Bhasma -->
+      <rect x="-210" y="-180" width="420" height="360" rx="16" fill="#FEE2E2" stroke="#991B1B" stroke-width="4.5" />
+      <rect x="-185" y="-155" width="370" height="310" rx="12" fill="none" stroke="#DC2626" stroke-width="3" stroke-dasharray="8 4" />
+      <rect x="-160" y="-130" width="320" height="260" rx="8" fill="#FFF1F2" stroke="#7F1D1D" stroke-width="2.5" />
+
+      <!-- Four Corner Protective Trishulas (त्रिशूल) -->
+      <g stroke="#991B1B" stroke-width="2.5" fill="#DC2626">
+        <path d="M -185,-155 L -195,-170 L -185,-165 L -175,-170 Z" />
+        <path d="M 185,-155 L 195,-170 L 185,-165 L 175,-170 Z" />
+        <path d="M 185,155 L 195,170 L 185,165 L 175,170 Z" />
+        <path d="M -185,155 L -195,170 L -185,165 L -175,170 Z" />
+      </g>
+
+      <!-- Central Astra Beeja Mantra: फट् (Protection & Shield) in Bold Calligraphy -->
+      <circle cx="0" cy="0" r="48" fill="#FFFFFF" stroke="#991B1B" stroke-width="2.5" />
+      <text x="0" y="14" font-family="'Noto Serif', serif" font-size="36" font-weight="900" fill="#991B1B" text-anchor="middle" letter-spacing="1">
+        फट्
+      </text>
+
+      <!-- Pitha Label -->
+      <text x="0" y="165" font-family="'Noto Serif', serif" font-size="13" font-weight="900" fill="#991B1B" text-anchor="middle">
+        त्रैलोक्य रक्षा त्रिरिखा मण्डल (रक्त चन्दन एवं भस्म निर्मित)
       </text>
     </g>
 
-    <!-- 2. DAKSHINA PARIDHI (दक्षिण परिधि - दक्षिणाभिमुख • मध्यम मोटाई) -->
-    <g transform="translate(0, 430)">
-      <rect x="180" y="0" width="640" height="40" rx="12" fill="url(#dakshinaWood)" stroke="#2D1402" stroke-width="3" />
-      <ellipse cx="180" cy="20" rx="12" ry="20" fill="#F5CBA7" stroke="#5B2C05" stroke-width="2" />
-      <ellipse cx="820" cy="20" rx="12" ry="20" fill="#F5CBA7" stroke="#5B2C05" stroke-width="2" />
-      <line x1="220" y1="12" x2="780" y2="12" stroke="#F8C471" stroke-width="1.5" opacity="0.6" />
-      <line x1="230" y1="28" x2="770" y2="28" stroke="#1F0604" stroke-width="2" opacity="0.75" />
-      <rect x="260" y="6" width="14" height="28" rx="4" fill="url(#goldKnot)" />
-      <rect x="720" y="6" width="14" height="28" rx="4" fill="url(#goldKnot)" />
-      <text x="500" y="26" font-family="'Noto Serif', serif" font-size="15" font-weight="bold" fill="#FFF" text-anchor="middle">
-        २. दक्षिण परिधि (दक्षिण भाग • मध्यम काष्ठ)
+    <!-- ============================================================== -->
+    <!-- 3. REALISTIC THREE PARIDHIS RESTING ON TOP -->
+    <!-- ============================================================== -->
+    <g id="paridhi-vessel" filter="url(#patraDeepShadow)">
+      
+      <!-- Contact Shadow -->
+      <ellipse cx="400" cy="335" rx="300" ry="70" fill="#0C1702" opacity="0.55" filter="url(#yantraGlowFilter)" />
+
+      <!-- PARIDHI 1: मध्यमा परिधि (Central Longest Stick - 1 Bahu = ~36 Angulas = ~27 inches) -->
+      <g transform="translate(130, 275)">
+        <rect x="0" y="0" width="540" height="28" rx="14" fill="url(#greenPalashaBark)" stroke="#1A2E05" stroke-width="3" />
+        <!-- Fresh cut ends with visible annular sapwood -->
+        <ellipse cx="14" cy="14" rx="12" ry="12" fill="url(#woodCutEnd)" stroke="#1A2E05" stroke-width="1.5" />
+        <ellipse cx="526" cy="14" rx="12" ry="12" fill="url(#woodCutEnd)" stroke="#1A2E05" stroke-width="1.5" />
+        <!-- Green Palasha bark striations and natural growth lenticels -->
+        <line x1="60" y1="8" x2="480" y2="8" stroke="#A3E635" stroke-width="2" opacity="0.75" />
+        <line x1="80" y1="20" x2="460" y2="20" stroke="#1A2E05" stroke-width="2.5" opacity="0.8" />
+        <!-- Tag text -->
+        <text x="270" y="18" font-family="'Noto Serif', serif" font-size="10" font-weight="900" fill="#ECFCCB" text-anchor="middle">
+          १. मध्यमा परिधि (पश्चिमा • १ बाहु दैर्घ्य)
+        </text>
+      </g>
+
+      <!-- PARIDHI 2: दक्षिणा परिधि (South Stick - 1 Pradesha = ~12 Angulas) -->
+      <g transform="translate(170, 320)">
+        <rect x="0" y="0" width="460" height="26" rx="13" fill="url(#greenPalashaBark)" stroke="#1A2E05" stroke-width="3" />
+        <ellipse cx="13" cy="13" rx="11" ry="11" fill="url(#woodCutEnd)" stroke="#1A2E05" stroke-width="1.5" />
+        <ellipse cx="447" cy="13" rx="11" ry="11" fill="url(#woodCutEnd)" stroke="#1A2E05" stroke-width="1.5" />
+        <line x1="50" y1="8" x2="410" y2="8" stroke="#A3E635" stroke-width="1.8" opacity="0.75" />
+        <text x="230" y="17" font-family="'Noto Serif', serif" font-size="10" font-weight="900" fill="#ECFCCB" text-anchor="middle">
+          २. दक्षिणा परिधि (१ प्रादेश दैर्घ्य)
+        </text>
+      </g>
+
+      <!-- PARIDHI 3: उत्तरा परिधि (North Stick - 1 Pradesha = ~12 Angulas) -->
+      <g transform="translate(210, 360)">
+        <rect x="0" y="0" width="380" height="26" rx="13" fill="url(#greenPalashaBark)" stroke="#1A2E05" stroke-width="3" />
+        <ellipse cx="13" cy="13" rx="11" ry="11" fill="url(#woodCutEnd)" stroke="#1A2E05" stroke-width="1.5" />
+        <ellipse cx="367" cy="13" rx="11" ry="11" fill="url(#woodCutEnd)" stroke="#1A2E05" stroke-width="1.5" />
+        <line x1="40" y1="8" x2="340" y2="8" stroke="#A3E635" stroke-width="1.8" opacity="0.75" />
+        <text x="190" y="17" font-family="'Noto Serif', serif" font-size="10" font-weight="900" fill="#ECFCCB" text-anchor="middle">
+          ३. उत्तरा परिधि (१ प्रादेश दैर्घ्य)
+        </text>
+      </g>
+    </g>
+
+    <!-- Dimension Marker Arrows -->
+    <g opacity="0.85">
+      <line x1="130" y1="215" x2="670" y2="215" stroke="#805713" stroke-width="2" />
+      <polygon points="130,215 145,209 145,221" fill="#805713" />
+      <polygon points="670,215 655,209 655,221" fill="#805713" />
+      <rect x="300" y="201" width="200" height="26" rx="6" fill="#FFFDF8" stroke="#805713" stroke-width="1.2" />
+      <text x="400" y="219" font-family="'Cinzel', 'Noto Serif', serif" font-size="13" font-weight="900" fill="#805713" text-anchor="middle">
+        मध्यमा दैर्घ्य: ३६ अंगुल (१ बाहु)
       </text>
     </g>
-
-    <!-- 3. UTTARA PARIDHI (उत्तर परिधि - उत्तराभिमुख • सूक्ष्म/पतली) -->
-    <g transform="translate(0, 535)">
-      <rect x="180" y="0" width="640" height="30" rx="10" fill="url(#uttaraWood)" stroke="#281F02" stroke-width="2.5" />
-      <ellipse cx="180" cy="15" rx="10" ry="15" fill="#F9E79F" stroke="#584504" stroke-width="1.8" />
-      <ellipse cx="820" cy="15" rx="10" ry="15" fill="#F9E79F" stroke="#584504" stroke-width="1.8" />
-      <line x1="220" y1="9" x2="780" y2="9" stroke="#FCF3CF" stroke-width="1.2" opacity="0.6" />
-      <line x1="230" y1="21" x2="770" y2="21" stroke="#1F0604" stroke-width="1.8" opacity="0.75" />
-      <rect x="270" y="4" width="12" height="22" rx="3" fill="url(#goldKnot)" />
-      <rect x="710" y="4" width="12" height="22" rx="3" fill="url(#goldKnot)" />
-      <text x="500" y="20" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#FFF" text-anchor="middle">
-        ३. उत्तर परिधि (उत्तर भाग • सूक्ष्म काष्ठ)
-      </text>
-    </g>
-
-    <!-- Placement Schematic Diagram (सूक्ष्म कुण्ड सीमा विन्यास) -->
-    <g transform="translate(500, 640)" opacity="0.9">
-      <!-- Mini Kunda Square -->
-      <rect x="-40" y="-30" width="80" height="60" fill="#F5EFE4" stroke="#805713" stroke-width="2" stroke-dasharray="4 4" />
-      <!-- West Paridhi -->
-      <line x1="-50" y1="-30" x2="-50" y2="30" stroke="#78281F" stroke-width="7" stroke-linecap="round" />
-      <!-- South Paridhi -->
-      <line x1="-40" y1="38" x2="40" y2="38" stroke="#935116" stroke-width="5.5" stroke-linecap="round" />
-      <!-- North Paridhi -->
-      <line x1="-40" y1="-38" x2="40" y2="-38" stroke="#9A7D0A" stroke-width="4" stroke-linecap="round" />
-      <!-- Labels -->
-      <text x="-65" y="5" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#78281F" text-anchor="end">पश्चिम</text>
-      <text x="0" y="54" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#935116" text-anchor="middle">दक्षिण</text>
-      <text x="0" y="-46" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#9A7D0A" text-anchor="middle">उत्तर</text>
-      <text x="0" y="5" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#D9531E" text-anchor="middle">कुण्ड</text>
-    </g>
-
   </g>
 
-  <!-- Sacred Details & Typography -->
-  <g transform="translate(500, 770)" text-anchor="middle">
-    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
-      परिधि त्रय (PARIDHI TRAYA)
+  <!-- BOTTOM BANNER -->
+  <g transform="translate(500, 890)" text-anchor="middle">
+    <rect x="-380" y="-45" width="760" height="75" rx="16" fill="#FFF9EB" stroke="#991B1B" stroke-width="2.2" />
+    <text y="-20" font-family="'Noto Serif', serif" font-size="16" font-weight="900" fill="#991B1B">
+      ✦ अधः-स्थापित पीठ: त्रैलोक्य रक्षा त्रिरिखा मण्डल (परिधि-प्रतिष्ठा) ✦
     </text>
-    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
-      पलाश/शमी काष्ठ निर्मित • कुण्ड के पश्चिम, दक्षिण एवं उत्तर की ३ सुरक्षा सीमाएं
+    <text y="5" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#7F1D1D">
+      अङ्कन द्रव्य: रक्त चन्दन एवं भस्म | बीज मन्त्र: "ॐ फट् परिधिभ्यो नमः" | आकृति: त्रिरिखा एवं चतुस्त्रिशूल
     </text>
-
-    <!-- Citation Box -->
-    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
-    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
-      "गन्धर्वोऽसि विश्वावसुः परिधिरसि ॥"
-    </text>
-    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
-      — शतपथ १.३.४ • मध्यम (स्थूल), दक्षिण (मध्यम), उत्तर (सूक्ष्म) त्रिविध सुरक्षा सीमा
+    <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#805713">
+      *शतपथ ब्राह्मणम्* १.३.४: "गन्धर्वास्त्वा परिदधतु... रक्षसां भागोऽसीत्यपास्तेभ्यो रक्षणार्थम्"
     </text>
   </g>
-
-  <!-- Top Badges -->
-  <g transform="translate(100, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      त्रिविध परिधि
-    </text>
-  </g>
-  <g transform="translate(740, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      कुण्ड सुरक्षा सीमा
-    </text>
-  </g>
-
 </svg>

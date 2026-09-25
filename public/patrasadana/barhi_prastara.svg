@@ -1,146 +1,206 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
-    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#FFFDF9" />
-      <stop offset="60%" stop-color="#F7EEDF" />
-      <stop offset="100%" stop-color="#EADBBE" />
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF8" />
+      <stop offset="60%" stop-color="#F5EBDC" />
+      <stop offset="100%" stop-color="#E2D1B3" />
     </radialGradient>
 
-    <!-- Golden Sacred Kusha Grass Gradient -->
-    <linearGradient id="kushaMain" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D9F99D" />
-      <stop offset="30%" stop-color="#84CC16" />
-      <stop offset="70%" stop-color="#4D7C0F" />
-      <stop offset="100%" stop-color="#1E3A08" />
+    <!-- Kusha Mat Woven Texture -->
+    <linearGradient id="kushaWeave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF4DE" />
+      <stop offset="30%" stop-color="#D7E8BC" />
+      <stop offset="70%" stop-color="#C2DC9A" />
+      <stop offset="100%" stop-color="#A6C878" />
     </linearGradient>
 
-    <!-- Golden Ripe Darbha Gradient -->
-    <linearGradient id="darbhaGold" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FEF08A" />
-      <stop offset="40%" stop-color="#EAB308" />
-      <stop offset="80%" stop-color="#A16207" />
-      <stop offset="100%" stop-color="#4D3805" />
+    <pattern id="kushaPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0,0 L 24,24 M 24,0 L 0,24" stroke="#8CAE5B" stroke-width="0.8" opacity="0.4" />
+      <line x1="0" y1="12" x2="24" y2="12" stroke="#6C8E3B" stroke-width="0.6" opacity="0.35" />
+      <line x1="12" y1="0" x2="12" y2="24" stroke="#5E7E2F" stroke-width="0.6" opacity="0.35" />
+    </pattern>
+
+    <!-- Sacred Brahma Sandalwood Aura -->
+    <radialGradient id="brahmaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#FDE68A" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0.08" />
+    </radialGradient>
+
+    <!-- Sacred Dried & Fresh Darbha Grass Gradient -->
+    <linearGradient id="darbhaGrass" x1="0%" y1="0%" x2="100%" y2="30%">
+      <stop offset="0%" stop-color="#84CC16" />
+      <stop offset="25%" stop-color="#EAB308" />
+      <stop offset="50%" stop-color="#65A30D" />
+      <stop offset="75%" stop-color="#CA8A04" />
+      <stop offset="100%" stop-color="#365314" />
     </linearGradient>
 
-    <!-- Prastara Tie Knot -->
-    <linearGradient id="sacredTie" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#D4AF37" />
-      <stop offset="50%" stop-color="#FFF8D6" />
-      <stop offset="100%" stop-color="#936814" />
-    </linearGradient>
+    <!-- Filters -->
+    <filter id="yantraGlowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
 
-    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#2D3B0B" flood-opacity="0.38" />
+    <filter id="patraDeepShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="16" flood-color="#141F04" flood-opacity="0.6" />
+      <feDropShadow dx="2" dy="6" stdDeviation="6" flood-color="#243306" flood-opacity="0.4" />
     </filter>
   </defs>
 
-  <!-- Background -->
+  <!-- Background Canvas -->
   <rect width="1000" height="1000" fill="url(#bgGrad)" />
 
-  <!-- Outer Sacred Geometry Frame -->
-  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
-  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
-  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+  <!-- Outer Temple Border -->
+  <rect x="30" y="30" width="940" height="940" rx="24" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="42" y="42" width="916" height="916" rx="18" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
 
-  <!-- Dimensions Indicator -->
-  <g opacity="0.7">
-    <line x1="200" y1="230" x2="800" y2="230" stroke="#805713" stroke-width="1.5" />
-    <path d="M 200 230 L 215 224 L 215 236 Z" fill="#805713" />
-    <path d="M 800 230 L 785 224 L 785 236 Z" fill="#805713" />
-    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
-      बर्हि एवं प्रस्तर प्रमाण: १ हस्त (१८ इंच) अखण्डित कुश-संहति
+  <!-- HEADER: Barhi Prastara Identity -->
+  <g transform="translate(500, 85)" text-anchor="middle">
+    <rect x="-240" y="-30" width="480" height="42" rx="21" fill="#805713" stroke="#FDE68A" stroke-width="1.8" />
+    <text y="-3" font-family="'Cinzel', 'Noto Serif', serif" font-size="18" font-weight="900" fill="#FFFDF8" letter-spacing="2">
+      ॥ बर्हि प्रस्तरः • पवित्र कुश मुष्टि ॥
+    </text>
+    <text y="32" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07">
+      मानक प्रमाण: १ हस्त (२४ अंगुल) | समूल कुश स्तम्ब • ब्रह्म-आसन एवं देवता-आसन
     </text>
   </g>
 
-  <!-- BARHI & PRASTARA COMPOSITION -->
-  <g filter="url(#patraShadow)">
-    
-    <!-- 1. BARHI - SPREAD OF ALTAR KUSHA GRASS (पृष्ठभूमि में आस्तृत बर्हि दर्भ) -->
-    <g transform="translate(180, 480)" opacity="0.85">
-      <!-- Fan of Eastward pointing Kusha blades (पूर्वाग्र कुश) -->
-      <path d="M 0 60 C 200 -20, 450 -20, 640 60" stroke="url(#kushaMain)" stroke-width="6" fill="none" />
-      <path d="M 0 75 C 220 0, 430 0, 640 75" stroke="url(#darbhaGold)" stroke-width="7" fill="none" />
-      <path d="M 0 90 C 210 20, 440 20, 640 90" stroke="url(#kushaMain)" stroke-width="6" fill="none" />
-      <path d="M 0 105 C 230 40, 420 40, 640 105" stroke="url(#darbhaGold)" stroke-width="7" fill="none" />
-      <path d="M 0 120 C 220 60, 430 60, 640 120" stroke="url(#kushaMain)" stroke-width="5" fill="none" />
+  <!-- ============================================================== -->
+  <!-- 1. KUSHA MAT BED (कुश-आस्तरण वेदी) -->
+  <!-- ============================================================== -->
+  <g transform="translate(100, 160)">
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaWeave)" stroke="#558B2F" stroke-width="3" />
+    <rect x="0" y="0" width="800" height="640" rx="28" fill="url(#kushaPattern)" />
+    <rect x="12" y="12" width="776" height="616" rx="20" fill="none" stroke="#33691E" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6" />
+
+    <!-- Akshata Grains on Mat -->
+    <g fill="#FFFDF5" stroke="#D97706" stroke-width="0.6" opacity="0.85">
+      <ellipse cx="80" cy="85" rx="3.5" ry="1.8" transform="rotate(25 80 85)" />
+      <ellipse cx="95" cy="80" rx="3.8" ry="1.7" transform="rotate(-30 95 80)" />
+      <ellipse cx="715" cy="85" rx="3.6" ry="1.8" transform="rotate(40 715 85)" />
+      <ellipse cx="725" cy="545" rx="3.7" ry="1.8" transform="rotate(15 725 545)" />
+      <ellipse cx="85" cy="555" rx="3.5" ry="1.7" transform="rotate(-20 85 555)" />
     </g>
 
-    <!-- 2. PRASTARA - THE ROYAL YAJAMANA SHEAF (प्रस्तर - यजमान प्रतिनिधि कुश गुच्छ) -->
-    <!-- Centrally bound sacred bunch of choice kusha blades -->
-    <g transform="translate(220, 360)">
-      
-      <!-- Stems from Left Base -->
-      <path d="M 30 140 C 120 130, 240 120, 380 120" stroke="url(#kushaMain)" stroke-width="7" stroke-linecap="round" fill="none" />
-      <path d="M 25 155 C 115 145, 235 135, 380 135" stroke="url(#darbhaGold)" stroke-width="8" stroke-linecap="round" fill="none" />
-      <path d="M 35 170 C 125 160, 245 150, 380 150" stroke="url(#kushaMain)" stroke-width="7" stroke-linecap="round" fill="none" />
-      <path d="M 40 185 C 130 175, 250 165, 380 165" stroke="url(#darbhaGold)" stroke-width="6" stroke-linecap="round" fill="none" />
+    <!-- ============================================================== -->
+    <!-- 2. UNDERLYING YANTRA: ब्राह्म द्वादशदल पद्म मण्डल (Brahma Mandala) -->
+    <!-- ============================================================== -->
+    <!-- Sharadatilakam Patala 4: "ब्राह्मं द्वादशपत्रं तु पद्मं चन्दनचर्चितम्... हं-बीजेन समन्विते प्रस्तरं सादयेत्" -->
+    <g id="underlying-yantra-prastara" transform="translate(400, 320)" filter="url(#yantraGlowFilter)">
+      <!-- Luminous Golden Sandalwood Aura -->
+      <circle cx="0" cy="0" r="235" fill="url(#brahmaAura)" opacity="0.45" />
 
-      <!-- Choice Upright Pointed Tips radiating Eastward/Upward -->
-      <path d="M 380 120 C 430 110, 490 85, 540 60" stroke="url(#darbhaGold)" stroke-width="6.5" stroke-linecap="round" fill="none" />
-      <path d="M 380 135 C 440 125, 500 110, 560 95" stroke="url(#kushaMain)" stroke-width="7" stroke-linecap="round" fill="none" />
-      <path d="M 380 150 C 445 150, 510 145, 570 140" stroke="url(#darbhaGold)" stroke-width="8" stroke-linecap="round" fill="none" />
-      <path d="M 380 165 C 440 175, 500 185, 555 200" stroke="url(#kushaMain)" stroke-width="6.5" stroke-linecap="round" fill="none" />
+      <!-- Concentric Outer Protection Circle -->
+      <circle cx="0" cy="0" r="215" fill="none" stroke="#D97706" stroke-width="2.5" stroke-dasharray="8 4" opacity="0.75" />
+      <circle cx="0" cy="0" r="195" fill="#FFFBEB" stroke="#B45309" stroke-width="3.5" opacity="0.85" />
 
-      <!-- Additional fine needle tips of Kusha (तीक्ष्ण दर्भाग्र) -->
-      <path d="M 540 60 C 560 50, 575 40, 585 30" stroke="#FDE047" stroke-width="3" stroke-linecap="round" fill="none" />
-      <path d="M 560 95 C 585 85, 605 75, 615 65" stroke="#A3E635" stroke-width="3" stroke-linecap="round" fill="none" />
-      <path d="M 570 140 C 595 140, 615 138, 625 135" stroke="#FDE047" stroke-width="3.5" stroke-linecap="round" fill="none" />
-      <path d="M 555 200 C 575 210, 595 220, 605 230" stroke="#A3E635" stroke-width="3" stroke-linecap="round" fill="none" />
+      <!-- 12 Lotus Petals (द्वादशदल पद्म) drawn in Chandana -->
+      <g stroke="#D97706" stroke-width="1.8" fill="#FFFDF5" opacity="0.95">
+        <path d="M 0 -195 Q 25 -130, 0 -60 Q -25 -130, 0 -195 Z" />
+        <path d="M 0 195 Q 25 130, 0 60 Q -25 130, 0 195 Z" />
+        <path d="M -195 0 Q -130 25, -60 0 Q -130 -25, -195 0 Z" />
+        <path d="M 195 0 Q 130 25, 60 0 Q 130 -25, 195 0 Z" />
 
-      <!-- SACRED TRIPLE TIE (प्रस्तर ग्रन्थि - यजमान बन्धन) -->
-      <g transform="translate(240, 110)">
-        <rect x="0" y="0" width="35" height="90" rx="14" fill="url(#sacredTie)" stroke="#5B190E" stroke-width="2.5" />
-        <line x1="12" y1="5" x2="12" y2="85" stroke="#78350F" stroke-width="2" />
-        <line x1="23" y1="5" x2="23" y2="85" stroke="#78350F" stroke-width="2" />
-        <!-- Knot Rosette in Center -->
-        <circle cx="17" cy="45" r="14" fill="#FEF08A" stroke="#B45309" stroke-width="2" />
-        <circle cx="17" cy="45" r="6" fill="#B45309" />
+        <path d="M 97 -168 Q 80 -105, 30 -52 Q 40 -125, 97 -168 Z" />
+        <path d="M -97 -168 Q -80 -105, -30 -52 Q -40 -125, -97 -168 Z" />
+        <path d="M 97 168 Q 80 105, 30 52 Q 40 125, 97 168 Z" />
+        <path d="M -97 168 Q -80 105, -30 52 Q -40 125, -97 168 Z" />
+
+        <path d="M 168 -97 Q 105 -80, 52 -30 Q 125 -40, 168 -97 Z" />
+        <path d="M -168 -97 Q -105 -80, -52 -30 Q -125 -40, -168 -97 Z" />
+        <path d="M 168 97 Q 105 80, 52 30 Q 125 40, 168 97 Z" />
+        <path d="M -168 97 Q -105 80, -52 30 Q -125 40, -168 97 Z" />
       </g>
 
+      <!-- Royal Central Throne Square for Brahma (ब्रह्म-पीठ) -->
+      <rect x="-42" y="-42" width="84" height="84" rx="8" fill="#FEF08A" stroke="#B45309" stroke-width="2.5" />
+
+      <!-- Central Brahma Beeja Mantra: हं (Akasha / Hamsa Beeja) -->
+      <circle cx="0" cy="0" r="30" fill="#FFFFFF" stroke="#92400E" stroke-width="2" />
+      <text x="0" y="10" font-family="'Noto Serif', serif" font-size="30" font-weight="900" fill="#92400E" text-anchor="middle">
+        हं
+      </text>
+
+      <!-- Pitha Label -->
+      <text x="0" y="165" font-family="'Noto Serif', serif" font-size="13" font-weight="900" fill="#92400E" text-anchor="middle">
+        ब्राह्म द्वादशदल पद्म मण्डल (श्वेत चन्दन एवं अक्षत निर्मित)
+      </text>
     </g>
 
-    <!-- Consecrated Akshata & Ghee droplet drops sprinkled over Barhi -->
-    <ellipse cx="430" cy="560" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(-20 430 560)" />
-    <ellipse cx="580" cy="540" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(30 580 540)" />
-    <ellipse cx="510" cy="580" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(-5 510 580)" />
+    <!-- ============================================================== -->
+    <!-- 3. REALISTIC BARHI PRASTARA (TIED KUSHA SHEAF) RESTING ON TOP -->
+    <!-- ============================================================== -->
+    <g id="prastara-vessel" filter="url(#patraDeepShadow)">
+      
+      <!-- Contact Shadow -->
+      <ellipse cx="400" cy="335" rx="300" ry="50" fill="#0E1A03" opacity="0.6" filter="url(#yantraGlowFilter)" />
 
-    <!-- Radiant Aura around Prastara (यजमान तेज) -->
-    <circle cx="500" cy="500" r="160" fill="none" stroke="#FACC15" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.45" />
+      <!-- Bound Sheaf of Hundreds of Sacred Darbha Grass Blades -->
+      <!-- Left Root Ends (समूल दर्भ) with natural root nodules -->
+      <g fill="#A16207" stroke="#365314" stroke-width="1.2">
+        <ellipse cx="145" cy="305" rx="16" ry="12" />
+        <ellipse cx="140" cy="325" rx="18" ry="14" />
+        <ellipse cx="145" cy="345" rx="16" ry="12" />
+      </g>
 
+      <!-- Sheaf Body Blades (बर्हि कलाप) spanning horizontally -->
+      <path d="M 155,295 
+               C 270,290, 420,290, 560,285
+               C 620,280, 680,265, 750,245
+               C 720,285, 710,345, 750,385
+               C 680,365, 620,350, 560,345
+               C 420,340, 270,340, 155,335
+               Z" 
+            fill="url(#darbhaGrass)" stroke="#1A2E05" stroke-width="3" />
+
+      <!-- Individual Realistic Kusha Blades & Ribs -->
+      <g stroke="#BEF264" stroke-width="1.5" fill="none" opacity="0.8">
+        <path d="M 160,305 C 290,300, 440,298, 620,292 Q 680,280 735,260" />
+        <path d="M 160,315 C 300,312, 450,312, 630,312 Q 700,310 740,312" />
+        <path d="M 160,325 C 290,326, 440,328, 620,332 Q 680,345 735,365" />
+      </g>
+
+      <g stroke="#365314" stroke-width="1.2" fill="none" opacity="0.75">
+        <path d="M 170,310 C 280,308, 420,306, 580,304" />
+        <path d="M 170,320 C 280,320, 420,322, 580,324" />
+      </g>
+
+      <!-- Sacred Binding Darbha Cord (प्रस्तर-ग्रन्थि) tied tightly near the middle -->
+      <rect x="360" y="285" width="22" height="60" rx="6" fill="#FDE047" stroke="#713F12" stroke-width="2.5" />
+      <line x1="367" y1="285" x2="367" y2="345" stroke="#A16207" stroke-width="2" />
+      <line x1="374" y1="285" x2="374" y2="345" stroke="#A16207" stroke-width="2" />
+      
+      <!-- Knot and Ribbon Ends hanging from cord -->
+      <circle cx="371" cy="315" r="10" fill="#CA8A04" stroke="#713F12" stroke-width="2" />
+      <path d="M 371,325 Q 360,350 350,365" stroke="#FDE047" stroke-width="4" stroke-linecap="round" fill="none" />
+      <path d="M 371,325 Q 380,350 390,365" stroke="#FDE047" stroke-width="4" stroke-linecap="round" fill="none" />
+    </g>
+
+    <!-- Dimension Marker Arrows -->
+    <g opacity="0.85">
+      <line x1="140" y1="210" x2="745" y2="210" stroke="#805713" stroke-width="2" />
+      <polygon points="140,210 155,204 155,216" fill="#805713" />
+      <polygon points="745,210 730,204 730,216" fill="#805713" />
+      <rect x="360" y="196" width="200" height="26" rx="6" fill="#FFFDF8" stroke="#805713" stroke-width="1.2" />
+      <text x="460" y="214" font-family="'Cinzel', 'Noto Serif', serif" font-size="13" font-weight="900" fill="#805713" text-anchor="middle">
+        दैर्घ्य: २४ अंगुल (१ हस्त)
+      </text>
+    </g>
   </g>
 
-  <!-- Sacred Details & Typography -->
-  <g transform="translate(500, 750)" text-anchor="middle">
-    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
-      बर्हि एवं प्रस्तर (BARHI &amp; PRASTARA)
+  <!-- BOTTOM BANNER -->
+  <g transform="translate(500, 890)" text-anchor="middle">
+    <rect x="-380" y="-45" width="760" height="75" rx="16" fill="#FFF9EB" stroke="#D97706" stroke-width="2.2" />
+    <text y="-20" font-family="'Noto Serif', serif" font-size="16" font-weight="900" fill="#92400E">
+      ✦ अधः-स्थापित पीठ: ब्राह्म द्वादशदल पद्म मण्डल (प्रस्तर-प्रतिष्ठा) ✦
     </text>
-    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
-      पवित्र दर्भ संहति • परिस्तरण आसन एवं यजमान-प्रतिनिधि कुश स्तम्भ
+    <text y="5" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#78350F">
+      अङ्कन द्रव्य: श्वेत चन्दन एवं अक्षत | बीज मन्त्र: "ॐ हं ब्रह्मणे प्रस्तराय नमः" | आकृति: द्वादशदल कमल एवं ब्रह्म-पीठ
     </text>
-
-    <!-- Citation Box -->
-    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
-    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
-      "बर्हिषे नमः । प्रस्तरोऽसि यजमानो वै प्रस्तरः ॥"
-    </text>
-    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
-      — शतपथ १.३.१ • ऊर्णाम्रदसं त्वा स्तृणामि स्वासस्थां देवेभ्यः
+    <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#805713">
+      *शतपथ ब्राह्मणम्* १.३.३: "यज्ञो वै प्रस्तरः... ब्राह्मे मण्डले सादयति यजमानस्य प्रतिष्ठायाः"
     </text>
   </g>
-
-  <!-- Top Badges -->
-  <g transform="translate(100, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      कुश-परिस्तरण
-    </text>
-  </g>
-  <g transform="translate(740, 100)">
-    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
-    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
-      यजमान प्रस्तर
-    </text>
-  </g>
-
 </svg>
