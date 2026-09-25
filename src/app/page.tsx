@@ -10,6 +10,7 @@ export default function MuseumHome() {
 
   const categories = [
     { id: 'all', label: 'All Yantras (सभी यन्त्र)' },
+    { id: 'ganesha', label: 'Ganesha & Vighnaharta (गणेश एवं विघ्नहर्ता)' },
     { id: 'dashamahavidya', label: 'Dasha Mahavidya (दश महाविद्या)' },
     { id: 'navagraha', label: 'Navagraha & Magic Squares (नवग्रह व जादुई वर्ग)' },
     { id: 'shiva', label: 'Shiva & Bhairava (शिव, भैरव व मृत्युंजय)' },
@@ -28,7 +29,9 @@ export default function MuseumHome() {
     citation: data.citations[0]?.sourceScripture || 'Shastric Scripture',
     rulingPlanet: data.jyotish.rulingPlanet,
     category:
-      data.taxonomyCategory === 'dashamahavidya'
+      data.taxonomyCategory === 'ganesha' || data.id.includes('ganesh') || data.id.includes('ganapati')
+        ? 'ganesha'
+        : data.taxonomyCategory === 'dashamahavidya'
         ? 'dashamahavidya'
         : data.taxonomyCategory === 'navagraha' || data.id.includes('surya') || data.id.includes('graha')
         ? 'navagraha'

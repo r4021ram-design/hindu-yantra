@@ -1500,6 +1500,127 @@ export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
     evidenceTier: 'canonical',
     confidenceLevel: 'High',
     relatedYantras: ['sanjeevani_mahamrityunjaya_yantra', 'sri_yantra', 'vastu_yantra']
+  },
+
+  {
+    id: 'maha_ganapati_yantra',
+    names: {
+      sa: 'श्री महागणपति यन्त्रम्',
+      iast: 'Mahāganapati Yantram',
+      hi: 'महागणपति यन्त्र',
+      en: 'Maha Ganapati Yantra (Supreme Sovereign of Siddhi & Wealth)',
+      gu: 'મહાગણપતિ યંત્ર'
+    },
+    deity: 'Lord Maha Ganapati with Vallabha Devi',
+    mantra: 'Om Shreem Hreem Kleem Glaum Gam Ganapataye Vara Varada Sarvajanam Me Vashamanaya Swaha',
+    geometrySpec: {
+      primaryShape: '16 Kalas Lotus, Ashta-Vinayaka Lotus, Shatkona Hexagram, Central Triangle & Bindu',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Removal of all planetary and karmic obstacles, unprecedented business expansion, wisdom, intellect, and all-round spiritual and material mastery.',
+    historicalPeriod: 'Agamic & Tantric / Sharada Tilakam & Mantra Mahodadhi',
+    scripturalCitation: {
+      scripture: 'Sharada Tilakam',
+      verse: 'Patala 13, Verses 1-3',
+      sanskritText: 'हस्तीन्द्राननमिन्दुचूड़मरुणच्छायं त्रिनेत्रं रसादाश्लिष्टं प्रियया सपद्मकरया स्वाङ्कस्थया संततम्॥',
+      translation: 'We meditate on Lord Maha Ganapati, radiant like the rising crimson sun, three-eyed, holding His consort Vallabha, adorned with weapons and the urn of nectar.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sri_yantra', 'kanakadhara_yantra', 'ashta_lakshmi_yantra', 'ganesh_yantra']
+  },
+  {
+    id: 'sankata_nashana_ganesha_yantra',
+    names: {
+      sa: 'श्री संकटनाशन गणेश यन्त्रम्',
+      iast: 'Saṅkaṭanāśana Gaṇeśa Yantram',
+      hi: 'संकटनाशन गणेश यन्त्र',
+      en: 'Sankata Nashana Ganesha Yantra (Deliverance from All Calamities)',
+      gu: 'સંકટનાશન ગણેશ યંત્ર'
+    },
+    deity: 'Lord Sankata Nashana Ganesha (12 Names of Ganesha)',
+    mantra: 'Om Gam Ganapataye Namaha / Om Sankatanashanaya Namaha',
+    geometrySpec: {
+      primaryShape: '12 Divine Names Lotus, 8 Direction Shield Lotus, Solar Ray Radiance, Inverted Triangle & Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Instant relief from suffocating debts, severe court/legal battles, chronic planetary curses (Sade Sati, Rahu-Ketu), and critical misfortunes.',
+    historicalPeriod: 'Puranic / Narada Purana (Sankata Nashana Ganesha Stotram)',
+    scripturalCitation: {
+      scripture: 'Narada Purana',
+      verse: 'Sankata Nashana Ganesha Stotra, Verses 1-3',
+      sanskritText: 'प्रणम्य शिरसा देवं गौरीपुत्रं विनायकम्। भक्तावासं स्मरेन्नित्यमायुःकामार्थसिद्धये॥',
+      translation: 'Bowing with revered head to Lord Vinayaka, let the devotee contemplate Him constantly for longevity, purpose, and total liberation from calamities.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['maha_ganapati_yantra', 'durga_bisa_yantra', 'sanjeevani_mahamrityunjaya_yantra', 'ganesh_yantra']
+  },
+  {
+    id: 'ucchishta_ganapati_yantra',
+    names: {
+      sa: 'श्री उच्छिष्ट गणपति यन्त्रम्',
+      iast: 'Ucchiṣṭa Gaṇapati Yantram',
+      hi: 'उच्छिष्ट गणपति यन्त्र',
+      en: 'Ucchishta Ganapati Yantra (Rapid Manifestation & Adversity Annihilation)',
+      gu: 'ઉચ્છિષ્ટ ગણપતિ યંત્ર'
+    },
+    deity: 'Lord Ucchishta Ganapati with Nila Saraswati',
+    mantra: 'Om Hastipishachilikhe Swaha / Om Gam Goom Ucchishtaganapataye Namaha',
+    geometrySpec: {
+      primaryShape: '8 Tantric Petals Lotus, Hexagram, Guhya Triangle with Hastipishachi Inscription & Core Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Swift accomplishment of impossible tasks, destruction of hidden enemy conspiracies, victory in legal battles, and immediate eradication of chronic penury.',
+    historicalPeriod: 'Tantric / Rudrayamala Tantra & Meru Tantra',
+    scripturalCitation: {
+      scripture: 'Rudrayamala Tantra',
+      verse: 'Ucchishta Ganapati Kalpa, Patala 18',
+      sanskritText: 'चतुर्भुजं रक्ततनुं त्रिनेत्रं पाशाङ्कुशौ मोदकपात्रदन्तौ। कराम्बुजैर्धारयन्तं गणेशं ध्यायेत्प्रसन्नं सकलार्थसिद्धये॥',
+      translation: 'Meditation on the crimson four-armed Lord Ucchishta Ganapati holding noose, goad, sweets, and broken tusk yields instantaneous fulfillment of all hidden aims.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['maha_ganapati_yantra', 'bagalamukhi_yantra', 'pratyangira_yantra', 'swarna_akarshana_bhairava_yantra']
+  },
+  {
+    id: 'haridra_ganesha_yantra',
+    names: {
+      sa: 'श्री हरिद्रा गणेश यन्त्रम्',
+      iast: 'Haridrā Gaṇeśa Yantram',
+      hi: 'हरिद्रा गणेश यन्त्र',
+      en: 'Haridra Ganesha Yantra (Turmeric Lord of Auspiciousness & Stambhana)',
+      gu: 'હરિદ્રા ગણેશ યંત્ર'
+    },
+    deity: 'Lord Haridra Ganapati (Golden Yellow Turmeric Form)',
+    mantra: 'Om Hoom Gam Glaum Haridraganapataye Vara Varada Sarvajanahridayam Stambhaya Stambhaya Swaha',
+    geometrySpec: {
+      primaryShape: '8-Petal Golden Lotus, Shatkona Hexagram, Stambhana Square Altar & Radiant Turmeric Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Dispelling delays in marriage, blessing with stable wealth and gold, stambhana of hostile speech/envy, and strengthening favorable Jupiter (Guru) influences.',
+    historicalPeriod: 'Agamic / Mantra Mahodadhi & Dakshinamurti Samhita',
+    scripturalCitation: {
+      scripture: 'Mantra Mahodadhi',
+      verse: 'Taranga 2, Verses 35-38',
+      sanskritText: 'हरिद्राभं चतुर्बाहुं पाशाङ्कुशधरं वरम्। मोदकं दन्तयुक्तं च पीतवस्त्रविभूषितम्॥',
+      translation: 'Meditating on the golden-turmeric hued, four-armed Lord Haridra Ganapati adorned with radiant yellow garments, the seeker attains all auspicious fruits.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['maha_ganapati_yantra', 'brihaspati_yantra', 'vaibhav_lakshmi_yantra', 'saraswati_yantra']
   }
 
 ];

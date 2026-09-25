@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="bronzeLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A2508" />
+      <stop offset="50%" stop-color="#2D1505" />
+      <stop offset="100%" stop-color="#5B2E0B" />
+    </linearGradient>
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="85%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCDB3" />
+    </radialGradient>
+    <radialGradient id="ganeshaGoldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#B45309" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="haridraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EAB308" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#CA8A04" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#854D0E" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="tantricCrimsonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#991B1B" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#450A0A" stop-opacity="0" />
+    </radialGradient>
+    <filter id="sacredShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1A0E05" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#sacredBg)" />
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+  
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="415" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="400" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="385" stroke-width="2.4" />
+  </g>
+
+  <!-- 3. Ashta-Dala Ogee Lotus Petals (अष्टदल पद्म - गुह्य तान्त्रिक शक्ति मण्डल) -->
+  <g id="ashta_dala" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none">
+    <path d="M 408.16 278.27 C 392.10 214.46, 466.53 160.14, 500.00 115.00 C 533.47 160.14, 607.90 214.46, 591.84 278.27" />
+    <path d="M 591.84 278.27 C 625.61 221.79, 716.65 236.02, 772.24 227.76 C 763.98 283.35, 778.21 374.39, 721.73 408.16" />
+    <path d="M 721.73 408.16 C 785.54 392.10, 839.86 466.53, 885.00 500.00 C 839.86 533.47, 785.54 607.90, 721.73 591.84" />
+    <path d="M 721.73 591.84 C 778.21 625.61, 763.98 716.65, 772.24 772.24 C 716.65 763.98, 625.61 778.21, 591.84 721.73" />
+    <path d="M 591.84 721.73 C 607.90 785.54, 533.47 839.86, 500.00 885.00 C 466.53 839.86, 392.10 785.54, 408.16 721.73" />
+    <path d="M 408.16 721.73 C 374.39 778.21, 283.35 763.98, 227.76 772.24 C 236.02 716.65, 221.79 625.61, 278.27 591.84" />
+    <path d="M 278.27 591.84 C 214.46 607.90, 160.14 533.47, 115.00 500.00 C 160.14 466.53, 214.46 392.10, 278.27 408.16" />
+    <path d="M 278.27 408.16 C 221.79 374.39, 236.02 283.35, 227.76 227.76 C 283.35 236.02, 374.39 221.79, 408.16 278.27" />
+    <path d="M 500.00 260.00 L 500.00 115.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 669.71 330.29 L 772.24 227.76" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 740.00 500.00 L 885.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 669.71 669.71 L 772.24 772.24" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 500.00 740.00 L 500.00 885.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 330.29 669.71 L 227.76 772.24" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 260.00 500.00 L 115.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 330.29 330.29 L 227.76 227.76" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+  </g>
+
+  <!-- 8 Petal Tantric Inscriptions -->
+  <g id="petal_tantric_seeds" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="18" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">
+    <text x="500.0" y="185.0">हस्ति</text>
+    <text x="722.7" y="277.3">पिशाचि</text>
+    <text x="815.0" y="500.0">लिखे</text>
+    <text x="722.7" y="722.7">स्वाहा</text>
+    <text x="500.0" y="815.0">गूं</text>
+    <text x="277.3" y="722.7">ग्लौं</text>
+    <text x="185.0" y="500.0">क्लीं</text>
+    <text x="277.3" y="277.3">हुं</text>
+  </g>
+
+  <!-- Intermediate Girdles -->
+  <circle cx="500" cy="500" r="238" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+  <circle cx="500" cy="500" r="226" stroke="url(#bronzeMain)" stroke-width="1.6" fill="none" />
+
+  <!-- 4. Central Tantric Hexagram (उच्छिष्ट गुह्य षट्कोण) -->
+  <g id="shatkona" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none">
+    <polygon points="500.0,275.0 694.9,612.5 305.1,612.5" />
+    <polygon points="500.0,725.0 305.1,387.5 694.9,387.5" />
+  </g>
+
+  <!-- Concentric Inner Circle -->
+  <circle cx="500" cy="500" r="115" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none" />
+  <circle cx="500" cy="500" r="102" stroke="url(#bronzeMain)" stroke-width="1.4" stroke-dasharray="4,3" fill="none" />
+
+  <!-- Central Inverted Tantric Triangle (अधोमुख त्रिकोण - इच्छा, ज्ञान, क्रिया व शीघ्र सिद्धि) -->
+  <polygon points="500,588 422,456 578,456" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" />
+
+  <!-- Guhya Mantra Inscription surrounding Bindu -->
+  <g font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="13" fill="#1A0E05" text-anchor="middle">
+    <text x="500" y="445">हस्तिपिशाचिलिखे</text>
+    <text x="430" y="525">स्वाहा</text>
+    <text x="570" y="525">सिद्धये</text>
+  </g>
+
+  <!-- 5. Bindu with Crimson & Golden Tantric Aura (गुह्य महाबिन्दु) -->
+  <g id="bindu_zone" filter="url(#sacredShadow)">
+    <circle cx="500" cy="500" r="44" fill="url(#tantricCrimsonGlow)" />
+    <circle cx="500" cy="500" r="8.5" fill="#1A0E05" />
+    <circle cx="500" cy="500" r="3.5" fill="#FBF8F1" />
+    <text x="500" y="492" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="19" fill="#FBF8F1" text-anchor="middle">गूं</text>
+    <text x="500" y="534" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="20" fill="#1A0E05" text-anchor="middle">गं</text>
+  </g>
+</svg>
