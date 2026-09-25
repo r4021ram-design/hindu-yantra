@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="bronzeLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A2508" />
+      <stop offset="50%" stop-color="#2D1505" />
+      <stop offset="100%" stop-color="#5B2E0B" />
+    </linearGradient>
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="85%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCDB3" />
+    </radialGradient>
+    <radialGradient id="prithviAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#15803D" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#A16207" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="jalaAmritaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.30" />
+      <stop offset="55%" stop-color="#0369A1" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#075985" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="digpalaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B45309" stop-opacity="0.30" />
+      <stop offset="60%" stop-color="#78350F" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+    <filter id="sacredShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1A0E05" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#sacredBg)" />
+  <circle cx="500" cy="500" r="480" fill="url(#jalaAmritaAura)" />
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+  
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="415" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="400" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="385" stroke-width="2.4" />
+  </g>
+
+  <!-- 3. Dvadasha-Dala Lotus Petals (द्वादशदल पद्म - अमृत जल मण्डल) -->
+  <g id="dvadasha_dala" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none">
+    <path d="M 431.41 244.03 C 423.91 190.21, 477.17 151.75, 500.00 115.00 C 522.83 151.75, 576.09 190.21, 568.59 244.03" />
+    <path d="M 568.59 244.03 C 589.00 193.67, 654.36 186.99, 692.50 166.58 C 693.89 209.82, 720.79 269.76, 687.38 312.62" />
+    <path d="M 687.38 312.62 C 730.24 279.21, 790.18 306.11, 833.42 307.50 C 813.01 345.64, 806.33 411.00, 755.97 431.41" />
+    <path d="M 755.97 431.41 C 809.79 423.91, 848.25 477.17, 885.00 500.00 C 848.25 522.83, 809.79 576.09, 755.97 568.59" />
+    <path d="M 755.97 568.59 C 806.33 589.00, 813.01 654.36, 833.42 692.50 C 790.18 693.89, 730.24 720.79, 687.38 687.38" />
+    <path d="M 687.38 687.38 C 720.79 730.24, 693.89 790.18, 692.50 833.42 C 654.36 813.01, 589.00 806.33, 568.59 755.97" />
+    <path d="M 568.59 755.97 C 576.09 809.79, 522.83 848.25, 500.00 885.00 C 477.17 848.25, 423.91 809.79, 431.41 755.97" />
+    <path d="M 431.41 755.97 C 411.00 806.33, 345.64 813.01, 307.50 833.42 C 306.11 790.18, 279.21 730.24, 312.62 687.38" />
+    <path d="M 312.62 687.38 C 269.76 720.79, 209.82 693.89, 166.58 692.50 C 186.99 654.36, 193.67 589.00, 244.03 568.59" />
+    <path d="M 244.03 568.59 C 190.21 576.09, 151.75 522.83, 115.00 500.00 C 151.75 477.17, 190.21 423.91, 244.03 431.41" />
+    <path d="M 244.03 431.41 C 193.67 411.00, 186.99 345.64, 166.58 307.50 C 209.82 306.11, 269.76 279.21, 312.62 312.62" />
+    <path d="M 312.62 312.62 C 279.21 269.76, 306.11 209.82, 307.50 166.58 C 345.64 186.99, 411.00 193.67, 431.41 244.03" />
+    <path d="M 500.00 235.00 L 500.00 115.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 632.50 270.50 L 692.50 166.58" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 729.50 367.50 L 833.42 307.50" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 765.00 500.00 L 885.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 729.50 632.50 L 833.42 692.50" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 632.50 729.50 L 692.50 833.42" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 500.00 765.00 L 500.00 885.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 367.50 729.50 L 307.50 833.42" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 270.50 632.50 L 166.58 692.50" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 235.00 500.00 L 115.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 270.50 367.50 L 166.58 307.50" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 367.50 270.50 L 307.50 166.58" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.6" />
+  </g>
+
+  <!-- 12 Petal Inscriptions -->
+  <g id="matsya_seeds" font-family="'Noto Sans Devanagari', serif" font-weight="800" font-size="14.5" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">
+    <text x="500.0" y="175.0">ॐ</text>
+    <text x="662.5" y="218.5">मत्स्याय</text>
+    <text x="781.5" y="337.5">नमः</text>
+    <text x="825.0" y="500.0">क्लीं</text>
+    <text x="781.5" y="662.5">वरुणाय</text>
+    <text x="662.5" y="781.5">अमृताय</text>
+    <text x="500.0" y="825.0">शुद्धये</text>
+    <text x="337.5" y="781.5">शान्तये</text>
+    <text x="218.5" y="662.5">पुष्टये</text>
+    <text x="175.0" y="500.0">तुष्टये</text>
+    <text x="218.5" y="337.5">स्वाहा</text>
+    <text x="337.5" y="218.5">ह्रीं</text>
+  </g>
+
+  <!-- Intermediate Girdles -->
+  <circle cx="500" cy="500" r="265" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+  <circle cx="500" cy="500" r="255" stroke="url(#bronzeMain)" stroke-width="1.6" fill="none" />
+
+  <!-- 4. Sacred Twin Interlocking Fish Spirals (पवित्र मत्स्य युगल चक्र) -->
+  <g id="twin_fish_currents" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none">
+    <!-- Fish 1 (Ascending Northern Current) -->
+    <path d="M 400 500 C 400 420, 460 360, 530 370 C 600 380, 620 440, 580 490 C 550 530, 480 520, 470 470" />
+    <path d="M 530 370 C 560 340, 580 320, 600 330 C 590 350, 570 370, 550 380" stroke-width="2.0" /> <!-- Tail -->
+    <circle cx="430" cy="460" r="3.5" fill="#1A0E05" /> <!-- Eye -->
+
+    <!-- Fish 2 (Descending Southern Current) -->
+    <path d="M 600 500 C 600 580, 540 640, 470 630 C 400 620, 380 560, 420 510 C 450 470, 520 480, 530 530" />
+    <path d="M 470 630 C 440 660, 420 680, 400 670 C 410 650, 430 630, 450 620" stroke-width="2.0" /> <!-- Tail -->
+    <circle cx="570" cy="540" r="3.5" fill="#1A0E05" /> <!-- Eye -->
+  </g>
+
+  <!-- Concentric Inner Circle -->
+  <circle cx="500" cy="500" r="145" stroke="url(#bronzeMain)" stroke-width="2.2" stroke-dasharray="4,3" fill="none" />
+  <circle cx="500" cy="500" r="75" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+
+  <!-- 5. Bindu with Oceanic Amrita Radiance (मत्स्य महाबिन्दु) -->
+  <g id="bindu_zone" filter="url(#sacredShadow)">
+    <circle cx="500" cy="500" r="42" fill="url(#jalaAmritaAura)" />
+    <circle cx="500" cy="500" r="8.5" fill="#1A0E05" />
+    <circle cx="500" cy="500" r="3.5" fill="#F4EEE0" />
+    <text x="500" y="475" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="20" fill="#1A0E05" text-anchor="middle">क्लीं</text>
+    <text x="500" y="528" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="18" fill="#1A0E05" text-anchor="middle">मत्स्य</text>
+  </g>
+</svg>

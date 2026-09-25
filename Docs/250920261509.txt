@@ -1,0 +1,1110 @@
+# HINDU YANTRA — FRONTEND PRODUCTION UPGRADE
+
+## Master Implementation & Refactoring Prompt
+
+
+
+You are working on an existing production-oriented **Hindu Yantra app**.
+
+Your task is to perform a **Frontend Production Upgrade** focused ONLY on:
+
+1. SVG Asset Registry & Asset Management
+2. Frontend SVG Rendering & Responsive Presentation
+3. Yantra Library UX
+4. Performance Optimization
+5. Frontend Code Cleanup & Consistency
+
+---
+
+# 🚨 ABSOLUTE RULE — DO NOT TOUCH YANTRA GEOMETRY
+
+The existing Yantra SVG artwork and geometry have already been **manually verified by the project owner**.
+
+Treat the existing verified geometry as AUTHORITATIVE.
+
+### DO NOT modify:
+
+* SVG path geometry
+* SVG coordinates
+* SVG polygon/path points
+* Sri Yantra geometry
+* Avarana geometry
+* Bindu position
+* Triangle positions
+* Lotus geometry
+* Bhupura geometry
+* `src/lib/yantras/sri-yantra-coordinates.ts`
+* `src/lib/yantras/sri-yantra-vector-dissections.ts`
+* `SRI_YANTRA_VECTOR_DISSECTIONS`
+* geometric algorithms
+* geometric formulas
+* construction mathematics
+* SVG artwork
+* SVG path data
+* manually verified SVG files
+
+### DO NOT attempt:
+
+* SVG-vs-coordinate verification
+* mathematical reconstruction of Sri Yantra
+* geometry correction
+* path optimization that changes visual geometry
+* replacing existing Yantra artwork with newly generated geometry
+* recalculating Avarana coordinates
+
+The existing geometry is NOT part of this task.
+
+If you discover something that appears to be a geometry issue:
+
+> DO NOT FIX IT.
+
+Document it separately as:
+
+`GEOMETRY — OUT OF SCOPE`
+
+and continue with the frontend task.
+
+---
+
+# PRIMARY OBJECTIVE
+
+Transform the existing frontend into a clean, stable, responsive and performant **production-quality Yantra viewing platform** without changing the underlying Yantra mathematics or verified artwork.
+
+The result should feel like a polished:
+
+**Vedic Digital Yantra Library + Sacred Geometry Viewer + Research Interface**
+
+while preserving the existing visual identity:
+
+* Vedic
+* traditional
+* sacred
+* premium
+* parchment / sandalwood
+* bronze / gold
+* restrained use of color
+* no neon gaming aesthetic
+* no unnecessary redesign
+
+---
+
+# PHASE 0 — FIRST AUDIT
+
+Before modifying code:
+
+1. Inspect the complete repository structure.
+2. Inspect:
+
+   * `package.json`
+   * Next.js configuration
+   * TypeScript configuration
+   * Tailwind configuration
+   * global CSS
+   * app routes
+   * Yantra components
+   * asset folders
+   * Yantra data
+   * SVG loading logic
+3. Identify:
+
+   * duplicate assets
+   * duplicate asset paths
+   * fallback chains
+   * unnecessary state
+   * unused imports
+   * dead frontend code
+   * legacy components
+   * repeated UI logic
+   * hard-coded dimensions
+   * rendering bottlenecks
+   * unnecessary re-renders
+4. Create an internal implementation plan before editing.
+
+Do NOT blindly refactor.
+
+Understand the existing architecture first.
+
+---
+
+# PHASE 1 — SVG ASSET REGISTRY
+
+## Goal
+
+Create a single reliable source of truth for Yantra SVG assets.
+
+Current application contains multiple SVG folders and several root-level duplicate/legacy SVG files.
+
+Do NOT delete anything immediately.
+
+First classify assets.
+
+Create a canonical registry such as:
+
+`src/lib/yantras/yantra-assets.ts`
+
+or another appropriate architecture if the existing project has a better location.
+
+The registry should provide:
+
+```ts
+type YantraAsset = {
+  id: string;
+  svgPath: string;
+  category: string;
+  aliases?: string[];
+  fallbackPaths?: string[];
+};
+```
+
+Use the existing project taxonomy/data rather than creating duplicate metadata.
+
+---
+
+## Registry requirements
+
+The application should be able to resolve:
+
+```ts
+getYantraAsset(yantraId)
+```
+
+and receive the canonical SVG asset.
+
+Avoid scattered logic such as:
+
+```ts
+/yantras/${id}.svg
+/yantras/category/${id}.svg
+/yantras/${id.replace(...)}.svg
+...
+```
+
+inside UI components.
+
+Move asset resolution into one centralized layer.
+
+---
+
+## Canonical asset rules
+
+For every Yantra:
+
+1. Identify the actual verified SVG.
+2. Assign one canonical path.
+3. Preserve aliases only when necessary for backward compatibility.
+4. Do not change SVG content.
+5. Do not regenerate SVGs.
+6. Do not alter SVG geometry.
+
+---
+
+## Duplicate assets
+
+Find duplicate or suspicious files such as:
+
+* `Shriyantra.svg`
+* `SriYantra.svg`
+* `sri_yantra.svg`
+* other root-level duplicates
+* category-level duplicates
+
+Do NOT delete them automatically.
+
+First determine whether they are referenced.
+
+If safe:
+
+* migrate references to canonical assets
+* remove obsolete duplicates only when proven unused
+
+If deletion could be risky:
+
+* keep them
+* mark them as legacy
+* ensure the application no longer depends on them
+
+---
+
+# PHASE 2 — FRONTEND SVG RENDERING
+
+## Goal
+
+Make every Yantra render correctly and consistently across:
+
+* desktop
+* laptop
+* tablet
+* mobile
+* fullscreen
+* zoomed view
+
+WITHOUT changing SVG artwork.
+
+---
+
+## Rendering requirements
+
+Audit the main Yantra viewer, especially:
+
+* `src/components/yantras/YantraAltarStage.tsx`
+* `src/app/yantras/page.tsx`
+
+Check:
+
+* width
+* height
+* aspect ratio
+* `viewBox`
+* object-fit
+* overflow
+* clipping
+* flex/grid sizing
+* container sizing
+* mobile breakpoints
+* fullscreen mode
+* zoom behavior
+
+Avoid fixed dimensions that break on smaller screens.
+
+---
+
+## SVG presentation
+
+The SVG should:
+
+* remain visually centered
+* preserve aspect ratio
+* never be unexpectedly cropped
+* never stretch
+* never overflow the viewport
+* remain sharp when scaled
+* work correctly inside the altar/stage
+* work correctly in fullscreen
+
+Use responsive container sizing.
+
+Prefer:
+
+```css
+max-width: 100%;
+height: auto;
+aspect-ratio: 1 / 1;
+```
+
+or equivalent architecture where appropriate.
+
+Do not alter the SVG's internal geometry.
+
+---
+
+# ZOOM
+
+Review the current zoom implementation.
+
+Ensure:
+
+* smooth zoom
+* sensible minimum
+* sensible maximum
+* reset option
+* no accidental page scrolling
+* mobile usability
+* fullscreen compatibility
+
+Do not introduce excessive complexity.
+
+If existing zoom state can be simplified safely, simplify it.
+
+---
+
+# FULLSCREEN
+
+Ensure fullscreen mode:
+
+* uses available viewport
+* centers Yantra
+* preserves aspect ratio
+* has visible close/exit control
+* works on desktop
+* degrades gracefully on mobile
+
+Do not create a separate rendering implementation unless necessary.
+
+Prefer one reusable viewer architecture.
+
+---
+
+# PHASE 3 — YANTRA LIBRARY UX
+
+Primary component:
+
+`src/components/yantras/YantraLibraryDrawer.tsx`
+
+and related logic in:
+
+`src/app/yantras/page.tsx`
+
+---
+
+## Goal
+
+Make the Yantra Library easy to browse without changing the existing underlying data model unnecessarily.
+
+Maintain:
+
+* search
+* category filtering
+* grouped/flat view
+* selected Yantra state
+* asset availability
+
+Improve usability and consistency.
+
+---
+
+# SEARCH
+
+Search should work against:
+
+* Yantra ID
+* Sanskrit name
+* Hindi name
+* English name
+* deity
+* relevant aliases
+
+Search should be:
+
+* case-insensitive
+* whitespace tolerant
+* fast
+* predictable
+
+Avoid unnecessary recalculation on every render.
+
+Use memoization where appropriate.
+
+---
+
+# FILTERS
+
+Review taxonomy/category filtering.
+
+Ensure:
+
+* selected filter is visually obvious
+* no contradictory filters
+* empty states are clear
+* filter state remains stable
+* mobile UI remains usable
+
+Do not create unnecessary filter complexity.
+
+---
+
+# GROUPED / FLAT VIEW
+
+Keep the existing grouped and flat modes.
+
+Improve:
+
+* hierarchy
+* spacing
+* selected state
+* category headers
+* scroll behavior
+* mobile usability
+
+The library should clearly communicate:
+
+**Where am I?**
+
+**Which Yantra is selected?**
+
+**Which category does it belong to?**
+
+---
+
+# SELECTED YANTRA STATE
+
+The selected Yantra should have an unmistakable but tasteful visual state.
+
+Use the existing visual language:
+
+* bronze
+* gold
+* parchment
+* subtle glow
+* sacred/traditional styling
+
+Avoid:
+
+* neon
+* excessive shadows
+* overly bright gradients
+* gaming-style cards
+
+---
+
+# MISSING ASSET STATE
+
+If an asset cannot be resolved:
+
+Do NOT crash.
+
+Display a clean state such as:
+
+> Yantra artwork unavailable
+
+with:
+
+* Yantra name
+* category
+* asset status
+* retry/reload if useful
+
+Do not silently show a wrong Yantra.
+
+---
+
+# LIBRARY PERFORMANCE
+
+The library contains many assets.
+
+Avoid loading every SVG unnecessarily.
+
+Use:
+
+* lazy rendering
+* conditional loading
+* lightweight metadata
+* memoized filtering
+* stable keys
+
+Do not preload all 90+ SVG assets simply because they exist.
+
+---
+
+# PHASE 6 — PERFORMANCE OPTIMIZATION
+
+## Goal
+
+Improve frontend performance without changing application behavior.
+
+---
+
+# SVG LOADING
+
+Audit all SVG loading.
+
+Do not load every Yantra asset at application startup.
+
+Prefer:
+
+```text
+Library metadata
+       ↓
+User selects Yantra
+       ↓
+Resolve canonical asset
+       ↓
+Load SVG
+       ↓
+Render viewer
+```
+
+rather than:
+
+```text
+Application startup
+       ↓
+Load every SVG
+```
+
+---
+
+# LAZY LOADING
+
+Apply lazy loading where appropriate to:
+
+* heavy Yantra components
+* secondary tabs
+* comparison UI
+* knowledge panels
+* non-visible content
+* large SVG assets
+
+Do not lazy-load the primary viewer in a way that causes poor initial UX.
+
+---
+
+# COMPONENT RENDERING
+
+Inspect React state.
+
+Look for:
+
+* unnecessary state
+* derived state stored separately
+* state that causes whole-page rerenders
+* duplicated state
+* unstable callbacks
+* recreated objects
+* recreated arrays
+* unnecessary effects
+
+Use:
+
+* `useMemo`
+* `useCallback`
+* `React.memo`
+
+ONLY where they provide actual value.
+
+Do not add memoization everywhere.
+
+---
+
+# EFFECT AUDIT
+
+Review `useEffect` usage.
+
+Look for:
+
+* effects that can be removed
+* effects used for derived values
+* duplicated effects
+* effects with unstable dependencies
+* unnecessary asset reloads
+* unnecessary event listeners
+
+Prefer simple React data flow.
+
+---
+
+# BUNDLE / IMPORT AUDIT
+
+Check for:
+
+* unnecessarily large imports
+* client-only code imported globally
+* components that can be dynamically imported
+* duplicate utility implementations
+
+Do not introduce unnecessary libraries.
+
+Prefer existing dependencies.
+
+---
+
+# PERFORMANCE MEASUREMENT
+
+Where practical, check:
+
+* initial page load
+* Yantra selection
+* library filtering
+* tab switching
+* fullscreen
+* zoom
+* mobile rendering
+
+Do not claim a performance improvement unless it can be reasonably demonstrated.
+
+---
+
+# PHASE 7 — FRONTEND CODE CLEANUP
+
+## Goal
+
+Clean the frontend without destabilizing the application.
+
+---
+
+# REMOVE DUPLICATION
+
+Identify repeated:
+
+* asset path resolution
+* Yantra lookup
+* category lookup
+* selected-state logic
+* CSS/class combinations
+* UI labels
+* fallback logic
+
+Extract reusable utilities/components where appropriate.
+
+Do not over-engineer.
+
+---
+
+# STATE CLEANUP
+
+Review state in:
+
+`src/app/yantras/page.tsx`
+
+and:
+
+`src/components/yantras/YantraAltarStage.tsx`
+
+Identify state that is:
+
+* duplicated
+* derived
+* obsolete
+* unnecessarily global
+* only needed by a child component
+
+Simplify carefully.
+
+---
+
+# DEAD CODE
+
+Identify:
+
+* unused imports
+* unreachable branches
+* obsolete asset paths
+* old fallback code
+* unused components
+* unused utilities
+* commented-out implementation blocks
+* duplicate constants
+
+Remove only when verified safe.
+
+Do not delete uncertain code merely because it appears unused.
+
+---
+
+# HARD-CODED FALLBACKS
+
+Review hard-coded frontend fallbacks.
+
+Especially:
+
+* asset paths
+* Yantra names
+* category names
+* default selected Yantra
+* fallback artwork
+* UI labels
+
+Move reusable configuration into centralized data where appropriate.
+
+Do not modify authoritative Shastric/Yantra data merely for cosmetic cleanup.
+
+---
+
+# TYPESCRIPT QUALITY
+
+Improve type safety where practical.
+
+Avoid:
+
+```ts
+any
+```
+
+when a real type can be used.
+
+Prefer explicit types for:
+
+* Yantra asset
+* Yantra ID
+* category
+* viewer mode
+* display mode
+* library filter
+* asset loading state
+
+Do not perform a massive unrelated TypeScript migration.
+
+---
+
+# ACCESSIBILITY
+
+As part of frontend cleanup, verify:
+
+* buttons have accessible labels
+* icon-only buttons have `aria-label`
+* keyboard navigation works
+* focus states are visible
+* dialogs/fullscreen controls are accessible
+* search input has a label
+* selectable Yantra items expose selected state
+* images/SVG containers have meaningful accessible labeling where appropriate
+
+Do not add unnecessary ARIA.
+
+Use semantic HTML wherever possible.
+
+---
+
+# RESPONSIVE DESIGN
+
+Test mentally and structurally for:
+
+### Desktop
+
+* wide screen
+* normal laptop
+
+### Tablet
+
+* medium width
+* portrait
+
+### Mobile
+
+* narrow portrait
+* landscape
+
+Pay particular attention to:
+
+* library drawer
+* altar stage
+* tabs
+* zoom controls
+* fullscreen controls
+* search
+* category chips
+* long Sanskrit/Hindi names
+
+Avoid horizontal page overflow.
+
+---
+
+# VISUAL CONSISTENCY
+
+Preserve the existing Vedic visual language.
+
+Preferred visual direction:
+
+* parchment / cream background
+* sandalwood tones
+* dark bronze
+* muted gold
+* subtle sacred accents
+* clean typography
+* strong hierarchy
+* restrained borders
+* subtle shadows
+
+Do NOT redesign the entire application.
+
+Do NOT convert it into:
+
+* neon UI
+* cyberpunk UI
+* gaming UI
+* generic SaaS dashboard
+* excessive glassmorphism
+
+This is a sacred/educational/research-oriented Yantra platform.
+
+---
+
+# IMPORTANT — PRESERVE EXISTING FEATURES
+
+Do not accidentally remove:
+
+* Yantra Library
+* 2D Yantra viewer
+* 3D Meru mode
+* Pure Dissection mode
+* construction mode
+* Avarana interaction
+* Geometry tab
+* Shastric tab
+* Jyotish tab
+* Upasana tab
+* comparison functionality
+* research/export functionality
+* existing URL/query selection behavior
+* existing Yantra taxonomy
+* existing verified assets
+
+The task is an upgrade, not a rewrite.
+
+---
+
+# ROUTING & URL COMPATIBILITY
+
+Preserve existing URLs and query parameters.
+
+Especially:
+
+```text
+/yantras
+/yantras?id=sri_yantra
+```
+
+and other existing Yantra selection URLs.
+
+Do not introduce breaking route changes.
+
+---
+
+# DATA SAFETY
+
+Do not modify the underlying Shastric database unless absolutely required for a frontend type/interface issue.
+
+In particular, do not rewrite:
+
+`src/lib/yantras/shastric-jyotish-database.ts`
+
+just to make the frontend cleaner.
+
+The frontend should adapt to the existing authoritative data.
+
+---
+
+# FILES THAT ARE OFF-LIMITS FOR GEOMETRY
+
+Treat these as protected:
+
+```text
+src/lib/yantras/sri-yantra-coordinates.ts
+src/lib/yantras/sri-yantra-vector-dissections.ts
+```
+
+and all manually verified Yantra SVG artwork.
+
+You may modify code around them for rendering/integration, but NOT their geometric content.
+
+---
+
+# IMPLEMENTATION STRATEGY
+
+Work incrementally.
+
+## Step 1
+
+Audit and document current architecture.
+
+## Step 2
+
+Create centralized SVG Asset Registry.
+
+## Step 3
+
+Migrate existing frontend asset resolution to the registry.
+
+## Step 4
+
+Verify every current Yantra still resolves correctly.
+
+## Step 5
+
+Clean duplicate/fallback asset logic.
+
+## Step 6
+
+Improve responsive SVG rendering.
+
+## Step 7
+
+Improve zoom/fullscreen behavior.
+
+## Step 8
+
+Improve Yantra Library UX.
+
+## Step 9
+
+Optimize loading and React rendering.
+
+## Step 10
+
+Clean frontend code.
+
+## Step 11
+
+Run type/build/lint checks.
+
+## Step 12
+
+Perform regression verification.
+
+---
+
+# REGRESSION CHECKLIST
+
+Before declaring completion, verify:
+
+### Asset Registry
+
+* [ ] Every existing Yantra has a canonical asset
+* [ ] Existing IDs still resolve
+* [ ] No wrong Yantra is displayed
+* [ ] Legacy paths do not unexpectedly break
+* [ ] Missing assets fail gracefully
+
+### Viewer
+
+* [ ] SVG remains centered
+* [ ] SVG maintains aspect ratio
+* [ ] No clipping
+* [ ] No stretching
+* [ ] Desktop works
+* [ ] Mobile works
+* [ ] Zoom works
+* [ ] Fullscreen works
+
+### Library
+
+* [ ] Search works
+* [ ] Category filters work
+* [ ] Grouped view works
+* [ ] Flat view works
+* [ ] Selection works
+* [ ] Missing asset state works
+* [ ] Mobile library works
+
+### Performance
+
+* [ ] All SVGs are not loaded at startup unnecessarily
+* [ ] Heavy secondary components are lazy where appropriate
+* [ ] No obvious render loops
+* [ ] No unnecessary asset reloads
+* [ ] Search/filtering remains responsive
+
+### Code
+
+* [ ] No unnecessary duplicate asset logic
+* [ ] No unused imports
+* [ ] No obvious dead frontend code
+* [ ] No accidental geometry modifications
+* [ ] TypeScript checks
+* [ ] Build succeeds
+* [ ] Existing routes work
+
+---
+
+# VALIDATION COMMANDS
+
+Use the project's existing package manager and scripts.
+
+Run appropriate checks such as:
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
+
+Only run commands that actually exist in `package.json`.
+
+Do not invent scripts.
+
+If a check fails:
+
+1. determine whether the failure is pre-existing or introduced by your changes
+2. fix issues introduced by your changes
+3. do not hide errors
+4. do not disable lint/type checking merely to make the build pass
+
+---
+
+# CHANGE DISCIPLINE
+
+Keep changes focused.
+
+Do NOT:
+
+* rewrite the application
+* migrate frameworks
+* replace Next.js
+* replace React
+* replace Tailwind
+* replace the SVG system
+* replace the Yantra geometry engine
+* change mathematical calculations
+* redesign the entire UI
+* introduce unnecessary dependencies
+
+Prefer small, maintainable changes.
+
+---
+
+# FINAL REPORT
+
+At the end provide a concise implementation report containing:
+
+## 1. Asset Registry
+
+* files created/modified
+* canonical asset strategy
+* duplicate assets identified
+* legacy assets retained/removed
+
+## 2. Rendering
+
+* responsive fixes
+* zoom/fullscreen fixes
+* overflow/clipping fixes
+
+## 3. Library
+
+* search improvements
+* filter improvements
+* selection improvements
+* missing asset handling
+
+## 4. Performance
+
+* lazy-loading changes
+* rendering optimization
+* asset-loading optimization
+
+## 5. Code Cleanup
+
+* duplicate logic removed
+* unused code removed
+* state simplified
+* type improvements
+
+## 6. Validation
+
+Report:
+
+```text
+Lint: PASS/FAIL
+TypeScript: PASS/FAIL
+Build: PASS/FAIL
+Regression: PASS/FAIL
+```
+
+## 7. Protected Geometry Confirmation
+
+Explicitly state:
+
+> "No Yantra geometry, SVG path data, Sri Yantra coordinates, or verified geometric calculations were modified."
+
+If any geometry-related file was changed accidentally, revert that change before completion.
+
+---
+
+# FINAL PRINCIPLE
+
+The goal is:
+
+**Better frontend engineering without changing the sacred geometry.**
+
+Treat the existing Yantra artwork and geometry as immutable source material.
+
+Improve everything around it:
+
+**Assets → Rendering → Library → Performance → Code Quality**
+
+while preserving the existing:
+
+**Yantra → Geometry → Shastric Data → Calculations → User Experience**
+
+Do not confuse frontend modernization with geometry modification.
+
+Make the application cleaner, faster, more reliable, more responsive, and production-ready — while keeping the existing verified Yantra system intact.

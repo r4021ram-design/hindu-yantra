@@ -1621,6 +1621,127 @@ export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
     evidenceTier: 'canonical',
     confidenceLevel: 'High',
     relatedYantras: ['maha_ganapati_yantra', 'brihaspati_yantra', 'vaibhav_lakshmi_yantra', 'saraswati_yantra']
+  },
+
+  {
+    id: 'vastu_dosha_nivarana_yantra',
+    names: {
+      sa: 'श्री वास्तुदोषनिवारण यन्त्रम्',
+      iast: 'Vāstudōṣanivāraṇa Yantram',
+      hi: 'वास्तु दोष निवारण यन्त्र',
+      en: 'Vastu Dosha Nivarana Yantra (Cosmic Directional Harmonizer)',
+      gu: 'વાસ્તુ દોષ નિવારણ યંત્ર'
+    },
+    deity: 'Lord Vastu Purusha and the 45 Celestial Mandala Devas',
+    mantra: 'Om Vastoshpate Pratijanihyasman Svaavesho Anameevo Bhava Nah Swaha',
+    geometrySpec: {
+      primaryShape: '8-Petal Directional Lotus, 9-Pada Vastu Purusha Mandala Grid, Concentric Citadel & Brahma Sthana Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Neutralizing structural architectural flaws, directional imbalances, geopathic stress, and restoring universal harmony without demolition.',
+    historicalPeriod: 'Puranic & Architectural / Vishvakarma Prakasha & Samarangana Sutradhara',
+    scripturalCitation: {
+      scripture: 'Vishvakarma Prakasha',
+      verse: 'Chapter 1, Verses 3-5',
+      sanskritText: 'वास्तोष्पते प्रतिजानीह्यस्मान् त्स्वावेशो अनमीवो भवा नः। यत् त्वेमहे प्रति तन्नो जुषस्व शं नो भव द्विपदे शं चतुष्पदे॥',
+      translation: 'O Lord of Dwellings! Recognize and be gracious unto us. Grant us refuge devoid of ailments. Bestow blessings on our kin and cattle.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['dikpala_ashtadigbandhana_yantra', 'bhoomi_kurma_yantra', 'matsya_yantra', 'sri_yantra']
+  },
+  {
+    id: 'dikpala_ashtadigbandhana_yantra',
+    names: {
+      sa: 'श्री दिक्पाल अष्टदिग्बन्धन यन्त्रम्',
+      iast: 'Dikpāla Aṣṭadigbandhana Yantram',
+      hi: 'दिक्पाल अष्टदिग्बन्धन यन्त्र',
+      en: 'Dikpala Ashtadigbandhana Yantra (Shield of the 8 Directional Regents)',
+      gu: 'દિક્પાલ અષ્ટદિગ્બંધન યંત્ર'
+    },
+    deity: 'The Eight Celestial Regents (Indra, Agni, Yama, Nirriti, Varuna, Vayu, Kubera, Ishana)',
+    mantra: 'Om Indraya Namaha Om Agnaye Namaha ... Om Digbandhanaya Swaha',
+    geometrySpec: {
+      primaryShape: '8-Petal Regents Lotus, 8-Pointed Star (Octagram), 8 Radial Tridents & Central Protection Core',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Fortifying the perimeter of properties against negative external forces, road hits (Vithi Shula), cross-boundary curses, burglary, and envy.',
+    historicalPeriod: 'Puranic & Tantric / Agni Purana & Narada Purana',
+    scripturalCitation: {
+      scripture: 'Agni Purana',
+      verse: 'Chapter 51, Verses 1-4',
+      sanskritText: 'पूर्वे चेन्द्रस्तथा वह्निर्दक्षिणे यम एव च। नैर्ऋत्यां निरृतिः पश्चाद्वरुणो मारुतो दिशि॥',
+      translation: 'In the East resides Indra, in South-East Agni, South Yama, South-West Nirriti, West Varuna, North-West Vayu, North Kubera, North-East Ishana. Stationed thus, they protect the cosmos.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vastu_dosha_nivarana_yantra', 'sudarshana_chakra_yantra', 'durga_bisa_yantra', 'pratyangira_yantra']
+  },
+  {
+    id: 'bhoomi_kurma_yantra',
+    names: {
+      sa: 'श्री भूमिकूर्म यन्त्रम्',
+      iast: 'Bhūmi Kūrma Yantram',
+      hi: 'भूमि कूर्म यन्त्र',
+      en: 'Bhoomi Kurma Yantra (Cosmic Foundation & Land Consecration Mandalam)',
+      gu: 'ભૂમિ કૂર્મ યંત્ર'
+    },
+    deity: 'Lord Kurma (Cosmic Tortoise Avatar) and Goddess Bhoomi Devi',
+    mantra: 'Om Hreem Koormaya Namaha / Om Dharanidharaya Namaha / Om Lam Prithivyai Namaha',
+    geometrySpec: {
+      primaryShape: '8-Petal Terrestrial Lotus, Hexagonal Kurma Carapace Shield, Prithvi Square & Golden Core Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Bhoomi Poojan rites, foundation stone laying, nullifying subsoil impurities (Shalya Dosha), resolving land litigation, and guaranteeing seismic & structural durability.',
+    historicalPeriod: 'Agamic & Architectural / Mayamatam & Varahi Tantra',
+    scripturalCitation: {
+      scripture: 'Mayamatam',
+      verse: 'Chapter 12, Verses 15-18',
+      sanskritText: 'कूर्माकारेण संस्थाप्य धारिणीं धरणीं पराम्। यत्र कूर्मासनं सम्यक् तत्र वास्तोः सुखं भवेत्॥',
+      translation: 'Establishing the supreme earth in the likeness of the cosmic tortoise, wherever the Kurma seat is consecrated, everlasting joy prevails in that dwelling.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vastu_dosha_nivarana_yantra', 'matsya_yantra', 'brihaspati_yantra', 'shani_yantra']
+  },
+  {
+    id: 'matsya_yantra',
+    names: {
+      sa: 'श्री मत्स्य यन्त्रम्',
+      iast: 'Matsya Yantram',
+      hi: 'मत्स्य यन्त्र',
+      en: 'Matsya Yantra (Sacred Water-Element & North-East Vastu Cleanser)',
+      gu: 'મત્સ્ય યંત્ર'
+    },
+    deity: 'Lord Matsya Avatar (Veda-Rescuing Golden Fish)',
+    mantra: 'Om Matsyaya Namaha / Om Kleem Matsyaroopaya Namaha',
+    geometrySpec: {
+      primaryShape: '12-Petal Aquatic Lotus, Interlocking Twin Fish Spirals, Inner Sanctuary & Amrita Blue Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Rectifying heavy afflictions in the North-East (Ishana), purifying faulty water sources, alleviating mental depression, and promoting fluid wealth.',
+    historicalPeriod: 'Puranic / Matsya Purana & Vishvakarma Vastu Shastra',
+    scripturalCitation: {
+      scripture: 'Matsya Purana',
+      verse: 'Chapter 1, Verses 10-13',
+      sanskritText: 'शृङ्गिणं काञ्चनं दिव्यं महामत्स्यस्वरूपिणम्। वेदानां रक्षणार्थाय नौकारूपधरो हरिः॥',
+      translation: 'Radiant as gold with celestial horn, Lord Hari assumed the form of the Great Fish to rescue the Vedas. By His contemplation, all Vastu blemishes dissolve.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vastu_dosha_nivarana_yantra', 'chandra_yantra', 'saraswati_yantra', 'bhoomi_kurma_yantra']
   }
 
 ];

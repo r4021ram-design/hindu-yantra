@@ -1,23 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  
   <defs>
-    <!-- Consecrated Dark Antique Bronze Gradients -->
-    <linearGradient id="vastuBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1A0E05" />
-      <stop offset="35%" stop-color="#3E1E07" />
-      <stop offset="70%" stop-color="#542608" />
-      <stop offset="100%" stop-color="#1C0D04" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
     </linearGradient>
-    <radialGradient id="vastuAura" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#385E38" stop-opacity="0.10" />
-      <stop offset="100%" stop-color="#385E38" stop-opacity="0" />
+    <linearGradient id="bronzeLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A2508" />
+      <stop offset="50%" stop-color="#2D1505" />
+      <stop offset="100%" stop-color="#5B2E0B" />
+    </linearGradient>
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="85%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCDB3" />
     </radialGradient>
+    <radialGradient id="prithviAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#15803D" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#A16207" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="jalaAmritaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.30" />
+      <stop offset="55%" stop-color="#0369A1" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#075985" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="digpalaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B45309" stop-opacity="0.30" />
+      <stop offset="60%" stop-color="#78350F" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+    <filter id="sacredShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1A0E05" flood-opacity="0.25" />
+    </filter>
   </defs>
-
-  <!-- Ambient Earth-Prithvi Greenish Gold Aura -->
-  <circle cx="500" cy="500" r="480" fill="url(#vastuAura)" />
-
-  <!-- 1. Concentric Bhupura (Outer Sacred Earth Rampart with 4 Directional Portals) -->
-  <g id="vastu-bhupura" stroke="url(#vastuBronze)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <rect width="1000" height="1000" fill="url(#sacredBg)" />
+  <circle cx="500" cy="500" r="480" fill="url(#prithviAura)" />
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
     <!-- Outer Step (Line 1) -->
     <path d="
       M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
@@ -31,87 +57,91 @@
       M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
     " stroke-width="2.6" />
   </g>
-
+  
   <!-- 2. Concentric Girdles (Trivalaya) -->
-  <g id="vastu-trivalaya" stroke="url(#vastuBronze)" fill="none">
-    <circle cx="500" cy="500" r="410" stroke-width="2.8" />
-    <circle cx="500" cy="500" r="396" stroke-width="1.8" />
-    <circle cx="500" cy="500" r="382" stroke-width="2.6" />
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="415" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="400" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="385" stroke-width="2.4" />
   </g>
 
-  <!-- 3. Canonical Ashtadala Padma (Exact Ogee Lotus Petals matching Classical Sketch) -->
-  <g id="vastu-ashtadala" stroke="url(#vastuBronze)" fill="none" stroke-linejoin="round" stroke-linecap="round">
-    <!-- Petal 0 (North / 0°) -->
-    <path d="M 400.50 259.79 C 387.11 205.92, 467.03 157.58, 500.00 118.00 C 532.97 157.58, 612.89 205.92, 599.50 259.79" stroke-width="2.8" />
-    <line x1="500.00" y1="260.00" x2="500.00" y2="118.00" stroke-width="1.8" opacity="0.75" />
-
-    <!-- Petal 1 (North-East / 45°) -->
-    <path d="M 599.50 259.79 C 628.12 212.23, 718.81 234.56, 770.11 229.89 C 765.44 281.19, 787.77 371.88, 740.21 400.50" stroke-width="2.8" />
-    <line x1="683.85" y1="316.15" x2="770.11" y2="229.89" stroke-width="1.8" opacity="0.75" />
-
-    <!-- Petal 2 (East / 90°) -->
-    <path d="M 740.21 400.50 C 794.08 387.11, 842.42 467.03, 882.00 500.00 C 842.42 532.97, 794.08 612.89, 740.21 599.50" stroke-width="2.8" />
-    <line x1="760.00" y1="500.00" x2="882.00" y2="500.00" stroke-width="1.8" opacity="0.75" />
-
-    <!-- Petal 3 (South-East / 135°) -->
-    <path d="M 740.21 599.50 C 787.77 628.12, 765.44 718.81, 770.11 770.11 C 718.81 765.44, 628.12 787.77, 599.50 740.21" stroke-width="2.8" />
-    <line x1="683.85" y1="683.85" x2="770.11" y2="770.11" stroke-width="1.8" opacity="0.75" />
-
-    <!-- Petal 4 (South / 180°) -->
-    <path d="M 599.50 740.21 C 612.89 794.08, 532.97 842.42, 500.00 882.00 C 467.03 842.42, 387.11 794.08, 400.50 740.21" stroke-width="2.8" />
-    <line x1="500.00" y1="760.00" x2="500.00" y2="882.00" stroke-width="1.8" opacity="0.75" />
-
-    <!-- Petal 5 (South-West / 225°) -->
-    <path d="M 400.50 740.21 C 371.88 787.77, 281.19 765.44, 229.89 770.11 C 234.56 718.81, 212.23 628.12, 259.79 599.50" stroke-width="2.8" />
-    <line x1="316.15" y1="683.85" x2="229.89" y2="770.11" stroke-width="1.8" opacity="0.75" />
-
-    <!-- Petal 6 (West / 270°) -->
-    <path d="M 259.79 599.50 C 205.92 612.89, 157.58 532.97, 118.00 500.00 C 157.58 467.03, 205.92 387.11, 259.79 400.50" stroke-width="2.8" />
-    <line x1="240.00" y1="500.00" x2="118.00" y2="500.00" stroke-width="1.8" opacity="0.75" />
-
-    <!-- Petal 7 (North-West / 315°) -->
-    <path d="M 259.79 400.50 C 212.23 371.88, 234.56 281.19, 229.89 229.89 C 281.19 234.56, 371.88 212.23, 400.50 259.79" stroke-width="2.8" />
-    <line x1="316.15" y1="316.15" x2="229.89" y2="229.89" stroke-width="1.8" opacity="0.75" />
+  <!-- 3. Ashta-Dala Ogee Lotus Petals (अष्टदल पद्म - अष्टदिशा मण्डल) -->
+  <g id="ashta_dala" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none">
+    <path d="M 402.42 264.41 C 389.19 206.74, 466.09 155.67, 500.00 115.00 C 533.91 155.67, 610.81 206.74, 597.58 264.41" />
+    <path d="M 597.58 264.41 C 629.01 214.28, 719.50 232.54, 772.24 227.76 C 767.46 280.50, 785.72 370.99, 735.59 402.42" />
+    <path d="M 735.59 402.42 C 793.26 389.19, 844.33 466.09, 885.00 500.00 C 844.33 533.91, 793.26 610.81, 735.59 597.58" />
+    <path d="M 735.59 597.58 C 785.72 629.01, 767.46 719.50, 772.24 772.24 C 719.50 767.46, 629.01 785.72, 597.58 735.59" />
+    <path d="M 597.58 735.59 C 610.81 793.26, 533.91 844.33, 500.00 885.00 C 466.09 844.33, 389.19 793.26, 402.42 735.59" />
+    <path d="M 402.42 735.59 C 370.99 785.72, 280.50 767.46, 227.76 772.24 C 232.54 719.50, 214.28 629.01, 264.41 597.58" />
+    <path d="M 264.41 597.58 C 206.74 610.81, 155.67 533.91, 115.00 500.00 C 155.67 466.09, 206.74 389.19, 264.41 402.42" />
+    <path d="M 264.41 402.42 C 214.28 370.99, 232.54 280.50, 227.76 227.76 C 280.50 232.54, 370.99 214.28, 402.42 264.41" />
+    <path d="M 500.00 245.00 L 500.00 115.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 680.31 319.69 L 772.24 227.76" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 755.00 500.00 L 885.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 680.31 680.31 L 772.24 772.24" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 500.00 755.00 L 500.00 885.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 319.69 680.31 L 227.76 772.24" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 245.00 500.00 L 115.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
+    <path d="M 319.69 319.69 L 227.76 227.76" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.7" />
   </g>
 
-  <!-- 4. Inner Base Circle -->
-  <circle cx="500" cy="500" r="260" stroke="url(#vastuBronze)" stroke-width="2.6" fill="none" />
+  <!-- 8 Petal Directional Inscriptions -->
+  <g id="petal_directions" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="14.5" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">
+    <text x="500.0" y="180.0">ईशान (जल)</text>
+    <text x="726.3" y="273.7">पूर्व (इन्द्र)</text>
+    <text x="820.0" y="500.0">आग्नेय (अग्नि)</text>
+    <text x="726.3" y="726.3">दक्षिण (यम)</text>
+    <text x="500.0" y="820.0">नैर्ऋत्य (पृथ्वी)</text>
+    <text x="273.7" y="726.3">पश्चिम (वरुण)</text>
+    <text x="180.0" y="500.0">वायव्य (वायु)</text>
+    <text x="273.7" y="273.7">उत्तर (कुबेर)</text>
+  </g>
 
-  <!-- 5. Vastu Purusha Mandala Grid (Central Brahma Sthana & 8 Directional Padas) -->
-  <g id="vastu-mandala-grid" stroke="url(#vastuBronze)">
-    <!-- Outer Grid Square -->
+  <!-- Intermediate Girdles -->
+  <circle cx="500" cy="500" r="255" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+  <circle cx="500" cy="500" r="245" stroke="url(#bronzeMain)" stroke-width="1.6" fill="none" />
+
+  <!-- 4. Vastu Purusha Mandala Grid (9 Sacred Padas / Central Brahma Sthana) -->
+  <g id="vastu_purusha_grid" stroke="url(#bronzeMain)">
+    <!-- Outer Square of Vastu Peetha -->
     <rect x="340" y="340" width="320" height="320" fill="none" stroke-width="2.8" />
-    <!-- Horizontal lines -->
-    <line x1="340" y1="446" x2="660" y2="446" stroke-width="2" />
-    <line x1="340" y1="554" x2="660" y2="554" stroke-width="2" />
-    <!-- Vertical lines -->
-    <line x1="446" y1="340" x2="446" y2="660" stroke-width="2" />
-    <line x1="554" y1="340" x2="554" y2="660" stroke-width="2" />
+    <rect x="330" y="330" width="340" height="340" fill="none" stroke-width="1.4" stroke-dasharray="4,4" />
 
-    <!-- 8 Directional Digpalas / Elements -->
-    <!-- NW: Vayu (वायु) -->
-    <text x="393" y="400" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">वायु</text>
-    <!-- North: Kubera (कुबेर) -->
-    <text x="500" y="400" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">कुबेर</text>
-    <!-- NE: Ishana (ईशान) -->
-    <text x="607" y="400" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">ईशान</text>
+    <!-- Grid Lines for 9 Padas -->
+    <line x1="340" y1="446" x2="660" y2="446" stroke-width="2.0" />
+    <line x1="340" y1="554" x2="660" y2="554" stroke-width="2.0" />
+    <line x1="446" y1="340" x2="446" y2="660" stroke-width="2.0" />
+    <line x1="554" y1="340" x2="554" y2="660" stroke-width="2.0" />
 
-    <!-- West: Varuna (वरुण) -->
-    <text x="393" y="508" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">वरुण</text>
-    <!-- Center: Brahma Sthana (ब्रह्म) -->
-    <text x="500" y="508" text-anchor="middle" fill="#541B08" font-size="18" font-family="'Cinzel', serif" font-weight="900">ब्रह्म</text>
-    <!-- East: Indra (इन्द्र) -->
-    <text x="607" y="508" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">इन्द्र</text>
+    <!-- 8 Directional Regents & Brahma Sthana -->
+    <g font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="16" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">
+      <!-- NW: Vayu -->
+      <text x="393" y="393">वायु</text>
+      <!-- North: Kubera -->
+      <text x="500" y="393">कुबेर</text>
+      <!-- NE: Ishana -->
+      <text x="607" y="393">ईशान</text>
 
-    <!-- SW: Nirriti (नैर्ऋत्य) -->
-    <text x="393" y="615" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">नैर्ऋत्य</text>
-    <!-- South: Yama (यम) -->
-    <text x="500" y="615" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">यम</text>
-    <!-- SE: Agni (अग्नि) -->
-    <text x="607" y="615" text-anchor="middle" fill="#0F0C08" font-size="16" font-family="'Cinzel', serif" font-weight="bold">अग्नि</text>
+      <!-- West: Varuna -->
+      <text x="393" y="500">वरुण</text>
+      <!-- Center: Brahma Sthana -->
+      <text x="500" y="500" font-size="19" fill="#78350F">ब्रह्म</text>
+      <!-- East: Indra -->
+      <text x="607" y="500">इन्द्र</text>
+
+      <!-- SW: Nirriti -->
+      <text x="393" y="607">नैर्ऋत्य</text>
+      <!-- South: Yama -->
+      <text x="500" y="607">यम</text>
+      <!-- SE: Agni -->
+      <text x="607" y="607">अग्नि</text>
+    </g>
   </g>
 
-  <!-- 6. Central Parama Bindu -->
-  <circle cx="500" cy="500" r="12" fill="#8C2300" opacity="0.25" className="animate-pulse" />
-  <circle cx="500" cy="500" r="6" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
+  <!-- 5. Concentric Central Sanctuary & Bindu -->
+  <circle cx="500" cy="500" r="32" stroke="url(#bronzeMain)" stroke-width="1.8" fill="none" />
+  <g id="bindu_zone" filter="url(#sacredShadow)">
+    <circle cx="500" cy="500" r="8" fill="#1A0E05" />
+    <circle cx="500" cy="500" r="3.5" fill="#F4EEE0" />
+  </g>
 </svg>
