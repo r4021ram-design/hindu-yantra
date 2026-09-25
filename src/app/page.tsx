@@ -12,8 +12,9 @@ export default function MuseumHome() {
     { id: 'all', label: 'All Yantras (सभी यन्त्र)' },
     { id: 'dashamahavidya', label: 'Dasha Mahavidya (दश महाविद्या)' },
     { id: 'navagraha', label: 'Navagraha & Magic Squares (नवग्रह व जादुई वर्ग)' },
+    { id: 'vidya', label: 'Vidya & Wisdom (सरस्वती, गायत्री व विद्या)' },
+    { id: 'protection', label: 'Protection & Kavacha (रक्षा एवं कवच)' },
     { id: 'prosperity', label: 'Wealth & Prosperity (धन व समृद्धि)' },
-    { id: 'protection', label: 'Protection & Health (सुरक्षा व आरोग्य)' },
     { id: 'vastu', label: 'Vastu & Harmony (वास्तु व शांति)' }
   ];
 
@@ -30,10 +31,12 @@ export default function MuseumHome() {
         ? 'dashamahavidya'
         : data.taxonomyCategory === 'navagraha' || data.id.includes('surya') || data.id.includes('graha')
         ? 'navagraha'
+        : data.taxonomyCategory === 'saraswati_vidya' || data.id.includes('saraswati') || data.id.includes('gayatri') || data.id.includes('dakshinamurti') || data.id.includes('hayagriva')
+        ? 'vidya'
+        : data.taxonomyCategory === 'protection_raksha' || data.id.includes('bisa') || data.id.includes('sudarshana') || data.id.includes('hanuman') || data.id.includes('pratyangira') || data.id.includes('mrityunjaya')
+        ? 'protection'
         : data.id.includes('kuber') || data.id.includes('lakshmi') || data.id.includes('sri')
         ? 'prosperity'
-        : data.id.includes('mrityunjaya') || data.id.includes('ganesh') || data.id.includes('durga')
-        ? 'protection'
         : 'vastu'
   }));
 

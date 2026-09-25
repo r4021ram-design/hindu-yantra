@@ -1141,5 +1141,124 @@ export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
     confidenceLevel: 'High',
     relatedYantras: ['durga_bisa_yantra', 'sudarshana_chakra_yantra', 'kali_yantra']
   },
-
+  {
+    id: 'saraswati_yantra',
+    names: {
+      sa: 'श्री सरस्वती यन्त्रम्',
+      iast: 'Saraswatī Yantram',
+      hi: 'सरस्वती यन्त्र',
+      en: 'Saraswati Yantra (Goddess of Learning & Eloquence)',
+      gu: 'સરસ્વતી યંત્ર'
+    },
+    deity: 'Goddess Saraswati (Sharada)',
+    mantra: 'Om Aim Saraswatyai Namah',
+    geometrySpec: {
+      primaryShape: 'Hexagram, 8-Petal Ogee Lotus & Central Aim Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Awakening transcendent intellect, photographic memory, eloquence, literature, and mastery of all arts and music.',
+    historicalPeriod: 'Vedic / Saraswati Rahasya Upanishad & Mantra Mahodadhi',
+    scripturalCitation: {
+      scripture: 'Saraswati Rahasya Upanishad',
+      verse: 'Mantra 1-2',
+      sanskritText: 'ॐ वाग्देव्यै च विद्महे कामराजाय धीमहि। तन्नो देवी प्रचोदयात्॥',
+      translation: 'We meditate upon Goddess Saraswati, the embodiment of transcendental speech; may She illuminate our intellect.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['gayatri_yantra', 'medha_dakshinamurti_yantra', 'hayagriva_yantra']
+  },
+  {
+    id: 'gayatri_yantra',
+    names: {
+      sa: 'श्री गायत्री यन्त्रम्',
+      iast: 'Gāyatrī Yantram',
+      hi: 'गायत्री यन्त्र',
+      en: 'Gayatri Yantra (24 Syllables Solar Illumination)',
+      gu: 'ગાયત્રી યંત્ર'
+    },
+    deity: 'Goddess Vedamata Gayatri (Savitur)',
+    mantra: 'Om Bhur Bhuvah Svah Tat Savitur Varenyam Bhargo Devasya Dheemahi Dhiyo Yo Nah Prachodayat',
+    geometrySpec: {
+      primaryShape: '24-Petal Lotus, 8-Petal Lotus, Solar Shatkona & Pranava Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Self-realization, purification of accumulated karma, enhancement of vital prana, solar harmony, and intellectual illumination.',
+    historicalPeriod: 'c. Rigvedic Period (Rigveda 3.62.10 & Agni Puranam)',
+    scripturalCitation: {
+      scripture: 'Rigveda',
+      verse: 'Mandala 3, Sukta 62, Verse 10',
+      sanskritText: 'ॐ तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि। धियो यो नः प्रचोदयात्॥',
+      translation: 'We meditate upon that adorable effulgence of the divine Sun, the Creator; may He awaken and illuminate our intellects.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['surya_yantra', 'saraswati_yantra', 'sri_yantra']
+  },
+  {
+    id: 'medha_dakshinamurti_yantra',
+    names: {
+      sa: 'श्री मेधा दक्षिणामूर्ति यन्त्रम्',
+      iast: 'Medhā Dakṣiṇāmūrti Yantram',
+      hi: 'मेधा दक्षिणामूर्ति यन्त्र',
+      en: 'Medha Dakshinamurti Yantra (Supreme Preceptor of Intellect)',
+      gu: 'મેધા દક્ષિણામૂર્તિ યંત્ર'
+    },
+    deity: 'Lord Dakshinamurti (Adi Guru Shiva)',
+    mantra: 'Om Hsaum Om Namo Bhagavate Dakshinamurtaye Mahyam Medham Prajnam Prayachha Swaha',
+    geometrySpec: {
+      primaryShape: '16 Kalas Petals, 8 Petals, Inverted Triangle of Silence & Hsaum Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Acquiring photographic memory, mastery of philosophy and higher sciences, guru grace, and overcoming intellectual stagnation.',
+    historicalPeriod: 'Upanishadic / Dakshinamurti Upanishad & Sharada Tilaka',
+    scripturalCitation: {
+      scripture: 'Dakshinamurti Upanishad',
+      verse: 'Mantra 1-3',
+      sanskritText: 'ॐ नमो भगवते दक्षिणामूर्तये मह्यं मेधां प्रज्ञां प्रयच्छ स्वाहा...',
+      translation: 'Salutations to the Supreme Lord Dakshinamurti; grant me transcendental memory, intellect, and profound wisdom.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['saraswati_yantra', 'hayagriva_yantra', 'mahamrityunjaya_yantra']
+  },
+  {
+    id: 'hayagriva_yantra',
+    names: {
+      sa: 'श्री हयग्रीव यन्त्रम्',
+      iast: 'Hayagrīva Yantram',
+      hi: 'हयग्रीव यन्त्र',
+      en: 'Hayagriva Yantra (Lord of Transcendental Wisdom & Vedic Mastery)',
+      gu: 'હયગ્રીવ યંત્ર'
+    },
+    deity: 'Lord Hayagriva (Vishnu Wisdom Incarnation)',
+    mantra: 'Om Hraum Om Namo Bhagavate Hayagrivaya Swaha',
+    geometrySpec: {
+      primaryShape: '12-Aditya Petals, 8 Petals, Vaishnava Shatkona & Hraum Bindu',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Triumph in debates, competitive examinations, legal argument, analytical reasoning, and uncovering the deep secrets of the Vedas.',
+    historicalPeriod: 'Pancharatra / Hayagriva Upanishad',
+    scripturalCitation: {
+      scripture: 'Hayagriva Upanishad',
+      verse: 'Mantra 1-2',
+      sanskritText: 'ॐ ह्रौं ॐ नमो भगवते हयग्रीवाय विष्णवे मह्यं मेधां प्रज्ञां प्रयच्छ स्वाहा...',
+      translation: 'Salutations to Lord Hayagriva, the cosmic embodiment of the Vedas; enthroned within the solar orb, bless me with supreme wisdom.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['saraswati_yantra', 'medha_dakshinamurti_yantra', 'sudarshana_chakra_yantra']
+  }
 ];
