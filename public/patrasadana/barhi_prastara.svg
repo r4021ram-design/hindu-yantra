@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="60%" stop-color="#F7EEDF" />
+      <stop offset="100%" stop-color="#EADBBE" />
+    </radialGradient>
+
+    <!-- Golden Sacred Kusha Grass Gradient -->
+    <linearGradient id="kushaMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9F99D" />
+      <stop offset="30%" stop-color="#84CC16" />
+      <stop offset="70%" stop-color="#4D7C0F" />
+      <stop offset="100%" stop-color="#1E3A08" />
+    </linearGradient>
+
+    <!-- Golden Ripe Darbha Gradient -->
+    <linearGradient id="darbhaGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="40%" stop-color="#EAB308" />
+      <stop offset="80%" stop-color="#A16207" />
+      <stop offset="100%" stop-color="#4D3805" />
+    </linearGradient>
+
+    <!-- Prastara Tie Knot -->
+    <linearGradient id="sacredTie" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#FFF8D6" />
+      <stop offset="100%" stop-color="#936814" />
+    </linearGradient>
+
+    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#2D3B0B" flood-opacity="0.38" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad)" />
+
+  <!-- Outer Sacred Geometry Frame -->
+  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
+  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+
+  <!-- Dimensions Indicator -->
+  <g opacity="0.7">
+    <line x1="200" y1="230" x2="800" y2="230" stroke="#805713" stroke-width="1.5" />
+    <path d="M 200 230 L 215 224 L 215 236 Z" fill="#805713" />
+    <path d="M 800 230 L 785 224 L 785 236 Z" fill="#805713" />
+    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
+      बर्हि एवं प्रस्तर प्रमाण: १ हस्त (१८ इंच) अखण्डित कुश-संहति
+    </text>
+  </g>
+
+  <!-- BARHI & PRASTARA COMPOSITION -->
+  <g filter="url(#patraShadow)">
+    
+    <!-- 1. BARHI - SPREAD OF ALTAR KUSHA GRASS (पृष्ठभूमि में आस्तृत बर्हि दर्भ) -->
+    <g transform="translate(180, 480)" opacity="0.85">
+      <!-- Fan of Eastward pointing Kusha blades (पूर्वाग्र कुश) -->
+      <path d="M 0 60 C 200 -20, 450 -20, 640 60" stroke="url(#kushaMain)" stroke-width="6" fill="none" />
+      <path d="M 0 75 C 220 0, 430 0, 640 75" stroke="url(#darbhaGold)" stroke-width="7" fill="none" />
+      <path d="M 0 90 C 210 20, 440 20, 640 90" stroke="url(#kushaMain)" stroke-width="6" fill="none" />
+      <path d="M 0 105 C 230 40, 420 40, 640 105" stroke="url(#darbhaGold)" stroke-width="7" fill="none" />
+      <path d="M 0 120 C 220 60, 430 60, 640 120" stroke="url(#kushaMain)" stroke-width="5" fill="none" />
+    </g>
+
+    <!-- 2. PRASTARA - THE ROYAL YAJAMANA SHEAF (प्रस्तर - यजमान प्रतिनिधि कुश गुच्छ) -->
+    <!-- Centrally bound sacred bunch of choice kusha blades -->
+    <g transform="translate(220, 360)">
+      
+      <!-- Stems from Left Base -->
+      <path d="M 30 140 C 120 130, 240 120, 380 120" stroke="url(#kushaMain)" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M 25 155 C 115 145, 235 135, 380 135" stroke="url(#darbhaGold)" stroke-width="8" stroke-linecap="round" fill="none" />
+      <path d="M 35 170 C 125 160, 245 150, 380 150" stroke="url(#kushaMain)" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M 40 185 C 130 175, 250 165, 380 165" stroke="url(#darbhaGold)" stroke-width="6" stroke-linecap="round" fill="none" />
+
+      <!-- Choice Upright Pointed Tips radiating Eastward/Upward -->
+      <path d="M 380 120 C 430 110, 490 85, 540 60" stroke="url(#darbhaGold)" stroke-width="6.5" stroke-linecap="round" fill="none" />
+      <path d="M 380 135 C 440 125, 500 110, 560 95" stroke="url(#kushaMain)" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M 380 150 C 445 150, 510 145, 570 140" stroke="url(#darbhaGold)" stroke-width="8" stroke-linecap="round" fill="none" />
+      <path d="M 380 165 C 440 175, 500 185, 555 200" stroke="url(#kushaMain)" stroke-width="6.5" stroke-linecap="round" fill="none" />
+
+      <!-- Additional fine needle tips of Kusha (तीक्ष्ण दर्भाग्र) -->
+      <path d="M 540 60 C 560 50, 575 40, 585 30" stroke="#FDE047" stroke-width="3" stroke-linecap="round" fill="none" />
+      <path d="M 560 95 C 585 85, 605 75, 615 65" stroke="#A3E635" stroke-width="3" stroke-linecap="round" fill="none" />
+      <path d="M 570 140 C 595 140, 615 138, 625 135" stroke="#FDE047" stroke-width="3.5" stroke-linecap="round" fill="none" />
+      <path d="M 555 200 C 575 210, 595 220, 605 230" stroke="#A3E635" stroke-width="3" stroke-linecap="round" fill="none" />
+
+      <!-- SACRED TRIPLE TIE (प्रस्तर ग्रन्थि - यजमान बन्धन) -->
+      <g transform="translate(240, 110)">
+        <rect x="0" y="0" width="35" height="90" rx="14" fill="url(#sacredTie)" stroke="#5B190E" stroke-width="2.5" />
+        <line x1="12" y1="5" x2="12" y2="85" stroke="#78350F" stroke-width="2" />
+        <line x1="23" y1="5" x2="23" y2="85" stroke="#78350F" stroke-width="2" />
+        <!-- Knot Rosette in Center -->
+        <circle cx="17" cy="45" r="14" fill="#FEF08A" stroke="#B45309" stroke-width="2" />
+        <circle cx="17" cy="45" r="6" fill="#B45309" />
+      </g>
+
+    </g>
+
+    <!-- Consecrated Akshata & Ghee droplet drops sprinkled over Barhi -->
+    <ellipse cx="430" cy="560" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(-20 430 560)" />
+    <ellipse cx="580" cy="540" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(30 580 540)" />
+    <ellipse cx="510" cy="580" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(-5 510 580)" />
+
+    <!-- Radiant Aura around Prastara (यजमान तेज) -->
+    <circle cx="500" cy="500" r="160" fill="none" stroke="#FACC15" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.45" />
+
+  </g>
+
+  <!-- Sacred Details & Typography -->
+  <g transform="translate(500, 750)" text-anchor="middle">
+    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
+      बर्हि एवं प्रस्तर (BARHI &amp; PRASTARA)
+    </text>
+    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
+      पवित्र दर्भ संहति • परिस्तरण आसन एवं यजमान-प्रतिनिधि कुश स्तम्भ
+    </text>
+
+    <!-- Citation Box -->
+    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
+    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
+      "बर्हिषे नमः । प्रस्तरोऽसि यजमानो वै प्रस्तरः ॥"
+    </text>
+    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
+      — शतपथ १.३.१ • ऊर्णाम्रदसं त्वा स्तृणामि स्वासस्थां देवेभ्यः
+    </text>
+  </g>
+
+  <!-- Top Badges -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      कुश-परिस्तरण
+    </text>
+  </g>
+  <g transform="translate(740, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      यजमान प्रस्तर
+    </text>
+  </g>
+
+</svg>

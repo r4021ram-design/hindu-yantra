@@ -12,6 +12,7 @@ export default function Navbar() {
     { href: '/yantras', label: 'Yantra Darshan', icon: Compass },
     { href: '/chakras', label: 'षट्चक्र साधना', icon: Zap },
     { href: '/kundas', label: 'यज्ञ कुण्ड', icon: Flame },
+    { href: '/patrasadana', label: 'पात्रसादन वेदी', icon: Layers },
     { href: '/puja', label: 'Upasana & Puja', icon: Sparkles },
   ];
 

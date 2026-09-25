@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="60%" stop-color="#F7EEDF" />
+      <stop offset="100%" stop-color="#EADBBE" />
+    </radialGradient>
+
+    <!-- Sacred Wood Stick Gradients -->
+    <linearGradient id="stickPalasha" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A04000" />
+      <stop offset="50%" stop-color="#6E2C00" />
+      <stop offset="100%" stop-color="#3E1404" />
+    </linearGradient>
+
+    <linearGradient id="stickHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D35400" />
+      <stop offset="40%" stop-color="#A04000" />
+      <stop offset="80%" stop-color="#5E1914" />
+      <stop offset="100%" stop-color="#2C0C04" />
+    </linearGradient>
+
+    <linearGradient id="barkEnd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EDBB99" />
+      <stop offset="50%" stop-color="#D35400" />
+      <stop offset="100%" stop-color="#5E1914" />
+    </linearGradient>
+
+    <!-- Kusha Grass Binding Cord (दर्भ-रज्जु / इध्म-नद्धन) -->
+    <linearGradient id="kushaCord" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#65A30D" />
+      <stop offset="30%" stop-color="#FACC15" />
+      <stop offset="60%" stop-color="#84CC16" />
+      <stop offset="100%" stop-color="#4D7C0F" />
+    </linearGradient>
+
+    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="18" stdDeviation="16" flood-color="#3B1705" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad)" />
+
+  <!-- Outer Sacred Geometry Frame -->
+  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
+  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+
+  <!-- Dimensions Indicator -->
+  <g opacity="0.7">
+    <line x1="200" y1="230" x2="800" y2="230" stroke="#805713" stroke-width="1.5" />
+    <path d="M 200 230 L 215 224 L 215 236 Z" fill="#805713" />
+    <path d="M 800 230 L 785 224 L 785 236 Z" fill="#805713" />
+    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
+      मानक प्रमाण: २१ समिधाएं • १ प्रादेश लम्बाई (१०-१२ इंच • २४-३० सेमी)
+    </text>
+  </g>
+
+  <!-- IDHMA BUNDLE (Sacred 21 Samidhas Stacked & Tied with Triple Kusha Cord) -->
+  <g filter="url(#patraShadow)">
+    
+    <!-- Cylindrical Wood Sticks Layer 1 (Bottom Back Layer) -->
+    <rect x="220" y="440" width="560" height="28" rx="8" fill="url(#stickPalasha)" stroke="#2B0C03" stroke-width="2" />
+    <rect x="215" y="460" width="570" height="30" rx="8" fill="url(#stickHighlight)" stroke="#2B0C03" stroke-width="2" />
+    <rect x="225" y="480" width="550" height="30" rx="8" fill="url(#stickPalasha)" stroke="#2B0C03" stroke-width="2" />
+    <rect x="210" y="505" width="580" height="32" rx="8" fill="url(#stickHighlight)" stroke="#2B0C03" stroke-width="2" />
+    <rect x="220" y="530" width="560" height="28" rx="8" fill="url(#stickPalasha)" stroke="#2B0C03" stroke-width="2" />
+
+    <!-- Cylindrical Wood Sticks Layer 2 (Middle Layer) -->
+    <rect x="225" y="450" width="550" height="26" rx="8" fill="url(#stickHighlight)" stroke="#2B0C03" stroke-width="2" />
+    <rect x="230" y="475" width="540" height="28" rx="8" fill="url(#stickPalasha)" stroke="#2B0C03" stroke-width="2" />
+    <rect x="215" y="495" width="570" height="30" rx="8" fill="url(#stickHighlight)" stroke="#2B0C03" stroke-width="2" />
+    <rect x="225" y="520" width="550" height="28" rx="8" fill="url(#stickPalasha)" stroke="#2B0C03" stroke-width="2" />
+
+    <!-- Cut End Cross-Sections of Wood on Left End (काष्ठ अग्र वलय) -->
+    <ellipse cx="220" cy="454" rx="10" ry="14" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="215" cy="475" rx="11" ry="15" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="225" cy="495" rx="10" ry="15" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="210" cy="521" rx="12" ry="16" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="220" cy="544" rx="10" ry="14" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+
+    <!-- Cut End Cross-Sections of Wood on Right End -->
+    <ellipse cx="780" cy="454" rx="10" ry="14" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="785" cy="475" rx="11" ry="15" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="775" cy="495" rx="10" ry="15" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="790" cy="521" rx="12" ry="16" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+    <ellipse cx="780" cy="544" rx="10" ry="14" fill="url(#barkEnd)" stroke="#3E1404" stroke-width="1.5" />
+
+    <!-- Wood Bark Textures and Grooves -->
+    <line x1="260" y1="465" x2="740" y2="465" stroke="#E59866" stroke-width="1" opacity="0.6" />
+    <line x1="280" y1="482" x2="720" y2="482" stroke="#2C0C04" stroke-width="1.5" opacity="0.75" />
+    <line x1="250" y1="510" x2="750" y2="510" stroke="#E59866" stroke-width="1.2" opacity="0.6" />
+    <line x1="270" y1="535" x2="730" y2="535" stroke="#2C0C04" stroke-width="1.5" opacity="0.75" />
+
+    <!-- TRIPLE KUSHA CORD TIES (इध्म-नद्धन - ३ फेरे कुश रज्जु) -->
+    <!-- Binding 1 (Left Quarter) -->
+    <g>
+      <rect x="340" y="430" width="28" height="140" rx="14" fill="url(#kushaCord)" stroke="#365314" stroke-width="2.5" />
+      <path d="M 342 450 Q 366 450, 366 470 Q 342 470, 342 490 Q 366 490, 366 510 Q 342 510, 342 530 Q 366 530, 366 550" 
+            stroke="#1E3A08" stroke-width="2.5" fill="none" />
+      <!-- Knot with hanging Kusha blades -->
+      <circle cx="354" cy="430" r="10" fill="#FACC15" stroke="#3F6212" stroke-width="2" />
+      <path d="M 354 420 C 340 395, 330 380, 315 365" stroke="#65A30D" stroke-width="4" stroke-linecap="round" fill="none" />
+      <path d="M 354 420 C 365 395, 375 380, 385 360" stroke="#84CC16" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    </g>
+
+    <!-- Binding 2 (Right Quarter) -->
+    <g>
+      <rect x="630" y="430" width="28" height="140" rx="14" fill="url(#kushaCord)" stroke="#365314" stroke-width="2.5" />
+      <path d="M 632 450 Q 656 450, 656 470 Q 632 470, 632 490 Q 656 490, 656 510 Q 632 510, 632 530 Q 656 530, 656 550" 
+            stroke="#1E3A08" stroke-width="2.5" fill="none" />
+      <circle cx="644" cy="430" r="10" fill="#FACC15" stroke="#3F6212" stroke-width="2" />
+      <path d="M 644 420 C 630 395, 620 380, 605 365" stroke="#65A30D" stroke-width="4" stroke-linecap="round" fill="none" />
+      <path d="M 644 420 C 655 395, 665 380, 675 360" stroke="#84CC16" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    </g>
+
+    <!-- Single Main Upright Samidha placed atop bundle (प्रधान समिधा) -->
+    <rect x="235" y="435" width="530" height="24" rx="6" fill="#D35400" stroke="#3E1404" stroke-width="1.8" />
+    <line x1="250" y1="447" x2="745" y2="447" stroke="#FADBD8" stroke-width="1" opacity="0.75" />
+
+  </g>
+
+  <!-- Sacred Details & Typography -->
+  <g transform="translate(500, 750)" text-anchor="middle">
+    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
+      इध्म समिधा बन्धन (IDHMA)
+    </text>
+    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
+      २१ पलाश/खदिर समिधाएं • कुश-रज्जु से त्रिगुण बद्ध सामिधेनी साधन
+    </text>
+
+    <!-- Citation Box -->
+    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
+    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
+      "इध्ममसि स्वाहा । जातवेदसे नमः ॥"
+    </text>
+    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
+      — शतपथ १.३.५ • १ आधान + ३ परिधि + २ प्रदीपन + १५ सामिधेनी समिधाएं
+    </text>
+  </g>
+
+  <!-- Top Badges -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      २१ समिधा समूह
+    </text>
+  </g>
+  <g transform="translate(740, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      इध्म-नद्धन बन्धन
+    </text>
+  </g>
+
+</svg>

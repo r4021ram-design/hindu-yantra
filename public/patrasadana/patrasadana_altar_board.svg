@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Texture -->
+    <radialGradient id="altarBg" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="60%" stop-color="#F4ECE1" />
+      <stop offset="100%" stop-color="#E2D4BC" />
+    </radialGradient>
+
+    <!-- Kusha Mat Surface (आस्तृत दर्भ-वेदी) -->
+    <linearGradient id="kushaMat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECFCCB" />
+      <stop offset="35%" stop-color="#D9F99D" />
+      <stop offset="70%" stop-color="#BEF264" />
+      <stop offset="100%" stop-color="#A3E635" />
+    </linearGradient>
+
+    <!-- Wood Trim -->
+    <linearGradient id="woodTrim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78281F" />
+      <stop offset="50%" stop-color="#9A3816" />
+      <stop offset="100%" stop-color="#4A1604" />
+    </linearGradient>
+
+    <!-- Kunda Heat Glow -->
+    <radialGradient id="kundaGlow" cx="50%" cy="90%" r="45%">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#DC2626" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7C2D12" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Gold Frame -->
+    <linearGradient id="altarGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#FFF3B0" />
+      <stop offset="100%" stop-color="#9A7B1C" />
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#421E06" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#altarBg)" />
+
+  <!-- Outer Boundary Frame -->
+  <rect x="25" y="25" width="950" height="950" rx="30" fill="none" stroke="#C5A059" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.7" />
+  <rect x="38" y="38" width="924" height="924" rx="24" fill="none" stroke="#805713" stroke-width="3" opacity="0.85" />
+
+  <!-- TOP HEADER: TITLE & CARDINAL DIRECTION (उदीची - उत्तर दिशा) -->
+  <g transform="translate(500, 80)" text-anchor="middle">
+    <!-- North Direction Badge -->
+    <rect x="-140" y="-28" width="280" height="38" rx="19" fill="#805713" stroke="#F5E8D3" stroke-width="2" />
+    <text y="-4" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#FFFDF9" letter-spacing="2">
+      ▲ उत्तर दिशा (उदीची / सोम स्थान)
+    </text>
+
+    <!-- Title -->
+    <text y="42" font-family="'Cinzel', 'Noto Serif', serif" font-size="28" font-weight="900" fill="#6A1B07" letter-spacing="1.5">
+      सम्पूर्ण पात्रसादन वेदी महाविन्यास (PATRASADANA ALTAR BOARD)
+    </text>
+    <text y="68" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#805713">
+      शतपथ ब्राह्मण • कात्यायन श्रौतसूत्र • पारस्कर कुशकण्डिका सम्मत द्वन्द्व क्रम
+    </text>
+  </g>
+
+  <!-- MAIN KUSHA MAT ALTAR BOARD (कुण्ड के उत्तर में बिछी पवित्र दर्भ-वेदी) -->
+  <g transform="translate(70, 180)">
+    
+    <!-- Outer Wooden Altar Border (वेदी काष्ठ सीमा) -->
+    <rect x="0" y="0" width="860" height="520" rx="24" fill="#FBF6ED" stroke="#805713" stroke-width="4" filter="url(#cardShadow)" />
+    
+    <!-- Kusha Grass Mat Fill (दर्भ-आस्तरण) -->
+    <rect x="15" y="15" width="830" height="490" rx="18" fill="url(#kushaMat)" stroke="#65A30D" stroke-width="2" opacity="0.75" />
+
+    <!-- Eastward & Northward Kusha Blade Grid Texture (पूर्वाग्र/उत्तराग्र दर्भ रेखाएं) -->
+    <g stroke="#4D7C0F" stroke-width="1.2" opacity="0.4" stroke-dasharray="6 12">
+      <line x1="20" y1="70" x2="840" y2="70" />
+      <line x1="20" y1="130" x2="840" y2="130" />
+      <line x1="20" y1="190" x2="840" y2="190" />
+      <line x1="20" y1="250" x2="840" y2="250" />
+      <line x1="20" y1="310" x2="840" y2="310" />
+      <line x1="20" y1="370" x2="840" y2="370" />
+      <line x1="20" y1="430" x2="840" y2="430" />
+
+      <line x1="215" y1="20" x2="215" y2="500" />
+      <line x1="425" y1="20" x2="425" y2="500" />
+      <line x1="635" y1="20" x2="635" y2="500" />
+    </g>
+
+    <!-- ========================================== -->
+    <!-- ROW 1 (TOP / NORTHMOST): WATER & FOOD POTS -->
+    <!-- ========================================== -->
+
+    <!-- 1. PRANITA PATRA -->
+    <g transform="translate(40, 35)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Vessel Vector -->
+      <polygon points="25,35 150,35 135,80 40,80" fill="#D97757" stroke="#6E2310" stroke-width="2" />
+      <polygon points="40,45 135,45 125,75 50,75" fill="#38BDF8" opacity="0.85" />
+      <!-- Twin Kusha Tips -->
+      <line x1="30" y1="58" x2="145" y2="58" stroke="#65A30D" stroke-width="3" stroke-linecap="round" />
+      <!-- Labels -->
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">प्रणीता पात्र</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">ब्रह्मवारि • चतुरस्र</text>
+    </g>
+
+    <!-- 2. PROKSHANI PATRA -->
+    <g transform="translate(245, 35)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Vessel with Spout -->
+      <path d="M 30,45 L 125,45 L 150,55 L 120,80 L 45,80 Z" fill="#C58548" stroke="#422003" stroke-width="2" />
+      <ellipse cx="85" cy="55" rx="45" ry="14" fill="#5EEAD4" opacity="0.85" />
+      <line x1="35" y1="55" x2="160" y2="40" stroke="#65A30D" stroke-width="2.5" stroke-linecap="round" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">प्रोक्षणी पात्र</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">गोस्तनाकार • पवित्री</text>
+    </g>
+
+    <!-- 3. AJYASTHALI -->
+    <g transform="translate(450, 35)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Ghee Pot -->
+      <circle cx="87" cy="58" r="32" fill="#D4AF37" stroke="#5E4202" stroke-width="2.5" />
+      <ellipse cx="87" cy="42" rx="30" ry="12" fill="#FCD34D" stroke="#92400E" stroke-width="2" />
+      <circle cx="87" cy="42" r="10" fill="#FEF08A" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">आज्यस्थाली</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">विशुद्ध कांस्य • गोघृत</text>
+    </g>
+
+    <!-- 4. CHARUSTHALI -->
+    <g transform="translate(650, 35)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Cooked Charu Pot -->
+      <circle cx="87" cy="58" r="32" fill="#BD5338" stroke="#481407" stroke-width="2.5" />
+      <ellipse cx="87" cy="42" rx="28" ry="12" fill="#FFFBEB" stroke="#D97706" stroke-width="2" />
+      <!-- Steam -->
+      <path d="M 80 25 Q 75 15, 82 5" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.8" />
+      <path d="M 94 25 Q 99 15, 92 5" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.8" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">चरुस्थाली</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">हविष्य पक्वान्न पायस</text>
+    </g>
+
+    <!-- ============================================== -->
+    <!-- ROW 2 (MIDDLE): LADLES & WOODEN INSTRUMENTS    -->
+    <!-- ============================================== -->
+
+    <!-- 5. SRUK (पलाश स्रुक्) -->
+    <g transform="translate(40, 190)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Sruk Ladle with Spout -->
+      <line x1="20" y1="58" x2="115" y2="58" stroke="#9A3816" stroke-width="6" stroke-linecap="round" />
+      <path d="M 115 50 C 130 40, 150 45, 155 60 C 150 75, 130 75, 115 65 Z" fill="#C25A2A" stroke="#4A1604" stroke-width="2" />
+      <circle cx="140" cy="58" r="6" fill="#FCD34D" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">स्रुक् (पलाश)</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">१ हस्त • हस्तिमुख</text>
+    </g>
+
+    <!-- 6. SRUVA (खदिर स्रुवा) -->
+    <g transform="translate(245, 190)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Sruva with Round Bowl -->
+      <line x1="20" y1="58" x2="120" y2="58" stroke="#511811" stroke-width="4.5" stroke-linecap="round" />
+      <circle cx="138" cy="58" r="18" fill="#78281F" stroke="#240705" stroke-width="2" />
+      <circle cx="138" cy="58" r="12" fill="#FBBF24" stroke="#78350F" stroke-width="1.5" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">स्रुवा (खदिर)</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">१ अरत्नि • गोल पुष्कर</text>
+    </g>
+
+    <!-- 7. SPHYA (खदिर स्फ्य) -->
+    <g transform="translate(450, 190)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Sword -->
+      <line x1="25" y1="58" x2="50" y2="58" stroke="#280A06" stroke-width="7" stroke-linecap="round" />
+      <path d="M 50 52 L 135 52 L 155 58 L 135 64 L 50 64 Z" fill="#641E16" stroke="#280A06" stroke-width="2" />
+      <line x1="50" y1="50" x2="50" y2="66" stroke="#D4AF37" stroke-width="3" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">स्फ्य (खदिर)</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">१ प्रादेश • काष्ठ खड्ग</text>
+    </g>
+
+    <!-- 8. UPAVESHA (धृष्टि दण्ड) -->
+    <g transform="translate(650, 190)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Staff with Paddle Tip -->
+      <line x1="20" y1="58" x2="115" y2="58" stroke="#6E2C00" stroke-width="5" stroke-linecap="round" />
+      <path d="M 115 50 L 150 42 L 155 74 L 115 66 Z" fill="#A04000" stroke="#321002" stroke-width="2" />
+      <circle cx="150" cy="58" r="4" fill="#F39C12" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">उपवेष (धृष्टि)</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">१ बाहु • अंगार चालन</text>
+    </g>
+
+    <!-- =============================================== -->
+    <!-- ROW 3 (BOTTOM / KUNDA FACING): IDHMA, BARHI... -->
+    <!-- =============================================== -->
+
+    <!-- 9. IDHMA (२१ समिधा बन्धन) -->
+    <g transform="translate(40, 345)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Samidha Bundle -->
+      <g transform="translate(18, 40)">
+        <rect x="0" y="0" width="140" height="8" rx="3" fill="#D35400" />
+        <rect x="5" y="8" width="130" height="9" rx="3" fill="#A04000" />
+        <rect x="0" y="17" width="140" height="9" rx="3" fill="#78281F" />
+        <rect x="5" y="26" width="130" height="8" rx="3" fill="#D35400" />
+        <!-- Kusha Cord Ties -->
+        <rect x="35" y="-3" width="8" height="40" rx="3" fill="#65A30D" />
+        <rect x="95" y="-3" width="8" height="40" rx="3" fill="#65A30D" />
+      </g>
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">इध्म (२१ समिधा)</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">कुश-रज्जु बद्ध बंडल</text>
+    </g>
+
+    <!-- 10. BARHI & PRASTARA -->
+    <g transform="translate(245, 345)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Kusha Sheaves -->
+      <path d="M 25 70 C 60 40, 110 40, 150 70" stroke="#84CC16" stroke-width="5" fill="none" />
+      <path d="M 30 75 C 65 50, 105 50, 145 75" stroke="#EAB308" stroke-width="5" fill="none" />
+      <circle cx="87" cy="55" r="8" fill="#FACC15" stroke="#78350F" stroke-width="1.5" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">बर्हि व प्रस्तर</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">यजमान प्रतिनिधि कुश</text>
+    </g>
+
+    <!-- 11. PARIDHI TRAYA -->
+    <g transform="translate(450, 345)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature 3 Sticks -->
+      <rect x="18" y="35" width="140" height="11" rx="4" fill="#78281F" stroke="#240705" stroke-width="1" />
+      <rect x="22" y="50" width="132" height="9" rx="3.5" fill="#935116" stroke="#2D1402" stroke-width="1" />
+      <rect x="26" y="63" width="124" height="7" rx="3" fill="#9A7D0A" stroke="#281F02" stroke-width="1" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">परिधि त्रय</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">मध्यम • दक्षिण • उत्तर</text>
+    </g>
+
+    <!-- 12. SANSRAVA & UTENSILS -->
+    <g transform="translate(650, 345)">
+      <rect x="0" y="0" width="175" height="135" rx="14" fill="#FFFDF8" stroke="#805713" stroke-width="2" filter="url(#cardShadow)" />
+      <!-- Miniature Sansrava Bowl & Shurpa -->
+      <ellipse cx="65" cy="55" rx="28" ry="18" fill="#D4AF37" stroke="#4C3401" stroke-width="2" />
+      <circle cx="65" cy="55" r="8" fill="#FBBF24" />
+      <!-- Shurpa Fan shape -->
+      <path d="M 105 40 L 145 40 L 140 70 L 110 70 Z" fill="#EADBBE" stroke="#805713" stroke-width="1.8" />
+      <text x="87" y="105" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#6A1B07" text-anchor="middle">संस्रव व शूर्प</text>
+      <text x="87" y="122" font-family="'Noto Serif', serif" font-size="10" font-weight="600" fill="#7D6B57" text-anchor="middle">अवशिष्ट घृत मार्जन</text>
+    </g>
+
+  </g>
+
+  <!-- KUNDA POSITIONING ARROW & SIMULATED KUNDA AT BOTTOM (कुण्ड सान्निध्य) -->
+  <g transform="translate(500, 770)" text-anchor="middle">
+    <!-- Directional Relation to Kunda -->
+    <path d="M 0 -35 L 0 5" stroke="#C2410C" stroke-width="3" stroke-dasharray="6 4" />
+    <polygon points="0,15 -10,-2 10,-2" fill="#C2410C" />
+    <text y="-45" font-family="'Noto Serif', serif" font-size="13" font-weight="bold" fill="#C2410C">
+      कुण्ड के ठीक उत्तर (उदीची) भाग में अवस्थित
+    </text>
+
+    <!-- Stylized Top Crest of Homa Kunda Below Altar -->
+    <g transform="translate(0, 75)" filter="url(#cardShadow)">
+      <!-- Outer Upper Mekhala of Kunda -->
+      <rect x="-240" y="-35" width="480" height="70" rx="18" fill="#FFFDF8" stroke="#805713" stroke-width="3" />
+      <!-- Flame Glow inside Kunda -->
+      <rect x="-220" y="-20" width="440" height="40" rx="10" fill="url(#kundaGlow)" />
+      
+      <!-- Miniature Sacred Agni Flames -->
+      <path d="M -150 10 Q -140 -15, -130 5 Q -120 -25, -110 10" stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round" />
+      <path d="M -30 12 Q 0 -30, 30 12 Q 0 -15, -30 12 Z" fill="#EA580C" />
+      <path d="M -15 12 Q 0 -20, 15 12 Z" fill="#FACC15" />
+      <path d="M 110 10 Q 120 -20, 130 5 Q 140 -15, 150 10" stroke="#F97316" stroke-width="4" fill="none" stroke-linecap="round" />
+
+      <!-- Text inside Kunda -->
+      <text y="4" font-family="'Cinzel', 'Noto Serif', serif" font-size="17" font-weight="900" fill="#7C2D12" letter-spacing="1">
+        यज्ञ कुण्ड (अग्नि वैश्वानर स्थान)
+      </text>
+      <text y="24" font-family="'Noto Serif', serif" font-size="11" font-weight="bold" fill="#9A3412">
+        दक्षिण दिशा (यजमान / होता आसन दक्षिण-पश्चिम में)
+      </text>
+    </g>
+  </g>
+
+  <!-- Left / Right Cardinal Guides -->
+  <g transform="translate(60, 440)">
+    <text x="0" y="0" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#805713" transform="rotate(-90 0 0)" text-anchor="middle">
+      ◄ पूर्व दिशा (प्राची)
+    </text>
+  </g>
+  <g transform="translate(940, 440)">
+    <text x="0" y="0" font-family="'Noto Serif', serif" font-size="14" font-weight="bold" fill="#805713" transform="rotate(90 0 0)" text-anchor="middle">
+      पश्चिम दिशा (प्रतीची) ►
+    </text>
+  </g>
+
+</svg>

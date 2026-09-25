@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="60%" stop-color="#F7EEDF" />
+      <stop offset="100%" stop-color="#EADBBE" />
+    </radialGradient>
+
+    <!-- Khadira Hardwood Gradient for Sword Blade -->
+    <linearGradient id="sphyaWoodBlade" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#8B2616" />
+      <stop offset="35%" stop-color="#641E16" />
+      <stop offset="65%" stop-color="#44130D" />
+      <stop offset="100%" stop-color="#280A06" />
+    </linearGradient>
+
+    <!-- Blade Edge Sharp Bevel (तीक्ष्ण धार) -->
+    <linearGradient id="edgeBevel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D98880" />
+      <stop offset="40%" stop-color="#A93226" />
+      <stop offset="70%" stop-color="#511811" />
+      <stop offset="100%" stop-color="#1F0604" />
+    </linearGradient>
+
+    <!-- Handle Grip Gradient -->
+    <linearGradient id="hiltGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3E110B" />
+      <stop offset="50%" stop-color="#7B241C" />
+      <stop offset="100%" stop-color="#240705" />
+    </linearGradient>
+
+    <!-- Gold Accent Cord -->
+    <linearGradient id="goldCord" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B7950B" />
+      <stop offset="50%" stop-color="#F9E79F" />
+      <stop offset="100%" stop-color="#7D6608" />
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="16" stdDeviation="14" flood-color="#3B100B" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad)" />
+
+  <!-- Outer Sacred Geometry Frame -->
+  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
+  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+
+  <!-- Dimension Guide Lines & Annotation -->
+  <g opacity="0.7">
+    <line x1="200" y1="500" x2="800" y2="500" stroke="#805713" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="220" y1="230" x2="780" y2="230" stroke="#805713" stroke-width="1.5" />
+    <path d="M 220 230 L 235 224 L 235 236 Z" fill="#805713" />
+    <path d="M 780 230 L 765 224 L 765 236 Z" fill="#805713" />
+    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
+      मानक प्रमाण: १ प्रादेश / १ वितस्ति (१२ अंगुल • ९ इंच • २२.८ सेमी)
+    </text>
+  </g>
+
+  <!-- SPHYA SACRED WOODEN SWORD (Horizontal Orientation: Left Pommel -> Right Blade Tip) -->
+  <g filter="url(#patraShadow)">
+    
+    <!-- 1. Pommel (कण्ठ ग्रन्थि / कनिष्क) -->
+    <ellipse cx="230" cy="500" rx="22" ry="32" fill="url(#hiltGrad)" stroke="#1F0604" stroke-width="3" />
+    <circle cx="230" cy="500" r="8" fill="url(#goldCord)" stroke="#5B190E" stroke-width="1.5" />
+
+    <!-- 2. Hilt / Grip (मुष्टि / मूठ) -->
+    <path d="M 252 485 L 340 488 L 340 512 L 252 515 Z" fill="url(#hiltGrad)" stroke="#1F0604" stroke-width="2.5" />
+    
+    <!-- Ribbed Finger Grooves on Handle -->
+    <line x1="272" y1="486" x2="272" y2="514" stroke="url(#goldCord)" stroke-width="3" />
+    <line x1="292" y1="487" x2="292" y2="513" stroke="url(#goldCord)" stroke-width="3" />
+    <line x1="312" y1="487" x2="312" y2="513" stroke="url(#goldCord)" stroke-width="3" />
+    <line x1="332" y1="488" x2="332" y2="512" stroke="url(#goldCord)" stroke-width="3" />
+
+    <!-- 3. Crossguard (त्सरु / रक्षा शलाका) -->
+    <path d="M 340 455
+             C 345 450, 355 450, 360 455
+             L 360 545
+             C 355 550, 345 550, 340 545
+             Z"
+          fill="url(#sphyaWoodBlade)" stroke="#1F0604" stroke-width="3" />
+    <!-- Crossguard Ornaments -->
+    <circle cx="350" cy="465" r="5" fill="url(#goldCord)" />
+    <circle cx="350" cy="535" r="5" fill="url(#goldCord)" />
+
+    <!-- 4. Main Blade (फलक - Sword Blade) -->
+    <!-- Straight Back Spine & Curved Cutting Belly with Pointed Tip -->
+    <path d="M 360 480
+             L 680 478
+             C 725 478, 765 490, 785 500
+             C 765 510, 725 528, 680 528
+             L 360 520
+             Z"
+          fill="url(#sphyaWoodBlade)" stroke="#220704" stroke-width="3.5" />
+
+    <!-- 5. Beveled Cutting Edge (तीक्ष्ण धार - निचला भाग) -->
+    <path d="M 360 514
+             L 680 522
+             C 722 522, 760 508, 785 500
+             C 755 503, 715 510, 675 510
+             L 360 504
+             Z"
+          fill="url(#edgeBevel)" stroke="#190403" stroke-width="1.5" />
+
+    <!-- Longitudinal Central Ridge (मध्य शलाका - Fuller / Ridge) -->
+    <line x1="360" y1="499" x2="750" y2="499" stroke="#E6B0AA" stroke-width="1.8" opacity="0.65" />
+    <line x1="360" y1="501" x2="750" y2="501" stroke="#1A0503" stroke-width="2" opacity="0.8" />
+
+    <!-- Sacred Vedic Tracing Inscription Marks on Blade (उल्लेखन रेखाएं) -->
+    <!-- 3 Prachi (Eastward) & 3 Udichi (Northward) Miniature Ritual Marks -->
+    <g transform="translate(420, 488)" opacity="0.85">
+      <line x1="0" y1="0" x2="35" y2="0" stroke="url(#goldCord)" stroke-width="2" />
+      <line x1="0" y1="6" x2="35" y2="6" stroke="url(#goldCord)" stroke-width="2" />
+      <line x1="0" y1="12" x2="35" y2="12" stroke="url(#goldCord)" stroke-width="2" />
+      <line x1="55" y1="-2" x2="55" y2="14" stroke="url(#goldCord)" stroke-width="2" />
+      <line x1="62" y1="-2" x2="62" y2="14" stroke="url(#goldCord)" stroke-width="2" />
+      <line x1="69" y1="-2" x2="69" y2="14" stroke="url(#goldCord)" stroke-width="2" />
+    </g>
+
+    <!-- Thunderbolt Radiant Spark at the Tip (इन्द्र वज्र तेज) -->
+    <circle cx="785" cy="500" r="14" fill="#FDFEFE" opacity="0.85" />
+    <path d="M 785 480 L 789 496 L 805 500 L 789 504 L 785 520 L 781 504 L 765 500 L 781 496 Z" fill="#F7DC6F" stroke="#B7950B" stroke-width="1" />
+
+  </g>
+
+  <!-- Sacred Details & Typography -->
+  <g transform="translate(500, 750)" text-anchor="middle">
+    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#4A140F" letter-spacing="2">
+      खदिर स्फ्य (SPHYA)
+    </text>
+    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
+      इन्द्र-वज्र स्वरूप काष्ठ खड्ग • पञ्चभूसंस्कार उल्लेखन एवं दर्भ-च्छेदन साधन
+    </text>
+
+    <!-- Citation Box -->
+    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
+    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#3D100A">
+      "इन्द्रस्य वज्रोऽसि वार्त्रघ्नः स्तनयित्नुमान् ॥"
+    </text>
+    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
+      — पारस्कर गृह्यसूत्रम् १.१ • खदिर काष्ठ १ प्रादेश प्रमाण (१२ अंगुल = ९ इंच)
+    </text>
+  </g>
+
+  <!-- Badges -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      उल्लेखन साधन
+    </text>
+  </g>
+  <g transform="translate(740, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      असिकार खड्ग
+    </text>
+  </g>
+
+</svg>

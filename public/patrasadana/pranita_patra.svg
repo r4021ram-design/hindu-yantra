@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="60%" stop-color="#F7EEDF" />
+      <stop offset="100%" stop-color="#EADBBE" />
+    </radialGradient>
+
+    <!-- Sacred Copper / Varana Wood Gradient -->
+    <linearGradient id="copperBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97757" />
+      <stop offset="35%" stop-color="#B85434" />
+      <stop offset="70%" stop-color="#8C351B" />
+      <stop offset="100%" stop-color="#541B0B" />
+    </linearGradient>
+
+    <linearGradient id="copperRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E89679" />
+      <stop offset="50%" stop-color="#FFC5B2" />
+      <stop offset="100%" stop-color="#9C3A1F" />
+    </linearGradient>
+
+    <!-- Consecrated Holy Brahma Water Gradient -->
+    <radialGradient id="sacredWater" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#E0F2FE" />
+      <stop offset="35%" stop-color="#7DD3FC" />
+      <stop offset="75%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </radialGradient>
+
+    <!-- Sacred Kusha Grass Blades -->
+    <linearGradient id="kushaGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A3E635" />
+      <stop offset="50%" stop-color="#65A30D" />
+      <stop offset="100%" stop-color="#365314" />
+    </linearGradient>
+
+    <!-- Shadow -->
+    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="16" flood-color="#42180B" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad)" />
+
+  <!-- Outer Sacred Geometry Frame -->
+  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
+  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+
+  <!-- Dimensions Indicator -->
+  <g opacity="0.7">
+    <line x1="220" y1="230" x2="780" y2="230" stroke="#805713" stroke-width="1.5" />
+    <path d="M 220 230 L 235 224 L 235 236 Z" fill="#805713" />
+    <path d="M 780 230 L 765 224 L 765 236 Z" fill="#805713" />
+    <text x="500" y="215" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
+      मानक चतुरस्र प्रमाण: ८ अंगुल लम्बाई × ४ अंगुल चौड़ाई × ३ अंगुल गहराई
+    </text>
+  </g>
+
+  <!-- PRANITA PATRA (Rectangular Perspective Top/Oblique View) -->
+  <g filter="url(#patraShadow)">
+    
+    <!-- Outer Vessel Rim (ताम्र/वारण चतुरस्र भित्ति) -->
+    <!-- Perspective 3D Box Rim -->
+    <path d="M 220 380 
+             L 780 380 
+             C 800 380, 810 395, 800 415
+             L 730 620
+             C 722 638, 705 645, 680 645
+             L 320 645
+             C 295 645, 278 638, 270 620
+             L 200 415
+             C 190 395, 200 380, 220 380
+             Z"
+          fill="url(#copperBase)" stroke="#4A1608" stroke-width="4" />
+
+    <!-- Exterior Copper Plate Engravings -->
+    <line x1="245" y1="420" x2="755" y2="420" stroke="#E89679" stroke-width="2" opacity="0.8" />
+    <line x1="285" y1="600" x2="715" y2="600" stroke="#4A1608" stroke-width="2" opacity="0.9" />
+
+    <!-- Lotus Petal Borders on Bottom Edge -->
+    <g fill="#D97757" opacity="0.85" stroke="#541B0B" stroke-width="1">
+      <path d="M 330 645 C 345 635, 365 635, 380 645 Z" />
+      <path d="M 380 645 C 395 635, 415 635, 430 645 Z" />
+      <path d="M 430 645 C 445 635, 465 635, 480 645 Z" />
+      <path d="M 480 645 C 495 635, 515 635, 530 645 Z" />
+      <path d="M 530 645 C 545 635, 565 635, 580 645 Z" />
+      <path d="M 580 645 C 595 635, 615 635, 630 645 Z" />
+      <path d="M 630 645 C 645 635, 665 635, 670 645 Z" />
+    </g>
+
+    <!-- Top Rim Bevel (ऊपरी चतुरस्र मुख) -->
+    <polygon points="215,380 785,380 755,420 245,420" fill="url(#copperRim)" stroke="#4A1608" stroke-width="2" />
+
+    <!-- Inner Cavity with Consecrated Water (ब्रह्म-जल / पवित्र वारि) -->
+    <polygon points="248,420 752,420 705,585 295,585" fill="url(#sacredWater)" stroke="#0369A1" stroke-width="2" />
+
+    <!-- Water Surface Ripples & Light Shimmer -->
+    <ellipse cx="500" cy="485" rx="190" ry="42" fill="#BAE6FD" opacity="0.5" />
+    <ellipse cx="480" cy="475" rx="100" ry="20" fill="#FFFFFF" opacity="0.75" />
+    <path d="M 360 460 C 440 450, 560 450, 640 460" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.6" />
+    <path d="M 390 495 C 450 490, 550 490, 610 495" stroke="#38BDF8" stroke-width="2" fill="none" opacity="0.7" />
+
+    <!-- Two Sacred Darbha Pavatris Floating in Water (दो कुश-पवित्री) -->
+    <!-- Pavatri 1 (Left to Right Diagonal) -->
+    <g filter="url(#patraShadow)">
+      <!-- Knot in the middle -->
+      <path d="M 340 515 C 410 485, 470 470, 560 455" stroke="url(#kushaGreen)" stroke-width="6" stroke-linecap="round" fill="none" />
+      <circle cx="450" cy="480" r="9" fill="#FACC15" stroke="#4D7C0F" stroke-width="1.5" />
+      <!-- Twin split blade tips -->
+      <path d="M 560 455 C 590 448, 620 442, 640 435" stroke="url(#kushaGreen)" stroke-width="3.5" fill="none" stroke-linecap="round" />
+      <path d="M 560 455 C 585 455, 615 455, 635 450" stroke="url(#kushaGreen)" stroke-width="3" fill="none" stroke-linecap="round" />
+    </g>
+
+    <!-- Pavatri 2 (Counter diagonal) -->
+    <g filter="url(#patraShadow)">
+      <path d="M 370 445 C 430 465, 490 485, 590 515" stroke="url(#kushaGreen)" stroke-width="5.5" stroke-linecap="round" fill="none" />
+      <circle cx="485" cy="483" r="8" fill="#FACC15" stroke="#4D7C0F" stroke-width="1.5" />
+      <path d="M 590 515 C 615 520, 640 528, 655 535" stroke="url(#kushaGreen)" stroke-width="3" fill="none" stroke-linecap="round" />
+    </g>
+
+    <!-- Consecrated Akshata (Rice Grains) & Red Flowers Floating -->
+    <ellipse cx="420" cy="470" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(-25 420 470)" />
+    <ellipse cx="530" cy="495" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(35 530 495)" />
+    <ellipse cx="460" cy="510" rx="5" ry="2.5" fill="#FEF08A" stroke="#CA8A04" stroke-width="0.8" transform="rotate(10 460 510)" />
+    <!-- Red Kaner Flower Petal -->
+    <path d="M 540 460 C 550 450, 565 455, 560 468 C 552 475, 538 470, 540 460 Z" fill="#DC2626" stroke="#991B1B" stroke-width="1" />
+
+  </g>
+
+  <!-- Sacred Details & Typography -->
+  <g transform="translate(500, 750)" text-anchor="middle">
+    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
+      प्रणीता पात्र (PRANITA PATRA)
+    </text>
+    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
+      वारण काष्ठ / विशुद्ध ताम्र निर्मित • ब्रह्मा एवं वरुण-अधिष्ठित पवित्र जल पात्र
+    </text>
+
+    <!-- Citation Box -->
+    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
+    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
+      "आपो देवीरमृता ऋतावृधः... प्रणीताभ्यो नमः ॥"
+    </text>
+    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
+      — शतपथ १.१.२ • चतुरस्र आकार (८×४ अंगुल) • उत्तर दिशा में ब्रह्म-स्थान रक्षक
+    </text>
+  </g>
+
+  <!-- Top Badges -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      ब्रह्म-जल पात्र
+    </text>
+  </g>
+  <g transform="translate(740, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      चतुरस्र विन्यास
+    </text>
+  </g>
+
+</svg>

@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF9" />
+      <stop offset="60%" stop-color="#F7EEDF" />
+      <stop offset="100%" stop-color="#EADBBE" />
+    </radialGradient>
+
+    <!-- Palasha / Shami Sacred Wood Gradient -->
+    <linearGradient id="upaveshaWood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A04000" />
+      <stop offset="35%" stop-color="#7E2D07" />
+      <stop offset="65%" stop-color="#551D04" />
+      <stop offset="100%" stop-color="#321002" />
+    </linearGradient>
+
+    <linearGradient id="upaveshaShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#CA6F1E" />
+      <stop offset="50%" stop-color="#873600" />
+      <stop offset="100%" stop-color="#381303" />
+    </linearGradient>
+
+    <!-- Charred Embers Ember Contact Gradient at Tip (अग्नि सम्पर्क अंगार) -->
+    <linearGradient id="emberTip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78281F" />
+      <stop offset="60%" stop-color="#3A0D07" />
+      <stop offset="85%" stop-color="#C0392B" />
+      <stop offset="95%" stop-color="#F39C12" />
+      <stop offset="100%" stop-color="#F1C40F" />
+    </linearGradient>
+
+    <!-- Gold Accent Bindings -->
+    <linearGradient id="sacredGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B7950B" />
+      <stop offset="50%" stop-color="#F9E79F" />
+      <stop offset="100%" stop-color="#7D6608" />
+    </linearGradient>
+
+    <filter id="patraShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="16" stdDeviation="14" flood-color="#38150A" flood-opacity="0.38" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad)" />
+
+  <!-- Outer Sacred Geometry Frame -->
+  <rect x="35" y="35" width="930" height="930" rx="28" fill="none" stroke="#C5A059" stroke-width="2" stroke-dasharray="8 6" opacity="0.6" />
+  <rect x="50" y="50" width="900" height="900" rx="22" fill="none" stroke="#805713" stroke-width="3" opacity="0.8" />
+  <circle cx="500" cy="500" r="410" fill="none" stroke="#C5A059" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.45" />
+
+  <!-- Dimensions Indicator -->
+  <g opacity="0.7">
+    <line x1="160" y1="500" x2="840" y2="500" stroke="#805713" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="150" y1="210" x2="850" y2="210" stroke="#805713" stroke-width="1.5" />
+    <path d="M 150 210 L 165 204 L 165 216 Z" fill="#805713" />
+    <path d="M 850 210 L 835 204 L 835 216 Z" fill="#805713" />
+    <text x="500" y="195" font-family="'Cinzel', 'Noto Serif', serif" font-size="16" font-weight="bold" fill="#805713" text-anchor="middle" letter-spacing="1">
+      मानक प्रमाण: १ बाहु / १ हस्त (२४ अंगुल • १८ इंच • ४५.७ सेमी)
+    </text>
+  </g>
+
+  <!-- UPAVESHA BODY (Horizontal Orientation: Left Handle to Right Flattened Paddle) -->
+  <g filter="url(#patraShadow)">
+    
+    <!-- Tail Grip (मुकुट / कनिष्क) -->
+    <ellipse cx="180" cy="500" rx="26" ry="38" fill="url(#upaveshaWood)" stroke="#260C03" stroke-width="3" />
+    <circle cx="180" cy="500" r="10" fill="url(#sacredGold)" stroke="#4A1604" stroke-width="1.5" />
+
+    <!-- Main Wooden Shaft (काष्ठ दण्ड) -->
+    <path d="M 205 487
+             C 320 488, 500 488, 660 484
+             L 660 516
+             C 500 512, 320 512, 205 513
+             Z"
+          fill="url(#upaveshaShine)" stroke="#2D0E03" stroke-width="3" />
+
+    <!-- Wood grain grooves -->
+    <path d="M 230 493 C 360 493, 520 492, 640 490" stroke="#E59866" stroke-width="1.5" fill="none" opacity="0.6" />
+    <path d="M 240 507 C 370 507, 530 507, 640 510" stroke="#1F0702" stroke-width="2" fill="none" opacity="0.75" />
+
+    <!-- Gold Accent Bindings on Shaft -->
+    <rect x="290" y="486" width="14" height="28" rx="3" fill="url(#sacredGold)" stroke="#4A1604" stroke-width="0.8" />
+    <rect x="440" y="485" width="16" height="30" rx="3" fill="url(#sacredGold)" stroke="#4A1604" stroke-width="0.8" />
+    <rect x="580" y="484" width="16" height="32" rx="3" fill="url(#sacredGold)" stroke="#4A1604" stroke-width="0.8" />
+
+    <!-- Flattened Paddle / Spade Tip (चपटा फावड़ा-नुमा अग्रभाग) -->
+    <path d="M 660 484
+             C 690 480, 715 450, 750 435
+             C 790 420, 830 430, 850 450
+             L 855 550
+             C 830 570, 790 580, 750 565
+             C 715 550, 690 520, 660 516
+             Z"
+          fill="url(#emberTip)" stroke="#240702" stroke-width="3.5" />
+
+    <!-- Subtle Finger Bevels on Paddle (हस्त्याकार अंगुलि रेखाएं) -->
+    <line x1="720" y1="465" x2="840" y2="475" stroke="#F39C12" stroke-width="2" opacity="0.7" />
+    <line x1="720" y1="500" x2="845" y2="500" stroke="#F1C40F" stroke-width="2.5" opacity="0.8" />
+    <line x1="720" y1="535" x2="840" y2="525" stroke="#F39C12" stroke-width="2" opacity="0.7" />
+
+    <!-- Glowing Red/Gold Coal Dust & Sparks on Tip (अंगार प्रदीपन तेज) -->
+    <circle cx="855" cy="460" r="5" fill="#F39C12" />
+    <circle cx="865" cy="495" r="6" fill="#F1C40F" stroke="#E67E22" stroke-width="1" />
+    <circle cx="858" cy="535" r="4.5" fill="#E74C3C" />
+    <circle cx="878" cy="480" r="3.5" fill="#F1C40F" />
+    <circle cx="882" cy="515" r="3" fill="#F39C12" />
+
+  </g>
+
+  <!-- Sacred Details & Typography -->
+  <g transform="translate(500, 750)" text-anchor="middle">
+    <text y="0" font-family="'Cinzel', 'Noto Serif', serif" font-size="34" font-weight="900" fill="#6A1B07" letter-spacing="2">
+      उपवेष / धृष्टि (UPAVESHA)
+    </text>
+    <text y="30" font-family="'Noto Serif', serif" font-size="18" font-weight="bold" fill="#805713">
+      पलाश अथवा शमी काष्ठ निर्मित • कुण्ड में अंगार एवं समिधा व्यवस्थापन दण्ड
+    </text>
+
+    <!-- Citation Box -->
+    <rect x="-380" y="55" width="760" height="95" rx="14" fill="#F5E8D3" stroke="#C5A059" stroke-width="1.5" opacity="0.9" />
+    <text y="85" font-family="'Noto Serif', serif" font-size="16" font-style="italic" fill="#521706">
+      "उपवेषोऽसि धृष्टिरसि ब्रह्मणा त्वा सन्दधामि ॥"
+    </text>
+    <text y="115" font-family="'Noto Serif', serif" font-size="13" font-weight="600" fill="#7D6B57">
+      — शतपथ १.२.१ • हस्त्याकार चपटा अग्रभाग युक्त १ बाहु प्रमाण (२४ अंगुल)
+    </text>
+  </g>
+
+  <!-- Top Badges -->
+  <g transform="translate(100, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      धृष्टि दण्ड
+    </text>
+  </g>
+  <g transform="translate(740, 100)">
+    <rect x="0" y="0" width="160" height="42" rx="10" fill="#EFE3CB" stroke="#805713" stroke-width="1.5" />
+    <text x="80" y="26" font-family="monospace" font-size="13" font-weight="bold" fill="#805713" text-anchor="middle">
+      अग्नि प्रचालन
+    </text>
+  </g>
+
+</svg>
