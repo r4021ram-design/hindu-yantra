@@ -224,7 +224,7 @@ export function YantraAltarStage({
       {/* Display Area with Consecrated Sacred Frame */}
       {currentAsset ? (
         <div
-          className={`relative w-full ${isCanvasExpanded ? 'max-w-4xl min-h-[620px] lg:min-h-[820px]' : 'max-w-2xl xl:max-w-3xl min-h-[520px] sm:min-h-[620px] lg:min-h-[720px]'} aspect-square flex items-center justify-center p-3 sm:p-6 transition-all duration-300 rounded-[32px] border-2 border-[#824707]/30 shadow-[0_15px_45px_rgba(42,20,5,0.08)] bg-[#FDFBF7] overflow-hidden cursor-crosshair select-none group ${
+          className={`relative w-full ${isCanvasExpanded ? 'max-w-4xl' : 'max-w-2xl xl:max-w-3xl'} aspect-square flex items-center justify-center p-2.5 sm:p-4 md:p-6 transition-all duration-300 rounded-[28px] sm:rounded-[32px] border-2 border-[#824707]/30 shadow-[0_15px_45px_rgba(42,20,5,0.08)] bg-[#FDFBF7] overflow-hidden cursor-crosshair select-none group ${
             canvasAltarMode === 'gold_glow'
               ? 'shadow-[0_0_40px_rgba(179,130,38,0.2)]'
               : canvasAltarMode === 'dark_shrine'
@@ -648,22 +648,43 @@ export function YantraAltarStage({
           })()}
         </div>
       ) : (
-        /* Respectful Awaiting Asset Placeholder */
-        <div className="w-full max-w-lg aspect-square rounded-3xl border-2 border-dashed border-[#D4AF37]/40 bg-[#141210]/60 p-8 flex flex-col items-center justify-center text-center space-y-4">
-          <div className="w-16 h-16 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex items-center justify-center">
-            <Compass className="w-8 h-8 text-[#D4AF37] animate-pulse" />
+        /* Respectful Canonical Asset Missing / Loading Card */
+        <div className="w-full max-w-md aspect-square rounded-3xl border-2 border-dashed border-[#824707]/40 bg-[#FAF7F0] p-6 sm:p-8 flex flex-col items-center justify-center text-center space-y-4 shadow-sm">
+          <div className="w-16 h-16 rounded-full bg-[#F0E4D0] border border-[#824707]/30 flex items-center justify-center">
+            <Compass className="w-8 h-8 text-[#824707] animate-pulse" />
           </div>
 
-          <div className="space-y-1">
-            <h3 className="text-lg font-serif font-bold text-[#FFF9F2]">
+          <div className="space-y-1.5">
+            <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#F5EFE4] text-[#8C2300] font-bold border border-[#D1C4B0]">
+              {currentYantra.presidingDeity}
+            </span>
+            <h3 className="text-base sm:text-lg font-serif font-bold text-[#0F0C08]">
               {currentYantra.nameSanskrit}
             </h3>
-            <p className="text-xs text-[#D4AF37] font-mono">
-              Awaiting Authentic Shastric Asset (.SVG / .PNG)
+            <p className="text-xs text-[#542608] font-semibold">
+              {currentYantra.nameEnglish}
             </p>
-            <p className="text-xs text-[#A0988A] max-w-sm pt-1">
-              गलत procedural geometry हटा दी गई है। आप अपना प्रामाणिक SVG/PNG अपलोड कर सकते हैं।
+            <p className="text-[11px] text-[#5A4532] max-w-xs mx-auto pt-1 font-mono">
+              Yantra artwork unavailable in current view. You may upload a verified SVG or retry loading.
             </p>
+          </div>
+
+          <div className="flex items-center gap-2 pt-2">
+            <button
+              onClick={() => {
+                if (typeof window !== 'undefined') window.location.reload();
+              }}
+              className="px-3.5 py-2 rounded-xl bg-[#EFE7DA] hover:bg-[#E5DAC8] text-[#0F0C08] text-xs font-mono font-bold transition-all border border-[#D1C4B0] cursor-pointer"
+            >
+              पुनः प्रयास (Retry)
+            </button>
+            <button
+              onClick={() => fileInputRef.current?.click()}
+              className="px-4 py-2 rounded-xl bg-[#824707] hover:bg-[#6A3905] text-white text-xs font-mono font-bold shadow-xs transition-all flex items-center gap-1.5 cursor-pointer"
+            >
+              <Upload className="w-3.5 h-3.5" />
+              <span>SVG अपलोड करें</span>
+            </button>
           </div>
 
           <input
@@ -673,13 +694,6 @@ export function YantraAltarStage({
             accept=".svg,image/png,image/jpeg,image/webp"
             className="hidden"
           />
-          <button
-            onClick={() => fileInputRef.current?.click()}
-            className="px-5 py-2.5 rounded-xl bg-linear-to-r from-[#B38226] to-[#D9531E] text-white font-bold text-xs shadow-md hover:brightness-105 transition-all flex items-center gap-2 cursor-pointer"
-          >
-            <Upload className="w-4 h-4" />
-            <span>Upload Authentic {currentYantra.nameEnglish}</span>
-          </button>
         </div>
       )}
 

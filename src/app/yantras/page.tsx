@@ -24,6 +24,11 @@ import {
   SAMHARA_STEPS_INFO,
   getYantraTaxonomyCategory
 } from '@/components/yantras/types';
+import {
+  getYantraAsset,
+  getYantraCandidatePaths,
+  normalizeYantraId
+} from '@/lib/yantras/yantra-assets';
 import { YantraLibraryDrawer } from '@/components/yantras/YantraLibraryDrawer';
 import { YantraAltarStage } from '@/components/yantras/YantraAltarStage';
 import { ShastricInspectorHUD } from '@/components/yantras/ShastricInspectorHUD';
@@ -81,30 +86,21 @@ function YantraExplorerInner() {
     return () => clearInterval(timer);
   }, [isAutoPlaying, isConstructionMode]);
 
-  // Sync with URL query parameter
+  // Sync with URL query parameter using canonical aliases
   useEffect(() => {
-    let paramId = searchParams.get('id');
-    if (paramId === 'mangal_yantra') paramId = 'mangala_yantra';
-    if (paramId === 'brihaspati_yantra') paramId = 'guru_yantra';
-    if (paramId && SHASTRIC_JYOTISH_DATABASE[paramId]) {
-      setSelectedYantraId(paramId);
+    const rawParam = searchParams.get('id');
+    if (rawParam) {
+      const normalized = normalizeYantraId(rawParam);
+      if (SHASTRIC_JYOTISH_DATABASE[normalized]) {
+        setSelectedYantraId(normalized);
+      }
     }
   }, [searchParams]);
 
-  // Check and load asset for selected yantra
+  // Check and load asset for selected yantra from canonical registry
   useEffect(() => {
     if (!assetsMap[selectedYantraId]) {
-      const candidates = [
-        `/yantras/${selectedYantraId}.svg`,
-        `/yantras/07_Protection/${selectedYantraId}.svg`,
-        `/yantras/02_Dashamahavidya/${selectedYantraId}.svg`,
-        `/yantras/08_Navagraha/${selectedYantraId}.svg`,
-        `/yantras/16_MagicSquare/${selectedYantraId}.svg`,
-        `/yantras/${selectedYantraId.replace('_', '')}.svg`,
-        selectedYantraId === 'sri_yantra' ? '/yantras/Shriyantra.svg' : null,
-        selectedYantraId === 'sri_yantra' ? '/yantras/shriyantra.svg' : null,
-        selectedYantraId === 'sri_yantra' ? '/yantras/SriYantra.svg' : null,
-      ].filter(Boolean) as string[];
+      const candidates = getYantraCandidatePaths(selectedYantraId);
 
       const tryLoad = async () => {
         for (const candidate of candidates) {
@@ -189,15 +185,16 @@ function YantraExplorerInner() {
     if (selectedTaxonomyCategory !== 'all') {
       list = list.filter(y => getYantraTaxonomyCategory(y) === selectedTaxonomyCategory);
     }
-    if (!searchQuery) return list;
-    const q = searchQuery.toLowerCase();
+    if (!searchQuery || !searchQuery.trim()) return list;
+    const q = searchQuery.toLowerCase().trim();
     return list.filter(
       y =>
         y.id.toLowerCase().includes(q) ||
         y.nameSanskrit.toLowerCase().includes(q) ||
         y.nameHindi.toLowerCase().includes(q) ||
         y.nameEnglish.toLowerCase().includes(q) ||
-        y.presidingDeity.toLowerCase().includes(q)
+        y.presidingDeity.toLowerCase().includes(q) ||
+        (getYantraAsset(y.id)?.aliases?.some(alias => alias.toLowerCase().includes(q)) ?? false)
     );
   }, [availableYantras, selectedTaxonomyCategory, searchQuery]);
 

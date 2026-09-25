@@ -104,10 +104,11 @@ export function YantraLibraryDrawer({
         <Search className="absolute left-3.5 top-3 w-3.5 h-3.5 text-[#5A4532]" />
         <input
           type="text"
-          placeholder="Search Yantra or Deity..."
+          aria-label="यन्त्र अथवा देवता खोजें (Search Yantras by name, deity or alias)"
+          placeholder="यन्त्र, देवता अथवा नाम खोजें..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
-          className="w-full bg-[#F5EFE4] border border-[#D1C4B0] focus:border-[#824707] rounded-xl pl-9 pr-3 py-2 text-xs text-[#0F0C08] placeholder-[#5A4532] focus:outline-none transition-all font-medium"
+          className="w-full bg-[#F5EFE4] border border-[#D1C4B0] focus:border-[#824707] rounded-xl pl-9 pr-3 py-2 text-xs text-[#0F0C08] placeholder-[#7A6652] focus:outline-none transition-all font-medium"
         />
       </div>
 
