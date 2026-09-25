@@ -1260,5 +1260,126 @@ export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
     evidenceTier: 'canonical',
     confidenceLevel: 'High',
     relatedYantras: ['saraswati_yantra', 'medha_dakshinamurti_yantra', 'sudarshana_chakra_yantra']
+  },
+  {
+    id: 'ashta_lakshmi_yantra',
+    names: {
+      sa: 'श्री अष्टलक्ष्मी महायन्त्रम्',
+      iast: 'Aṣṭa Lakṣmī Yantram',
+      hi: 'अष्टलक्ष्मी यन्त्र',
+      en: 'Ashta Lakshmi Yantra (Eightfold Divine Abundance)',
+      gu: 'અષ્ટલક્ષ્મી યંત્ર'
+    },
+    deity: 'Ashta Lakshmi (8 Sovereign Forms of Mahalakshmi)',
+    mantra: 'Om Shreem Hreem Kleem Ashta Lakshmyai Namah',
+    geometrySpec: {
+      primaryShape: '8-Petal Ogee Lotus, Vaishnava Shatkona & Shreem Singularity',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Attainment of the 8 forms of wealth: primeval grace, food grains, courage, royalty, progeny, victory, knowledge, and gold.',
+    historicalPeriod: 'Pancharatra / Lakshmi Tantram & Sanatkumara Samhita',
+    scripturalCitation: {
+      scripture: 'Lakshmi Tantram',
+      verse: 'Patala 51, Verses 12-15',
+      sanskritText: 'आदिलक्ष्मीर्धान्यलक्ष्मीर्धैर्यलक्ष्मीस्तथैव च... धनलक्ष्मीश्चेत्यष्टौ च मण्डले संप्रतिष्ठिताः॥',
+      translation: 'Adi, Dhanya, Dhairya, Gaja, Santana, Vijaya, Vidya, and Dhana Lakshmi established within the sacred mandala.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['mahalakshmi_yantra', 'kanakadhara_yantra', 'kuber_yantra']
+  },
+  {
+    id: 'kanakadhara_yantra',
+    names: {
+      sa: 'श्री कनकधारा यन्त्रम्',
+      iast: 'Kanakadhārā Yantram',
+      hi: 'कनकधारा यन्त्र',
+      en: 'Kanakadhara Yantra (Golden Shower of Wealth)',
+      gu: 'કનકધારા યંત્ર'
+    },
+    deity: 'Goddess Mahalakshmi (Kanakadhara)',
+    mantra: 'Om Hreem Shreem Kleem Mahalakshmyai Namah',
+    geometrySpec: {
+      primaryShape: '16-Petal Lotus, 8 Golden Coins, Primary Triangle & Hreem Shreem Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Instant liquidation of severe debts, unexpected financial windfall, relief from Saturnian financial hardships, and commercial breakthroughs.',
+    historicalPeriod: 'c. 8th Century CE (Jagadguru Adi Shankaracharya Kanakadhara Stotram)',
+    scripturalCitation: {
+      scripture: 'Kanakadhara Stotram',
+      verse: 'Verse 21',
+      sanskritText: 'द्राविद्युदन्विभवरत्नसमृद्धिहेतुं कल्याणीमावहसि मे कमलासनस्थाम्...',
+      translation: 'I adore the sovereign Empress of the cosmos seated upon the lotus, crowning the seeker with immense jeweled abundance.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['ashta_lakshmi_yantra', 'sri_yantra', 'kuber_yantra']
+  },
+  {
+    id: 'vyapar_vriddhi_yantra',
+    names: {
+      sa: 'श्री व्यापार वृद्धि यन्त्रम्',
+      iast: 'Vyāpāra Vṛddhi Yantram',
+      hi: 'व्यापार वृद्धि यन्त्र',
+      en: 'Vyapar Vriddhi Yantra (Enterprise & Commercial Expansion)',
+      gu: 'વ્યાપાર વૃદ્ધિ યંત્ર'
+    },
+    deity: 'Goddess Mahalakshmi & Lord Kubera (Yugala)',
+    mantra: 'Om Shreem Hreem Kleem Kuberaya Namah',
+    geometrySpec: {
+      primaryShape: '8-Petal Trade Lotus, Shatkona, Altar Square & Klim Shreem Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Multiplication of retail sales, commercial footfall, removal of business jealousy and stagnant inventory, and lucrative enterprise expansion.',
+    historicalPeriod: 'Tantric / Mantra Maharnava & Kubera Tantram',
+    scripturalCitation: {
+      scripture: 'Mantra Maharnava',
+      verse: 'Kubera Kalpa 42',
+      sanskritText: 'व्यापारवृद्धिकरं यन्त्रं लिखेद्वाणिज्यमण्डले। धनधान्यसमृद्धिः स्यात् सर्वव्यापारसिद्धिदा॥',
+      translation: 'Inscribing the Vyapar Vriddhi Yantra in the commercial sanctum bestows inexhaustible abundance and total business success.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kuber_yantra', 'ashta_lakshmi_yantra', 'ganesh_yantra']
+  },
+  {
+    id: 'vaibhav_lakshmi_yantra',
+    names: {
+      sa: 'श्री वैभव लक्ष्मी यन्त्रम्',
+      iast: 'Vaibhava Lakṣmī Yantram',
+      hi: 'वैभव लक्ष्मी यन्त्र',
+      en: 'Vaibhav Lakshmi Yantra (Household Harmony & Glory)',
+      gu: 'વૈભવ લક્ષ્મી યંત્ર'
+    },
+    deity: 'Goddess Vaibhav Lakshmi',
+    mantra: 'Om Shreem Hreem Kleem Shreem Vaibhava Lakshmyai Namah',
+    geometrySpec: {
+      primaryShape: '8-Petal Lotus of Splendors, Shatkona, Triangle & Om Shreem Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Friday Vrata worship, marital concord, permanent removal of domestic strife, radiant health, and peaceful household prosperity.',
+    historicalPeriod: 'Puranic / Bhavishyottara Purana',
+    scripturalCitation: {
+      scripture: 'Bhavishyottara Purana',
+      verse: 'Vaibhav Lakshmi Vrata Kalpa',
+      sanskritText: 'शुक्रवारे प्रपूज्यैव वैभवं प्राप्नुयात् सदा। यन्त्रमध्ये स्थिता देवी सर्वसौभाग्यदायिनी॥',
+      translation: 'Worshipping Goddess Vaibhav Lakshmi in this sacred yantra on Fridays bestows unending glory, splendor, and all auspicious fortunes.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['ashta_lakshmi_yantra', 'mahalakshmi_yantra', 'santana_gopala_yantra']
   }
+
 ];

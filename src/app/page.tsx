@@ -35,7 +35,7 @@ export default function MuseumHome() {
         ? 'vidya'
         : data.taxonomyCategory === 'protection_raksha' || data.id.includes('bisa') || data.id.includes('sudarshana') || data.id.includes('hanuman') || data.id.includes('pratyangira') || data.id.includes('mrityunjaya')
         ? 'protection'
-        : data.id.includes('kuber') || data.id.includes('lakshmi') || data.id.includes('sri')
+        : data.taxonomyCategory === 'lakshmi' || data.id.includes('kuber') || data.id.includes('lakshmi') || data.id.includes('sri') || data.id.includes('kanakadhara') || data.id.includes('vyapar')
         ? 'prosperity'
         : 'vastu'
   }));

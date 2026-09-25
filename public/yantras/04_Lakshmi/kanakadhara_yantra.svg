@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="bronzeLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A2508" />
+      <stop offset="50%" stop-color="#2D1505" />
+      <stop offset="100%" stop-color="#5B2E0B" />
+    </linearGradient>
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="85%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCDB3" />
+    </radialGradient>
+    <radialGradient id="binduGoldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B45309" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#D97706" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="goldCoinFill" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FEF08A" />
+      <stop offset="40%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </radialGradient>
+    <filter id="sacredShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1A0E05" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#sacredBg)" />
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+  
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="415" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="400" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="385" stroke-width="2.4" />
+  </g>
+
+  <!-- 3. Shodasha-Dala Ogee Lotus (षोडशदल पद्म - षोडश कनकधारा मण्डल) -->
+  <g id="shodasha_dala" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none">
+    <path d="M 449.28 245.00 C 443.18 188.90, 482.95 152.92, 500.00 115.00 C 517.05 152.92, 556.82 188.90, 550.72 245.00" />
+    <path d="M 550.72 245.00 C 566.56 190.83, 617.07 172.81, 647.33 144.31 C 648.58 185.86, 671.55 234.32, 644.45 283.82" />
+    <path d="M 644.45 283.82 C 679.81 239.84, 733.37 242.52, 772.24 227.76 C 757.48 266.63, 760.16 320.19, 716.18 355.55" />
+    <path d="M 716.18 355.55 C 765.68 328.45, 814.14 351.42, 855.69 352.67 C 827.19 382.93, 809.17 433.44, 755.00 449.28" />
+    <path d="M 755.00 449.28 C 811.10 443.18, 847.08 482.95, 885.00 500.00 C 847.08 517.05, 811.10 556.82, 755.00 550.72" />
+    <path d="M 755.00 550.72 C 809.17 566.56, 827.19 617.07, 855.69 647.33 C 814.14 648.58, 765.68 671.55, 716.18 644.45" />
+    <path d="M 716.18 644.45 C 760.16 679.81, 757.48 733.37, 772.24 772.24 C 733.37 757.48, 679.81 760.16, 644.45 716.18" />
+    <path d="M 644.45 716.18 C 671.55 765.68, 648.58 814.14, 647.33 855.69 C 617.07 827.19, 566.56 809.17, 550.72 755.00" />
+    <path d="M 550.72 755.00 C 556.82 811.10, 517.05 847.08, 500.00 885.00 C 482.95 847.08, 443.18 811.10, 449.28 755.00" />
+    <path d="M 449.28 755.00 C 433.44 809.17, 382.93 827.19, 352.67 855.69 C 351.42 814.14, 328.45 765.68, 355.55 716.18" />
+    <path d="M 355.55 716.18 C 320.19 760.16, 266.63 757.48, 227.76 772.24 C 242.52 733.37, 239.84 679.81, 283.82 644.45" />
+    <path d="M 283.82 644.45 C 234.32 671.55, 185.86 648.58, 144.31 647.33 C 172.81 617.07, 190.83 566.56, 245.00 550.72" />
+    <path d="M 245.00 550.72 C 188.90 556.82, 152.92 517.05, 115.00 500.00 C 152.92 482.95, 188.90 443.18, 245.00 449.28" />
+    <path d="M 245.00 449.28 C 190.83 433.44, 172.81 382.93, 144.31 352.67 C 185.86 351.42, 234.32 328.45, 283.82 355.55" />
+    <path d="M 283.82 355.55 C 239.84 320.19, 242.52 266.63, 227.76 227.76 C 266.63 242.52, 320.19 239.84, 355.55 283.82" />
+    <path d="M 355.55 283.82 C 328.45 234.32, 351.42 185.86, 352.67 144.31 C 382.93 172.81, 433.44 190.83, 449.28 245.00" />
+    <path d="M 500.00 240.00 L 500.00 115.00" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 599.50 259.79 L 647.33 144.31" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 683.85 316.15 L 772.24 227.76" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 740.21 400.50 L 855.69 352.67" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 760.00 500.00 L 885.00 500.00" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 740.21 599.50 L 855.69 647.33" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 683.85 683.85 L 772.24 772.24" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 599.50 740.21 L 647.33 855.69" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 500.00 760.00 L 500.00 885.00" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 400.50 740.21 L 352.67 855.69" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 316.15 683.85 L 227.76 772.24" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 259.79 599.50 L 144.31 647.33" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 240.00 500.00 L 115.00 500.00" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 259.79 400.50 L 144.31 352.67" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 316.15 316.15 L 227.76 227.76" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+    <path d="M 400.50 259.79 L 352.67 144.31" stroke-width="1.0" stroke-dasharray="3,3" opacity="0.6" />
+  </g>
+
+  <!-- 16 Golden Stream Inscriptions -->
+  <g id="kanaka_seeds" font-family="'Noto Sans Devanagari', serif" font-weight="700" font-size="16" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">
+    <text x="500.0" y="170.0">श्रीं</text>
+    <text x="626.3" y="195.1">ह्रीं</text>
+    <text x="733.3" y="266.7">क्लीं</text>
+    <text x="804.9" y="373.7">ऐं</text>
+    <text x="830.0" y="500.0">सौः</text>
+    <text x="804.9" y="626.3">ॐ</text>
+    <text x="733.3" y="733.3">श्रीं</text>
+    <text x="626.3" y="804.9">ह्रीं</text>
+    <text x="500.0" y="830.0">क्लीं</text>
+    <text x="373.7" y="804.9">ऐं</text>
+    <text x="266.7" y="733.3">सौः</text>
+    <text x="195.1" y="626.3">ॐ</text>
+    <text x="170.0" y="500.0">श्रीं</text>
+    <text x="195.1" y="373.7">ह्रीं</text>
+    <text x="266.7" y="266.7">क्लीं</text>
+    <text x="373.7" y="195.1">श्रीं</text>
+  </g>
+
+  <!-- Intermediate Girdles -->
+  <circle cx="500" cy="500" r="260" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+  <circle cx="500" cy="500" r="250" stroke="url(#bronzeMain)" stroke-width="1.6" fill="none" />
+
+  <!-- 4. Inner Ashta-Dala Lotus (अष्टदल पद्म) -->
+  <g id="ashtadala_lotus" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none">
+    <path d="M 436.86 347.56 C 427.36 307.77, 477.65 273.10, 500.00 245.00 C 522.35 273.10, 572.64 307.77, 563.14 347.56" />
+    <path d="M 563.14 347.56 C 584.57 312.71, 644.64 323.75, 680.31 319.69 C 676.25 355.36, 687.29 415.43, 652.44 436.86" />
+    <path d="M 652.44 436.86 C 692.23 427.36, 726.90 477.65, 755.00 500.00 C 726.90 522.35, 692.23 572.64, 652.44 563.14" />
+    <path d="M 652.44 563.14 C 687.29 584.57, 676.25 644.64, 680.31 680.31 C 644.64 676.25, 584.57 687.29, 563.14 652.44" />
+    <path d="M 563.14 652.44 C 572.64 692.23, 522.35 726.90, 500.00 755.00 C 477.65 726.90, 427.36 692.23, 436.86 652.44" />
+    <path d="M 436.86 652.44 C 415.43 687.29, 355.36 676.25, 319.69 680.31 C 323.75 644.64, 312.71 584.57, 347.56 563.14" />
+    <path d="M 347.56 563.14 C 307.77 572.64, 273.10 522.35, 245.00 500.00 C 273.10 477.65, 307.77 427.36, 347.56 436.86" />
+    <path d="M 347.56 436.86 C 312.71 415.43, 323.75 355.36, 319.69 319.69 C 355.36 323.75, 415.43 312.71, 436.86 347.56" />
+    <path d="M 500.00 335.00 L 500.00 245.00" stroke-width="1.2" opacity="0.7" />
+    <path d="M 616.67 383.33 L 680.31 319.69" stroke-width="1.2" opacity="0.7" />
+    <path d="M 665.00 500.00 L 755.00 500.00" stroke-width="1.2" opacity="0.7" />
+    <path d="M 616.67 616.67 L 680.31 680.31" stroke-width="1.2" opacity="0.7" />
+    <path d="M 500.00 665.00 L 500.00 755.00" stroke-width="1.2" opacity="0.7" />
+    <path d="M 383.33 616.67 L 319.69 680.31" stroke-width="1.2" opacity="0.7" />
+    <path d="M 335.00 500.00 L 245.00 500.00" stroke-width="1.2" opacity="0.7" />
+    <path d="M 383.33 383.33 L 319.69 319.69" stroke-width="1.2" opacity="0.7" />
+  </g>
+
+  <!-- 8 Golden Abundance Coins (अष्ट कनक बिन्दु) -->
+  <g id="golden_coins">
+    
+      <circle cx="580.4" cy="306.0" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="580.4" cy="306.0" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="580.4" y="306.0" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+    
+      <circle cx="694.0" cy="419.6" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="694.0" cy="419.6" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="694.0" y="419.6" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+    
+      <circle cx="694.0" cy="580.4" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="694.0" cy="580.4" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="694.0" y="580.4" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+    
+      <circle cx="580.4" cy="694.0" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="580.4" cy="694.0" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="580.4" y="694.0" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+    
+      <circle cx="419.6" cy="694.0" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="419.6" cy="694.0" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="419.6" y="694.0" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+    
+      <circle cx="306.0" cy="580.4" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="306.0" cy="580.4" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="306.0" y="580.4" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+    
+      <circle cx="306.0" cy="419.6" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="306.0" cy="419.6" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="306.0" y="419.6" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+    
+      <circle cx="419.6" cy="306.0" r="14" fill="url(#goldCoinFill)" stroke="#3E1E07" stroke-width="1.5" />
+      <circle cx="419.6" cy="306.0" r="10" fill="none" stroke="#FEF08A" stroke-width="1" />
+      <text x="419.6" y="306.0" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="11" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">श्रीं</text>
+    
+  </g>
+
+  <!-- Inner Sanctuary Ring -->
+  <circle cx="500" cy="500" r="160" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+  <circle cx="500" cy="500" r="150" stroke="url(#bronzeMain)" stroke-width="1.4" stroke-dasharray="4,3" fill="none" />
+
+  <!-- 5. Central Downward Kanakadhara Triangle (कनकधारा महात्रिकोण) -->
+  <polygon points="500,610 405,445 595,445" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" />
+  <polygon points="500,590 425,460 575,460" stroke="url(#bronzeMain)" stroke-width="1.4" stroke-dasharray="3,3" fill="none" />
+
+  <!-- 6. Bindu with Kanakadhara Mahabeeja (ह्रीं श्रीं) -->
+  <g id="bindu_zone" filter="url(#sacredShadow)">
+    <circle cx="500" cy="500" r="46" fill="url(#binduGoldGlow)" />
+    <circle cx="500" cy="500" r="8" fill="#1A0E05" />
+    <circle cx="500" cy="500" r="3.5" fill="#F4EEE0" />
+    <text x="500" y="475" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="22" fill="#1A0E05" text-anchor="middle">ह्रीं</text>
+    <text x="500" y="525" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="28" fill="#1A0E05" text-anchor="middle">श्रीं</text>
+  </g>
+</svg>
