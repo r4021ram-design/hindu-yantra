@@ -234,6 +234,16 @@ export function YantraAltarStage({
           onMouseMove={handleYantraMouseMove}
           onMouseLeave={handleYantraMouseLeave}
           onClick={handleYantraCanvasClick}
+          onTouchMove={(e) => {
+            if (e.touches && e.touches[0]) {
+              handleYantraMouseMove({
+                currentTarget: e.currentTarget,
+                clientX: e.touches[0].clientX,
+                clientY: e.touches[0].clientY
+              } as unknown as React.MouseEvent<HTMLDivElement>);
+            }
+          }}
+          onTouchEnd={handleYantraMouseLeave}
         >
           {/* Sacred Corner Filigree Accents */}
           <div className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#B38226] rounded-tl-lg pointer-events-none z-20" />

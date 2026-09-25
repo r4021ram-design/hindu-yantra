@@ -52,6 +52,13 @@ export function YantraLibraryDrawer({
 }: YantraLibraryDrawerProps) {
   if (!isSidebarOpen) return null;
 
+  const handleSelect = (id: string) => {
+    setSelectedYantraId(id);
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      setIsSidebarOpen(false);
+    }
+  };
+
   return (
     <aside className="lg:col-span-3 bg-[#FDFBF7] border-2 border-[#D1C4B0] rounded-3xl p-4 sm:p-5 space-y-3.5 h-[calc(100vh-140px)] overflow-y-auto no-scrollbar shadow-[0_4px_18px_rgba(42,20,5,0.06)] sticky top-24 z-30">
       {/* Header with Title and Mode Switcher */}
@@ -182,7 +189,7 @@ export function YantraLibraryDrawer({
             return (
               <button
                 key={y.id}
-                onClick={() => setSelectedYantraId(y.id)}
+                onClick={() => handleSelect(y.id)}
                 className={`w-full text-left p-3 rounded-2xl border transition-all cursor-pointer flex flex-col gap-1 ${
                   isSelected
                     ? 'bg-[#F0E4D0] border-[#824707] text-[#0F0C08] shadow-xs ring-1 ring-[#824707]/40'
@@ -249,7 +256,7 @@ export function YantraLibraryDrawer({
                       return (
                         <button
                           key={y.id}
-                          onClick={() => setSelectedYantraId(y.id)}
+                          onClick={() => handleSelect(y.id)}
                           className={`w-full text-left p-2.5 rounded-xl border transition-all cursor-pointer flex flex-col gap-0.5 ${
                             isSelected
                               ? 'bg-[#F0E4D0] border-[#824707] text-[#0F0C08] ring-1 ring-[#824707]/30'
