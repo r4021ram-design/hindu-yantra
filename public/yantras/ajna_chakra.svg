@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Ājñā Chakra (आज्ञा चक्र - २ दल मनस् तत्त्व / इतरलिङ्ग) - Pure Consecrated Kundalini Chakra Vector Matrix -->
+  <defs>
+    <!-- Master Dark Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF4D4" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA7C11" />
+      <stop offset="100%" stop-color="#6B4B03" />
+    </linearGradient>
+
+    <!-- Element-Specific Mandala Gradient -->
+    <linearGradient id="ajnaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+     <stop offset="40%" stop-color="#F5F5F5" />
+     <stop offset="75%" stop-color="#E0E0E0" />
+     <stop offset="100%" stop-color="#BDBDBD" />
+    </linearGradient>
+
+    <!-- Sacred Parchment Radial Background -->
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDFBF7" />
+      <stop offset="60%" stop-color="#F5EFE1" />
+      <stop offset="85%" stop-color="#EBE0CC" />
+      <stop offset="100%" stop-color="#DDD0B8" />
+    </radialGradient>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="sacredGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sacred Backdrop Disc -->
+  <circle cx="500" cy="500" r="490" fill="url(#sacredBg)" stroke="url(#bronzeMain)" stroke-width="4" />
+  <circle cx="500" cy="500" r="482" fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.75" />
+
+  <!-- Concentric Outer Girdles -->
+  <g stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="465" stroke-width="3" />
+    <circle cx="500" cy="500" r="280" stroke-width="2.5" />
+    <circle cx="500" cy="500" r="268" stroke-width="1.5" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- 2 Pure Moon-White Lotus Petals (हिमकर शुभ्र द्विदलि) -->
+  <g id="petals" stroke="url(#bronzeMain)" stroke-width="3" stroke-linejoin="round">
+    <!-- Right Petal (Ham) -->
+    <path d="M 500 320 C 650 320, 780 400, 880 500 C 780 600, 650 680, 500 680 Z" fill="#FFFFFF" fill-opacity="0.6" />
+    <!-- Left Petal (Ksham) -->
+    <path d="M 500 320 C 350 320, 220 400, 120 500 C 220 600, 350 680, 500 680 Z" fill="#FFFFFF" fill-opacity="0.6" />
+  </g>
+
+  <!-- Right Petal Syllable: हं (Ha - Sun / Pingala) -->
+  <g font-family="'Noto Sans Devanagari', 'Mangal', 'Yatra One', 'Sanskrit', serif" font-size="44" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle" dominant-baseline="central">
+    <circle cx="680" cy="500" r="38" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="2" />
+    <text x="680" y="503">हं</text>
+  </g>
+
+  <!-- Left Petal Syllable: क्षं (Ksha - Moon / Ida) -->
+  <g font-family="'Noto Sans Devanagari', 'Mangal', 'Yatra One', 'Sanskrit', serif" font-size="44" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle" dominant-baseline="central">
+    <circle cx="320" cy="500" r="38" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="2" />
+    <text x="320" y="503">क्षं</text>
+  </g>
+
+  <!-- Inner Circle & Inverted Yoni Triangle (योनि त्रिकोण) -->
+  <g id="ajnaCore">
+    <circle cx="500" cy="500" r="180" fill="url(#ajnaGrad)" fill-opacity="0.5" stroke="url(#bronzeMain)" stroke-width="3" />
+    <circle cx="500" cy="500" r="165" fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="4 3" />
+
+    <!-- Inverted Yoni Triangle (Apex pointing downward / South) -->
+    <polygon points="360,420 640,420 500,640" fill="#FFFFFF" fill-opacity="0.8" stroke="url(#bronzeMain)" stroke-width="3" />
+    <polygon points="380,432 620,432 500,620" fill="none" stroke="url(#goldAccent)" stroke-width="1.8" />
+  </g>
+
+  <!-- Lightning-like Itara Linga (तडिदाकार इतरलिङ्ग) -->
+  <g id="itaraLinga">
+    <ellipse cx="500" cy="565" rx="30" ry="10" fill="#2E1C0C" opacity="0.4" />
+    <!-- Radiant Linga Body -->
+    <rect x="478" y="490" width="44" height="65" rx="22" fill="#FFFFFF" stroke="url(#goldAccent)" stroke-width="2.5" filter="url(#sacredGlow)" />
+    <!-- Flash of Lightning Streak -->
+    <path d="M 495 500 L 505 515 L 493 525 L 507 545" stroke="#FFD700" stroke-width="2" fill="none" />
+  </g>
+
+  <!-- Supreme Pranava Beeja: ॐ (Om) with Glowing Nada-Bindu -->
+  <g id="pranavaBeeja">
+    <circle cx="500" cy="425" r="54" fill="#FFFDF8" stroke="url(#bronzeMain)" stroke-width="2.6" />
+    <circle cx="500" cy="425" r="48" fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="4 2" />
+    <text x="500" y="442" font-family="'Noto Sans Devanagari', 'Mangal', 'Yatra One', serif" font-size="52" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle">ॐ</text>
+  </g>
+
+  <!-- Inner Shastric Identification -->
+  <text x="500" y="775" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="20" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle" letter-spacing="1">आज्ञा चक्र • मनस् / ज्ञान तत्त्व (द्विदलि)</text>
+  <text x="500" y="800" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="14" fill="#6B4B03" text-anchor="middle">रुद्रग्रन्थि • हाकिणी शक्ति • इतरलिङ्ग • ॐ प्रणव</text>
+</svg>

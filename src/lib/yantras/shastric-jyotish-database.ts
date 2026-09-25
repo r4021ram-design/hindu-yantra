@@ -6197,4 +6197,1395 @@ export const SHASTRIC_JYOTISH_DATABASE: Record<string, YantraShastricEntry> = {
     ]
   }
 
+,
+
+  durga_yantra: {
+    id: 'durga_yantra',
+    taxonomyCategory: 'devi_shakti',
+    lineageAttribution: 'शाक्त आगम एवं मार्कण्डेय पुराण (दुर्गा सप्तशती / देवी माहात्म्य)',
+    nameSanskrit: 'श्रीमहादुर्गा यन्त्रम् (दुर्गा बीसा यन्त्र)',
+    nameHindi: 'महादुर्गा यन्त्र (दुर्गा बीसा)',
+    nameEnglish: 'Maha Durga Yantra (The Invincible Fortress of Durga Beesa)',
+    subTitle: 'The Supreme Shaktic Shield for Overcoming Catastrophes, Eliminating Hostile Forces & Fearlessness',
+    presidingDeity: 'भगवती महादुर्गा (महिषासुरमर्दिनी / नवदुर्गा)',
+    tradition: 'शाक्त आगम व दुर्गा सप्तशती परम्परा',
+    corePhilosophy: 'दुर्गम दैत्यों और समस्त सांसारिक कष्टों से तारने वाली आदिशक्ति। नौ त्रिकोणों का रहस्यमयी अंतर्ग्रंथन साधक के समस्त आंतरिक षडरिपुओं और बाह्य संकटों का समूल नाश कर अभय कवच प्रदान करता है।',
+    citations: [
+      {
+        sourceScripture: 'मार्कण्डेय पुराण (देवी माहात्म्य)',
+        chapterOrVerse: 'अध्याय ४, श्लोक २४',
+        sanskritSloka: 'दुर्गे स्मृता हरसि भीतिमशेषजन्तोः\\nस्वस्थैः स्मृता मतिमतीव शुभां ददासि।\\nदारिद्र्यदुःखभयहारिणी का त्वदन्या\\nसर्वोपकारकरणाय सदार्द्रचित्ता॥',
+        hindiMeaning: 'हे दुर्गे! आप स्मरण करने पर सब प्राणियों का भय हर लेती हैं और स्वस्थ पुरुषों द्वारा चिंतन करने पर परम कल्याणमयी बुद्धि प्रदान करती हैं। दरिद्रता, दुःख और भय का नाश करने वाली आपके सिवा अन्य कौन है जिसका चित्त सबका उपकार करने के लिए सदा दयार्द्र रहता हो?',
+        englishMeaning: 'O Durga, when remembered you dispel fear from every creature, and when meditated upon in serenity you bestow noble wisdom. Who other than you, whose heart is ever overflowing with compassion, can eradicate sorrow, poverty, and dread?'
+      },
+      {
+        sourceScripture: 'देवी माहात्म्य (दुर्गा सप्तशती)',
+        chapterOrVerse: 'अध्याय १२, श्लोक १०',
+        sanskritSloka: 'सर्वाबाधाप्रशमनं त्रैलोक्यस्याखिलेश्वरि।\\nएवमेव त्वया कार्यमस्मद्वैरिविनाशनम्॥',
+        hindiMeaning: 'हे अखिलेश्वरी! आप तीनों लोकों की समस्त बाधाओं को शांत करें और हमारे शत्रुओं का संहार करें।',
+        englishMeaning: 'O Sovereign Mother of the Three Worlds, appease all afflictions and extinguish all hostile obstacles that assail us.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'त्रैलोक्य रक्षक भूपुर प्राकार',
+        nameEnglish: 'Citadel of Universal Protection & 4 Gateways',
+        chakraTitle: 'भूपुर मण्डल (4 Sacred Gateways)',
+        presidingDeity: 'इन्द्रादि लोकपाल एवं अष्ट भैरव',
+        mudraShakti: 'अभय-खड्ग मुद्रा',
+        yoginiClass: 'प्रकट योगिनी वर्ग',
+        geometryType: 'Concentric Quadrangle with T-Shaped Portals',
+        significance: 'समस्त बाह्य नकारात्मक ऊर्जा, नजर दोष और तांत्रिक आक्रमणों का तत्काल निवारण।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'अष्टदल अष्टमातृका पद्म',
+        nameEnglish: '8-Petal Lotus of the Ashta-Matrikas',
+        chakraTitle: 'अष्टदल पद्म (8 Sacred Petals)',
+        presidingDeity: 'ब्राह्मी, माहेश्वरी, कौमारी, वैष्णवी, वाराही, नारसिंही, ऐन्द्री, चामुण्डा',
+        mudraShakti: 'त्रिशूल-पाश मुद्रा',
+        yoginiClass: 'गुप्त योगिनी वर्ग',
+        geometryType: '8 Symmetrical Radial Ogee Lotus Petals',
+        significance: 'आठों दिशाओं से साधक के प्राण, परिवार और मर्यादा की अखण्ड रक्षा।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'नवकोण दुर्गा बीसा चक्र',
+        nameEnglish: '9-Triangle Interlocking Matrix (Durga Beesa Star)',
+        chakraTitle: 'नवकोण मण्डल (9 Interlocking Forcefields)',
+        presidingDeity: 'नवदुर्गा (शैलपुत्री से सिद्धिदात्री पर्यन्त)',
+        mudraShakti: 'धनुर्बाण चक्र मुद्रा',
+        yoginiClass: 'गुप्ततर योगिनी वर्ग',
+        geometryType: '9 Interlaced Dynamic Triangles Generating 20 Sacred Sub-Spaces',
+        significance: 'अष्टपाशों का भंजन तथा व्यापार, कार्य और मुकदमों में बीसा यन्त्र द्वारा अचूक सिद्धि।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'त्रिशक्ति अंतर्त्रिकोण',
+        nameEnglish: 'Inner Triangle of the Three Primordial Goddesses',
+        chakraTitle: 'त्रिकोण मण्डल (Trikona of Tridevi)',
+        presidingDeity: 'महाकाली (तमस), महालक्ष्मी (रजस), महासरस्वती (सत्व)',
+        mudraShakti: 'वरदाभय मुद्रा',
+        yoginiClass: 'संप्रदाय योगिनी वर्ग',
+        geometryType: 'Inverted Central Golden Triangle',
+        significance: 'त्रिगुणों का संतुलन और संपूर्ण सृष्टि की रक्षा सामर्थ्य।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'परम बिन्दु एवं दुं बीज',
+        nameEnglish: 'Supreme Singularity & Dum Beeja',
+        chakraTitle: 'मध्य बिन्दु (The Cosmic Nexus)',
+        presidingDeity: 'परा महादुर्गा',
+        mudraShakti: 'महाशक्ति मुद्रा',
+        yoginiClass: 'परा संवित् शक्ति',
+        geometryType: 'Golden Central Singularity Point',
+        significance: 'सच्चिदानंदमय अभेद्य आत्म-रक्षा और मोक्ष।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'राहु (Rahu) व मंगल (Mars)',
+      planetSanskrit: 'राहु-भौम दोष नाशक एवं पराक्रम योग',
+      friendlyRashis: ['मेष', 'वृश्चिक', 'सिंह', 'कुम्भ'],
+      friendlyNakshatras: ['आर्द्रा', 'स्वाति', 'शतभिषा', 'मृगशिरा'],
+      doshaRemedies: [
+        {
+          doshaName: 'राहु जनित भय, कालसर्प दोष व भूत-प्रेत बाधा',
+          description: 'अकारण अज्ञात भय, रात में भयानक स्वप्न आना, व्यापार में अचानक बाधाएं और नजर लगना।',
+          reliefMechanism: 'दुर्गा यन्त्र की नित्य सिन्दूर और धूप से पूजा करने पर राहु के समस्त अनिष्ट प्रभाव नष्ट हो जाते हैं।'
+        },
+        {
+          doshaName: 'मंगल जनित अंगारक दोष व शत्रु षड्यंत्र',
+          description: 'शत्रुओं द्वारा परेशान किया जाना, बार-बार चोट लगना या कानूनी मुकदमों का तनाव।',
+          reliefMechanism: 'मंगलवार और अष्टमी तिथि को यन्त्र के समक्ष दुर्गा सप्तशती के अर्गला व कीलक का पाठ अचूक रक्षा करता है।'
+        }
+      ],
+      lifeAspects: ['शत्रु-दमन', 'सर्वविघ्न निवारण', 'आत्मविश्वास व साहस', 'आकस्मिक संकटों से रक्षा'],
+      wearOrInstallDirection: 'पूर्व (East) अथवा उत्तर (North)',
+      favorableDay: 'मंगलवार (Tuesday) अथवा शुक्रवार (Friday)',
+      auspiciousTithi: 'शुक्ल अष्टमी, नवमी, अथवा गुप्त/शारदीय/वासन्तीय नवरात्रि',
+      metalPreference: 'स्वर्ण (Gold), रजत (Silver), ताम्र (Copper) अथवा अष्टधातु',
+      beejMantra: 'ॐ दुं दुर्गायै नमः॥ / ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे॥',
+      gayatriMantra: 'ॐ कात्यायन्यै विद्महे कन्याकुमार्यै धीमहि तन्नो दुर्गिः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'रुद्राक्ष माला अथवा रक्त चन्दन माला',
+      dhyanaSloka: 'विद्युद्दामसमप्रभां मृगपतिस्कन्धस्थितां भीषणां कन्याभिः करवालखेटविलसद्धस्ताभिरासेविताम्। हस्तैश्चक्रगदासिखेटविशिखांश्चापं गुणं तर्जनीं बिभ्राणामनलात्मिकां शशिधरां दुर्गां त्रिनेत्रां भजे॥',
+      pratishthaVidhiSummary: [
+        '१. लाल वस्त्र बिछाकर ताम्र अथवा भोजपत्र पर निर्मित दुर्गा यन्त्र स्थापित करें।',
+        '२. कुमकुम, रक्तचन्दन और लाल गुड़हल के पुष्प अर्पित करें।',
+        '३. गूगल अथवा लोबान की धूप देकर शुद्ध घी का दीप प्रज्वलित करें।',
+        '४. "ॐ दुं दुर्गायै नमः" मन्त्र की न्यूनतम ५ माला जप करें और सिद्ध कुंजिका स्तोत्र का पाठ करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Protection',
+        problem: 'अज्ञात शत्रुओं का षड्यंत्र, निरंतर नकारात्मक शक्तियों का आभास या नजर दोष।',
+        remedyProtocol: 'दुर्गा बीसा यन्त्र को घर के मुख्य द्वार के भीतरी भाग या पूजा स्थान में पूर्व दिशा की ओर स्थापित कर नित्य लाल पुष्प और धूप अर्पित करें।'
+      },
+      {
+        category: 'Spiritual',
+        problem: 'मन में निरंतर भय, संशय, आत्मविश्वास की कमी और निर्णय लेने में असमर्थता।',
+        remedyProtocol: 'प्रतिदिन प्रातः यन्त्र के मध्य बिन्दु पर ध्यान केन्द्रित कर ९ बार "ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे" और १०८ बार "ॐ दुं दुर्गायै नमः" का जप करें।'
+      }
+    ]
+  },
+
+  chandika_yantra: {
+    id: 'chandika_yantra',
+    taxonomyCategory: 'devi_shakti',
+    lineageAttribution: 'शाक्त कौल परम्परा, डामर तन्त्र एवं दुर्गा सप्तशती नवाक्षरी रहस्य',
+    nameSanskrit: 'श्रीमहाचण्डिका यन्त्रम् (सप्तशती नवाक्षर मण्डल)',
+    nameHindi: 'महाचण्डिका यन्त्र',
+    nameEnglish: 'Maha Chandika Yantra (The Cosmic Sovereign Matrix of Chandi Saptashati)',
+    subTitle: 'The Primordial Tantric Wrath of Transcendental Justice, Annihilation of Evil & Navarna Activation',
+    presidingDeity: 'भगवती महाचण्डिका (अष्टादशभुजा महालक्ष्मी स्वरूपिणी)',
+    tradition: 'कौल शाक्त एवं चण्डीविधान परम्परा',
+    corePhilosophy: 'ब्रह्माण्डीय न्याय और परम शौर्य की पराशक्ति। जब देवता भी असुरों के संहार में असमर्थ हो जाते हैं, तब समस्त देवों के सम्मिलित तेज से महाचण्डिका का प्राकट्य होता है। यह यन्त्र नकारात्मकता को क्षण मात्र में भस्म कर साधक को अपराजेय सामर्थ्य प्रदान करता है।',
+    citations: [
+      {
+        sourceScripture: 'दुर्गा सप्तशती (प्राधानिक रहस्यम्)',
+        chapterOrVerse: 'श्लोक ४-६',
+        sanskritSloka: 'सर्वस्याद्या महालक्ष्मीस्त्रिगुणा परमेश्वरी।\\nलक्ष्यालक्ष्यस्वरूपा सा व्याप्य कृत्स्नं व्यवस्थिता॥\\nमातुलुङ्गं गदां खेटं पानपात्रं च बिभ्रती।\\nनागं लिङ्गं च योनिं च बिभ्रती नृप मूर्धनि॥',
+        hindiMeaning: 'सबकी आदिभूता त्रिगुणामयी परमेश्वरी महालक्ष्मी (महाचण्डिका) ही हैं। वे ही दृश्य और अदृश्य समस्त विश्व को व्याप्त करके स्थित हैं।',
+        englishMeaning: 'Primordial above all is Maha Lakshmi (Maha Chandika), the Supreme Empress endowed with the three Gunas, permeating all manifest and unmanifest reality with supreme sovereignty.'
+      },
+      {
+        sourceScripture: 'रुद्रयामल तन्त्रम्',
+        chapterOrVerse: 'चण्डी प्रकरण',
+        sanskritSloka: 'चण्डिका पूजिता येन स पूज्यो भुवनत्रये।\\nतस्य गेहे वसेल्लक्ष्मीः स्तम्भ्यन्ते सर्वशत्रवः॥',
+        hindiMeaning: 'जिस साधक ने विधिपूर्वक भगवती चण्डिका की यन्त्र में पूजा की है, वह तीनों लोकों में पूजनीय हो जाता है; उसके घर में स्थायी लक्ष्मी का वास होता है और समस्त शत्रु स्तम्भित हो जाते हैं।',
+        englishMeaning: 'One who worships Chandika through her sacred yantra becomes revered across the three worlds; abiding prosperity dwells in their home and all hostile adversaries are subdued.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'क्रोध भैरव भूपुर प्राकार',
+        nameEnglish: 'Citadel of Righteous Wrath & Fortification',
+        chakraTitle: 'भूपुर एवं चार द्वार',
+        presidingDeity: 'असिताङ्ग, रुरु, चण्ड, क्रोध, उन्मत्त, कपाली, भीषण, संहार भैरव',
+        mudraShakti: 'खड्ग-मुद्गर मुद्रा',
+        yoginiClass: 'प्रकट चण्डी योगिनी',
+        geometryType: 'Quadrangle Citadel with 4 Stepped Gateways',
+        significance: 'आठों दिशाओं से किसी भी दुष्ट विचार या तांत्रिक प्रयोग को प्रवेश करने से रोकना।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'षोडशदल प्रकृति पद्म',
+        nameEnglish: '16-Petal Lotus of Macrocosmic Power',
+        chakraTitle: 'षोडशदल पद्म (16 Sacred Petals)',
+        presidingDeity: 'षोडश नित्या एवं षोडश कला शक्तियाँ',
+        mudraShakti: 'शूल-डमरू मुद्रा',
+        yoginiClass: 'गुप्त योगिनी वर्ग',
+        geometryType: '16 Radial Symmetrical Lotus Petals with Spines',
+        significance: 'मनुष्य की १६ कलाओं और इन्द्रियों को अदम्य आत्मबल में रूपान्तरित करना।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'अष्टदल मातृका पद्म',
+        nameEnglish: '8-Petal Lotus of Primal Shaktis',
+        chakraTitle: 'अष्टदल पद्म (8 Petals of the Mothers)',
+        presidingDeity: 'अष्ट मातृका गण (ब्राह्म्यादि)',
+        mudraShakti: 'अङ्कुश-पाश मुद्रा',
+        yoginiClass: 'गुप्ततर योगिनी वर्ग',
+        geometryType: '8 Symmetrical Petals with Golden Veins',
+        significance: 'अष्टविध भय (मृत्यु, रोग, अग्नि, जल, सर्प, चोर, शत्रु, भूत) का समूल विनाश।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'त्रिमुण्ड त्रिकोण नवाक्षर चक्र',
+        nameEnglish: 'Tri-Shakti Inverted Triangle with Navarna Matrix',
+        chakraTitle: 'त्रिकोण मण्डल (Tri-Angular Fire Matrix)',
+        presidingDeity: 'महाकाली, महालक्ष्मी, महासरस्वती सामरस्य',
+        mudraShakti: 'योनि-त्रिशूल मुद्रा',
+        yoginiClass: 'रहस्य योगिनी वर्ग',
+        geometryType: 'Concentric Inverted Equilateral Triangle with Navarna Inscriptions',
+        significance: 'नवाक्षर मन्त्र "ऐं ह्रीं क्लीं चामुण्डायै विच्चे" की चैतन्य ऊर्जा का जागरण।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'महाबिन्दु एवं ह्लीं-क्लीं बीज',
+        nameEnglish: 'Absolute Singularity & Transcendent Chandi Seat',
+        chakraTitle: 'मध्य बिन्दु (The Cosmic Apex)',
+        presidingDeity: 'परम महाचण्डिका',
+        mudraShakti: 'चण्डी-संहार मुद्रा',
+        yoginiClass: 'परा संवित् शक्ति',
+        geometryType: 'Radiant Fiery Singularity Point',
+        significance: 'परब्रह्म स्वरूपा चण्डिका का साक्षात सान्निध्य और अभय पद।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'मंगल (Mars) व केतु (Ketu)',
+      planetSanskrit: 'मंगल-केतु आग्नेय योग शामक',
+      friendlyRashis: ['वृश्चिक', 'मेष', 'धनु', 'सिंह'],
+      friendlyNakshatras: ['चित्रा', 'धनिष्ठा', 'मूल', 'मघा'],
+      doshaRemedies: [
+        {
+          doshaName: 'अंगारक दोष, रक्त विकार व शत्रु भय',
+          description: 'भूमि-सम्पत्ति को लेकर गंभीर विवाद, विरोधियों द्वारा हानि पहुँचाने की आशंका, रक्त संबंधी विकार।',
+          reliefMechanism: 'चण्डिका यन्त्र पर लाल चन्दन व अष्टगंध लगाकर नवाक्षर मन्त्र का जप करने से शत्रु की बुद्धि स्वतः परास्त होती है।'
+        }
+      ],
+      lifeAspects: ['अपराजेय विजय', 'कोर्ट-कचहरी व भूमि विवाद में विजय', 'शत्रुओं का स्तम्भन', 'अखण्ड साहस'],
+      wearOrInstallDirection: 'दक्षिण (South) अथवा पूर्व (East)',
+      favorableDay: 'मंगलवार (Tuesday) अथवा अष्टमी/चतुर्दशी',
+      auspiciousTithi: 'नवरात्रि की महाअष्टमी अथवा महानवमी',
+      metalPreference: 'ताम्र (Copper), कांसा (Bronze) अथवा पंचधातु',
+      beejMantra: 'ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे॥',
+      gayatriMantra: 'ॐ चण्डिकायै विद्महे महिषासुरमर्दिन्यै धीमहि तन्नो देवी प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'रुद्राक्ष माला अथवा रक्त चन्दन माला',
+      dhyanaSloka: 'ॐ अक्षस्रक्परशुं गदेषुकुलिशं पद्मं धनुष्कुण्डिकां दण्डं शक्तिमसिं च चर्म जलजं घण्टां सुराभाजनम्। शूलं पाशसुदर्शने च दधतीं हस्तैः प्रसन्नाननां सेवे सैरिभमर्दिनीमिह महालक्ष्मीं सरोजस्थिताम्॥',
+      pratishthaVidhiSummary: [
+        '१. लाल वस्त्र पर ताम्र चण्डिका यन्त्र की स्थापना करें।',
+        '२. सिन्दूर, लाल कनेर के पुष्प और अनार के दाने अर्पित करें।',
+        '३. गूगल की धूप देकर सरसों के तेल या तिल के तेल का दीपक जलाएं।',
+        '४. नवाक्षर मन्त्र "ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे" का १०८ बार जप करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Protection',
+        problem: 'व्यापारिक ईर्ष्या, तीव्र शत्रुता और परिवार पर लगातार आने वाले अज्ञात संकट।',
+        remedyProtocol: 'चण्डिका यन्त्र को मंगलवार की संध्या लाल वस्त्र पर स्थापित करें, लोबान की धूप दें और ११ बार दुर्गा कवच का पाठ करें।'
+      },
+      {
+        category: 'Spiritual',
+        problem: 'साधना में बाधा, एकाग्रता का भंग होना तथा भय व भ्रम का निवारण।',
+        remedyProtocol: 'प्रातःकाल स्नानोपरान्त यन्त्र के बिन्दु पर त्राटक करते हुए १०८ बार नवाक्षर मन्त्र का स्पष्ट उच्चारण करें।'
+      }
+    ]
+  },
+
+  annapurna_yantra: {
+    id: 'annapurna_yantra',
+    taxonomyCategory: 'devi_shakti',
+    lineageAttribution: 'अन्नपूर्णा उपनिषद् (अथर्ववेद), काशी-रहस्य एवं रुद्रयामल तन्त्र',
+    nameSanskrit: 'श्रीमहान्नपूर्णा यन्त्रम् (अन्नब्रह्म-रसविद्या मण्डल)',
+    nameHindi: 'अन्नपूर्णा यन्त्र',
+    nameEnglish: 'Sri Annapurna Yantra (Cosmic Matrix of Perpetual Nourishment & Prosperity)',
+    subTitle: 'The Celestial Mother of Food Abundance, Agrarian Prosperity, Hospitality & Never-Empty Storehouse',
+    presidingDeity: 'भगवती अन्नपूर्णा (काशी विश्वनाथ-वल्लभा / अन्नब्रह्ममयी)',
+    tradition: 'काशी शाक्त परम्परा एवं वैदिक अन्नविद्या',
+    corePhilosophy: 'अन्न ही परब्रह्म है ("अन्नं वै ब्रह्म")। भगवान शिव को भी भिक्षा प्रदान करने वाली माता अन्नपूर्णा समस्त चराचर जगत के पोषण की अधिष्ठात्री हैं। यह यन्त्र घर, भोजनालय और प्रतिष्ठान में कभी अन्न, धन और प्रेम की कमी नहीं होने देता।',
+    citations: [
+      {
+        sourceScripture: 'अन्नपूर्णा स्तोत्रम् (आदि शङ्कराचार्य)',
+        chapterOrVerse: 'श्लोक १ व ११',
+        sanskritSloka: 'नित्यानन्दकरी वराभयकरी सौन्दर्यरत्नाकरी\\nनिर्धूताखिलघोरपावनकरी प्रत्यक्षमाहेश्वरी।\\nप्रालेयाचलवंशपावनकरी काशीपुराधीश्वरी\\nभिक्षां देहि कृपावलम्बनकरी मातान्नपूर्णेश्वरी॥',
+        hindiMeaning: 'नित्यानन्द देने वाली, वर और अभय देने वाली, सौन्दर्य रूपी रत्नों की खान, साक्षात माहेश्वरी, हिमालय के कुल को पवित्र करने वाली, काशी की अधीश्वरी, हे माता अन्नपूर्णेश्वरी! मुझे कृपापूर्वक भिक्षा प्रदान करो।',
+        englishMeaning: 'O Eternal Giver of Joy, bestower of boons and fearlessness, ocean of beauty, sovereign Goddess of Kashi, Mother Annapurna—grant us the sacred alms of physical nourishment and transcendental wisdom.'
+      },
+      {
+        sourceScripture: 'अन्नपूर्णा उपनिषद् (अथर्ववेद)',
+        chapterOrVerse: 'प्रथम खण्ड',
+        sanskritSloka: 'ॐ ह्रीं श्रीं क्लीं नमो भगवति माहेश्वरि अन्नपूर्णे स्वाहा।\\nअनेन मन्त्रेण यन्त्रे पूजिता साक्षात् सर्वसम्पत्प्रदा भवेत्॥',
+        hindiMeaning: 'इस महामन्त्र द्वारा यन्त्र में पूजित भगवती अन्नपूर्णा साधक को समस्त भौतिक सम्पदा, धान्य और आत्म-तृप्ति प्रदान करती हैं।',
+        englishMeaning: 'Worshipped with this sacred mantra in her consecrated yantra, Mother Annapurna bestows unbroken prosperity, grain abundance, and divine fulfillment.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'अन्नब्रह्म भूपुर प्राकार',
+        nameEnglish: 'Citadel of Golden Granary & Hospitality',
+        chakraTitle: 'भूपुर एवं चार कनक द्वार',
+        presidingDeity: 'अष्ट वसु एवं कुबेरादि दिक्पाल',
+        mudraShakti: 'दर्वी-पात्र मुद्रा (Golden Ladle & Bowl)',
+        yoginiClass: 'प्रकट धान्य योगिनी',
+        geometryType: 'Golden Concentric Citadel with 4 Symmetrical Portals',
+        significance: 'घर और रसोई में अन्न के अपव्यय और दरिद्रता का प्रवेश रोकना।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'अष्टदल अष्टरस पद्म',
+        nameEnglish: '8-Petal Lotus of the Eightfold Sustenance',
+        chakraTitle: 'अष्टदल पद्म (8 Sacred Petals)',
+        presidingDeity: 'आदि अन्नपूर्णा, रसपूर्णा, धान्यपूर्णा, क्षीरपूर्णा, मधुपूर्णा, जलपूर्णा, फलपूर्णा, अमृतपूर्णा',
+        mudraShakti: 'अमृतकुम्भ मुद्रा',
+        yoginiClass: 'गुप्त पोषण योगिनी',
+        geometryType: '8 Symmetrical Radial Lotus Petals with Spines',
+        significance: 'समस्त प्रकार के भोज्य पदार्थों में दिव्य स्वाद, पुष्टि और आरोग्य का संचार।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'रसविद्या षट्कोण चक्र',
+        nameEnglish: 'Hexagram of Elemental Nutrition & Equilibrium',
+        chakraTitle: 'षट्कोण मण्डल (Matrix of Physical Satiety)',
+        presidingDeity: 'शिव-अन्नपूर्णा सामरस्य',
+        mudraShakti: 'भिक्षा मुद्रा',
+        yoginiClass: 'रहस्य योगिनी वर्ग',
+        geometryType: 'Two Interpenetrating Triangles (Agni & Soma Balance)',
+        significance: 'पाचन अग्नि और अमृत तत्व का सामंजस्य, जिससे शरीर निरोगी और ओजस्वी बने।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'सुवर्ण कलश अंतर्त्रिकोण',
+        nameEnglish: 'Inner Inverted Triangle of Amrita Vessel',
+        chakraTitle: 'कामधेनु त्रिकोण (Inverted Golden Triangle)',
+        presidingDeity: 'महा अन्नपूर्णा',
+        mudraShakti: 'वरदाभय मुद्रा',
+        yoginiClass: 'अतिरहस्य योगिनी वर्ग',
+        geometryType: 'Inverted Golden Triangle Enclosing Amrita Bowl Iconography',
+        significance: 'अक्षय अन्न भण्डार का आशीर्वाद—पात्र कभी खाली न रहना।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'अमृत महाबिन्दु एवं ह्रीं-श्रीं बीज',
+        nameEnglish: 'Central Singularity of Perpetual Nourishment',
+        chakraTitle: 'मध्य बिन्दु (The Nectar Singularity)',
+        presidingDeity: 'परमेश्वरी अन्नपूर्णा',
+        mudraShakti: 'पूर्णानन्द मुद्रा',
+        yoginiClass: 'परा संवित् शक्ति',
+        geometryType: 'Radiant Golden Central Singularity Point',
+        significance: 'आत्मा की पूर्ण तृप्ति और कैवल्य मोक्ष।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'चन्द्रमा (Moon) व शुक्र (Venus)',
+      planetSanskrit: 'चन्द्र-शुक्र पोषण व अन्नपूर्णा योग',
+      friendlyRashis: ['कर्क', 'वृषभ', 'तुला', 'मीन'],
+      friendlyNakshatras: ['रोहिणी', 'हस्त', 'श्रवण', 'पुनर्वसु'],
+      doshaRemedies: [
+        {
+          doshaName: 'चन्द्रमा का क्षीण होना, अन्न दोष व गृह कलह',
+          description: 'रसोई में भोजन का स्वाद न आना, परिवार के सदस्यों का एक साथ भोजन न करना, अन्न का अत्यधिक अपव्यय और मानसिक तनाव।',
+          reliefMechanism: 'रसोईघर के आग्नेय अथवा उत्तर-पूर्व कोण में अन्नपूर्णा यन्त्र स्थापित कर नित्य प्रथम रोटी या भोग समर्पित करने से घर में अक्षुण्ण बरकत रहती है।'
+        }
+      ],
+      lifeAspects: ['अक्षय अन्न भण्डार', 'होटल, रेस्तरां व कैटरिंग में सफलता', 'परिवार में प्रेम व सौहार्द', 'शारीरिक पुष्टि व आरोग्य'],
+      wearOrInstallDirection: 'उत्तर (North) अथवा उत्तर-पूर्व (रसोईघर में)',
+      favorableDay: 'शुक्रवार (Friday) अथवा सोमवार (Monday)',
+      auspiciousTithi: 'मार्गशीर्ष पूर्णिमा (अन्नपूर्णा जयंती) अथवा अक्षय तृतीया',
+      metalPreference: 'रजत (Silver), पीतल (Brass) अथवा ताम्र',
+      beejMantra: 'ॐ ह्रीं श्रीं क्लीं नमो भगवति माहेश्वरि अन्नपूर्णे स्वाहा॥',
+      gayatriMantra: 'ॐ भगवत्यै च विद्महे माहेश्वर्यै धीमहि तन्नोऽन्नपूर्णा प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'स्फटिक माला अथवा कमल गट्टे की माला',
+      dhyanaSloka: 'तप्तकाञ्चनसंकाशां त्रिनेत्रां शशिशेखराम्। विकसितारविन्दस्थां वरदाभयहस्तकाम्। दर्वीपात्रं च बिभ्राणां रत्नसिंहासनस्थिताम्। ध्यायेदन्नप्रदां देवीं काश्यामीश्वरवल्लभाम्॥',
+      pratishthaVidhiSummary: [
+        '१. रसोईघर के शुद्ध स्थान अथवा पूजाघर में पीले/सफेद वस्त्र पर यन्त्र स्थापित करें।',
+        '२. कच्चे दूध व गंगाजल से अभिषेक कर चावल, चन्दन और पीले पुष्प चढ़ाएं।',
+        '३. मिश्री, खीर अथवा ताजे फल का नैवेद्य अर्पित करें।',
+        '४. "ॐ ह्रीं श्रीं क्लीं नमो भगवति माहेश्वरि अन्नपूर्णे स्वाहा" का १०८ बार जप करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Wealth',
+        problem: 'कमाने के बावजूद घर में बरकत न रहना, रसोई और अनाज भण्डार में लगातार नुकसान होना।',
+        remedyProtocol: 'अन्नपूर्णा यन्त्र को चांदी या तांबे के पत्र पर किचन के ईशान कोण में लगाएं और प्रतिदिन भोजन बनाने के बाद पहला भोग यन्त्र के सम्मुख रखें।'
+      },
+      {
+        category: 'Health',
+        problem: 'पाचन तंत्र की खराबी, बच्चों का ठीक से भोजन न करना या खान-पान संबंधी अरुचि।',
+        remedyProtocol: 'यन्त्र के सम्मुख रखे जल को १०८ बार अन्नपूर्णा मन्त्र से अभिमंत्रित कर रोगी या बालक को पिलाएं।'
+      }
+    ]
+  },
+
+  lalita_parameshvari_yantra: {
+    id: 'lalita_parameshvari_yantra',
+    taxonomyCategory: 'devi_shakti',
+    lineageAttribution: 'ब्रह्माण्ड पुराण (ललिता सहस्रनाम / त्रिशती), कामकलाविलास एवं षोडशी कल्प',
+    nameSanskrit: 'श्रीललिता परमेश्वरी कामकला यन्त्रम्',
+    nameHindi: 'ललिता परमेश्वरी कामकला यन्त्र',
+    nameEnglish: 'Sri Lalita Parameshvari Kamakala Yantra (The Supreme Matrix of Transcendental Beauty & Consciousness)',
+    subTitle: 'The Sovereign Empress of Sri Chakra, Kamakala Synthesis, Supreme Bliss & Divine Transcendence',
+    presidingDeity: 'भगवती ललिता महात्रिपुरसुन्दरी (राजराजेश्वरी / कामेश्वरी)',
+    tradition: 'श्रीविद्या साम्बव एवं कादि परम्परा',
+    corePhilosophy: 'समस्त ब्रह्माण्ड की अधिष्ठात्री राजराजेश्वरी। चिदग्नि कुण्ड से प्रादुर्भूत, भगवान कामेश्वर के साथ सामरस्य भाव में स्थित परा संवित्। कामकला (मुख, स्तनद्वय और योनि) का स्वरूप ही सृष्टि, स्थिति और लय का मूल रहस्य है। यह यन्त्र साधक को मोक्ष और ऐश्वर्य दोनों एक साथ प्रदान करता है।',
+    citations: [
+      {
+        sourceScripture: 'ब्रह्माण्ड पुराण (ललिता सहस्रनाम)',
+        chapterOrVerse: 'पूर्वपीठिका, श्लोक १-२',
+        sanskritSloka: 'श्रीमाता श्रीमहाराज्ञी श्रीमत्सिंहासनेश्वरी।\\nचिदग्निकुण्डसम्भूता देवकार्यसमुद्यता॥\\nउद्यद्भानुसहस्राभा चतुर्बाहुसमन्विता।\\nरागस्वरूपपाशाढ्या क्रोधाकाराङ्कुशोज्ज्वला॥',
+        hindiMeaning: 'परम माता, चक्रवर्ती साम्राज्ञी, मणिसिंहासन पर विराजने वाली, चिद्रूपी अग्नि कुण्ड से प्रकट हुई और देवकार्य को सिद्ध करने में तत्पर; सहस्र उदित सूर्यों के समान कान्ति वाली, पाश, अंकुश, इक्षु-धनुष और पुष्प-बाण धारण करने वाली परा भगवती ललिता की हम शरण ग्रहण करते हैं।',
+        englishMeaning: 'Salutations to Sri Mata, the Supreme Empress of the Sovereign Throne, arisen from the altar of the Fire of Consciousness to fulfill the cosmic divine mission, radiant like ten thousand suns.'
+      },
+      {
+        sourceScripture: 'कामकलाविलासः (पुण्यानन्दनाथ)',
+        chapterOrVerse: 'कारिका १-३',
+        sanskritSloka: 'सकलभुवनोदयास्थितिसंहारनिमित्तभूतायाः।\\nकामकलायाः रूपं विलाससारं परां वन्दे॥',
+        hindiMeaning: 'समस्त भुवनों की उत्पत्ति, स्थिति और संहार की मूल कारणभूता, विलास की साररूपा परा कामकला भगवती ललिता की मैं वन्दना करता हूँ।',
+        englishMeaning: 'I adore the supreme Kamakala, the transcendent essence whose blissful play constitutes the origin, maintenance, and dissolution of all manifested universes.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'त्रैलोक्यमोहन भूपुर प्राकार',
+        nameEnglish: 'Citadel of Universal Enchantment & Harmony',
+        chakraTitle: 'त्रैलोक्यमोहन चक्र (3 Concentric Ramparts)',
+        presidingDeity: 'अणिमादि अष्ट सिद्धियाँ, द्राविण्यादि मुद्राएँ',
+        mudraShakti: 'सर्वसंक्षोभिणी मुद्रा',
+        yoginiClass: 'प्रकट योगिनी वर्ग',
+        geometryType: 'Three Concentric Ramparts with 4 Royal Gateways',
+        significance: 'इन्द्रियों का पूर्ण संयम और सम्पूर्ण जगत में सर्वप्रियता।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'सर्वाशापरिपूरक षोडशदल पद्म',
+        nameEnglish: '16-Petal Lotus of All-Desire Fulfillment',
+        chakraTitle: 'सर्वाशापरिपूरक चक्र (16 Sacred Petals)',
+        presidingDeity: 'कामाकर्षण्यादि षोडश नित्या देवियाँ',
+        mudraShakti: 'सर्वविद्राविणी मुद्रा',
+        yoginiClass: 'गुप्त योगिनी वर्ग',
+        geometryType: '16 Radial Symmetrical Lotus Petals with Spines',
+        significance: 'साधक की समस्त सात्विक व भौतिक कामनाओं की पूर्ण सिद्धि।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'सर्वसंक्षोभण अष्टदल पद्म',
+        nameEnglish: '8-Petal Lotus of Spiritual Allurement',
+        chakraTitle: 'सर्वसंक्षोभण चक्र (8 Sacred Petals)',
+        presidingDeity: 'अनङ्गकुसुमादि अष्ट अनङ्ग शक्तियाँ',
+        mudraShakti: 'सर्वाकर्षणी मुद्रा',
+        yoginiClass: 'गुप्ततर योगिनी वर्ग',
+        geometryType: '8 Symmetrical Petals with Golden Filaments',
+        significance: 'मन और चेतना का दिव्य सौन्दर्य में एकाकार होना।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'कामकला अंतर्त्रिकोण एवं पञ्चबाण',
+        nameEnglish: 'Kamakala Inverted Triangle with Floral Arrows',
+        chakraTitle: 'कामकला त्रिकोण (The Transcendent Yoni Matrix)',
+        presidingDeity: 'कामेश्वर-कामेश्वरी सामरस्य',
+        mudraShakti: 'सर्वोन्मादिनी व सर्वमहाङ्कुश मुद्रा',
+        yoginiClass: 'रहस्य योगिनी वर्ग',
+        geometryType: 'Inverted Golden Triangle Adorned with Sugarcane Bow & 5 Flower Arrows',
+        significance: 'राग, द्वेष, अहंकार का दिव्य आनन्द में विसर्जन।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'सर्वानन्दमय परम बैन्दव चक्र',
+        nameEnglish: 'Supreme Singularity of Absolute Consciousness & Bliss',
+        chakraTitle: 'सर्वानन्दमय चक्र (Central Bindu)',
+        presidingDeity: 'महात्रिपुरसुन्दरी राजराजेश्वरी',
+        mudraShakti: 'सर्वबीज व सर्वत्रिखण्डा मुद्रा',
+        yoginiClass: 'परा संवित् शक्ति',
+        geometryType: 'Infinitesimal Golden Singularity Point of Divine Union',
+        significance: 'अखण्ड सच्चिदानन्द, जीव-ब्रह्म ऐक्य और परम कैवल्य।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'बृहस्पति (Jupiter) व शुक्र (Venus)',
+      planetSanskrit: 'गुरु-शुक्र राजराजेश्वरी योग',
+      friendlyRashis: ['धनु', 'मीन', 'वृषभ', 'तुला', 'कर्क'],
+      friendlyNakshatras: ['रोहिणी', 'पुनर्वसु', 'चित्रा', 'उत्तराषाढ़ा'],
+      doshaRemedies: [
+        {
+          doshaName: 'गुरु-राहु चाण्डाल दोष, वैवाहिक तनाव व आत्म-हीनता',
+          description: 'दाम्पत्य जीवन में आकर्षण की कमी, लगातार मानसिक असंतोष, आध्यात्मिक मार्ग में गतिरोध।',
+          reliefMechanism: 'ललिता यन्त्र के दर्शन और ललिता त्रिशती के पाठ से कामेश्वर-कामेश्वरी की कृपा से अखण्ड सौभाग्य व शान्ति प्राप्त होती है।'
+        }
+      ],
+      lifeAspects: ['सौन्दर्य व आकर्षण', 'अखण्ड सौभाग्य व दाम्पत्य सुख', 'आध्यात्मिक जागृति', 'सम्पूर्ण ब्रह्माण्डीय कृपा'],
+      wearOrInstallDirection: 'उत्तर-पूर्व (North-East) अथवा उत्तर (North)',
+      favorableDay: 'शुक्रवार (Friday) अथवा पूर्णिमा',
+      auspiciousTithi: 'माघ पूर्णिमा (ललिता जयंती) अथवा शरद पूर्णिमा',
+      metalPreference: 'स्वर्ण (Gold), स्फटिक (Crystal) अथवा रजत (Silver)',
+      beejMantra: 'ॐ ऐं ह्रीं श्रीं ललिता महात्रिपुरसुन्दर्यै नमः॥ (क-ए-ई-ल-ह्रीं ह-स-क-ह-ल-ह्रीं स-क-ल-ह्रीं)',
+      gayatriMantra: 'ॐ त्रिपुरादेव्यै च विद्महे कामेश्वर्यै धीमहि तन्नो क्लिन्ने प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'स्फटिक माला अथवा कमल गट्टे की माला',
+      dhyanaSloka: 'सिन्दूरारुणविग्रहां त्रिनयनां माणिक्यमौलिस्फुरत्ताराताराधिपशेखरां स्मितमुखीमापीनपीनस्तनीम्। पाणिभ्यामलिपूर्णरत्नचषकं रक्तोत्पलं बिभ्रतीं सौम्यां रत्नघटस्थरक्तचरणां ध्यायेत्परामम्बिकाम्॥',
+      pratishthaVidhiSummary: [
+        '१. श्वेत अथवा लाल रेशमी वस्त्र पर श्रीललिता यन्त्र प्रतिष्ठित करें।',
+        '२. कुमकुम, रक्तचन्दन और सुगंधित लाल गुलाब के पुष्प अर्पित करें।',
+        '३. पंचामृत और सुगंधित कर्पूर धूप अर्पित करें।',
+        '४. ललिता सहस्रनाम अथवा ललिता त्रिशती का भक्तिभाव से पाठ करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Relationships',
+        problem: 'दाम्पत्य जीवन में अकारण कटुता, आकर्षण की समाप्ति और आपसी तालमेल का अभाव।',
+        remedyProtocol: 'शयनकक्ष अथवा पूजाघर में ललिता परमेश्वरी यन्त्र स्थापित करें और शुक्रवार को सुवासिनी स्त्री को लाल वस्त्र या सुहाग सामग्री भेंट करें।'
+      },
+      {
+        category: 'Spiritual',
+        problem: 'कुण्डलिनी जागरण और श्रीविद्या उपासना में उच्चतर अनुभूति की अभीप्सा।',
+        remedyProtocol: 'पूर्णिमा की रात्रि में ललिता यन्त्र के मध्य कामकला बिन्दु पर ध्यान एकाग्र करते हुए पंचदशी मन्त्र का १५ माला जप करें।'
+      }
+    ]
+  }
+
+,
+
+  batuka_bhairava_yantra: {
+    id: 'batuka_bhairava_yantra',
+    taxonomyCategory: 'shiva',
+    lineageAttribution: 'रुद्रयामल तन्त्रम् (बटुक भैरव कल्प) एवं शारदातिलकम्',
+    nameSanskrit: 'श्री आपदुद्धारक बटुक भैरव यन्त्रम्',
+    nameHindi: 'बटुक भैरव यन्त्र (आपदुद्धारक)',
+    nameEnglish: 'Sri Apaduddharaka Batuka Bhairava Yantra (Deliverer from Calamities)',
+    subTitle: 'The Swift Tantric Deliverer from Sudden Calamities, Perils, Malefic Spells & Legal Afflictions',
+    presidingDeity: 'भगवान् आपदुद्धारक बटुक भैरव',
+    tradition: 'शैव-शाक्त कौल आगम एवं बटुक कल्प',
+    corePhilosophy: 'समस्त प्रकार की आकस्मिक विपत्तियों (आपद) से तत्काल उद्धार करने वाले भगवान शिव के बाल रूप भैरव। जब मनुष्य सभी ओर से घिर जाता है और कोई मार्ग नहीं सूझता, तब बटुक भैरव का स्मरण ही अभय प्रदान करता है। षट्कोण, अष्टदल और भूपुर से समन्वित यह यन्त्र साधक का वज्र-कवच है।',
+    citations: [
+      {
+        sourceScripture: 'रुद्रयामल तन्त्रम् (बटुक भैरव स्तोत्रम्)',
+        chapterOrVerse: 'श्लोक १-२',
+        sanskritSloka: 'आपदुद्धारणस्तोत्रं बटुकस्य महात्मनः।\\nयस्य स्मरणमात्रेण नश्यन्ति विघ्नराशयः॥\\nॐ ह्रीं बटुकाय आपदुद्धारणाय कुरु कुरु बटुकाय ह्रीं ॐ स्वाहा।',
+        hindiMeaning: 'महात्मा बटुक भैरव के आपदुद्धारण स्तोत्र के स्मरण मात्र से विघ्नों के विशाल समूह नष्ट हो जाते हैं। ॐ ह्रीं बटुकाय आपदुद्धारणाय कुरु कुरु बटुकाय ह्रीं ॐ स्वाहा।',
+        englishMeaning: 'By the mere remembrance of the glorious Batuka Bhairava, mountains of obstacles dissolve into nothingness. Salutations to the redeemer from all perils.'
+      },
+      {
+        sourceScripture: 'शारदातिलकम्',
+        chapterOrVerse: 'विंशति पटल, श्लोक ५४-५६',
+        sanskritSloka: 'कराकलितदण्डश्च कुक्कुरारूढ एव च।\\nत्रिनेत्रो वरदो देवो बटुकाख्यो महाबलः॥',
+        hindiMeaning: 'हाथ में दण्ड धारण करने वाले, श्वान (कुत्ते) की सवारी करने वाले, त्रिनेत्रधारी और वरदान देने वाले महाबली बटुक देव का ध्यान करें।',
+        englishMeaning: 'We meditate upon the mighty Batuka Bhairava, bearer of the cosmic staff, mounted upon the sacred dog, three-eyed granter of supreme boons.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'रक्षक भैरव भूपुर प्राकार',
+        nameEnglish: 'Citadel of Adamantine Security & 4 Gateways',
+        chakraTitle: 'भूपुर मण्डल (4 Sacred Portals)',
+        presidingDeity: 'इन्द्रादि लोकपाल एवं अष्ट भैरव',
+        mudraShakti: 'दण्ड-खड्ग मुद्रा',
+        yoginiClass: 'प्रकट रक्षा योगिनी',
+        geometryType: 'Concentric Stepped Citadel with 4 Portals',
+        significance: 'आकस्मिक विपदाओं, तंत्र बाधाओं और शत्रु षड्यंत्रों को बाहर ही रोक देना।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'अष्टदल भैरव पद्म',
+        nameEnglish: '8-Petal Lotus of 8 Bhairava Guardians',
+        chakraTitle: 'अष्टदल पद्म (8 Sacred Petals)',
+        presidingDeity: 'हेतुराज, त्रिपुरान्तक, अग्निवेत, यमजिह्व, काल, कराल, एकदंष्ट्र, भीम',
+        mudraShakti: 'शूल-डमरू मुद्रा',
+        yoginiClass: 'गुप्त भैरव योगिनी',
+        geometryType: '8 Symmetrical Radial Ogee Lotus Petals with Spines',
+        significance: 'आठों दिशाओं से साधक के प्राण, परिवार और मर्यादा की अखण्ड रक्षा।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'आपदुद्धारक षट्कोण चक्र',
+        nameEnglish: 'Dynamic Hexagram of Peril-Neutralization',
+        chakraTitle: 'षट्कोण मण्डल (Matrix of Apad-Nivarana)',
+        presidingDeity: 'शिव-भैरवी सामरस्य',
+        mudraShakti: 'वरदाभय मुद्रा',
+        yoginiClass: 'रहस्य भैरव शक्ति',
+        geometryType: 'Two Interpenetrating Triangles (Shiva-Shakti Equilibrium)',
+        significance: 'घोर से घोर संकटों और कानूनी उलझनों का तत्काल समाधान।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'रहस्य अंतर्त्रिकोण',
+        nameEnglish: 'Inner Inverted Triangle of Divine Protection',
+        chakraTitle: 'त्रिकोण मण्डल (Trikona of Supreme Grace)',
+        presidingDeity: 'बटुक शक्ति (ह्रीं, क्लीं, ह्रूं)',
+        mudraShakti: 'अभय मुद्रा',
+        yoginiClass: 'अतिरहस्य योगिनी',
+        geometryType: 'Inverted Golden Triangle Enclosing Beeja Inscriptions',
+        significance: 'समस्त भयों का शमन और आत्मिक शक्ति का संचार।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'परम बिन्दु एवं ह्रीं-बं बीज',
+        nameEnglish: 'Supreme Golden Singularity & Batuka Seed',
+        chakraTitle: 'मध्य बिन्दु (The Cosmic Apex)',
+        presidingDeity: 'साक्षात् आपदुद्धारक बटुक भैरव',
+        mudraShakti: 'महाभैरव मुद्रा',
+        yoginiClass: 'परा संवित् शक्ति',
+        geometryType: 'Radiant Golden Fiery Singularity Point',
+        significance: 'अखण्ड विजय, अभय पद और मोक्ष।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'राहु (Rahu) व शनि (Saturn)',
+      planetSanskrit: 'राहु-शनि पीड़ा शामक एवं मारुत-योग',
+      friendlyRashis: ['कुम्भ', 'मकर', 'वृश्चिक', 'मेष'],
+      friendlyNakshatras: ['आर्द्रा', 'स्वाति', 'शतभिषा', 'अनुराधा'],
+      doshaRemedies: [
+        {
+          doshaName: 'राहु की महादशा, प्रेत-बाधा व आकस्मिक संकट',
+          description: 'अचानक भारी नुकसान होना, रात में भय लगना, किसी अज्ञात तांत्रिक प्रयोग का भय रहना।',
+          reliefMechanism: 'बटुक भैरव यन्त्र के समक्ष तेल का दीपक जलाकर "ॐ ह्रीं बटुकाय आपदुद्धारणाय कुरु कुरु बटुकाय ह्रीं ॐ स्वाहा" का नित्य जप करने से समस्त बाधाएं भस्म हो जाती हैं।'
+        },
+        {
+          doshaName: 'शनि की साढ़ेसाती व कानूनी मुकदमे',
+          description: 'झूठे मुकदमों में फंस जाना, शत्रु द्वारा घेराबंदी, मानसिक तनाव।',
+          reliefMechanism: 'रविवार अथवा मंगलवार को काले तिल, उड़द और सरसों का तेल अर्पित कर बटुक भैरव कवच का पाठ करें।'
+        }
+      ],
+      lifeAspects: ['आकस्मिक संकटों से मुक्ति', 'शत्रुओं का स्तम्भन', 'अदालती मामलों में विजय', 'अज्ञात भय का निवारण'],
+      wearOrInstallDirection: 'दक्षिण (South) अथवा पूर्व (East)',
+      favorableDay: 'रविवार (Sunday) अथवा मंगलवार (Tuesday)',
+      auspiciousTithi: 'कालाष्टमी (प्रत्येक मास की कृष्ण अष्टमी) अथवा भैरव जयंती',
+      metalPreference: 'ताम्र (Copper), कांसा (Bronze) अथवा पंचधातु',
+      beejMantra: 'ॐ ह्रीं बटुकाय आपदुद्धारणाय कुरु कुरु बटुकाय ह्रीं ॐ स्वाहा॥',
+      gayatriMantra: 'ॐ बटुकभैरवाय विद्महे आपदुद्धारणाय धीमहि तन्नो भैरवः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'रुद्राक्ष माला अथवा रक्त चन्दन माला',
+      dhyanaSloka: 'ध्यायेन्नित्यं महेशं रजतगिरिनिभं चारुचन्द्रावतंसं रत्नाकल्पोज्ज्वलाङ्गं परशुमृगवराभीतिहस्तं प्रसन्नम्। पद्मासीनं समन्तात् स्तुतममरगणैर्व्याघ्रकृत्तिं वसानं विश्वाद्यं विश्वबीजं निखिलभयहरं पञ्चवक्त्रं त्रिनेत्रम्॥',
+      pratishthaVidhiSummary: [
+        '१. लाल अथवा काले वस्त्र पर यन्त्र प्रतिष्ठित करें।',
+        '२. सरसों के तेल का चौमुखा दीपक प्रज्वलित करें।',
+        '३. गुड़, काले चने, अथवा इमरती का नैवेद्य अर्पित करें।',
+        '४. बटुक भैरव अष्टोत्तरशतनाम या आपदुद्धारण स्तोत्र का पाठ करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Protection',
+        problem: 'अचानक आए बड़े संकट, कोर्ट केस या शत्रुओं द्वारा लगातार प्रताड़ित किया जाना।',
+        remedyProtocol: 'बटुक भैरव यन्त्र के सामने सरसों के तेल का दीपक जलाकर १०८ बार "ॐ ह्रीं बटुकाय आपदुद्धारणाय कुरु कुरु बटुकाय ह्रीं ॐ स्वाहा" का पाठ करें।'
+      },
+      {
+        category: 'Spiritual',
+        problem: 'अज्ञात भय, बुरे स्वप्न, आत्मविश्वास की अत्यधिक कमी।',
+        remedyProtocol: 'प्रातःकाल यन्त्र के दर्शन कर ५४ बार मूल मन्त्र का जप करें और कुत्तों को रोटी या दूध दें।'
+      }
+    ]
+  },
+
+  kaal_bhairava_yantra: {
+    id: 'kaal_bhairava_yantra',
+    taxonomyCategory: 'shiva',
+    lineageAttribution: 'ब्रह्मवैवर्त पुराणम्, भैरव तन्त्रम् एवं काशी रहस्यम्',
+    nameSanskrit: 'श्रीमहाकालभैरव यन्त्रम् (कालपाश-विमोचन मण्डल)',
+    nameHindi: 'काल भैरव यन्त्र (काशी के कोतवाल)',
+    nameEnglish: 'Sri Kaal Bhairava Yantra (The Cosmic Sovereign of Time & Dissolution)',
+    subTitle: 'The Supreme Guardian of Varanasi, Lord of Time, Annihilator of Fear of Death & Dissolver of Negative Karma',
+    presidingDeity: 'भगवान् महाकाल भैरव (काशी क्षेत्रपाल)',
+    tradition: 'शैव आगम एवं काशी भैरव परम्परा',
+    corePhilosophy: 'काल और मृत्यु के भी अधिष्ठाता भगवान काल भैरव। वे अहंकार का उच्छेदन कर साधक को कालपाश (समय और कर्म के बन्धन) से मुक्त करते हैं। काशी में इनकी अनुमति के बिना यमराज भी दण्ड नहीं दे सकते। यह यन्त्र साधक के समस्त अकाल मृत्यु योग, भयंकर भय और प्रारब्ध के कठोर कष्टों को भस्म कर देता है।',
+    citations: [
+      {
+        sourceScripture: 'कालभैरवाष्टकम् (आदि शङ्कराचार्य)',
+        chapterOrVerse: 'श्लोक १',
+        sanskritSloka: 'देवराजसेव्यमानपावनाङ्घ्रिपङ्कजं\\nव्यालयज्ञसूत्रमिन्दुशेखरं कृपाकरम्।\\nनारदादियोगिवृन्दवन्दितं दिगम्बरं\\nकाशिकापुराधिनाथकालभैरवं भजे॥',
+        hindiMeaning: 'देवताओं के राजा इन्द्र जिनके चरणकमलों की सेवा करते हैं, जो सर्प का यज्ञोपवीत धारण करते हैं, चन्द्रमा जिनके मस्तक पर सुशोभित है, जो परम कृपालु हैं, नारद आदि योगीजन जिनकी वन्दना करते हैं—उन काशी के अधिपति कालभैरव को मैं भजता हूँ।',
+        englishMeaning: 'I revere Lord Kaal Bhairava, Sovereign of Kashi, whose sacred lotus feet are served by Indra, adorned with the serpent sacred thread, crested with the crescent moon, granting transcendent compassion.'
+      },
+      {
+        sourceScripture: 'भैरव तन्त्रम्',
+        chapterOrVerse: 'पटल ३, श्लोक १२',
+        sanskritSloka: 'तीक्ष्णदंष्ट्र महाकाय कल्पान्तदहनोपम।\\nभैरवाय नमस्तुभ्यमनुज्ञां दातुमर्हसि॥\\nॐ भ्रं कालभैरवाय फट्॥',
+        hindiMeaning: 'तीक्ष्ण दाढ़ों वाले, विशालकाय, प्रलयकाल की अग्नि के समान तेजस्वी भगवान भैरव को हमारा नमस्कार है।',
+        englishMeaning: 'Salutations to Bhairava of sharp fangs and immense cosmic form, radiant like the fire of cosmic dissolution.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'त्रिशूल युक्त काल भूपुर',
+        nameEnglish: 'Citadel with 4 Cardinal Tridents',
+        chakraTitle: 'भूपुर मण्डल (Trident-Guarded Fortress)',
+        presidingDeity: 'अष्टदिक्पाल एवं क्षेत्रपाल भैरव',
+        mudraShakti: 'त्रिशूल-कपाल मुद्रा',
+        yoginiClass: 'प्रकट काल योगिनी',
+        geometryType: 'Quadrangle Citadel with 4 Stepped Portals & Cardinal Tridents',
+        significance: 'आठों दिशाओं से आने वाली यम-यातना और अकाल मृत्यु का पूर्ण निवारण।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'षोडशदल कालचक्र पद्म',
+        nameEnglish: '16-Petal Lotus of Cosmic Time Cycles',
+        chakraTitle: 'षोडशदल पद्म (16 Kalas of Time)',
+        presidingDeity: 'षोडश काल शक्तियाँ',
+        mudraShakti: 'कालपाश मुद्रा',
+        yoginiClass: 'गुप्त काल योगिनी',
+        geometryType: '16 Radial Symmetrical Lotus Petals with Spines',
+        significance: 'कर्म-बन्धन और समय के दुष्प्रभावों का नाश।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'अष्टदल अष्टभैरव पद्म',
+        nameEnglish: '8-Petal Lotus of the Eight Manifest Bhairavas',
+        chakraTitle: 'अष्टदल पद्म (8 Sacred Petals)',
+        presidingDeity: 'असिताङ्ग, रुरु, चण्ड, क्रोध, उन्मत्त, कपाली, भीषण, संहार भैरव',
+        mudraShakti: 'खड्ग-मुद्गर मुद्रा',
+        yoginiClass: 'गुप्ततर भैरव योगिनी',
+        geometryType: '8 Symmetrical Petals with Veins',
+        significance: 'समस्त प्रकार के भूत, प्रेत, पिशाच और ग्रह-पीड़ा का उच्छेदन।'
+      },
+      {
+        index: 4,
+        nameSanskrit: 'अष्टकोण कालपाश भंजक चक्र',
+        nameEnglish: 'Octagram Star of Karmic Dissolution',
+        chakraTitle: 'अष्टकोण मण्डल (Kaalachakra Star Matrix)',
+        presidingDeity: 'महाकाल-कालभैरव सामरस्य',
+        mudraShakti: 'डमरू-नाद मुद्रा',
+        yoginiClass: 'रहस्य काल योगिनी',
+        geometryType: 'Dynamic Double Hexagram (Octagram Star with 8 Rays)',
+        significance: 'प्रारब्ध के कठोर पापों और भय का क्षण भर में भंजन।'
+      },
+      {
+        index: 5,
+        nameSanskrit: 'प्रलय त्रिकोण एवं भ्रं महाबिन्दु',
+        nameEnglish: 'Dissolution Triangle & Bhraam Singularity',
+        chakraTitle: 'मध्य बिन्दु (The Absolute Void & Pure Light)',
+        presidingDeity: 'परम महाकाल भैरव',
+        mudraShakti: 'संहार-मुक्ति मुद्रा',
+        yoginiClass: 'परा संवित् शक्ति',
+        geometryType: 'Deep Inverted Fire Triangle with Fiery Singularity Point',
+        significance: 'अकाल मृत्यु से रक्षा, परम अभय और कैवल्य मुक्ति।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'शनि (Saturn), राहु (Rahu) व केतु (Ketu)',
+      planetSanskrit: 'शनि-राहु-केतु त्रिकाल दोष नाशक',
+      friendlyRashis: ['मकर', 'कुम्भ', 'वृश्चिक', 'मेष'],
+      friendlyNakshatras: ['अनुराधा', 'पुष्य', 'मघा', 'मूल'],
+      doshaRemedies: [
+        {
+          doshaName: 'शनि की साढ़ेसाती/ढैय्या व अकाल मृत्यु योग',
+          description: 'लगातार गंभीर दुर्घटनाएं होना, असाध्य रोग, व्यापार में भारी विनाश और मानसिक अशांति।',
+          reliefMechanism: 'काल भैरव यन्त्र की शनिवार को विधिवत पूजा और कालभैरवाष्टकम् के पाठ से शनि व राहु के समस्त क्रूर प्रभाव शांत हो जाते हैं।'
+        },
+        {
+          doshaName: 'कालसर्प दोष व पितृ दोष',
+          description: 'वंश वृद्धि में बाधा, पारिवारिक कलह, जीवन में निरंतर अज्ञात भय बना रहना।',
+          reliefMechanism: 'यन्त्र के समक्ष सरसों के तेल का दीपक जलाकर "ॐ भ्रं कालभैरवाय नमः" का जाप करने से कालसर्प दोष निष्प्रभावी हो जाता है।'
+        }
+      ],
+      lifeAspects: ['अकाल मृत्यु से रक्षा', 'शनि-राहु की शांति', 'तांत्रिक उपद्रवों का विनाश', 'आत्मिक निर्भयता'],
+      wearOrInstallDirection: 'दक्षिण (South) अथवा पश्चिम (West)',
+      favorableDay: 'शनिवार (Saturday) अथवा मंगलवार (Tuesday)',
+      auspiciousTithi: 'मार्गशीर्ष कृष्ण अष्टमी (कालभैरव अष्टमी / भैरव जयंती)',
+      metalPreference: 'ताम्र (Copper), कांसा (Bronze) अथवा लोहा (Iron)',
+      beejMantra: 'ॐ भ्रं कालभैरवाय नमः॥ / ॐ तीक्ष्णदंष्ट्र महाकाय कल्पान्तदहनोपम भैरवाय नमस्तुभ्यम्॥',
+      gayatriMantra: 'ॐ कालभैरवाय विद्महे दण्डहस्ताय धीमहि तन्नो भैरवः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'रुद्राक्ष माला (Rudraksha Rosary)',
+      dhyanaSloka: 'तीक्ष्णदंष्ट्र महाकाय कल्पान्तदहनोपम। भैरवाय नमस्तुभ्यमनुज्ञां दातुमर्हसि॥ दिगम्बरं भस्मविभूषिताङ्गं त्रिशूलहस्तं भुजगेन्द्रहारम्। कालस्य कालं भयहारिणं च ध्यायेत् सदा कालमहेशभैरवम्॥',
+      pratishthaVidhiSummary: [
+        '१. काले अथवा लाल वस्त्र पर काल भैरव यन्त्र स्थापित करें।',
+        '२. सरसों के तेल या तिल के तेल का दीपक जलाएं।',
+        '३. उड़द के बड़े, इमरती अथवा बेसन के लड्डू का भोग लगाएं।',
+        '४. कालभैरवाष्टकम् का पाठ करें और काले श्वान को भोजन दें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Protection',
+        problem: 'गंभीर तान्त्रिक बाधा, शत्रु द्वारा जीवन पर संकट या अकाल मृत्यु का भय।',
+        remedyProtocol: 'प्रत्येक शनिवार सायंकाल काल भैरव यन्त्र के सम्मुख सरसों के तेल का दीपक जलाकर १०८ बार "ॐ भ्रं कालभैरवाय नमः" का जप करें।'
+      },
+      {
+        category: 'Spiritual',
+        problem: 'मन में अत्यधिक भय, अवसाद, नकारात्मक विचार और अज्ञात चिंताएं।',
+        remedyProtocol: 'प्रातःकाल स्नानोपरान्त यन्त्र के बिन्दु पर ध्यान केन्द्रित कर ३ बार कालभैरवाष्टक का पाठ करें।'
+      }
+    ]
+  }
+
+,
+
+  muladhara_chakra: {
+    id: 'muladhara_chakra',
+    taxonomyCategory: 'kundalini_chakras',
+    lineageAttribution: 'षट्चक्रनिरूपणम् (स्वामी पूर्णानन्द परमहंस) एवं गोरक्षपद्धति',
+    nameSanskrit: 'मूलाधार चक्र यन्त्रम्',
+    nameHindi: 'मूलाधार चक्र यन्त्र (आधार पद्म)',
+    nameEnglish: 'Muladhara Chakra Yantra (Root Energy Mandala)',
+    subTitle: 'The Foundation Cosmogram of Prithvi Tattva, Sleeping Kundalini, and Adamantine Physical Vitality',
+    presidingDeity: 'भगवान् बाल-ब्रह्मा एवं डाकिनी शक्ति',
+    tradition: 'नाथ योग, शाक्त कौल आगम एवं तान्त्रिक कुण्डलिनी विज्ञान',
+    corePhilosophy: 'मेरुदण्ड के मूल (गुद-मेढ्र के मध्य) में सुषुम्ना नाड़ी के प्रवेश द्वार पर स्थित यह आधार पद्म है। इसमें चार रक्तवर्ण दल (वं, शं, षं, सं), अष्टशूल-युक्त पीत चतुष्कोण (पृथ्वी मण्डल), त्रिवलयाकार कामरूप त्रिकोण, स्वयम्भूलिङ्ग तथा साढ़े तीन फेरे लगाकर प्रसुप्त कुण्डलिनी महाशक्ति विराजती हैं। इसका भेदन करने से साधक का ब्रह्मग्रन्थि-मोचन होता है और समस्त शारीरिक व्याधियां एवं अकाल मृत्यु का भय समाप्त हो जाता है।',
+    citations: [
+      {
+        sourceScripture: 'षट्चक्रनिरूपणम्',
+        chapterOrVerse: 'श्लोक ४',
+        sanskritSloka: 'अधो वक्त्रं पद्मं सुषुम्ना-विवर-मध्यस्थं सुभगं,\nचतुर्भिः पत्रैश्चापि वकारादिसकारान्तैर्युक्तं परम् ।\nसुवर्णामैर्भ्राजत्-कुसुम-सदृशैर्द्योतित-वपुः,\nमूलाधारं नाम प्रथितमवनी-मण्डलमयम् ॥',
+        hindiMeaning: 'सुषुम्ना नाड़ी के मुख पर अधोमुख चार दलों वाला मूलाधार पद्म स्थित है। इसके दलों पर स्वर्ण वर्ण के चमकते हुए चार मातृका वर्ण "वं, शं, षं, सं" देदीप्यमान हैं। यह पृथ्वी मण्डल से समन्वित है।',
+        englishMeaning: 'Attached to the mouth of Sushumna Nadi lies the four-petaled Muladhara Lotus facing downwards. Its petals shine with golden lustre and bear the four sacred Matrika letters from Va to Sa (Vaṁ, Śaṁ, Ṣaṁ, Saṁ), enclosing the golden Earth Mandala.'
+      },
+      {
+        sourceScripture: 'गोरक्षपद्धति',
+        chapterOrVerse: 'प्रथम शतक, श्लोक १२',
+        sanskritSloka: 'मूलाधारे त्रिकोणाख्ये इच्छाज्ञानक्रियात्मके।\nमध्ये तस्य महालिङ्गं स्वयम्भूः सन्निधिः सदा॥',
+        hindiMeaning: 'मूलाधार के त्रिकोण में जो इच्छा, ज्ञान और क्रिया शक्तिमय है, उसके मध्य में साक्षात् स्वयम्भू महालिङ्ग सदा प्रतिष्ठित रहते हैं।',
+        englishMeaning: 'In the sacred triangle of Muladhara, the unified matrix of Iccha, Jnana, and Kriya Shaktis, stands the self-existent Svayambhu Mahalinga.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'चतुर्दल पद्म (वं, शं, षं, सं)',
+        nameEnglish: '4 Crimson Petals with Golden Matrikas',
+        chakraTitle: 'चतुर्दल मण्डल (4 Sacred Petals)',
+        presidingDeity: 'चतुर्वक्त्र बाल-ब्रह्मा',
+        mudraShakti: 'भूमि स्पर्श मुद्रा',
+        yoginiClass: 'डाकिनी योगिनी (अस्थि धातु)',
+        geometryType: '4 Ogee Crimson Petals with Golden Matrika Syllables',
+        significance: 'धर्म, अर्थ, काम और मोक्ष के चार आधारभूत पुरुषार्थों की सुदृढ़ स्थापना।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'अष्टवज्र पीत चतुष्कोण (पृथ्वी मण्डल)',
+        nameEnglish: 'Golden Square with 8 Vajras (Earth Mandala)',
+        chakraTitle: 'पृथिवी मण्डल (Tattva Mandala)',
+        presidingDeity: 'ऐरावत वाहन लम्बोदर बीज लं',
+        mudraShakti: 'वज्र मुद्रा',
+        yoginiClass: 'स्थिरता दायिनी शक्ति',
+        geometryType: 'Yellow Square with 8 Cardinal & Diagonal Vajra Spears',
+        significance: 'साधक को भू-तत्त्व की स्थिरता, धैर्य और अनन्त सहनशीलता प्रदान करना।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'कामरूप त्रिकोण, स्वयम्भूलिङ्ग एवं कुण्डलिनी',
+        nameEnglish: 'Traipura Triangle, Svayambhu Linga & Kundalini',
+        chakraTitle: 'बिन्दु गर्भ (Sacred Core)',
+        presidingDeity: 'सुप्त कुण्डलिनी महाशक्ति (३.५ वेष्टन)',
+        mudraShakti: 'मूल बन्ध एवं योनि मुद्रा',
+        yoginiClass: 'परम तेजोमयी शक्ति',
+        geometryType: 'Inverted Golden Triangle enclosing Linga and 3.5 coiled serpent',
+        significance: 'ब्रह्मग्रन्थि का भेदन कर प्रसुप्त प्राण-शक्ति को सुषुम्ना में ऊर्ध्वगामी करना।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'मङ्गल (Mars) एवं शनि (Saturn)',
+      planetSanskrit: 'भौम-शनैश्चर संयुक्त आधार दोष नाशक',
+      friendlyRashis: ['मेष', 'वृश्चिक', 'मकर'],
+      friendlyNakshatras: ['अश्विनी', 'मृगशिरा', 'अनुराधा', 'धनिष्ठा'],
+      doshaRemedies: [
+        {
+          doshaName: 'अस्थि दुर्बलता, अत्यधिक आलस्य एवं भय ग्रन्थि',
+          description: 'शरीर में ऊर्जा का अभाव, हड्डियों की दुर्बलता, निरंतर असुरक्षा व भय बने रहना।',
+          reliefMechanism: 'मूलाधार यन्त्र पर ध्यान एवं "लं" बीज के जप से पृथ्वी तत्त्व पुष्ट होता है और जीवन में अटूट आत्मविश्वास उत्पन्न होता है।'
+        }
+      ],
+      lifeAspects: ['शारीरिक स्वास्थ्य एवं बल', 'असुरक्षा व भय से मुक्ति', 'पृथ्वी तत्त्व सन्तुलन', 'कुण्डलिनी जागरण की नींव'],
+      wearOrInstallDirection: 'दक्षिण (South) अथवा पूर्व (East)',
+      favorableDay: 'मंगलवार (Tuesday) अथवा शनिवार (Saturday)',
+      auspiciousTithi: 'चतुर्थी अथवा अमावस्या',
+      metalPreference: 'ताम्र (Copper) अथवा कांसा (Bronze)',
+      beejMantra: 'ॐ लं मूलाधारवासिन्यै डाकिन्यै नमः॥ / ॐ लं पृथिवीतत्त्वाय नमः॥',
+      gayatriMantra: 'ॐ मूलाधाराय विद्महे कुण्डलिन्यै धीमहि तन्नो जीवः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'लाल चन्दन अथवा रुद्राक्ष माला',
+      dhyanaSloka: 'मूलाधारे त्रिकोणाख्ये कुण्डली-परमेश्वरि। ध्यायेत् सुवर्णवर्णाभां कोटिविद्युत्समप्रभाम्॥',
+      pratishthaVidhiSummary: [
+        '१. लाल आसन पर पूर्वाभिमुख बैठकर मूलाधार चक्र यन्त्र स्थापित करें।',
+        '२. गन्ध (चन्दन) और लाल पुष्पों से पूजन करें।',
+        '३. मूल बन्ध लगाकर "लं" बीज का १०८ बार नाभि-कण्ठ तक गुंजन करें।',
+        '४. खीर (पायस) का नैवेद्य डाकिनी शक्ति को अर्पित करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Health',
+        problem: 'अत्यधिक शारीरिक थकावट, रक्तचाप की विकृति और कार्य करने में मन न लगना।',
+        remedyProtocol: 'प्रातःकाल स्नानोपरान्त मूलाधार यन्त्र के पीत चतुष्कोण का त्राटक करते हुए १०८ बार "लं" का जप करें।'
+      }
+    ]
+  },
+
+  svadhishthana_chakra: {
+    id: 'svadhishthana_chakra',
+    taxonomyCategory: 'kundalini_chakras',
+    lineageAttribution: 'षट्चक्रनिरूपणम् (स्वामी पूर्णानन्द परमहंस) एवं गोरक्षपद्धति',
+    nameSanskrit: 'स्वाधिष्ठान चक्र यन्त्रम्',
+    nameHindi: 'स्वाधिष्ठान चक्र यन्त्र (जल मण्डल)',
+    nameEnglish: 'Svadhishthana Chakra Yantra (Sacral Fluid Matrix)',
+    subTitle: 'The Pure Ambrosial Matrix of Apas Tattva, Primal Flow, and Sensory Mastery',
+    presidingDeity: 'भगवान् श्रीविष्णु एवं राकिणी शक्ति',
+    tradition: 'वैष्णव-शाक्त कुण्डलिनी योग एवं सिद्ध परम्परा',
+    corePhilosophy: 'मूलाधार के ठीक ऊपर मेढ्र (जननेंद्रिय) के मूल में स्थित यह षड्दल पद्म है। प्रवाल-मूँगे के समान लाल ६ दलों पर "बं, भं, मं, यं, रं, लं" वर्ण देदीप्यमान हैं। इसके केंद्र में पूर्ण शीतल श्वेत अर्धचन्द्र (वरुण मण्डल) है, जिसमें मकर पर सवार "वं" बीज स्थित है। यह काम, क्रोध, लोभ, मोह, मद और मात्सर्य के षड्रिपू को भस्म कर साधक को रस-सिद्धि व काम-विजय प्रदान करता है।',
+    citations: [
+      {
+        sourceScripture: 'षट्चक्रनिरूपणम्',
+        chapterOrVerse: 'श्लोक १४ एवं १६',
+        sanskritSloka: 'अथाभ्यन्तरं पद्ममन्यत्सुदीप्तं विशुद्धं\nस्वाधिष्ठानाख्यं विद्रुमप्रभासैः ।\nषड्भिः पत्रैर्बकारादिसान्तैर्विभातं\nतस्याङ्के वारुणो बीजं वकारः सितवर्णकः ॥',
+        hindiMeaning: 'मूलाधार के ऊपर मेढ्रमूल में स्वाधिष्ठान पद्म स्थित है। यह प्रवाल के समान कान्ति वाले ६ दलों (बं से लं तक) से युक्त है। इसके अंक में वरुण बीज "वं" मकर पर स्थित है।',
+        englishMeaning: 'Above the Muladhara at the root of the genitals lies the Svadhishthana lotus of coral radiance with 6 petals (Baṁ to Laṁ). In its lap rests the white Varuna Beeja "Vaṁ" mounted on a Makara.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'षड्दल विद्रुम पद्म (बं, भं, मं, यं, रं, लं)',
+        nameEnglish: '6 Coral-Orange Petals with Matrikas',
+        chakraTitle: 'षड्दल पद्म (6 Sacred Petals)',
+        presidingDeity: 'श्रीहरि विष्णु (शङ्ख-चक्र-गदा-पद्मधारी)',
+        mudraShakti: 'वरुण मुद्रा',
+        yoginiClass: 'राकिणी शक्ति (मेद धातु)',
+        geometryType: '6 Symmetrical Ogee Petals with Devanagari Syllables',
+        significance: 'षड्रिपू (काम, क्रोध, मोह आदि) का शोधन एवं कलात्मक प्रतिभा का प्रस्फुटन।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'शशिशकल श्वेत अर्धचन्द्र (जल मण्डल)',
+        nameEnglish: 'Luminous White Crescent Moon (Apas Mandala)',
+        chakraTitle: 'वरुण मण्डल (Water Element)',
+        presidingDeity: 'मकर वाहन वरुण देव (बीज वं)',
+        mudraShakti: 'अमृत वर्षिणी मुद्रा',
+        yoginiClass: 'जल तत्त्व स्वामिनी',
+        geometryType: 'Pure White Crescent with concentric ripples and Makara base',
+        significance: 'शरीर के समस्त जलीय अंश, हार्मोन्स व लसिका तन्त्र का अमृतमय संतुलन।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'चन्द्र (Moon) एवं बुध (Mercury)',
+      planetSanskrit: 'चन्द्र-बुध सौम्य जल तत्त्व शोधक',
+      friendlyRashis: ['कर्क', 'वृष', 'कन्या', 'मीन'],
+      friendlyNakshatras: ['रोहिणी', 'हस्त', 'श्रवण', 'रेवती'],
+      doshaRemedies: [
+        {
+          doshaName: 'मानसिक चंचलता, काम-विकार एवं हार्मोन्स असंतुलन',
+          description: 'भावनाओं पर नियंत्रण न होना, अत्यधिक कामुकता अथवा जननांग संबंधी व्याधियां।',
+          reliefMechanism: 'स्वाधिष्ठान यन्त्र के श्वेत अर्धचन्द्र पर ध्यान करते हुए "वं" बीज के जप से मानसिक शांति और पवित्रता प्राप्त होती है।'
+        }
+      ],
+      lifeAspects: ['मानसिक शीतलता', 'रचनात्मकता व कला-सिद्धि', 'हार्मोन्स संतुलन', 'कामोत्तेजना पर नियंत्रण'],
+      wearOrInstallDirection: 'उत्तर (North) अथवा पश्चिम (West)',
+      favorableDay: 'सोमवार (Monday)',
+      auspiciousTithi: 'पूर्णिमा अथवा द्वितीया',
+      metalPreference: 'रजत (Silver) अथवा कांसा',
+      beejMantra: 'ॐ वं स्वाधिष्ठानाय राकिणी-सहिताय विष्णवे नमः॥ / ॐ वं वरुणाय नमः॥',
+      gayatriMantra: 'ॐ स्वाधिष्ठानाय विद्महे वारुणाय धीमहि तन्नः शक्तिः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'स्फटिक अथवा श्वेत चन्दन माला',
+      dhyanaSloka: 'विद्रुमप्रभ-पद्मस्थं षड्दलं चन्द्रमण्डलम्। वकार-बीज-संयुक्तं वन्दे स्वाधिष्ठान-पङ्कजम्॥',
+      pratishthaVidhiSummary: [
+        '१. श्वेत वस्त्र पर पूर्वाभिमुख बैठकर यन्त्र स्थापित करें।',
+        '२. गंगाजल व दूध से यन्त्र का अभिषेक कर श्वेत चन्दन अर्पित करें।',
+        '३. "वं" बीज का १०८ बार नाद करते हुए ध्यान करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Spiritual',
+        problem: 'अत्यधिक भावुकता, अवसाद और अनियंत्रित वासना।',
+        remedyProtocol: 'सोमवार की रात्रि में स्वाधिष्ठान यन्त्र के अर्धचन्द्र पर १० मिनट त्राटक कर "वं" का जप करें।'
+      }
+    ]
+  },
+
+  manipura_chakra: {
+    id: 'manipura_chakra',
+    taxonomyCategory: 'kundalini_chakras',
+    lineageAttribution: 'षट्चक्रनिरूपणम् (स्वामी पूर्णानन्द परमहंस) एवं गोरक्षपद्धति',
+    nameSanskrit: 'मणिपूर चक्र यन्त्रम्',
+    nameHindi: 'मणिपूर चक्र यन्त्र (अग्नि मण्डल)',
+    nameEnglish: 'Manipura Chakra Yantra (Solar Plexus Fire Center)',
+    subTitle: 'The Celestial Gem-City of Agni Tattva, Metabolic Transmutation, and Unyielding Willpower',
+    presidingDeity: 'भगवान् वृद्ध-रुद्र एवं लाकिणी शक्ति',
+    tradition: 'शैव-शाक्त हठयोग एवं नाथ आगम',
+    corePhilosophy: 'नाभिमूल में स्थित यह दशदल पद्म है, जो मेघनील रंग के १० दलों (डं से फं तक) से युक्त है। इसके मध्य में दहकती हुई अग्नि का लाल त्रिकोण मण्डल है, जिसके तीन कोनों पर तीन दिव्य स्वस्तिक अंकित हैं। त्रिकोण के केंद्र में मेष (मेढ़े) पर आरूढ़ अग्नि-बीज "रं" स्थित है। यह जठराग्नि को प्रदीप्त कर साधक के भीतर सूर्य के समान ओज, तेज और संकल्प-शक्ति उत्पन्न करता है।',
+    citations: [
+      {
+        sourceScripture: 'षट्चक्रनिरूपणम्',
+        chapterOrVerse: 'श्लोक १९ एवं २०',
+        sanskritSloka: 'तदूर्ध्वे नाभौ तु दशदल-युतं मणिपूरं\nमहामेघ-द्योतं डफ-दल-युतं वर्ण-सुभगम् ।\nतदन्तस्तैजसं मण्डलं अतिरक्तं त्रिकोणं\nत्रिभिः स्वस्तिकैश्च समन्ताद् विचित्रम् ॥\nध्यायेद्वैश्वानर-बीजं रकारं मेष-वाहनम् ॥',
+        hindiMeaning: 'नाभिदेश में १० दलों वाला मणिपूर पद्म है, जिस पर "डं" से लेकर "फं" तक वर्ण हैं। इसके भीतर त्रि-स्वस्तिक युक्त अग्नि का रक्त त्रिकोण है, जिसके मध्य में मेष-वाहन अग्निबीज "रं" विराजित है।',
+        englishMeaning: 'At the navel is the 10-petaled Manipura lotus (Ḍaṁ to Phaṁ). Inside blazes the crimson triangle of Fire adorned with 3 swastikas, enclosing the ram-mounted Beeja "Raṁ".'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'दशदल नील पद्म (डं से फं)',
+        nameEnglish: '10 Dark Blue Petals with Matrikas',
+        chakraTitle: 'दशदल पद्म (10 Sacred Petals)',
+        presidingDeity: 'भगवान् रुद्र (अभय-वरद हस्त)',
+        mudraShakti: 'अग्नि मुद्रा',
+        yoginiClass: 'लाकिणी शक्ति (मांस धातु)',
+        geometryType: '10 Blue Ogee Petals with Inscribed Golden Matrikas',
+        significance: 'आलस्य, प्रमाद, ईर्ष्या व मोह का दहन कर आध्यात्मिक ओज का संचय।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'त्रि-स्वस्तिक रक्त त्रिकोण (अग्नि मण्डल)',
+        nameEnglish: 'Crimson Triangle with 3 Swastikas (Fire Mandala)',
+        chakraTitle: 'अग्नि मण्डल (Fire Element)',
+        presidingDeity: 'मेष वाहन वैश्वानर बीज रं',
+        mudraShakti: 'उड्डियान बन्ध एवं अग्निसार',
+        yoginiClass: 'तेजस्विनी शक्ति',
+        geometryType: 'Fiery Red Upright Triangle with 3 Swastika Corners and Mesha Vahana',
+        significance: 'जठराग्नि व प्राण-ऊर्जा की प्रचण्ड ज्वाला से समस्त विषाक्त तत्त्वों का भस्मीकरण।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'सूर्य (Sun) एवं मङ्गल (Mars)',
+      planetSanskrit: 'सूर्य-भौम प्रचण्ड तेज प्रदायक',
+      friendlyRashis: ['सिंह', 'मेष', 'धनु'],
+      friendlyNakshatras: ['कृतिका', 'उत्तराफाल्गुनी', 'उत्तराषाढ़ा'],
+      doshaRemedies: [
+        {
+          doshaName: 'पाचन दुर्बलता, मन्द जठराग्नि एवं हीनभावना',
+          description: 'उदर रोग, मधुमेह, निर्णय लेने में असमर्थता और जीवन में आत्मबल का अभाव।',
+          reliefMechanism: 'मणिपूर यन्त्र के त्रिकोण पर ध्यान और "रं" बीज के जप से सूर्य मण्डल जाग्रत होता है और प्रचण्ड आत्मविश्वास प्राप्त होता है।'
+        }
+      ],
+      lifeAspects: ['दृढ़ इच्छाशक्ति एवं नेतृत्व', 'जठराग्नि व पाचन शुद्धि', 'शत्रु पराजय', 'आन्तरिक ओज व तेज'],
+      wearOrInstallDirection: 'पूर्व (East)',
+      favorableDay: 'रविवार (Sunday) अथवा मंगलवार (Tuesday)',
+      auspiciousTithi: 'सप्तमी अथवा दशमी',
+      metalPreference: 'स्वर्ण (Gold), ताम्र (Copper) अथवा पीतल (Brass)',
+      beejMantra: 'ॐ रं मणिपूराय लाकिणी-सहिताय रुद्राय नमः॥ / ॐ रं अग्नये नमः॥',
+      gayatriMantra: 'ॐ मणिपूराय विद्महे तेजोरूपाय धीमहि तन्नोऽग्निः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'रुद्राक्ष अथवा रक्त चन्दन माला',
+      dhyanaSloka: 'नाभिपद्मे दशदले ज्वलन्तमग्निसन्निभम्। रं-बीज-सहितं ध्यायेद् रुद्रं त्रैलोक्यतारकम्॥',
+      pratishthaVidhiSummary: [
+        '१. लाल वस्त्र पर मणिपूर चक्र यन्त्र स्थापित कर घृत का अखण्ड दीपक जलाएं।',
+        '२. कुंकुम और रक्त पुष्पों से पूजन करें।',
+        '३. उड्डियान बन्ध लगाकर "रं" बीज का नाभि पर ध्यान करते हुए जप करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Health',
+        problem: 'पाचन की खराबी, आलस्य और किसी भी कार्य को आरम्भ करने में हिचकिचाहट।',
+        remedyProtocol: 'प्रातःकाल सूर्योदय के समय मणिपूर चक्र यन्त्र के केंद्र पर ५ मिनट त्राटक कर १०८ बार "रं" का उच्चारण करें।'
+      }
+    ]
+  },
+
+  anahata_chakra: {
+    id: 'anahata_chakra',
+    taxonomyCategory: 'kundalini_chakras',
+    lineageAttribution: 'षट्चक्रनिरूपणम् (स्वामी पूर्णानन्द परमहंस) एवं गोरक्षपद्धति',
+    nameSanskrit: 'अनाहत चक्र यन्त्रम्',
+    nameHindi: 'अनाहत चक्र यन्त्र (हृदय मण्डल)',
+    nameEnglish: 'Anahata Chakra Yantra (Cosmic Heart Center)',
+    subTitle: 'The Unstruck Cosmic Vibrational Portal of Vayu Tattva, Baanalinga, and Vishnu Granthi Liberation',
+    presidingDeity: 'भगवान् ईश (पिनाकी शिव) एवं काकिणी शक्ति',
+    tradition: 'शैव-वेदान्त एवं शाक्त समयाचार परम्परा',
+    corePhilosophy: 'हृदय देश में स्थित यह द्वादशदल पद्म है, जो बन्धूक पुष्प के समान सिन्दूर वर्ण के १२ दलों (कं से ठं तक) से युक्त है। इसके मध्य में धूम्र वर्ण का षट्कोण (दो परस्पर गुम्फित त्रिकोण) है, जो वायु-मण्डल का स्वरूप है। षट्कोण के केंद्र में सुवर्णमय कामरूप त्रिकोण, कोटि सूर्यों के समान चमचमाता बाणलिङ्ग तथा अखण्ड दीपशिखा के समान जलती हंस-ज्योति (जीवात्मा) प्रतिष्ठित है। यहाँ विष्णुग्रन्थि का भेदन होता है और अनहद नाद (ॐ) की ध्वनि सुनाई देती है।',
+    citations: [
+      {
+        sourceScripture: 'षट्चक्रनिरूपणम्',
+        chapterOrVerse: 'श्लोक २२ एवं २५',
+        sanskritSloka: 'हृदि स्यादनाहत-पद्मं सुदीप्तं\nकठाद्यैर्दलैर्द्वादशैरन्वितं च ।\nअतिधूम्र-वर्णेन वायोस्तु लिङ्गे\nषट्कोणेन युक्तं मनोहारि-दीप्तम् ॥\nतन्मध्ये बाणलिङ्गं कनक-रुचिमयं सूर्य-कोटि-प्रकाशम् ॥',
+        hindiMeaning: 'हृदय देश में १२ दलों वाला अनाहत पद्म है (कं से ठं तक)। इसके मध्य में धूम्र वर्ण का वायु षट्कोण है, जिसमें कोटि सूर्यों के समान बाणलिङ्ग तथा अखण्ड दीपशिखा के समान हंस प्रकाशित है।',
+        englishMeaning: 'In the heart space is the 12-petaled Anahata lotus (Kaṁ to Ṭhaṁ) enclosing the smoky hexagonal Air Mandala. Within it blazes the golden Baanalinga and the steady flame of the Hamsa.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'द्वादशदल बन्धूक पद्म (कं से ठं)',
+        nameEnglish: '12 Vermilion Petals with Matrikas',
+        chakraTitle: 'द्वादशदल पद्म (12 Sacred Petals)',
+        presidingDeity: 'भगवान् ईश (कर्पूर-गौर शिव)',
+        mudraShakti: 'हृदय मुद्रा',
+        yoginiClass: 'काकिणी शक्ति (रक्त धातु)',
+        geometryType: '12 Vermilion Red Ogee Petals with Inscribed Matrikas',
+        significance: 'संकीर्ण स्वार्थपरता का त्याग कर विश्व-मैत्री व अहैतुक करुणा का उदय।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'धूम्र षट्कोण (वायु मण्डल)',
+        nameEnglish: 'Smoky Interlocking Hexagram (Air Mandala)',
+        chakraTitle: 'वायु मण्डल (Air Element)',
+        presidingDeity: 'कृष्णमृग वाहन पवन बीज यं',
+        mudraShakti: 'प्राणायाम कुम्भक',
+        yoginiClass: 'प्राण स्वामिनी शक्ति',
+        geometryType: 'Smoky Hexagram of Two Intersecting Triangles (Shiva & Shakti)',
+        significance: 'प्राण और अपान का समरस मिलन तथा हृदय की असीमित गतिशीलता।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'स्वर्ण बाणलिङ्ग एवं अखण्ड दीपशिखा (हंस)',
+        nameEnglish: 'Golden Baanalinga & Unshaken Flame (Hamsa)',
+        chakraTitle: 'अनाहत नाद गुहा (Inner Sanctum)',
+        presidingDeity: 'जीवात्मा स्वरूप परब्रह्म हंस',
+        mudraShakti: 'खेचरी मुद्रा',
+        yoginiClass: 'विष्णुग्रन्थि विमोचिनी',
+        geometryType: 'Golden Triangle enclosing Baanalinga and eternal glowing Flame',
+        significance: 'विष्णुग्रन्थि का भेदन तथा अनाहत नाद (शब्दातीत ब्रह्म) का प्रत्यक्ष श्रवण।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'शुक्र (Venus)',
+      planetSanskrit: 'शुक्र सौन्दर्य-प्रेम-करुणा प्रदायक',
+      friendlyRashis: ['वृष', 'तुला', 'मीन'],
+      friendlyNakshatras: ['भरणी', 'पूर्वाफाल्गुनी', 'पूर्वाषाढ़ा'],
+      doshaRemedies: [
+        {
+          doshaName: 'हृदय रोग, रक्तचाप एवं भावनात्मक आघात (Emotional Trauma)',
+          description: 'हृदय में भारीपन, अकेलापन, प्रेम में वंचना और सांस लेने में कठिनाई।',
+          reliefMechanism: 'अनाहत यन्त्र के बाणलिङ्ग और अखण्ड ज्योति पर ध्यान करते हुए "यं" बीज के जप से हृदय-कवच का निर्माण होता है और असीम शान्ति मिलती है।'
+        }
+      ],
+      lifeAspects: ['अहैतुक प्रेम एवं क्षमाशीलता', 'हृदय व श्वसन स्वास्थ्य', 'विष्णुग्रन्थि भेदन', 'अनाहत नाद का प्रकटीकरण'],
+      wearOrInstallDirection: 'ईशान (North-East) अथवा पूर्व (East)',
+      favorableDay: 'शुक्रवार (Friday)',
+      auspiciousTithi: 'त्रयोदशी अथवा पूर्णिमा',
+      metalPreference: 'रजत (Silver) अथवा कांसा',
+      beejMantra: 'ॐ यं अनाहताय काकिणी-सहिताय ईशाय नमः॥ / ॐ यं वायवे नमः॥',
+      gayatriMantra: 'ॐ अनाहताय विद्महे बाणलिङ्गाय धीमहि तन्नो हंसः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'स्फटिक अथवा श्वेत चन्दन माला',
+      dhyanaSloka: 'हृत्पद्मे द्वादशदले षट्कोणे वायुमण्डले। बाणलिङ्गं समभ्यर्च्य हंसज्योतिः प्रपद्यते॥',
+      pratishthaVidhiSummary: [
+        '१. श्वेत अथवा गुलाबी वस्त्र पर अनाहत यन्त्र स्थापित करें।',
+        '२. चन्दन, श्वेत पुष्प और इत्र से पूजन करें।',
+        '३. नाड़ी शोधन प्राणायाम करते हुए हृदय में अखण्ड दीपक की ज्योति का ध्यान करें और "यं" का जप करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Health',
+        problem: 'गहरे भावनात्मक दुःख, सम्बन्धों में कटुता और निरंतर अवसाद।',
+        remedyProtocol: 'प्रतिदिन सायंकाल अनाहत यन्त्र के केंद्र पर बाणलिङ्ग की ज्योति का स्मरण कर १०८ बार "ॐ यं" का जप करें।'
+      }
+    ]
+  },
+
+  vishuddha_chakra: {
+    id: 'vishuddha_chakra',
+    taxonomyCategory: 'kundalini_chakras',
+    lineageAttribution: 'षट्चक्रनिरूपणम् (स्वामी पूर्णानन्द परमहंस) एवं गोरक्षपद्धति',
+    nameSanskrit: 'विशुद्ध चक्र यन्त्रम्',
+    nameHindi: 'विशुद्ध चक्र यन्त्र (आकाश मण्डल)',
+    nameEnglish: 'Vishuddha Chakra Yantra (Throat Void Matrix)',
+    subTitle: 'The Pure Celestial Expansiveness of Akasha Tattva, Vak-Siddhi, and Ambrosial Downpour',
+    presidingDeity: 'भगवान् पञ्चमुख सदाशिव एवं शाकिणी शक्ति',
+    tradition: 'शैव आगम एवं शाक्त समयाचार परम्परा',
+    corePhilosophy: 'कण्ठमूल में स्थित यह षोडशदल पद्म है, जो धूम्र-नील कान्ति वाले १६ दलों (१६ मातृका स्वर: अं से अः तक) से युक्त है। इसके मध्य में पूर्ण चन्द्रमा के समान श्वेत वृत्ताकार आकाश मण्डल है, जिसमें श्वेत ऐरावत हाथी पर आकाश-बीज "हं" प्रतिष्ठित है। यहाँ पञ्चमुख सदाशिव अर्धनारीश्वर रूप में तथा श्वेत वर्णी शाकिणी शक्ति विराजती हैं। यह चक्र वाणी की परम सिद्धि (वाक्-सिद्धि), काल-ज्ञान और हलाहल विष को अमृत में बदलने का सामर्थ्य देता है।',
+    citations: [
+      {
+        sourceScripture: 'षट्चक्रनिरूपणम्',
+        chapterOrVerse: 'श्लोक २८ एवं ३१',
+        sanskritSloka: 'कण्ठे विशुद्धं कमलाभ-कान्तिं\nस्वरैश्च षोडश-दलैः समन्तात् ।\nआकाश-रूपं सित-वृत्त-युक्तं\nहकार-बीजं गज-पृष्ठ-संस्थम् ॥\nकविर्भवति सर्वज्ञो नित्य-तृप्तो महामनाः ॥',
+        hindiMeaning: 'कण्ठ देश में १६ दलों (अं से अः) वाला विशुद्ध पद्म है। इसमें श्वेत वृत्ताकार आकाश मण्डल है, जहाँ श्वेत हाथी पर बीज "हं" स्थित है। यहाँ ध्यान करने से साधक कवि, त्रिकालज्ञ व नित्य तृप्त हो जाता है।',
+        englishMeaning: 'In the throat is the 16-petaled Vishuddha lotus with all 16 vowels. In its center is the white circular Ether Mandala, where the Bija "Haṁ" rides a snow-white elephant, granting poetic genius and omniscience.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'षोडशदल जाम्बूनद पद्म (अं से अः)',
+        nameEnglish: '16 Smoky Lilac Petals with 16 Vowels',
+        chakraTitle: 'षोडशदल पद्म (16 Sacred Vowels)',
+        presidingDeity: 'पञ्चवक्त्र सदाशिव (दशभुज)',
+        mudraShakti: 'जालन्धर बन्ध',
+        yoginiClass: 'शाकिणी शक्ति (त्वक् धातु)',
+        geometryType: '16 Lilac Ogee Petals with Inscribed Sanskrit Vowels',
+        significance: 'समस्त नाद-सृष्टि और १६ कलाओं का ज्ञान एवं वाक्-शक्ति की परिपक्वता।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'पूर्णचन्द्र श्वेत वृत्त (आकाश मण्डल)',
+        nameEnglish: 'Pure Luminous Circle (Akasha Mandala)',
+        chakraTitle: 'आकाश मण्डल (Space Element)',
+        presidingDeity: 'श्वेत ऐरावत वाहन आकाश बीज हं',
+        mudraShakti: 'खेचरी एवं उन्मनी मुद्रा',
+        yoginiClass: 'व्योम स्वामिनी',
+        geometryType: 'Pure Silver-White Circle enclosing Inverted Triangle and Nectar Drop',
+        significance: 'ललना चक्र से टपकने वाले सोम-अमृत का पान कर कालजयी अमरत्व प्राप्त करना।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'बृहस्पति (Jupiter)',
+      planetSanskrit: 'गुरु वाक्-पाण्डित्य एवं विशुद्ध ज्ञान प्रदायक',
+      friendlyRashis: ['धनु', 'मीन', 'कर्क'],
+      friendlyNakshatras: ['पुनर्वसु', 'विशाखा', 'पूर्वाभाद्रपद'],
+      doshaRemedies: [
+        {
+          doshaName: 'वाणी दोष, थायराइड व्याधि एवं अभिव्यक्ति में भय',
+          description: 'बोलने में हकलाहट, गले के विकार, सत्य बोलने का साहस न होना और ज्ञान की कुण्ठा।',
+          reliefMechanism: 'विशुद्ध चक्र यन्त्र के श्वेत वृत्त पर ध्यान और "हं" बीज के गुंजन से वाणी ओजस्वी होती है और कंठ के समस्त रोग दूर होते हैं।'
+        }
+      ],
+      lifeAspects: ['वाक्-सिद्धि एवं सम्भाषण चातुर्य', 'थायराइड व श्वास शुद्धि', 'अमृत स्राव का धारण', 'आकाश तत्त्व का साक्षात्कार'],
+      wearOrInstallDirection: 'ईशान (North-East)',
+      favorableDay: 'गुरुवार (Thursday)',
+      auspiciousTithi: 'एकादशी अथवा पूर्णिमा',
+      metalPreference: 'स्वर्ण (Gold) अथवा कांसा',
+      beejMantra: 'ॐ हं विशुद्धाय शाकिणी-सहिताय सदाशिवाय नमः॥ / ॐ हं आकाशाय नमः॥',
+      gayatriMantra: 'ॐ विशुद्धाय विद्महे व्योमरूपाय धीमहि तन्नः शिवः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'रुद्राक्ष अथवा तुलसी माला',
+      dhyanaSloka: 'कण्ठपद्मे षोडशारे पूर्णचन्द्र-समप्रभे। हं-बीज-सहितं ध्यायेत् सदाशिवमनन्तकम्॥',
+      pratishthaVidhiSummary: [
+        '१. पीले अथवा श्वेत रेशमी वस्त्र पर विशुद्ध यन्त्र स्थापित करें।',
+        '२. श्वेत चन्दन और सुगंधित धूप से पूजन करें।',
+        '३. जालन्धर बन्ध लगाकर उज्जायी प्राणायाम के साथ "हं" बीज का नाद करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Health',
+        problem: 'सार्वजनिक भाषण में भय, कंठ में अवरोध और वाणी का अप्रभावी होना।',
+        remedyProtocol: 'प्रातःकाल विशुद्ध चक्र यन्त्र के वृत्त पर त्राटक करते हुए १०८ बार "ॐ हं" का स्पष्ट उच्चारण करें।'
+      }
+    ]
+  },
+
+  ajna_chakra: {
+    id: 'ajna_chakra',
+    taxonomyCategory: 'kundalini_chakras',
+    lineageAttribution: 'षट्चक्रनिरूपणम् (स्वामी पूर्णानन्द परमहंस) एवं गोरक्षपद्धति',
+    nameSanskrit: 'आज्ञा चक्र यन्त्रम्',
+    nameHindi: 'आज्ञा चक्र यन्त्र (भ्रूमध्य / इतरलिङ्ग)',
+    nameEnglish: 'Ajna Chakra Yantra (Third Eye Command Center)',
+    subTitle: 'The Eye of Intuition, Lightning-Luminous Itara Linga, and Rudra Granthi Liberation',
+    presidingDeity: 'भगवान् शम्भु (परमशिव) एवं षडानना हाकिणी शक्ति',
+    tradition: 'शैव सिद्ध, नाथ आगम एवं कैवल्य वेदान्त परम्परा',
+    corePhilosophy: 'दोनों भौंहों के मध्य (भ्रूमध्य) में स्थित यह द्विदलि पद्म है। इसके दो दलों पर "हं" (सूर्य/पिंगला) और "क्षं" (चन्द्र/इड़ा) अंकित हैं। इसके भीतर एक योनि त्रिकोण में बिजली की कौंध के समान देदीप्यमान "इतरलिङ्ग" तथा उसके मध्य में अखण्ड दीपक के समान प्रणव ज्योति (ॐ) जल रही है। यहाँ रुद्रग्रन्थि का भेदन होता है, द्वैत का विनाश होता है और साधक "सोऽहम्" के साक्षात्कार से साक्षात् शिव स्वरूप हो जाता है।',
+    citations: [
+      {
+        sourceScripture: 'षट्चक्रनिरूपणम्',
+        chapterOrVerse: 'श्लोक ३२ एवं ३४',
+        sanskritSloka: 'आज्ञानामामबुजं तद् हिमकर-सदृशं ध्यान-धाम प्रकाशं\nहक्षाभ्यां वै कलाभ्यां परिलसित-वपुर्नेत्र-योर्मध्य-देशे ।\nतस्यान्तस्त्रिकोणे तडिदिव विलसद् रूपमत्यन्त-गुह्यं\nलिङ्गं तच्चेतराख्यं प्रणव-विलसितं दीप-तुल्यं स्वरूपम् ॥',
+        hindiMeaning: 'भ्रूमध्य में हिम-शुभ्र आज्ञा पद्म है, जिसके दो दल (हं और क्षं) हैं। इसके त्रिकोण में बिजली के समान इतरलिङ्ग तथा दीपक के समान ॐ प्रणव प्रकाशित है।',
+        englishMeaning: 'Between the eyebrows is the moon-white Ajna lotus with two petals (Haṁ and Kṣaṁ). Inside its triangle blazes the lightning-like Itara Linga and the Pranava Om, dissolving all illusion.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'द्विदल हिमकर पद्म (हं एवं क्षं)',
+        nameEnglish: '2 Moon-White Petals (Ham and Ksham)',
+        chakraTitle: 'द्विदल पद्म (2 Sacred Petals)',
+        presidingDeity: 'षडानना हाकिणी शक्ति (मज्जा धातु)',
+        mudraShakti: 'शाम्भवी मुद्रा',
+        yoginiClass: 'हाकिणी ज्ञान योगिनी',
+        geometryType: '2 Pure Moon-White Petals with Golden Inscribed Ha and Ksha',
+        significance: 'इड़ा और पिंगला का सुषुम्ना में लय तथा संकल्प-विकल्प का शमन।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'कामरूप त्रिकोण, इतरलिङ्ग एवं प्रणव (ॐ)',
+        nameEnglish: 'Inverted Triangle, Itara Linga & Pranava (Om)',
+        chakraTitle: 'त्रिवेणी संगम (Inner Eye)',
+        presidingDeity: 'परमशिव शम्भु एवं नाद-बिन्दु',
+        mudraShakti: 'खेचरी एवं शाम्भवी',
+        yoginiClass: 'रुद्रग्रन्थि विमोचिनी',
+        geometryType: 'Pure Inverted Triangle enclosing Lightning Linga and Omkara Disc',
+        significance: 'रुद्रग्रन्थि का भेदन, दिव्य त्रिकाल दृष्टि का उदय और कैवल्य समाधि का द्वार।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'गुरु (Jupiter) एवं केतु (Ketu)',
+      planetSanskrit: 'गुरु-केतु मोक्ष व दिव्य दृष्टि कारक',
+      friendlyRashis: ['धनु', 'मीन', 'वृश्चिक'],
+      friendlyNakshatras: ['पुनर्वसु', 'मघा', 'मूल', 'उत्तराभाद्रपद'],
+      doshaRemedies: [
+        {
+          doshaName: 'मानसिक भ्रम, अनिद्रा, माइग्रेन एवं दृष्टि दोष',
+          description: 'सिरदर्द, अत्यधिक भटकाव, ध्यान न लगना और भविष्य की दिशा न सूझना।',
+          reliefMechanism: 'आज्ञा चक्र यन्त्र के इतरलिङ्ग और प्रणव पर शाम्भवी मुद्रा से त्राटक करने पर मानसिक शांति और दिव्य अंतर्ज्ञान प्राप्त होता है।'
+        }
+      ],
+      lifeAspects: ['दिव्य दृष्टि एवं अन्तर्ज्ञान (Intuition)', 'रुद्रग्रन्थि भेदन', 'अहंकार का विसर्जन', 'आध्यात्मिक गुरु-कृपा प्राप्ति'],
+      wearOrInstallDirection: 'उत्तर (North) अथवा पूर्व (East)',
+      favorableDay: 'गुरुवार (Thursday) अथवा सोमवार (Monday)',
+      auspiciousTithi: 'पूर्णिमा अथवा एकादशी',
+      metalPreference: 'स्वर्ण (Gold) अथवा रजत (Silver)',
+      beejMantra: 'ॐ आज्ञाचक्राय हाकिणी-सहिताय इतरलिङ्गाय नमः॥ / ॐ ॐ ॐ॥',
+      gayatriMantra: 'ॐ आज्ञाचक्राय विद्महे इतरलिङ्गाय धीमहि तन्नः शिवः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'रुद्राक्ष अथवा स्फटिक माला',
+      dhyanaSloka: 'भ्रूमध्यपद्मे द्विदले तडिदाकारमुत्तमम्। इतरलिङ्गं प्रणवं च ध्यायेत् केवलमुक्तये॥',
+      pratishthaVidhiSummary: [
+        '१. श्वेत वस्त्र पर आज्ञा चक्र यन्त्र स्थापित कर घृत का दीपक जलाएं।',
+        '२. श्वेत पुष्प और चन्दन से पूजन करें।',
+        '३. शाम्भवी मुद्रा लगाकर भ्रूमध्य में प्रणव (ॐ) का मानसिक जप करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Spiritual',
+        problem: 'अनिर्णय की स्थिति, भविष्य की चिंता और ध्यान में मन का न टिकना।',
+        remedyProtocol: 'प्रतिदिन प्रातः शाम्भवी मुद्रा लगाकर आज्ञा चक्र यन्त्र के "ॐ" पर ५ मिनट त्राटक करें।'
+      }
+    ]
+  },
+
+  sahasrara_chakra: {
+    id: 'sahasrara_chakra',
+    taxonomyCategory: 'kundalini_chakras',
+    lineageAttribution: 'षट्चक्रनिरूपणम् (स्वामी पूर्णानन्द परमहंस) एवं गोरक्षपद्धति',
+    nameSanskrit: 'सहस्रार महाचक्र यन्त्रम्',
+    nameHindi: 'सहस्रार महाचक्र यन्त्र (ब्रह्मरन्ध्र / महाबिन्दु)',
+    nameEnglish: 'Sahasrara Mahacakra Yantra (Crown Center of Liberation)',
+    subTitle: 'The Supreme Thousand-Petaled Lotus of Kaivalya Moksha, Shiva-Shakti Samarasya, and Pure Bliss',
+    presidingDeity: 'परमशिव एवं पराशक्ति महाकुण्डलिनी',
+    tradition: 'कौल, समयाचार, अद्वैत वेदान्त एवं काश्मीर शैवदर्शन',
+    corePhilosophy: 'शिर के ब्रह्मरन्ध्र में ऊर्ध्वमुख स्थित यह सहस्रदल महाकमल है, जो समस्त वर्णों (रंगों) की दिव्य किरणों से दीप्त है। इसमें ५० मातृका वर्णों की २० आवृत्तियों से १००० दल बने हैं। इसके केंद्र में पूर्ण चन्द्रबिम्ब है, जिसमें अमृत बरसाने वाली "अमाकला", "निर्वाणकला" तथा समस्त ज्योतियों की परम ज्योति "महाबिन्दु" स्थित है। यहाँ कुण्डलिनी महाशक्ति अपने परम प्रियतम परमशिव के साथ एकाकार होकर साधक को जीवन्मुक्ति एवं परमानन्द प्रदान करती हैं।',
+    citations: [
+      {
+        sourceScripture: 'षट्चक्रनिरूपणम्',
+        chapterOrVerse: 'श्लोक ४० एवं ४९',
+        sanskritSloka: 'मूर्ध्नो रन्ध्रे सहस्रार-कमलमल-वपुः सर्व-वर्णाभिरामं\nतन्मध्ये चन्द्रबिम्बे स्फुरित-रुचि-तता साऽमा-कला शोभमाना ।\nसमास्ते तस्योर्ध्वे परमसुकुमारं निरुपमं\nमहाशून्यं तत्त्वं तदेव ज्योतिषां ज्योतिः परं निर्वाण-कारणम् ॥',
+        hindiMeaning: 'ब्रह्मरन्ध्र में हजार दलों वाला सहस्रार कमल है। इसके मध्य में चन्द्रबिम्ब है, जहाँ अमृतमयी अमाकला तथा महाशून्य स्वरूप निर्वाणकला एवं परम महाबिन्दु प्रकाशित है।',
+        englishMeaning: 'In the crown aperture shines the thousand-petaled Sahasrara lotus. In its center is the moon disk with the nectar-raining Ama-Kala, the Great Void, and the Mahabindu—the Light of all Lights.'
+      }
+    ],
+    avaranas: [
+      {
+        index: 1,
+        nameSanskrit: 'सहस्रदल पद्म (५० मातृका × २० आवृत्ति)',
+        nameEnglish: 'Thousand-Petaled Radiating Lotus',
+        chakraTitle: 'सहस्रदल पद्म (1000 Celestial Petals)',
+        presidingDeity: 'परमशिव-पराशक्ति समरसता',
+        mudraShakti: 'महावेध एवं शाम्भवी मुद्रा',
+        yoginiClass: 'परमामृत योगिनी (ओजस् धातु)',
+        geometryType: 'Concentric Radiating Layers of 64, 32, and 16 Golden Petals',
+        significance: 'समस्त ब्रह्माण्डीय तरंगों, ज्ञान की शाखाओं और शक्तियों का अखण्ड विस्तार।'
+      },
+      {
+        index: 2,
+        nameSanskrit: 'पूर्ण चन्द्रमण्डल एवं षोडश अमृत किरणें',
+        nameEnglish: 'Full Moon Disk with 16 Nectar Rays',
+        chakraTitle: 'अमृत मण्डल (Ambrosial Sphere)',
+        presidingDeity: 'अमाकला एवं निर्वाणकला',
+        mudraShakti: 'उन्मनी मुद्रा',
+        yoginiClass: 'अमृत वर्षिणी',
+        geometryType: 'Luminous Full Moon with 16 Radial Nectar Streams',
+        significance: 'सहस्रार से निरंतर बहने वाली अमृत-धारा से रोम-रोम का अभिषेचन।'
+      },
+      {
+        index: 3,
+        nameSanskrit: 'परम महाबिन्दु (शिव-शक्ति ऐक्य)',
+        nameEnglish: 'Supreme Mahabindu (Non-Dual Void Light)',
+        chakraTitle: 'कैवल्य निर्वाण बिन्दु (Maha-Bindu)',
+        presidingDeity: 'परमशिव (सच्चिदानन्द स्वरूप)',
+        mudraShakti: 'कैवल्य समाधि',
+        yoginiClass: 'गुणातीता पराशक्ति',
+        geometryType: 'Golden Ring Enclosing Translucent White Void and Supreme Dark Seed',
+        significance: 'द्वैत का पूर्ण संहार, आवागमन से मुक्ति और अखण्ड ब्रह्म में नित्य स्थिति।'
+      }
+    ],
+    jyotish: {
+      rulingPlanet: 'सर्वग्रह-अतीत (Cosmic Source)',
+      planetSanskrit: 'सर्वग्रह स्वामी परब्रह्म',
+      friendlyRashis: ['समस्त १२ राशियां'],
+      friendlyNakshatras: ['समस्त २७ नक्षत्र'],
+      doshaRemedies: [
+        {
+          doshaName: 'जन्मान्तर कृत प्रारब्ध दोष एवं अविद्या जन्य संताप',
+          description: 'समस्त भौतिक व मानसिक दुःखों की मूल जड़ (अविद्या और देहाभिमान)।',
+          reliefMechanism: 'सहस्रार महाचक्र के महाबिन्दु पर ध्यान करने से समस्त पूर्वजन्मों के संचित कर्म भस्म हो जाते हैं और कैवल्य निर्वाण सिद्ध होता है।'
+        }
+      ],
+      lifeAspects: ['जीवन्मुक्ति (Moksha)', 'परम आत्म-साक्षात्कार', 'शारीरिक व मानसिक कायाकल्प', 'सर्वज्ञता एवं सर्वव्यापकता'],
+      wearOrInstallDirection: 'ब्रह्मस्थान (Center) अथवा ईशान',
+      favorableDay: 'सर्वदिन शुभ (विशेषतः गुरु पूर्णिमा अथवा महाशिवरात्रि)',
+      auspiciousTithi: 'पूर्णिमा',
+      metalPreference: 'स्वर्ण (Gold) अथवा अष्टधातु',
+      beejMantra: 'ॐ सोऽहम्॥ / ॐ सच्चिदानन्द परब्रह्मणे नमः॥',
+      gayatriMantra: 'ॐ सहस्रारनिलयायै विद्महे परशिवरूपाय धीमहि तन्नो हंसः प्रचोदयात्॥',
+      japaCount: 108,
+      malaType: 'स्फटिक अथवा अष्टमुखी रुद्राक्ष',
+      dhyanaSloka: 'सहस्रदले पद्मे चन्द्रमण्डलमध्यगे। महाबिन्दुस्वरूपं तं ध्यायेत् कैवल्यसिद्धये॥',
+      pratishthaVidhiSummary: [
+        '१. श्वेत अथवा स्वर्ण वर्ण के वस्त्र पर सहस्रार चक्र यन्त्र स्थापित करें।',
+        '२. षोडशोपचार से पूजन कर पंचामृत का अर्पण करें।',
+        '३. ब्रह्मरन्ध्र में शीतल अमृत वर्षा का ध्यान करते हुए "सोऽहम्" का मानसिक स्मरण करें।'
+      ]
+    },
+    practicalRemedies: [
+      {
+        category: 'Spiritual',
+        problem: 'संसार में अशांति, मृत्यु का भय और आत्म-स्वरूप का अज्ञान।',
+        remedyProtocol: 'प्रतिदिन रात्रिकाल में सहस्रार चक्र यन्त्र के महाबिन्दु का ध्यान करते हुए १० मिनट मौन होकर "सोऽहम्" का चिंतन करें।'
+      }
+    ]
+  }
+
 };

@@ -115,18 +115,41 @@ export function getYantraTaxonomyCategory(y: YantraShastricEntry): string {
   }
   if (y.id.includes('ganesh') || y.id.includes('ganapati')) return 'ganesha';
   if (y.id.includes('kuber') || y.id.includes('lakshmi')) return 'lakshmi';
-  if (y.id.includes('shiva') || y.id.includes('mrityunjaya') || y.id.includes('rudra')) return 'shiva';
+  if (y.id.includes('shiva') || y.id.includes('mrityunjaya') || y.id.includes('rudra') || y.id.includes('bhairav')) return 'shiva';
   if (y.id.includes('vastu')) return 'vastu';
+  if (y.id === 'durga_yantra') return 'devi_shakti';
+  if (
+    y.id.includes('chandika') ||
+    y.id.includes('chandi') ||
+    y.id.includes('annapurna') ||
+    y.id.includes('lalita')
+  ) {
+    return 'devi_shakti';
+  }
+  if (y.id === 'hanuman_yantra') return 'hanuman';
   if (
     y.id.includes('durga') ||
     y.id.includes('bisa') ||
     y.id.includes('raksha') ||
     y.id.includes('sudarshana') ||
-    y.id.includes('hanuman') ||
     y.id.includes('pratyangira')
   ) {
     return 'protection_raksha';
   }
+  if (y.id.includes('hanuman')) return 'hanuman';
+  if (y.id.includes('santana') || y.id.includes('gopala')) return 'santana_family';
+  if (y.id.includes('siddhi') || y.id.includes('karya') || y.id.includes('dhanvantari')) return 'special_purpose';
   if (y.id.includes('surya') || y.id.includes('graha')) return 'navagraha';
+  if (y.id.includes('vishnu') || y.id.includes('narayan')) return 'vishnu_vaishnava';
+  if (
+    y.id.includes('narasimha') ||
+    y.id.includes('varaha') ||
+    y.id.includes('rama') ||
+    y.id.includes('matsya') ||
+    y.id.includes('kurma') ||
+    y.id.includes('avatar')
+  ) {
+    return 'avatar_yantras';
+  }
   return 'supreme_sri_chakra';
 }

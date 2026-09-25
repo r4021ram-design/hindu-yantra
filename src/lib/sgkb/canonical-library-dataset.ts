@@ -1742,6 +1742,581 @@ export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
     evidenceTier: 'canonical',
     confidenceLevel: 'High',
     relatedYantras: ['vastu_dosha_nivarana_yantra', 'chandra_yantra', 'saraswati_yantra', 'bhoomi_kurma_yantra']
+  },
+
+  {
+    id: 'vishnu_yantra',
+    names: {
+      sa: 'श्रीविष्णु यन्त्रम्',
+      iast: 'Śrīviṣṇu Yantram',
+      hi: 'श्री विष्णु यन्त्र',
+      en: 'Sri Vishnu / Narayana Yantra (Universal Preserver Matrix)',
+      gu: 'શ્રી વિષ્ણુ યંત્ર'
+    },
+    deity: 'Lord Maha Vishnu / Narayana',
+    mantra: 'Om Namo Bhagavate Vasudevaya / Om Namo Narayanaya',
+    geometrySpec: {
+      primaryShape: '12-Petal Dvadasakshara Lotus, 8-Petal Ashtakshara Lotus, Vaishnava Hexagram, 8-Spoke Sudarshana Wheel & Gold Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Universal cosmic harmony, neutralizing Pitra and Guru doshas, dharmic prosperity, and attainment of Vaikuntha.',
+    historicalPeriod: 'Puranic / Pancharatra Agamas & Srimad Bhagavatam',
+    scripturalCitation: {
+      scripture: 'Srimad Bhagavatam',
+      verse: 'Canto 12, Chapter 11, Verses 19-20',
+      sanskritText: 'ध्यायेन्नारायणं देवं शङ्खचक्रगदाधरम्। पीताम्बरधरं सौम्यं वनमालाविभूषितम्॥',
+      translation: 'One should meditate upon Lord Narayana holding conch, discus, and mace, dressed in golden silk, the lone sovereign fulfilling all noble desires.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sudarshana_chakra_yantra', 'ashta_lakshmi_yantra', 'rama_yantra', 'narasimha_yantra']
+  },
+  {
+    id: 'varaha_yantra',
+    names: {
+      sa: 'श्रीभूवराह यन्त्रम्',
+      iast: 'Śrībhūvarāha Yantram',
+      hi: 'श्री वराह यन्त्र',
+      en: 'Sri Varaha Yantra (Sacred Earth Rescuer & Property Matrix)',
+      gu: 'શ્રી વરાહ યંત્ર'
+    },
+    deity: 'Lord Yagya Varaha & Goddess Bhudevi',
+    mantra: 'Om Namah Shri Varahaya Dharanidharaya Swaha / Om Hreem Bhoom Varahaya Namaha',
+    geometrySpec: {
+      primaryShape: '12-Petal Lotus, 8-Petal Prithvi Lotus, Prithvi Octagram with 8 Divine Boar Tusk Curves & Central Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Land and property acquisition, clearing Vastu Shalya doshas, victory in property disputes, and recovering lost status.',
+    historicalPeriod: 'Puranic / Varaha Purana & Srimad Bhagavatam',
+    scripturalCitation: {
+      scripture: 'Srimad Bhagavatam',
+      verse: 'Canto 3, Chapter 13, Verse 33',
+      sanskritText: 'जलौघमग्नां सचराचरां महीं विषाणकोट्या सहसोदधार। विराजते तेन वपुर्महाप्रभो यथा गजेन्द्रः सरसीरुहं करे॥',
+      translation: 'Submerged in the cosmic deluge, the Earth was effortlessly hoisted upon His divine tusk by Lord Varaha, resplendent like a royal tusker holding a lotus.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vastu_dosha_nivarana_yantra', 'bhoomi_kurma_yantra', 'matsya_yantra', 'vishnu_yantra']
+  },
+  {
+    id: 'rama_yantra',
+    names: {
+      sa: 'श्रीराम यन्त्रम्',
+      iast: 'Śrīrāma Yantram',
+      hi: 'श्री राम यन्त्र',
+      en: 'Sri Rama / Rama Raksha Yantra (Dharmic Victory & Sovereign Armor Matrix)',
+      gu: 'શ્રી રામ યંત્ર'
+    },
+    deity: 'Maryada Purushottama Lord Sri Rama (with Sita, Lakshmana, Hanuman)',
+    mantra: 'Om Ram Ramaya Namaha / Hare Rama Hare Rama Rama Rama Hare Hare',
+    geometrySpec: {
+      primaryShape: '16-Petal Taraka Lotus, 8-Petal Rama-Parivara Lotus, Kodanda Bow Hexagram, Victory Triangle & Taraka Beeja Ram Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Righteous triumph over adversity, supreme domestic peace, moral fortitude, neutralizing Sun dosha, and Taraka liberation.',
+    historicalPeriod: 'Vedic-Upanishadic / Rama Rahasya Upanishad & Valmiki Ramayana',
+    scripturalCitation: {
+      scripture: 'Valmiki Ramayana',
+      verse: 'Aranya Kanda, Sarga 37, Verse 13',
+      sanskritText: 'रामो विग्रहवान् धर्मः साधुः सत्यपराक्रमः। राजा सर्वस्य लोकस्य देवानामिव वासवः॥',
+      translation: 'Sri Rama is the living embodiment of Dharma, virtuous, of unfailing truth and valour, the sovereign monarch of all the worlds.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vishnu_yantra', 'panchamukhi_hanuman_yantra', 'surya_yantra', 'sudarshana_chakra_yantra']
+  },
+
+  {
+    id: 'hanuman_yantra',
+    names: {
+      sa: 'श्रीवीर मारुति हनुमद् यन्त्रम्',
+      iast: 'Śrīvīra Māruti Hanumad Yantram',
+      hi: 'वीर हनुमान यन्त्र',
+      en: 'Veer Maruti Hanuman Yantra (Supreme Courage & Invincible Strength Matrix)',
+      gu: 'વીર હનુમાન યંત્ર'
+    },
+    deity: 'Lord Veer Maruti Hanuman (Rudravatara)',
+    mantra: 'Om Hum Hanumate Namaha / Om Hraam Hreem Hroom Hraim Hraum Hrah Hum Phat',
+    geometrySpec: {
+      primaryShape: '12-Petal Lotus, 8-Petal Rudra Beeja Lotus, Veer Shatkona with Central Gada Axis & Sindoor Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Eradication of evil spirits, relief from Shani Sade Sati and Mangal dosha, fearlessness, and victory in crises.',
+    historicalPeriod: 'Puranic-Tantric / Hanumad Vadavanala Stotram & Sudarshana Samhita',
+    scripturalCitation: {
+      scripture: 'Hanumad Vadavanala Stotram',
+      verse: 'Verses 1-2',
+      sanskritText: 'ॐ नमो भगवते श्रीमहाहनुमते प्रकटपराक्रमाय सकलदिङ्मण्डलसदाप्रकाशिताय।',
+      translation: 'Salutations to Lord Maha Hanuman, of manifested prowess, illumining all directions, of adamantine body and boundless valour.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['panchamukhi_hanuman_yantra', 'rama_yantra', 'sudarshana_chakra_yantra', 'shani_yantra']
+  },
+  {
+    id: 'sarva_karya_siddhi_yantra',
+    names: {
+      sa: 'श्रीसर्वकार्यसिद्धि यन्त्रम्',
+      iast: 'Śrīsarvakāryasiddhi Yantram',
+      hi: 'सर्व कार्यसिद्धि यन्त्र',
+      en: 'Sarva Karya Siddhi Yantra (All-Endeavours Accomplishment Matrix)',
+      gu: 'સર્વ કાર્યસિદ્ધિ યંત્ર'
+    },
+    deity: 'Presiding Multi-Deity Cosmic Assembly (Ganesha, Durga, Kubera, Vishnu)',
+    mantra: 'Om Hreem Shreem Kleem Sarva Karya Siddhim Kuru Kuru Swaha',
+    geometrySpec: {
+      primaryShape: '8-Petal Ashta Siddhi Lotus, Triple Girdle, Navakhanda 3x3 Seed Grid & Central Gold Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Triumphant success in business, exams, job promotions, legal matters, and unblocking stalled life objectives.',
+    historicalPeriod: 'Tantric / Sharada Tilaka & Mantra Mahodadhi',
+    scripturalCitation: {
+      scripture: 'Sharada Tilaka',
+      verse: 'Patala 7, Verses 25-27',
+      sanskritText: 'सर्वकार्येषु सिद्ध्यर्थं यन्त्रमेतन्मनोहरम्। नवकोष्ठसमं चक्रं सर्वसिद्धिप्रदायकम्॥',
+      translation: 'For accomplishment in all undertakings, this wondrous nine-chambered cosmogram bestows all perfections and cherished desires.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vyapar_vriddhi_yantra', 'ganesh_yantra', 'kuber_yantra', 'sri_yantra']
+  },
+  {
+    id: 'santana_gopala_yantra',
+    names: {
+      sa: 'श्रीसन्तानगोपाल यन्त्रम्',
+      iast: 'Śrīsantānagopāla Yantram',
+      hi: 'सन्तान गोपाल यन्त्र',
+      en: 'Sri Santana Gopala Yantra (Divine Progeny & Lineage Blessing Matrix)',
+      gu: 'સંતાન ગોપાલ યંત્ર'
+    },
+    deity: 'Lord Bala Mukunda Krishna & Mother Yashoda',
+    mantra: 'Om Kleem Devakisuta Govinda Vasudeva Jagatpate Dehi Me Tanayam Krishna Twamaham Sharanam Gatah',
+    geometrySpec: {
+      primaryShape: '16-Petal Santana Lotus, 8-Petal Lotus, Venugopala Shatkona with Flute & Peacock Motif, Kleem Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Fertility blessing, eliminating conception blocks, pregnancy protection, safe delivery, and virtuous offspring.',
+    historicalPeriod: 'Puranic / Harivamsha Purana & Santana Gopala Stotram',
+    scripturalCitation: {
+      scripture: 'Harivamsha Purana',
+      verse: 'Vishnuparva, Chapter 60, Verses 35-37',
+      sanskritText: 'देवकीसुतं गोविन्दं वासुदेवं जगत्पतिम्। देहि मे तनयं कृष्ण त्वामहं शरणं गतः॥',
+      translation: 'O Son of Devaki, Govinda, Vasudeva, Lord of the Universe, bestow unto me virtuous progeny, for I take refuge in Thee.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vishnu_yantra', 'ashta_lakshmi_yantra', 'brihaspati_yantra', 'shukra_yantra']
+  },
+  {
+    id: 'dhanvantari_yantra',
+    names: {
+      sa: 'श्रीधन्वन्तरि आरोग्य यन्त्रम्',
+      iast: 'Śrīdhanvantari Ārogya Yantram',
+      hi: 'धनवन्तरि यन्त्र',
+      en: 'Sri Dhanvantari Arogya Yantra (Divine Healer & Longevity Amrita Matrix)',
+      gu: 'ધનવંતરિ યંત્ર'
+    },
+    deity: 'Lord Dhanvantari (Primordial Physician of Ayurveda)',
+    mantra: 'Om Dham Dhanvantaraye Namaha / Om Namo Bhagavate Dhanvantaraye Amrita Kalasha Hastaya Swaha',
+    geometrySpec: {
+      primaryShape: '12-Petal Sun Lotus, 8-Petal Oshadhi Lotus, Amrita Kalasha Silhouetted Matrix with 8 Rays, Emerald Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Curing chronic and stubborn ailments, balancing the Tridoshas, long life, vitality, and successful surgery.',
+    historicalPeriod: 'Puranic-Ayurvedic / Sushruta Samhita & Srimad Bhagavatam',
+    scripturalCitation: {
+      scripture: 'Sushruta Samhita',
+      verse: 'Sutrasthanam, Chapter 1, Verses 2-3',
+      sanskritText: 'नमामि धन्वन्तरिमादिदेवं सुरासुरैर्वन्दितपादपद्मम्। लोके जरारुग्भयमृत्युनाशं दातारमीशं विविधौषधीनाम्॥',
+      translation: 'I bow unto Lord Dhanvantari, revered by gods and demons, who eradicates decrepitude, disease, terror, and premature demise.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sanjeevani_mahamrityunjaya_yantra', 'surya_yantra', 'sudarshana_chakra_yantra', 'vishnu_yantra']
+  },
+  {
+    id: 'chandika_yantra',
+    names: {
+      sa: 'श्रीमहाचण्डिका यन्त्रम्',
+      iast: 'Śrīmahācaṇḍikā Yantram',
+      hi: 'महाचण्डिका यन्त्र',
+      en: 'Maha Chandika Yantra (Navarna Saptashati Matrix)',
+      gu: 'મહાચંડિકા યંત્ર'
+    },
+    deity: 'Goddess Maha Chandika (Eighteen-Armed Mahalakshmi Form)',
+    mantra: 'Om Aim Hreem Kleem Chamundayai Vicche',
+    geometrySpec: {
+      primaryShape: '16-Petal Prakriti Lotus, 8-Petal Matrika Lotus, Inverted Fire Triangle, Radiant Navarna Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Annihilating inveterate foes, clearing fierce black magic or astral oppression, establishing invincible courage.',
+    historicalPeriod: 'c. 6th-8th Century CE (Markandeya Purana / Devi Mahatmya)',
+    scripturalCitation: {
+      scripture: 'Devi Mahatmya (Pradhanika Rahasyam)',
+      verse: 'Verses 4-6',
+      sanskritText: 'सर्वस्याद्या महालक्ष्मीस्त्रिगुणा परमेश्वरी। लक्ष्यालक्ष्यस्वरूपा सा व्याप्य कृत्स्नं व्यवस्थिता॥',
+      translation: 'Primordial above all is Maha Lakshmi (Maha Chandika), the Supreme Empress of threefold nature, permeating the entire cosmos.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['durga_yantra', 'kali_yantra', 'pratyangira_yantra', 'bagalamukhi_yantra']
+  },
+  {
+    id: 'annapurna_yantra',
+    names: {
+      sa: 'श्रीमहान्नपूर्णा यन्त्रम्',
+      iast: 'Śrīmahānnapūrṇā Yantram',
+      hi: 'अन्नपूर्णा यन्त्र',
+      en: 'Sri Annapurna Yantra (Cosmic Matrix of Perpetual Nourishment)',
+      gu: 'અન્નપૂર્ણા યંત્ર'
+    },
+    deity: 'Goddess Annapurna (Empress of Kashi & Divine Sustainer)',
+    mantra: 'Om Hreem Shreem Kleem Namo Bhagavatyai Maheshwaryai Annapurnayai Swaha',
+    geometrySpec: {
+      primaryShape: '8-Petal Ashtatattwa Lotus, Hexagram of Rasas, Inverted Ladle-and-Bowl Triangle, Golden Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Ensuring perpetual food grain abundance, prosperity in catering/hospitality, domestic peace and health.',
+    historicalPeriod: 'Puranic / Atharvavedic Annapurna Upanishad',
+    scripturalCitation: {
+      scripture: 'Annapurna Stotram by Adi Shankaracharya',
+      verse: 'Verse 1',
+      sanskritText: 'नित्यानन्दकरी वराभयकरी सौन्दर्यरत्नाकरी निर्धूताखिलघोरपावनकरी प्रत्यक्षमाहेश्वरी। भिक्षां देहि कृपावलम्बनकरी मातान्नपूर्णेश्वरी॥',
+      translation: 'O Eternal Giver of Joy, ocean of beauty, manifest Maheshwari of Kashi—grant us the alms of nourishing grace.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kanakadhara_yantra', 'lakshmi_yantra', 'kamala_yantra', 'vastu_yantra']
+  },
+  {
+    id: 'lalita_parameshvari_yantra',
+    names: {
+      sa: 'श्रीललिता परमेश्वरी कामकला यन्त्रम्',
+      iast: 'Śrīlalitā Parameśvarī Kāmakalā Yantram',
+      hi: 'ललिता परमेश्वरी कामकला यन्त्र',
+      en: 'Sri Lalita Parameshvari Kamakala Yantra (Matrix of Transcendental Consciousness)',
+      gu: 'લલિતા પરમેશ્વરી કામકલા યંત્ર'
+    },
+    deity: 'Goddess Lalita Mahatripurasundari (Rajarajeshwari)',
+    mantra: 'Om Aim Hreem Shreem Lalita Mahatripurasundaryai Namaha',
+    geometrySpec: {
+      primaryShape: '16-Petal Shodasha Nitya Lotus, 8-Petal Ananga Lotus, Kamakala Inverted Triangle with Sugarcane Bow & 5 Arrows, Bindu',
+      layersCount: 5,
+      hasNavavaranas: true,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Supreme Sri Vidya realization, unitive consciousness, boundless joy, conjugal bliss, and sovereign spiritual mastery.',
+    historicalPeriod: 'Vedic-Tantric / Brahmanda Purana & Kamakalavilasa',
+    scripturalCitation: {
+      scripture: 'Brahmanda Purana (Lalita Sahasranama)',
+      verse: 'Verses 1-2',
+      sanskritText: 'श्रीमाता श्रीमहाराज्ञी श्रीमत्सिंहासनेश्वरी। चिदग्निकुण्डसम्भूता देवकार्यसमुद्यता॥',
+      translation: 'Salutations to the Primordial Mother, the Supreme Empress of the Sovereign Throne, arisen from the fire altar of Pure Consciousness.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sri_yantra', 'tripura_sundari_yantra', 'bhuvaneshvari_yantra', 'kamala_yantra']
   }
+
+,
+  {
+    id: 'batuka_bhairava_yantra',
+    names: {
+      sa: 'श्री आपदुद्धारक बटुक भैरव यन्त्रम्',
+      iast: 'Śrī Āpaduddhāraka Baṭuka Bhairava Yantram',
+      hi: 'बटुक भैरव यन्त्र',
+      en: 'Sri Apaduddharaka Batuka Bhairava Yantra (Deliverer from Calamities)',
+      gu: 'બટુક ભૈરવ યંત્ર'
+    },
+    deity: 'Lord Batuka Bhairava (Apaduddharaka Form)',
+    mantra: 'Om Hreem Batukaya Apaduddharanaya Kuru Kuru Batukaya Hreem Om Swaha',
+    geometrySpec: {
+      primaryShape: '8-Petal Bhairava Lotus, Hexagram of Peril-Neutralization, Inverted Protection Triangle, Golden Bindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Instant deliverance from acute perils, legal troubles, sudden mishaps, black magic, and fear.',
+    historicalPeriod: 'Tantric / Rudrayamala Tantra & Sharadatilakam',
+    scripturalCitation: {
+      scripture: 'Rudrayamala Tantra (Batuka Kalpa)',
+      verse: 'Verses 1-2',
+      sanskritText: 'आपदुद्धारणस्तोत्रं बटुकस्य महात्मनः। यस्य स्मरणमात्रेण नश्यन्ति विघ्नराशयः॥',
+      translation: 'By the mere remembrance of glorious Batuka Bhairava, colossal mountains of obstacles and perils dissolve.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kaal_bhairava_yantra', 'swarna_akarshana_bhairava_yantra', 'sharabheshwara_yantra', 'mahamrityunjaya_yantra']
+  },
+  {
+    id: 'kaal_bhairava_yantra',
+    names: {
+      sa: 'श्रीमहाकालभैरव यन्त्रम्',
+      iast: 'Śrīmahākālabhairava Yantram',
+      hi: 'काल भैरव यन्त्र',
+      en: 'Sri Kaal Bhairava Yantra (Lord of Time & Dissolution)',
+      gu: 'કાળ ભૈરવ યંત્ર'
+    },
+    deity: 'Lord Kaal Bhairava (Sovereign of Kashi & Lord of Time)',
+    mantra: 'Om Bhram Kaalabhairavaya Namaha',
+    geometrySpec: {
+      primaryShape: 'Citadel with 4 Tridents, 16-Petal Kaalachakra Lotus, 8-Petal Ashta Bhairava Lotus, Octagram Star, Dissolution Triangle',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Protection from premature demise, neutralizing Saturn and Rahu doshas, fearlessness, and destroying adverse astral forces.',
+    historicalPeriod: 'Puranic-Tantric / Brahmavaivarta Purana & Kaalbhairavashtakam',
+    scripturalCitation: {
+      scripture: 'Kaalbhairavashtakam by Adi Shankaracharya',
+      verse: 'Verse 1',
+      sanskritText: 'देवराजसेव्यमानपावनाङ्घ्रिपङ्कजं व्यालयज्ञसूत्रमिन्दुशेखरं कृपाकरम्। काशिकापुराधिनाथकालभैरवं भजे॥',
+      translation: 'I adore Lord Kaal Bhairava, ruler of Kashi, whose sacred lotus feet are served by the King of Gods, dispelling fear of Time.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['batuka_bhairava_yantra', 'swarna_akarshana_bhairava_yantra', 'mahamrityunjaya_yantra', 'pratyangira_yantra']
+  },
+
+  {
+    id: 'muladhara_chakra',
+    names: {
+      sa: 'मूलाधार चक्र यन्त्रम्',
+      iast: 'Mūlādhāra Cakra Yantram',
+      hi: 'मूलाधार चक्र',
+      en: 'Muladhara Chakra Yantra (Root Center)',
+      gu: 'મૂલાધાર ચક્ર'
+    },
+    deity: 'Brahma & Dakini Shakti',
+    mantra: 'Om Lam Muladharavasinyai Dakinyai Namah',
+    geometrySpec: {
+      primaryShape: 'Yellow Square with 8 Vajras in 4 Crimson Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Physical grounding, survival fear removal, bone vitality, and awakening Kundalini.',
+    historicalPeriod: 'c. 10th Century CE (Goraksha Paddhati & Sat-Chakra-Nirupana)',
+    scripturalCitation: {
+      scripture: 'Sat-Chakra-Nirupana',
+      verse: 'Verse 4',
+      sanskritText: 'अधो वक्त्रं पद्मं सुषुम्ना-विवर-मध्यस्थं सुभगं चतुर्भिः पत्रैश्चापि वकारादिसकारान्तैर्युक्तं परम्...',
+      translation: 'At the mouth of Sushumna lies the 4-petaled Muladhara lotus with syllables Vam to Sam and the yellow Earth square.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['svadhishthana_chakra', 'sri_yantra', 'ganesh_yantra']
+  },
+  {
+    id: 'svadhishthana_chakra',
+    names: {
+      sa: 'स्वाधिष्ठान चक्र यन्त्रम्',
+      iast: 'Svādhiṣṭhāna Cakra Yantram',
+      hi: 'स्वाधिष्ठान चक्र',
+      en: 'Svadhishthana Chakra Yantra (Sacral Center)',
+      gu: 'સ્વાધિષ્ઠાન ચક્ર'
+    },
+    deity: 'Vishnu & Rakini Shakti',
+    mantra: 'Om Vam Svadhishthanaya Rakini-sahitaya Vishnave Namah',
+    geometrySpec: {
+      primaryShape: 'White Crescent Moon in 6 Coral-Orange Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: false
+    },
+    traditionalUsage: 'Emotional fluidity, sexual mastery, poetic inspiration, and hormonal balance.',
+    historicalPeriod: 'c. 10th Century CE (Sat-Chakra-Nirupana)',
+    scripturalCitation: {
+      scripture: 'Sat-Chakra-Nirupana',
+      verse: 'Verse 14',
+      sanskritText: 'स्वाधिष्ठानाख्यं विद्रुमप्रभासैः षड्भिः पत्रैर्बकारादिसान्तैर्विभातं...',
+      translation: 'The 6-petaled Svadhishthana lotus of coral luster with syllables Bam to Lam and the water crescent.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['muladhara_chakra', 'manipura_chakra', 'chandra_yantra']
+  },
+  {
+    id: 'manipura_chakra',
+    names: {
+      sa: 'मणिपूर चक्र यन्त्रम्',
+      iast: 'Maṇipūra Cakra Yantram',
+      hi: 'मणिपूर चक्र',
+      en: 'Manipura Chakra Yantra (Solar Plexus Center)',
+      gu: 'મણિપૂર ચક્ર'
+    },
+    deity: 'Rudra & Lakini Shakti',
+    mantra: 'Om Ram Manipuraya Lakini-sahitaya Rudraya Namah',
+    geometrySpec: {
+      primaryShape: 'Red Triangle with 3 Swastikas in 10 Dark Blue Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: false
+    },
+    traditionalUsage: 'Metabolic fire, willpower, leadership, destroying physical lethargy and fear.',
+    historicalPeriod: 'c. 10th Century CE (Sat-Chakra-Nirupana)',
+    scripturalCitation: {
+      scripture: 'Sat-Chakra-Nirupana',
+      verse: 'Verse 19',
+      sanskritText: 'नाभौ तु दशदल-युतं मणिपूरं महामेघ-द्योतं डफ-दल-युतं वर्ण-सुभगम्...',
+      translation: 'At the navel is 10-petaled Manipura with dark blue petals and fiery triangle adorned with 3 swastikas.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['svadhishthana_chakra', 'anahata_chakra', 'surya_yantra']
+  },
+  {
+    id: 'anahata_chakra',
+    names: {
+      sa: 'अनाहत चक्र यन्त्रम्',
+      iast: 'Anāhata Cakra Yantram',
+      hi: 'अनाहत चक्र',
+      en: 'Anahata Chakra Yantra (Heart Center)',
+      gu: 'અનાહત ચક્ર'
+    },
+    deity: 'Isha & Kakini Shakti',
+    mantra: 'Om Yam Anahataya Kakini-sahitaya Ishaya Namah',
+    geometrySpec: {
+      primaryShape: 'Smoky Hexagram with Golden Baanalinga in 12 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: false
+    },
+    traditionalUsage: 'Unconditional love, hearing the unstruck Om sound, piercing Vishnu Granthi.',
+    historicalPeriod: 'c. 10th Century CE (Sat-Chakra-Nirupana)',
+    scripturalCitation: {
+      scripture: 'Sat-Chakra-Nirupana',
+      verse: 'Verse 22',
+      sanskritText: 'हृदि स्यादनाहत-पद्मं सुदीप्तं कठाद्यैर्दलैर्द्वादशैरन्वितं च...',
+      translation: 'In the heart resides the 12-petaled Anahata lotus with smoky hexagram and golden Baanalinga.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['manipura_chakra', 'vishuddha_chakra', 'shiva_yantra']
+  },
+  {
+    id: 'vishuddha_chakra',
+    names: {
+      sa: 'विशुद्ध चक्र यन्त्रम्',
+      iast: 'Viśuddha Cakra Yantram',
+      hi: 'विशुद्ध चक्र',
+      en: 'Vishuddha Chakra Yantra (Throat Center)',
+      gu: 'વિશુદ્ધ ચક્ર'
+    },
+    deity: 'Panchamukha Sadashiva & Shakini Shakti',
+    mantra: 'Om Ham Vishuddhaya Shakini-sahitaya Sadashivaya Namah',
+    geometrySpec: {
+      primaryShape: 'Pure White Circular Mandala in 16 Lilac Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: false
+    },
+    traditionalUsage: 'Vak-Siddhi, poetic eloquence, thyroid health, and swallowing cosmic poisons.',
+    historicalPeriod: 'c. 10th Century CE (Sat-Chakra-Nirupana)',
+    scripturalCitation: {
+      scripture: 'Sat-Chakra-Nirupana',
+      verse: 'Verse 28',
+      sanskritText: 'कण्ठे विशुद्धं कमलाभ-कान्तिं स्वरैश्च षोडश-दलैः समन्तात्...',
+      translation: 'In the throat is the 16-petaled Vishuddha lotus with 16 Sanskrit vowels and circular white space mandala.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['anahata_chakra', 'ajna_chakra', 'saraswati_yantra']
+  },
+  {
+    id: 'ajna_chakra',
+    names: {
+      sa: 'आज्ञा चक्र यन्त्रम्',
+      iast: 'Ājñā Cakra Yantram',
+      hi: 'आज्ञा चक्र',
+      en: 'Ajna Chakra Yantra (Third Eye Center)',
+      gu: 'આજ્ઞા ચક્ર'
+    },
+    deity: 'Shambhu & Hakini Shakti',
+    mantra: 'Om Om Om Ajnachakraya Namah',
+    geometrySpec: {
+      primaryShape: 'Inverted Yoni Triangle with Itara Linga in 2 White Petals',
+      layersCount: 3,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: false
+    },
+    traditionalUsage: 'Intuition, clairvoyance, piercing Rudra Granthi, non-dual perception.',
+    historicalPeriod: 'c. 10th Century CE (Sat-Chakra-Nirupana)',
+    scripturalCitation: {
+      scripture: 'Sat-Chakra-Nirupana',
+      verse: 'Verse 32',
+      sanskritText: 'आज्ञानामामबुजं तद् हिमकर-सदृशं ध्यान-धाम प्रकाशं हक्षाभ्यां वै कलाभ्याम्...',
+      translation: 'Between eyebrows is the 2-petaled Ajna lotus (Ham & Ksham) with lightning Itara Linga and Om.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['vishuddha_chakra', 'sahasrara_chakra', 'sri_yantra']
+  },
+  {
+    id: 'sahasrara_chakra',
+    names: {
+      sa: 'सहस्रार महाचक्र यन्त्रम्',
+      iast: 'Sahasrāra Mahācakra Yantram',
+      hi: 'सहस्रार महाचक्र',
+      en: 'Sahasrara Mahacakra Yantra (Crown Center)',
+      gu: 'સહસ્રાર ચક્ર'
+    },
+    deity: 'Parama Shiva & Para Shakti',
+    mantra: 'Om Soham Sachchidananda Parabrahmane Namah',
+    geometrySpec: {
+      primaryShape: '1000 Petals with Full Moon Disk, Ama-Kala & Mahabindu',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: false
+    },
+    traditionalUsage: 'Kaivalya Mukti, liberation while living, Shiva-Shakti union, and supreme bliss.',
+    historicalPeriod: 'c. 10th Century CE (Sat-Chakra-Nirupana)',
+    scripturalCitation: {
+      scripture: 'Sat-Chakra-Nirupana',
+      verse: 'Verse 40',
+      sanskritText: 'मूर्ध्नो रन्ध्रे सहस्रार-कमलमल-वपुः सर्व-वर्णाभिरामं तन्मध्ये चन्द्रबिम्बे...',
+      translation: 'In the crown fontanelle is the 1000-petaled lotus with full moon disk and the supreme Void Mahabindu.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sri_yantra', 'ajna_chakra']
+  },
 
 ];

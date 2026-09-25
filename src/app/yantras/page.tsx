@@ -552,7 +552,7 @@ function YantraExplorerInner() {
             title={isSidebarOpen ? "यन्त्र सूची छुपाएं (Hide Library)" : "यन्त्र सूची खोलें (Open Registry)"}
           >
             <Layers className="w-4 h-4 text-[#824707] shrink-0" />
-            <span>{isSidebarOpen ? '◀ यन्त्र सूची छुपाएं' : '☰ यन्त्र सूची (25+)'}</span>
+            <span>{isSidebarOpen ? '◀ यन्त्र सूची छुपाएं' : '☰ यन्त्र सूची (45+)'}</span>
           </button>
 
           {/* Full Canvas Altar Toggle Button */}

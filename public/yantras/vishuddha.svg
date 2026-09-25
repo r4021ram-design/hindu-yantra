@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Viśuddha Chakra (विशुद्ध चक्र - १६ दल आकाश मण्डल) - Pure Consecrated Kundalini Chakra Vector Matrix -->
+  <defs>
+    <!-- Master Dark Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF4D4" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA7C11" />
+      <stop offset="100%" stop-color="#6B4B03" />
+    </linearGradient>
+
+    <!-- Element-Specific Mandala Gradient -->
+    <linearGradient id="akashaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EDE7F6" />
+     <stop offset="35%" stop-color="#D1C4E9" />
+     <stop offset="70%" stop-color="#B39DDB" />
+     <stop offset="100%" stop-color="#7E57C2" />
+    </linearGradient>
+
+    <!-- Sacred Parchment Radial Background -->
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDFBF7" />
+      <stop offset="60%" stop-color="#F5EFE1" />
+      <stop offset="85%" stop-color="#EBE0CC" />
+      <stop offset="100%" stop-color="#DDD0B8" />
+    </radialGradient>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="sacredGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sacred Backdrop Disc -->
+  <circle cx="500" cy="500" r="490" fill="url(#sacredBg)" stroke="url(#bronzeMain)" stroke-width="4" />
+  <circle cx="500" cy="500" r="482" fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.75" />
+
+  <!-- Concentric Outer Girdles -->
+  <g stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="465" stroke-width="3" />
+    <circle cx="500" cy="500" r="280" stroke-width="2.5" />
+    <circle cx="500" cy="500" r="268" stroke-width="1.5" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- 16 Smoky Purple / Lilac Lotus Petals (धूम्र-नील १६ दल) -->
+  <g id="petals" stroke="url(#bronzeMain)" stroke-width="2.2" stroke-linejoin="round">
+    
+      <path d="M 445.37 225.38 C 435.14 144.87, 480.08 94.49, 500.00 40.00 C 519.92 94.49, 564.86 144.87, 554.63 225.38" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 445.37 225.38 C 435.14 144.87, 480.08 94.49, 500.00 40.00 C 519.92 94.49, 564.86 144.87, 554.63 225.38" fill="none" />
+    
+      <path d="M 554.63 225.38 C 575.98 147.09, 636.78 117.73, 676.03 75.02 C 673.59 132.98, 695.82 196.73, 655.56 267.19" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 554.63 225.38 C 575.98 147.09, 636.78 117.73, 676.03 75.02 C 673.59 132.98, 695.82 196.73, 655.56 267.19" fill="none" />
+    
+      <path d="M 655.56 267.19 C 705.25 203.03, 772.65 199.17, 825.27 174.73 C 800.83 227.35, 796.97 294.75, 732.81 344.44" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 655.56 267.19 C 705.25 203.03, 772.65 199.17, 825.27 174.73 C 800.83 227.35, 796.97 294.75, 732.81 344.44" fill="none" />
+    
+      <path d="M 732.81 344.44 C 803.27 304.18, 867.02 326.41, 924.98 323.97 C 882.27 363.22, 852.91 424.02, 774.62 445.37" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 732.81 344.44 C 803.27 304.18, 867.02 326.41, 924.98 323.97 C 882.27 363.22, 852.91 424.02, 774.62 445.37" fill="none" />
+    
+      <path d="M 774.62 445.37 C 855.13 435.14, 905.51 480.08, 960.00 500.00 C 905.51 519.92, 855.13 564.86, 774.62 554.63" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 774.62 445.37 C 855.13 435.14, 905.51 480.08, 960.00 500.00 C 905.51 519.92, 855.13 564.86, 774.62 554.63" fill="none" />
+    
+      <path d="M 774.62 554.63 C 852.91 575.98, 882.27 636.78, 924.98 676.03 C 867.02 673.59, 803.27 695.82, 732.81 655.56" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 774.62 554.63 C 852.91 575.98, 882.27 636.78, 924.98 676.03 C 867.02 673.59, 803.27 695.82, 732.81 655.56" fill="none" />
+    
+      <path d="M 732.81 655.56 C 796.97 705.25, 800.83 772.65, 825.27 825.27 C 772.65 800.83, 705.25 796.97, 655.56 732.81" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 732.81 655.56 C 796.97 705.25, 800.83 772.65, 825.27 825.27 C 772.65 800.83, 705.25 796.97, 655.56 732.81" fill="none" />
+    
+      <path d="M 655.56 732.81 C 695.82 803.27, 673.59 867.02, 676.03 924.98 C 636.78 882.27, 575.98 852.91, 554.63 774.62" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 655.56 732.81 C 695.82 803.27, 673.59 867.02, 676.03 924.98 C 636.78 882.27, 575.98 852.91, 554.63 774.62" fill="none" />
+    
+      <path d="M 554.63 774.62 C 564.86 855.13, 519.92 905.51, 500.00 960.00 C 480.08 905.51, 435.14 855.13, 445.37 774.62" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 554.63 774.62 C 564.86 855.13, 519.92 905.51, 500.00 960.00 C 480.08 905.51, 435.14 855.13, 445.37 774.62" fill="none" />
+    
+      <path d="M 445.37 774.62 C 424.02 852.91, 363.22 882.27, 323.97 924.98 C 326.41 867.02, 304.18 803.27, 344.44 732.81" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 445.37 774.62 C 424.02 852.91, 363.22 882.27, 323.97 924.98 C 326.41 867.02, 304.18 803.27, 344.44 732.81" fill="none" />
+    
+      <path d="M 344.44 732.81 C 294.75 796.97, 227.35 800.83, 174.73 825.27 C 199.17 772.65, 203.03 705.25, 267.19 655.56" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 344.44 732.81 C 294.75 796.97, 227.35 800.83, 174.73 825.27 C 199.17 772.65, 203.03 705.25, 267.19 655.56" fill="none" />
+    
+      <path d="M 267.19 655.56 C 196.73 695.82, 132.98 673.59, 75.02 676.03 C 117.73 636.78, 147.09 575.98, 225.38 554.63" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 267.19 655.56 C 196.73 695.82, 132.98 673.59, 75.02 676.03 C 117.73 636.78, 147.09 575.98, 225.38 554.63" fill="none" />
+    
+      <path d="M 225.38 554.63 C 144.87 564.86, 94.49 519.92, 40.00 500.00 C 94.49 480.08, 144.87 435.14, 225.38 445.37" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 225.38 554.63 C 144.87 564.86, 94.49 519.92, 40.00 500.00 C 94.49 480.08, 144.87 435.14, 225.38 445.37" fill="none" />
+    
+      <path d="M 225.38 445.37 C 147.09 424.02, 117.73 363.22, 75.02 323.97 C 132.98 326.41, 196.73 304.18, 267.19 344.44" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 225.38 445.37 C 147.09 424.02, 117.73 363.22, 75.02 323.97 C 132.98 326.41, 196.73 304.18, 267.19 344.44" fill="none" />
+    
+      <path d="M 267.19 344.44 C 203.03 294.75, 199.17 227.35, 174.73 174.73 C 227.35 199.17, 294.75 203.03, 344.44 267.19" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 267.19 344.44 C 203.03 294.75, 199.17 227.35, 174.73 174.73 C 227.35 199.17, 294.75 203.03, 344.44 267.19" fill="none" />
+    
+      <path d="M 344.44 267.19 C 304.18 196.73, 326.41 132.98, 323.97 75.02 C 363.22 117.73, 424.02 147.09, 445.37 225.38" fill="#5E35B1" fill-opacity="0.20" />
+      <path d="M 344.44 267.19 C 304.18 196.73, 326.41 132.98, 323.97 75.02 C 363.22 117.73, 424.02 147.09, 445.37 225.38" fill="none" />
+    
+  </g>
+
+  <!-- 16 Matrika Vowels in Devanagari: अं to अः -->
+  <g font-family="'Noto Sans Devanagari', 'Mangal', 'Yatra One', 'Sanskrit', serif" font-size="22" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle" dominant-baseline="central">
+    
+      <circle cx="500.0" cy="115.6" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="500.0" y="116.6">अं</text>
+    
+      <circle cx="647.1" cy="144.9" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="647.1" y="145.9">आं</text>
+    
+      <circle cx="771.8" cy="228.2" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="771.8" y="229.2">इं</text>
+    
+      <circle cx="855.1" cy="352.9" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="855.1" y="353.9">ईं</text>
+    
+      <circle cx="884.4" cy="500.0" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="884.4" y="501.0">उं</text>
+    
+      <circle cx="855.1" cy="647.1" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="855.1" y="648.1">ऊं</text>
+    
+      <circle cx="771.8" cy="771.8" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="771.8" y="772.8">ऋं</text>
+    
+      <circle cx="647.1" cy="855.1" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="647.1" y="856.1">ॠं</text>
+    
+      <circle cx="500.0" cy="884.4" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="500.0" y="885.4">ऌं</text>
+    
+      <circle cx="352.9" cy="855.1" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="352.9" y="856.1">ॡं</text>
+    
+      <circle cx="228.2" cy="771.8" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="228.2" y="772.8">एं</text>
+    
+      <circle cx="144.9" cy="647.1" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="144.9" y="648.1">ऐं</text>
+    
+      <circle cx="115.6" cy="500.0" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="115.6" y="501.0">ओं</text>
+    
+      <circle cx="144.9" cy="352.9" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="144.9" y="353.9">औं</text>
+    
+      <circle cx="228.2" cy="228.2" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="228.2" y="229.2">अं</text>
+    
+      <circle cx="352.9" cy="144.9" r="18" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.4" />
+      <text x="352.9" y="145.9">अः</text>
+    
+  </g>
+
+  <!-- Akasha Tattva Mandala: Pure Circular Mandala like Full Moon (पूर्णचन्द्र मण्डल / वृत्त) -->
+  <g id="akashaMandala">
+    <circle cx="500" cy="500" r="225" fill="#FFFFFF" fill-opacity="0.82" stroke="url(#bronzeMain)" stroke-width="3" />
+    <circle cx="500" cy="500" r="212" fill="none" stroke="url(#goldAccent)" stroke-width="1.6" stroke-dasharray="5 3" />
+    <circle cx="500" cy="500" r="200" fill="none" stroke="url(#bronzeMain)" stroke-width="1.4" />
+
+    <!-- Inverted Triangle / Silver Crescent inside Akasha Circle -->
+    <polygon points="500,590 590,440 410,440" fill="none" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <polygon points="500,572 576,450 424,450" fill="none" stroke="url(#goldAccent)" stroke-width="1.2" />
+
+    <!-- Pure Nectar Drop (अमृत बिन्दु) -->
+    <circle cx="500" cy="510" r="14" fill="url(#goldAccent)" stroke="url(#bronzeMain)" stroke-width="1.5" />
+  </g>
+
+  <!-- White Airavata Elephant (शुक्ल गज) Motif -->
+  <g id="whiteElephant" opacity="0.85">
+    <ellipse cx="500" cy="565" rx="55" ry="12" fill="#E0E0E0" stroke="url(#bronzeMain)" stroke-width="1.4" />
+  </g>
+
+  <!-- Central Beeja: हं (Akasha Beeja 'Ham') -->
+  <g id="centralBeeja">
+    <circle cx="500" cy="410" r="48" fill="#FFFDF8" stroke="url(#bronzeMain)" stroke-width="2.6" />
+    <circle cx="500" cy="410" r="42" fill="none" stroke="url(#goldAccent)" stroke-width="1.4" stroke-dasharray="3 2" />
+    <text x="500" y="426" font-family="'Noto Sans Devanagari', 'Mangal', 'Yatra One', serif" font-size="46" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle">हं</text>
+  </g>
+
+  <!-- Inner Shastric Identification -->
+  <text x="500" y="775" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="20" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle" letter-spacing="1">विशुद्ध चक्र • आकाश तत्त्व (पूर्णचन्द्र मण्डल)</text>
+  <text x="500" y="800" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="14" fill="#6B4B03" text-anchor="middle">शाकिणी शक्ति • पञ्चमुख सदाशिव • श्वेत ऐरावत</text>
+</svg>

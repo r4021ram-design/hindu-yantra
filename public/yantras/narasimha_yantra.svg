@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="bronzeLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A2508" />
+      <stop offset="50%" stop-color="#2D1505" />
+      <stop offset="100%" stop-color="#5B2E0B" />
+    </linearGradient>
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="85%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCDB3" />
+    </radialGradient>
+    <radialGradient id="vaishnavaAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#2563EB" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="narasimhaFireAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DC2626" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#EA580C" stop-opacity="0.20" />
+      <stop offset="100%" stop-color="#7F1D1D" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="varahaEarthAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#B45309" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="ramaSolarAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.30" />
+      <stop offset="50%" stop-color="#D97706" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="goldBinduGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#D97706" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#B45309" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="rubyBinduGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#B91C1C" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7F1D1D" stop-opacity="0" />
+    </radialGradient>
+    <filter id="sacredShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1A0E05" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#sacredBg)" />
+  <circle cx="500" cy="500" r="480" fill="url(#narasimhaFireAura)" />
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+
+  <!-- 2. Shodasha Jwala Mandala (षोडश ज्वाला मण्डल - १६ रौद्र अग्निशिखा) -->
+  <g id="shodasha_jwala" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" stroke-linejoin="round">
+    <path d="M 432.7 161.6 Q 468.62393261084304 141.3699086869716 500.0 112.0 Q 531.3760673891569 141.3699086869716 567.3 161.6" />
+    <path d="M 567.3 161.6 Q 608.2540878215383 156.66189773063832 648.5 141.5 Q 666.2295007646122 180.6761000558402 691.7 213.1" />
+    <path d="M 691.7 213.1 Q 731.4035394871541 224.22400047716792 774.4 225.6 Q 775.7759995228321 268.59646051284585 786.9 308.3" />
+    <path d="M 786.9 308.3 Q 819.3238999441598 333.7704992353878 858.5 351.5 Q 843.3381022693617 391.7459121784616 838.4 432.7" />
+    <path d="M 838.4 432.7 Q 858.6300913130284 468.6239326108431 888.0 500.0 Q 858.6300913130284 531.376067389157 838.4 567.3" />
+    <path d="M 838.4 567.3 Q 843.3381022693617 608.2540878215383 858.5 648.5 Q 819.3238999441598 666.2295007646121 786.9 691.7" />
+    <path d="M 786.9 691.7 Q 775.7759995228321 731.4035394871541 774.4 774.4 Q 731.4035394871541 775.7759995228321 691.7 786.9" />
+    <path d="M 691.7 786.9 Q 666.2295007646122 819.3238999441598 648.5 858.5 Q 608.2540878215384 843.3381022693617 567.3 838.4" />
+    <path d="M 567.3 838.4 Q 531.3760673891571 858.6300913130284 500.0 888.0 Q 468.62393261084316 858.6300913130284 432.7 838.4" />
+    <path d="M 432.7 838.4 Q 391.7459121784617 843.3381022693617 351.5 858.5 Q 333.7704992353879 819.3238999441598 308.3 786.9" />
+    <path d="M 308.3 786.9 Q 268.59646051284585 775.7759995228321 225.6 774.4 Q 224.22400047716798 731.4035394871541 213.1 691.7" />
+    <path d="M 213.1 691.7 Q 180.67610005584027 666.2295007646123 141.5 648.5 Q 156.66189773063837 608.2540878215385 161.6 567.3" />
+    <path d="M 161.6 567.3 Q 141.3699086869716 531.376067389157 112.0 500.0 Q 141.3699086869716 468.62393261084316 161.6 432.7" />
+    <path d="M 161.6 432.7 Q 156.66189773063826 391.7459121784618 141.5 351.5 Q 180.67610005584004 333.770499235388 213.1 308.3" />
+    <path d="M 213.1 308.3 Q 224.22400047716786 268.59646051284585 225.6 225.6 Q 268.59646051284574 224.22400047716798 308.3 213.1" />
+    <path d="M 308.3 213.1 Q 333.7704992353879 180.67610005584015 351.5 141.5 Q 391.7459121784614 156.66189773063837 432.7 161.6" />
+  </g>
+
+  
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="345" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="335" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="325" stroke-width="2.4" />
+  </g>
+
+  <!-- 3. Ashtadala Narasimha Lotus (अष्टदल नृसिंह पद्म - अनुष्टुप् महामन्त्र मण्डल) -->
+  <g id="ashtadala_petals" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none">
+    <path d="M 423.46 315.22 C 410.22 262.40, 472.16 217.37, 500.00 180.00 C 527.84 217.37, 589.78 262.40, 576.54 315.22" />
+    <path d="M 576.54 315.22 C 604.52 268.50, 680.17 280.47, 726.27 273.73 C 719.53 319.83, 731.50 395.48, 684.78 423.46" />
+    <path d="M 684.78 423.46 C 737.60 410.22, 782.63 472.16, 820.00 500.00 C 782.63 527.84, 737.60 589.78, 684.78 576.54" />
+    <path d="M 684.78 576.54 C 731.50 604.52, 719.53 680.17, 726.27 726.27 C 680.17 719.53, 604.52 731.50, 576.54 684.78" />
+    <path d="M 576.54 684.78 C 589.78 737.60, 527.84 782.63, 500.00 820.00 C 472.16 782.63, 410.22 737.60, 423.46 684.78" />
+    <path d="M 423.46 684.78 C 395.48 731.50, 319.83 719.53, 273.73 726.27 C 280.47 680.17, 268.50 604.52, 315.22 576.54" />
+    <path d="M 315.22 576.54 C 262.40 589.78, 217.37 527.84, 180.00 500.00 C 217.37 472.16, 262.40 410.22, 315.22 423.46" />
+    <path d="M 315.22 423.46 C 268.50 395.48, 280.47 319.83, 273.73 273.73 C 319.83 280.47, 395.48 268.50, 423.46 315.22" />
+    <path d="M 500.00 300.00 L 500.00 180.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+    <path d="M 641.42 358.58 L 726.27 273.73" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+    <path d="M 700.00 500.00 L 820.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+    <path d="M 641.42 641.42 L 726.27 726.27" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+    <path d="M 500.00 700.00 L 500.00 820.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+    <path d="M 358.58 641.42 L 273.73 726.27" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+    <path d="M 300.00 500.00 L 180.00 500.00" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+    <path d="M 358.58 358.58 L 273.73 273.73" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.75" />
+  </g>
+
+  <!-- 8 Anushtup Mantra Inscriptions (उग्रं वीरं महाविष्णुं...) -->
+  <g id="anushtup_inscriptions" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="18" fill="#1A0E05" text-anchor="middle" dominant-baseline="central">
+    <text x="500.0" y="240.0">उग्रं</text>
+    <text x="683.8" y="316.2">वीरं</text>
+    <text x="760.0" y="500.0">महाविष्णुं</text>
+    <text x="683.8" y="683.8">ज्वलन्तं</text>
+    <text x="500.0" y="760.0">सर्वतोमुखम्</text>
+    <text x="316.2" y="683.8">नृसिंहं</text>
+    <text x="240.0" y="500.0">भीषणं</text>
+    <text x="316.2" y="316.2">भद्रम्</text>
+  </g>
+
+  <!-- Intermediate Girdles -->
+  <circle cx="500" cy="500" r="200" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+  <circle cx="500" cy="500" r="185" stroke="url(#bronzeMain)" stroke-width="1.5" fill="none" />
+
+  <!-- 4. Ugra Narasimha Hexagram (उग्र षट्कोण - नख-दंष्ट्रा रक्षक मण्डल) -->
+  <g id="ugra_shatkona" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" stroke-linejoin="round">
+    <polygon points="500.0,320.0 655.9,590.0 344.1,590.0" />
+    <polygon points="500.0,680.0 344.1,410.0 655.9,410.0" />
+  </g>
+
+  <!-- Hexagram Inscriptions: मृत्युर्मृत्युं नमाम्यहम् -->
+  <g id="shatkona_texts" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="14.5" fill="#7F1D1D" text-anchor="middle" dominant-baseline="central">
+    <text x="500" y="345">मृत्युर्मृत्युं</text>
+    <text x="635" y="420">वज्रनखाय</text>
+    <text x="635" y="580">विद्महे</text>
+    <text x="500" y="655">नमाम्यहम्</text>
+    <text x="365" y="580">धीमहि</text>
+    <text x="365" y="420">तीक्ष्णदंष्ट्राय</text>
+  </g>
+
+  <!-- Inner Protective Ring & Inverted Triangle -->
+  <circle cx="500" cy="500" r="88" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none" />
+  <polygon points="500,580 430,460 570,460" stroke="url(#bronzeMain)" stroke-width="2.0" fill="none" />
+
+  <!-- 5. Fierce Blazing Narasimha Maha Bindu (क्ष्रौं महाबीज) -->
+  <circle cx="500" cy="500" r="46" fill="url(#rubyBinduGlow)" />
+  <circle cx="500" cy="500" r="38" fill="#FDF8F6" stroke="url(#bronzeMain)" stroke-width="2.6" />
+  <text x="500" y="502" font-family="'Noto Sans Devanagari', serif" font-weight="900" font-size="28" fill="#991B1B" text-anchor="middle" dominant-baseline="central">क्ष्रौं</text>
+  <circle cx="500" cy="500" r="4.5" fill="#7F1D1D" />
+</svg>

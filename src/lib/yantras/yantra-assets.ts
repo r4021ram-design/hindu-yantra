@@ -47,7 +47,7 @@ export const YANTRA_ASSET_REGISTRY: Record<string, YantraAsset> = {
     id: 'tripura_sundari_yantra',
     svgPath: '/yantras/02_Dashamahavidya/tripura_sundari_yantra.svg',
     category: 'dashamahavidya',
-    aliases: ['shodashi_yantra', 'lalita_yantra', 'tripurasundari'],
+    aliases: ['shodashi_yantra', 'shri_shodashi_yantra', 'tripurasundari'],
     fallbackPaths: ['/yantras/tripura_sundari_yantra.svg']
   },
   bhuvaneshvari_yantra: {
@@ -195,6 +195,26 @@ export const YANTRA_ASSET_REGISTRY: Record<string, YantraAsset> = {
     category: 'shiva',
     aliases: ['swarna_akarshan_bhairav_yantra', 'swarnakarshana_bhairava'],
     fallbackPaths: ['/yantras/swarna_akarshana_bhairava_yantra.svg']
+  },
+  batuka_bhairava_yantra: {
+    id: 'batuka_bhairava_yantra',
+    svgPath: '/yantras/05_Shiva/batuka_bhairava_yantra.svg',
+    category: 'shiva',
+    aliases: ['apaduddharaka_batuka_bhairava_yantra', 'batuk_bhairav_yantra', 'batuka_yantra'],
+    fallbackPaths: [
+      '/yantras/batuka_bhairava_yantra.svg',
+      '/yantras/17_Tantric/batuka_bhairava_yantra.svg'
+    ]
+  },
+  kaal_bhairava_yantra: {
+    id: 'kaal_bhairava_yantra',
+    svgPath: '/yantras/05_Shiva/kaal_bhairava_yantra.svg',
+    category: 'shiva',
+    aliases: ['kala_bhairava_yantra', 'kalabhairav_yantra', 'maha_kaal_bhairava_yantra'],
+    fallbackPaths: [
+      '/yantras/kaal_bhairava_yantra.svg',
+      '/yantras/17_Tantric/kaal_bhairava_yantra.svg'
+    ]
   },
   sanjeevani_mahamrityunjaya_yantra: {
     id: 'sanjeevani_mahamrityunjaya_yantra',
@@ -393,6 +413,165 @@ export const YANTRA_ASSET_REGISTRY: Record<string, YantraAsset> = {
     category: 'saraswati_vidya',
     aliases: ['hayagreeva_yantra', 'lord_hayagriva'],
     fallbackPaths: ['/yantras/hayagriva_yantra.svg']
+  },
+
+  // 10. Vishnu & Vaishnava Yantras / 15. Dashavatara
+  vishnu_yantra: {
+    id: 'vishnu_yantra',
+    svgPath: '/yantras/10_Vishnu/vishnu_yantra.svg',
+    category: 'vishnu_vaishnava',
+    aliases: ['narayana_yantra', 'shri_vishnu_yantra', 'maha_vishnu_yantra', 'vishnu'],
+    fallbackPaths: ['/yantras/vishnu_yantra.svg']
+  },
+  narasimha_yantra: {
+    id: 'narasimha_yantra',
+    svgPath: '/yantras/15_AvatarYantras/narasimha_yantra.svg',
+    category: 'avatar_yantras',
+    aliases: ['narasimha_kavacha_yantra', 'nrisimha_yantra', 'narasimha'],
+    fallbackPaths: [
+      '/yantras/narasimha_yantra.svg',
+      '/yantras/10_Vishnu/narasimha_yantra.svg'
+    ]
+  },
+  varaha_yantra: {
+    id: 'varaha_yantra',
+    svgPath: '/yantras/15_AvatarYantras/varaha_yantra.svg',
+    category: 'avatar_yantras',
+    aliases: ['bhoo_varaha_yantra', 'yagya_varaha_yantra', 'varaha'],
+    fallbackPaths: [
+      '/yantras/varaha_yantra.svg',
+      '/yantras/10_Vishnu/varaha_yantra.svg'
+    ]
+  },
+  rama_yantra: {
+    id: 'rama_yantra',
+    svgPath: '/yantras/15_AvatarYantras/rama_yantra.svg',
+    category: 'avatar_yantras',
+    aliases: ['rama_raksha_yantra', 'sri_rama_yantra', 'ram_yantra', 'rama'],
+    fallbackPaths: [
+      '/yantras/rama_yantra.svg',
+      '/yantras/10_Vishnu/rama_yantra.svg'
+    ]
+  },
+
+  // 11. Hanuman, 13. Santana, 14. Special Purpose / Health
+  hanuman_yantra: {
+    id: 'hanuman_yantra',
+    svgPath: '/yantras/11_Hanuman/hanuman_yantra.svg',
+    category: 'hanuman',
+    aliases: ['veer_hanuman_yantra', 'maruti_yantra', 'hanumad_yantra', 'hanuman'],
+    fallbackPaths: [
+      '/yantras/hanuman_yantra.svg',
+      '/yantras/07_Protection/hanuman_yantra.svg'
+    ]
+  },
+  sarva_karya_siddhi_yantra: {
+    id: 'sarva_karya_siddhi_yantra',
+    svgPath: '/yantras/14_SpecialPurpose/sarva_karya_siddhi_yantra.svg',
+    category: 'special_purpose',
+    aliases: ['karya_siddhi_yantra', 'sarva_siddhi_yantra', 'karyasiddhi'],
+    fallbackPaths: ['/yantras/sarva_karya_siddhi_yantra.svg']
+  },
+  santana_gopala_yantra: {
+    id: 'santana_gopala_yantra',
+    svgPath: '/yantras/13_Marriage_Santana/santana_gopala_yantra.svg',
+    category: 'santana_family',
+    aliases: ['santan_gopal_yantra', 'bala_gopala_yantra', 'santana_gopal'],
+    fallbackPaths: ['/yantras/santana_gopala_yantra.svg']
+  },
+  dhanvantari_yantra: {
+    id: 'dhanvantari_yantra',
+    svgPath: '/yantras/14_SpecialPurpose/dhanvantari_yantra.svg',
+    category: 'special_purpose',
+    aliases: ['arogya_yantra', 'dhanvantri_yantra', 'dhanwantari_yantra', 'ayushya_yantra'],
+    fallbackPaths: ['/yantras/dhanvantari_yantra.svg']
+  },
+
+  // 06. Devi & Sacred Shakti Yantras
+  durga_yantra: {
+    id: 'durga_yantra',
+    svgPath: '/yantras/06_Devi/durga_yantra.svg',
+    category: 'devi_shakti',
+    aliases: ['maha_durga_yantra', 'navadurga_yantra', 'durga'],
+    fallbackPaths: [
+      '/yantras/durga_yantra.svg',
+      '/yantras/07_Protection/durga_yantra.svg'
+    ]
+  },
+  chandika_yantra: {
+    id: 'chandika_yantra',
+    svgPath: '/yantras/06_Devi/chandika_yantra.svg',
+    category: 'devi_shakti',
+    aliases: ['chandi_yantra', 'maha_chandika_yantra', 'navarna_yantra'],
+    fallbackPaths: ['/yantras/chandika_yantra.svg']
+  },
+  annapurna_yantra: {
+    id: 'annapurna_yantra',
+    svgPath: '/yantras/06_Devi/annapurna_yantra.svg',
+    category: 'devi_shakti',
+    aliases: ['annapoorna_yantra', 'anna_lakshmi_yantra', 'annapurna'],
+    fallbackPaths: [
+      '/yantras/annapurna_yantra.svg',
+      '/yantras/04_Lakshmi/annapurna_yantra.svg'
+    ]
+  },
+  lalita_parameshvari_yantra: {
+    id: 'lalita_parameshvari_yantra',
+    svgPath: '/yantras/06_Devi/lalita_parameshvari_yantra.svg',
+    category: 'devi_shakti',
+    aliases: ['lalita_yantra', 'kamakala_yantra', 'lalita_tripurasundari_yantra', 'rajarajeshwari_yantra'],
+    fallbackPaths: ['/yantras/lalita_parameshvari_yantra.svg']
+  },
+
+  // 18. Kundalini Chakras
+  muladhara_chakra: {
+    id: 'muladhara_chakra',
+    svgPath: '/yantras/chakras/muladhara_chakra.svg',
+    category: 'kundalini_chakras',
+    aliases: ['muladhara', 'mooladhara_chakra', 'root_chakra'],
+    fallbackPaths: ['/yantras/18_Chakras/muladhara_chakra.svg', '/yantras/muladhara_chakra.svg', '/yantras/muladhara.svg']
+  },
+  svadhishthana_chakra: {
+    id: 'svadhishthana_chakra',
+    svgPath: '/yantras/chakras/svadhishthana_chakra.svg',
+    category: 'kundalini_chakras',
+    aliases: ['svadhishthana', 'swadhisthana_chakra', 'sacral_chakra'],
+    fallbackPaths: ['/yantras/18_Chakras/svadhishthana_chakra.svg', '/yantras/svadhishthana_chakra.svg', '/yantras/svadhishthana.svg']
+  },
+  manipura_chakra: {
+    id: 'manipura_chakra',
+    svgPath: '/yantras/chakras/manipura_chakra.svg',
+    category: 'kundalini_chakras',
+    aliases: ['manipura', 'nabhi_chakra', 'solar_plexus_chakra'],
+    fallbackPaths: ['/yantras/18_Chakras/manipura_chakra.svg', '/yantras/manipura_chakra.svg', '/yantras/manipura.svg']
+  },
+  anahata_chakra: {
+    id: 'anahata_chakra',
+    svgPath: '/yantras/chakras/anahata_chakra.svg',
+    category: 'kundalini_chakras',
+    aliases: ['anahata', 'hridaya_chakra', 'heart_chakra'],
+    fallbackPaths: ['/yantras/18_Chakras/anahata_chakra.svg', '/yantras/anahata_chakra.svg', '/yantras/anahata.svg']
+  },
+  vishuddha_chakra: {
+    id: 'vishuddha_chakra',
+    svgPath: '/yantras/chakras/vishuddha_chakra.svg',
+    category: 'kundalini_chakras',
+    aliases: ['vishuddha', 'kantha_chakra', 'throat_chakra'],
+    fallbackPaths: ['/yantras/18_Chakras/vishuddha_chakra.svg', '/yantras/vishuddha_chakra.svg', '/yantras/vishuddha.svg']
+  },
+  ajna_chakra: {
+    id: 'ajna_chakra',
+    svgPath: '/yantras/chakras/ajna_chakra.svg',
+    category: 'kundalini_chakras',
+    aliases: ['ajna', 'agya_chakra', 'third_eye_chakra'],
+    fallbackPaths: ['/yantras/18_Chakras/ajna_chakra.svg', '/yantras/ajna_chakra.svg', '/yantras/ajna.svg']
+  },
+  sahasrara_chakra: {
+    id: 'sahasrara_chakra',
+    svgPath: '/yantras/chakras/sahasrara_chakra.svg',
+    category: 'kundalini_chakras',
+    aliases: ['sahasrara', 'brahmarandhra_chakra', 'crown_chakra'],
+    fallbackPaths: ['/yantras/18_Chakras/sahasrara_chakra.svg', '/yantras/sahasrara_chakra.svg', '/yantras/sahasrara.svg']
   }
 };
 

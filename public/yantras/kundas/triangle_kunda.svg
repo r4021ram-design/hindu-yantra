@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Trikona Yagya Kunda - Classical Shastric Yagya Kunda Vector Matrix -->
+  <defs>
+    <!-- Terracotta / Sacred Brick Gradients -->
+    <linearGradient id="brickOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2E6D0" />
+      <stop offset="40%" stop-color="#E2CCA6" />
+      <stop offset="100%" stop-color="#CBB184" />
+    </linearGradient>
+
+    <!-- 3 Mekhala Gradients (White, Red, Black/Navy) -->
+    <!-- Mekhala 1: White (Sattva / Brahma) -->
+    <linearGradient id="mekhalaWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#F9F6EE" />
+      <stop offset="100%" stop-color="#EFE8D8" />
+    </linearGradient>
+
+    <!-- Mekhala 2: Red (Rajas / Vishnu) -->
+    <linearGradient id="mekhalaRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9531E" />
+      <stop offset="45%" stop-color="#B23812" />
+      <stop offset="100%" stop-color="#802008" />
+    </linearGradient>
+
+    <!-- Mekhala 3: Dark / Blue-Black (Tamas / Shiva) -->
+    <linearGradient id="mekhalaDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#37474F" />
+      <stop offset="50%" stop-color="#263238" />
+      <stop offset="100%" stop-color="#182024" />
+    </linearGradient>
+
+    <!-- Sacred Fire Pit Glow (अग्नि कुण्ड गर्त) -->
+    <radialGradient id="agniGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4" />
+      <stop offset="25%" stop-color="#FFD54F" />
+      <stop offset="55%" stop-color="#FF9800" />
+      <stop offset="85%" stop-color="#E64A19" />
+      <stop offset="100%" stop-color="#BF360C" />
+    </radialGradient>
+
+    <!-- Antique Bronze Contour -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1505" />
+      <stop offset="50%" stop-color="#4E270A" />
+      <stop offset="100%" stop-color="#1A0D03" />
+    </linearGradient>
+
+    <!-- Gold Accent -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#8C6500" />
+    </linearGradient>
+
+    <!-- Sacred Sandstone Background -->
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="90%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCFBA" />
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="sacredGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sacred Backdrop Platform -->
+  <circle cx="500" cy="500" r="490" fill="url(#sacredBg)" stroke="url(#bronzeMain)" stroke-width="3" />
+  <circle cx="500" cy="500" r="482" fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.7" />
+
+  <!-- Directional Cardinal Marks -->
+  <g font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="16" font-weight="bold" fill="#6B4B03" text-anchor="middle" dominant-baseline="central">
+    <text x="500" y="32">पूर्व (East)</text>
+    <text x="500" y="970">पश्चिम (West)</text>
+    <text x="965" y="500">दक्षिण (South)</text>
+    <text x="35" y="500">उत्तर (North)</text>
+  </g>
+
+  <!-- Outer Platform -->
+  <rect x="150" y="150" width="700" height="700" rx="8" fill="url(#brickOuter)" stroke="url(#bronzeMain)" stroke-width="3" />
+
+  <!-- 1. Mekhala 1 (White Triangle - Apex pointing South/down) -->
+  <polygon points="500,790 200,270 800,270" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2.6" />
+
+  <!-- 2. Mekhala 2 (Red Triangle) -->
+  <polygon points="500,720 260,305 740,305" fill="url(#mekhalaRed)" stroke="url(#bronzeMain)" stroke-width="2.4" />
+
+  <!-- 3. Mekhala 3 (Dark Triangle) -->
+  <polygon points="500,650 320,345 680,345" fill="url(#mekhalaDark)" stroke="url(#bronzeMain)" stroke-width="2.2" />
+
+  <!-- 4. Inner Pit (Garta) -->
+  <polygon points="500,570 380,385 620,385" fill="url(#agniGlow)" stroke="url(#bronzeMain)" stroke-width="3" />
+
+  <!-- Spout -->
+  <g id="yoniSpout" transform="translate(500, 265)">
+    <path d="M -25 5 L 0 -50 L 25 5 Z" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2" />
+  </g>
+
+  <!-- Central Lotus Nabhi -->
+  
+  <!-- Central Lotus Nabhi (पद्मनाभि) -->
+  <g id="lotusNabhi" fill="url(#goldAccent)" stroke="url(#bronzeMain)" stroke-width="1.4">
+    <path d="M 493.1 448.4 Q 500.0 420.0 506.9 448.4 Z" opacity="0.9" /><path d="M 506.9 448.4 Q 531.8 433.2 516.6 458.1 Z" opacity="0.9" /><path d="M 516.6 458.1 Q 545.0 465.0 516.6 471.9 Z" opacity="0.9" /><path d="M 516.6 471.9 Q 531.8 496.8 506.9 481.6 Z" opacity="0.9" /><path d="M 506.9 481.6 Q 500.0 510.0 493.1 481.6 Z" opacity="0.9" /><path d="M 493.1 481.6 Q 468.2 496.8 483.4 471.9 Z" opacity="0.9" /><path d="M 483.4 471.9 Q 455.0 465.0 483.4 458.1 Z" opacity="0.9" /><path d="M 483.4 458.1 Q 468.2 433.2 493.1 448.4 Z" opacity="0.9" />
+    <circle cx="500" cy="465" r="15.7" fill="#FFE082" stroke="url(#bronzeMain)" stroke-width="1.2" />
+    <circle cx="500" cy="465" r="3.5" fill="#8C6500" />
+  </g>
+
+  <!-- Labels -->
+  <text x="500" y="115" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="22" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle">त्रिकोण कुण्ड (अग्नि ज्वाला स्वरूप)</text>
+  <text x="500" y="140" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="14" fill="#6B4B03" text-anchor="middle">दिशा: नैर्ऋत्य • देवता: महाकाली/नृसिंह • फल: शत्रुशमन व स्तम्भन</text>
+</svg>

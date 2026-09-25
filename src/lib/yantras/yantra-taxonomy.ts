@@ -191,5 +191,28 @@ export const YANTRA_TAXONOMY_CATEGORIES: Record<string, YantraCategoryDefinition
     icon: 'Grid',
     description: 'Harmonic planetary mathematical matrices with invariant horizontal, vertical, and diagonal sums.',
     lineageNote: 'Varahamihira Brihat Samhita and medieval Jyotish mathematical compendiums.'
+  },
+  tantric_systems: {
+    id: 'tantric_systems',
+    order: 17,
+    folderName: '17_Tantric',
+    titleSanskrit: 'तान्त्रिक एवं भैरव यन्त्राणि',
+    titleHindi: 'तान्त्रिक एवं भैरव यन्त्र',
+    titleEnglish: 'Tantric & Bhairava Yantras',
+    icon: 'Flame',
+    description: 'Esoteric ritual geometries, Bhairava trinities, and protective transformative mandalas.',
+    lineageNote: 'Rudrayamala, Damara Tantra, and Bhairava Agamas.'
+  },
+  kundalini_chakras: {
+    id: 'kundalini_chakras',
+    order: 18,
+    folderName: '18_Chakras',
+    titleSanskrit: 'कुण्डलिनी षट्चक्र एवं सहस्रार यन्त्राणि',
+    titleHindi: 'कुण्डलिनी चक्र (षट्चक्र + सहस्रार)',
+    titleEnglish: 'Kundalini Chakras (Root to Crown)',
+    icon: 'Zap',
+    description: 'The 7 subtle spinal energy vortices from Muladhara to Sahasrara based on Sat-Chakra-Nirupana.',
+    lineageNote: 'Sat-Chakra-Nirupana (Purnananda), Goraksha Paddhati, and Rudrayamala Tantra.'
   }
 };
+

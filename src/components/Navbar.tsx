@@ -3,14 +3,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Sparkles, Compass, Flame, Layers, Box, ChevronRight } from 'lucide-react';
+import { Sparkles, Compass, Flame, Layers, Box, ChevronRight, Zap } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();
 
   const navLinks = [
     { href: '/yantras', label: 'Yantra Darshan', icon: Compass },
-    { href: '/puja', label: 'Upasana & Puja', icon: Flame },
+    { href: '/chakras', label: 'षट्चक्र साधना', icon: Zap },
+    { href: '/kundas', label: 'यज्ञ कुण्ड', icon: Flame },
+    { href: '/puja', label: 'Upasana & Puja', icon: Sparkles },
   ];
 
   return (

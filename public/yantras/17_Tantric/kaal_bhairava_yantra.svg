@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Kaal Bhairava Yantra - Pure Consecrated Dark Antique Bronze Vector Matrix -->
+  <defs>
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="bronzeLight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4A2508" />
+      <stop offset="50%" stop-color="#2D1505" />
+      <stop offset="100%" stop-color="#5B2E0B" />
+    </linearGradient>
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="85%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCDB3" />
+    </radialGradient>
+    <radialGradient id="binduGoldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B45309" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#D97706" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="fieryBhairavaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#991B1B" stop-opacity="0.85" />
+      <stop offset="40%" stop-color="#C2410C" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="amritaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#F59E0B" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#B45309" stop-opacity="0" />
+    </radialGradient>
+    <filter id="sacredShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1A0E05" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#sacredBg)" />
+
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+  
+    <!-- Cardinal Tridents (अष्टदिक्पाल रक्षक त्रिशूल) -->
+    <!-- North -->
+    <path d="M 500 20 L 500 45 M 488 28 C 488 38 512 38 512 28 M 488 28 L 488 22 M 512 28 L 512 22" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none" />
+    <!-- South -->
+    <path d="M 500 980 L 500 955 M 488 972 C 488 962 512 962 512 972 M 488 972 L 488 978 M 512 972 L 512 978" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none" />
+    <!-- East -->
+    <path d="M 980 500 L 955 500 M 972 488 C 962 488 962 512 972 512 M 972 488 L 978 488 M 972 512 L 978 512" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none" />
+    <!-- West -->
+    <path d="M 20 500 L 45 500 M 28 488 C 38 488 38 512 28 512 M 28 488 L 22 488 M 28 512 L 22 512" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none" />
+  
+  
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="415" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="400" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="385" stroke-width="2.4" />
+  </g>
+
+  <!-- 3. Shodashadala Mandala (16 Lotus Petals of Cosmic Time) -->
+  <g id="shodasha_petals" stroke="url(#bronzeMain)" stroke-width="2.2" fill="none" stroke-linejoin="round">
+    <path d="M 437.57 186.15 C 437.25 156.43, 482.07 134.94, 500.00 115.00 C 517.93 134.94, 562.75 156.43, 562.43 186.15" />
+    <path d="M 562.43 186.15 C 573.51 158.57, 623.13 155.87, 647.33 144.31 C 656.27 169.59, 689.45 206.60, 677.78 233.93" />
+    <path d="M 677.78 233.93 C 698.57 212.69, 745.45 229.18, 772.24 227.76 C 770.82 254.55, 787.31 301.43, 766.07 322.22" />
+    <path d="M 766.07 322.22 C 793.40 310.55, 830.41 343.73, 855.69 352.67 C 844.13 376.87, 841.43 426.49, 813.85 437.57" />
+    <path d="M 813.85 437.57 C 843.57 437.25, 865.06 482.07, 885.00 500.00 C 865.06 517.93, 843.57 562.75, 813.85 562.43" />
+    <path d="M 813.85 562.43 C 841.43 573.51, 844.13 623.13, 855.69 647.33 C 830.41 656.27, 793.40 689.45, 766.07 677.78" />
+    <path d="M 766.07 677.78 C 787.31 698.57, 770.82 745.45, 772.24 772.24 C 745.45 770.82, 698.57 787.31, 677.78 766.07" />
+    <path d="M 677.78 766.07 C 689.45 793.40, 656.27 830.41, 647.33 855.69 C 623.13 844.13, 573.51 841.43, 562.43 813.85" />
+    <path d="M 562.43 813.85 C 562.75 843.57, 517.93 865.06, 500.00 885.00 C 482.07 865.06, 437.25 843.57, 437.57 813.85" />
+    <path d="M 437.57 813.85 C 426.49 841.43, 376.87 844.13, 352.67 855.69 C 343.73 830.41, 310.55 793.40, 322.22 766.07" />
+    <path d="M 322.22 766.07 C 301.43 787.31, 254.55 770.82, 227.76 772.24 C 229.18 745.45, 212.69 698.57, 233.93 677.78" />
+    <path d="M 233.93 677.78 C 206.60 689.45, 169.59 656.27, 144.31 647.33 C 155.87 623.13, 158.57 573.51, 186.15 562.43" />
+    <path d="M 186.15 562.43 C 156.43 562.75, 134.94 517.93, 115.00 500.00 C 134.94 482.07, 156.43 437.25, 186.15 437.57" />
+    <path d="M 186.15 437.57 C 158.57 426.49, 155.87 376.87, 144.31 352.67 C 169.59 343.73, 206.60 310.55, 233.93 322.22" />
+    <path d="M 233.93 322.22 C 212.69 301.43, 229.18 254.55, 227.76 227.76 C 254.55 229.18, 301.43 212.69, 322.22 233.93" />
+    <path d="M 322.22 233.93 C 310.55 206.60, 343.73 169.59, 352.67 144.31 C 376.87 155.87, 426.49 158.57, 437.57 186.15" />
+
+  </g>
+
+  <!-- 4. Intermediate Girdle -->
+  <circle cx="500" cy="500" r="320" stroke="url(#bronzeMain)" stroke-width="2.4" fill="none" />
+  <circle cx="500" cy="500" r="310" stroke="url(#bronzeMain)" stroke-width="1.8" fill="none" />
+
+  <!-- 5. Ashtadala Padma (8-Petal Ogee Lotus of the Ashta Bhairavas) -->
+  <g id="ashtadala_petals" stroke="url(#bronzeMain)" stroke-width="2.6" fill="rgba(153,27,27,0.03)" stroke-linejoin="round">
+    <path d="M 415.81 296.75 C 407.92 256.32, 472.26 218.36, 500.00 190.00 C 527.74 218.36, 592.08 256.32, 584.19 296.75" />
+    <path d="M 584.19 296.75 C 607.20 262.58, 679.53 281.24, 719.20 280.80 C 718.76 320.47, 737.42 392.80, 703.25 415.81" />
+    <path d="M 703.25 415.81 C 743.68 407.92, 781.64 472.26, 810.00 500.00 C 781.64 527.74, 743.68 592.08, 703.25 584.19" />
+    <path d="M 703.25 584.19 C 737.42 607.20, 718.76 679.53, 719.20 719.20 C 679.53 718.76, 607.20 737.42, 584.19 703.25" />
+    <path d="M 584.19 703.25 C 592.08 743.68, 527.74 781.64, 500.00 810.00 C 472.26 781.64, 407.92 743.68, 415.81 703.25" />
+    <path d="M 415.81 703.25 C 392.80 737.42, 320.47 718.76, 280.80 719.20 C 281.24 679.53, 262.58 607.20, 296.75 584.19" />
+    <path d="M 296.75 584.19 C 256.32 592.08, 218.36 527.74, 190.00 500.00 C 218.36 472.26, 256.32 407.92, 296.75 415.81" />
+    <path d="M 296.75 415.81 C 262.58 392.80, 281.24 320.47, 280.80 280.80 C 320.47 281.24, 392.80 262.58, 415.81 296.75" />
+
+  </g>
+  <g id="ashtadala_spines" stroke="url(#bronzeLight)" fill="none">
+    <path d="M 500.00 280.00 L 500.00 190.00" stroke-width="1.8" stroke-dasharray="3,3" />
+    <path d="M 655.56 344.44 L 719.20 280.80" stroke-width="1.8" stroke-dasharray="3,3" />
+    <path d="M 720.00 500.00 L 810.00 500.00" stroke-width="1.8" stroke-dasharray="3,3" />
+    <path d="M 655.56 655.56 L 719.20 719.20" stroke-width="1.8" stroke-dasharray="3,3" />
+    <path d="M 500.00 720.00 L 500.00 810.00" stroke-width="1.8" stroke-dasharray="3,3" />
+    <path d="M 344.44 655.56 L 280.80 719.20" stroke-width="1.8" stroke-dasharray="3,3" />
+    <path d="M 280.00 500.00 L 190.00 500.00" stroke-width="1.8" stroke-dasharray="3,3" />
+    <path d="M 344.44 344.44 L 280.80 280.80" stroke-width="1.8" stroke-dasharray="3,3" />
+
+  </g>
+  <g id="ashtadala_names">
+    <text x="500.0" y="239.0" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">असिताङ्ग</text>
+    <text x="687.4" y="316.6" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">रुरु</text>
+    <text x="765.0" y="504.0" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">चण्ड</text>
+    <text x="687.4" y="691.4" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">क्रोध</text>
+    <text x="500.0" y="769.0" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">उन्मत्त</text>
+    <text x="312.6" y="691.4" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">कपाली</text>
+    <text x="235.0" y="504.0" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">भीषण</text>
+    <text x="312.6" y="316.6" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="13" font-weight="bold" fill="#1A0E05" text-anchor="middle">संहार</text>
+
+  </g>
+
+  <!-- 6. Inner Girdle -->
+  <circle cx="500" cy="500" r="220" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" />
+  <circle cx="500" cy="500" r="205" stroke="url(#bronzeMain)" stroke-width="1.8" fill="none" />
+
+  <!-- 7. Dynamic Ashta-Kona / Kaalachakra Octagram Star of Dissolution -->
+  <g id="kaalachakra_star" stroke="url(#bronzeMain)" stroke-width="2.8" fill="rgba(180,83,9,0.05)" stroke-linejoin="round">
+    <path d="M 500.0,310.0 L 538.3,407.6 L 634.4,365.6 L 592.4,461.7 L 690.0,500.0 L 592.4,538.3 L 634.4,634.4 L 538.3,592.4 L 500.0,690.0 L 461.7,592.4 L 365.6,634.4 L 407.6,538.3 L 310.0,500.0 L 407.6,461.7 L 365.6,365.6 L 461.7,407.6 Z" />
+  </g>
+
+  <!-- Star Rays Protective Seeds -->
+  <g font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="14" font-weight="bold" fill="#1A0E05" text-anchor="middle">
+    <text x="500" y="335">भ्रं</text>
+    <text x="615" y="380">काल</text>
+    <text x="665" y="505">भैरवाय</text>
+    <text x="615" y="630">नमः</text>
+    <text x="500" y="675">हुं</text>
+    <text x="385" y="630">फट्</text>
+    <text x="335" y="505">स्वाहा</text>
+    <text x="385" y="380">ॐ</text>
+  </g>
+
+  <!-- 8. Central Dissolution Inverted Triangle -->
+  <g id="central_trikona" stroke="url(#bronzeMain)" stroke-width="2.6" fill="rgba(153,27,27,0.08)" stroke-linejoin="round">
+    <path d="M 500 580 L 569.282032302755 460 L 430.71796769724494 460 Z" />
+  </g>
+
+  <!-- 9. Central Fierce Singularity & Mahabeeja -->
+  <circle cx="500" cy="500" r="48" fill="url(#fieryBhairavaGlow)" />
+  <circle cx="500" cy="500" r="16" fill="url(#binduGoldGlow)" stroke="url(#bronzeMain)" stroke-width="2" />
+  <circle cx="500" cy="500" r="4.5" fill="#1A0E05" />
+
+  <!-- Center Mahabeeja 'भ्रं' -->
+  <text x="500" y="506" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="18" font-weight="bold" fill="#1A0E05" text-anchor="middle">भ्रं</text>
+
+  <text x="500" y="875" font-family="'Noto Sans Devanagari', 'Sanskrit Text', serif" font-size="18" font-weight="bold" fill="#1A0E05" text-anchor="middle" letter-spacing="1">॥ श्री काल भैरव यन्त्रम् ॥</text>
+  <text x="500" y="902" font-family="'Cinzel', serif" font-size="12" font-weight="bold" fill="#3E1E07" text-anchor="middle" letter-spacing="2">OM BHRAM KAALABHAIRAVAYA NAMAHA</text>
+</svg>

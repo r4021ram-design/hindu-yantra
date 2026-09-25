@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import {
   Compass, Maximize2, Minimize2, Upload, Sparkles,
-  Eye, EyeOff, Play, Pause, SkipBack, SkipForward
+  Eye, EyeOff, Play, Pause, SkipBack, SkipForward, Download
 } from 'lucide-react';
 import { YantraShastricEntry } from '@/lib/yantras/shastric-jyotish-database';
 import { SRI_YANTRA_VECTOR_DISSECTIONS } from '@/lib/yantras/sri-yantra-vector-dissections';
@@ -109,6 +109,19 @@ export function YantraAltarStage({
 }: YantraAltarStageProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const handleExportSvg = () => {
+    if (!currentAsset || currentAsset.type !== 'svg' || !currentAsset.content) return;
+    const blob = new Blob([currentAsset.content], { type: 'image/svg+xml;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${selectedYantraId}_sacred_matrix.svg`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div
       className={`${isCanvasExpanded ? 'w-full' : isSidebarOpen ? 'xl:col-span-7' : 'xl:col-span-8'} relative rounded-[32px] p-4 sm:p-7 border-2 border-[#824707]/30 flex flex-col items-center justify-center shadow-xl transition-all`}
@@ -132,61 +145,75 @@ export function YantraAltarStage({
 
         {/* 2D/3D Switcher, Construction Mode, Zoom & Canvas Expand */}
         <div className="flex items-center gap-2 flex-wrap">
-          {/* 2D vs 3D Dimension Switcher (Sri Yantra specific) */}
-          {selectedYantraId === 'sri_yantra' && (
-            <div className="flex items-center gap-1 bg-[#F5EFE4] p-1 rounded-xl border border-[#D1C4B0] text-xs font-mono">
-              <button
-                onClick={() => { setDisplayDimension('2d_yantra'); setIsConstructionMode(false); }}
-                className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
-                  displayDimension === '2d_yantra' && !isConstructionMode
-                    ? 'bg-[#824707] text-white shadow-xs'
-                    : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
-                }`}
-              >
-                📐 2D यन्त्र
-              </button>
-              <button
-                onClick={() => { setDisplayDimension('3d_meru'); setIsConstructionMode(false); }}
-                className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
-                  displayDimension === '3d_meru' && !isConstructionMode
-                    ? 'bg-[#824707] text-white shadow-xs'
-                    : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
-                }`}
-                title="3D महामेरु विग्रह (Solid Brass/Gold Pyramid Altar Visage)"
-              >
-                🏔️ 3D महामेरु
-              </button>
-              <button
-                onClick={() => {
-                  const nextState = !isConstructionMode;
-                  setIsConstructionMode(nextState);
-                  if (nextState) setDisplayDimension('2d_yantra');
-                }}
-                className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
-                  isConstructionMode
-                    ? 'bg-[#8C2300] text-white shadow-xs'
-                    : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
-                }`}
-                title="चरणबद्ध निर्माण स्लाइडर (Step-by-Step Construction Assembly)"
-              >
-                🏗️ चरणबद्ध निर्माण
-              </button>
-              <button
-                onClick={() => {
-                  setDisplayDimension('pure_dissection');
-                  setIsConstructionMode(false);
-                }}
-                className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
-                  displayDimension === 'pure_dissection' && !isConstructionMode
-                    ? 'bg-[#824707] text-white shadow-xs'
-                    : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
-                }`}
-                title="शुद्ध ज्यामितीय विच्छेदन (Pure Geometric Vector Dissection)"
-              >
-                🔬 शुद्ध घटक
-              </button>
-            </div>
-          )}
+          {/* Universal 2D vs 3D Dimension Switcher */}
+          <div className="flex items-center gap-1 bg-[#F5EFE4] p-1 rounded-xl border border-[#D1C4B0] text-xs font-mono">
+            <button
+              onClick={() => { setDisplayDimension('2d_yantra'); setIsConstructionMode(false); }}
+              className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
+                displayDimension === '2d_yantra' && !isConstructionMode
+                  ? 'bg-[#824707] text-white shadow-xs'
+                  : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
+              }`}
+            >
+              📐 2D यन्त्र
+            </button>
+            <button
+              onClick={() => { setDisplayDimension('3d_meru'); setIsConstructionMode(false); }}
+              className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
+                displayDimension === '3d_meru' && !isConstructionMode
+                  ? 'bg-[#824707] text-white shadow-xs'
+                  : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
+              }`}
+              title="3D मेरु पृष्ठ विन्यास (Solid 3D Meru Altar Visage)"
+            >
+              🏔️ 3D मेरु
+            </button>
+            {selectedYantraId === 'sri_yantra' && (
+              <>
+                <button
+                  onClick={() => {
+                    const nextState = !isConstructionMode;
+                    setIsConstructionMode(nextState);
+                    if (nextState) setDisplayDimension('2d_yantra');
+                  }}
+                  className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
+                    isConstructionMode
+                      ? 'bg-[#8C2300] text-white shadow-xs'
+                      : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
+                  }`}
+                  title="चरणबद्ध निर्माण स्लाइडर (Step-by-Step Construction Assembly)"
+                >
+                  🏗️ चरणबद्ध
+                </button>
+                <button
+                  onClick={() => {
+                    setDisplayDimension('pure_dissection');
+                    setIsConstructionMode(false);
+                  }}
+                  className={`px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer ${
+                    displayDimension === 'pure_dissection' && !isConstructionMode
+                      ? 'bg-[#824707] text-white shadow-xs'
+                      : 'text-[#0F0C08] hover:bg-[#EFE7DA]'
+                  }`}
+                  title="शुद्ध ज्यामितीय विच्छेदन (Pure Geometric Vector Dissection)"
+                >
+                  🔬 घटक
+                </button>
+              </>
+            )}
+          </div>
+
+          {/* High-Res Vector SVG / Museum Export */}
+          <div className="flex items-center bg-[#F5EFE4] p-1 rounded-xl border border-[#D1C4B0] text-xs font-mono">
+            <button
+              onClick={handleExportSvg}
+              className="px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 text-[#0F0C08] hover:bg-[#EFE7DA] hover:text-[#824707]"
+              title="शुद्ध 1000x1000 SVG वेक्टर एक्सपोर्ट करें (High-Res Museum Vector Export)"
+            >
+              <Download className="w-3.5 h-3.5 text-[#824707]" />
+              <span>एक्सपोर्ट SVG</span>
+            </button>
+          </div>
 
           {/* Zoom Control */}
           <div className="flex items-center bg-[#F5EFE4] p-1 rounded-xl border border-[#D1C4B0] text-xs font-mono">
@@ -257,22 +284,43 @@ export function YantraAltarStage({
           )}
 
           {/* Render 3D Mahameru, Pure Vector Dissection, Construction Assembly, or Full 2D Sacred Geometry */}
-          {displayDimension === '3d_meru' && selectedYantraId === 'sri_yantra' ? (
-            <div className="relative w-full h-full flex flex-col items-center justify-center p-2">
-              <img
-                src="/yantras/sri_yantra_3d_meru.jpg"
-                alt="श्री महामेरु 3D विग्रह"
-                className="max-w-full max-h-full object-contain rounded-2xl drop-shadow-[0_15px_40px_rgba(0,0,0,0.95)]"
-              />
-              <div className="absolute bottom-2 px-3.5 py-1.5 rounded-xl bg-[#FAF7F0]/95 backdrop-blur-md border border-[#B38226] text-center shadow-lg pointer-events-none">
-                <p className="text-xs font-rozha font-bold text-[#805713]">
-                  श्री महामेरु विग्रह (Meru Prishta 3D Altar View)
-                </p>
-                <p className="text-[10px] font-mono text-[#5C4D3C]">
-                  ठोस पंचधातु स्वर्ण विग्रह • पिरामिड नुमा आरोहण
-                </p>
+          {displayDimension === '3d_meru' ? (
+            selectedYantraId === 'sri_yantra' ? (
+              <div className="relative w-full h-full flex flex-col items-center justify-center p-2">
+                <img
+                  src="/yantras/sri_yantra_3d_meru.jpg"
+                  alt="श्री महामेरु 3D विग्रह"
+                  className="max-w-full max-h-full object-contain rounded-2xl drop-shadow-[0_15px_40px_rgba(0,0,0,0.95)]"
+                />
+                <div className="absolute bottom-2 px-3.5 py-1.5 rounded-xl bg-[#FAF7F0]/95 backdrop-blur-md border border-[#B38226] text-center shadow-lg pointer-events-none">
+                  <p className="text-xs font-rozha font-bold text-[#805713]">
+                    श्री महामेरु विग्रह (Meru Prishta 3D Altar View)
+                  </p>
+                  <p className="text-[10px] font-mono text-[#5C4D3C]">
+                    ठोस पंचधातु स्वर्ण विग्रह • पिरामिड नुमा आरोहण
+                  </p>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="relative w-full h-full flex flex-col items-center justify-center p-4 [perspective:1000px]">
+                <div className="w-full h-full flex items-center justify-center transition-all duration-700 ease-out [transform:rotateX(36deg)_rotateZ(-12deg)_scale(0.88)] [transform-style:preserve-3d] drop-shadow-[0_30px_50px_rgba(26,14,5,0.45)]">
+                  {/* Altar Pedestal Elevation Base */}
+                  <div className="absolute inset-0 rounded-3xl bg-linear-to-b from-[#8C5A20]/25 via-[#3E1E07]/45 to-transparent blur-md [transform:translateZ(-30px)]" />
+                  <div
+                    className="w-full h-full [&_svg]:w-full [&_svg]:h-full filter contrast-110 brightness-95"
+                    dangerouslySetInnerHTML={{ __html: currentAsset.content }}
+                  />
+                </div>
+                <div className="absolute bottom-2 px-3.5 py-1.5 rounded-xl bg-[#FAF7F0]/95 backdrop-blur-md border border-[#B38226] text-center shadow-lg pointer-events-none">
+                  <p className="text-xs font-rozha font-bold text-[#805713]">
+                    त्रिआयामी मेरु पृष्ठ दृश्य (Meru Prishta 3D Altar View)
+                  </p>
+                  <p className="text-[10px] font-mono text-[#5C4D3C]">
+                    3D सममितीय पिरामिड विन्यास • पवित्र कांस्य वेदी
+                  </p>
+                </div>
+              </div>
+            )
           ) : displayDimension === 'pure_dissection' && selectedYantraId === 'sri_yantra' ? (
             <div className={`relative w-full h-full flex items-center justify-center transition-transform duration-300 ${isZoomed ? 'scale-135' : 'scale-100'}`}>
               {/* Optional faint background watermark of full Yantra for geometric context */}

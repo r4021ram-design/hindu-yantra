@@ -10,10 +10,14 @@ export default function MuseumHome() {
 
   const categories = [
     { id: 'all', label: 'All Yantras (सभी यन्त्र)' },
+    { id: 'devi', label: 'Devi & Parashakti (देवी एवं पराशक्ति)' },
     { id: 'ganesha', label: 'Ganesha & Vighnaharta (गणेश एवं विघ्नहर्ता)' },
     { id: 'dashamahavidya', label: 'Dasha Mahavidya (दश महाविद्या)' },
     { id: 'navagraha', label: 'Navagraha & Magic Squares (नवग्रह व जादुई वर्ग)' },
     { id: 'shiva', label: 'Shiva & Bhairava (शिव, भैरव व मृत्युंजय)' },
+    { id: 'vishnu', label: 'Vishnu & Avatars (विष्णु एवं दशावतार)' },
+    { id: 'hanuman', label: 'Hanuman & Anjaneya (हनुमान एवं संकटमोचन)' },
+    { id: 'siddhi', label: 'Karya Siddhi & Santana (कार्यसिद्धि, आरोग्य व सन्तान)' },
     { id: 'vidya', label: 'Vidya & Wisdom (सरस्वती, गायत्री व विद्या)' },
     { id: 'protection', label: 'Protection & Kavacha (रक्षा एवं कवच)' },
     { id: 'prosperity', label: 'Wealth & Prosperity (धन व समृद्धि)' },
@@ -29,7 +33,9 @@ export default function MuseumHome() {
     citation: data.citations[0]?.sourceScripture || 'Shastric Scripture',
     rulingPlanet: data.jyotish.rulingPlanet,
     category:
-      data.taxonomyCategory === 'ganesha' || data.id.includes('ganesh') || data.id.includes('ganapati')
+      data.taxonomyCategory === 'devi_shakti' || data.id.includes('durga') || data.id.includes('chandika') || data.id.includes('annapurna') || data.id.includes('lalita')
+        ? 'devi'
+        : data.taxonomyCategory === 'ganesha' || data.id.includes('ganesh') || data.id.includes('ganapati')
         ? 'ganesha'
         : data.taxonomyCategory === 'dashamahavidya'
         ? 'dashamahavidya'
@@ -37,6 +43,12 @@ export default function MuseumHome() {
         ? 'navagraha'
         : data.taxonomyCategory === 'shiva' || data.id.includes('shiva') || data.id.includes('bhairav') || data.id.includes('mrityunjaya') || data.id.includes('sharabha')
         ? 'shiva'
+        : data.taxonomyCategory === 'hanuman' || data.id === 'hanuman_yantra'
+        ? 'hanuman'
+        : data.taxonomyCategory === 'special_purpose' || data.taxonomyCategory === 'santana_family' || data.id.includes('siddhi') || data.id.includes('santana') || data.id.includes('dhanvantari')
+        ? 'siddhi'
+        : data.taxonomyCategory === 'vishnu_vaishnava' || data.taxonomyCategory === 'avatar_yantras' || data.id.includes('vishnu') || data.id.includes('narasimha') || data.id.includes('varaha') || data.id.includes('rama')
+        ? 'vishnu'
         : data.taxonomyCategory === 'saraswati_vidya' || data.id.includes('saraswati') || data.id.includes('gayatri') || data.id.includes('dakshinamurti') || data.id.includes('hayagriva')
         ? 'vidya'
         : data.taxonomyCategory === 'protection_raksha' || data.id.includes('bisa') || data.id.includes('sudarshana') || data.id.includes('hanuman') || data.id.includes('pratyangira')

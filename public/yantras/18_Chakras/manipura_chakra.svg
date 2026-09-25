@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Maṇipūra Chakra (मणिपूर चक्र - १० दल अग्नि मण्डल) - Pure Consecrated Kundalini Chakra Vector Matrix -->
+  <defs>
+    <!-- Master Dark Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="45%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#2A1406" />
+      <stop offset="100%" stop-color="#120803" />
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDF4D4" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#AA7C11" />
+      <stop offset="100%" stop-color="#6B4B03" />
+    </linearGradient>
+
+    <!-- Element-Specific Mandala Gradient -->
+    <linearGradient id="agniGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEBEE" />
+     <stop offset="30%" stop-color="#FF8A80" />
+     <stop offset="70%" stop-color="#FF5252" />
+     <stop offset="100%" stop-color="#D50000" />
+    </linearGradient>
+
+    <!-- Sacred Parchment Radial Background -->
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDFBF7" />
+      <stop offset="60%" stop-color="#F5EFE1" />
+      <stop offset="85%" stop-color="#EBE0CC" />
+      <stop offset="100%" stop-color="#DDD0B8" />
+    </radialGradient>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="sacredGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sacred Backdrop Disc -->
+  <circle cx="500" cy="500" r="490" fill="url(#sacredBg)" stroke="url(#bronzeMain)" stroke-width="4" />
+  <circle cx="500" cy="500" r="482" fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.75" />
+
+  <!-- Concentric Outer Girdles -->
+  <g stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="465" stroke-width="3" />
+    <circle cx="500" cy="500" r="280" stroke-width="2.5" />
+    <circle cx="500" cy="500" r="268" stroke-width="1.5" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- 10 Dark Raincloud Blue Lotus Petals (मेघनील १० दल) -->
+  <g id="petals" stroke="url(#bronzeMain)" stroke-width="2.6" stroke-linejoin="round">
+    
+      <path d="M 413.48 233.70 C 397.11 153.97, 468.15 95.25, 500.00 40.00 C 531.85 95.25, 602.89 153.97, 586.52 233.70" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 413.48 233.70 C 397.11 153.97, 468.15 95.25, 500.00 40.00 C 531.85 95.25, 602.89 153.97, 586.52 233.70" fill="none" />
+    
+      <path d="M 586.52 233.70 C 620.15 159.58, 712.13 153.83, 770.38 127.85 C 763.68 191.28, 786.63 280.54, 726.52 335.42" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 586.52 233.70 C 620.15 159.58, 712.13 153.83, 770.38 127.85 C 763.68 191.28, 786.63 280.54, 726.52 335.42" fill="none" />
+    
+      <path d="M 726.52 335.42 C 797.30 295.22, 875.10 344.63, 937.49 357.85 C 894.78 405.22, 860.89 490.93, 780.00 500.00" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 726.52 335.42 C 797.30 295.22, 875.10 344.63, 937.49 357.85 C 894.78 405.22, 860.89 490.93, 780.00 500.00" fill="none" />
+    
+      <path d="M 780.00 500.00 C 860.89 509.07, 894.78 594.78, 937.49 642.15 C 875.10 655.37, 797.30 704.78, 726.52 664.58" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 780.00 500.00 C 860.89 509.07, 894.78 594.78, 937.49 642.15 C 875.10 655.37, 797.30 704.78, 726.52 664.58" fill="none" />
+    
+      <path d="M 726.52 664.58 C 786.63 719.46, 763.68 808.72, 770.38 872.15 C 712.13 846.17, 620.15 840.42, 586.52 766.30" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 726.52 664.58 C 786.63 719.46, 763.68 808.72, 770.38 872.15 C 712.13 846.17, 620.15 840.42, 586.52 766.30" fill="none" />
+    
+      <path d="M 586.52 766.30 C 602.89 846.03, 531.85 904.75, 500.00 960.00 C 468.15 904.75, 397.11 846.03, 413.48 766.30" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 586.52 766.30 C 602.89 846.03, 531.85 904.75, 500.00 960.00 C 468.15 904.75, 397.11 846.03, 413.48 766.30" fill="none" />
+    
+      <path d="M 413.48 766.30 C 379.85 840.42, 287.87 846.17, 229.62 872.15 C 236.32 808.72, 213.37 719.46, 273.48 664.58" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 413.48 766.30 C 379.85 840.42, 287.87 846.17, 229.62 872.15 C 236.32 808.72, 213.37 719.46, 273.48 664.58" fill="none" />
+    
+      <path d="M 273.48 664.58 C 202.70 704.78, 124.90 655.37, 62.51 642.15 C 105.22 594.78, 139.11 509.07, 220.00 500.00" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 273.48 664.58 C 202.70 704.78, 124.90 655.37, 62.51 642.15 C 105.22 594.78, 139.11 509.07, 220.00 500.00" fill="none" />
+    
+      <path d="M 220.00 500.00 C 139.11 490.93, 105.22 405.22, 62.51 357.85 C 124.90 344.63, 202.70 295.22, 273.48 335.42" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 220.00 500.00 C 139.11 490.93, 105.22 405.22, 62.51 357.85 C 124.90 344.63, 202.70 295.22, 273.48 335.42" fill="none" />
+    
+      <path d="M 273.48 335.42 C 213.37 280.54, 236.32 191.28, 229.62 127.85 C 287.87 153.83, 379.85 159.58, 413.48 233.70" fill="#1A237E" fill-opacity="0.22" />
+      <path d="M 273.48 335.42 C 213.37 280.54, 236.32 191.28, 229.62 127.85 C 287.87 153.83, 379.85 159.58, 413.48 233.70" fill="none" />
+    
+  </g>
+
+  <!-- 10 Matrika Syllables in Devanagari: डं to फं -->
+  <g font-family="'Noto Sans Devanagari', 'Mangal', 'Yatra One', 'Sanskrit', serif" font-size="28" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle" dominant-baseline="central">
+    
+      <circle cx="500.0" cy="115.6" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="500.0" y="117.6">डं</text>
+    
+      <circle cx="725.9" cy="189.0" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="725.9" y="191.0">ढं</text>
+    
+      <circle cx="865.6" cy="381.2" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="865.6" y="383.2">णं</text>
+    
+      <circle cx="865.6" cy="618.8" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="865.6" y="620.8">तं</text>
+    
+      <circle cx="725.9" cy="811.0" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="725.9" y="813.0">थं</text>
+    
+      <circle cx="500.0" cy="884.4" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="500.0" y="886.4">दं</text>
+    
+      <circle cx="274.1" cy="811.0" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="274.1" y="813.0">धं</text>
+    
+      <circle cx="134.4" cy="618.8" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="134.4" y="620.8">नं</text>
+    
+      <circle cx="134.4" cy="381.2" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="134.4" y="383.2">पं</text>
+    
+      <circle cx="274.1" cy="189.0" r="24" fill="#FFF9EB" stroke="url(#goldAccent)" stroke-width="1.6" />
+      <text x="274.1" y="191.0">फं</text>
+    
+  </g>
+
+  <!-- Agni Tattva Mandala: Red Inverted / Upright Triangle with 3 Swastikas -->
+  <!-- Per Sat-Chakra-Nirupana verse 19: "तस्यान्तस्त्रिकोणं वैश्वानरस्य त्रिक्रोणे तद्वाह्ये त्रिभिः स्वस्तिकैः समलङ्कृतम्" (Inverted/Apex down or Upright with 3 swastikas) -->
+  <g id="agniMandala">
+    <!-- Glowing Fire Disc -->
+    <circle cx="500" cy="500" r="225" fill="url(#agniGrad)" fill-opacity="0.24" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <circle cx="500" cy="500" r="212" fill="none" stroke="url(#goldAccent)" stroke-width="1.4" stroke-dasharray="4 4" />
+
+    <!-- Fiery Upright Agni Triangle -->
+    <polygon points="500,290 680,610 320,610" fill="url(#agniGrad)" fill-opacity="0.5" stroke="url(#bronzeMain)" stroke-width="3.5" />
+    <polygon points="500,315 658,595 342,595" fill="none" stroke="url(#goldAccent)" stroke-width="1.8" />
+
+    <!-- 3 Auspicious Swastikas (त्रिकोण त्रि-स्वस्तिक) at the 3 vertices -->
+    <!-- Top Vertex Swastika -->
+    <g transform="translate(500, 270) scale(0.65)" stroke="url(#bronzeMain)" stroke-width="3" fill="none">
+      <path d="M 0 -15 L 0 15 M -15 0 L 15 0 M 0 -15 L 12 -15 M 15 0 L 15 12 M 0 15 L -12 15 M -15 0 L -15 -12" />
+    </g>
+    <!-- Bottom Right Vertex Swastika -->
+    <g transform="translate(695, 625) scale(0.65)" stroke="url(#bronzeMain)" stroke-width="3" fill="none">
+      <path d="M 0 -15 L 0 15 M -15 0 L 15 0 M 0 -15 L 12 -15 M 15 0 L 15 12 M 0 15 L -12 15 M -15 0 L -15 -12" />
+    </g>
+    <!-- Bottom Left Vertex Swastika -->
+    <g transform="translate(305, 625) scale(0.65)" stroke="url(#bronzeMain)" stroke-width="3" fill="none">
+      <path d="M 0 -15 L 0 15 M -15 0 L 15 0 M 0 -15 L 12 -15 M 15 0 L 15 12 M 0 15 L -12 15 M -15 0 L -15 -12" />
+    </g>
+  </g>
+
+  <!-- Mesha (Ram) Vehicle of Agni Motif -->
+  <g id="meshaVehicle" opacity="0.8">
+    <ellipse cx="500" cy="565" rx="55" ry="18" fill="#424242" opacity="0.3" />
+    <!-- Ram Horns Symbolism -->
+    <path d="M 470 540 C 450 515 440 550 460 560" fill="none" stroke="url(#goldAccent)" stroke-width="3" stroke-linecap="round" />
+    <path d="M 530 540 C 550 515 560 550 540 560" fill="none" stroke="url(#goldAccent)" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Central Beeja: रं (Agni Beeja 'Ram') -->
+  <g id="centralBeeja">
+    <circle cx="500" cy="475" r="54" fill="#FFF8E7" stroke="url(#bronzeMain)" stroke-width="2.6" />
+    <circle cx="500" cy="475" r="48" fill="none" stroke="url(#goldAccent)" stroke-width="1.4" stroke-dasharray="3 2" />
+    <text x="500" y="492" font-family="'Noto Sans Devanagari', 'Mangal', 'Yatra One', serif" font-size="52" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle">रं</text>
+  </g>
+
+  <!-- Inner Shastric Identification -->
+  <text x="500" y="775" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="20" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle" letter-spacing="1">मणिपूर चक्र • वह्नि (अग्नि) तत्त्व</text>
+  <text x="500" y="800" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="14" fill="#6B4B03" text-anchor="middle">लाकिणी शक्ति • रुद्र • मेष वाहन • त्रि-स्वस्तिक</text>
+</svg>

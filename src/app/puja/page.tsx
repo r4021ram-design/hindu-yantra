@@ -57,6 +57,25 @@ const DEITY_IMAGES: Record<string, string> = {
     'rama': '/images/deities/rama.webp',
     'ram': '/images/deities/rama.webp',
     'sriram': '/images/deities/rama.webp',
+
+    // Sacred Canonical Yantras
+    'sri yantra': '/yantras/sri_yantra.svg',
+    'shri yantra': '/yantras/sri_yantra.svg',
+    'sri_yantra': '/yantras/sri_yantra.svg',
+    'kuber yantra': '/yantras/04_Lakshmi/kuber_yantra.svg',
+    'mahamrityunjaya yantra': '/yantras/05_Shiva/mahamrityunjaya_yantra.svg',
+    'durga yantra': '/yantras/durga_yantra.svg',
+    'durga bisa': '/yantras/durga_yantra.svg',
+    'sudarshana chakra yantra': '/yantras/07_Protection/sudarshana_chakra_yantra.svg',
+    'kaal bhairava yantra': '/yantras/kaal_bhairava_yantra.svg',
+    'batuka bhairava yantra': '/yantras/batuka_bhairava_yantra.svg',
+    'swarna akarshana bhairava yantra': '/yantras/swarna_akarshana_bhairava_yantra.svg',
+    'dhanvantari yantra': '/yantras/dhanvantari_yantra.svg',
+    'annapurna yantra': '/yantras/annapurna_yantra.svg',
+    'saraswati yantra': '/yantras/12_Vidya/saraswati_yantra.svg',
+    'gayatri yantra': '/yantras/12_Vidya/gayatri_yantra.svg',
+    'navagraha yantra': '/yantras/08_Navagraha/navagraha_yantra.svg',
+    'santana gopala yantra': '/yantras/santana_gopala_yantra.svg'
 };
 
 const DEFAULT_IMAGE = '/images/deities/ganesha.webp';
@@ -119,6 +138,8 @@ export default function PujaPage() {
         // Use override image if provided, otherwise find in presets
         if (overrideImage) {
             setDeityImage(overrideImage);
+        } else if (deityImage) {
+            // Keep already selected yantra or uploaded image
         } else {
             const normalizedName = deityName.toLowerCase().trim();
             const image = DEITY_IMAGES[normalizedName] || DEFAULT_IMAGE;
@@ -246,6 +267,7 @@ export default function PujaPage() {
                                             onClick={() => {
                                                 setDeityName(deity);
                                                 setSelectedDeity(deity);
+                                                setDeityImage(null);
                                             }}
                                             className={`
                                                 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all haptic-feedback
@@ -258,6 +280,41 @@ export default function PujaPage() {
                                             {deity}
                                         </button>
                                     ))}
+                                </div>
+
+                                {/* Canonical Yantra Quick-Pick Altar Options */}
+                                <div className="mt-6 pt-5 border-t border-amber-200/60">
+                                    <p className="text-xs font-serif font-bold text-amber-900/90 mb-3 text-center uppercase tracking-wider">
+                                        🕉️ पवित्र यन्त्र उपासना (Sacred Yantra Worship Altar)
+                                    </p>
+                                    <div className="flex flex-wrap gap-2.5 justify-center">
+                                        {[
+                                            { name: 'श्री यन्त्र', key: 'sri yantra', img: '/yantras/sri_yantra.svg' },
+                                            { name: 'महामृत्युंजय यन्त्र', key: 'mahamrityunjaya yantra', img: '/yantras/05_Shiva/mahamrityunjaya_yantra.svg' },
+                                            { name: 'कुबेर यन्त्र', key: 'kuber yantra', img: '/yantras/04_Lakshmi/kuber_yantra.svg' },
+                                            { name: 'दुर्गा बीसा यन्त्र', key: 'durga yantra', img: '/yantras/durga_yantra.svg' },
+                                            { name: 'काल भैरव यन्त्र', key: 'kaal bhairava yantra', img: '/yantras/kaal_bhairava_yantra.svg' },
+                                            { name: 'बटुक भैरव यन्त्र', key: 'batuka bhairava yantra', img: '/yantras/batuka_bhairava_yantra.svg' },
+                                            { name: 'सुदर्शन चक्र यन्त्र', key: 'sudarshana chakra yantra', img: '/yantras/07_Protection/sudarshana_chakra_yantra.svg' },
+                                            { name: 'धनवन्तरि आरोग्य यन्त्र', key: 'dhanvantari yantra', img: '/yantras/dhanvantari_yantra.svg' },
+                                        ].map(y => (
+                                            <button
+                                                key={y.key}
+                                                onClick={() => {
+                                                    setDeityName(y.name);
+                                                    setSelectedDeity(y.name);
+                                                    setDeityImage(y.img);
+                                                }}
+                                                className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all haptic-feedback border ${
+                                                    selectedDeity === y.name
+                                                        ? 'bg-[#824707] text-white border-[#824707] shadow-md scale-105'
+                                                        : 'bg-[#FBF5EB] text-[#542608] border-[#C9A46E]/50 hover:bg-[#F3E6D0]'
+                                                }`}
+                                            >
+                                                ✨ {y.name}
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>

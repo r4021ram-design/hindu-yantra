@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Maha Yagya Kunda - Classical Shastric Yagya Kunda Vector Matrix -->
+  <defs>
+    <!-- Terracotta / Sacred Brick Gradients -->
+    <linearGradient id="brickOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2E6D0" />
+      <stop offset="40%" stop-color="#E2CCA6" />
+      <stop offset="100%" stop-color="#CBB184" />
+    </linearGradient>
+
+    <!-- 3 Mekhala Gradients (White, Red, Black/Navy) -->
+    <!-- Mekhala 1: White (Sattva / Brahma) -->
+    <linearGradient id="mekhalaWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#F9F6EE" />
+      <stop offset="100%" stop-color="#EFE8D8" />
+    </linearGradient>
+
+    <!-- Mekhala 2: Red (Rajas / Vishnu) -->
+    <linearGradient id="mekhalaRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D9531E" />
+      <stop offset="45%" stop-color="#B23812" />
+      <stop offset="100%" stop-color="#802008" />
+    </linearGradient>
+
+    <!-- Mekhala 3: Dark / Blue-Black (Tamas / Shiva) -->
+    <linearGradient id="mekhalaDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#37474F" />
+      <stop offset="50%" stop-color="#263238" />
+      <stop offset="100%" stop-color="#182024" />
+    </linearGradient>
+
+    <!-- Sacred Fire Pit Glow (अग्नि कुण्ड गर्त) -->
+    <radialGradient id="agniGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4" />
+      <stop offset="25%" stop-color="#FFD54F" />
+      <stop offset="55%" stop-color="#FF9800" />
+      <stop offset="85%" stop-color="#E64A19" />
+      <stop offset="100%" stop-color="#BF360C" />
+    </radialGradient>
+
+    <!-- Antique Bronze Contour -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1505" />
+      <stop offset="50%" stop-color="#4E270A" />
+      <stop offset="100%" stop-color="#1A0D03" />
+    </linearGradient>
+
+    <!-- Gold Accent -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#8C6500" />
+    </linearGradient>
+
+    <!-- Sacred Sandstone Background -->
+    <radialGradient id="sacredBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF8F1" />
+      <stop offset="60%" stop-color="#F4EEE0" />
+      <stop offset="90%" stop-color="#E9DFCB" />
+      <stop offset="100%" stop-color="#DDCFBA" />
+    </radialGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="sacredGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Sacred Backdrop Platform -->
+  <circle cx="500" cy="500" r="490" fill="url(#sacredBg)" stroke="url(#bronzeMain)" stroke-width="3" />
+  <circle cx="500" cy="500" r="482" fill="none" stroke="url(#goldAccent)" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.7" />
+
+  <!-- Directional Cardinal Marks -->
+  <g font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="16" font-weight="bold" fill="#6B4B03" text-anchor="middle" dominant-baseline="central">
+    <text x="500" y="32">पूर्व (East)</text>
+    <text x="500" y="970">पश्चिम (West)</text>
+    <text x="965" y="500">दक्षिण (South)</text>
+    <text x="35" y="500">उत्तर (North)</text>
+  </g>
+
+  <!-- 1. Grand Step Altar (Tier 1 - Ground Platform) -->
+  <rect x="100" y="100" width="800" height="800" rx="12" fill="url(#brickOuter)" stroke="url(#bronzeMain)" stroke-width="3.5" />
+  <rect x="115" y="115" width="770" height="770" rx="10" fill="none" stroke="url(#goldAccent)" stroke-width="1.6" stroke-dasharray="8 4" />
+
+  <!-- 4 Portals / Gate projections on Cardinals -->
+  <!-- North -->
+  <rect x="420" y="70" width="160" height="40" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2" />
+  <!-- South -->
+  <rect x="420" y="890" width="160" height="40" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2" />
+  <!-- East -->
+  <rect x="70" y="420" width="40" height="160" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2" />
+  <!-- West -->
+  <rect x="890" y="420" width="40" height="160" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2" />
+
+  <!-- 2. Mekhala 1 (White Grand Step) -->
+  <rect x="180" y="180" width="640" height="640" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2.8" />
+
+  <!-- 3. Mekhala 2 (Red Step) -->
+  <rect x="250" y="250" width="500" height="500" fill="url(#mekhalaRed)" stroke="url(#bronzeMain)" stroke-width="2.6" />
+
+  <!-- 4. Mekhala 3 (Dark Step) -->
+  <rect x="320" y="320" width="360" height="360" fill="url(#mekhalaDark)" stroke="url(#bronzeMain)" stroke-width="2.4" />
+
+  <!-- 5. Inner Grand Fire Pit (महागर्त) -->
+  <rect x="380" y="380" width="240" height="240" fill="url(#agniGlow)" stroke="url(#bronzeMain)" stroke-width="3.5" />
+
+  <!-- Dual Western Spout System -->
+  <g id="yoniSpout" transform="translate(500, 890)">
+    <path d="M -35 -70 C -50 -40, -50 -10, 0 20 C 50 -10, 50 -40, 35 -70 Z" fill="url(#mekhalaWhite)" stroke="url(#bronzeMain)" stroke-width="2.2" />
+  </g>
+
+  <!-- Central Lotus Nabhi -->
+  
+  <!-- Central Lotus Nabhi (पद्मनाभि) -->
+  <g id="lotusNabhi" fill="url(#goldAccent)" stroke="url(#bronzeMain)" stroke-width="1.4">
+    <path d="M 490.1 476.0 Q 500.0 435.0 509.9 476.0 Z" opacity="0.9" /><path d="M 509.9 476.0 Q 546.0 454.0 524.0 490.1 Z" opacity="0.9" /><path d="M 524.0 490.1 Q 565.0 500.0 524.0 509.9 Z" opacity="0.9" /><path d="M 524.0 509.9 Q 546.0 546.0 509.9 524.0 Z" opacity="0.9" /><path d="M 509.9 524.0 Q 500.0 565.0 490.1 524.0 Z" opacity="0.9" /><path d="M 490.1 524.0 Q 454.0 546.0 476.0 509.9 Z" opacity="0.9" /><path d="M 476.0 509.9 Q 435.0 500.0 476.0 490.1 Z" opacity="0.9" /><path d="M 476.0 490.1 Q 454.0 454.0 490.1 476.0 Z" opacity="0.9" />
+    <circle cx="500" cy="500" r="22.8" fill="#FFE082" stroke="url(#bronzeMain)" stroke-width="1.2" />
+    <circle cx="500" cy="500" r="3.5" fill="#8C6500" />
+  </g>
+
+  <!-- Labels -->
+  <text x="500" y="55" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="22" font-weight="bold" fill="url(#bronzeMain)" text-anchor="middle">महाकुण्ड (लक्षचण्डी / अतिरुद्र महावेदी)</text>
+  <text x="500" y="80" font-family="'Noto Sans Devanagari', 'Mangal', serif" font-size="14" fill="#6B4B03" text-anchor="middle">स्थान: महामण्डप मध्य • देवता: साक्षात् वैश्वानर • फल: विश्वशान्ति व मोक्ष</text>
+</svg>
