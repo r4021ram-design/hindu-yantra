@@ -1380,6 +1380,126 @@ export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
     evidenceTier: 'canonical',
     confidenceLevel: 'High',
     relatedYantras: ['ashta_lakshmi_yantra', 'mahalakshmi_yantra', 'santana_gopala_yantra']
+  },
+  {
+    id: 'swarna_akarshana_bhairava_yantra',
+    names: {
+      sa: 'श्री स्वर्णाकर्षण भैरव यन्त्रम्',
+      iast: 'Svarṇākarṣaṇa Bhairava Yantram',
+      hi: 'स्वर्णाकर्षण भैरव यन्त्र',
+      en: 'Swarna Akarshana Bhairava Yantra (Attractor of Gold & Cosmic Treasures)',
+      gu: 'સ્વર્ણાકર્ષણ ભૈરવ યંત્ર'
+    },
+    deity: 'Lord Swarna Akarshana Bhairava',
+    mantra: 'Om Aim Klaam Kleem Hloom Hraam Hreem Hroom Sah Apaduddharanaya Swarna Akarshana Bhairavaya Namah',
+    geometrySpec: {
+      primaryShape: '8-Petal Lotus, Gold Shatkona, Crisis-Relief Triangle & Aim Kleem Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Total dissolution of acute poverty, liquidation of crushing debts, attraction of gold, and royal fearlessness.',
+    historicalPeriod: 'Tantric / Rudrayamala Tantram & Batuka Bhairava Kalpa',
+    scripturalCitation: {
+      scripture: 'Rudrayamala Tantram',
+      verse: 'Swarna Akarshana Bhairava Stotram',
+      sanskritText: 'ॐ ऐं क्लां क्लीं ह्लूं ह्रां ह्रीं ह्रूं सः। आपदुद्धारणाय अजामलवद्धाय लोकेश्वराय स्वर्णाकर्षणभैरवाय नमः॥',
+      translation: 'Salutations to Lord Swarna Akarshana Bhairava, the redeemer from all perils, drawing perpetual golden abundance.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kuber_yantra', 'ashta_lakshmi_yantra', 'kanakadhara_yantra']
+  },
+  {
+    id: 'sanjeevani_mahamrityunjaya_yantra',
+    names: {
+      sa: 'श्री सञ्जीवनी महामृत्युञ्जय यन्त्रम्',
+      iast: 'Sañjīvanī Mahāmṛtyuñjaya Yantram',
+      hi: 'सञ्जीवनी महामृत्युंजय यन्त्र',
+      en: 'Sanjeevani Mahamrityunjaya Yantra (Cosmic Nectar of Immortality)',
+      gu: 'સંજીવની મહામૃત્યુંજય યંત્ર'
+    },
+    deity: 'Lord Amrita Mahamrityunjaya',
+    mantra: 'Om Haum Joom Sah Om Bhur Bhuvah Svah Tryambakam Yajamahe Sugandhim Pushtivardhanam Urvarukamiva Bandhanan Mrityor Mukshiya Mamritat',
+    geometrySpec: {
+      primaryShape: '12-Aditya Petals, 8-Petal Lotus, Amrita Kalasha Hexagram & Haum Joom Sah Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Averting untimely accidental death (Akaala Mrityu), recovery from fatal diseases, boosting immunity, and conquering fear.',
+    historicalPeriod: 'c. Vedic & Agamic / Netra Tantram & Rudradhyaya',
+    scripturalCitation: {
+      scripture: 'Netra Tantram',
+      verse: 'Patala 2, Verse 15',
+      sanskritText: 'अमृतेन स्रावयन्तं चन्द्रमण्डलमध्यगम्। मृत्युं जयति येनैव सञ्जीवनीति सा स्मृता॥',
+      translation: 'Meditating within this yantra upon Lord Mrityunjaya raining celestial nectar from the lunar sphere conquers death.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['mahamrityunjaya_yantra', 'sharabheshwara_yantra', 'sadashiva_yantra']
+  },
+  {
+    id: 'sharabheshwara_yantra',
+    names: {
+      sa: 'श्री शरभेश्वर यन्त्रम्',
+      iast: 'Śarabheśvara Yantram',
+      hi: 'शरभेश्वर यन्त्र',
+      en: 'Sharabheshwara Yantra (Pacification of Fierce Cosmic Wrath)',
+      gu: 'શરભેશ્વર યંત્ર'
+    },
+    deity: 'Lord Sharabheshwara (Winged Lion-Bird Avatar of Shiva)',
+    mantra: 'Om Khem Kham Khatt Hum Phat Swaha / Om Sham Sharabheshwaraya Namah',
+    geometrySpec: {
+      primaryShape: '16 Radiant Spikes, 8-Petal Lotus, Shatkona & Fierce Khem Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Total pacification of fierce adversaries, victory in complex legal disputes, neutralising dark sorcery, and calming violent wrath.',
+    historicalPeriod: 'Upanishadic & Tantric / Sharabha Upanishad & Akasha Bhairava Kalpa',
+    scripturalCitation: {
+      scripture: 'Sharabha Upanishad',
+      verse: 'Mantra 1-3',
+      sanskritText: 'यो हि शरभरूपेण नृसिंहमुग्रतेजसम्। शमयामास जगतां पालनाय महाद्युतिः॥',
+      translation: 'Salutations to Lord Sharabheshwara who assumed the winged Sharabha form to pacify the blazing fury of Narasimha.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['pratyangira_yantra', 'sudarshana_chakra_yantra', 'durga_bisa_yantra']
+  },
+  {
+    id: 'sadashiva_yantra',
+    names: {
+      sa: 'श्री सदाशिव पञ्चब्रह्म यन्त्रम्',
+      iast: 'Sadāśiva Pañcabrahma Yantram',
+      hi: 'सदाशिव यन्त्र',
+      en: 'Sadashiva Panchabrahma Yantra (Cosmic Fivefold Form of Shiva)',
+      gu: 'સદાશિવ યંત્ર'
+    },
+    deity: 'Lord Sadashiva (Five-Faced Mahadeva)',
+    mantra: 'Om Namah Shivaya',
+    geometrySpec: {
+      primaryShape: '16 Kalas Petals, Sacred Pentagram Star, Inner Altar & Panchakshari Core',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Universal peace, balancing the 5 gross elements (Panchabhuta), resolving Kala Sarpa dosha, and attainment of ultimate liberation (Moksha).',
+    historicalPeriod: 'Vedic & Agamic / Taittiriya Aranyaka & Kamika Agama',
+    scripturalCitation: {
+      scripture: 'Taittiriya Aranyaka',
+      verse: 'Mahanarayana Upanishad (Panchabrahma Mantras)',
+      sanskritText: 'ईशानः सर्वविद्यानामीश्वरः सर्वभूतानां ब्रह्माधिपतिर्ब्रह्मणोऽधिपतिर्ब्रह्मा शिवो मे अस्तु सदाशिवोम्॥',
+      translation: 'Lord Ishana, the ruler of all knowledge and sovereign of all beings, may that benevolent Sadashiva be ever auspicious unto me.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sanjeevani_mahamrityunjaya_yantra', 'sri_yantra', 'vastu_yantra']
   }
 
 ];
