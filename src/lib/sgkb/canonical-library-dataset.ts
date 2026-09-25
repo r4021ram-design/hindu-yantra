@@ -779,5 +779,367 @@ export const CANONICAL_SGKB_LIBRARY: CanonicalYantraEntry[] = [
     evidenceTier: 'canonical',
     confidenceLevel: 'High',
     relatedYantras: ['sri_yantra', 'maha_meru']
-  }
+  },
+  {
+    id: 'tara_yantra',
+    names: {
+      sa: 'श्रीमदुग्रतारा यन्त्रम्',
+      iast: 'Tārā Yantram',
+      hi: 'तारा यन्त्र',
+      en: 'Tara Yantra (Deliverance from Perils)',
+      gu: 'તારા યંત્ર'
+    },
+    deity: 'Goddess Ugra Tara',
+    mantra: 'Om Hreem Streem Hum Phat',
+    geometrySpec: {
+      primaryShape: 'Inverted Shakti Triangle & 8 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Deliverance from acute financial, spiritual, and physical crises; granting of sublime wisdom and speech eloquence.',
+    historicalPeriod: 'c. 10th Century CE (Brihannila Tantra / Tara Rahasya)',
+    scripturalCitation: {
+      scripture: 'Brihannila Tantra',
+      verse: 'Patala 6.12',
+      sanskritText: 'तारेति तारयत्येषा संसारात्तारिणी स्मृता...',
+      translation: 'She is revered as Tara because she delivers beings across the ocean of worldly suffering.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kali_yantra', 'matangi_yantra']
+  },
+  {
+    id: 'tripura_sundari_yantra',
+    names: {
+      sa: 'श्रीत्रिपुरसुन्दरी यन्त्रम्',
+      iast: 'Tripurasundarī Yantram',
+      hi: 'त्रिपुरसुन्दरी (षोडशी) यन्त्र',
+      en: 'Tripura Sundari Yantra (Sovereign of Beauty)',
+      gu: 'ત્રિપુરા સુંદરી યંત્ર'
+    },
+    deity: 'Lalita Tripura Sundari (Shodashi)',
+    mantra: 'Om Aim Hreem Shreem Tripurasundaryai Namah',
+    geometrySpec: {
+      primaryShape: '16 Petals, 8 Petals & Mula Trikona',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Cosmic harmony, spiritual illumination, supreme aesthetic beauty, and Sri Vidya realization.',
+    historicalPeriod: 'c. 9th Century CE (Tantraraja Tantra)',
+    scripturalCitation: {
+      scripture: 'Tantraraja Tantra',
+      verse: 'Patala 16.5',
+      sanskritText: 'षोडशारं महाचक्रं त्रैलोक्यविजयावहम्...',
+      translation: 'The 16-petal supreme mandala of Tripura Sundari brings triumph across the three realms.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sri_yantra', 'kamala_yantra']
+  },
+  {
+    id: 'bhuvaneshvari_yantra',
+    names: {
+      sa: 'श्रीभुवनेश्वरी यन्त्रम्',
+      iast: 'Bhuvanēśvarī Yantram',
+      hi: 'भुवनेश्वरी यन्त्र',
+      en: 'Bhuvaneshvari Yantra (Cosmic Space Queen)',
+      gu: 'ભુવનેશ્વરી યંત્ર'
+    },
+    deity: 'Goddess Bhuvaneshvari',
+    mantra: 'Om Hreem Bhuvaneshvaryai Namah',
+    geometrySpec: {
+      primaryShape: 'Cosmic Hexagram & 8 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Universal protection, sovereignty over living dwellings, mental peace, and prosperity.',
+    historicalPeriod: 'c. 10th Century CE (Sharada Tilaka)',
+    scripturalCitation: {
+      scripture: 'Sharada Tilaka',
+      verse: 'Patala 9.2',
+      sanskritText: 'ह्रींकारगर्भां भुवनेश्वरीं तां ध्यायेत् समस्ताभयदां प्रपन्नाम्...',
+      translation: 'Meditate upon Bhuvaneshvari who holds the cosmic sound Hreem and protects all worlds.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['tripura_sundari_yantra', 'kamala_yantra']
+  },
+  {
+    id: 'bhairavi_yantra',
+    names: {
+      sa: 'श्रीत्रिपुरभैरवी यन्त्रम्',
+      iast: 'Tripurabhairavī Yantram',
+      hi: 'त्रिपुर भैरवी यन्त्र',
+      en: 'Tripura Bhairavi Yantra (Fire of Consciousness)',
+      gu: 'ત્રિપુરા ભૈરવી યંત્ર'
+    },
+    deity: 'Goddess Tripura Bhairavi',
+    mantra: 'Om Hsraim Hskleem Hsraum Tripurabhairavyai Namah',
+    geometrySpec: {
+      primaryShape: 'Radiant Hexagram & Inner Trikona',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Awakening of spiritual fire (Kundalini), mastery over fears and destruction of base passions.',
+    historicalPeriod: 'c. 11th Century CE (Bhairavi Tantra)',
+    scripturalCitation: {
+      scripture: 'Bhairavi Tantra',
+      verse: 'Patala 1.10',
+      sanskritText: 'ह्स्रैं ह्स्क्लीं ह्स्रौंः भैरवी देवि सर्वशत्रुविमर्दिनी...',
+      translation: 'Tripura Bhairavi crushes all internal vices and external hostile forces through pure divine fire.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kali_yantra', 'chhinnamasta_yantra']
+  },
+  {
+    id: 'chhinnamasta_yantra',
+    names: {
+      sa: 'प्रचण्डचण्डिका यन्त्रम्',
+      iast: 'Chinnamastā Yantram',
+      hi: 'छिन्नमस्ता यन्त्र',
+      en: 'Chhinnamasta Yantra (Pranic Transcendence)',
+      gu: 'છિન્નમસ્તા યંત્ર'
+    },
+    deity: 'Goddess Chhinnamasta',
+    mantra: 'Om Shreem Hreem Kleem Aim Vajra Vairochaniye Hum Hum Phat Swaha',
+    geometrySpec: {
+      primaryShape: 'Hexagram & Inverted Pranic Yoni Triangle',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Transmutation of sensual desires into spiritual brilliance (Ojas), fearlessness, and mastery over breath.',
+    historicalPeriod: 'c. 12th Century CE (Tantrasara / Shakta Agamas)',
+    scripturalCitation: {
+      scripture: 'Tantrasara',
+      verse: 'Section 4.14',
+      sanskritText: 'प्रत्यालीढपदां सदैव दधतीं छिन्नं शिरः कर्त्तृकां...',
+      translation: 'Chhinnamasta severs the ego and nourishes her devotees with the pure nectar of cosmic awareness.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kali_yantra', 'bhairavi_yantra']
+  },
+  {
+    id: 'dhumavati_yantra',
+    names: {
+      sa: 'श्रीधूमावती यन्त्रम्',
+      iast: 'Dhūmāvatī Yantram',
+      hi: 'धूमावती यन्त्र',
+      en: 'Dhumavati Yantra (Goddess of the Primal Void)',
+      gu: 'ધૂમાવતી યંત્ર'
+    },
+    deity: 'Goddess Dhumavati',
+    mantra: 'Om Dhoom Dhoom Dhumavatyai Phat Swaha',
+    geometrySpec: {
+      primaryShape: 'Void Hexagram, Inverted Triangle & 8 Petals',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Eradication of poverty, chronic debt, severe afflictions, and realization of deep ascetic peace.',
+    historicalPeriod: 'c. 13th Century CE (Dhumavati Tantra)',
+    scripturalCitation: {
+      scripture: 'Dhumavati Tantra',
+      verse: 'Taranga 1.4',
+      sanskritText: 'धूं धूं धूमावत्यै स्वाहा मन्त्रेण सर्वदारिद्र्यनाशनम्...',
+      translation: 'Worship of Dhumavati dissolves all poverty and suffering into the peaceful cosmic void.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kali_yantra', 'bagalamukhi_yantra']
+  },
+  {
+    id: 'matangi_yantra',
+    names: {
+      sa: 'श्रीराजमातङ्गी यन्त्रम्',
+      iast: 'Mātaṅgī Yantram',
+      hi: 'मातङ्गी यन्त्र',
+      en: 'Matangi Yantra (Tantric Saraswati)',
+      gu: 'માતંગી યંત્ર'
+    },
+    deity: 'Goddess Raja Matangi',
+    mantra: 'Om Hreem Aim Bhagavati Matangishvari Shreem Swaha',
+    geometrySpec: {
+      primaryShape: '16 Petals, 8 Petals & Saraswati Hexagram',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Mastery over musical instruments, fine arts, poetic speech, memory, and magnetic eloquence.',
+    historicalPeriod: 'c. 11th Century CE (Matangi Tantra)',
+    scripturalCitation: {
+      scripture: 'Matangi Tantra',
+      verse: 'Patala 3.6',
+      sanskritText: 'श्यामलां शुकहस्तां च वीणावादनतत्पराम्...',
+      translation: 'Goddess Matangi, playing the celestial Veena, bestows supernatural eloquence and artistic genius.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['tara_yantra', 'tripura_sundari_yantra']
+  },
+  {
+    id: 'kamala_yantra',
+    names: {
+      sa: 'श्रीमहाकमला यन्त्रम्',
+      iast: 'Kamalā Yantram',
+      hi: 'कमला यन्त्र',
+      en: 'Kamala Yantra (Tantric Mahalakshmi)',
+      gu: 'કમલા યંત્ર'
+    },
+    deity: 'Goddess Kamalatmika',
+    mantra: 'Om Shreem Hreem Shreem Kamale Kamalalaye Praseedha Praseedha Shreem Hreem Shreem Om Mahalakshmyai Namah',
+    geometrySpec: {
+      primaryShape: '16 Petals, 8 Petals & Golden Hexagram',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Permanent material wealth, sovereign authority, fertile abundance, and supreme happiness.',
+    historicalPeriod: 'c. 12th Century CE (Kamala Kalpa / Vishvasara Tantra)',
+    scripturalCitation: {
+      scripture: 'Kamala Kalpa',
+      verse: 'Section 1.8',
+      sanskritText: 'कान्त्या काञ्चनसन्निभां हिमगिरिप्रख्यैश्चतुर्भिर्गजैः...',
+      translation: 'Radiant as burnished gold, bathed by four celestial elephants, Kamala confers limitless auspiciousness.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['mahalakshmi_yantra', 'tripura_sundari_yantra']
+  },
+
+  {
+    id: 'durga_bisa_yantra',
+    names: {
+      sa: 'श्रीमहादुर्गा बीसा यन्त्रम्',
+      iast: 'Durgā Bīsā Yantram',
+      hi: 'दुर्गा बीसा यन्त्र',
+      en: 'Durga Bisa Yantra (Supreme Protective Armor)',
+      gu: 'દુર્ગા બીસા યંત્ર'
+    },
+    deity: 'Goddess Durga / Jagadamba',
+    mantra: 'Om Dum Durgayai Namah / Om Aim Hreem Kleem Chamundayai Vichche',
+    geometrySpec: {
+      primaryShape: '8 Lotus Petals & Bisa Triangle Matrix (Sum of 20)',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Total protection from 8 existential fears, victory in disputes, business prosperity, and elimination of evil eye.',
+    historicalPeriod: 'c. 10th Century CE (Mantra Mahodadhi / Shakta Pramoda)',
+    scripturalCitation: {
+      scripture: 'Durga Saptashati',
+      verse: 'Chapter 4.17',
+      sanskritText: 'दुर्गे स्मृता हरसि भीतिमशेषजन्तोः स्वस्थैः स्मृता मतिमतीव शुभां ददासि...',
+      translation: 'When remembered in distress, O Mother Durga, You dispel the fears of every living being.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['kali_yantra', 'pratyangira_yantra']
+  },
+  {
+    id: 'sudarshana_chakra_yantra',
+    names: {
+      sa: 'श्रीमहासुदर्शन चक्र यन्त्रम्',
+      iast: 'Sudarśana Cakra Yantram',
+      hi: 'सुदर्शन चक्र यन्त्र',
+      en: 'Sudarshana Chakra Yantra (Cosmic Disc of Protection)',
+      gu: 'સુદર્શન ચક્ર યંત્ર'
+    },
+    deity: 'Bhagavan Maha Sudarshana (Vishnu / Narasimha)',
+    mantra: 'Om Sahasrara Hum Phat / Om Namo Bhagavate Maha Sudarshanaya Hum Phat Swaha',
+    geometrySpec: {
+      primaryShape: '24 Fire Flames, 12 Petals, Hexagram & 8-Spoke Wheel',
+      layersCount: 5,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Absolute invulnerability, destruction of black magic and curses, victory in litigation, and relief from chronic illness.',
+    historicalPeriod: 'c. 6th Century CE (Ahirbudhnya Samhita / Pancharatra)',
+    scripturalCitation: {
+      scripture: 'Ahirbudhnya Samhita',
+      verse: 'Chapter 33.1',
+      sanskritText: 'सुदर्शनं महाचक्रं सर्वशत्रुनिवर्हणम् । कोटिसूर्यप्रतीकाशं कालानलसमप्रभम्...',
+      translation: 'The great Sudarshana Chakra, radiant like ten million suns, annihilates all enemies and adverse forces.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['panchamukhi_hanuman_yantra', 'pratyangira_yantra']
+  },
+  {
+    id: 'panchamukhi_hanuman_yantra',
+    names: {
+      sa: 'श्रीपञ्चमुखी हनुमान् यन्त्रम्',
+      iast: 'Pañcamukhī Hanumān Yantram',
+      hi: 'पंचमुखी हनुमान यन्त्र',
+      en: 'Panchamukhi Hanuman Yantra (Five-Faced Guardian Cosmogram)',
+      gu: 'પંચમુખી હનુમાન યંત્ર'
+    },
+    deity: 'Lord Panchamukhi Hanuman (Rudravatara)',
+    mantra: 'Om Ham Hanumate Rudratmakaya Hum Phat',
+    geometrySpec: {
+      primaryShape: '10 Lotus Petals & 5-Pointed Pentagram Matrix',
+      layersCount: 4,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Neutralization of Saturn afflictions (Saadhe Saati), banishment of fear and spirits, physical stamina, and willpower.',
+    historicalPeriod: 'c. 8th Century CE (Sudarshana Samhita / Agastya Samhita)',
+    scripturalCitation: {
+      scripture: 'Sudarshana Samhita',
+      verse: 'Hanumatkavacham 1.1',
+      sanskritText: 'पञ्चवक्त्रं महाभीमं त्रिपञ्चनयनैर्युतम् । बाहुभिर्दशभिर्युक्तं सर्वकामार्थसिद्धिदम्...',
+      translation: 'Possessing five divine faces, fifteen eyes, and ten arms, the granter of all desires and spiritual ends.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['sudarshana_chakra_yantra', 'mahamrityunjaya_yantra']
+  },
+  {
+    id: 'pratyangira_yantra',
+    names: {
+      sa: 'श्रीमहाविपरीत प्रत्यङ्गिरा यन्त्रम्',
+      iast: 'Pratyaṅgirā Yantram',
+      hi: 'प्रत्यङ्गिरा यन्त्र',
+      en: 'Maha Viparita Pratyangira Yantra (Reversal of Malice Cosmogram)',
+      gu: 'પ્રત્યંગિરા યંત્ર'
+    },
+    deity: 'Goddess Maha Viparita Pratyangira (Lion-Faced Aparajita)',
+    mantra: 'Om Kshraum Pratyangirayai Namah / Om Hreem Kshraum Pratyangire Hum Phat Swaha',
+    geometrySpec: {
+      primaryShape: '16 Flames, 16 Petals, 8 Petals, Shatkona & Inverted Yoni',
+      layersCount: 6,
+      hasNavavaranas: false,
+      hasLotusPetals: true,
+      hasBhupura: true
+    },
+    traditionalUsage: 'Instant reversal of black magic, curses, evil eye, total protection against enemies, and reclaiming spiritual sovereignty.',
+    historicalPeriod: 'Vedic / Atharva Veda Parishishta (Pratyangira Kalpa)',
+    scripturalCitation: {
+      scripture: 'Pratyangira Kalpa',
+      verse: 'Patala 1.3',
+      sanskritText: 'ॐ अस्य श्रीमहाविपरीतप्रत्यङ्गिरामन्त्रस्य अङ्गिरा ऋषिः... क्षौं बीजम्...',
+      translation: 'Of this Sri Maha Viparita Pratyangira mantra, the Seer is Rishi Angirasa and the seed is Kshraum.'
+    },
+    evidenceTier: 'canonical',
+    confidenceLevel: 'High',
+    relatedYantras: ['durga_bisa_yantra', 'sudarshana_chakra_yantra', 'kali_yantra']
+  },
+
 ];

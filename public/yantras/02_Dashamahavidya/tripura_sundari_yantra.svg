@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#542608" />
+      <stop offset="100%" stop-color="#1C0D04" />
+    </linearGradient>
+    <radialGradient id="sacredAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B38226" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#B38226" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="binduGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3300" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#800000" stop-opacity="0" />
+    </radialGradient>
+
+  </defs>
+
+  <!-- Ambient Radiant Aura -->
+  <circle cx="500" cy="500" r="485" fill="url(#sacredAura)" />
+
+
+
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="420" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="405" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="390" stroke-width="2.6" />
+  </g>
+
+  <!-- Lotus Petals (outer-lotus-16) -->
+  <g id="outer-lotus-16" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 439.52 195.96 C 437.84 159.63, 482.04 134.44, 500.00 110.00 C 517.96 134.44, 562.16 159.63, 560.48 195.96" stroke-width="2.4" />
+    <path d="M 500.00 190.00 L 500.00 110.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 560.48 195.96 C 572.82 161.75, 623.30 155.39, 649.25 139.69 C 656.49 169.14, 687.68 209.33, 672.23 242.24" stroke-width="2.4" />
+    <path d="M 618.63 213.60 L 649.25 139.69" stroke-width="1.4" opacity="0.75" />
+    <path d="M 672.23 242.24 C 696.72 215.37, 745.79 228.81, 775.77 224.23 C 771.19 254.21, 784.63 303.28, 757.76 327.77" stroke-width="2.4" />
+    <path d="M 719.20 280.80 L 775.77 224.23" stroke-width="1.4" opacity="0.75" />
+    <path d="M 757.76 327.77 C 790.67 312.32, 830.86 343.51, 860.31 350.75 C 844.61 376.70, 838.25 427.18, 804.04 439.52" stroke-width="2.4" />
+    <path d="M 786.40 381.37 L 860.31 350.75" stroke-width="1.4" opacity="0.75" />
+    <path d="M 804.04 439.52 C 840.37 437.84, 865.56 482.04, 890.00 500.00 C 865.56 517.96, 840.37 562.16, 804.04 560.48" stroke-width="2.4" />
+    <path d="M 810.00 500.00 L 890.00 500.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 804.04 560.48 C 838.25 572.82, 844.61 623.30, 860.31 649.25 C 830.86 656.49, 790.67 687.68, 757.76 672.23" stroke-width="2.4" />
+    <path d="M 786.40 618.63 L 860.31 649.25" stroke-width="1.4" opacity="0.75" />
+    <path d="M 757.76 672.23 C 784.63 696.72, 771.19 745.79, 775.77 775.77 C 745.79 771.19, 696.72 784.63, 672.23 757.76" stroke-width="2.4" />
+    <path d="M 719.20 719.20 L 775.77 775.77" stroke-width="1.4" opacity="0.75" />
+    <path d="M 672.23 757.76 C 687.68 790.67, 656.49 830.86, 649.25 860.31 C 623.30 844.61, 572.82 838.25, 560.48 804.04" stroke-width="2.4" />
+    <path d="M 618.63 786.40 L 649.25 860.31" stroke-width="1.4" opacity="0.75" />
+    <path d="M 560.48 804.04 C 562.16 840.37, 517.96 865.56, 500.00 890.00 C 482.04 865.56, 437.84 840.37, 439.52 804.04" stroke-width="2.4" />
+    <path d="M 500.00 810.00 L 500.00 890.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 439.52 804.04 C 427.18 838.25, 376.70 844.61, 350.75 860.31 C 343.51 830.86, 312.32 790.67, 327.77 757.76" stroke-width="2.4" />
+    <path d="M 381.37 786.40 L 350.75 860.31" stroke-width="1.4" opacity="0.75" />
+    <path d="M 327.77 757.76 C 303.28 784.63, 254.21 771.19, 224.23 775.77 C 228.81 745.79, 215.37 696.72, 242.24 672.23" stroke-width="2.4" />
+    <path d="M 280.80 719.20 L 224.23 775.77" stroke-width="1.4" opacity="0.75" />
+    <path d="M 242.24 672.23 C 209.33 687.68, 169.14 656.49, 139.69 649.25 C 155.39 623.30, 161.75 572.82, 195.96 560.48" stroke-width="2.4" />
+    <path d="M 213.60 618.63 L 139.69 649.25" stroke-width="1.4" opacity="0.75" />
+    <path d="M 195.96 560.48 C 159.63 562.16, 134.44 517.96, 110.00 500.00 C 134.44 482.04, 159.63 437.84, 195.96 439.52" stroke-width="2.4" />
+    <path d="M 190.00 500.00 L 110.00 500.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 195.96 439.52 C 161.75 427.18, 155.39 376.70, 139.69 350.75 C 169.14 343.51, 209.33 312.32, 242.24 327.77" stroke-width="2.4" />
+    <path d="M 213.60 381.37 L 139.69 350.75" stroke-width="1.4" opacity="0.75" />
+    <path d="M 242.24 327.77 C 215.37 303.28, 228.81 254.21, 224.23 224.23 C 254.21 228.81, 303.28 215.37, 327.77 242.24" stroke-width="2.4" />
+    <path d="M 280.80 280.80 L 224.23 224.23" stroke-width="1.4" opacity="0.75" />
+    <path d="M 327.77 242.24 C 312.32 209.33, 343.51 169.14, 350.75 139.69 C 376.70 155.39, 427.18 161.75, 439.52 195.96" stroke-width="2.4" />
+    <path d="M 381.37 213.60 L 350.75 139.69" stroke-width="1.4" opacity="0.75" />
+  </g>
+
+  <!-- Ring between lotuses -->
+  <circle cx="500" cy="500" r="310" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" />
+
+
+  <!-- Lotus Petals (inner-lotus-8) -->
+  <g id="inner-lotus-8" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 413.90 292.13 C 406.95 253.74, 472.11 216.87, 500.00 190.00 C 527.89 216.87, 593.05 253.74, 586.10 292.13" stroke-width="2.6" />
+    <path d="M 500.00 275.00 L 500.00 190.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 586.10 292.13 C 608.33 260.07, 680.48 280.08, 719.20 280.80 C 719.92 319.52, 739.93 391.67, 707.87 413.90" stroke-width="2.6" />
+    <path d="M 659.10 340.90 L 719.20 280.80" stroke-width="1.6" opacity="0.75" />
+    <path d="M 707.87 413.90 C 746.26 406.95, 783.13 472.11, 810.00 500.00 C 783.13 527.89, 746.26 593.05, 707.87 586.10" stroke-width="2.6" />
+    <path d="M 725.00 500.00 L 810.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 707.87 586.10 C 739.93 608.33, 719.92 680.48, 719.20 719.20 C 680.48 719.92, 608.33 739.93, 586.10 707.87" stroke-width="2.6" />
+    <path d="M 659.10 659.10 L 719.20 719.20" stroke-width="1.6" opacity="0.75" />
+    <path d="M 586.10 707.87 C 593.05 746.26, 527.89 783.13, 500.00 810.00 C 472.11 783.13, 406.95 746.26, 413.90 707.87" stroke-width="2.6" />
+    <path d="M 500.00 725.00 L 500.00 810.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 413.90 707.87 C 391.67 739.93, 319.52 719.92, 280.80 719.20 C 280.08 680.48, 260.07 608.33, 292.13 586.10" stroke-width="2.6" />
+    <path d="M 340.90 659.10 L 280.80 719.20" stroke-width="1.6" opacity="0.75" />
+    <path d="M 292.13 586.10 C 253.74 593.05, 216.87 527.89, 190.00 500.00 C 216.87 472.11, 253.74 406.95, 292.13 413.90" stroke-width="2.6" />
+    <path d="M 275.00 500.00 L 190.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 292.13 413.90 C 260.07 391.67, 280.08 319.52, 280.80 280.80 C 319.52 280.08, 391.67 260.07, 413.90 292.13" stroke-width="2.6" />
+    <path d="M 340.90 340.90 L 280.80 280.80" stroke-width="1.6" opacity="0.75" />
+  </g>
+
+  <!-- Circle enclosing Mula Trikona -->
+  <circle cx="500" cy="500" r="225" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" />
+  <circle cx="500" cy="500" r="215" stroke="url(#bronzeMain)" stroke-width="1.8" fill="none" />
+
+  <!-- 4. Sacred Mula Trikona (Root Triangle) -->
+  <g id="shodashi-trikona" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round">
+    <polygon points="500,670 325,365 675,365" />
+  </g>
+
+  <!-- 5. Kamakala Bindu Triad & Parama Bindu -->
+  <!-- Top Left Bindu (Prakasha) -->
+  <circle cx="430" cy="435" r="7" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
+  <!-- Top Right Bindu (Vimarsha) -->
+  <circle cx="570" cy="435" r="7" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
+  <!-- Lower Center Bindu (Mishra Phala) -->
+  <circle cx="500" cy="555" r="7" fill="#4D0E00" stroke="#1A0E05" stroke-width="2" />
+
+  <!-- Parama Bindu -->
+  <circle cx="500" cy="490" r="35" fill="url(#binduGlow)" />
+  <circle id="parama-bindu" cx="500" cy="490" r="9" fill="#4D0E00" stroke="#1A0E05" stroke-width="2.5" />
+  <text x="500" y="522" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="22" font-weight="900" fill="#1A0E05" letter-spacing="1">ह्रीं</text>
+
+</svg>

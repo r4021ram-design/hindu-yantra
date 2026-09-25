@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#542608" />
+      <stop offset="100%" stop-color="#1C0D04" />
+    </linearGradient>
+    <radialGradient id="sacredAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B38226" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#B38226" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="binduGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3300" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#800000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="fierceRubyGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D92600" stop-opacity="0.4" />
+      <stop offset="60%" stop-color="#800A00" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="goldSolarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#B8860B" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+
+  </defs>
+
+  <!-- Ambient Radiant Aura -->
+  <circle cx="500" cy="500" r="485" fill="url(#sacredAura)" />
+
+
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+  
+  <!-- Outer Solar Fire Nimbus (Sahasradhara 24 Flames) -->
+  <g id="sudarshana-flames" stroke="url(#bronzeMain)" fill="#FF9900" fill-opacity="0.06" stroke-width="2.2" stroke-linejoin="round">
+    <path d="M 450.14 121.27 Q 473.45 94.87 500.00 78.00 Q 526.55 94.87 549.86 121.27" />
+    <path d="M 549.86 121.27 Q 579.21 101.80 609.22 92.38 Q 630.50 115.55 646.19 147.08" />
+    <path d="M 646.19 147.08 Q 679.57 135.87 711.00 134.54 Q 725.56 162.42 732.55 196.94" />
+    <path d="M 732.55 196.94 Q 767.69 194.75 798.40 201.60 Q 805.25 232.31 803.06 267.45" />
+    <path d="M 803.06 267.45 Q 837.58 274.44 865.46 289.00 Q 864.13 320.43 852.92 353.81" />
+    <path d="M 852.92 353.81 Q 884.45 369.50 907.62 390.78 Q 898.20 420.79 878.73 450.14" />
+    <path d="M 878.73 450.14 Q 905.13 473.45 922.00 500.00 Q 905.13 526.55 878.73 549.86" />
+    <path d="M 878.73 549.86 Q 898.20 579.21 907.62 609.22 Q 884.45 630.50 852.92 646.19" />
+    <path d="M 852.92 646.19 Q 864.13 679.57 865.46 711.00 Q 837.58 725.56 803.06 732.55" />
+    <path d="M 803.06 732.55 Q 805.25 767.69 798.40 798.40 Q 767.69 805.25 732.55 803.06" />
+    <path d="M 732.55 803.06 Q 725.56 837.58 711.00 865.46 Q 679.57 864.13 646.19 852.92" />
+    <path d="M 646.19 852.92 Q 630.50 884.45 609.22 907.62 Q 579.21 898.20 549.86 878.73" />
+    <path d="M 549.86 878.73 Q 526.55 905.13 500.00 922.00 Q 473.45 905.13 450.14 878.73" />
+    <path d="M 450.14 878.73 Q 420.79 898.20 390.78 907.62 Q 369.50 884.45 353.81 852.92" />
+    <path d="M 353.81 852.92 Q 320.43 864.13 289.00 865.46 Q 274.44 837.58 267.45 803.06" />
+    <path d="M 267.45 803.06 Q 232.31 805.25 201.60 798.40 Q 194.75 767.69 196.94 732.55" />
+    <path d="M 196.94 732.55 Q 162.42 725.56 134.54 711.00 Q 135.87 679.57 147.08 646.19" />
+    <path d="M 147.08 646.19 Q 115.55 630.50 92.38 609.22 Q 101.80 579.21 121.27 549.86" />
+    <path d="M 121.27 549.86 Q 94.87 526.55 78.00 500.00 Q 94.87 473.45 121.27 450.14" />
+    <path d="M 121.27 450.14 Q 101.80 420.79 92.38 390.78 Q 115.55 369.50 147.08 353.81" />
+    <path d="M 147.08 353.81 Q 135.87 320.43 134.54 289.00 Q 162.42 274.44 196.94 267.45" />
+    <path d="M 196.94 267.45 Q 194.75 232.31 201.60 201.60 Q 232.31 194.75 267.45 196.94" />
+    <path d="M 267.45 196.94 Q 274.44 162.42 289.00 134.54 Q 320.43 135.87 353.81 147.08" />
+    <path d="M 353.81 147.08 Q 369.50 115.55 390.78 92.38 Q 420.79 101.80 450.14 121.27" />
+  </g>
+
+  
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="382" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="370" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="358" stroke-width="2.6" />
+  </g>
+  
+  <!-- Lotus Petals (dwadashadala-petals) -->
+  <g id="dwadashadala-petals" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 432.71 248.86 C 427.25 203.80, 478.42 170.71, 500.00 140.00 C 521.58 170.71, 572.75 203.80, 567.29 248.86" stroke-width="2.6" />
+    <path d="M 500.00 240.00 L 500.00 140.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 567.29 248.86 C 585.09 207.11, 645.96 204.03, 680.00 188.23 C 683.34 225.62, 711.10 279.86, 683.85 316.15" stroke-width="2.6" />
+    <path d="M 630.00 274.83 L 680.00 188.23" stroke-width="1.6" opacity="0.75" />
+    <path d="M 683.85 316.15 C 720.14 288.90, 774.38 316.66, 811.77 320.00 C 795.97 354.04, 792.89 414.91, 751.14 432.71" stroke-width="2.6" />
+    <path d="M 725.17 370.00 L 811.77 320.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 751.14 432.71 C 796.20 427.25, 829.29 478.42, 860.00 500.00 C 829.29 521.58, 796.20 572.75, 751.14 567.29" stroke-width="2.6" />
+    <path d="M 760.00 500.00 L 860.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 751.14 567.29 C 792.89 585.09, 795.97 645.96, 811.77 680.00 C 774.38 683.34, 720.14 711.10, 683.85 683.85" stroke-width="2.6" />
+    <path d="M 725.17 630.00 L 811.77 680.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 683.85 683.85 C 711.10 720.14, 683.34 774.38, 680.00 811.77 C 645.96 795.97, 585.09 792.89, 567.29 751.14" stroke-width="2.6" />
+    <path d="M 630.00 725.17 L 680.00 811.77" stroke-width="1.6" opacity="0.75" />
+    <path d="M 567.29 751.14 C 572.75 796.20, 521.58 829.29, 500.00 860.00 C 478.42 829.29, 427.25 796.20, 432.71 751.14" stroke-width="2.6" />
+    <path d="M 500.00 760.00 L 500.00 860.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 432.71 751.14 C 414.91 792.89, 354.04 795.97, 320.00 811.77 C 316.66 774.38, 288.90 720.14, 316.15 683.85" stroke-width="2.6" />
+    <path d="M 370.00 725.17 L 320.00 811.77" stroke-width="1.6" opacity="0.75" />
+    <path d="M 316.15 683.85 C 279.86 711.10, 225.62 683.34, 188.23 680.00 C 204.03 645.96, 207.11 585.09, 248.86 567.29" stroke-width="2.6" />
+    <path d="M 274.83 630.00 L 188.23 680.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 248.86 567.29 C 203.80 572.75, 170.71 521.58, 140.00 500.00 C 170.71 478.42, 203.80 427.25, 248.86 432.71" stroke-width="2.6" />
+    <path d="M 240.00 500.00 L 140.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 248.86 432.71 C 207.11 414.91, 204.03 354.04, 188.23 320.00 C 225.62 316.66, 279.86 288.90, 316.15 316.15" stroke-width="2.6" />
+    <path d="M 274.83 370.00 L 188.23 320.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 316.15 316.15 C 288.90 279.86, 316.66 225.62, 320.00 188.23 C 354.04 204.03, 414.91 207.11, 432.71 248.86" stroke-width="2.6" />
+    <path d="M 370.00 274.83 L 320.00 188.23" stroke-width="1.6" opacity="0.75" />
+  </g>
+
+  <!-- Petal Aksharas -->
+  <g id="petal-mantras">
+    <text x="500.00" y="201.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">ॐ</text>
+    <text x="652.50" y="241.86" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">न</text>
+    <text x="764.14" y="353.50" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">मो</text>
+    <text x="805.00" y="506.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">भ</text>
+    <text x="764.14" y="658.50" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">ग</text>
+    <text x="652.50" y="770.14" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">व</text>
+    <text x="500.00" y="811.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">ते</text>
+    <text x="347.50" y="770.14" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">सु</text>
+    <text x="235.86" y="658.50" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">द</text>
+    <text x="195.00" y="506.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">र्श</text>
+    <text x="235.86" y="353.50" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">ना</text>
+    <text x="347.50" y="241.86" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#2E1606" text-anchor="middle">य</text>
+  </g>
+
+  <!-- Inner Boundary Rings -->
+  <g id="inner-boundary" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="260" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="248" stroke-width="1.8" />
+  </g>
+
+  <!-- Vaishnava Hexagram (Shatkona) -->
+  <g id="vaishnava-shatkona" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round">
+    <polygon points="500.00,265.00 703.52,617.50 296.48,617.50" />
+    <polygon points="500.00,735.00 703.52,382.50 296.48,382.50" />
+  </g>
+
+  <!-- Hexagram Corner Beejaksharas -->
+  <g id="shatkona-beejas">
+    <text x="500" y="295" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#6A1800" text-anchor="middle">ॐ</text>
+    <text x="675" y="395" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#6A1800" text-anchor="middle">क्लीं</text>
+    <text x="675" y="615" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#6A1800" text-anchor="middle">कृष्णाय</text>
+    <text x="500" y="715" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#6A1800" text-anchor="middle">गोविन्दाय</text>
+    <text x="325" y="615" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#6A1800" text-anchor="middle">हुं</text>
+    <text x="325" y="395" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="20" font-weight="900" fill="#6A1800" text-anchor="middle">फट्</text>
+  </g>
+
+  <!-- Sudarshana Whirling Wheel (8-Spoke Dynamic Disc) -->
+  <g id="sudarshana-wheel" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="125" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="117" stroke-width="1.5" />
+    <path d="M 500.00 455.00 Q 530.00 417.80 500.00 375.00" stroke-width="2.6" />
+    <path d="M 531.82 468.18 Q 579.34 463.09 588.39 411.61" stroke-width="2.6" />
+    <path d="M 545.00 500.00 Q 582.20 530.00 625.00 500.00" stroke-width="2.6" />
+    <path d="M 531.82 531.82 Q 536.91 579.34 588.39 588.39" stroke-width="2.6" />
+    <path d="M 500.00 545.00 Q 470.00 582.20 500.00 625.00" stroke-width="2.6" />
+    <path d="M 468.18 531.82 Q 420.66 536.91 411.61 588.39" stroke-width="2.6" />
+    <path d="M 455.00 500.00 Q 417.80 470.00 375.00 500.00" stroke-width="2.6" />
+    <path d="M 468.18 468.18 Q 463.09 420.66 411.61 411.61" stroke-width="2.6" />
+  </g>
+
+  <!-- Central Invincible Sahasrara Sanctum -->
+  <g id="sahasrara-bindu">
+    <circle cx="500" cy="500" r="45" fill="url(#fierceRubyGlow)" />
+    <circle cx="500" cy="500" r="38" fill="#FAF6EE" stroke="url(#bronzeMain)" stroke-width="2.5" />
+    <text x="500" y="497" font-family="'Noto Sans Devanagari', serif" font-size="14" font-weight="900" fill="#7A1500" text-anchor="middle">सहस्रार</text>
+    <text x="500" y="518" font-family="'Noto Sans Devanagari', serif" font-size="18" font-weight="900" fill="#7A1500" text-anchor="middle">हुं फट्</text>
+    <circle cx="500" cy="500" r="4" fill="#7A1500" />
+  </g>
+</svg>

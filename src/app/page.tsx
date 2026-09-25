@@ -10,6 +10,8 @@ export default function MuseumHome() {
 
   const categories = [
     { id: 'all', label: 'All Yantras (सभी यन्त्र)' },
+    { id: 'dashamahavidya', label: 'Dasha Mahavidya (दश महाविद्या)' },
+    { id: 'navagraha', label: 'Navagraha & Magic Squares (नवग्रह व जादुई वर्ग)' },
     { id: 'prosperity', label: 'Wealth & Prosperity (धन व समृद्धि)' },
     { id: 'protection', label: 'Protection & Health (सुरक्षा व आरोग्य)' },
     { id: 'vastu', label: 'Vastu & Harmony (वास्तु व शांति)' }
@@ -24,7 +26,11 @@ export default function MuseumHome() {
     citation: data.citations[0]?.sourceScripture || 'Shastric Scripture',
     rulingPlanet: data.jyotish.rulingPlanet,
     category:
-      data.id.includes('kuber') || data.id.includes('lakshmi') || data.id.includes('sri')
+      data.taxonomyCategory === 'dashamahavidya'
+        ? 'dashamahavidya'
+        : data.taxonomyCategory === 'navagraha' || data.id.includes('surya') || data.id.includes('graha')
+        ? 'navagraha'
+        : data.id.includes('kuber') || data.id.includes('lakshmi') || data.id.includes('sri')
         ? 'prosperity'
         : data.id.includes('mrityunjaya') || data.id.includes('ganesh') || data.id.includes('durga')
         ? 'protection'

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#542608" />
+      <stop offset="100%" stop-color="#1C0D04" />
+    </linearGradient>
+    <radialGradient id="sacredAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B38226" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#B38226" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="binduGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3300" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#800000" stop-opacity="0" />
+    </radialGradient>
+
+  </defs>
+
+  <!-- Ambient Radiant Aura -->
+  <circle cx="500" cy="500" r="485" fill="url(#sacredAura)" />
+
+
+
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="410" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="396" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="382" stroke-width="2.6" />
+  </g>
+
+  <!-- Lotus Petals (dhumavati-ashtadala) -->
+  <g id="dhumavati-ashtadala" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 389.02 232.07 C 382.86 189.99, 465.26 147.31, 500.00 118.00 C 534.74 147.31, 617.14 189.99, 610.98 232.07" stroke-width="2.6" />
+    <path d="M 500.00 210.00 L 500.00 118.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 610.98 232.07 C 636.38 197.96, 724.83 226.05, 770.11 229.89 C 773.95 275.17, 802.04 363.62, 767.93 389.02" stroke-width="2.6" />
+    <path d="M 705.06 294.94 L 770.11 229.89" stroke-width="1.6" opacity="0.75" />
+    <path d="M 767.93 389.02 C 810.01 382.86, 852.69 465.26, 882.00 500.00 C 852.69 534.74, 810.01 617.14, 767.93 610.98" stroke-width="2.6" />
+    <path d="M 790.00 500.00 L 882.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 767.93 610.98 C 802.04 636.38, 773.95 724.83, 770.11 770.11 C 724.83 773.95, 636.38 802.04, 610.98 767.93" stroke-width="2.6" />
+    <path d="M 705.06 705.06 L 770.11 770.11" stroke-width="1.6" opacity="0.75" />
+    <path d="M 610.98 767.93 C 617.14 810.01, 534.74 852.69, 500.00 882.00 C 465.26 852.69, 382.86 810.01, 389.02 767.93" stroke-width="2.6" />
+    <path d="M 500.00 790.00 L 500.00 882.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 389.02 767.93 C 363.62 802.04, 275.17 773.95, 229.89 770.11 C 226.05 724.83, 197.96 636.38, 232.07 610.98" stroke-width="2.6" />
+    <path d="M 294.94 705.06 L 229.89 770.11" stroke-width="1.6" opacity="0.75" />
+    <path d="M 232.07 610.98 C 189.99 617.14, 147.31 534.74, 118.00 500.00 C 147.31 465.26, 189.99 382.86, 232.07 389.02" stroke-width="2.6" />
+    <path d="M 210.00 500.00 L 118.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 232.07 389.02 C 197.96 363.62, 226.05 275.17, 229.89 229.89 C 275.17 226.05, 363.62 197.96, 389.02 232.07" stroke-width="2.6" />
+    <path d="M 294.94 294.94 L 229.89 229.89" stroke-width="1.6" opacity="0.75" />
+  </g>
+
+  <!-- Intermediate Ring -->
+  <circle cx="500" cy="500" r="290" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" />
+
+  <!-- 4. Transcendental Shatkona of Void (शून्यता मण्डल) -->
+  <g id="dhumavati-matrix" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round">
+    <!-- Hexagram of Primal Void -->
+    <polygon points="500,300 330,600 670,600" stroke-width="2.8" />
+    <polygon points="500,700 330,400 670,400" stroke-width="2.8" />
+
+    <!-- Inner Triangle -->
+    <polygon points="500,620 400,440 600,440" stroke-width="2.6" />
+  </g>
+
+  <!-- 5. Parama Bindu & Dhumavati Beej 'धूं' -->
+  <circle cx="500" cy="495" r="32" fill="url(#binduGlow)" />
+  <circle id="parama-bindu" cx="500" cy="495" r="9" fill="#4D0E00" stroke="#1A0E05" stroke-width="2.5" />
+  <text x="500" y="527" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="24" font-weight="900" fill="#1A0E05" letter-spacing="1">धूं</text>
+
+</svg>

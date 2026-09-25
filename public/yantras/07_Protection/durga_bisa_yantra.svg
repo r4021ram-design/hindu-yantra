@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#542608" />
+      <stop offset="100%" stop-color="#1C0D04" />
+    </linearGradient>
+    <radialGradient id="sacredAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B38226" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#B38226" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="binduGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3300" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#800000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="fierceRubyGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D92600" stop-opacity="0.4" />
+      <stop offset="60%" stop-color="#800A00" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="goldSolarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#B8860B" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#1A0E05" stop-opacity="0" />
+    </radialGradient>
+
+  </defs>
+
+  <!-- Ambient Radiant Aura -->
+  <circle cx="500" cy="500" r="485" fill="url(#sacredAura)" />
+
+
+  
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Outer Step (Line 1) -->
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <!-- Middle Step (Line 2) -->
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <!-- Inner Step (Line 3) -->
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+  
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="410" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="396" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="382" stroke-width="2.6" />
+  </g>
+  
+  <!-- Lotus Petals (ashtadala-petals) -->
+  <g id="ashtadala-petals" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 402.42 264.41 C 389.98 208.84, 466.43 159.15, 500.00 120.00 C 533.57 159.15, 610.02 208.84, 597.58 264.41" stroke-width="2.6" />
+    <path d="M 500.00 245.00 L 500.00 120.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 597.58 264.41 C 628.08 216.33, 717.28 235.24, 768.70 231.30 C 764.76 282.72, 783.67 371.92, 735.59 402.42" stroke-width="2.6" />
+    <path d="M 680.31 319.69 L 768.70 231.30" stroke-width="1.6" opacity="0.75" />
+    <path d="M 735.59 402.42 C 791.16 389.98, 840.85 466.43, 880.00 500.00 C 840.85 533.57, 791.16 610.02, 735.59 597.58" stroke-width="2.6" />
+    <path d="M 755.00 500.00 L 880.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 735.59 597.58 C 783.67 628.08, 764.76 717.28, 768.70 768.70 C 717.28 764.76, 628.08 783.67, 597.58 735.59" stroke-width="2.6" />
+    <path d="M 680.31 680.31 L 768.70 768.70" stroke-width="1.6" opacity="0.75" />
+    <path d="M 597.58 735.59 C 610.02 791.16, 533.57 840.85, 500.00 880.00 C 466.43 840.85, 389.98 791.16, 402.42 735.59" stroke-width="2.6" />
+    <path d="M 500.00 755.00 L 500.00 880.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 402.42 735.59 C 371.92 783.67, 282.72 764.76, 231.30 768.70 C 235.24 717.28, 216.33 628.08, 264.41 597.58" stroke-width="2.6" />
+    <path d="M 319.69 680.31 L 231.30 768.70" stroke-width="1.6" opacity="0.75" />
+    <path d="M 264.41 597.58 C 208.84 610.02, 159.15 533.57, 120.00 500.00 C 159.15 466.43, 208.84 389.98, 264.41 402.42" stroke-width="2.6" />
+    <path d="M 245.00 500.00 L 120.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 264.41 402.42 C 216.33 371.92, 235.24 282.72, 231.30 231.30 C 282.72 235.24, 371.92 216.33, 402.42 264.41" stroke-width="2.6" />
+    <path d="M 319.69 319.69 L 231.30 231.30" stroke-width="1.6" opacity="0.75" />
+  </g>
+
+  <!-- Petal Navarna Aksharas -->
+  <g id="petal-mantras">
+    <text x="500.00" y="192.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">ऐं</text>
+    <text x="722.74" y="284.26" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">ह्रीं</text>
+    <text x="815.00" y="507.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">क्लीं</text>
+    <text x="722.74" y="729.74" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">चा</text>
+    <text x="500.00" y="822.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">मुं</text>
+    <text x="277.26" y="729.74" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">डा</text>
+    <text x="185.00" y="507.00" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">यै</text>
+    <text x="277.26" y="284.26" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-size="24" font-weight="900" fill="#2E1606" text-anchor="middle">विच्चे</text>
+  </g>
+
+  <!-- Inner Protective Circles -->
+  <g id="inner-circles" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="255" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="245" stroke-width="1.8" />
+  </g>
+
+  <!-- Sacred Durga Bisa Inverted Triangle Matrix -->
+  <g id="bisa-triangle-matrix" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" stroke-linejoin="round">
+    <!-- Outer Inverted Master Triangle -->
+    <polygon points="300,365 700,365 500,710" stroke-width="3.2" fill="#3D1807" fill-opacity="0.04" />
+    
+    <!-- Concentric Inner Inverted Triangle -->
+    <polygon points="325,380 675,380 500,680" stroke-width="1.8" />
+
+    <!-- 9-Chamber Bisa Grid Division Lines -->
+    <!-- Horizontal Level 1 (y = 480) -->
+    <line x1="383" y1="480" x2="617" y2="480" stroke-width="2.2" />
+    <!-- Horizontal Level 2 (y = 580) -->
+    <line x1="442" y1="580" x2="558" y2="580" stroke-width="2.2" />
+
+    <!-- Upright Interstitial Triangles for the 9-fold chamber division -->
+    <polygon points="500,480 442,380 558,380" stroke-width="2.0" />
+    <polygon points="500,580 442,480 558,480" stroke-width="2.0" />
+    
+    <!-- Diagonal partition rays -->
+    <line x1="442" y1="380" x2="500" y2="480" stroke-width="1.6" />
+    <line x1="558" y1="380" x2="500" y2="480" stroke-width="1.6" />
+    <line x1="442" y1="480" x2="500" y2="580" stroke-width="1.6" />
+    <line x1="558" y1="480" x2="500" y2="580" stroke-width="1.6" />
+  </g>
+
+  <!-- Consecrated Bisa Digits & Shakti Syllables (Sum = 20) -->
+  <g id="bisa-numbers" font-family="'Noto Sans Devanagari', 'Cinzel', serif" font-weight="900" fill="#2E1606" text-anchor="middle">
+    <!-- Top Row Chambers: ७, २, ११ (Sum = २०) -->
+    <text x="390" y="445" font-size="26">७</text>
+    <text x="500" y="440" font-size="28">२</text>
+    <text x="610" y="445" font-size="26">११</text>
+
+    <!-- Corner Tri-Shakti Guardians of the Master Triangle -->
+    <text x="315" y="350" font-size="22" fill="#7A1D00">ह्रीं</text>
+    <text x="685" y="350" font-size="22" fill="#7A1D00">श्रीं</text>
+    <text x="500" y="740" font-size="22" fill="#7A1D00">क्लीं</text>
+
+    <!-- Middle Tier Chambers: १२, ६, २ (Sum = २०) -->
+    <text x="445" y="540" font-size="24">१२</text>
+    <text x="555" y="540" font-size="24">२</text>
+
+    <!-- Bottom Chambers: १, १३, ६ (Sum = २०) -->
+    <text x="500" y="635" font-size="24">१</text>
+    <text x="500" y="665" font-size="22">१३</text>
+  </g>
+
+  <!-- Central Consecrated Durga Dum Bindu -->
+  <g id="central-durga-sanctum">
+    <circle cx="500" cy="510" r="32" fill="url(#fierceRubyGlow)" />
+    <circle cx="500" cy="510" r="24" fill="#FAF6EE" stroke="url(#bronzeMain)" stroke-width="2.2" />
+    <text x="500" y="519" font-family="'Noto Sans Devanagari', serif" font-size="26" font-weight="900" fill="#7A1500" text-anchor="middle">दुं</text>
+    <circle cx="500" cy="510" r="5" fill="#7A1500" />
+  </g>
+</svg>

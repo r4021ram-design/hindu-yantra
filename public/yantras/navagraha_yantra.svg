@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Deep Consecrated Antique Bronze Gradients -->
+    <linearGradient id="bronzeMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A0E05" />
+      <stop offset="35%" stop-color="#3E1E07" />
+      <stop offset="70%" stop-color="#542608" />
+      <stop offset="100%" stop-color="#1C0D04" />
+    </linearGradient>
+    <radialGradient id="sacredAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B38226" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#B38226" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="binduGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF3300" stop-opacity="0.30" />
+      <stop offset="100%" stop-color="#800000" stop-opacity="0" />
+    </radialGradient>
+
+  </defs>
+
+  <!-- Ambient Radiant Aura -->
+  <circle cx="500" cy="500" r="485" fill="url(#sacredAura)" />
+
+
+
+  <!-- 1. Canonical 3-Tier Bhupura (Sacred Earth Citadel with 4 Portals) -->
+  <g id="bhupura" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="
+      M 160 50 L 430 50 L 430 20 L 570 20 L 570 50 L 840 50 L 840 160 L 950 160 L 950 430 L 980 430 L 980 570 L 950 570 L 950 840 L 840 840 L 840 950 L 570 950 L 570 980 L 430 980 L 430 950 L 160 950 L 160 840 L 50 840 L 50 570 L 20 570 L 20 430 L 50 430 L 50 160 L 160 160 Z
+    " />
+    <path d="
+      M 175 65 L 435 65 L 435 40 L 565 40 L 565 65 L 825 65 L 825 175 L 935 175 L 935 435 L 960 435 L 960 565 L 935 565 L 935 825 L 825 825 L 825 935 L 565 935 L 565 960 L 435 960 L 435 935 L 175 935 L 175 825 L 65 825 L 65 565 L 40 565 L 40 435 L 65 435 L 65 175 L 175 175 Z
+    " stroke-width="2.2" />
+    <path d="
+      M 190 80 L 440 80 L 440 60 L 560 60 L 560 80 L 810 80 L 810 190 L 920 190 L 920 440 L 940 440 L 940 560 L 920 560 L 920 810 L 810 810 L 810 920 L 560 920 L 560 940 L 440 940 L 440 920 L 190 920 L 190 810 L 80 810 L 80 560 L 60 560 L 60 440 L 80 440 L 80 190 L 190 190 Z
+    " stroke-width="2.6" />
+  </g>
+
+  <!-- 2. Concentric Girdles (Trivalaya) -->
+  <g id="trivalaya" stroke="url(#bronzeMain)" fill="none">
+    <circle cx="500" cy="500" r="420" stroke-width="2.8" />
+    <circle cx="500" cy="500" r="405" stroke-width="1.8" />
+    <circle cx="500" cy="500" r="390" stroke-width="2.6" />
+  </g>
+
+  <!-- Lotus Petals (navagraha-rashi-12) -->
+  <g id="navagraha-rashi-12" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 419.77 200.56 C 417.47 163.99, 476.06 134.78, 500.00 110.00 C 523.94 134.78, 582.53 163.99, 580.23 200.56" stroke-width="2.4" />
+    <path d="M 500.00 190.00 L 500.00 110.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 580.23 200.56 C 596.53 167.74, 661.88 171.74, 695.00 162.25 C 703.34 195.68, 739.48 250.27, 719.20 280.80" stroke-width="2.4" />
+    <path d="M 655.00 231.53 L 695.00 162.25" stroke-width="1.4" opacity="0.75" />
+    <path d="M 719.20 280.80 C 749.73 260.52, 804.32 296.66, 837.75 305.00 C 828.26 338.12, 832.26 403.47, 799.44 419.77" stroke-width="2.4" />
+    <path d="M 768.47 345.00 L 837.75 305.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 799.44 419.77 C 836.01 417.47, 865.22 476.06, 890.00 500.00 C 865.22 523.94, 836.01 582.53, 799.44 580.23" stroke-width="2.4" />
+    <path d="M 810.00 500.00 L 890.00 500.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 799.44 580.23 C 832.26 596.53, 828.26 661.88, 837.75 695.00 C 804.32 703.34, 749.73 739.48, 719.20 719.20" stroke-width="2.4" />
+    <path d="M 768.47 655.00 L 837.75 695.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 719.20 719.20 C 739.48 749.73, 703.34 804.32, 695.00 837.75 C 661.88 828.26, 596.53 832.26, 580.23 799.44" stroke-width="2.4" />
+    <path d="M 655.00 768.47 L 695.00 837.75" stroke-width="1.4" opacity="0.75" />
+    <path d="M 580.23 799.44 C 582.53 836.01, 523.94 865.22, 500.00 890.00 C 476.06 865.22, 417.47 836.01, 419.77 799.44" stroke-width="2.4" />
+    <path d="M 500.00 810.00 L 500.00 890.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 419.77 799.44 C 403.47 832.26, 338.12 828.26, 305.00 837.75 C 296.66 804.32, 260.52 749.73, 280.80 719.20" stroke-width="2.4" />
+    <path d="M 345.00 768.47 L 305.00 837.75" stroke-width="1.4" opacity="0.75" />
+    <path d="M 280.80 719.20 C 250.27 739.48, 195.68 703.34, 162.25 695.00 C 171.74 661.88, 167.74 596.53, 200.56 580.23" stroke-width="2.4" />
+    <path d="M 231.53 655.00 L 162.25 695.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 200.56 580.23 C 163.99 582.53, 134.78 523.94, 110.00 500.00 C 134.78 476.06, 163.99 417.47, 200.56 419.77" stroke-width="2.4" />
+    <path d="M 190.00 500.00 L 110.00 500.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 200.56 419.77 C 167.74 403.47, 171.74 338.12, 162.25 305.00 C 195.68 296.66, 250.27 260.52, 280.80 280.80" stroke-width="2.4" />
+    <path d="M 231.53 345.00 L 162.25 305.00" stroke-width="1.4" opacity="0.75" />
+    <path d="M 280.80 280.80 C 260.52 250.27, 296.66 195.68, 305.00 162.25 C 338.12 171.74, 403.47 167.74, 419.77 200.56" stroke-width="2.4" />
+    <path d="M 345.00 231.53 L 305.00 162.25" stroke-width="1.4" opacity="0.75" />
+  </g>
+
+  <!-- Ring between lotuses -->
+  <circle cx="500" cy="500" r="310" stroke="url(#bronzeMain)" stroke-width="2.6" fill="none" />
+
+
+  <!-- Lotus Petals (navagraha-dikpala-8) -->
+  <g id="navagraha-dikpala-8" stroke="url(#bronzeMain)" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M 410.07 282.89 C 405.00 248.60, 471.82 213.88, 500.00 190.00 C 528.18 213.88, 595.00 248.60, 589.93 282.89" stroke-width="2.6" />
+    <path d="M 500.00 265.00 L 500.00 190.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 589.93 282.89 C 610.59 255.06, 682.39 277.76, 719.20 280.80 C 722.24 317.61, 744.94 389.41, 717.11 410.07" stroke-width="2.6" />
+    <path d="M 666.17 333.83 L 719.20 280.80" stroke-width="1.6" opacity="0.75" />
+    <path d="M 717.11 410.07 C 751.40 405.00, 786.12 471.82, 810.00 500.00 C 786.12 528.18, 751.40 595.00, 717.11 589.93" stroke-width="2.6" />
+    <path d="M 735.00 500.00 L 810.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 717.11 589.93 C 744.94 610.59, 722.24 682.39, 719.20 719.20 C 682.39 722.24, 610.59 744.94, 589.93 717.11" stroke-width="2.6" />
+    <path d="M 666.17 666.17 L 719.20 719.20" stroke-width="1.6" opacity="0.75" />
+    <path d="M 589.93 717.11 C 595.00 751.40, 528.18 786.12, 500.00 810.00 C 471.82 786.12, 405.00 751.40, 410.07 717.11" stroke-width="2.6" />
+    <path d="M 500.00 735.00 L 500.00 810.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 410.07 717.11 C 389.41 744.94, 317.61 722.24, 280.80 719.20 C 277.76 682.39, 255.06 610.59, 282.89 589.93" stroke-width="2.6" />
+    <path d="M 333.83 666.17 L 280.80 719.20" stroke-width="1.6" opacity="0.75" />
+    <path d="M 282.89 589.93 C 248.60 595.00, 213.88 528.18, 190.00 500.00 C 213.88 471.82, 248.60 405.00, 282.89 410.07" stroke-width="2.6" />
+    <path d="M 265.00 500.00 L 190.00 500.00" stroke-width="1.6" opacity="0.75" />
+    <path d="M 282.89 410.07 C 255.06 389.41, 277.76 317.61, 280.80 280.80 C 317.61 277.76, 389.41 255.06, 410.07 282.89" stroke-width="2.6" />
+    <path d="M 333.83 333.83 L 280.80 280.80" stroke-width="1.6" opacity="0.75" />
+  </g>
+
+  <!-- Inner Mandala Ring -->
+  <circle cx="500" cy="500" r="235" stroke="url(#bronzeMain)" stroke-width="2.8" fill="none" />
+
+  <!-- Directional Radial Ray Separators -->
+  <g id="mandala-rays" stroke="url(#bronzeMain)" stroke-width="1.8" opacity="0.6">
+    <line x1="500" y1="265" x2="500" y2="735" />
+    <line x1="265" y1="500" x2="735" y2="500" />
+    <line x1="334" y1="334" x2="666" y2="666" />
+    <line x1="334" y1="666" x2="666" y2="334" />
+  </g>
+
+  <!-- 9 Planetary Shrine Nodes (Navagraha Shanti Cells) -->
+  <g id="navagraha-sanctums">
+
+    <!-- सूर्य (Sun) -->
+    <circle cx="500" cy="500" r="48" fill="#FAF3E8" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="500" y="496" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="20" font-weight="900" fill="#1A0E05">सूर्य</text>
+    <text x="500" y="516" text-anchor="middle" font-family="'Cinzel', monospace" font-size="11" font-weight="bold" fill="#8C2300">योग १५</text>
+  
+
+    <!-- चन्द्र (Moon) -->
+    <circle cx="380" cy="380" r="38" fill="#FFFFFF" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="380" y="376" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">चन्द्र</text>
+    <text x="380" y="396" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग १८</text>
+  
+
+    <!-- मंगल (Mars) -->
+    <circle cx="620" cy="500" r="38" fill="#FFF1ED" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="620" y="496" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">मंगल</text>
+    <text x="620" y="516" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग २१</text>
+  
+
+    <!-- बुध (Merc) -->
+    <circle cx="500" cy="360" r="38" fill="#EDF7EE" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="500" y="356" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">बुध</text>
+    <text x="500" y="376" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग २४</text>
+  
+
+    <!-- गुरु (Jup) -->
+    <circle cx="620" cy="380" r="38" fill="#FFFDE8" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="620" y="376" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">गुरु</text>
+    <text x="620" y="396" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग २७</text>
+  
+
+    <!-- शुक्र (Venus) -->
+    <circle cx="500" cy="640" r="38" fill="#F8F4FF" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="500" y="636" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">शुक्र</text>
+    <text x="500" y="656" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग ३०</text>
+  
+
+    <!-- शनि (Sat) -->
+    <circle cx="380" cy="500" r="38" fill="#F2F2F2" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="380" y="496" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">शनि</text>
+    <text x="380" y="516" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग ३३</text>
+  
+
+    <!-- राहु (Rahu) -->
+    <circle cx="380" cy="620" r="38" fill="#EAEAEA" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="380" y="616" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">राहु</text>
+    <text x="380" y="636" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग ३६</text>
+  
+
+    <!-- केतु (Ketu) -->
+    <circle cx="620" cy="620" r="38" fill="#F7EFE5" stroke="url(#bronzeMain)" stroke-width="2.4" />
+    <text x="620" y="616" text-anchor="middle" font-family="'Cinzel Decorative', 'Noto Sans Devanagari', serif" font-size="16" font-weight="900" fill="#1A0E05">केतु</text>
+    <text x="620" y="636" text-anchor="middle" font-family="'Cinzel', monospace" font-size="9.5" font-weight="bold" fill="#8C2300">योग ३९</text>
+  
+  </g>
+
+  <!-- Central Solar Aura -->
+  <circle cx="500" cy="500" r="14" fill="#8C2300" stroke="#1A0E05" stroke-width="2.5" />
+
+</svg>
