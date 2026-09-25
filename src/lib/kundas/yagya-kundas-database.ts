@@ -48,6 +48,92 @@ export interface YagyaKundaEntry {
   svgPath: string;
 }
 
+export type RitualBudgetTier = 'smarta_grihastha' | 'sukshma_yathashakti' | 'kalpokta_grand';
+
+export type FatMediumType = 'cow_ghee' | 'sesame_oil' | 'mustard_oil';
+
+export interface BudgetTierMeta {
+  id: RitualBudgetTier;
+  nameHindi: string;
+  nameEnglish: string;
+  taglineHindi: string;
+  descriptionHindi: string;
+  fatGramsPerAhuti: number;
+  havisyaGramsPerAhuti: number;
+  badgeHindi: string;
+  isRecommended?: boolean;
+}
+
+export interface FatMediumMeta {
+  id: FatMediumType;
+  nameHindi: string;
+  nameEnglish: string;
+  pricePerKgINR: number;
+  suitableForHindi: string;
+  shastricRuleHindi: string;
+}
+
+export const RITUAL_BUDGET_TIERS: BudgetTierMeta[] = [
+  {
+    id: 'smarta_grihastha',
+    nameHindi: 'गृहस्थ स्मार्त विधान (अनुशंसित)',
+    nameEnglish: 'Smarta Grihastha (Recommended Standard)',
+    taglineHindi: 'हविष्य-अभिघार पद्धति • ६५% बजट बचत',
+    descriptionHindi: 'गृहस्थों एवं सामान्य यजमानों हेतु सर्वाधिक सन्तुलित व शास्त्रसम्मत। इसमें प्रचुर औषधीय हविष्य पर गोघृत का विधिवत् अभिघार (सिञ्चन) कर आहुति दी जाती है।',
+    fatGramsPerAhuti: 2.5,
+    havisyaGramsPerAhuti: 14.0,
+    badgeHindi: '★ सर्वाधिक अनुशंसित',
+    isRecommended: true
+  },
+  {
+    id: 'sukshma_yathashakti',
+    nameHindi: 'सूक्ष्म यथाशक्ति विधान (कलियुग लघु)',
+    nameEnglish: 'Sukshma Yathashakti (Kaliyuga Economical)',
+    taglineHindi: 'पराशर स्मृति नियम • ८५% बजट बचत',
+    descriptionHindi: 'कलौ पाराशरः स्मृतः के अनुसार जब द्रव्य अल्प हो, तब न्यूनतम घृत में विशुद्ध वानस्पतिक हविष्य-समिधा द्वारा सम्पूर्ण मन्त्र फल की प्राप्ति होती है।',
+    fatGramsPerAhuti: 1.2,
+    havisyaGramsPerAhuti: 15.0,
+    badgeHindi: 'कलियुग सुलभ'
+  },
+  {
+    id: 'kalpokta_grand',
+    nameHindi: 'कल्पोक्त महामख (वैदिक समृद्ध)',
+    nameEnglish: 'Kalpokta Grand (Classical Temple Benchmark)',
+    taglineHindi: 'प्रचुर स्रुवा-स्रुक् घृतधारा • पारम्परिक',
+    descriptionHindi: 'बृहत् मन्दिरों, अतिरुद्र, कोटिहोम, एवं राजसूय/अश्वमेध सदृश बृहद् महामखों हेतु पारम्परिक प्रचुर घृत आहुति विधान (औसत ८ ग्राम प्रति आहुति + वसोर्धारा)।',
+    fatGramsPerAhuti: 8.0,
+    havisyaGramsPerAhuti: 12.0,
+    badgeHindi: 'महामख मानक'
+  }
+];
+
+export const FAT_MEDIUMS: FatMediumMeta[] = [
+  {
+    id: 'cow_ghee',
+    nameHindi: 'विशुद्ध देशी गोघृत',
+    nameEnglish: 'Pure Desi Cow Ghee',
+    pricePerKgINR: 850,
+    suitableForHindi: 'सर्वदेव प्रिय, शान्ति, पुष्टि एवं समस्त सात्त्विक होम',
+    shastricRuleHindi: 'सर्वश्रेष्ठ मुख्य हविष्य द्रव्य (आपस्तम्ब श्रौतसूत्र)'
+  },
+  {
+    id: 'sesame_oil',
+    nameHindi: 'शुद्ध तिल तैल',
+    nameEnglish: 'Pure Sesame (Til) Oil',
+    pricePerKgINR: 260,
+    suitableForHindi: 'शनि, राहु-केतु, भैरव, शिव एवं शाक्त होम',
+    shastricRuleHindi: 'जैमिनि प्रतिनिधि द्रव्य सिद्धान्त (६.३) - घृत के अभाव में तिल तैल शास्त्रसम्मत'
+  },
+  {
+    id: 'mustard_oil',
+    nameHindi: 'शुद्ध सरसों (कडुवा) तैल',
+    nameEnglish: 'Pure Mustard (Sarson) Oil',
+    pricePerKgINR: 180,
+    suitableForHindi: 'बगलामुखी, महाकाली, शत्रुशमन एवं त्रिकोण कुण्ड होम',
+    shastricRuleHindi: 'शारदातिलकम् एवं तन्त्रसार निर्दिष्ट तीक्ष्ण स्तम्भन द्रव्य'
+  }
+];
+
 export interface KundaCalculationResult {
   ahutiCount: number;
   hastas: number;
@@ -62,9 +148,23 @@ export interface KundaCalculationResult {
   mekhala2HeightInches: number;
   mekhala3HeightInches: number;
   estimatedBricks: number;
-  estimatedGheeKg: number;
+  estimatedGheeKg: number; // backward compatibility
   estimatedHavisyaKg: number;
   recommendedPriests: number;
+
+  // Kaliyuga Budget Tier & Dravya Medium Fields
+  tier: RitualBudgetTier;
+  tierMeta: BudgetTierMeta;
+  fatMedium: FatMediumType;
+  fatMediumMeta: FatMediumMeta;
+  fatMediumKg: number;
+  fatMediumCostINR: number;
+  havisyaCostINR: number;
+  totalEstimatedCostINR: number;
+  grandCostBenchmarkINR: number;
+  savingsVsGrandINR: number;
+  savingsPercentage: number;
+  shastricGuidance: string;
 }
 
 export const YAGYA_KUNDAS_DATABASE: YagyaKundaEntry[] = [
@@ -469,7 +569,12 @@ export const YAGYA_KUNDAS_DATABASE: YagyaKundaEntry[] = [
  * - 100,000 ahutis (Laksha): 4 Hastas (96 angulas = 6.0 ft)
  * - 1,000,000 ahutis (Koti): 8 Hastas (192 angulas = 12.0 ft)
  */
-export function calculateKundaDimensions(ahutiCount: number, kundaId: string = 'chaturasra_kunda'): KundaCalculationResult {
+export function calculateKundaDimensions(
+  ahutiCount: number,
+  kundaId: string = 'chaturasra_kunda',
+  tier: RitualBudgetTier = 'smarta_grihastha',
+  fatMedium: FatMediumType = 'cow_ghee'
+): KundaCalculationResult {
   let hastas = 1;
   if (ahutiCount <= 100) {
     hastas = 0.5;
@@ -500,11 +605,40 @@ export function calculateKundaDimensions(ahutiCount: number, kundaId: string = '
   const m2Inches = Number((scale * 2.25).toFixed(1));
   const m3Inches = Number((scale * 1.5).toFixed(1));
 
-  // Material and priest estimations
+  // Priests & Bricks
   const estimatedBricks = Math.round(angulas * angulas * 0.18 + 50);
-  const estimatedGheeKg = Number((ahutiCount * 0.008).toFixed(1)); // ~8 grams ghee per ahuti
-  const estimatedHavisyaKg = Number((ahutiCount * 0.012).toFixed(1)); // ~12 grams havisya per ahuti
   const recommendedPriests = ahutiCount >= 100000 ? 11 : ahutiCount >= 10000 ? 5 : ahutiCount >= 1000 ? 3 : 1;
+
+  // Tier metadata & Medium metadata
+  const tierMeta = RITUAL_BUDGET_TIERS.find(t => t.id === tier) || RITUAL_BUDGET_TIERS[0];
+  const fatMediumMeta = FAT_MEDIUMS.find(m => m.id === fatMedium) || FAT_MEDIUMS[0];
+
+  // Specific quantities based on chosen tier
+  const fatMediumKg = Number(Math.max(0.25, (ahutiCount * tierMeta.fatGramsPerAhuti) / 1000).toFixed(2));
+  const estimatedHavisyaKg = Number(Math.max(0.5, (ahutiCount * tierMeta.havisyaGramsPerAhuti) / 1000).toFixed(2));
+
+  // Cost estimates (INR)
+  const fatMediumCostINR = Math.round(fatMediumKg * fatMediumMeta.pricePerKgINR);
+  const havisyaCostINR = Math.round(estimatedHavisyaKg * 200); // ~₹200/kg avg pure havisya
+  const totalEstimatedCostINR = fatMediumCostINR + havisyaCostINR;
+
+  // Grand Classical Benchmark (8g Cow Ghee + 12g Havisya)
+  const grandGheeKg = Number(Math.max(0.5, (ahutiCount * 8.0) / 1000).toFixed(2));
+  const grandHavisyaKg = Number(Math.max(0.5, (ahutiCount * 12.0) / 1000).toFixed(2));
+  const grandCostBenchmarkINR = Math.round((grandGheeKg * 850) + (grandHavisyaKg * 200));
+
+  const savingsVsGrandINR = Math.max(0, grandCostBenchmarkINR - totalEstimatedCostINR);
+  const savingsPercentage = grandCostBenchmarkINR > 0 ? Math.round((savingsVsGrandINR / grandCostBenchmarkINR) * 100) : 0;
+
+  // Shastric guidance note
+  let shastricGuidance = '';
+  if (tier === 'kalpokta_grand') {
+    shastricGuidance = 'कुण्डमार्तण्ड एवं आपस्तम्ब श्रौतसूत्र निर्दिष्ट पारम्परिक प्रचुर घृत आहुति विधान (बृहत् मन्दिरों एवं महासत्रों हेतु)।';
+  } else if (tier === 'smarta_grihastha') {
+    shastricGuidance = 'स्मार्त हविष्य-अभिघार पद्धति: समस्त औषध हविष्य पर गोघृत का सिञ्चन कर होम। यह गृहस्थों हेतु न्यूनतम व्यय में शत-प्रतिशत शास्त्रसम्मत है।';
+  } else {
+    shastricGuidance = 'पराशर स्मृति ("कलौ पाराशराः स्मृताः" व "यथाशक्ति प्रयुञ्जीत") एवं जैमिनि प्रतिनिधि द्रव्य सिद्धान्त के अनुसार भाव-प्रधान कलियुग विधान।';
+  }
 
   return {
     ahutiCount,
@@ -520,9 +654,21 @@ export function calculateKundaDimensions(ahutiCount: number, kundaId: string = '
     mekhala2HeightInches: m2Inches,
     mekhala3HeightInches: m3Inches,
     estimatedBricks,
-    estimatedGheeKg,
+    estimatedGheeKg: fatMediumKg, // backward compatibility
     estimatedHavisyaKg,
-    recommendedPriests
+    recommendedPriests,
+    tier,
+    tierMeta,
+    fatMedium,
+    fatMediumMeta,
+    fatMediumKg,
+    fatMediumCostINR,
+    havisyaCostINR,
+    totalEstimatedCostINR,
+    grandCostBenchmarkINR,
+    savingsVsGrandINR,
+    savingsPercentage,
+    shastricGuidance
   };
 }
 

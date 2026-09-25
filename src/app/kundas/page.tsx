@@ -8,7 +8,11 @@ import {
   YagyaKundaEntry,
   getKundaById,
   calculateKundaDimensions,
-  KundaCalculationResult
+  KundaCalculationResult,
+  RitualBudgetTier,
+  FatMediumType,
+  RITUAL_BUDGET_TIERS,
+  FAT_MEDIUMS
 } from '@/lib/kundas/yagya-kundas-database';
 import {
   Flame,
@@ -23,20 +27,25 @@ import {
   Activity,
   Trees,
   CheckCircle2,
-  Boxes
+  Boxes,
+  Coins,
+  TrendingDown,
+  Info
 } from 'lucide-react';
 
 export default function YagyaKundasPage() {
   const [selectedKundaId, setSelectedKundaId] = useState<string>('chaturasra_kunda');
   const [ahutiCount, setAhutiCount] = useState<number>(1000);
+  const [selectedTier, setSelectedTier] = useState<RitualBudgetTier>('smarta_grihastha');
+  const [selectedFatMedium, setSelectedFatMedium] = useState<FatMediumType>('cow_ghee');
   const [activeTab, setActiveTab] = useState<'darshan' | 'calculator' | 'shastra' | 'samidha' | 'samskara'>('darshan');
 
   const selectedKunda: YagyaKundaEntry =
     getKundaById(selectedKundaId) || YAGYA_KUNDAS_DATABASE[0];
 
   const calcResult: KundaCalculationResult = useMemo(() => {
-    return calculateKundaDimensions(ahutiCount, selectedKunda.id);
-  }, [ahutiCount, selectedKunda.id]);
+    return calculateKundaDimensions(ahutiCount, selectedKunda.id, selectedTier, selectedFatMedium);
+  }, [ahutiCount, selectedKunda.id, selectedTier, selectedFatMedium]);
 
   const presetAhutis = [108, 1008, 10000, 50000, 100000, 1000000];
 
@@ -379,6 +388,110 @@ export default function YagyaKundasPage() {
                     </div>
                   </div>
 
+                  {/* Tier Selector Section */}
+                  <div className="p-5 rounded-2xl bg-[#FFFDF8] border border-[#DDD1BE] shadow-sm space-y-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                      <div>
+                        <h4 className="text-xs font-bold text-[#805713] uppercase tracking-wider font-cinzel flex items-center gap-1.5">
+                          <Coins className="w-4 h-4 text-[#D9531E]" />
+                          कलियुग अनुष्ठान एवं बजट विन्यास (Ritual & Budget Tiers)
+                        </h4>
+                        <p className="text-[11px] text-[#7D6B57]">
+                          आधुनिक युग में यजमान के सामर्थ्य सन्तुलन हेतु पराशर स्मृति एवं मीमांसा प्रतिनिधि सिद्धान्त
+                        </p>
+                      </div>
+                      <span className="text-[10px] font-mono text-[#805713] bg-[#F4EAD8] px-2 py-0.5 rounded border border-[#C5A059]/40 self-start sm:self-auto">
+                        ३ शास्त्रीय विकल्प
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2">
+                      {RITUAL_BUDGET_TIERS.map((tier) => {
+                        const isCurrent = selectedTier === tier.id;
+                        return (
+                          <button
+                            key={tier.id}
+                            onClick={() => setSelectedTier(tier.id)}
+                            className={`p-4 rounded-xl border text-left transition-all relative ${
+                              isCurrent
+                                ? 'bg-[#FFF9EB] border-[#B38226] shadow-md ring-1 ring-[#B38226]'
+                                : 'bg-[#F9F5EC] border-[#E8D9BF] hover:bg-[#F2ECE0] opacity-90'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between gap-2 mb-1.5">
+                              <span
+                                className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                                  tier.isRecommended
+                                    ? 'bg-[#15803D] text-white'
+                                    : isCurrent
+                                    ? 'bg-[#B38226] text-white'
+                                    : 'bg-[#E5DAC6] text-[#6A5744]'
+                                }`}
+                              >
+                                {tier.badgeHindi}
+                              </span>
+                              <span className="text-[11px] font-mono font-bold text-[#D9531E]">
+                                ~{tier.fatGramsPerAhuti}g घृत/आहुति
+                              </span>
+                            </div>
+
+                            <h5 className="text-xs font-bold text-[#1E1711] mb-1">
+                              {tier.nameHindi}
+                            </h5>
+                            <p className="text-[10px] text-[#805713] font-semibold mb-1.5">
+                              {tier.taglineHindi}
+                            </p>
+                            <p className="text-[10px] text-[#5C4D3C] line-clamp-2 leading-relaxed">
+                              {tier.descriptionHindi}
+                            </p>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Fat / Dravya Medium Selector */}
+                  <div className="p-4 rounded-2xl bg-[#FFFDF8] border border-[#DDD1BE] space-y-3">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold text-[#805713] flex items-center gap-1.5 font-cinzel">
+                        <Flame className="w-3.5 h-3.5 text-[#D9531E]" />
+                        हविष्य स्नेह द्रव्य (Fat Medium Option):
+                      </span>
+                      <span className="text-[11px] text-[#7D6B57]">
+                        जैमिनि ६.३ प्रतिनिधि नियम
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                      {FAT_MEDIUMS.map((med) => {
+                        const isChosen = selectedFatMedium === med.id;
+                        return (
+                          <button
+                            key={med.id}
+                            onClick={() => setSelectedFatMedium(med.id)}
+                            className={`p-3 rounded-xl border text-left transition-all ${
+                              isChosen
+                                ? 'bg-[#FFF9EB] border-[#D9531E] shadow-sm ring-1 ring-[#D9531E]'
+                                : 'bg-[#F9F5EC] border-[#E8D9BF] hover:bg-[#F2ECE0]'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="text-xs font-bold text-[#1E1711]">
+                                {med.nameHindi}
+                              </span>
+                              <span className="text-[11px] font-mono font-bold text-[#805713]">
+                                ₹{med.pricePerKgINR}/kg
+                              </span>
+                            </div>
+                            <span className="text-[10px] text-[#7D6B57] block mt-1 line-clamp-1">
+                              {med.suitableForHindi}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
                   {/* Calculated Dimensions Output Grid */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {/* Hastas */}
@@ -426,21 +539,25 @@ export default function YagyaKundasPage() {
                     </div>
                   </div>
 
-                  {/* Materials & Logistics Row */}
+                  {/* Materials Quantities Row */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {/* Ghee */}
+                    {/* Chosen Fat Medium */}
                     <div className="p-4 rounded-2xl bg-[#FFF9EB] border border-[#E0D4C0]">
                       <div className="flex items-center gap-2 mb-1">
                         <Flame className="w-4 h-4 text-[#D9531E]" />
                         <span className="text-xs font-bold text-[#805713]">
-                          अनुमानित शुद्ध गोघृत (Ghee)
+                          स्नेह द्रव्य ({calcResult.fatMediumMeta.nameHindi})
                         </span>
                       </div>
                       <span className="text-2xl font-bold font-mono text-[#1E1711]">
-                        {calcResult.estimatedGheeKg} कि.ग्रा.
+                        {calcResult.fatMediumKg} कि.ग्रा.
                       </span>
                       <p className="text-[10px] text-[#7D6B57] mt-1">
-                        औसत ~८ ग्राम प्रति आहुति + वसोर्धारा
+                        {selectedTier === 'kalpokta_grand'
+                          ? 'औसत ~८ ग्राम प्रति आहुति + वसोर्धारा'
+                          : selectedTier === 'smarta_grihastha'
+                          ? 'हविष्य-अभिघार सिञ्चन (~२.५ ग्राम प्रति आहुति)'
+                          : 'यथाशक्ति न्यूनतम सिञ्चन (~१.२ ग्राम प्रति आहुति)'}
                       </p>
                     </div>
 
@@ -449,14 +566,14 @@ export default function YagyaKundasPage() {
                       <div className="flex items-center gap-2 mb-1">
                         <Boxes className="w-4 h-4 text-[#B38226]" />
                         <span className="text-xs font-bold text-[#805713]">
-                          हविष्य सामग्री (Havisya)
+                          हविष्य सामग्री (Havisya Grains)
                         </span>
                       </div>
                       <span className="text-2xl font-bold font-mono text-[#1E1711]">
                         {calcResult.estimatedHavisyaKg} कि.ग्रा.
                       </span>
                       <p className="text-[10px] text-[#7D6B57] mt-1">
-                        तिल, जौ, अक्षत, गुग्गुल, पञ्चमेवा
+                        तिल, जौ, अक्षत, गुग्गुल, औषध, पञ्चमेवा
                       </p>
                     </div>
 
@@ -474,6 +591,113 @@ export default function YagyaKundasPage() {
                       <p className="text-[10px] text-[#7D6B57] mt-1">
                         होता, अध्वर्यु, उद्गाता, ब्रह्मा
                       </p>
+                    </div>
+                  </div>
+
+                  {/* COMPREHENSIVE COST & SAVINGS ESTIMATION CARD */}
+                  <div className="p-5 rounded-3xl bg-linear-to-br from-[#FFFDF8] via-[#FAF5EB] to-[#F5EFE4] border-2 border-[#C5A059]/60 shadow-lg space-y-5">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#E8D9BF] pb-4">
+                      <div>
+                        <span className="text-[10px] uppercase font-mono font-bold text-[#805713] tracking-widest block mb-0.5">
+                          REAL-TIME BUDGET ESTIMATE
+                        </span>
+                        <h4 className="text-base font-bold text-[#1E1711] font-cinzel flex items-center gap-2">
+                          <Coins className="w-5 h-5 text-[#B38226]" />
+                          लागत एवं सामग्री बचत विन्यास (Cost & Savings Analysis)
+                        </h4>
+                      </div>
+
+                      {/* Total Cost Display */}
+                      <div className="text-left sm:text-right">
+                        <span className="text-[11px] text-[#7D6B57] block">
+                          कुल अनुमानित सामग्री व्यय:
+                        </span>
+                        <span className="text-2xl font-black font-mono text-[#805713]">
+                          ₹{calcResult.totalEstimatedCostINR.toLocaleString('hi-IN')}
+                        </span>
+                        <span className="text-[10px] text-[#7D6B57] block">
+                          (स्नेह द्रव्य + हविष्य सामग्री)
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Savings Highlight Banner */}
+                    {calcResult.savingsVsGrandINR > 0 ? (
+                      <div className="p-4 rounded-2xl bg-[#EBF7EE] border border-[#86EFAC] flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-inner">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-xl bg-[#16A34A] text-white flex items-center justify-center shrink-0">
+                            <TrendingDown className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <span className="text-xs font-bold text-[#14532D] block">
+                              पारम्परिक कल्पोक्त महामख की तुलना में भारी बचत!
+                            </span>
+                            <span className="text-lg font-black font-mono text-[#15803D]">
+                              ₹{calcResult.savingsVsGrandINR.toLocaleString('hi-IN')} की बचत ({calcResult.savingsPercentage}% Budget Saved)
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="text-[11px] text-[#166534] bg-[#DCFCE7] px-3 py-1.5 rounded-xl border border-[#86EFAC] font-mono">
+                          पारम्परिक मानक व्यय: <strong>₹{calcResult.grandCostBenchmarkINR.toLocaleString('hi-IN')}</strong>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="p-3 rounded-xl bg-[#FFF9EB] border border-[#E0D4C0] text-xs text-[#805713] flex items-center gap-2">
+                        <Info className="w-4 h-4 text-[#D9531E] shrink-0" />
+                        <span>
+                          आप वर्तमान में पारम्परिक <strong>कल्पोक्त महामख (८ ग्राम प्रति आहुति)</strong> मानक देख रहे हैं। गृहस्थों हेतु <strong>गृहस्थ स्मार्त विधान</strong> से ₹{((calcResult.ahutiCount * 0.0055 * 850)).toLocaleString('hi-IN', { maximumFractionDigits: 0 })} तक की बचत सम्भव है।
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Cost Breakdown Details */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3.5 rounded-xl bg-[#FDFBF7] border border-[#E8D9BF] space-y-1.5">
+                        <div className="flex justify-between items-center text-[#5C4D3C]">
+                          <span>{calcResult.fatMediumMeta.nameHindi} ({calcResult.fatMediumKg} kg × ₹{calcResult.fatMediumMeta.pricePerKgINR})</span>
+                          <span className="font-mono font-bold text-[#1E1711]">₹{calcResult.fatMediumCostINR.toLocaleString('hi-IN')}</span>
+                        </div>
+                        <div className="flex justify-between items-center text-[#5C4D3C]">
+                          <span>हविष्य सामग्री ({calcResult.estimatedHavisyaKg} kg × ₹200)</span>
+                          <span className="font-mono font-bold text-[#1E1711]">₹{calcResult.havisyaCostINR.toLocaleString('hi-IN')}</span>
+                        </div>
+                        <div className="border-t border-[#E8D9BF] pt-1.5 flex justify-between items-center font-bold text-[#805713]">
+                          <span>कुल अनुमानित लागत</span>
+                          <span className="font-mono text-sm">₹{calcResult.totalEstimatedCostINR.toLocaleString('hi-IN')}</span>
+                        </div>
+                      </div>
+
+                      {/* Shastric Rule Summary */}
+                      <div className="p-3.5 rounded-xl bg-[#FDFBF7] border border-[#E8D9BF] space-y-1 text-[11px] text-[#5C4D3C]">
+                        <span className="font-bold text-[#805713] block">
+                          शास्त्रसम्मत विधान सम्पुष्टि:
+                        </span>
+                        <p className="leading-relaxed">
+                          {calcResult.shastricGuidance}
+                        </p>
+                        <span className="text-[10px] text-[#7D6B57] block pt-1">
+                          • {calcResult.fatMediumMeta.shastricRuleHindi}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Sacred Shastric Box on Kaliyuga Practice */}
+                    <div className="p-4 rounded-2xl bg-[#F5EFE4] border border-[#DDD1BE] text-xs space-y-2">
+                      <div className="flex items-center gap-1.5 text-[#805713] font-bold">
+                        <BookOpen className="w-4 h-4 text-[#D9531E]" />
+                        <span>कलियुग में यजन विधान: शास्त्र क्या कहते हैं?</span>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11px] text-[#5C4D3C] leading-relaxed">
+                        <div className="p-2.5 rounded-lg bg-[#FFFDF8] border border-[#E8D9BF]">
+                          <strong className="text-[#805713] block mb-1">१. पराशर स्मृति (कलौ पाराशराः स्मृताः):</strong>
+                          "कृते तु मानवा धर्मास्त्रेतायां गौतमाः स्मृताः । द्वापरे शङ्खलिखिताः कलौ पाराशराः स्मृताः ॥" कलियुग में द्रव्य-विस्तार के कारण ऋण अथवा आर्थिक कष्ट में पड़ना निषिद्ध है। अपनी शक्ति के अनुसार (यथाशक्ति) भक्ति-भाव से किया गया सूक्ष्म होम भी सहस्र गुना फल देता है।
+                        </div>
+                        <div className="p-2.5 rounded-lg bg-[#FFFDF8] border border-[#E8D9BF]">
+                          <strong className="text-[#805713] block mb-1">२. जैमिनि प्रतिनिधि द्रव्य सिद्धान्त (६.३):</strong>
+                          यदि मुख्य द्रव्य (गोघृत) दुर्लभ अथवा अत्यधिक मूल्यवान हो, तो गुण-साम्य रखने वाले प्रतिनिधि द्रव्य (तिल तैल अथवा हविष्य-अभिघार) का प्रयोग पूर्णतः विधिमान्य है। इससे मन्त्र का कोई दोष नहीं होता।
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
